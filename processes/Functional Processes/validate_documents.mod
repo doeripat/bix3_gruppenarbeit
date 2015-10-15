@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Oct 12 16:44:35 CEST 2015]
+[>Created: Thu Oct 15 16:01:57 CEST 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -192,10 +192,15 @@ anfordern</name>
 vs0 f6 288 250 112 44 -42 -16 #rect
 vs0 f6 @|WebServiceIcon #fIcon
 vs0 f7 expr out2 #txt
-vs0 f7 205 173 288 136 #arcP
+vs0 f7 208 176 288 136 #arcP
+vs0 f7 1 232 176 #addKink
+vs0 f7 2 232 136 #addKink
+vs0 f7 2 0.09279449103602223 0 0 #arcLabel
 vs0 f8 expr out3 #txt
-vs0 f8 204 180 288 208 #arcP
-vs0 f8 0 0.49999999999999994 0 0 #arcLabel
+vs0 f8 208 176 288 208 #arcP
+vs0 f8 1 232 176 #addKink
+vs0 f8 2 232 208 #addKink
+vs0 f8 2 0.14644660940672619 0 0 #arcLabel
 vs0 U40 .resExport export #txt
 vs0 U40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>

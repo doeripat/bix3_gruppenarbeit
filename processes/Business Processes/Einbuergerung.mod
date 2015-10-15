@@ -1,12 +1,10 @@
 [Ivy]
-[>Created: Thu Oct 15 14:18:41 CEST 2015]
+[>Created: Thu Oct 15 16:21:33 CEST 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
 Eg0 B #cInfo
 Eg0 #process
-Ct0 Component Big #zClass
-Ct0 B #cInfo
 Eg0 @TextInP .resExport .resExport #zField
 Eg0 @TextInP .type .type #zField
 Eg0 @TextInP .processKind .processKind #zField
@@ -21,15 +19,11 @@ Eg0 @CallSub f2 '' #zField
 Eg0 @PushWFArc f3 '' #zField
 Eg0 @CallSub f4 '' #zField
 Eg0 @PushWFArc f5 '' #zField
-Eg0 Ct0 S10 'Sub 1' #zField
-Eg0 @PushWFArc f7 '' #zField
 Eg0 @CallSub f8 '' #zField
-Eg0 @PushWFArc f9 '' #zField
 Eg0 @CallSub f10 '' #zField
 Eg0 @PushWFArc f11 '' #zField
 Eg0 @PushWFArc f6 '' #zField
 Eg0 @ProcessException f12 '' #zField
-Eg0 @ProcessException f13 '' #zField
 Eg0 @ProcessException f14 '' #zField
 Eg0 @ProcessException f15 '' #zField
 Eg0 @ProcessException f16 '' #zField
@@ -38,22 +32,14 @@ Eg0 @CallSub f18 '' #zField
 Eg0 @PushWFArc f19 '' #zField
 Eg0 @PushWFArc f20 '' #zField
 Eg0 @PushWFArc f21 '' #zField
-Eg0 @PushWFArc f22 '' #zField
 Eg0 @PushWFArc f23 '' #zField
 Eg0 @PushWFArc f24 '' #zField
+Eg0 @CallSub f25 '' #zField
+Eg0 @ProcessException f7 '' #zField
+Eg0 @PushWFArc f9 '' #zField
+Eg0 @PushWFArc f13 '' #zField
+Eg0 @PushWFArc f22 '' #zField
 >Proto Eg0 Eg0 Einbuergerung #zField
-Ct0 @TextInP .resExport .resExport #zField
-Ct0 @TextInP .type .type #zField
-Ct0 @TextInP .processKind .processKind #zField
-Ct0 @AnnotationInP-0n ai ai #zField
-Ct0 @MessageFlowInP-0n messageIn messageIn #zField
-Ct0 @MessageFlowOutP-0n messageOut messageOut #zField
-Ct0 @TextInP .xml .xml #zField
-Ct0 @TextInP .responsibility .responsibility #zField
-Ct0 @PushTrueWFInG-01 g0 '' #zField
-Ct0 @PushTrueWFOutG-01 g1 '' #zField
-Ct0 @PushWFArc f0 '' #zField
->Proto Ct0 Ct0 Component #zField
 Eg0 f0 outLink start.ivp #txt
 Eg0 f0 type einbuergerung_Gruppe6.Data #txt
 Eg0 f0 inParamDecl '<> param;' #txt
@@ -121,21 +107,6 @@ Eg0 f4 336 42 112 44 -52 -20 #rect
 Eg0 f4 @|CallSubIcon #fIcon
 Eg0 f5 expr out #txt
 Eg0 f5 280 64 336 64 #arcP
-Eg0 S10 .resExport export #txt
-Eg0 S10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>Einbürgerungsgesuch
-publizieren</name>
-        <nameStyle>31,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Eg0 S10 488 42 128 44 -61 -20 #rect
-Eg0 S10 @|BIcon #fIcon
-Eg0 f7 expr out #txt
-Eg0 f7 448 64 488 64 #arcP
 Eg0 f8 type einbuergerung_Gruppe6.Data #txt
 Eg0 f8 doCall false #txt
 Eg0 f8 responseActionDecl 'einbuergerung_Gruppe6.Data out;
@@ -155,20 +126,24 @@ interviewen</name>
 ' #txt
 Eg0 f8 656 42 112 44 -38 -20 #rect
 Eg0 f8 @|CallSubIcon #fIcon
-Eg0 f9 616 64 656 64 #arcP
 Eg0 f10 type einbuergerung_Gruppe6.Data #txt
-Eg0 f10 doCall false #txt
+Eg0 f10 processCall 'Functional Processes/Entscheid_faellen:call(einbuergerung_Gruppe6.Data)' #txt
+Eg0 f10 doCall true #txt
+Eg0 f10 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Eg0 f10 requestMappingAction 'param.data=in;
+' #txt
 Eg0 f10 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Eg0 f10 responseMappingAction 'out=in;
+Eg0 f10 responseMappingAction 'out=result.data;
 ' #txt
 Eg0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Entscheid
-fällen</name>
+faellen</name>
         <nameStyle>10,7
-6,7
+7,7
 </nameStyle>
     </language>
 </elementInfo>
@@ -187,14 +162,6 @@ Eg0 f12 actionTable 'out=in;
 Eg0 f12 type einbuergerung_Gruppe6.Data #txt
 Eg0 f12 257 73 30 30 0 15 #rect
 Eg0 f12 @|ExceptionIcon #fIcon
-Eg0 f13 .resExport export #txt
-Eg0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Eg0 f13 actionTable 'out=in;
-' #txt
-Eg0 f13 type einbuergerung_Gruppe6.Data #txt
-Eg0 f13 601 73 30 30 0 15 #rect
-Eg0 f13 @|ExceptionIcon #fIcon
 Eg0 f14 .resExport export #txt
 Eg0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -240,10 +207,6 @@ Eg0 f21 expr out #txt
 Eg0 f21 448 103 976 144 #arcP
 Eg0 f21 1 448 144 #addKink
 Eg0 f21 1 0.4462558196073382 0 0 #arcLabel
-Eg0 f22 expr out #txt
-Eg0 f22 616 103 976 144 #arcP
-Eg0 f22 1 616 144 #addKink
-Eg0 f22 1 0.4225204128834369 0 0 #arcLabel
 Eg0 f23 expr out #txt
 Eg0 f23 768 103 976 144 #arcP
 Eg0 f23 1 768 144 #addKink
@@ -253,25 +216,51 @@ Eg0 f24 928 103 976 144 #arcP
 Eg0 f24 1 928 144 #addKink
 Eg0 f24 2 920 144 #addKink
 Eg0 f24 2 0.1413953638505585 0 0 #arcLabel
+Eg0 f25 type einbuergerung_Gruppe6.Data #txt
+Eg0 f25 processCall 'Functional Processes/Einbuergerungsgesuch_publizieren:call(einbuergerung_Gruppe6.Data)' #txt
+Eg0 f25 doCall true #txt
+Eg0 f25 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Eg0 f25 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Eg0 f25 responseMappingAction 'out=in;
+' #txt
+Eg0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Einbuergerungsgesuch
+publizieren</name>
+        <nameStyle>32
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Eg0 f25 480 42 144 44 -65 -20 #rect
+Eg0 f25 @|CallSubIcon #fIcon
+Eg0 f7 .resExport export #txt
+Eg0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Eg0 f7 actionTable 'out=in;
+' #txt
+Eg0 f7 type einbuergerung_Gruppe6.Data #txt
+Eg0 f7 601 65 30 30 0 15 #rect
+Eg0 f7 @|ExceptionIcon #fIcon
+Eg0 f9 expr out #txt
+Eg0 f9 616 95 976 144 #arcP
+Eg0 f9 1 616 144 #addKink
+Eg0 f9 1 0.4117208412107183 0 0 #arcLabel
+Eg0 f13 expr out #txt
+Eg0 f13 448 64 480 64 #arcP
+Eg0 f22 expr out #txt
+Eg0 f22 624 64 656 64 #arcP
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Eg0 .processKind NORMAL #txt
 >Proto Eg0 0 0 32 24 18 0 #rect
 >Proto Eg0 @|BIcon #fIcon
-Ct0 g0 51 243 26 26 0 5 #rect
-Ct0 g0 @|MIGIcon #fIcon
-Ct0 g1 563 243 26 26 0 5 #rect
-Ct0 g1 @|MOGIcon #fIcon
-Ct0 f0 77 256 563 256 #arcP
->Proto Ct0 0 0 32 24 18 0 #rect
->Proto Ct0 @|BIcon #fIcon
 Eg0 f0 mainOut f3 tail #connect
 Eg0 f3 head f2 mainIn #connect
 Eg0 f2 mainOut f5 tail #connect
 Eg0 f5 head f4 mainIn #connect
-Eg0 f4 mainOut f7 tail #connect
-Eg0 f7 head S10 g0 #connect
-Eg0 S10 g1 f9 tail #connect
-Eg0 f9 head f8 mainIn #connect
 Eg0 f8 mainOut f11 tail #connect
 Eg0 f11 head f10 mainIn #connect
 Eg0 f10 mainOut f6 tail #connect
@@ -282,12 +271,13 @@ Eg0 f12 mainOut f20 tail #connect
 Eg0 f20 head f18 mainIn #connect
 Eg0 f14 mainOut f21 tail #connect
 Eg0 f21 head f18 mainIn #connect
-Eg0 f13 mainOut f22 tail #connect
-Eg0 f22 head f18 mainIn #connect
 Eg0 f15 mainOut f23 tail #connect
 Eg0 f23 head f18 mainIn #connect
 Eg0 f16 mainOut f24 tail #connect
 Eg0 f24 head f18 mainIn #connect
-Ct0 g0 m f0 tail #connect
-Ct0 f0 head g1 m #connect
-Ct0 0 0 640 512 0 #ivRect
+Eg0 f7 mainOut f9 tail #connect
+Eg0 f9 head f18 mainIn #connect
+Eg0 f4 mainOut f13 tail #connect
+Eg0 f13 head f25 mainIn #connect
+Eg0 f25 mainOut f22 tail #connect
+Eg0 f22 head f8 mainIn #connect
