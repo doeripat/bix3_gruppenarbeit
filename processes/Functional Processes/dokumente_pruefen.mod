@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Oct 12 16:48:40 CEST 2015]
+[>Created: Thu Oct 15 14:50:49 CEST 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -7,10 +7,6 @@ dn0 B #cInfo
 dn0 #process
 Bk0 BpmnUserTask Big #zClass
 Bk0 BpmnUserTask #cInfo
-Bk1 BpmnUserTask Big #zClass
-Bk1 BpmnUserTask #cInfo
-Bk2 BpmnUserTask Big #zClass
-Bk2 BpmnUserTask #cInfo
 dn0 @TextInP .resExport .resExport #zField
 dn0 @TextInP .type .type #zField
 dn0 @TextInP .processKind .processKind #zField
@@ -27,18 +23,22 @@ dn0 @PushWFArc f5 '' #zField
 dn0 @PushWFArc f4 '' #zField
 dn0 @CallSub f6 '' #zField
 dn0 @PushWFArc f7 '' #zField
-dn0 Bk1 U20 'User 2' #zField
-dn0 @PushWFArc f2 '' #zField
 dn0 @Alternative f8 '' #zField
-dn0 Bk2 U30 'User 3' #zField
-dn0 @PushWFArc f9 '' #zField
-dn0 @PushWFArc f10 '' #zField
-dn0 @PushWFArc f11 '' #zField
 dn0 @CallSub f12 '' #zField
 dn0 @PushWFArc f13 '' #zField
 dn0 @EMail f16 '' #zField
 dn0 @PushWFArc f14 '' #zField
 dn0 @PushWFArc f15 '' #zField
+dn0 @TaskSwitch f2 '' #zField
+dn0 @TkArc f9 '' #zField
+dn0 @RichDialog f11 '' #zField
+dn0 @PushWFArc f17 '' #zField
+dn0 @PushWFArc f18 '' #zField
+dn0 @TaskSwitch f10 '' #zField
+dn0 @TkArc f19 '' #zField
+dn0 @RichDialog f20 '' #zField
+dn0 @PushWFArc f21 '' #zField
+dn0 @TkArc f22 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -52,31 +52,6 @@ Bk0 @PushTrueWFInG-01 g0 '' #zField
 Bk0 @PushTrueWFOutG-01 g1 '' #zField
 Bk0 @PushWFArc f0 '' #zField
 >Proto Bk0 Bk0 BpmnUserTask #zField
-Bk1 @TextInP .resExport .resExport #zField
-Bk1 @TextInP .type .type #zField
-Bk1 @TextInP .processKind .processKind #zField
-Bk1 @AnnotationInP-0n ai ai #zField
-Bk1 @MessageFlowInP-0n messageIn messageIn #zField
-Bk1 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk1 @TextInP .xml .xml #zField
-Bk1 @TextInP .responsibility .responsibility #zField
-Bk1 @PushTrueWFInG-01 g0 '' #zField
-Bk1 @PushTrueWFOutG-01 g1 '' #zField
-Bk1 @PushWFArc f0 '' #zField
-Bk1 @PushTrueWFInG-01 g2 '' #zField
->Proto Bk1 Bk1 BpmnUserTask #zField
-Bk2 @TextInP .resExport .resExport #zField
-Bk2 @TextInP .type .type #zField
-Bk2 @TextInP .processKind .processKind #zField
-Bk2 @AnnotationInP-0n ai ai #zField
-Bk2 @MessageFlowInP-0n messageIn messageIn #zField
-Bk2 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk2 @TextInP .xml .xml #zField
-Bk2 @TextInP .responsibility .responsibility #zField
-Bk2 @PushTrueWFInG-01 g0 '' #zField
-Bk2 @PushTrueWFOutG-01 g1 '' #zField
-Bk2 @PushWFArc f0 '' #zField
->Proto Bk2 Bk2 BpmnUserTask #zField
 dn0 f0 inParamDecl '<> param;' #txt
 dn0 f0 outParamDecl '<> result;
 ' #txt
@@ -94,7 +69,7 @@ dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f0 65 361 30 30 -13 17 #rect
 dn0 f0 @|StartSubIcon #fIcon
 dn0 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
-dn0 f1 1161 121 30 30 0 15 #rect
+dn0 f1 1361 129 30 30 0 15 #rect
 dn0 f1 @|EndSubIcon #fIcon
 dn0 f3 targetWindow NEW:card: #txt
 dn0 f3 targetDisplay TOP #txt
@@ -155,25 +130,12 @@ dn0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f6 320 114 128 44 -56 -8 #rect
+dn0 f6 392 122 128 44 -56 -8 #rect
 dn0 f6 @|CallSubIcon #fIcon
 dn0 f7 expr out #txt
-dn0 f7 384 354 384 158 #arcP
-dn0 U20 .resExport export #txt
-dn0 U20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>Korrektheit 
-überprüfen</name>
-        <nameStyle>23,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 U20 496 114 112 44 -31 -16 #rect
-dn0 U20 @|BpmnUserTaskIcon #fIcon
-dn0 f2 expr out #txt
-dn0 f2 448 136 496 136 #arcP
+dn0 f7 384 354 392 144 #arcP
+dn0 f7 1 384 144 #addKink
+dn0 f7 0 0.7990148912066585 0 0 #arcLabel
 dn0 f8 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -186,35 +148,8 @@ korrekt?</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f8 648 120 32 32 -43 18 #rect
+dn0 f8 848 128 32 32 -43 18 #rect
 dn0 f8 @|AlternativeIcon #fIcon
-dn0 U30 .resExport export #txt
-dn0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>Antrag korrigieren</name>
-        <nameStyle>18,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 U30 608 354 112 44 -48 -8 #rect
-dn0 U30 @|BpmnUserTaskIcon #fIcon
-dn0 f9 608 136 648 136 #arcP
-dn0 f10 expr in #txt
-dn0 f10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Nein</name>
-        <nameStyle>4,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 f10 664 152 664 354 #arcP
-dn0 f11 608 376 552 158 #arcP
-dn0 f11 1 552 376 #addKink
-dn0 f11 1 0.2382104023232978 0 0 #arcLabel
 dn0 f12 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f12 processCall 'Functional Processes/validate_documents:call()' #txt
 dn0 f12 doCall true #txt
@@ -235,7 +170,7 @@ dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f12 728 114 112 44 -33 -20 #rect
+dn0 f12 928 122 112 44 -33 -20 #rect
 dn0 f12 @|CallSubIcon #fIcon
 dn0 f13 expr in #txt
 dn0 f13 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -247,7 +182,7 @@ dn0 f13 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f13 680 136 728 136 #arcP
+dn0 f13 880 144 928 144 #arcP
 dn0 f16 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 dn0 f16 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f16 timeout 0 #txt
@@ -262,12 +197,158 @@ mitteilen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f16 944 114 128 44 -46 -16 #rect
+dn0 f16 1144 122 128 44 -46 -16 #rect
 dn0 f16 @|EMailIcon #fIcon
 dn0 f14 expr out #txt
-dn0 f14 840 136 944 136 #arcP
+dn0 f14 1040 144 1144 144 #arcP
 dn0 f15 expr out #txt
-dn0 f15 1072 136 1161 136 #arcP
+dn0 f15 1272 144 1361 144 #arcP
+dn0 f2 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+' #txt
+dn0 f2 actionTable 'out=in1;
+' #txt
+dn0 f2 outTypes "einbuergerung_Gruppe6.dokumente_pruefenData" #txt
+dn0 f2 outLinks "TaskA.ivp" #txt
+dn0 f2 caseData '#
+#Thu Oct 15 14:37:52 CEST 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+dn0 f2 taskData '#
+#Thu Oct 15 14:37:52 CEST 2015
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Bitte Antrag mit User id \= <%\=%> \u00FCberpr\u00FCfen
+TaskA.PRI=2
+TaskA.ROL=Everybody
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
+dn0 f2 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte Antrag mit User id = <%=%> überprüfen"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Everybody");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDefinitions.add(taskDef);
+' #txt
+dn0 f2 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f2 template "" #txt
+dn0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Antrag
+überprüfen</name>
+        <nameStyle>7,7
+10,7
+</nameStyle>
+        <desc>Antrag überprüfen</desc>
+    </language>
+</elementInfo>
+' #txt
+dn0 f2 584 128 32 32 -30 18 #rect
+dn0 f2 @|TaskSwitchIcon #fIcon
+dn0 f9 expr out #txt
+dn0 f9 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f9 var in1 #txt
+dn0 f9 520 144 584 144 #arcP
+dn0 f11 targetWindow NEW #txt
+dn0 f11 targetDisplay TOP #txt
+dn0 f11 startMethod start() #txt
+dn0 f11 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f11 requestActionDecl '<> param;' #txt
+dn0 f11 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+' #txt
+dn0 f11 responseMappingAction 'out=in;
+' #txt
+dn0 f11 isAsynch false #txt
+dn0 f11 isInnerRd false #txt
+dn0 f11 672 122 112 44 0 -8 #rect
+dn0 f11 @|RichDialogIcon #fIcon
+dn0 f17 expr data #txt
+dn0 f17 outCond ivp=="TaskA.ivp" #txt
+dn0 f17 616 144 672 144 #arcP
+dn0 f18 expr out #txt
+dn0 f18 784 144 848 144 #arcP
+dn0 f10 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+' #txt
+dn0 f10 actionTable 'out=in1;
+' #txt
+dn0 f10 outTypes "einbuergerung_Gruppe6.dokumente_pruefenData" #txt
+dn0 f10 outLinks "TaskA.ivp" #txt
+dn0 f10 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Everybody");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDefinitions.add(taskDef);
+' #txt
+dn0 f10 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f10 template "" #txt
+dn0 f10 848 368 32 32 0 16 #rect
+dn0 f10 @|TaskSwitchIcon #fIcon
+dn0 f19 expr in #txt
+dn0 f19 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f19 var in1 #txt
+dn0 f19 864 160 864 368 #arcP
+dn0 f20 targetWindow NEW #txt
+dn0 f20 targetDisplay TOP #txt
+dn0 f20 startMethod start() #txt
+dn0 f20 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f20 requestActionDecl '<> param;' #txt
+dn0 f20 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+' #txt
+dn0 f20 responseMappingAction 'out=in;
+' #txt
+dn0 f20 isAsynch false #txt
+dn0 f20 isInnerRd false #txt
+dn0 f20 680 362 112 44 0 -8 #rect
+dn0 f20 @|RichDialogIcon #fIcon
+dn0 f21 expr data #txt
+dn0 f21 outCond ivp=="TaskA.ivp" #txt
+dn0 f21 848 384 792 384 #arcP
+dn0 f22 expr out #txt
+dn0 f22 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f22 var in2 #txt
+dn0 f22 680 384 600 160 #arcP
+dn0 f22 1 600 384 #addKink
+dn0 f22 1 0.20060637575311377 0 0 #arcLabel
 >Proto dn0 .type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -296,48 +377,30 @@ Bk0 g1 @|MOGIcon #fIcon
 Bk0 f0 77 256 563 256 #arcP
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BpmnUserTaskIcon #fIcon
-Bk1 g0 51 243 26 26 0 5 #rect
-Bk1 g0 @|MIGIcon #fIcon
-Bk1 g1 563 243 26 26 0 5 #rect
-Bk1 g1 @|MOGIcon #fIcon
-Bk1 f0 77 256 563 256 #arcP
-Bk1 g2 419 435 26 26 0 5 #rect
-Bk1 g2 @|MIGIcon #fIcon
->Proto Bk1 0 0 32 24 18 0 #rect
->Proto Bk1 @|BpmnUserTaskIcon #fIcon
-Bk2 g0 323 51 26 26 0 5 #rect
-Bk2 g0 @|MIGIcon #fIcon
-Bk2 g1 195 51 26 26 0 5 #rect
-Bk2 g1 @|MOGIcon #fIcon
-Bk2 f0 323 64 221 64 #arcP
->Proto Bk2 0 0 32 24 18 0 #rect
->Proto Bk2 @|BpmnUserTaskIcon #fIcon
 dn0 f0 mainOut f5 tail #connect
 dn0 f5 head U10 g0 #connect
 dn0 U10 g1 f4 tail #connect
 dn0 f4 head f3 mainIn #connect
 dn0 f3 mainOut f7 tail #connect
 dn0 f7 head f6 mainIn #connect
-dn0 f6 mainOut f2 tail #connect
-dn0 f2 head U20 g0 #connect
-dn0 U20 g1 f9 tail #connect
-dn0 f9 head f8 in #connect
-dn0 f8 out f10 tail #connect
-dn0 f10 head U30 g0 #connect
-dn0 U30 g1 f11 tail #connect
-dn0 f11 head U20 g2 #connect
 dn0 f8 out f13 tail #connect
 dn0 f13 head f12 mainIn #connect
 dn0 f12 mainOut f14 tail #connect
 dn0 f14 head f16 mainIn #connect
 dn0 f16 mainOut f15 tail #connect
 dn0 f15 head f1 mainIn #connect
+dn0 f6 mainOut f9 tail #connect
+dn0 f9 head f2 in #connect
+dn0 f2 out f17 tail #connect
+dn0 f17 head f11 mainIn #connect
+dn0 f11 mainOut f18 tail #connect
+dn0 f18 head f8 in #connect
+dn0 f8 out f19 tail #connect
+dn0 f19 head f10 in #connect
+dn0 f10 out f21 tail #connect
+dn0 f21 head f20 mainIn #connect
+dn0 f20 mainOut f22 tail #connect
+dn0 f22 head f2 in #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head g1 m #connect
 Bk0 0 0 640 512 0 #ivRect
-Bk1 g0 m f0 tail #connect
-Bk1 f0 head g1 m #connect
-Bk1 0 0 640 512 0 #ivRect
-Bk2 g0 m f0 tail #connect
-Bk2 f0 head g1 m #connect
-Bk2 0 0 640 512 0 #ivRect
