@@ -1,5 +1,9 @@
 [Ivy]
+<<<<<<< HEAD
 [>Created: Thu Oct 15 16:29:07 CEST 2015]
+=======
+[>Created: Thu Oct 15 16:21:33 CEST 2015]
+>>>>>>> origin/master
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -34,9 +38,17 @@ Eg0 @PushWFArc f20 '' #zField
 Eg0 @PushWFArc f21 '' #zField
 Eg0 @PushWFArc f23 '' #zField
 Eg0 @PushWFArc f24 '' #zField
+<<<<<<< HEAD
 Eg0 @CallSub f7 '' #zField
 Eg0 @ProcessException f9 '' #zField
 Eg0 @PushWFArc f13 '' #zField
+=======
+Eg0 @CallSub f25 '' #zField
+Eg0 @ProcessException f7 '' #zField
+Eg0 @PushWFArc f9 '' #zField
+Eg0 @PushWFArc f13 '' #zField
+Eg0 @PushWFArc f22 '' #zField
+>>>>>>> origin/master
 >Proto Eg0 Eg0 Einbuergerung #zField
 Eg0 f0 outLink start.ivp #txt
 Eg0 f0 type einbuergerung_Gruppe6.Data #txt
@@ -130,18 +142,23 @@ interviewen</name>
 Eg0 f8 656 42 112 44 -38 -20 #rect
 Eg0 f8 @|CallSubIcon #fIcon
 Eg0 f10 type einbuergerung_Gruppe6.Data #txt
-Eg0 f10 doCall false #txt
+Eg0 f10 processCall 'Functional Processes/Entscheid_faellen:call(einbuergerung_Gruppe6.Data)' #txt
+Eg0 f10 doCall true #txt
+Eg0 f10 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Eg0 f10 requestMappingAction 'param.data=in;
+' #txt
 Eg0 f10 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Eg0 f10 responseMappingAction 'out=in;
+Eg0 f10 responseMappingAction 'out=result.data;
 ' #txt
 Eg0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Entscheid
-fällen</name>
+faellen</name>
         <nameStyle>10,7
-6,7
+7,7
 </nameStyle>
     </language>
 </elementInfo>
@@ -214,6 +231,7 @@ Eg0 f24 928 103 976 144 #arcP
 Eg0 f24 1 928 144 #addKink
 Eg0 f24 2 920 144 #addKink
 Eg0 f24 2 0.1413953638505585 0 0 #arcLabel
+<<<<<<< HEAD
 Eg0 f7 type einbuergerung_Gruppe6.Data #txt
 Eg0 f7 processCall 'Business Processes/Einbuergerungsgesuch_publizieren:call(einbuergerung_Gruppe6.Data)' #txt
 Eg0 f7 doCall true #txt
@@ -232,10 +250,28 @@ Eg0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 publizieren</name>
         <nameStyle>21,7
 11,7
+=======
+Eg0 f25 type einbuergerung_Gruppe6.Data #txt
+Eg0 f25 processCall 'Functional Processes/Einbuergerungsgesuch_publizieren:call(einbuergerung_Gruppe6.Data)' #txt
+Eg0 f25 doCall true #txt
+Eg0 f25 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Eg0 f25 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Eg0 f25 responseMappingAction 'out=in;
+' #txt
+Eg0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Einbuergerungsgesuch
+publizieren</name>
+        <nameStyle>32
+>>>>>>> origin/master
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
+<<<<<<< HEAD
 Eg0 f7 488 42 144 44 -63 -20 #rect
 Eg0 f7 @|CallSubIcon #fIcon
 Eg0 f9 .resExport export #txt
@@ -250,6 +286,26 @@ Eg0 f13 expr out #txt
 Eg0 f13 608 95 976 144 #arcP
 Eg0 f13 1 608 144 #addKink
 Eg0 f13 1 0.41363995335831133 0 0 #arcLabel
+=======
+Eg0 f25 480 42 144 44 -65 -20 #rect
+Eg0 f25 @|CallSubIcon #fIcon
+Eg0 f7 .resExport export #txt
+Eg0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Eg0 f7 actionTable 'out=in;
+' #txt
+Eg0 f7 type einbuergerung_Gruppe6.Data #txt
+Eg0 f7 601 65 30 30 0 15 #rect
+Eg0 f7 @|ExceptionIcon #fIcon
+Eg0 f9 expr out #txt
+Eg0 f9 616 95 976 144 #arcP
+Eg0 f9 1 616 144 #addKink
+Eg0 f9 1 0.4117208412107183 0 0 #arcLabel
+Eg0 f13 expr out #txt
+Eg0 f13 448 64 480 64 #arcP
+Eg0 f22 expr out #txt
+Eg0 f22 624 64 656 64 #arcP
+>>>>>>> origin/master
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Eg0 .processKind NORMAL #txt
 >Proto Eg0 0 0 32 24 18 0 #rect
@@ -272,5 +328,14 @@ Eg0 f15 mainOut f23 tail #connect
 Eg0 f23 head f18 mainIn #connect
 Eg0 f16 mainOut f24 tail #connect
 Eg0 f24 head f18 mainIn #connect
+<<<<<<< HEAD
 Eg0 f9 mainOut f13 tail #connect
 Eg0 f13 head f18 mainIn #connect
+=======
+Eg0 f7 mainOut f9 tail #connect
+Eg0 f9 head f18 mainIn #connect
+Eg0 f4 mainOut f13 tail #connect
+Eg0 f13 head f25 mainIn #connect
+Eg0 f25 mainOut f22 tail #connect
+Eg0 f22 head f8 mainIn #connect
+>>>>>>> origin/master
