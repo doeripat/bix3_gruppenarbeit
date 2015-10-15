@@ -1,2 +1,4 @@
 RechnungswesenData #class
 einbuergerung_Gruppe6 #namespace
+Data einbuergerung_Gruppe6.Data #field
+Data PERSISTENT #fieldModifier

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Oct 15 14:50:49 CEST 2015]
+[>Created: Thu Oct 15 16:09:10 CEST 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -28,7 +28,6 @@ dn0 @CallSub f12 '' #zField
 dn0 @PushWFArc f13 '' #zField
 dn0 @EMail f16 '' #zField
 dn0 @PushWFArc f14 '' #zField
-dn0 @PushWFArc f15 '' #zField
 dn0 @TaskSwitch f2 '' #zField
 dn0 @TkArc f9 '' #zField
 dn0 @RichDialog f11 '' #zField
@@ -39,6 +38,11 @@ dn0 @TkArc f19 '' #zField
 dn0 @RichDialog f20 '' #zField
 dn0 @PushWFArc f21 '' #zField
 dn0 @TkArc f22 '' #zField
+dn0 @Alternative f23 '' #zField
+dn0 @PushWFArc f24 '' #zField
+dn0 @PushWFArc f15 '' #zField
+dn0 @EndTask f25 '' #zField
+dn0 @PushWFArc f26 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -69,7 +73,7 @@ dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f0 65 361 30 30 -13 17 #rect
 dn0 f0 @|StartSubIcon #fIcon
 dn0 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
-dn0 f1 1361 129 30 30 0 15 #rect
+dn0 f1 1433 57 30 30 0 15 #rect
 dn0 f1 @|EndSubIcon #fIcon
 dn0 f3 targetWindow NEW:card: #txt
 dn0 f3 targetDisplay TOP #txt
@@ -170,7 +174,7 @@ dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f12 928 122 112 44 -33 -20 #rect
+dn0 f12 944 122 112 44 -33 -20 #rect
 dn0 f12 @|CallSubIcon #fIcon
 dn0 f13 expr in #txt
 dn0 f13 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -182,7 +186,7 @@ dn0 f13 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f13 880 144 928 144 #arcP
+dn0 f13 880 144 944 144 #arcP
 dn0 f16 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 dn0 f16 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f16 timeout 0 #txt
@@ -200,9 +204,7 @@ mitteilen</name>
 dn0 f16 1144 122 128 44 -46 -16 #rect
 dn0 f16 @|EMailIcon #fIcon
 dn0 f14 expr out #txt
-dn0 f14 1040 144 1144 144 #arcP
-dn0 f15 expr out #txt
-dn0 f15 1272 144 1361 144 #arcP
+dn0 f14 1056 144 1144 144 #arcP
 dn0 f2 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
 ' #txt
 dn0 f2 actionTable 'out=in1;
@@ -282,24 +284,36 @@ dn0 f9 expr out #txt
 dn0 f9 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f9 var in1 #txt
 dn0 f9 520 144 584 144 #arcP
-dn0 f11 targetWindow NEW #txt
+dn0 f11 targetWindow NEW:card: #txt
 dn0 f11 targetDisplay TOP #txt
-dn0 f11 startMethod start() #txt
 dn0 f11 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f11 requestActionDecl '<> param;' #txt
 dn0 f11 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
 ' #txt
 dn0 f11 responseMappingAction 'out=in;
 ' #txt
+dn0 f11 windowConfiguration '* ' #txt
 dn0 f11 isAsynch false #txt
 dn0 f11 isInnerRd false #txt
-dn0 f11 672 122 112 44 0 -8 #rect
+dn0 f11 userContext '* ' #txt
+dn0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Dokumente prüfen
++ Bemerkungen</name>
+        <nameStyle>17,7
+13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f11 664 122 128 44 -45 -16 #rect
 dn0 f11 @|RichDialogIcon #fIcon
 dn0 f17 expr data #txt
 dn0 f17 outCond ivp=="TaskA.ivp" #txt
-dn0 f17 616 144 672 144 #arcP
+dn0 f17 616 144 664 144 #arcP
 dn0 f18 expr out #txt
-dn0 f18 784 144 848 144 #arcP
+dn0 f18 792 144 848 144 #arcP
 dn0 f10 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
 ' #txt
 dn0 f10 actionTable 'out=in1;
@@ -327,28 +341,81 @@ dn0 f19 expr in #txt
 dn0 f19 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f19 var in1 #txt
 dn0 f19 864 160 864 368 #arcP
-dn0 f20 targetWindow NEW #txt
+dn0 f20 targetWindow NEW:card: #txt
 dn0 f20 targetDisplay TOP #txt
-dn0 f20 startMethod start() #txt
 dn0 f20 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f20 requestActionDecl '<> param;' #txt
 dn0 f20 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
 ' #txt
 dn0 f20 responseMappingAction 'out=in;
 ' #txt
+dn0 f20 windowConfiguration '* ' #txt
 dn0 f20 isAsynch false #txt
 dn0 f20 isInnerRd false #txt
-dn0 f20 680 362 112 44 0 -8 #rect
+dn0 f20 userContext '* ' #txt
+dn0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Dokumente Anpassen</name>
+        <nameStyle>18,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f20 672 362 128 44 -61 -8 #rect
 dn0 f20 @|RichDialogIcon #fIcon
 dn0 f21 expr data #txt
 dn0 f21 outCond ivp=="TaskA.ivp" #txt
-dn0 f21 848 384 792 384 #arcP
+dn0 f21 848 384 800 384 #arcP
 dn0 f22 expr out #txt
 dn0 f22 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f22 var in2 #txt
-dn0 f22 680 384 600 160 #arcP
+dn0 f22 672 384 600 160 #arcP
 dn0 f22 1 600 384 #addKink
 dn0 f22 1 0.20060637575311377 0 0 #arcLabel
+dn0 f23 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Entscheid positiv?</name>
+        <nameStyle>18,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f23 1328 128 32 32 -50 18 #rect
+dn0 f23 @|AlternativeIcon #fIcon
+dn0 f24 expr out #txt
+dn0 f24 1272 144 1328 144 #arcP
+dn0 f15 expr in #txt
+dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f15 1344 128 1433 72 #arcP
+dn0 f15 1 1344 72 #addKink
+dn0 f15 1 0.18293322975267023 0 0 #arcLabel
+dn0 f25 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f25 1433 177 30 30 0 15 #rect
+dn0 f25 @|EndIcon #fIcon
+dn0 f26 expr in #txt
+dn0 f26 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f26 1344 160 1433 192 #arcP
+dn0 f26 1 1344 192 #addKink
+dn0 f26 1 0.2541608993288001 0 0 #arcLabel
 >Proto dn0 .type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -387,8 +454,6 @@ dn0 f8 out f13 tail #connect
 dn0 f13 head f12 mainIn #connect
 dn0 f12 mainOut f14 tail #connect
 dn0 f14 head f16 mainIn #connect
-dn0 f16 mainOut f15 tail #connect
-dn0 f15 head f1 mainIn #connect
 dn0 f6 mainOut f9 tail #connect
 dn0 f9 head f2 in #connect
 dn0 f2 out f17 tail #connect
@@ -401,6 +466,12 @@ dn0 f10 out f21 tail #connect
 dn0 f21 head f20 mainIn #connect
 dn0 f20 mainOut f22 tail #connect
 dn0 f22 head f2 in #connect
+dn0 f16 mainOut f24 tail #connect
+dn0 f24 head f23 in #connect
+dn0 f23 out f15 tail #connect
+dn0 f15 head f1 mainIn #connect
+dn0 f23 out f26 tail #connect
+dn0 f26 head f25 mainIn #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head g1 m #connect
 Bk0 0 0 640 512 0 #ivRect
