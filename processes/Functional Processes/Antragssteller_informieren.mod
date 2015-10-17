@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Oct 15 14:31:14 CEST 2015]
+[>Created: Sat Oct 17 09:49:02 CEST 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -85,11 +85,11 @@ Ct0 @TextInP .xml .xml #zField
 Ct0 @TextInP .responsibility .responsibility #zField
 Ct0 @PushTrueWFInG-01 g0 '' #zField
 Ct0 @PushTrueWFOutG-01 g1 '' #zField
-Ct0 @GridStep f1 '' #zField
-Ct0 @PushWFArc f2 '' #zField
 Ct0 @DBStep f3 '' #zField
-Ct0 @PushWFArc f4 '' #zField
 Ct0 @PushWFArc f0 '' #zField
+Ct0 @RichDialog f1 '' #zField
+Ct0 @PushWFArc f2 '' #zField
+Ct0 @PushWFArc f4 '' #zField
 >Proto Ct0 Ct0 Component #zField
 An0 f0 inParamDecl '<> param;' #txt
 An0 f0 outParamDecl '<> result;
@@ -147,13 +147,13 @@ An0 f10 timeout 0 #txt
 An0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Email mit Link versenden</name>
-        <nameStyle>24,7
+        <name>Email mit Link und Login versenden</name>
+        <nameStyle>34,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 f10 616 130 144 44 -69 -8 #rect
+An0 f10 584 130 208 44 -98 -8 #rect
 An0 f10 @|EMailIcon #fIcon
 An0 R30 .resExport export #txt
 An0 R30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -179,6 +179,7 @@ An0 S10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Gesuch bekunden</name>
         <nameStyle>29,5,7
 </nameStyle>
+        <desc>Annahme: Taskselement beim Wechsel von Rollen wird im fachlichen Konzept noch nicht benötigt.</desc>
     </language>
 </elementInfo>
 ' #txt
@@ -217,8 +218,18 @@ Insert in DB</name>
 An0 S40 384 274 112 44 -47 -20 #rect
 An0 S40 @|BIcon #fIcon
 An0 f8 expr in #txt
+An0 f8 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
 An0 f8 440 496 440 318 #arcP
-An0 f9 440 274 616 152 #arcP
+An0 f8 0 0.10112359550561797 -10 0 #arcLabel
+An0 f9 440 274 584 152 #arcP
 An0 f9 1 440 152 #addKink
 An0 f9 1 0.24338461636069855 0 0 #arcLabel
 >Proto An0 .type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
@@ -273,27 +284,10 @@ Bk2 g1 @|MOGIcon #fIcon
 Bk2 f0 330 440 565 263 #arcP
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BpmnReceiveTaskIcon #fIcon
-Ct0 g0 99 107 26 26 0 5 #rect
+Ct0 g0 83 115 26 26 0 5 #rect
 Ct0 g0 @|MIGIcon #fIcon
-Ct0 g1 515 107 26 26 0 5 #rect
+Ct0 g1 499 115 26 26 0 5 #rect
 Ct0 g1 @|MOGIcon #fIcon
-Ct0 f1 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
-' #txt
-Ct0 f1 actionTable 'out=in;
-' #txt
-Ct0 f1 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
-Ct0 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Create Login</name>
-        <nameStyle>12,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Ct0 f1 184 98 112 44 -35 -8 #rect
-Ct0 f1 @|StepIcon #fIcon
-Ct0 f2 125 120 184 120 #arcP
 Ct0 f3 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
 ' #txt
 Ct0 f3 actionTable 'out=in;
@@ -316,12 +310,36 @@ in DB</name>
     </language>
 </elementInfo>
 ' #txt
-Ct0 f3 344 98 112 44 -30 -16 #rect
+Ct0 f3 328 106 112 44 -30 -16 #rect
 Ct0 f3 @|DBStepIcon #fIcon
-Ct0 f4 expr out #txt
-Ct0 f4 296 120 344 120 #arcP
 Ct0 f0 expr out #txt
-Ct0 f0 456 120 515 120 #arcP
+Ct0 f0 440 128 499 128 #arcP
+Ct0 f1 targetWindow NEW:card: #txt
+Ct0 f1 targetDisplay TOP #txt
+Ct0 f1 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
+Ct0 f1 requestActionDecl '<> param;' #txt
+Ct0 f1 responseActionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
+' #txt
+Ct0 f1 responseMappingAction 'out=in;
+' #txt
+Ct0 f1 windowConfiguration '* ' #txt
+Ct0 f1 isAsynch false #txt
+Ct0 f1 isInnerRd false #txt
+Ct0 f1 userContext '* ' #txt
+Ct0 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Create Login</name>
+        <nameStyle>12,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ct0 f1 152 106 112 44 -35 -8 #rect
+Ct0 f1 @|RichDialogIcon #fIcon
+Ct0 f2 109 128 152 128 #arcP
+Ct0 f4 expr out #txt
+Ct0 f4 264 128 328 128 #arcP
 >Proto Ct0 0 0 32 24 18 0 #rect
 >Proto Ct0 @|BIcon #fIcon
 An0 f0 mainOut f3 tail #connect
@@ -349,10 +367,10 @@ Bk0 0 0 640 512 0 #ivRect
 Bk2 g0 m f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 0 0 640 512 0 #ivRect
+Ct0 f3 mainOut f0 tail #connect
+Ct0 f0 head g1 m #connect
 Ct0 g0 m f2 tail #connect
 Ct0 f2 head f1 mainIn #connect
 Ct0 f1 mainOut f4 tail #connect
 Ct0 f4 head f3 mainIn #connect
-Ct0 f3 mainOut f0 tail #connect
-Ct0 f0 head g1 m #connect
 Ct0 0 0 640 512 0 #ivRect
