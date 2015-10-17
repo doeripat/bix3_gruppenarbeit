@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 13:16:45 CEST 2015]
+[>Created: Sat Oct 17 13:57:27 CEST 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -303,7 +303,7 @@ En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 En0 f16 944 416 1112 449 #arcP
 En0 f16 1 1112 416 #addKink
-En0 f16 0 0.10242507762792546 0 -19 #arcLabel
+En0 f16 0 0.2261904761904762 0 -12 #arcLabel
 En0 f17 expr out #txt
 En0 f17 943 512 1112 479 #arcP
 En0 f17 1 1112 512 #addKink
@@ -315,7 +315,7 @@ En0 S20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Publizieren</name>
         <nameStyle>11,5,7
 </nameStyle>
-        <desc>Es wird eine Email mit den Erforderlichen Informationen ans Amtsblatt geschickt</desc>
+        <desc>Es wird eine automatisierte Email mit den erforderlichen Informationen ans Amtsblatt geschickt.</desc>
     </language>
 </elementInfo>
 ' #txt
@@ -331,6 +331,7 @@ En0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Einwände erfassen</name>
         <nameStyle>17,5,7
 </nameStyle>
+        <desc>Optimierung: Erfassung Einwände per Webformular</desc>
     </language>
 </elementInfo>
 ' #txt

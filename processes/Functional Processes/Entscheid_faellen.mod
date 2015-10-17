@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 13:17:41 CEST 2015]
+[>Created: Sat Oct 17 14:03:51 CEST 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -17,6 +17,8 @@ Bk5 BpmnSendTask Big #zClass
 Bk5 BpmnSendTask #cInfo
 Bk1 BpmnServiceTask Big #zClass
 Bk1 BpmnServiceTask #cInfo
+Bk6 BpmnUserTask Big #zClass
+Bk6 BpmnUserTask #cInfo
 En0 @TextInP .resExport .resExport #zField
 En0 @TextInP .type .type #zField
 En0 @TextInP .processKind .processKind #zField
@@ -39,10 +41,12 @@ En0 Bk4 S40 'Send 4' #zField
 En0 Bk5 S50 'Send 5' #zField
 En0 @PushWFArc f6 '' #zField
 En0 @PushWFArc f7 '' #zField
-En0 @PushWFArc f9 '' #zField
 En0 Bk1 S00 'Service 10' #zField
 En0 @PushWFArc f2 '' #zField
 En0 @PushWFArc f10 '' #zField
+En0 Bk6 U60 'User 6' #zField
+En0 @PushWFArc f11 '' #zField
+En0 @PushWFArc f9 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -124,6 +128,18 @@ Bk1 @PushWFArc f3 '' #zField
 Bk1 @PushWFArc f4 '' #zField
 Bk1 @PushWFArc f5 '' #zField
 >Proto Bk1 Bk5 BpmnServiceTask #zField
+Bk6 @TextInP .resExport .resExport #zField
+Bk6 @TextInP .type .type #zField
+Bk6 @TextInP .processKind .processKind #zField
+Bk6 @AnnotationInP-0n ai ai #zField
+Bk6 @MessageFlowInP-0n messageIn messageIn #zField
+Bk6 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk6 @TextInP .xml .xml #zField
+Bk6 @TextInP .responsibility .responsibility #zField
+Bk6 @PushTrueWFInG-01 g0 '' #zField
+Bk6 @PushTrueWFOutG-01 g1 '' #zField
+Bk6 @PushWFArc f0 '' #zField
+>Proto Bk6 Bk6 BpmnUserTask #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out.data=param.data;
 ' #txt
@@ -158,10 +174,10 @@ Entscheid faellen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 U10 192 98 128 44 -43 -16 #rect
+En0 U10 176 98 128 44 -43 -16 #rect
 En0 U10 @|BpmnUserTaskIcon #fIcon
 En0 f4 expr out #txt
-En0 f4 119 120 192 120 #arcP
+En0 f4 119 120 176 120 #arcP
 En0 U20 .resExport export #txt
 En0 U20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -203,7 +219,7 @@ positiv?</name>
 ' #txt
 En0 f8 360 104 32 32 -28 -53 #rect
 En0 f8 @|AlternativeIcon #fIcon
-En0 f14 320 120 360 120 #arcP
+En0 f14 304 120 360 120 #arcP
 En0 f3 expr in #txt
 En0 f3 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -246,19 +262,6 @@ En0 f6 976 208 1232 135 #arcP
 En0 f6 1 1232 208 #addKink
 En0 f6 0 0.7485787264026322 0 0 #arcLabel
 En0 f7 784 120 848 120 #arcP
-En0 f9 expr in #txt
-En0 f9 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Nein</name>
-        <nameStyle>4,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f9 376 136 848 208 #arcP
-En0 f9 1 376 208 #addKink
-En0 f9 0 0.19444444444444445 18 0 #arcLabel
 En0 S00 .resExport export #txt
 En0 S00 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -274,6 +277,35 @@ En0 S00 1040 98 112 44 -33 -16 #rect
 En0 S00 @|BpmnServiceTaskIcon #fIcon
 En0 f2 976 120 1040 120 #arcP
 En0 f10 1152 120 1217 120 #arcP
+En0 U60 .resExport export #txt
+En0 U60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Ablehnende
+Verfügung
+erstellen</name>
+        <nameStyle>30,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 U60 448 178 112 60 -33 -24 #rect
+En0 U60 @|BpmnUserTaskIcon #fIcon
+En0 f11 expr in #txt
+En0 f11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f11 376 136 448 208 #arcP
+En0 f11 1 376 208 #addKink
+En0 f11 0 0.19444444444444445 18 0 #arcLabel
+En0 f9 560 208 848 208 #arcP
+En0 f9 0 0.19444444444444445 18 0 #arcLabel
 >Proto En0 .type einbuergerung_Gruppe6.Entscheid_faellenData #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -371,6 +403,13 @@ Bk1 f5 expr out #txt
 Bk1 f5 408 256 563 256 #arcP
 >Proto Bk5 0 0 32 24 18 0 #rect
 >Proto Bk5 @|BpmnUserTaskIcon #fIcon
+Bk6 g0 179 51 26 26 0 5 #rect
+Bk6 g0 @|MIGIcon #fIcon
+Bk6 g1 563 243 26 26 0 5 #rect
+Bk6 g1 @|MOGIcon #fIcon
+Bk6 f0 203 69 564 250 #arcP
+>Proto Bk6 0 0 32 24 18 0 #rect
+>Proto Bk6 @|BpmnUserTaskIcon #fIcon
 En0 f0 mainOut f4 tail #connect
 En0 f4 head U10 g1 #connect
 En0 U20 g1 f5 tail #connect
@@ -383,12 +422,14 @@ En0 S50 g0 f6 tail #connect
 En0 f6 head f1 mainIn #connect
 En0 S30 g1 f7 tail #connect
 En0 f7 head S40 g1 #connect
-En0 f8 out f9 tail #connect
-En0 f9 head S50 g1 #connect
 En0 S40 g0 f2 tail #connect
 En0 f2 head S00 g0 #connect
 En0 S00 g1 f10 tail #connect
 En0 f10 head f1 mainIn #connect
+En0 f8 out f11 tail #connect
+En0 f11 head U60 g0 #connect
+En0 U60 g1 f9 tail #connect
+En0 f9 head S50 g1 #connect
 Bk0 g1 m f0 tail #connect
 Bk0 f0 head g0 m #connect
 Bk0 0 0 640 512 0 #ivRect
@@ -415,3 +456,6 @@ Bk1 f4 head f1 mainIn #connect
 Bk1 f1 mainOut f5 tail #connect
 Bk1 f5 head g1 m #connect
 Bk1 0 0 640 512 0 #ivRect
+Bk6 g0 m f0 tail #connect
+Bk6 f0 head g1 m #connect
+Bk6 0 0 640 512 0 #ivRect

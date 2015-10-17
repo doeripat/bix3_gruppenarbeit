@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 13:16:13 CEST 2015]
+[>Created: Sat Oct 17 13:50:04 CEST 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -205,11 +205,11 @@ kenntnisse prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 U30 342 50 212 44 -77 -16 #rect
+vs0 U30 384 50 128 44 -46 -16 #rect
 vs0 U30 @|BpmnUserTaskIcon #fIcon
 vs0 f19 type einbuergerung_Gruppe6.validate_documentsData #txt
 vs0 f19 var in4 #txt
-vs0 f19 554 72 736 152 #arcP
+vs0 f19 512 72 736 152 #arcP
 vs0 f19 1 736 72 #addKink
 vs0 f19 0 0.6783945034378248 0 0 #arcLabel
 vs0 U40 .resExport export #txt
@@ -245,7 +245,7 @@ vs0 f23 var in2 #txt
 vs0 f23 548 200 722 170 #arcP
 vs0 f23 0 0.13080187207502658 0 0 #arcLabel
 vs0 f3 expr out1 #txt
-vs0 f3 192 160 342 72 #arcP
+vs0 f3 192 160 384 72 #arcP
 vs0 f3 1 192 72 #addKink
 vs0 f3 1 0.2637719086116223 0 0 #arcLabel
 vs0 f7 expr out2 #txt
