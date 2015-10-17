@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 09:49:02 CEST 2015]
+[>Created: Sat Oct 17 13:14:23 CEST 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -11,8 +11,12 @@ Bk0 BpmnSendTask Big #zClass
 Bk0 BpmnSendTask #cInfo
 Bk2 BpmnUserTask Big #zClass
 Bk2 BpmnUserTask #cInfo
-Ct0 Component Big #zClass
-Ct0 B #cInfo
+Bk4 BpmnUserTask Big #zClass
+Bk4 BpmnUserTask #cInfo
+Bk5 BpmnSendTask Big #zClass
+Bk5 BpmnSendTask #cInfo
+Bk6 BpmnServiceTask Big #zClass
+Bk6 BpmnServiceTask #cInfo
 An0 @TextInP .resExport .resExport #zField
 An0 @TextInP .type .type #zField
 An0 @TextInP .processKind .processKind #zField
@@ -27,17 +31,19 @@ An0 @PushWFArc f3 '' #zField
 An0 @Alternative f4 '' #zField
 An0 @EndTask f6 '' #zField
 An0 @PushWFArc f5 '' #zField
-An0 @EMail f10 '' #zField
 An0 Bk3 R30 'Receive 3' #zField
-An0 @PushWFArc f12 '' #zField
 An0 @PushWFArc f13 '' #zField
 An0 Bk0 S10 'Send 1' #zField
 An0 @PushWFArc f7 '' #zField
 An0 @PushWFArc f2 '' #zField
 An0 Bk2 U20 'User 2' #zField
-An0 Ct0 S40 'Sub 4' #zField
-An0 @PushWFArc f8 '' #zField
+An0 Bk4 U50 'User 5' #zField
+An0 @PushWFArc f11 '' #zField
+An0 Bk5 S60 'Send 6' #zField
 An0 @PushWFArc f9 '' #zField
+An0 Bk6 S70 'Service 7' #zField
+An0 @PushWFArc f8 '' #zField
+An0 @PushWFArc f10 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 Bk3 @TextInP .resExport .resExport #zField
 Bk3 @TextInP .type .type #zField
@@ -75,22 +81,42 @@ Bk2 @PushTrueWFInG-01 g0 '' #zField
 Bk2 @PushTrueWFOutG-01 g1 '' #zField
 Bk2 @PushWFArc f0 '' #zField
 >Proto Bk2 Bk2 BpmnUserTask #zField
-Ct0 @TextInP .resExport .resExport #zField
-Ct0 @TextInP .type .type #zField
-Ct0 @TextInP .processKind .processKind #zField
-Ct0 @AnnotationInP-0n ai ai #zField
-Ct0 @MessageFlowInP-0n messageIn messageIn #zField
-Ct0 @MessageFlowOutP-0n messageOut messageOut #zField
-Ct0 @TextInP .xml .xml #zField
-Ct0 @TextInP .responsibility .responsibility #zField
-Ct0 @PushTrueWFInG-01 g0 '' #zField
-Ct0 @PushTrueWFOutG-01 g1 '' #zField
-Ct0 @DBStep f3 '' #zField
-Ct0 @PushWFArc f0 '' #zField
-Ct0 @RichDialog f1 '' #zField
-Ct0 @PushWFArc f2 '' #zField
-Ct0 @PushWFArc f4 '' #zField
->Proto Ct0 Ct0 Component #zField
+Bk4 @TextInP .resExport .resExport #zField
+Bk4 @TextInP .type .type #zField
+Bk4 @TextInP .processKind .processKind #zField
+Bk4 @AnnotationInP-0n ai ai #zField
+Bk4 @MessageFlowInP-0n messageIn messageIn #zField
+Bk4 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk4 @TextInP .xml .xml #zField
+Bk4 @TextInP .responsibility .responsibility #zField
+Bk4 @PushTrueWFInG-01 g0 '' #zField
+Bk4 @PushTrueWFOutG-01 g1 '' #zField
+Bk4 @PushWFArc f0 '' #zField
+>Proto Bk4 Bk3 BpmnUserTask #zField
+Bk5 @TextInP .resExport .resExport #zField
+Bk5 @TextInP .type .type #zField
+Bk5 @TextInP .processKind .processKind #zField
+Bk5 @AnnotationInP-0n ai ai #zField
+Bk5 @MessageFlowInP-0n messageIn messageIn #zField
+Bk5 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk5 @TextInP .xml .xml #zField
+Bk5 @TextInP .responsibility .responsibility #zField
+Bk5 @PushTrueWFInG-01 g0 '' #zField
+Bk5 @PushTrueWFOutG-01 g1 '' #zField
+Bk5 @PushWFArc f0 '' #zField
+>Proto Bk5 Bk4 BpmnSendTask #zField
+Bk6 @TextInP .resExport .resExport #zField
+Bk6 @TextInP .type .type #zField
+Bk6 @TextInP .processKind .processKind #zField
+Bk6 @AnnotationInP-0n ai ai #zField
+Bk6 @MessageFlowInP-0n messageIn messageIn #zField
+Bk6 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk6 @TextInP .xml .xml #zField
+Bk6 @TextInP .responsibility .responsibility #zField
+Bk6 @PushTrueWFInG-01 g0 '' #zField
+Bk6 @PushTrueWFOutG-01 g1 '' #zField
+Bk6 @PushWFArc f0 '' #zField
+>Proto Bk6 Bk5 BpmnServiceTask #zField
 An0 f0 inParamDecl '<> param;' #txt
 An0 f0 outParamDecl '<> result;
 ' #txt
@@ -141,20 +167,6 @@ An0 f5 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f5 456 512 561 512 #arcP
 An0 f5 0 0.1728395061728395 0 -11 #arcLabel
-An0 f10 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-An0 f10 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
-An0 f10 timeout 0 #txt
-An0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Email mit Link und Login versenden</name>
-        <nameStyle>34,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f10 584 130 208 44 -98 -8 #rect
-An0 f10 @|EMailIcon #fIcon
 An0 R30 .resExport export #txt
 An0 R30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -168,8 +180,6 @@ erhalten</name>
 ' #txt
 An0 R30 632 490 112 44 -38 -16 #rect
 An0 R30 @|BpmnReceiveTaskIcon #fIcon
-An0 f12 expr out #txt
-An0 f12 688 174 688 490 #arcP
 An0 f13 744 512 833 512 #arcP
 An0 S10 .resExport export #txt
 An0 S10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -204,8 +214,47 @@ informieren</name>
 ' #txt
 An0 U20 160 274 128 60 -40 -24 #rect
 An0 U20 @|BpmnUserTaskIcon #fIcon
-An0 S40 .resExport export #txt
-An0 S40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+An0 U50 .resExport export #txt
+An0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Login Informationen 
+generieren</name>
+        <nameStyle>31,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 U50 368 282 144 44 -52 -16 #rect
+An0 U50 @|BpmnUserTaskIcon #fIcon
+An0 f11 expr in #txt
+An0 f11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f11 440 496 440 326 #arcP
+An0 f11 0 0.10112359550561797 -10 0 #arcLabel
+An0 S60 .resExport export #txt
+An0 S60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Email mit Link und 
+Login versenden</name>
+        <nameStyle>35,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 S60 624 130 128 44 -46 -16 #rect
+An0 S60 @|BpmnSendTaskIcon #fIcon
+An0 f9 688 174 688 490 #arcP
+An0 S70 .resExport export #txt
+An0 S70 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
         <name>Create Login and
@@ -215,23 +264,10 @@ Insert in DB</name>
     </language>
 </elementInfo>
 ' #txt
-An0 S40 384 274 112 44 -47 -20 #rect
-An0 S40 @|BIcon #fIcon
-An0 f8 expr in #txt
-An0 f8 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Ja</name>
-        <nameStyle>2,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f8 440 496 440 318 #arcP
-An0 f8 0 0.10112359550561797 -10 0 #arcLabel
-An0 f9 440 274 584 152 #arcP
-An0 f9 1 440 152 #addKink
-An0 f9 1 0.24338461636069855 0 0 #arcLabel
+An0 S70 376 130 128 44 -43 -16 #rect
+An0 S70 @|BpmnServiceTaskIcon #fIcon
+An0 f8 440 282 440 174 #arcP
+An0 f10 504 152 624 152 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -248,9 +284,9 @@ An0 f9 1 0.24338461636069855 0 0 #arcLabel
     <swimlaneSize>192</swimlaneSize>
     <swimlaneSize>144</swimlaneSize>
     <swimlaneColor gradient="false">-3355393</swimlaneColor>
-    <swimlaneColor gradient="false">-6710785</swimlaneColor>
-    <swimlaneColor gradient="false">-10053121</swimlaneColor>
     <swimlaneColor gradient="false">-3355393</swimlaneColor>
+    <swimlaneColor gradient="false">-52</swimlaneColor>
+    <swimlaneColor gradient="false">-3342388</swimlaneColor>
     <swimlaneType>POOL</swimlaneType>
     <swimlaneType>LANE_IN_POOL</swimlaneType>
     <swimlaneType>LANE_IN_POOL</swimlaneType>
@@ -284,64 +320,27 @@ Bk2 g1 @|MOGIcon #fIcon
 Bk2 f0 330 440 565 263 #arcP
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BpmnReceiveTaskIcon #fIcon
-Ct0 g0 83 115 26 26 0 5 #rect
-Ct0 g0 @|MIGIcon #fIcon
-Ct0 g1 499 115 26 26 0 5 #rect
-Ct0 g1 @|MOGIcon #fIcon
-Ct0 f3 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
-' #txt
-Ct0 f3 actionTable 'out=in;
-' #txt
-Ct0 f3 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE ANY_SQL SYSTEM  ""sqlStatements.dtd"">
-<ANY_SQL><Verbatim quote=''true''></Verbatim></ANY_SQL>' #txt
-Ct0 f3 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-Ct0 f3 lotSize 2147483647 #txt
-Ct0 f3 startIdx 0 #txt
-Ct0 f3 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
-Ct0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Insert User
-in DB</name>
-        <nameStyle>12,7
-5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Ct0 f3 328 106 112 44 -30 -16 #rect
-Ct0 f3 @|DBStepIcon #fIcon
-Ct0 f0 expr out #txt
-Ct0 f0 440 128 499 128 #arcP
-Ct0 f1 targetWindow NEW:card: #txt
-Ct0 f1 targetDisplay TOP #txt
-Ct0 f1 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
-Ct0 f1 requestActionDecl '<> param;' #txt
-Ct0 f1 responseActionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
-' #txt
-Ct0 f1 responseMappingAction 'out=in;
-' #txt
-Ct0 f1 windowConfiguration '* ' #txt
-Ct0 f1 isAsynch false #txt
-Ct0 f1 isInnerRd false #txt
-Ct0 f1 userContext '* ' #txt
-Ct0 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Create Login</name>
-        <nameStyle>12,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Ct0 f1 152 106 112 44 -35 -8 #rect
-Ct0 f1 @|RichDialogIcon #fIcon
-Ct0 f2 109 128 152 128 #arcP
-Ct0 f4 expr out #txt
-Ct0 f4 264 128 328 128 #arcP
->Proto Ct0 0 0 32 24 18 0 #rect
->Proto Ct0 @|BIcon #fIcon
+Bk4 g0 307 435 26 26 0 5 #rect
+Bk4 g0 @|MIGIcon #fIcon
+Bk4 g1 307 51 26 26 0 5 #rect
+Bk4 g1 @|MOGIcon #fIcon
+Bk4 f0 320 435 320 77 #arcP
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BpmnUserTaskIcon #fIcon
+Bk5 g0 51 291 26 26 0 5 #rect
+Bk5 g0 @|MIGIcon #fIcon
+Bk5 g1 307 435 26 26 0 5 #rect
+Bk5 g1 @|MOGIcon #fIcon
+Bk5 f0 75 310 308 441 #arcP
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BpmnSendTaskIcon #fIcon
+Bk6 g0 307 435 26 26 0 5 #rect
+Bk6 g0 @|MIGIcon #fIcon
+Bk6 g1 563 243 26 26 0 5 #rect
+Bk6 g1 @|MOGIcon #fIcon
+Bk6 f0 330 440 565 263 #arcP
+>Proto Bk5 0 0 32 24 18 0 #rect
+>Proto Bk5 @|BpmnServiceTaskIcon #fIcon
 An0 f0 mainOut f3 tail #connect
 An0 f3 head S10 g0 #connect
 An0 S10 g1 f2 tail #connect
@@ -350,14 +349,16 @@ An0 U20 g1 f7 tail #connect
 An0 f7 head f4 in #connect
 An0 f4 out f5 tail #connect
 An0 f5 head f6 mainIn #connect
-An0 f10 mainOut f12 tail #connect
-An0 f12 head R30 g0 #connect
 An0 R30 g1 f13 tail #connect
 An0 f13 head f1 mainIn #connect
-An0 f4 out f8 tail #connect
-An0 f8 head S40 g0 #connect
-An0 S40 g1 f9 tail #connect
-An0 f9 head f10 mainIn #connect
+An0 f4 out f11 tail #connect
+An0 f11 head U50 g0 #connect
+An0 S60 g1 f9 tail #connect
+An0 f9 head R30 g0 #connect
+An0 U50 g1 f8 tail #connect
+An0 f8 head S70 g0 #connect
+An0 S70 g1 f10 tail #connect
+An0 f10 head S60 g0 #connect
 Bk3 g0 m f0 tail #connect
 Bk3 f0 head g1 m #connect
 Bk3 0 0 640 512 0 #ivRect
@@ -367,10 +368,12 @@ Bk0 0 0 640 512 0 #ivRect
 Bk2 g0 m f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 0 0 640 512 0 #ivRect
-Ct0 f3 mainOut f0 tail #connect
-Ct0 f0 head g1 m #connect
-Ct0 g0 m f2 tail #connect
-Ct0 f2 head f1 mainIn #connect
-Ct0 f1 mainOut f4 tail #connect
-Ct0 f4 head f3 mainIn #connect
-Ct0 0 0 640 512 0 #ivRect
+Bk4 g0 m f0 tail #connect
+Bk4 f0 head g1 m #connect
+Bk4 0 0 640 512 0 #ivRect
+Bk5 g0 m f0 tail #connect
+Bk5 f0 head g1 m #connect
+Bk5 0 0 640 512 0 #ivRect
+Bk6 g0 m f0 tail #connect
+Bk6 f0 head g1 m #connect
+Bk6 0 0 640 512 0 #ivRect
