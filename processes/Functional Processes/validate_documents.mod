@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Oct 18 15:39:56 CEST 2015]
+[>Created: Sun Oct 18 17:20:46 CEST 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -7,8 +7,6 @@ vs0 B #cInfo
 vs0 #process
 Bk0 BpmnTask Big #zClass
 Bk0 BpmnTask #cInfo
-Bk1 BpmnUserTask Big #zClass
-Bk1 BpmnUserTask #cInfo
 Bk2 BpmnUserTask Big #zClass
 Bk2 BpmnUserTask #cInfo
 Bk3 BpmnUserTask Big #zClass
@@ -17,6 +15,10 @@ Bk4 BpmnUserTask Big #zClass
 Bk4 BpmnUserTask #cInfo
 Bk5 BpmnBusinessRuleTask Big #zClass
 Bk5 BpmnBusinessRuleTask #cInfo
+Bk1 BpmnUserTask Big #zClass
+Bk1 BpmnUserTask #cInfo
+Bk6 BpmnUserTask Big #zClass
+Bk6 BpmnUserTask #cInfo
 vs0 @TextInP .resExport .resExport #zField
 vs0 @TextInP .type .type #zField
 vs0 @TextInP .processKind .processKind #zField
@@ -31,13 +33,6 @@ vs0 @Split f4 '' #zField
 vs0 @PushWFArc f5 '' #zField
 vs0 @Join f2 '' #zField
 vs0 Bk0 G10 'Generic 1' #zField
-vs0 Bk1 U20 'User 2' #zField
-vs0 @PushWFArc f6 '' #zField
-vs0 @PushWFArc f9 '' #zField
-vs0 @PushWFArc f10 '' #zField
-vs0 @PushWFArc f11 '' #zField
-vs0 @SJArc f12 '' #zField
-vs0 @PushWFArc f13 '' #zField
 vs0 Bk2 U30 'User 3' #zField
 vs0 @SJArc f19 '' #zField
 vs0 Bk3 U40 'User 4' #zField
@@ -52,6 +47,12 @@ vs0 @PushWFArc f14 '' #zField
 vs0 @PushWFArc f15 '' #zField
 vs0 @InfoButton f16 '' #zField
 vs0 @AnnotationArc f17 '' #zField
+vs0 @PushWFArc f13 '' #zField
+vs0 Bk1 U20 'User 2' #zField
+vs0 @PushWFArc f6 '' #zField
+vs0 Bk6 U21 'User 2' #zField
+vs0 @PushWFArc f9 '' #zField
+vs0 @SJArc f10 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -67,23 +68,6 @@ Bk0 @PushTrueWFInG-01 g2 '' #zField
 Bk0 @PushTrueWFOutG-01 g3 '' #zField
 Bk0 @PushWFArc f0 '' #zField
 >Proto Bk0 Bk0 BpmnTask #zField
-Bk1 @TextInP .resExport .resExport #zField
-Bk1 @TextInP .type .type #zField
-Bk1 @TextInP .processKind .processKind #zField
-Bk1 @AnnotationInP-0n ai ai #zField
-Bk1 @MessageFlowInP-0n messageIn messageIn #zField
-Bk1 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk1 @TextInP .xml .xml #zField
-Bk1 @TextInP .responsibility .responsibility #zField
-Bk1 @PushTrueWFOutG-01 g0 '' #zField
-Bk1 @PushTrueWFOutG-01 g1 '' #zField
-Bk1 @PushTrueWFOutG-01 g2 '' #zField
-Bk1 @PushTrueWFInG-01 g3 '' #zField
-Bk1 @PushWFArc f0 '' #zField
-Bk1 @PushTrueWFOutG-01 g4 '' #zField
-Bk1 @PushTrueWFInG-01 g5 '' #zField
-Bk1 @PushWFArc f1 '' #zField
->Proto Bk1 Bk1 BpmnUserTask #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
 Bk2 @TextInP .processKind .processKind #zField
@@ -132,6 +116,40 @@ Bk5 @PushTrueWFInG-01 g0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
 Bk5 @PushWFArc f0 '' #zField
 >Proto Bk5 Bk5 BpmnBusinessRuleTask #zField
+Bk1 @TextInP .resExport .resExport #zField
+Bk1 @TextInP .type .type #zField
+Bk1 @TextInP .processKind .processKind #zField
+Bk1 @AnnotationInP-0n ai ai #zField
+Bk1 @MessageFlowInP-0n messageIn messageIn #zField
+Bk1 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk1 @TextInP .xml .xml #zField
+Bk1 @TextInP .responsibility .responsibility #zField
+Bk1 @PushTrueWFOutG-01 g0 '' #zField
+Bk1 @PushTrueWFOutG-01 g1 '' #zField
+Bk1 @PushTrueWFOutG-01 g2 '' #zField
+Bk1 @PushTrueWFInG-01 g3 '' #zField
+Bk1 @PushWFArc f0 '' #zField
+Bk1 @PushTrueWFOutG-01 g4 '' #zField
+Bk1 @PushTrueWFInG-01 g5 '' #zField
+Bk1 @PushWFArc f1 '' #zField
+>Proto Bk1 Bk1 BpmnUserTask #zField
+Bk6 @TextInP .resExport .resExport #zField
+Bk6 @TextInP .type .type #zField
+Bk6 @TextInP .processKind .processKind #zField
+Bk6 @AnnotationInP-0n ai ai #zField
+Bk6 @MessageFlowInP-0n messageIn messageIn #zField
+Bk6 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk6 @TextInP .xml .xml #zField
+Bk6 @TextInP .responsibility .responsibility #zField
+Bk6 @PushTrueWFOutG-01 g0 '' #zField
+Bk6 @PushTrueWFOutG-01 g1 '' #zField
+Bk6 @PushTrueWFOutG-01 g2 '' #zField
+Bk6 @PushTrueWFInG-01 g3 '' #zField
+Bk6 @PushWFArc f0 '' #zField
+Bk6 @PushTrueWFOutG-01 g4 '' #zField
+Bk6 @PushTrueWFInG-01 g5 '' #zField
+Bk6 @PushWFArc f1 '' #zField
+>Proto Bk6 Bk6 BpmnUserTask #zField
 vs0 f0 inParamDecl '<> param;' #txt
 vs0 f0 outParamDecl '<> result;
 ' #txt
@@ -176,40 +194,13 @@ vs0 G10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Kantonspolizei Schwyz (zugeklappter Pool)</name>
         <nameStyle>41,5,7
 </nameStyle>
-        <desc>Anmerkung: Pools können nicht mit Konnektoren verbunden werden</desc>
+        <desc>Anmerkung: Pools können nicht mit Konnektoren verbunden werden
+Kapo stellt Leumund zur Verfügung (PDF)</desc>
     </language>
 </elementInfo>
 ' #txt
 vs0 G10 328 370 240 44 -116 -8 #rect
 vs0 G10 @|BpmnTaskIcon #fIcon
-vs0 U20 .resExport export #txt
-vs0 U20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>Leumundbericht prüfen</name>
-        <nameStyle>21,5,7
-</nameStyle>
-        <desc>1. automatisiertes E-Mail an Kapo mit Aufforderungen Leumund für Person X hochzuladen (inkl. Logindaten)
-2. Kapo stellt Leumund zur Verfügung (PDF)
-3. Leumund prüfen</desc>
-    </language>
-</elementInfo>
-' #txt
-vs0 U20 354 242 188 44 -64 -8 #rect
-vs0 U20 @|BpmnUserTaskIcon #fIcon
-vs0 f6 448 286 448 370 #arcP
-vs0 f9 448 286 448 370 #arcP
-vs0 f10 448 286 448 370 #arcP
-vs0 f11 448 370 448 286 #arcP
-vs0 f12 type einbuergerung_Gruppe6.validate_documentsData #txt
-vs0 f12 var in1 #txt
-vs0 f12 542 264 736 184 #arcP
-vs0 f12 1 736 264 #addKink
-vs0 f12 0 0.6216216216216216 0 0 #arcLabel
-vs0 f13 expr out4 #txt
-vs0 f13 192 192 354 264 #arcP
-vs0 f13 1 192 264 #addKink
-vs0 f13 1 0.2647058823529412 0 0 #arcLabel
 vs0 U30 .resExport export #txt
 vs0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -299,6 +290,45 @@ dennoch annehmen etc.</name>
 vs0 f16 800 42 304 76 -144 -32 #rect
 vs0 f16 @|IBIcon #fIcon
 vs0 f17 952 118 864 146 #arcP
+vs0 f13 expr out4 #txt
+vs0 f13 192 192 264 264 #arcP
+vs0 f13 1 192 264 #addKink
+vs0 f13 1 0.2647058823529412 0 0 #arcLabel
+vs0 U20 .resExport export #txt
+vs0 U20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Leumundbericht anfordern</name>
+        <nameStyle>24,5,7
+</nameStyle>
+        <desc>1. automatisiertes E-Mail an Kapo mit Aufforderungen Leumund für Person X hochzuladen (inkl. Logindaten)
+</desc>
+    </language>
+</elementInfo>
+' #txt
+vs0 U20 264 242 160 44 -73 -8 #rect
+vs0 U20 @|BpmnUserTaskIcon #fIcon
+vs0 f6 344 286 448 370 #arcP
+vs0 U21 .resExport export #txt
+vs0 U21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Leumundbericht prüfen</name>
+        <nameStyle>21,5,7
+</nameStyle>
+        <desc>Leumund prüfen
+</desc>
+    </language>
+</elementInfo>
+' #txt
+vs0 U21 520 242 144 44 -64 -8 #rect
+vs0 U21 @|BpmnUserTaskIcon #fIcon
+vs0 f9 448 370 592 286 #arcP
+vs0 f10 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f10 var in1 #txt
+vs0 f10 664 264 736 184 #arcP
+vs0 f10 1 736 264 #addKink
+vs0 f10 0 0.810816625282994 0 0 #arcLabel
 >Proto vs0 .type einbuergerung_Gruppe6.validate_documentsData #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -326,27 +356,11 @@ Bk0 g1 307 51 26 26 0 5 #rect
 Bk0 g1 @|MIGIcon #fIcon
 Bk0 g2 307 51 26 26 0 5 #rect
 Bk0 g2 @|MIGIcon #fIcon
-Bk0 g3 307 51 26 26 0 5 #rect
+Bk0 g3 155 123 26 26 0 5 #rect
 Bk0 g3 @|MOGIcon #fIcon
-Bk0 f0 320 64 320 64 #arcP
+Bk0 f0 308 69 179 130 #arcP
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BpmnTaskIcon #fIcon
-Bk1 g0 307 435 26 26 0 5 #rect
-Bk1 g0 @|MOGIcon #fIcon
-Bk1 g1 307 435 26 26 0 5 #rect
-Bk1 g1 @|MOGIcon #fIcon
-Bk1 g2 307 435 26 26 0 5 #rect
-Bk1 g2 @|MOGIcon #fIcon
-Bk1 g3 307 435 26 26 0 5 #rect
-Bk1 g3 @|MIGIcon #fIcon
-Bk1 f0 320 448 320 448 #arcP
-Bk1 g4 563 163 26 26 0 5 #rect
-Bk1 g4 @|MOGIcon #fIcon
-Bk1 g5 51 163 26 26 0 5 #rect
-Bk1 g5 @|MIGIcon #fIcon
-Bk1 f1 72 185 311 438 #arcP
->Proto Bk1 0 0 32 24 18 0 #rect
->Proto Bk1 @|BpmnUserTaskIcon #fIcon
 Bk2 g0 51 243 26 26 0 5 #rect
 Bk2 g0 @|MIGIcon #fIcon
 Bk2 g1 435 435 26 26 0 5 #rect
@@ -375,18 +389,40 @@ Bk5 g1 @|MOGIcon #fIcon
 Bk5 f0 77 256 563 256 #arcP
 >Proto Bk5 0 0 32 24 18 0 #rect
 >Proto Bk5 @|BpmnBusinessRuleTaskIcon #fIcon
+Bk1 g0 307 435 26 26 0 5 #rect
+Bk1 g0 @|MOGIcon #fIcon
+Bk1 g1 307 435 26 26 0 5 #rect
+Bk1 g1 @|MOGIcon #fIcon
+Bk1 g2 307 435 26 26 0 5 #rect
+Bk1 g2 @|MOGIcon #fIcon
+Bk1 g3 307 435 26 26 0 5 #rect
+Bk1 g3 @|MIGIcon #fIcon
+Bk1 f0 320 448 320 448 #arcP
+Bk1 g4 563 163 26 26 0 5 #rect
+Bk1 g4 @|MOGIcon #fIcon
+Bk1 g5 51 163 26 26 0 5 #rect
+Bk1 g5 @|MIGIcon #fIcon
+Bk1 f1 72 185 311 438 #arcP
+>Proto Bk1 0 0 32 24 18 0 #rect
+>Proto Bk1 @|BpmnUserTaskIcon #fIcon
+Bk6 g0 307 435 26 26 0 5 #rect
+Bk6 g0 @|MOGIcon #fIcon
+Bk6 g1 307 435 26 26 0 5 #rect
+Bk6 g1 @|MOGIcon #fIcon
+Bk6 g2 307 435 26 26 0 5 #rect
+Bk6 g2 @|MOGIcon #fIcon
+Bk6 g3 307 435 26 26 0 5 #rect
+Bk6 g3 @|MIGIcon #fIcon
+Bk6 f0 320 448 320 448 #arcP
+Bk6 g4 563 163 26 26 0 5 #rect
+Bk6 g4 @|MOGIcon #fIcon
+Bk6 g5 51 163 26 26 0 5 #rect
+Bk6 g5 @|MIGIcon #fIcon
+Bk6 f1 72 185 311 438 #arcP
+>Proto Bk6 0 0 32 24 18 0 #rect
+>Proto Bk6 @|BpmnUserTaskIcon #fIcon
 vs0 f0 mainOut f5 tail #connect
 vs0 f5 head f4 in #connect
-vs0 U20 g0 f6 tail #connect
-vs0 f6 head G10 g0 #connect
-vs0 U20 g1 f9 tail #connect
-vs0 f9 head G10 g1 #connect
-vs0 U20 g2 f10 tail #connect
-vs0 f10 head G10 g2 #connect
-vs0 G10 g3 f11 tail #connect
-vs0 f11 head U20 g3 #connect
-vs0 U20 g4 f12 tail #connect
-vs0 f12 head f2 in #connect
 vs0 f4 out f13 tail #connect
 vs0 f13 head U20 g5 #connect
 vs0 U30 g1 f19 tail #connect
@@ -407,14 +443,15 @@ vs0 R60 g1 f15 tail #connect
 vs0 f15 head f1 mainIn #connect
 vs0 f16 ao f17 tail #connect
 vs0 f17 head R60 ai #connect
+vs0 U20 g0 f6 tail #connect
+vs0 f6 head G10 g0 #connect
+vs0 G10 g3 f9 tail #connect
+vs0 f9 head U21 g3 #connect
+vs0 U21 g0 f10 tail #connect
+vs0 f10 head f2 in #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head g3 m #connect
 Bk0 0 0 640 512 0 #ivRect
-Bk1 g3 m f0 tail #connect
-Bk1 f0 head g0 m #connect
-Bk1 g5 m f1 tail #connect
-Bk1 f1 head g1 m #connect
-Bk1 0 0 640 512 0 #ivRect
 Bk2 g0 m f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 0 0 640 512 0 #ivRect
@@ -427,3 +464,13 @@ Bk4 0 0 640 512 0 #ivRect
 Bk5 g0 m f0 tail #connect
 Bk5 f0 head g1 m #connect
 Bk5 0 0 640 512 0 #ivRect
+Bk1 g3 m f0 tail #connect
+Bk1 f0 head g0 m #connect
+Bk1 g5 m f1 tail #connect
+Bk1 f1 head g1 m #connect
+Bk1 0 0 640 512 0 #ivRect
+Bk6 g3 m f0 tail #connect
+Bk6 f0 head g0 m #connect
+Bk6 g5 m f1 tail #connect
+Bk6 f1 head g1 m #connect
+Bk6 0 0 640 512 0 #ivRect

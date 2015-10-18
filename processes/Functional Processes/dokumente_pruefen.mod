@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Oct 18 15:25:56 CEST 2015]
+[>Created: Sun Oct 18 17:21:26 CEST 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -343,19 +343,22 @@ dn0 U50 .resExport export #txt
 dn0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Formale Korrektheit prüfen</name>
-        <nameStyle>26,5,7
+        <name>Formale Korrektheit 
+und Vollständigkeit
+prüfen</name>
+        <nameStyle>47,5,7
 </nameStyle>
+        <desc>Vollständigkeit erneut prüfen, da z.B. falsche Dokumente hochgeladen werden können. </desc>
     </language>
 </elementInfo>
 ' #txt
-dn0 U50 608 122 160 44 -73 -8 #rect
+dn0 U50 616 114 144 60 -51 -24 #rect
 dn0 U50 @|BpmnUserTaskIcon #fIcon
 dn0 f2 expr out #txt
-dn0 f2 520 144 608 144 #arcP
-dn0 f7 768 144 856 144 #arcP
+dn0 f2 520 144 616 144 #arcP
+dn0 f7 760 144 856 144 #arcP
 dn0 f9 808 384 768 384 #arcP
-dn0 f11 688 362 688 166 #arcP
+dn0 f11 688 362 688 174 #arcP
 dn0 S60 .resExport export #txt
 dn0 S60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
