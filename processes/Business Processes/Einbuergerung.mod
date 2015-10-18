@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 14:13:16 CEST 2015]
+[>Created: Sun Oct 18 15:17:14 CEST 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -37,6 +37,8 @@ Eg0 @PushWFArc f18 '' #zField
 Eg0 @PushWFArc f19 '' #zField
 Eg0 @PushWFArc f20 '' #zField
 Eg0 @PushWFArc f21 '' #zField
+Eg0 @EndTask f23 '' #zField
+Eg0 @PushWFArc f24 '' #zField
 >Proto Eg0 Eg0 Einbuergerung #zField
 Eg0 f0 outLink start.ivp #txt
 Eg0 f0 type einbuergerung_Gruppe6.Data #txt
@@ -316,6 +318,11 @@ Eg0 f21 expr out #txt
 Eg0 f21 928 111 992 184 #arcP
 Eg0 f21 1 928 184 #addKink
 Eg0 f21 0 0.9383561643835616 0 0 #arcLabel
+Eg0 f23 type einbuergerung_Gruppe6.Data #txt
+Eg0 f23 1177 169 30 30 0 15 #rect
+Eg0 f23 @|EndIcon #fIcon
+Eg0 f24 expr out #txt
+Eg0 f24 1104 184 1177 184 #arcP
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Eg0 .processKind NORMAL #txt
 >Proto Eg0 0 0 32 24 18 0 #rect
@@ -342,3 +349,5 @@ Eg0 f12 mainOut f20 tail #connect
 Eg0 f20 head f16 mainIn #connect
 Eg0 f14 mainOut f21 tail #connect
 Eg0 f21 head f16 mainIn #connect
+Eg0 f16 mainOut f24 tail #connect
+Eg0 f24 head f23 mainIn #connect

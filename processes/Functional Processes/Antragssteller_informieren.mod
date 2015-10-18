@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 13:14:23 CEST 2015]
+[>Created: Sun Oct 18 15:19:03 CEST 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -219,13 +219,13 @@ An0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
         <name>Login Informationen 
-generieren</name>
-        <nameStyle>31,5,7
+generieren (auslösen)</name>
+        <nameStyle>42,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 U50 368 282 144 44 -52 -16 #rect
+An0 U50 368 282 144 44 -54 -16 #rect
 An0 U50 @|BpmnUserTaskIcon #fIcon
 An0 f11 expr in #txt
 An0 f11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

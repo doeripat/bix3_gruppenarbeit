@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 13:57:27 CEST 2015]
+[>Created: Sun Oct 18 15:42:25 CEST 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -11,6 +11,8 @@ Bk2 BpmnUserTask Big #zClass
 Bk2 BpmnUserTask #cInfo
 Bk3 BpmnSendTask Big #zClass
 Bk3 BpmnSendTask #cInfo
+Bk0 BpmnUserTask Big #zClass
+Bk0 BpmnUserTask #cInfo
 En0 @TextInP .resExport .resExport #zField
 En0 @TextInP .type .type #zField
 En0 @TextInP .processKind .processKind #zField
@@ -33,7 +35,6 @@ En0 @PushWFArc f24 '' #zField
 En0 @IntermediateEvent f22 '' #zField
 En0 @Split f23 '' #zField
 En0 @PushWFArc f28 '' #zField
-En0 @PushWFArc f2 '' #zField
 En0 @EndTask f15 '' #zField
 En0 @PushWFArc f16 '' #zField
 En0 @PushWFArc f17 '' #zField
@@ -46,6 +47,9 @@ En0 @SJArc f9 '' #zField
 En0 Bk3 S10 'Send 1' #zField
 En0 @PushWFArc f12 '' #zField
 En0 @PushWFArc f13 '' #zField
+En0 Bk0 U40 'User 4' #zField
+En0 @PushWFArc f14 '' #zField
+En0 @PushWFArc f2 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
@@ -83,6 +87,18 @@ Bk3 @PushTrueWFInG-01 g0 '' #zField
 Bk3 @PushTrueWFOutG-01 g1 '' #zField
 Bk3 @PushWFArc f0 '' #zField
 >Proto Bk3 Bk2 BpmnSendTask #zField
+Bk0 @TextInP .resExport .resExport #zField
+Bk0 @TextInP .type .type #zField
+Bk0 @TextInP .processKind .processKind #zField
+Bk0 @AnnotationInP-0n ai ai #zField
+Bk0 @MessageFlowInP-0n messageIn messageIn #zField
+Bk0 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk0 @TextInP .xml .xml #zField
+Bk0 @TextInP .responsibility .responsibility #zField
+Bk0 @PushTrueWFInG-01 g0 '' #zField
+Bk0 @PushTrueWFOutG-01 g1 '' #zField
+Bk0 @PushWFArc f0 '' #zField
+>Proto Bk0 Bk3 BpmnUserTask #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out.data=param.data;
 ' #txt
@@ -104,7 +120,7 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f0 81 89 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
-En0 f1 1169 97 30 30 0 15 #rect
+En0 f1 1289 89 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
 En0 f5 actionDecl 'einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData out;
 ' #txt
@@ -182,7 +198,7 @@ erwünscht?</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f18 912 400 32 32 -38 18 #rect
+En0 f18 1032 400 32 32 -38 18 #rect
 En0 f18 @|AlternativeIcon #fIcon
 En0 f20 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
 En0 f20 processCall 'Functional Processes/Rechnungswesen:call()' #txt
@@ -203,7 +219,7 @@ Weiterführung</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f20 1000 90 112 44 -38 -20 #rect
+En0 f20 1120 82 112 44 -38 -20 #rect
 En0 f20 @|CallSubIcon #fIcon
 En0 f21 expr in #txt
 En0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -215,11 +231,11 @@ En0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f21 928 400 1000 112 #arcP
-En0 f21 1 928 112 #addKink
+En0 f21 1048 400 1120 104 #arcP
+En0 f21 1 1048 104 #addKink
 En0 f21 0 0.037109375 -14 0 #arcLabel
 En0 f24 expr out #txt
-En0 f24 1112 112 1169 112 #arcP
+En0 f24 1232 104 1289 104 #arcP
 En0 f24 0 0.3970514322284797 0 0 #arcLabel
 En0 f22 actionDecl 'einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData out;
 ' #txt
@@ -285,11 +301,8 @@ En0 f28 expr out2 #txt
 En0 f28 792 432 913 512 #arcP
 En0 f28 1 792 512 #addKink
 En0 f28 1 0.03488372093023256 0 0 #arcLabel
-En0 f2 expr out1 #txt
-En0 f2 808 416 912 416 #arcP
-En0 f2 0 0.5000000000000001 0 0 #arcLabel
 En0 f15 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
-En0 f15 1097 449 30 30 0 15 #rect
+En0 f15 1217 449 30 30 0 15 #rect
 En0 f15 @|EndIcon #fIcon
 En0 f16 expr in #txt
 En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -301,12 +314,12 @@ En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f16 944 416 1112 449 #arcP
-En0 f16 1 1112 416 #addKink
+En0 f16 1064 416 1232 449 #arcP
+En0 f16 1 1232 416 #addKink
 En0 f16 0 0.2261904761904762 0 -12 #arcLabel
 En0 f17 expr out #txt
-En0 f17 943 512 1112 479 #arcP
-En0 f17 1 1112 512 #addKink
+En0 f17 943 512 1232 479 #arcP
+En0 f17 1 1232 512 #addKink
 En0 f17 0 0.8003430374759294 0 0 #arcLabel
 En0 S20 .resExport export #txt
 En0 S20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -362,6 +375,23 @@ En0 S10 @|BpmnSendTaskIcon #fIcon
 En0 f12 expr out #txt
 En0 f12 648 104 736 104 #arcP
 En0 f13 792 126 792 400 #arcP
+En0 U40 .resExport export #txt
+En0 U40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Antragssteller will fortfahren</name>
+        <nameStyle>30,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 U40 840 394 160 44 -76 -8 #rect
+En0 U40 @|BpmnUserTaskIcon #fIcon
+En0 f14 expr out1 #txt
+En0 f14 808 416 840 416 #arcP
+En0 f14 0 0.5000000000000001 0 0 #arcLabel
+En0 f2 1000 416 1032 416 #arcP
+En0 f2 0 0.5000000000000001 0 0 #arcLabel
 >Proto En0 .type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -410,6 +440,13 @@ Bk3 g1 @|MOGIcon #fIcon
 Bk3 f0 74 264 293 439 #arcP
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BpmnUserTaskIcon #fIcon
+Bk0 g0 51 243 26 26 0 5 #rect
+Bk0 g0 @|MIGIcon #fIcon
+Bk0 g1 563 243 26 26 0 5 #rect
+Bk0 g1 @|MOGIcon #fIcon
+Bk0 f0 77 256 563 256 #arcP
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BpmnUserTaskIcon #fIcon
 En0 f7 out f6 tail #connect
 En0 f6 head f5 mainIn #connect
 En0 f5 mainOut f11 tail #connect
@@ -420,8 +457,6 @@ En0 f20 mainOut f24 tail #connect
 En0 f24 head f1 mainIn #connect
 En0 f23 out f28 tail #connect
 En0 f28 head f22 mainIn #connect
-En0 f23 out f2 tail #connect
-En0 f2 head f18 in #connect
 En0 f18 out f16 tail #connect
 En0 f16 head f15 mainIn #connect
 En0 f22 mainOut f17 tail #connect
@@ -438,6 +473,10 @@ En0 f10 mainOut f12 tail #connect
 En0 f12 head S10 g0 #connect
 En0 S10 g1 f13 tail #connect
 En0 f13 head f23 in #connect
+En0 f23 out f14 tail #connect
+En0 f14 head U40 g0 #connect
+En0 U40 g1 f2 tail #connect
+En0 f2 head f18 in #connect
 Bk1 g0 m f0 tail #connect
 Bk1 f0 head g1 m #connect
 Bk1 0 0 640 512 0 #ivRect
@@ -447,3 +486,6 @@ Bk2 0 0 640 512 0 #ivRect
 Bk3 g0 m f0 tail #connect
 Bk3 f0 head g1 m #connect
 Bk3 0 0 640 512 0 #ivRect
+Bk0 g0 m f0 tail #connect
+Bk0 f0 head g1 m #connect
+Bk0 0 0 640 512 0 #ivRect

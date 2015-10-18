@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 13:50:04 CEST 2015]
+[>Created: Sun Oct 18 15:39:56 CEST 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -15,6 +15,8 @@ Bk3 BpmnUserTask Big #zClass
 Bk3 BpmnUserTask #cInfo
 Bk4 BpmnUserTask Big #zClass
 Bk4 BpmnUserTask #cInfo
+Bk5 BpmnBusinessRuleTask Big #zClass
+Bk5 BpmnBusinessRuleTask #cInfo
 vs0 @TextInP .resExport .resExport #zField
 vs0 @TextInP .type .type #zField
 vs0 @TextInP .processKind .processKind #zField
@@ -28,7 +30,6 @@ vs0 @EndSub f1 '' #zField
 vs0 @Split f4 '' #zField
 vs0 @PushWFArc f5 '' #zField
 vs0 @Join f2 '' #zField
-vs0 @PushWFArc f17 '' #zField
 vs0 Bk0 G10 'Generic 1' #zField
 vs0 Bk1 U20 'User 2' #zField
 vs0 @PushWFArc f6 '' #zField
@@ -46,6 +47,11 @@ vs0 @SJArc f23 '' #zField
 vs0 @PushWFArc f3 '' #zField
 vs0 @PushWFArc f7 '' #zField
 vs0 @PushWFArc f8 '' #zField
+vs0 Bk5 R60 'Rule 6' #zField
+vs0 @PushWFArc f14 '' #zField
+vs0 @PushWFArc f15 '' #zField
+vs0 @InfoButton f16 '' #zField
+vs0 @AnnotationArc f17 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -114,6 +120,18 @@ Bk4 @PushTrueWFInG-01 g0 '' #zField
 Bk4 @PushTrueWFOutG-01 g1 '' #zField
 Bk4 @PushWFArc f0 '' #zField
 >Proto Bk4 Bk4 BpmnUserTask #zField
+Bk5 @TextInP .resExport .resExport #zField
+Bk5 @TextInP .type .type #zField
+Bk5 @TextInP .processKind .processKind #zField
+Bk5 @AnnotationInP-0n ai ai #zField
+Bk5 @MessageFlowInP-0n messageIn messageIn #zField
+Bk5 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk5 @TextInP .xml .xml #zField
+Bk5 @TextInP .responsibility .responsibility #zField
+Bk5 @PushTrueWFInG-01 g0 '' #zField
+Bk5 @PushTrueWFOutG-01 g1 '' #zField
+Bk5 @PushWFArc f0 '' #zField
+>Proto Bk5 Bk5 BpmnBusinessRuleTask #zField
 vs0 f0 inParamDecl '<> param;' #txt
 vs0 f0 outParamDecl '<> result;
 ' #txt
@@ -131,7 +149,7 @@ vs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 vs0 f0 81 161 30 30 -13 17 #rect
 vs0 f0 @|StartSubIcon #fIcon
 vs0 f1 type einbuergerung_Gruppe6.validate_documentsData #txt
-vs0 f1 857 153 30 30 0 15 #rect
+vs0 f1 977 153 30 30 0 15 #rect
 vs0 f1 @|EndSubIcon #fIcon
 vs0 f4 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out4;
 einbuergerung_Gruppe6.validate_documentsData out1;
@@ -151,8 +169,6 @@ vs0 f2 actionTable 'out=in1;
 ' #txt
 vs0 f2 720 152 32 32 0 16 #rect
 vs0 f2 @|JoinIcon #fIcon
-vs0 f17 expr out #txt
-vs0 f17 752 168 857 168 #arcP
 vs0 G10 .resExport export #txt
 vs0 G10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -252,6 +268,37 @@ vs0 f7 expr out2 #txt
 vs0 f7 206 174 348 136 #arcP
 vs0 f8 expr out3 #txt
 vs0 f8 207 177 348 200 #arcP
+vs0 R60 .resExport export #txt
+vs0 R60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Gesuch an/ablehnen</name>
+        <nameStyle>18,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 R60 800 146 128 44 -57 -8 #rect
+vs0 R60 @|BpmnBusinessRuleTaskIcon #fIcon
+vs0 f14 expr out #txt
+vs0 f14 752 168 800 168 #arcP
+vs0 f15 928 168 977 168 #arcP
+vs0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Es wird eine Regel definiert, wann ein Gesuch
+angenommen wird und wann es abgelehnt wrid.
+Bsp. Deutsch mässig und alles andere ist gut, dann 
+dennoch annehmen etc.</name>
+        <nameStyle>46,7
+117,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f16 800 42 304 76 -144 -32 #rect
+vs0 f16 @|IBIcon #fIcon
+vs0 f17 952 118 864 146 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.validate_documentsData #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -321,10 +368,15 @@ Bk4 g1 @|MOGIcon #fIcon
 Bk4 f0 76 255 563 224 #arcP
 >Proto Bk4 0 0 32 24 18 0 #rect
 >Proto Bk4 @|BpmnUserTaskIcon #fIcon
+Bk5 g0 51 243 26 26 0 5 #rect
+Bk5 g0 @|MIGIcon #fIcon
+Bk5 g1 563 243 26 26 0 5 #rect
+Bk5 g1 @|MOGIcon #fIcon
+Bk5 f0 77 256 563 256 #arcP
+>Proto Bk5 0 0 32 24 18 0 #rect
+>Proto Bk5 @|BpmnBusinessRuleTaskIcon #fIcon
 vs0 f0 mainOut f5 tail #connect
 vs0 f5 head f4 in #connect
-vs0 f2 mainOut f17 tail #connect
-vs0 f17 head f1 mainIn #connect
 vs0 U20 g0 f6 tail #connect
 vs0 f6 head G10 g0 #connect
 vs0 U20 g1 f9 tail #connect
@@ -349,6 +401,12 @@ vs0 f4 out f7 tail #connect
 vs0 f7 head U40 g0 #connect
 vs0 f4 out f8 tail #connect
 vs0 f8 head U50 g0 #connect
+vs0 f2 mainOut f14 tail #connect
+vs0 f14 head R60 g0 #connect
+vs0 R60 g1 f15 tail #connect
+vs0 f15 head f1 mainIn #connect
+vs0 f16 ao f17 tail #connect
+vs0 f17 head R60 ai #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head g3 m #connect
 Bk0 0 0 640 512 0 #ivRect
@@ -366,3 +424,6 @@ Bk3 0 0 640 512 0 #ivRect
 Bk4 g0 m f0 tail #connect
 Bk4 f0 head g1 m #connect
 Bk4 0 0 640 512 0 #ivRect
+Bk5 g0 m f0 tail #connect
+Bk5 f0 head g1 m #connect
+Bk5 0 0 640 512 0 #ivRect

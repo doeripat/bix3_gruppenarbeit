@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 14:45:40 CEST 2015]
+[>Created: Sun Oct 18 15:46:50 CEST 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -63,6 +63,8 @@ Rn0 @PushWFArc f26 '' #zField
 Rn0 Bk9 S14 'Send 3.1' #zField
 Rn0 @PushWFArc f27 '' #zField
 Rn0 @PushWFArc f28 '' #zField
+Rn0 @EndTask f29 '' #zField
+Rn0 @PushWFArc f30 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
@@ -102,7 +104,7 @@ Bk0 @TextInP .responsibility .responsibility #zField
 Bk0 @PushTrueWFInG-01 g0 '' #zField
 Bk0 @PushTrueWFOutG-01 g1 '' #zField
 Bk0 @PushWFArc f0 '' #zField
->Proto Bk0 Bk3 BpmnServiceTask #zField
+>Proto Bk0 Bk2 BpmnServiceTask #zField
 Bk6 @TextInP .resExport .resExport #zField
 Bk6 @TextInP .type .type #zField
 Bk6 @TextInP .processKind .processKind #zField
@@ -114,7 +116,7 @@ Bk6 @TextInP .responsibility .responsibility #zField
 Bk6 @PushTrueWFInG-01 g0 '' #zField
 Bk6 @PushTrueWFOutG-01 g1 '' #zField
 Bk6 @PushWFArc f0 '' #zField
->Proto Bk6 Bk2 BpmnSendTask #zField
+>Proto Bk6 Bk3 BpmnSendTask #zField
 Bk7 @TextInP .resExport .resExport #zField
 Bk7 @TextInP .type .type #zField
 Bk7 @TextInP .processKind .processKind #zField
@@ -542,6 +544,10 @@ Rn0 f28 1016 496 688 118 #arcP
 Rn0 f28 1 1016 176 #addKink
 Rn0 f28 2 688 176 #addKink
 Rn0 f28 0 0.9944179263325775 0 0 #arcLabel
+Rn0 f29 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f29 1377 497 30 30 0 15 #rect
+Rn0 f29 @|EndIcon #fIcon
+Rn0 f30 1320 512 1377 512 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.RechnungswesenData #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -583,15 +589,15 @@ Bk0 g0 @|MIGIcon #fIcon
 Bk0 g1 563 243 26 26 0 5 #rect
 Bk0 g1 @|MOGIcon #fIcon
 Bk0 f0 77 256 563 256 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BpmnServiceTaskIcon #fIcon
+>Proto Bk2 0 0 32 24 18 0 #rect
+>Proto Bk2 @|BpmnSendTaskIcon #fIcon
 Bk6 g0 51 307 26 26 0 5 #rect
 Bk6 g0 @|MIGIcon #fIcon
 Bk6 g1 355 435 26 26 0 5 #rect
 Bk6 g1 @|MOGIcon #fIcon
 Bk6 f0 75 325 356 442 #arcP
->Proto Bk2 0 0 32 24 18 0 #rect
->Proto Bk2 @|BpmnSendTaskIcon #fIcon
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BpmnServiceTaskIcon #fIcon
 Bk7 g0 51 307 26 26 0 5 #rect
 Bk7 g0 @|MIGIcon #fIcon
 Bk7 g1 355 435 26 26 0 5 #rect
@@ -651,6 +657,8 @@ Rn0 f24 mainOut f27 tail #connect
 Rn0 f27 head S14 g0 #connect
 Rn0 f23 out f28 tail #connect
 Rn0 f28 head R20 g4 #connect
+Rn0 S14 g1 f30 tail #connect
+Rn0 f30 head f29 mainIn #connect
 Bk1 g0 m f0 tail #connect
 Bk1 f0 head g1 m #connect
 Bk1 0 0 640 512 0 #ivRect

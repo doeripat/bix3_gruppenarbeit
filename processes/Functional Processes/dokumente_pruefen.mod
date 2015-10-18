@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Oct 17 13:51:37 CEST 2015]
+[>Created: Sun Oct 18 15:25:56 CEST 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -53,6 +53,8 @@ dn0 @PushWFArc f11 '' #zField
 dn0 Bk5 S60 'Send 6' #zField
 dn0 @PushWFArc f14 '' #zField
 dn0 @PushWFArc f16 '' #zField
+dn0 @InfoButton f17 '' #zField
+dn0 @AnnotationArc f18 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -341,18 +343,17 @@ dn0 U50 .resExport export #txt
 dn0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Vollständigkeit und formale 
-Korrektheit prüfen</name>
-        <nameStyle>47,5,7
+        <name>Formale Korrektheit prüfen</name>
+        <nameStyle>26,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-dn0 U50 600 122 176 44 -70 -16 #rect
+dn0 U50 608 122 160 44 -73 -8 #rect
 dn0 U50 @|BpmnUserTaskIcon #fIcon
 dn0 f2 expr out #txt
-dn0 f2 520 144 600 144 #arcP
-dn0 f7 776 144 856 144 #arcP
+dn0 f2 520 144 608 144 #arcP
+dn0 f7 768 144 856 144 #arcP
 dn0 f9 808 384 768 384 #arcP
 dn0 f11 688 362 688 166 #arcP
 dn0 S60 .resExport export #txt
@@ -371,6 +372,22 @@ dn0 S60 @|BpmnSendTaskIcon #fIcon
 dn0 f14 expr out #txt
 dn0 f14 1048 144 1152 144 #arcP
 dn0 f16 1280 144 1328 144 #arcP
+dn0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Gesuchsformular kann nur noch versendet werden, 
+wenn alle benötigten Informationen ausgefüllt 
+worden sind. (Alle Felder des User Dialogs werden 
+auf required gesetzt)</name>
+        <nameStyle>49,7
+119,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f17 248 418 288 76 -141 -32 #rect
+dn0 f17 @|IBIcon #fIcon
+dn0 f18 392 418 368 398 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -483,6 +500,8 @@ dn0 f12 mainOut f14 tail #connect
 dn0 f14 head S60 g0 #connect
 dn0 S60 g1 f16 tail #connect
 dn0 f16 head f23 in #connect
+dn0 f17 ao f18 tail #connect
+dn0 f18 head U30 ai #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head g1 m #connect
 Bk0 0 0 640 512 0 #ivRect
