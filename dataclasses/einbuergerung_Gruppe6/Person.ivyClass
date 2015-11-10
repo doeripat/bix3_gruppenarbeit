@@ -1,0 +1,14 @@
+Person #class
+einbuergerung_Gruppe6 #namespace
+firstname String #field
+firstname PERSISTENT #fieldModifier
+lastname String #field
+lastname PERSISTENT #fieldModifier
+birthday java.util.Date #field
+birthday PERSISTENT #fieldModifier
+genderCode java.lang.Integer #field
+genderCode PERSISTENT #fieldModifier
+nationality String #field
+nationality PERSISTENT #fieldModifier
+role String #field
+role PERSISTENT #fieldModifier

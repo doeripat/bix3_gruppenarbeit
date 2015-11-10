@@ -1,0 +1,6 @@
+Objection #class
+einbuergerung_Gruppe6 #namespace
+author String #field
+author PERSISTENT #fieldModifier
+text String #field
+text PERSISTENT #fieldModifier

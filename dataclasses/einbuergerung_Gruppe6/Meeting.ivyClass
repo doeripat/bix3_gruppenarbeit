@@ -1,0 +1,8 @@
+Meeting #class
+einbuergerung_Gruppe6 #namespace
+fromDate DateTime #field
+fromDate PERSISTENT #fieldModifier
+toDate DateTime #field
+toDate PERSISTENT #fieldModifier
+isCompleted Boolean #field
+isCompleted PERSISTENT #fieldModifier

@@ -1,0 +1,6 @@
+Invoice #class
+einbuergerung_Gruppe6 #namespace
+amount String #field
+amount PERSISTENT #fieldModifier
+penalty String #field
+penalty PERSISTENT #fieldModifier

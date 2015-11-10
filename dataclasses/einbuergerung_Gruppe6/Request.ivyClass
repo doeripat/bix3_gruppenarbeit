@@ -1,0 +1,32 @@
+Request #class
+einbuergerung_Gruppe6 #namespace
+uniqueIdentifier String #field
+uniqueIdentifier PERSISTENT #fieldModifier
+status String #field
+status PERSISTENT #fieldModifier
+objections List<einbuergerung_Gruppe6.Objection> #field
+objections PERSISTENT #fieldModifier
+invoices List<einbuergerung_Gruppe6.Invoice> #field
+invoices PERSISTENT #fieldModifier
+documents List<einbuergerung_Gruppe6.Document> #field
+documents PERSISTENT #fieldModifier
+meeting einbuergerung_Gruppe6.Meeting #field
+meeting PERSISTENT #fieldModifier
+username String #field
+username PERSISTENT #fieldModifier
+password String #field
+password PERSISTENT #fieldModifier
+mobilePhone String #field
+mobilePhone PERSISTENT #fieldModifier
+phone String #field
+phone PERSISTENT #fieldModifier
+address String #field
+address PERSISTENT #fieldModifier
+postcode String #field
+postcode PERSISTENT #fieldModifier
+email String #field
+email PERSISTENT #fieldModifier
+city String #field
+city PERSISTENT #fieldModifier
+personList List<einbuergerung_Gruppe6.Person> #field
+personList PERSISTENT #fieldModifier

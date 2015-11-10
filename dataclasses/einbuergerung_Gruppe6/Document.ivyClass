@@ -1,0 +1,16 @@
+Document #class
+einbuergerung_Gruppe6 #namespace
+link String #field
+link PERSISTENT #fieldModifier
+dataUpload java.util.Date #field
+dataUpload PERSISTENT #fieldModifier
+isComplete Boolean #field
+isComplete PERSISTENT #fieldModifier
+dateUpdated java.util.Date #field
+dateUpdated PERSISTENT #fieldModifier
+isValid Boolean #field
+isValid PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier
+type String #field
+type PERSISTENT #fieldModifier
