@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Oct 18 17:20:46 CEST 2015]
+[>Created: Sun Nov 15 16:05:49 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -79,7 +79,7 @@ Bk2 @TextInP .responsibility .responsibility #zField
 Bk2 @PushTrueWFInG-01 g0 '' #zField
 Bk2 @PushTrueWFOutG-01 g1 '' #zField
 Bk2 @PushWFArc f0 '' #zField
->Proto Bk2 Bk2 BpmnUserTask #zField
+>Proto Bk2 Bk1 BpmnUserTask #zField
 Bk3 @TextInP .resExport .resExport #zField
 Bk3 @TextInP .type .type #zField
 Bk3 @TextInP .processKind .processKind #zField
@@ -91,7 +91,7 @@ Bk3 @TextInP .responsibility .responsibility #zField
 Bk3 @PushTrueWFInG-01 g0 '' #zField
 Bk3 @PushTrueWFOutG-01 g1 '' #zField
 Bk3 @PushWFArc f0 '' #zField
->Proto Bk3 Bk3 BpmnUserTask #zField
+>Proto Bk3 Bk2 BpmnUserTask #zField
 Bk4 @TextInP .resExport .resExport #zField
 Bk4 @TextInP .type .type #zField
 Bk4 @TextInP .processKind .processKind #zField
@@ -103,7 +103,7 @@ Bk4 @TextInP .responsibility .responsibility #zField
 Bk4 @PushTrueWFInG-01 g0 '' #zField
 Bk4 @PushTrueWFOutG-01 g1 '' #zField
 Bk4 @PushWFArc f0 '' #zField
->Proto Bk4 Bk4 BpmnUserTask #zField
+>Proto Bk4 Bk3 BpmnUserTask #zField
 Bk5 @TextInP .resExport .resExport #zField
 Bk5 @TextInP .type .type #zField
 Bk5 @TextInP .processKind .processKind #zField
@@ -115,7 +115,7 @@ Bk5 @TextInP .responsibility .responsibility #zField
 Bk5 @PushTrueWFInG-01 g0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
 Bk5 @PushWFArc f0 '' #zField
->Proto Bk5 Bk5 BpmnBusinessRuleTask #zField
+>Proto Bk5 Bk4 BpmnBusinessRuleTask #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
 Bk1 @TextInP .processKind .processKind #zField
@@ -132,7 +132,7 @@ Bk1 @PushWFArc f0 '' #zField
 Bk1 @PushTrueWFOutG-01 g4 '' #zField
 Bk1 @PushTrueWFInG-01 g5 '' #zField
 Bk1 @PushWFArc f1 '' #zField
->Proto Bk1 Bk1 BpmnUserTask #zField
+>Proto Bk1 Bk5 BpmnUserTask #zField
 Bk6 @TextInP .resExport .resExport #zField
 Bk6 @TextInP .type .type #zField
 Bk6 @TextInP .processKind .processKind #zField
@@ -233,8 +233,9 @@ vs0 U40 348 114 200 44 -74 -8 #rect
 vs0 U40 @|BpmnUserTaskIcon #fIcon
 vs0 f21 type einbuergerung_Gruppe6.validate_documentsData #txt
 vs0 f21 var in3 #txt
-vs0 f21 548 136 722 166 #arcP
-vs0 f21 0 0.13101971808044438 0 0 #arcLabel
+vs0 f21 548 136 725 163 #arcP
+vs0 f21 1 664 136 #addKink
+vs0 f21 0 0.2047740051574917 0 0 #arcLabel
 vs0 U50 .resExport export #txt
 vs0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -249,16 +250,21 @@ vs0 U50 348 178 200 44 -84 -8 #rect
 vs0 U50 @|BpmnUserTaskIcon #fIcon
 vs0 f23 type einbuergerung_Gruppe6.validate_documentsData #txt
 vs0 f23 var in2 #txt
-vs0 f23 548 200 722 170 #arcP
-vs0 f23 0 0.13080187207502658 0 0 #arcLabel
+vs0 f23 548 200 725 173 #arcP
+vs0 f23 1 664 200 #addKink
+vs0 f23 0 0.2044335281690618 0 0 #arcLabel
 vs0 f3 expr out1 #txt
 vs0 f3 192 160 384 72 #arcP
 vs0 f3 1 192 72 #addKink
 vs0 f3 1 0.2637719086116223 0 0 #arcLabel
 vs0 f7 expr out2 #txt
-vs0 f7 206 174 348 136 #arcP
+vs0 f7 202 170 348 136 #arcP
+vs0 f7 1 256 136 #addKink
+vs0 f7 1 0.15868872895418298 0 0 #arcLabel
 vs0 f8 expr out3 #txt
-vs0 f8 207 177 348 200 #arcP
+vs0 f8 204 180 348 200 #arcP
+vs0 f8 1 256 200 #addKink
+vs0 f8 1 0.2058180738538184 0 0 #arcLabel
 vs0 R60 .resExport export #txt
 vs0 R60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -366,29 +372,29 @@ Bk2 g0 @|MIGIcon #fIcon
 Bk2 g1 435 435 26 26 0 5 #rect
 Bk2 g1 @|MOGIcon #fIcon
 Bk2 f0 75 261 436 442 #arcP
->Proto Bk2 0 0 32 24 18 0 #rect
->Proto Bk2 @|BpmnUserTaskIcon #fIcon
+>Proto Bk1 0 0 32 24 18 0 #rect
+>Proto Bk1 @|BpmnUserTaskIcon #fIcon
 Bk3 g0 51 243 26 26 0 5 #rect
 Bk3 g0 @|MIGIcon #fIcon
 Bk3 g1 563 275 26 26 0 5 #rect
 Bk3 g1 @|MOGIcon #fIcon
 Bk3 f0 76 256 563 287 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BpmnUserTaskIcon #fIcon
+>Proto Bk2 0 0 32 24 18 0 #rect
+>Proto Bk2 @|BpmnUserTaskIcon #fIcon
 Bk4 g0 51 243 26 26 0 5 #rect
 Bk4 g0 @|MIGIcon #fIcon
 Bk4 g1 563 211 26 26 0 5 #rect
 Bk4 g1 @|MOGIcon #fIcon
 Bk4 f0 76 255 563 224 #arcP
->Proto Bk4 0 0 32 24 18 0 #rect
->Proto Bk4 @|BpmnUserTaskIcon #fIcon
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BpmnUserTaskIcon #fIcon
 Bk5 g0 51 243 26 26 0 5 #rect
 Bk5 g0 @|MIGIcon #fIcon
 Bk5 g1 563 243 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
 Bk5 f0 77 256 563 256 #arcP
->Proto Bk5 0 0 32 24 18 0 #rect
->Proto Bk5 @|BpmnBusinessRuleTaskIcon #fIcon
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BpmnUserTaskIcon #fIcon
 Bk1 g0 307 435 26 26 0 5 #rect
 Bk1 g0 @|MOGIcon #fIcon
 Bk1 g1 307 435 26 26 0 5 #rect
@@ -403,8 +409,8 @@ Bk1 g4 @|MOGIcon #fIcon
 Bk1 g5 51 163 26 26 0 5 #rect
 Bk1 g5 @|MIGIcon #fIcon
 Bk1 f1 72 185 311 438 #arcP
->Proto Bk1 0 0 32 24 18 0 #rect
->Proto Bk1 @|BpmnUserTaskIcon #fIcon
+>Proto Bk5 0 0 32 24 18 0 #rect
+>Proto Bk5 @|BpmnBusinessRuleTaskIcon #fIcon
 Bk6 g0 307 435 26 26 0 5 #rect
 Bk6 g0 @|MOGIcon #fIcon
 Bk6 g1 307 435 26 26 0 5 #rect
