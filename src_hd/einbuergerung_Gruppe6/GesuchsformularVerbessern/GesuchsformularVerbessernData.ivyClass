@@ -1,0 +1,13 @@
+GesuchsformularVerbessernData #class
+einbuergerung_Gruppe6.GesuchsformularVerbessern #namespace
+uniqueIdentifier String #field
+status String #field
+documents List<einbuergerung_Gruppe6.Document> #field
+mobilePhone String #field
+phone String #field
+address String #field
+postcode String #field
+email String #field
+city String #field
+personList List<einbuergerung_Gruppe6.Person> #field
+commentOnRequest String #field
