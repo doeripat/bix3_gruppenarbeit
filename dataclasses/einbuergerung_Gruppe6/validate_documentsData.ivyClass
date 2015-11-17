@@ -1,2 +1,6 @@
 validate_documentsData #class
 einbuergerung_Gruppe6 #namespace
+request einbuergerung_Gruppe6.Request #field
+request PERSISTENT #fieldModifier
+documentTypeToTest String #field
+documentTypeToTest PERSISTENT #fieldModifier

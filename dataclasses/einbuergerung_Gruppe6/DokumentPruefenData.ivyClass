@@ -1,0 +1,12 @@
+DokumentPruefenData #class
+einbuergerung_Gruppe6 #namespace
+documents List<einbuergerung_Gruppe6.Document> #field
+documents PERSISTENT #fieldModifier
+email String #field
+email PERSISTENT #fieldModifier
+documentToProof String #field
+documentToProof PERSISTENT #fieldModifier
+counter String #field
+counter PERSISTENT #fieldModifier
+totalDocuments String #field
+totalDocuments PERSISTENT #fieldModifier
