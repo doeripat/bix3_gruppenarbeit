@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 17 15:58:16 CET 2015]
+[>Created: Tue Nov 17 16:28:27 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -47,6 +47,7 @@ En0 @TkArc f28 '' #zField
 En0 @TkArc f29 '' #zField
 En0 @TkArc f4 '' #zField
 En0 @TkArc f33 '' #zField
+En0 @InfoButton f34 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out.data=param.data;
@@ -560,6 +561,20 @@ En0 f33 528 280 552 112 #arcP
 En0 f33 1 536 280 #addKink
 En0 f33 2 536 112 #addKink
 En0 f33 1 0.5080486745121358 0 0 #arcLabel
+En0 f34 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Annahme:
+Nach Email publiziert das Amtsblatt 
+automatisch noch am gleichen Tag</name>
+        <nameStyle>78
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f34 232 354 208 60 -98 -24 #rect
+En0 f34 @|IBIcon #fIcon
+En0 f34 -14336|-1|-16777216 #nodeStyle
 >Proto En0 .type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
