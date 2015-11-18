@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 18 16:47:31 CET 2015]
+[>Created: Wed Nov 18 17:06:49 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -110,13 +110,13 @@ An0 f4 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 An0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Passwort speichern</name>
-        <nameStyle>18,7
+        <name>Passwort persistieren</name>
+        <nameStyle>21,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 f4 360 138 128 44 -55 -8 #rect
+An0 f4 360 138 128 44 -60 -8 #rect
 An0 f4 @|DBStepIcon #fIcon
 An0 f5 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 An0 f5 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt

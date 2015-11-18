@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 18 16:19:43 CET 2015]
+[>Created: Wed Nov 18 17:06:49 CET 2015]
 1511B2E14C48CD9A 3.17 #module
 >Proto >Proto Collection #zClass
 Ts0 TerminWaehlenProcess Big #zClass
@@ -20,6 +20,8 @@ Ts0 @RichDialogProcessEnd f1 '' #zField
 Ts0 @PushWFArc f2 '' #zField
 Ts0 @RichDialogProcessStart f3 '' #zField
 Ts0 @RichDialogEnd f4 '' #zField
+Ts0 @DBStep f6 '' #zField
+Ts0 @PushWFArc f7 '' #zField
 Ts0 @PushWFArc f5 '' #zField
 >Proto Ts0 Ts0 TerminWaehlenProcess #zField
 Ts0 f0 guid 1511B2E14DE9F403 #txt
@@ -49,6 +51,8 @@ Ts0 f3 guid 1511B2E14E8FA0BA #txt
 Ts0 f3 type einbuergerung_Gruppe6.TerminWaehlen.TerminWaehlenData #txt
 Ts0 f3 actionDecl 'einbuergerung_Gruppe6.TerminWaehlen.TerminWaehlenData out;
 ' #txt
+Ts0 f3 actionTable 'out=in;
+' #txt
 Ts0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -60,15 +64,39 @@ Ts0 f3 83 147 26 26 -15 12 #rect
 Ts0 f3 @|RichDialogProcessStartIcon #fIcon
 Ts0 f4 type einbuergerung_Gruppe6.TerminWaehlen.TerminWaehlenData #txt
 Ts0 f4 guid 1511B2E14E82BAEC #txt
-Ts0 f4 211 147 26 26 0 12 #rect
+Ts0 f4 339 147 26 26 0 12 #rect
 Ts0 f4 @|RichDialogEndIcon #fIcon
+Ts0 f6 actionDecl 'einbuergerung_Gruppe6.TerminWaehlen.TerminWaehlenData out;
+' #txt
+Ts0 f6 actionTable 'out=in;
+' #txt
+Ts0 f6 dbUrl AmazonDB #txt
+Ts0 f6 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+Ts0 f6 lotSize 2147483647 #txt
+Ts0 f6 startIdx 0 #txt
+Ts0 f6 type einbuergerung_Gruppe6.TerminWaehlen.TerminWaehlenData #txt
+Ts0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Daten persistieren</name>
+        <nameStyle>18,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ts0 f6 168 138 112 44 -51 -8 #rect
+Ts0 f6 @|DBStepIcon #fIcon
+Ts0 f7 expr out #txt
+Ts0 f7 109 160 168 160 #arcP
 Ts0 f5 expr out #txt
-Ts0 f5 109 160 211 160 #arcP
+Ts0 f5 280 160 339 160 #arcP
 >Proto Ts0 .type einbuergerung_Gruppe6.TerminWaehlen.TerminWaehlenData #txt
 >Proto Ts0 .processKind HTML_DIALOG #txt
 >Proto Ts0 -8 -8 16 16 16 26 #rect
 >Proto Ts0 '' #fIcon
 Ts0 f0 mainOut f2 tail #connect
 Ts0 f2 head f1 mainIn #connect
-Ts0 f3 mainOut f5 tail #connect
+Ts0 f3 mainOut f7 tail #connect
+Ts0 f7 head f6 mainIn #connect
+Ts0 f6 mainOut f5 tail #connect
 Ts0 f5 head f4 mainIn #connect
