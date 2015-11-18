@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 18 16:13:32 CET 2015]
+[>Created: Wed Nov 18 16:47:31 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -48,7 +48,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f0 113 305 30 30 -13 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
-An0 f1 1081 505 30 30 0 15 #rect
+An0 f1 1073 505 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f2 targetWindow NEW:card: #txt
 An0 f2 targetDisplay TOP #txt
@@ -216,17 +216,18 @@ An0 f12 userContext '* ' #txt
 An0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Personalien vervollständigen</name>
+        <name>Personalien
+vervollständigen</name>
         <nameStyle>28,7
 </nameStyle>
         <desc>Gesuch weiterführen?</desc>
     </language>
 </elementInfo>
 ' #txt
-An0 f12 856 498 176 44 -79 -8 #rect
+An0 f12 880 498 128 44 -42 -16 #rect
 An0 f12 @|RichDialogIcon #fIcon
 An0 f14 expr out #txt
-An0 f14 1032 520 1081 520 #arcP
+An0 f14 1008 520 1073 520 #arcP
 An0 f13 targetWindow NEW:card: #txt
 An0 f13 targetDisplay TOP #txt
 An0 f13 richDialogId einbuergerung_Gruppe6.Login #txt
@@ -247,6 +248,7 @@ An0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Login</name>
         <nameStyle>5,7
 </nameStyle>
+        <desc>Email anstatt Username</desc>
     </language>
 </elementInfo>
 ' #txt
@@ -256,7 +258,7 @@ An0 f15 expr data #txt
 An0 f15 outCond ivp=="TaskA.ivp" #txt
 An0 f15 640 520 696 520 #arcP
 An0 f16 expr out #txt
-An0 f16 808 520 856 520 #arcP
+An0 f16 808 520 880 520 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
