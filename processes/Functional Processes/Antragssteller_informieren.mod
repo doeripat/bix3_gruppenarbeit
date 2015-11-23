@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 18 17:06:49 CET 2015]
+[>Created: Mon Nov 23 13:28:39 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -22,7 +22,6 @@ An0 @EMail f5 '' #zField
 An0 @PushWFArc f6 '' #zField
 An0 @PushWFArc f7 '' #zField
 An0 @PushWFArc f8 '' #zField
-An0 @PushWFArc f9 '' #zField
 An0 @TaskSwitch f10 '' #zField
 An0 @TkArc f11 '' #zField
 An0 @RichDialog f12 '' #zField
@@ -30,6 +29,10 @@ An0 @PushWFArc f14 '' #zField
 An0 @RichDialog f13 '' #zField
 An0 @PushWFArc f15 '' #zField
 An0 @PushWFArc f16 '' #zField
+An0 @InfoButton f47 '' #zField
+An0 @TaskSwitch f17 '' #zField
+An0 @TkArc f18 '' #zField
+An0 @PushWFArc f9 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 An0 f0 inParamDecl '<> param;' #txt
 An0 f0 outParamDecl '<> result;
@@ -48,7 +51,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f0 113 305 30 30 -13 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
-An0 f1 1073 505 30 30 0 15 #rect
+An0 f1 1177 505 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f2 targetWindow NEW:card: #txt
 An0 f2 targetDisplay TOP #txt
@@ -70,7 +73,7 @@ An0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Antragsteller erfassen</name>
         <nameStyle>22,7
 </nameStyle>
-        <desc>email, phone, name, vorname, geburstag erfassen
+        <desc>email, name, vorname, erfassen
 
 rest wird von antragsteller erfasst
 
@@ -80,7 +83,7 @@ username ebenfalls nicht gebraucht
     </language>
 </elementInfo>
 ' #txt
-An0 f2 184 298 128 44 -60 -8 #rect
+An0 f2 288 298 128 44 -60 -8 #rect
 An0 f2 @|RichDialogIcon #fIcon
 An0 f3 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
 ' #txt
@@ -96,7 +99,7 @@ An0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f3 184 138 128 44 -57 -8 #rect
+An0 f3 288 138 128 44 -57 -8 #rect
 An0 f3 @|StepIcon #fIcon
 An0 f4 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
 ' #txt
@@ -116,7 +119,7 @@ An0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f4 360 138 128 44 -60 -8 #rect
+An0 f4 464 138 128 44 -60 -8 #rect
 An0 f4 @|DBStepIcon #fIcon
 An0 f5 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 An0 f5 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
@@ -131,16 +134,14 @@ an Antragsteller senden</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f5 536 138 176 44 -68 -16 #rect
+An0 f5 640 138 176 44 -68 -16 #rect
 An0 f5 @|EMailIcon #fIcon
 An0 f6 expr out #txt
-An0 f6 248 298 248 182 #arcP
+An0 f6 352 298 352 182 #arcP
 An0 f7 expr out #txt
-An0 f7 312 160 360 160 #arcP
+An0 f7 416 160 464 160 #arcP
 An0 f8 expr out #txt
-An0 f8 488 160 536 160 #arcP
-An0 f9 expr out #txt
-An0 f9 143 320 184 320 #arcP
+An0 f8 592 160 640 160 #arcP
 An0 f10 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
 ' #txt
 An0 f10 actionTable 'out=in1;
@@ -193,12 +194,12 @@ taskDefinitions.add(taskDef);
 ' #txt
 An0 f10 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 An0 f10 template "" #txt
-An0 f10 608 504 32 32 0 16 #rect
+An0 f10 712 504 32 32 0 16 #rect
 An0 f10 @|TaskSwitchIcon #fIcon
 An0 f11 expr out #txt
 An0 f11 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 An0 f11 var in1 #txt
-An0 f11 624 182 624 504 #arcP
+An0 f11 728 182 728 504 #arcP
 An0 f12 targetWindow NEW:card: #txt
 An0 f12 targetDisplay TOP #txt
 An0 f12 richDialogId einbuergerung_Gruppe6.PersonalienVervollstaendigen #txt
@@ -224,10 +225,10 @@ vervollständigen</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f12 880 498 128 44 -42 -16 #rect
+An0 f12 984 498 128 44 -42 -16 #rect
 An0 f12 @|RichDialogIcon #fIcon
 An0 f14 expr out #txt
-An0 f14 1008 520 1073 520 #arcP
+An0 f14 1112 520 1177 520 #arcP
 An0 f13 targetWindow NEW:card: #txt
 An0 f13 targetDisplay TOP #txt
 An0 f13 richDialogId einbuergerung_Gruppe6.Login #txt
@@ -252,13 +253,58 @@ An0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f13 696 498 112 44 -15 -8 #rect
+An0 f13 800 498 112 44 -15 -8 #rect
 An0 f13 @|RichDialogIcon #fIcon
 An0 f15 expr data #txt
 An0 f15 outCond ivp=="TaskA.ivp" #txt
-An0 f15 640 520 696 520 #arcP
+An0 f15 744 520 800 520 #arcP
 An0 f16 expr out #txt
-An0 f16 808 520 880 520 #arcP
+An0 f16 912 520 984 520 #arcP
+An0 f47 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Prozess beginnt mit dem Erfassen des Antragstellers
+im System durch den Kanzleimitarbeiter,
+nachdem der Antragsteller mündlich
+ und mit Merkblatt über den Ablauf informiert wurde.</name>
+        <nameStyle>179,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f47 176 346 304 76 -146 -32 #rect
+An0 f47 @|IBIcon #fIcon
+An0 f47 -14336|-1|-16777216 #nodeStyle
+An0 f17 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
+' #txt
+An0 f17 actionTable 'out=in1;
+' #txt
+An0 f17 outTypes "einbuergerung_Gruppe6.Antragssteller_informierenData" #txt
+An0 f17 outLinks "TaskA.ivp" #txt
+An0 f17 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Everybody");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDefinitions.add(taskDef);
+' #txt
+An0 f17 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
+An0 f17 template "" #txt
+An0 f17 208 304 32 32 0 16 #rect
+An0 f17 @|TaskSwitchIcon #fIcon
+An0 f18 expr out #txt
+An0 f18 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
+An0 f18 var in1 #txt
+An0 f18 143 320 208 320 #arcP
+An0 f9 expr data #txt
+An0 f9 outCond ivp=="TaskA.ivp" #txt
+An0 f9 240 320 288 320 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -296,8 +342,6 @@ An0 f3 mainOut f7 tail #connect
 An0 f7 head f4 mainIn #connect
 An0 f4 mainOut f8 tail #connect
 An0 f8 head f5 mainIn #connect
-An0 f0 mainOut f9 tail #connect
-An0 f9 head f2 mainIn #connect
 An0 f5 mainOut f11 tail #connect
 An0 f11 head f10 in #connect
 An0 f12 mainOut f14 tail #connect
@@ -306,3 +350,7 @@ An0 f10 out f15 tail #connect
 An0 f15 head f13 mainIn #connect
 An0 f13 mainOut f16 tail #connect
 An0 f16 head f12 mainIn #connect
+An0 f0 mainOut f18 tail #connect
+An0 f18 head f17 in #connect
+An0 f17 out f9 tail #connect
+An0 f9 head f2 mainIn #connect
