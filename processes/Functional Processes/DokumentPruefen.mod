@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 17 18:35:49 CET 2015]
+[>Created: Mon Nov 23 19:03:58 CET 2015]
 151165A416DBA684 3.17 #module
 >Proto >Proto Collection #zClass
 Dn0 DokumentPruefen Big #zClass
@@ -30,18 +30,17 @@ Dn0 @DBStep f14 '' #zField
 Dn0 @PushWFArc f15 '' #zField
 Dn0 @PushWFArc f9 '' #zField
 >Proto Dn0 Dn0 DokumentPruefen #zField
-Dn0 f0 inParamDecl '<java.lang.String documentToTest,java.lang.String email> param;' #txt
-Dn0 f0 inParamTable 'out.documentToProof=param.documentToTest;
-out.email=param.email;
+Dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+Dn0 f0 inParamTable 'out=param.data;
 ' #txt
-Dn0 f0 outParamDecl '<List<einbuergerung_Gruppe6.Document> documents> result;
+Dn0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
 ' #txt
-Dn0 f0 outParamTable 'result.documents=in.documents;
+Dn0 f0 outParamTable 'result.data=in;
 ' #txt
-Dn0 f0 actionDecl 'einbuergerung_Gruppe6.DokumentPruefenData out;
+Dn0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Dn0 f0 callSignature call(String,String) #txt
-Dn0 f0 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
+Dn0 f0 type einbuergerung_Gruppe6.Data #txt
 Dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -53,10 +52,10 @@ Dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Dn0 f0 81 49 30 30 -48 17 #rect
 Dn0 f0 @|StartSubIcon #fIcon
-Dn0 f1 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f1 type einbuergerung_Gruppe6.Data #txt
 Dn0 f1 1073 49 30 30 0 15 #rect
 Dn0 f1 @|EndSubIcon #fIcon
-Dn0 f2 actionDecl 'einbuergerung_Gruppe6.DokumentPruefenData out;
+Dn0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Dn0 f2 actionTable 'out=in;
 ' #txt
@@ -64,7 +63,7 @@ Dn0 f2 dbUrl AmazonDB #txt
 Dn0 f2 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Dn0 f2 lotSize 2147483647 #txt
 Dn0 f2 startIdx 0 #txt
-Dn0 f2 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f2 type einbuergerung_Gruppe6.Data #txt
 Dn0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -80,11 +79,11 @@ Dn0 f2 184 42 128 44 -41 -16 #rect
 Dn0 f2 @|DBStepIcon #fIcon
 Dn0 f3 expr out #txt
 Dn0 f3 111 64 184 64 #arcP
-Dn0 f4 actionDecl 'einbuergerung_Gruppe6.DokumentPruefenData out;
+Dn0 f4 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Dn0 f4 actionTable 'out=in1;
 ' #txt
-Dn0 f4 outTypes "einbuergerung_Gruppe6.DokumentPruefenData" #txt
+Dn0 f4 outTypes "einbuergerung_Gruppe6.Data" #txt
 Dn0 f4 outLinks "TaskA.ivp" #txt
 Dn0 f4 caseData '#
 #Tue Nov 17 18:16:26 CET 2015
@@ -130,7 +129,7 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-Dn0 f4 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f4 type einbuergerung_Gruppe6.Data #txt
 Dn0 f4 template "" #txt
 Dn0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -148,9 +147,9 @@ Dn0 f4 @|TaskSwitchIcon #fIcon
 Dn0 f6 targetWindow NEW:card: #txt
 Dn0 f6 targetDisplay TOP #txt
 Dn0 f6 startMethod start() #txt
-Dn0 f6 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f6 type einbuergerung_Gruppe6.Data #txt
 Dn0 f6 requestActionDecl '<> param;' #txt
-Dn0 f6 responseActionDecl 'einbuergerung_Gruppe6.DokumentPruefenData out;
+Dn0 f6 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Dn0 f6 responseMappingAction 'out=in;
 ' #txt
@@ -174,11 +173,11 @@ Dn0 f6 @|RichDialogIcon #fIcon
 Dn0 f7 expr data #txt
 Dn0 f7 outCond ivp=="TaskA.ivp" #txt
 Dn0 f7 568 64 640 64 #arcP
-Dn0 f8 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f8 type einbuergerung_Gruppe6.Data #txt
 Dn0 f8 968 48 32 32 0 16 #rect
 Dn0 f8 @|AlternativeIcon #fIcon
 Dn0 f10 expr in #txt
-Dn0 f10 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f10 type einbuergerung_Gruppe6.Data #txt
 Dn0 f10 var in2 #txt
 Dn0 f10 984 48 552 48 #arcP
 Dn0 f10 1 984 16 #addKink
@@ -186,11 +185,11 @@ Dn0 f10 2 552 16 #addKink
 Dn0 f10 1 0.5 0 0 #arcLabel
 Dn0 f11 expr in #txt
 Dn0 f11 1000 64 1073 64 #arcP
-Dn0 f12 actionDecl 'einbuergerung_Gruppe6.DokumentPruefenData out;
+Dn0 f12 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Dn0 f12 actionTable 'out=in;
 ' #txt
-Dn0 f12 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f12 type einbuergerung_Gruppe6.Data #txt
 Dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -207,10 +206,10 @@ Dn0 f12 @|StepIcon #fIcon
 Dn0 f13 expr out #txt
 Dn0 f13 312 64 344 64 #arcP
 Dn0 f5 expr out #txt
-Dn0 f5 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f5 type einbuergerung_Gruppe6.Data #txt
 Dn0 f5 var in1 #txt
 Dn0 f5 504 64 536 64 #arcP
-Dn0 f14 actionDecl 'einbuergerung_Gruppe6.DokumentPruefenData out;
+Dn0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Dn0 f14 actionTable 'out=in;
 ' #txt
@@ -218,7 +217,7 @@ Dn0 f14 dbUrl AmazonDB #txt
 Dn0 f14 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Dn0 f14 lotSize 2147483647 #txt
 Dn0 f14 startIdx 0 #txt
-Dn0 f14 type einbuergerung_Gruppe6.DokumentPruefenData #txt
+Dn0 f14 type einbuergerung_Gruppe6.Data #txt
 Dn0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -236,8 +235,13 @@ Dn0 f15 expr out #txt
 Dn0 f15 752 64 792 64 #arcP
 Dn0 f9 expr out #txt
 Dn0 f9 920 64 968 64 #arcP
->Proto Dn0 .type einbuergerung_Gruppe6.DokumentPruefenData #txt
+>Proto Dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Dn0 .processKind CALLABLE_SUB #txt
+>Proto Dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language/>
+</elementInfo>
+' #txt
 >Proto Dn0 0 0 32 24 18 0 #rect
 >Proto Dn0 @|BIcon #fIcon
 Dn0 f0 mainOut f3 tail #connect

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 17 18:26:32 CET 2015]
+[>Created: Mon Nov 23 19:07:11 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -46,27 +46,33 @@ Rn0 @GridStep f56 '' #zField
 Rn0 @PushWFArc f57 '' #zField
 Rn0 @TkArc f49 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
-Rn0 f0 inParamDecl '<> param;' #txt
-Rn0 f0 outParamDecl '<> result;
+Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+Rn0 f0 inParamTable 'out=param.data;
 ' #txt
-Rn0 f0 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
 ' #txt
-Rn0 f0 callSignature call() #txt
-Rn0 f0 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f0 outParamTable 'result.data=in;
+' #txt
+Rn0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
+Rn0 f0 type einbuergerung_Gruppe6.Data #txt
 Rn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>call()</name>
+        <name>call(Data)</name>
+        <nameStyle>10,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f0 49 81 30 30 -13 17 #rect
+Rn0 f0 49 81 30 30 -26 17 #rect
 Rn0 f0 @|StartSubIcon #fIcon
-Rn0 f31 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f31 actionTable 'out=in;
 ' #txt
-Rn0 f31 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f31 type einbuergerung_Gruppe6.Data #txt
 Rn0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -81,7 +87,7 @@ generieren</name>
 Rn0 f31 288 74 112 44 -34 -16 #rect
 Rn0 f31 @|StepIcon #fIcon
 Rn0 f32 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-Rn0 f32 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f32 type einbuergerung_Gruppe6.Data #txt
 Rn0 f32 timeout 0 #txt
 Rn0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -95,7 +101,7 @@ senden</name>
 ' #txt
 Rn0 f32 424 74 112 44 -28 -16 #rect
 Rn0 f32 @|EMailIcon #fIcon
-Rn0 f33 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f33 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f33 actionTable 'out=in;
 ' #txt
@@ -106,7 +112,7 @@ Rn0 f33 dbUrl AmazonDB #txt
 Rn0 f33 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Rn0 f33 lotSize 2147483647 #txt
 Rn0 f33 startIdx 0 #txt
-Rn0 f33 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f33 type einbuergerung_Gruppe6.Data #txt
 Rn0 f33 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -125,19 +131,19 @@ Rn0 f34 expr out #txt
 Rn0 f34 264 96 288 96 #arcP
 Rn0 f35 expr out #txt
 Rn0 f35 400 96 424 96 #arcP
-Rn0 f7 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out1;
-einbuergerung_Gruppe6.RechnungswesenData out2;
+Rn0 f7 actionDecl 'einbuergerung_Gruppe6.Data out1;
+einbuergerung_Gruppe6.Data out2;
 ' #txt
 Rn0 f7 actionTable 'out1=in;
 ' #txt
-Rn0 f7 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f7 type einbuergerung_Gruppe6.Data #txt
 Rn0 f7 552 80 32 32 0 16 #rect
 Rn0 f7 @|ThreadIcon #fIcon
-Rn0 f37 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f37 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f37 actionTable 'out=in;
 ' #txt
-Rn0 f37 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f37 type einbuergerung_Gruppe6.Data #txt
 Rn0 f37 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -150,11 +156,11 @@ Zahlung eingegangen</name>
 ' #txt
 Rn0 f37 584 154 144 44 -54 -16 #rect
 Rn0 f37 @|StepIcon #fIcon
-Rn0 f36 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f36 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f36 actionTable 'out=in1;
 ' #txt
-Rn0 f36 outTypes "einbuergerung_Gruppe6.RechnungswesenData" #txt
+Rn0 f36 outTypes "einbuergerung_Gruppe6.Data" #txt
 Rn0 f36 outLinks "TaskA.ivp" #txt
 Rn0 f36 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -169,7 +175,7 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-Rn0 f36 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f36 type einbuergerung_Gruppe6.Data #txt
 Rn0 f36 template "" #txt
 Rn0 f36 728 80 32 32 0 16 #rect
 Rn0 f36 @|TaskSwitchIcon #fIcon
@@ -180,16 +186,16 @@ Rn0 f39 568 112 584 176 #arcP
 Rn0 f39 1 568 176 #addKink
 Rn0 f39 0 0.8931809030229154 0 0 #arcLabel
 Rn0 f40 expr out2 #txt
-Rn0 f40 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f40 type einbuergerung_Gruppe6.Data #txt
 Rn0 f40 var in1 #txt
 Rn0 f40 584 96 728 96 #arcP
 Rn0 f41 expr out #txt
-Rn0 f41 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f41 type einbuergerung_Gruppe6.Data #txt
 Rn0 f41 var in2 #txt
 Rn0 f41 728 176 744 112 #arcP
 Rn0 f41 1 744 176 #addKink
 Rn0 f41 1 0.1068190969770843 0 0 #arcLabel
-Rn0 f42 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f42 type einbuergerung_Gruppe6.Data #txt
 Rn0 f42 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -206,7 +212,7 @@ Rn0 f43 expr data #txt
 Rn0 f43 outCond ivp=="TaskA.ivp" #txt
 Rn0 f43 760 96 784 96 #arcP
 Rn0 f44 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-Rn0 f44 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f44 type einbuergerung_Gruppe6.Data #txt
 Rn0 f44 timeout 0 #txt
 Rn0 f44 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -224,11 +230,11 @@ Rn0 f45 expr in #txt
 Rn0 f45 800 112 816 176 #arcP
 Rn0 f45 1 800 176 #addKink
 Rn0 f45 1 0.2598079352879466 0 0 #arcLabel
-Rn0 f46 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f46 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f46 actionTable 'out=in1;
 ' #txt
-Rn0 f46 outTypes "einbuergerung_Gruppe6.RechnungswesenData" #txt
+Rn0 f46 outTypes "einbuergerung_Gruppe6.Data" #txt
 Rn0 f46 outLinks "TaskA.ivp" #txt
 Rn0 f46 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -243,15 +249,15 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-Rn0 f46 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f46 type einbuergerung_Gruppe6.Data #txt
 Rn0 f46 template "" #txt
 Rn0 f46 1096 80 32 32 0 16 #rect
 Rn0 f46 @|TaskSwitchIcon #fIcon
 Rn0 f47 expr in #txt
-Rn0 f47 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f47 type einbuergerung_Gruppe6.Data #txt
 Rn0 f47 var in1 #txt
 Rn0 f47 816 96 1096 96 #arcP
-Rn0 f48 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f48 type einbuergerung_Gruppe6.Data #txt
 Rn0 f48 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -267,7 +273,7 @@ Rn0 f48 @|AlternativeIcon #fIcon
 Rn0 f50 expr data #txt
 Rn0 f50 outCond ivp=="TaskA.ivp" #txt
 Rn0 f50 1128 96 1152 96 #arcP
-Rn0 f51 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f51 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f51 actionTable 'out=in;
 ' #txt
@@ -275,7 +281,7 @@ Rn0 f51 dbUrl AmazonDB #txt
 Rn0 f51 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Rn0 f51 lotSize 2147483647 #txt
 Rn0 f51 startIdx 0 #txt
-Rn0 f51 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f51 type einbuergerung_Gruppe6.Data #txt
 Rn0 f51 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -288,7 +294,7 @@ Rn0 f51 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Rn0 f51 1368 74 112 44 -38 -8 #rect
 Rn0 f51 @|DBStepIcon #fIcon
 Rn0 f52 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-Rn0 f52 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f52 type einbuergerung_Gruppe6.Data #txt
 Rn0 f52 timeout 0 #txt
 Rn0 f52 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -311,16 +317,16 @@ Rn0 f54 2 1424 144 #addKink
 Rn0 f54 1 0.48986486486486486 0 0 #arcLabel
 Rn0 f55 expr out #txt
 Rn0 f55 1344 96 1368 96 #arcP
-Rn0 f1 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f1 type einbuergerung_Gruppe6.Data #txt
 Rn0 f1 1513 81 30 30 0 15 #rect
 Rn0 f1 @|EndSubIcon #fIcon
 Rn0 f10 expr out #txt
 Rn0 f10 1480 96 1513 96 #arcP
-Rn0 f56 actionDecl 'einbuergerung_Gruppe6.RechnungswesenData out;
+Rn0 f56 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f56 actionTable 'out=in;
 ' #txt
-Rn0 f56 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f56 type einbuergerung_Gruppe6.Data #txt
 Rn0 f56 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -337,12 +343,12 @@ Rn0 f57 expr out #txt
 Rn0 f57 928 176 952 176 #arcP
 Rn0 f57 0 0.8790927857480085 0 0 #arcLabel
 Rn0 f49 expr out #txt
-Rn0 f49 type einbuergerung_Gruppe6.RechnungswesenData #txt
+Rn0 f49 type einbuergerung_Gruppe6.Data #txt
 Rn0 f49 var in2 #txt
 Rn0 f49 1096 176 1112 112 #arcP
 Rn0 f49 1 1112 176 #addKink
 Rn0 f49 0 0.8790927857480085 0 0 #arcLabel
->Proto Rn0 .type einbuergerung_Gruppe6.RechnungswesenData #txt
+>Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>

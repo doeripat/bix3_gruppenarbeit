@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 17 18:37:23 CET 2015]
+[>Created: Mon Nov 23 19:04:25 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -86,38 +86,42 @@ Bk7 @DBStep f3 '' #zField
 Bk7 @PushWFArc f4 '' #zField
 Bk7 @PushWFArc f0 '' #zField
 >Proto Bk7 Bk0 BpmnUserTask #zField
-vs0 f0 inParamDecl '<java.lang.String email> param;' #txt
-vs0 f0 inParamTable 'out.request.email=param.email;
+vs0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+vs0 f0 inParamTable 'out=param.data;
 ' #txt
-vs0 f0 outParamDecl '<> result;
+vs0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
 ' #txt
-vs0 f0 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f0 outParamTable 'result.data=in;
 ' #txt
-vs0 f0 callSignature call(String) #txt
-vs0 f0 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
+vs0 f0 type einbuergerung_Gruppe6.Data #txt
 vs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>call(String)</name>
+        <name>call(Data)</name>
+        <nameStyle>10,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-vs0 f0 81 161 30 30 -29 17 #rect
+vs0 f0 81 161 30 30 -26 17 #rect
 vs0 f0 @|StartSubIcon #fIcon
-vs0 f1 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f1 type einbuergerung_Gruppe6.Data #txt
 vs0 f1 1169 153 30 30 0 15 #rect
 vs0 f1 @|EndSubIcon #fIcon
-vs0 f4 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out4;
-einbuergerung_Gruppe6.validate_documentsData out1;
-einbuergerung_Gruppe6.validate_documentsData out2;
-einbuergerung_Gruppe6.validate_documentsData out3;
+vs0 f4 actionDecl 'einbuergerung_Gruppe6.Data out4;
+einbuergerung_Gruppe6.Data out1;
+einbuergerung_Gruppe6.Data out2;
+einbuergerung_Gruppe6.Data out3;
 ' #txt
 vs0 f4 actionTable 'out1=in;
 ' #txt
-vs0 f4 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f4 type einbuergerung_Gruppe6.Data #txt
 vs0 f4 336 160 32 32 0 16 #rect
 vs0 f4 @|ThreadIcon #fIcon
-vs0 f2 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f2 actionTable 'out=in1;
 ' #txt
@@ -154,12 +158,12 @@ dennoch annehmen etc.</name>
 vs0 f16 800 42 304 76 -144 -32 #rect
 vs0 f16 @|IBIcon #fIcon
 vs0 f17 952 118 1024 148 #arcP
-vs0 f11 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f11 actionTable 'out=in1;
 out.documentTypeToTest="deutschkenntnisse";
 ' #txt
-vs0 f11 outTypes "einbuergerung_Gruppe6.validate_documentsData" #txt
+vs0 f11 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f11 outLinks "TaskA.ivp" #txt
 vs0 f11 caseData '#
 #Tue Nov 17 18:08:53 CET 2015
@@ -212,22 +216,22 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-vs0 f11 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f11 type einbuergerung_Gruppe6.Data #txt
 vs0 f11 template "" #txt
 vs0 f11 432 56 32 32 0 16 #rect
 vs0 f11 @|TaskSwitchIcon #fIcon
 vs0 f12 expr out1 #txt
-vs0 f12 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f12 type einbuergerung_Gruppe6.Data #txt
 vs0 f12 var in1 #txt
 vs0 f12 352 160 432 72 #arcP
 vs0 f12 1 352 72 #addKink
 vs0 f12 1 0.2637719086116223 0 0 #arcLabel
-vs0 f18 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f18 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f18 actionTable 'out=in1;
 out.documentTypeToTest="wohnsitz";
 ' #txt
-vs0 f18 outTypes "einbuergerung_Gruppe6.validate_documentsData" #txt
+vs0 f18 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f18 outLinks "TaskA.ivp" #txt
 vs0 f18 caseData '#
 #Tue Nov 17 18:32:52 CET 2015
@@ -280,22 +284,22 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-vs0 f18 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f18 type einbuergerung_Gruppe6.Data #txt
 vs0 f18 template "" #txt
 vs0 f18 432 120 32 32 0 16 #rect
 vs0 f18 @|TaskSwitchIcon #fIcon
 vs0 f20 expr out2 #txt
-vs0 f20 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f20 type einbuergerung_Gruppe6.Data #txt
 vs0 f20 var in1 #txt
 vs0 f20 362 170 432 136 #arcP
 vs0 f20 1 416 136 #addKink
 vs0 f20 1 0.15868872895418298 0 0 #arcLabel
-vs0 f22 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f22 actionTable 'out=in1;
 out.documentTypeToTest="finanzen";
 ' #txt
-vs0 f22 outTypes "einbuergerung_Gruppe6.validate_documentsData" #txt
+vs0 f22 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f22 outLinks "TaskA.ivp" #txt
 vs0 f22 caseData '#
 #Tue Nov 17 18:33:20 CET 2015
@@ -348,21 +352,21 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-vs0 f22 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f22 type einbuergerung_Gruppe6.Data #txt
 vs0 f22 template "" #txt
 vs0 f22 432 184 32 32 0 16 #rect
 vs0 f22 @|TaskSwitchIcon #fIcon
 vs0 f24 expr out3 #txt
-vs0 f24 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f24 type einbuergerung_Gruppe6.Data #txt
 vs0 f24 var in1 #txt
 vs0 f24 364 180 432 200 #arcP
 vs0 f24 1 416 200 #addKink
 vs0 f24 1 0.2058180738538184 0 0 #arcLabel
-vs0 f25 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f25 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f25 actionTable 'out=in1;
 ' #txt
-vs0 f25 outTypes "einbuergerung_Gruppe6.validate_documentsData" #txt
+vs0 f25 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f25 outLinks "TaskA.ivp" #txt
 vs0 f25 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -377,18 +381,18 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-vs0 f25 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f25 type einbuergerung_Gruppe6.Data #txt
 vs0 f25 template "" #txt
 vs0 f25 368 248 32 32 0 16 #rect
 vs0 f25 @|TaskSwitchIcon #fIcon
 vs0 f26 expr out4 #txt
-vs0 f26 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f26 type einbuergerung_Gruppe6.Data #txt
 vs0 f26 var in1 #txt
 vs0 f26 352 192 368 264 #arcP
 vs0 f26 1 352 264 #addKink
 vs0 f26 0 0.8854687405028399 0 0 #arcLabel
 vs0 f6 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-vs0 f6 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f6 type einbuergerung_Gruppe6.Data #txt
 vs0 f6 timeout 0 #txt
 vs0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -406,11 +410,11 @@ vs0 f6 @|EMailIcon #fIcon
 vs0 f9 expr data #txt
 vs0 f9 outCond ivp=="TaskA.ivp" #txt
 vs0 f9 400 264 432 264 #arcP
-vs0 f13 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f13 actionTable 'out=in1;
 ' #txt
-vs0 f13 outTypes "einbuergerung_Gruppe6.validate_documentsData" #txt
+vs0 f13 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f13 outLinks "TaskA.ivp" #txt
 vs0 f13 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -425,20 +429,20 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-vs0 f13 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f13 type einbuergerung_Gruppe6.Data #txt
 vs0 f13 template "" #txt
 vs0 f13 480 376 32 32 0 16 #rect
 vs0 f13 @|TaskSwitchIcon #fIcon
 vs0 f27 expr out #txt
-vs0 f27 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f27 type einbuergerung_Gruppe6.Data #txt
 vs0 f27 var in1 #txt
 vs0 f27 496 286 496 376 #arcP
-vs0 f30 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f30 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f30 actionTable 'out=in1;
 out.documentTypeToTest="leumund";
 ' #txt
-vs0 f30 outTypes "einbuergerung_Gruppe6.validate_documentsData" #txt
+vs0 f30 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f30 outLinks "TaskA.ivp" #txt
 vs0 f30 caseData '#
 #Tue Nov 17 18:34:24 CET 2015
@@ -491,19 +495,14 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-vs0 f30 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f30 type einbuergerung_Gruppe6.Data #txt
 vs0 f30 template "" #txt
 vs0 f30 680 248 32 32 0 16 #rect
 vs0 f30 @|TaskSwitchIcon #fIcon
-vs0 f33 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f33 type einbuergerung_Gruppe6.Data #txt
 vs0 f33 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
 vs0 f33 doCall true #txt
-vs0 f33 requestActionDecl '<java.lang.String documentToTest,java.lang.String email> param;
-' #txt
-vs0 f33 requestMappingAction 'param.documentToTest=in.documentTypeToTest;
-param.email=in.request.email;
-' #txt
-vs0 f33 responseActionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f33 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f33 responseMappingAction 'out=in;
 out.request.documents=result.documents;
@@ -522,20 +521,15 @@ prüfen</name>
 vs0 f33 584 50 112 44 -53 -20 #rect
 vs0 f33 @|CallSubIcon #fIcon
 vs0 f19 expr out #txt
-vs0 f19 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f19 type einbuergerung_Gruppe6.Data #txt
 vs0 f19 var in4 #txt
 vs0 f19 696 72 960 152 #arcP
 vs0 f19 1 960 72 #addKink
 vs0 f19 0 0.6783945034378248 0 0 #arcLabel
-vs0 f3 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f3 type einbuergerung_Gruppe6.Data #txt
 vs0 f3 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
 vs0 f3 doCall true #txt
-vs0 f3 requestActionDecl '<java.lang.String documentToTest,java.lang.String email> param;
-' #txt
-vs0 f3 requestMappingAction 'param.documentToTest=in.documentTypeToTest;
-param.email=in.request.email;
-' #txt
-vs0 f3 responseActionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f3 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f3 responseMappingAction 'out=in;
 ' #txt
@@ -555,15 +549,10 @@ vs0 f3 @|CallSubIcon #fIcon
 vs0 f34 expr data #txt
 vs0 f34 outCond ivp=="TaskA.ivp" #txt
 vs0 f34 464 72 584 72 #arcP
-vs0 f7 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f7 type einbuergerung_Gruppe6.Data #txt
 vs0 f7 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
 vs0 f7 doCall true #txt
-vs0 f7 requestActionDecl '<java.lang.String documentToTest,java.lang.String email> param;
-' #txt
-vs0 f7 requestMappingAction 'param.documentToTest=in.documentTypeToTest;
-param.email=in.request.email;
-' #txt
-vs0 f7 responseActionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f7 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f7 responseMappingAction 'out=in;
 ' #txt
@@ -580,15 +569,10 @@ prüfen</name>
 ' #txt
 vs0 f7 584 114 112 44 -25 -20 #rect
 vs0 f7 @|CallSubIcon #fIcon
-vs0 f8 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f8 type einbuergerung_Gruppe6.Data #txt
 vs0 f8 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
 vs0 f8 doCall true #txt
-vs0 f8 requestActionDecl '<java.lang.String documentToTest,java.lang.String email> param;
-' #txt
-vs0 f8 requestMappingAction 'param.documentToTest=in.documentTypeToTest;
-param.email=in.request.email;
-' #txt
-vs0 f8 responseActionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f8 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f8 responseMappingAction 'out=in;
 ' #txt
@@ -613,19 +597,19 @@ vs0 f10 expr data #txt
 vs0 f10 outCond ivp=="TaskA.ivp" #txt
 vs0 f10 712 264 776 264 #arcP
 vs0 f32 expr out #txt
-vs0 f32 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f32 type einbuergerung_Gruppe6.Data #txt
 vs0 f32 var in1 #txt
 vs0 f32 888 264 960 184 #arcP
 vs0 f32 1 960 264 #addKink
 vs0 f32 0 0.8443796510879696 0 0 #arcLabel
 vs0 f35 expr out #txt
-vs0 f35 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f35 type einbuergerung_Gruppe6.Data #txt
 vs0 f35 var in2 #txt
 vs0 f35 696 200 950 174 #arcP
 vs0 f35 1 904 200 #addKink
 vs0 f35 0 0.62355862765285 0 0 #arcLabel
 vs0 f36 expr out #txt
-vs0 f36 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f36 type einbuergerung_Gruppe6.Data #txt
 vs0 f36 var in3 #txt
 vs0 f36 696 136 949 163 #arcP
 vs0 f36 1 896 136 #addKink
@@ -645,12 +629,12 @@ vs0 U10 @|BpmnUserTaskIcon #fIcon
 vs0 f28 expr data #txt
 vs0 f28 outCond ivp=="TaskA.ivp" #txt
 vs0 f28 512 392 552 392 #arcP
-vs0 f29 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f29 type einbuergerung_Gruppe6.Data #txt
 vs0 f29 var in1 #txt
 vs0 f29 616 370 680 264 #arcP
 vs0 f29 1 616 264 #addKink
 vs0 f29 0 0.8522293340112165 0 0 #arcLabel
-vs0 f31 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+vs0 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f31 actionTable 'out=in;
 ' #txt
@@ -658,7 +642,7 @@ vs0 f31 dbUrl AmazonDB #txt
 vs0 f31 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 vs0 f31 lotSize 2147483647 #txt
 vs0 f31 startIdx 0 #txt
-vs0 f31 type einbuergerung_Gruppe6.validate_documentsData #txt
+vs0 f31 type einbuergerung_Gruppe6.Data #txt
 vs0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -676,7 +660,7 @@ vs0 f37 expr out #txt
 vs0 f37 111 176 168 176 #arcP
 vs0 f5 expr out #txt
 vs0 f5 280 176 336 176 #arcP
->Proto vs0 .type einbuergerung_Gruppe6.validate_documentsData #txt
+>Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -711,9 +695,9 @@ Bk7 g1 @|MOGIcon #fIcon
 Bk7 f1 targetWindow NEW:card: #txt
 Bk7 f1 targetDisplay TOP #txt
 Bk7 f1 startMethod start() #txt
-Bk7 f1 type einbuergerung_Gruppe6.validate_documentsData #txt
+Bk7 f1 type einbuergerung_Gruppe6.Data #txt
 Bk7 f1 requestActionDecl '<> param;' #txt
-Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk7 f1 responseMappingAction 'out=in;
 ' #txt
@@ -734,7 +718,7 @@ hochladen</name>
 Bk7 f1 136 234 112 44 -29 -16 #rect
 Bk7 f1 @|RichDialogIcon #fIcon
 Bk7 f2 77 256 136 256 #arcP
-Bk7 f3 actionDecl 'einbuergerung_Gruppe6.validate_documentsData out;
+Bk7 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk7 f3 actionTable 'out=in;
 ' #txt
@@ -742,7 +726,7 @@ Bk7 f3 dbUrl AmazonDB #txt
 Bk7 f3 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Bk7 f3 lotSize 2147483647 #txt
 Bk7 f3 startIdx 0 #txt
-Bk7 f3 type einbuergerung_Gruppe6.validate_documentsData #txt
+Bk7 f3 type einbuergerung_Gruppe6.Data #txt
 Bk7 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>

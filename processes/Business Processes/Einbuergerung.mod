@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 16:42:29 CET 2015]
+[>Created: Mon Nov 23 19:08:01 CET 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -119,9 +119,11 @@ Eg0 f8 processCall 'Functional Processes/Antragsteller_interviewen:call(einbuerg
 Eg0 f8 doCall true #txt
 Eg0 f8 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
 ' #txt
+Eg0 f8 requestMappingAction 'param.data=in;
+' #txt
 Eg0 f8 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Eg0 f8 responseMappingAction 'out=in;
+Eg0 f8 responseMappingAction 'out=result.data;
 ' #txt
 Eg0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -169,16 +171,18 @@ Eg0 f25 processCall 'Functional Processes/Einbuergerungsgesuch_publizieren:call(
 Eg0 f25 doCall true #txt
 Eg0 f25 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
 ' #txt
+Eg0 f25 requestMappingAction 'param.data=in;
+' #txt
 Eg0 f25 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Eg0 f25 responseMappingAction 'out=in;
+Eg0 f25 responseMappingAction 'out=result.data;
 ' #txt
 Eg0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Einbuergerungsgesuch
 publizieren</name>
-        <nameStyle>32
+        <nameStyle>32,7
 </nameStyle>
     </language>
 </elementInfo>
@@ -190,9 +194,11 @@ Eg0 f13 440 64 480 64 #arcP
 Eg0 f22 expr out #txt
 Eg0 f22 624 64 656 64 #arcP
 Eg0 f16 type einbuergerung_Gruppe6.Data #txt
-Eg0 f16 processCall 'Functional Processes/Abbruch:call()' #txt
+Eg0 f16 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
 Eg0 f16 doCall true #txt
-Eg0 f16 requestActionDecl '<> param;
+Eg0 f16 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Eg0 f16 requestMappingAction 'param.data=in;
 ' #txt
 Eg0 f16 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -202,6 +208,8 @@ Eg0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Abbruch</name>
+        <nameStyle>7,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt

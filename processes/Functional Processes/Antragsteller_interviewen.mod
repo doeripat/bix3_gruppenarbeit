@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 16:37:48 CET 2015]
+[>Created: Mon Nov 23 18:05:49 CET 2015]
 1506BD6C657107E2 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen Big #zClass
@@ -45,14 +45,16 @@ An0 @EndTask f13 '' #zField
 An0 @PushWFArc f14 '' #zField
 >Proto An0 An0 Antragsteller_interviewen #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+An0 f0 inParamTable 'out=param.data;
+' #txt
 An0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
 ' #txt
-An0 f0 outParamTable 'result.data=in.data;
+An0 f0 outParamTable 'result.data=in;
 ' #txt
-An0 f0 actionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
-An0 f0 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f0 type einbuergerung_Gruppe6.Data #txt
 An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -64,10 +66,10 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f0 41 153 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
-An0 f1 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f1 type einbuergerung_Gruppe6.Data #txt
 An0 f1 1385 153 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
-An0 f5 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f5 type einbuergerung_Gruppe6.Data #txt
 An0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -98,9 +100,9 @@ An0 f23 targetWindow NEW:card: #txt
 An0 f23 targetDisplay TOP #txt
 An0 f23 richDialogId einbuergerung_Gruppe6.TerminWaehlen #txt
 An0 f23 startMethod start() #txt
-An0 f23 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f23 type einbuergerung_Gruppe6.Data #txt
 An0 f23 requestActionDecl '<> param;' #txt
-An0 f23 responseActionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f23 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f23 responseMappingAction 'out=in;
 ' #txt
@@ -121,7 +123,7 @@ An0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f23 264 346 112 44 -41 -8 #rect
 An0 f23 @|RichDialogIcon #fIcon
 An0 f24 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-An0 f24 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f24 type einbuergerung_Gruppe6.Data #txt
 An0 f24 timeout 0 #txt
 An0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -134,11 +136,11 @@ An0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f24 424 346 112 44 -52 -8 #rect
 An0 f24 @|EMailIcon #fIcon
-An0 f25 actionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f25 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f25 actionTable 'out=in1;
 ' #txt
-An0 f25 outTypes "einbuergerung_Gruppe6.Antragsteller_interviewenData" #txt
+An0 f25 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f25 outLinks "TaskA.ivp" #txt
 An0 f25 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -153,16 +155,16 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-An0 f25 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f25 type einbuergerung_Gruppe6.Data #txt
 An0 f25 template "" #txt
 An0 f25 464 152 32 32 0 16 #rect
 An0 f25 @|TaskSwitchIcon #fIcon
 An0 f26 targetWindow NEW:card: #txt
 An0 f26 targetDisplay TOP #txt
 An0 f26 startMethod start() #txt
-An0 f26 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f26 type einbuergerung_Gruppe6.Data #txt
 An0 f26 requestActionDecl '<> param;' #txt
-An0 f26 responseActionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f26 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f26 responseMappingAction 'out=in;
 ' #txt
@@ -185,7 +187,7 @@ An0 f26 @|RichDialogIcon #fIcon
 An0 f6 expr out #txt
 An0 f6 376 368 424 368 #arcP
 An0 f20 expr out #txt
-An0 f20 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f20 type einbuergerung_Gruppe6.Data #txt
 An0 f20 var in1 #txt
 An0 f20 480 346 480 184 #arcP
 An0 f28 expr data #txt
@@ -194,7 +196,7 @@ An0 f28 496 168 536 168 #arcP
 An0 f2 expr out #txt
 An0 f2 71 168 136 168 #arcP
 An0 f21 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-An0 f21 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f21 type einbuergerung_Gruppe6.Data #txt
 An0 f21 timeout 0 #txt
 An0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -208,11 +210,11 @@ Terminfindung</name>
 ' #txt
 An0 f21 136 146 128 44 -40 -16 #rect
 An0 f21 @|EMailIcon #fIcon
-An0 f3 actionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f3 actionTable 'out=in1;
 ' #txt
-An0 f3 outTypes "einbuergerung_Gruppe6.Antragsteller_interviewenData" #txt
+An0 f3 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f3 outLinks "TaskA.ivp" #txt
 An0 f3 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -227,19 +229,19 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-An0 f3 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f3 type einbuergerung_Gruppe6.Data #txt
 An0 f3 template "" #txt
 An0 f3 184 352 32 32 0 16 #rect
 An0 f3 @|TaskSwitchIcon #fIcon
 An0 f4 expr out #txt
-An0 f4 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f4 type einbuergerung_Gruppe6.Data #txt
 An0 f4 var in1 #txt
 An0 f4 200 190 200 352 #arcP
 An0 f22 expr data #txt
 An0 f22 outCond ivp=="TaskA.ivp" #txt
 An0 f22 216 368 264 368 #arcP
 An0 f29 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-An0 f29 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f29 type einbuergerung_Gruppe6.Data #txt
 An0 f29 timeout 0 #txt
 An0 f29 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -257,9 +259,9 @@ An0 f30 targetWindow NEW:card: #txt
 An0 f30 targetDisplay TOP #txt
 An0 f30 richDialogId einbuergerung_Gruppe6.EinwaendeEinsehen #txt
 An0 f30 startMethod start() #txt
-An0 f30 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f30 type einbuergerung_Gruppe6.Data #txt
 An0 f30 requestActionDecl '<> param;' #txt
-An0 f30 responseActionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f30 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f30 responseMappingAction 'out=in;
 ' #txt
@@ -290,11 +292,11 @@ An0 f7 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f7 856 168 928 168 #arcP
 An0 f7 0 0.37272727272727274 1 -8 #arcLabel
-An0 f9 actionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f9 actionTable 'out=in1;
 ' #txt
-An0 f9 outTypes "einbuergerung_Gruppe6.Antragsteller_interviewenData" #txt
+An0 f9 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f9 outLinks "TaskA.ivp" #txt
 An0 f9 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -309,12 +311,12 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-An0 f9 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f9 type einbuergerung_Gruppe6.Data #txt
 An0 f9 template "" #txt
 An0 f9 984 352 32 32 0 16 #rect
 An0 f9 @|TaskSwitchIcon #fIcon
 An0 f32 expr out #txt
-An0 f32 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f32 type einbuergerung_Gruppe6.Data #txt
 An0 f32 var in1 #txt
 An0 f32 1000 190 1000 352 #arcP
 An0 f32 0 0.5587894248608535 0 0 #arcLabel
@@ -325,9 +327,10 @@ An0 f36 expr out #txt
 An0 f36 744 168 824 168 #arcP
 An0 f31 targetWindow NEW:card: #txt
 An0 f31 targetDisplay TOP #txt
-An0 f31 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f31 startMethod start() #txt
+An0 f31 type einbuergerung_Gruppe6.Data #txt
 An0 f31 requestActionDecl '<> param;' #txt
-An0 f31 responseActionDecl 'einbuergerung_Gruppe6.Antragsteller_interviewenData out;
+An0 f31 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f31 responseMappingAction 'out=in;
 ' #txt
@@ -348,7 +351,7 @@ An0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f31 1320 346 160 44 -74 -8 #rect
 An0 f31 @|RichDialogIcon #fIcon
-An0 f34 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f34 type einbuergerung_Gruppe6.Data #txt
 An0 f34 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -368,14 +371,14 @@ An0 f11 expr in #txt
 An0 f11 1272 368 1320 368 #arcP
 An0 f12 expr out #txt
 An0 f12 1400 346 1400 183 #arcP
-An0 f13 type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+An0 f13 type einbuergerung_Gruppe6.Data #txt
 An0 f13 1385 425 30 30 0 15 #rect
 An0 f13 @|EndIcon #fIcon
 An0 f14 expr in #txt
 An0 f14 1256 384 1385 440 #arcP
 An0 f14 1 1256 440 #addKink
 An0 f14 1 0.19244880768791459 0 0 #arcLabel
->Proto An0 .type einbuergerung_Gruppe6.Antragsteller_interviewenData #txt
+>Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>

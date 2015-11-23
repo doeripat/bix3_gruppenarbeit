@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 16:42:02 CET 2015]
+[>Created: Mon Nov 23 19:03:58 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -115,12 +115,16 @@ Bk8 @PushWFArc f0 '' #zField
 Bk8 @PushWFArc f3 '' #zField
 >Proto Bk8 Bk3 BpmnUserTask #zField
 dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+dn0 f0 inParamTable 'out=param.data;
+' #txt
 dn0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
 ' #txt
-dn0 f0 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+dn0 f0 outParamTable 'result.data=in;
+' #txt
+dn0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
-dn0 f0 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f0 type einbuergerung_Gruppe6.Data #txt
 dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -132,10 +136,10 @@ dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 dn0 f0 65 361 30 30 -26 17 #rect
 dn0 f0 @|StartSubIcon #fIcon
-dn0 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f1 type einbuergerung_Gruppe6.Data #txt
 dn0 f1 1593 73 30 30 0 15 #rect
 dn0 f1 @|EndSubIcon #fIcon
-dn0 f8 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f8 type einbuergerung_Gruppe6.Data #txt
 dn0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -148,7 +152,7 @@ vollständig &amp; korrekt</name>
 ' #txt
 dn0 f8 848 128 32 32 -58 -52 #rect
 dn0 f8 @|AlternativeIcon #fIcon
-dn0 f23 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f23 type einbuergerung_Gruppe6.Data #txt
 dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -173,7 +177,7 @@ dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f15 1504 128 1593 88 #arcP
 dn0 f15 1 1504 88 #addKink
 dn0 f15 0 0.6428571428571429 -16 0 #arcLabel
-dn0 f25 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f25 type einbuergerung_Gruppe6.Data #txt
 dn0 f25 1593 177 30 30 0 15 #rect
 dn0 f25 @|EndIcon #fIcon
 dn0 f26 expr in #txt
@@ -244,11 +248,11 @@ dn0 U10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 U10 248 354 112 44 -30 -8 #rect
 dn0 U10 @|BpmnUserTaskIcon #fIcon
 dn0 f5 360 376 416 376 #arcP
-dn0 f11 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+dn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f11 actionTable 'out=in1;
 ' #txt
-dn0 f11 outTypes "einbuergerung_Gruppe6.dokumente_pruefenData" #txt
+dn0 f11 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f11 outLinks "TaskA.ivp" #txt
 dn0 f11 caseData '#
 #Sun Nov 15 15:39:59 CET 2015
@@ -301,7 +305,7 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-dn0 f11 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f11 type einbuergerung_Gruppe6.Data #txt
 dn0 f11 template "" #txt
 dn0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -317,18 +321,18 @@ ausfüllen</name>
 dn0 f11 160 360 32 32 -49 18 #rect
 dn0 f11 @|TaskSwitchIcon #fIcon
 dn0 f19 expr out #txt
-dn0 f19 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f19 type einbuergerung_Gruppe6.Data #txt
 dn0 f19 var in1 #txt
 dn0 f19 95 376 160 376 #arcP
 dn0 f3 expr data #txt
 dn0 f3 outCond ivp=="TaskA.ivp" #txt
 dn0 f3 192 376 248 376 #arcP
-dn0 f6 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f6 type einbuergerung_Gruppe6.Data #txt
 dn0 f6 processCall 'Functional Processes/Rechnungswesen:call()' #txt
 dn0 f6 doCall true #txt
 dn0 f6 requestActionDecl '<> param;
 ' #txt
-dn0 f6 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+dn0 f6 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f6 responseMappingAction 'out=in;
 ' #txt
@@ -343,14 +347,14 @@ dn0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 dn0 f6 928 122 128 44 -56 -8 #rect
 dn0 f6 @|CallSubIcon #fIcon
-dn0 f12 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
-dn0 f12 processCall 'Functional Processes/validate_documents:call(String)' #txt
+dn0 f12 type einbuergerung_Gruppe6.Data #txt
+dn0 f12 processCall 'Functional Processes/validate_documents:call(einbuergerung_Gruppe6.Data)' #txt
 dn0 f12 doCall true #txt
-dn0 f12 requestActionDecl '<java.lang.String email> param;
+dn0 f12 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
 ' #txt
-dn0 f12 requestMappingAction 'param.email=in.request.email;
+dn0 f12 requestMappingAction 'param.data=in;
 ' #txt
-dn0 f12 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+dn0 f12 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f12 responseMappingAction 'out=in;
 ' #txt
@@ -397,11 +401,11 @@ prüfen</name>
 dn0 U50 656 114 144 60 -51 -24 #rect
 dn0 U50 @|BpmnUserTaskIcon #fIcon
 dn0 f13 800 144 848 144 #arcP
-dn0 f21 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+dn0 f21 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f21 actionTable 'out=in1;
 ' #txt
-dn0 f21 outTypes "einbuergerung_Gruppe6.dokumente_pruefenData" #txt
+dn0 f21 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f21 outLinks "TaskA.ivp" #txt
 dn0 f21 caseData '#
 #Sun Nov 15 15:47:44 CET 2015
@@ -454,7 +458,7 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-dn0 f21 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f21 type einbuergerung_Gruppe6.Data #txt
 dn0 f21 template "" #txt
 dn0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -467,7 +471,7 @@ dn0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 dn0 f21 552 128 32 32 -73 18 #rect
 dn0 f21 @|TaskSwitchIcon #fIcon
-dn0 f22 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f22 type einbuergerung_Gruppe6.Data #txt
 dn0 f22 var in1 #txt
 dn0 f22 480 354 552 144 #arcP
 dn0 f22 1 480 144 #addKink
@@ -476,11 +480,11 @@ dn0 f7 expr data #txt
 dn0 f7 outCond ivp=="TaskA.ivp" #txt
 dn0 f7 584 144 656 144 #arcP
 dn0 f7 0 0.943880027099722 0 0 #arcLabel
-dn0 f9 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f9 actionTable 'out=in1;
 ' #txt
-dn0 f9 outTypes "einbuergerung_Gruppe6.dokumente_pruefenData" #txt
+dn0 f9 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f9 outLinks "TaskA.ivp" #txt
 dn0 f9 caseData '#
 #Sun Nov 15 15:51:42 CET 2015
@@ -533,7 +537,7 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-dn0 f9 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f9 type einbuergerung_Gruppe6.Data #txt
 dn0 f9 template "" #txt
 dn0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -547,19 +551,19 @@ dn0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f9 848 368 32 32 -53 18 #rect
 dn0 f9 @|TaskSwitchIcon #fIcon
 dn0 f10 expr in #txt
-dn0 f10 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f10 type einbuergerung_Gruppe6.Data #txt
 dn0 f10 var in1 #txt
 dn0 f10 864 160 864 368 #arcP
 dn0 f24 expr data #txt
 dn0 f24 outCond ivp=="TaskA.ivp" #txt
 dn0 f24 848 384 792 384 #arcP
-dn0 f20 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f20 type einbuergerung_Gruppe6.Data #txt
 dn0 f20 var in2 #txt
 dn0 f20 632 384 568 160 #arcP
 dn0 f20 1 568 384 #addKink
 dn0 f20 1 0.1834319119206627 0 0 #arcLabel
 dn0 f14 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-dn0 f14 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+dn0 f14 type einbuergerung_Gruppe6.Data #txt
 dn0 f14 timeout 0 #txt
 dn0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -578,7 +582,7 @@ dn0 f16 expr out #txt
 dn0 f16 1232 144 1296 144 #arcP
 dn0 f27 expr out #txt
 dn0 f27 1424 144 1488 144 #arcP
->Proto dn0 .type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+>Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -607,12 +611,12 @@ Bk1 f1 targetWindow NEW:card: #txt
 Bk1 f1 targetDisplay TOP #txt
 Bk1 f1 richDialogId einbuergerung_Gruppe6.GesuchsformularAusfuellen #txt
 Bk1 f1 startMethod start(String,String) #txt
-Bk1 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+Bk1 f1 type einbuergerung_Gruppe6.Data #txt
 Bk1 f1 requestActionDecl '<String uniqueIdentifier, String email> param;' #txt
 Bk1 f1 requestMappingAction 'param.uniqueIdentifier=in.request.uniqueIdentifier;
 param.email=in.request.email;
 ' #txt
-Bk1 f1 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+Bk1 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk1 f1 responseMappingAction 'out=in;
 out.request.address=result.address;
@@ -651,7 +655,7 @@ Bk2 f1 targetWindow NEW:card: #txt
 Bk2 f1 targetDisplay TOP #txt
 Bk2 f1 richDialogId einbuergerung_Gruppe6.GesuchsformularVerbessern #txt
 Bk2 f1 startMethod start(String,String,List<einbuergerung_Gruppe6.Document>,String,String,String,String,String,String,List<einbuergerung_Gruppe6.Person>,String) #txt
-Bk2 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+Bk2 f1 type einbuergerung_Gruppe6.Data #txt
 Bk2 f1 requestActionDecl '<String uniqueIdentifier, String status, List<einbuergerung_Gruppe6.Document> documents, String mobilePhone, String phone, String address, String postcode, String email, String city, List<einbuergerung_Gruppe6.Person> personList, String commentOnRequest> param;' #txt
 Bk2 f1 requestMappingAction 'param.uniqueIdentifier=in.request.uniqueIdentifier;
 param.status=in.request.status;
@@ -665,7 +669,7 @@ param.city=in.request.city;
 param.personList=in.request.personList;
 param.commentOnRequest=in.commentOnRequest;
 ' #txt
-Bk2 f1 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+Bk2 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f1 responseMappingAction 'out=in;
 out.request.address=result.address;
@@ -698,9 +702,9 @@ Bk2 f3 targetWindow NEW:card: #txt
 Bk2 f3 targetDisplay TOP #txt
 Bk2 f3 richDialogId einbuergerung_Gruppe6.Login #txt
 Bk2 f3 startMethod start() #txt
-Bk2 f3 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+Bk2 f3 type einbuergerung_Gruppe6.Data #txt
 Bk2 f3 requestActionDecl '<> param;' #txt
-Bk2 f3 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+Bk2 f3 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f3 responseMappingAction 'out=in;
 ' #txt
@@ -732,9 +736,9 @@ Bk7 f1 targetWindow NEW:card: #txt
 Bk7 f1 targetDisplay TOP #txt
 Bk7 f1 richDialogId einbuergerung_Gruppe6.Login #txt
 Bk7 f1 startMethod start() #txt
-Bk7 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+Bk7 f1 type einbuergerung_Gruppe6.Data #txt
 Bk7 f1 requestActionDecl '<> param;' #txt
-Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk7 f1 responseMappingAction 'out=in;
 out.request.password=result.password;
@@ -770,7 +774,7 @@ Bk8 f1 targetWindow NEW:card: #txt
 Bk8 f1 targetDisplay TOP #txt
 Bk8 f1 richDialogId einbuergerung_Gruppe6.FormaleKorrektheitPruefen #txt
 Bk8 f1 startMethod start(String,String,List<einbuergerung_Gruppe6.Document>,String,String,String,String,String,String,List<einbuergerung_Gruppe6.Person>) #txt
-Bk8 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
+Bk8 f1 type einbuergerung_Gruppe6.Data #txt
 Bk8 f1 requestActionDecl '<String uniqueIdentifier, String status, List<einbuergerung_Gruppe6.Document> documents, String mobilePhone, String phone, String address, String postcode, String email, String city, List<einbuergerung_Gruppe6.Person> personList> param;' #txt
 Bk8 f1 requestMappingAction 'param.uniqueIdentifier=in.request.uniqueIdentifier;
 param.status=in.request.status;
@@ -783,10 +787,9 @@ param.email=in.request.email;
 param.city=in.request.city;
 param.personList=in.request.personList;
 ' #txt
-Bk8 f1 responseActionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
+Bk8 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk8 f1 responseMappingAction 'out=in;
-out.commentOnRequest=result.commentOnRequest;
 out.request.documents=result.documents;
 out.request.status=result.status;
 ' #txt

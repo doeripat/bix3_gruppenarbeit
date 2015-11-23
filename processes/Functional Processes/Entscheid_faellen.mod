@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 17 16:16:33 CET 2015]
+[>Created: Mon Nov 23 19:05:19 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -28,34 +28,36 @@ En0 @PushWFArc f10 '' #zField
 En0 @PushWFArc f3 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
-En0 f0 inParamTable 'out.data=param.data;
+En0 f0 inParamTable 'out=param.data;
 ' #txt
 En0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
 ' #txt
-En0 f0 outParamTable 'result.data=in.data;
+En0 f0 outParamTable 'result.data=in;
 ' #txt
-En0 f0 actionDecl 'einbuergerung_Gruppe6.Entscheid_faellenData out;
+En0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
-En0 f0 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f0 type einbuergerung_Gruppe6.Data #txt
 En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>call(Data)</name>
+        <nameStyle>10,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
 En0 f0 57 105 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
-En0 f1 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f1 type einbuergerung_Gruppe6.Data #txt
 En0 f1 913 105 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
 En0 f12 targetWindow NEW:card: #txt
 En0 f12 targetDisplay TOP #txt
 En0 f12 startMethod start() #txt
-En0 f12 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f12 type einbuergerung_Gruppe6.Data #txt
 En0 f12 requestActionDecl '<> param;' #txt
-En0 f12 responseActionDecl 'einbuergerung_Gruppe6.Entscheid_faellenData out;
+En0 f12 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f12 responseMappingAction 'out=in;
 ' #txt
@@ -75,11 +77,11 @@ Begründung erfassen</name>
 ' #txt
 En0 f12 192 98 144 44 -54 -16 #rect
 En0 f12 @|RichDialogIcon #fIcon
-En0 f13 actionDecl 'einbuergerung_Gruppe6.Entscheid_faellenData out;
+En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f13 actionTable 'out=in1;
 ' #txt
-En0 f13 outTypes "einbuergerung_Gruppe6.Entscheid_faellenData" #txt
+En0 f13 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f13 outLinks "TaskA.ivp" #txt
 En0 f13 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -94,7 +96,7 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 ' #txt
-En0 f13 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f13 type einbuergerung_Gruppe6.Data #txt
 En0 f13 template "" #txt
 En0 f13 144 104 32 32 0 16 #rect
 En0 f13 @|TaskSwitchIcon #fIcon
@@ -102,10 +104,10 @@ En0 f15 expr data #txt
 En0 f15 outCond ivp=="TaskA.ivp" #txt
 En0 f15 176 120 192 120 #arcP
 En0 f4 expr out #txt
-En0 f4 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
 En0 f4 87 120 144 120 #arcP
-En0 f5 actionDecl 'einbuergerung_Gruppe6.Entscheid_faellenData out;
+En0 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f5 actionTable 'out=in;
 ' #txt
@@ -113,7 +115,7 @@ En0 f5 dbUrl AmazonDB #txt
 En0 f5 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 En0 f5 lotSize 2147483647 #txt
 En0 f5 startIdx 0 #txt
-En0 f5 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f5 type einbuergerung_Gruppe6.Data #txt
 En0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -127,7 +129,7 @@ persistieren</name>
 En0 f5 584 98 112 44 -33 -16 #rect
 En0 f5 @|DBStepIcon #fIcon
 En0 f11 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-En0 f11 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f11 type einbuergerung_Gruppe6.Data #txt
 En0 f11 timeout 0 #txt
 En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -144,11 +146,11 @@ En0 f2 expr out #txt
 En0 f2 696 120 736 120 #arcP
 En0 f6 expr out #txt
 En0 f6 848 120 913 120 #arcP
-En0 f8 actionDecl 'einbuergerung_Gruppe6.Entscheid_faellenData out;
+En0 f8 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f8 actionTable 'out=in;
 ' #txt
-En0 f8 type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+En0 f8 type einbuergerung_Gruppe6.Data #txt
 En0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -165,12 +167,11 @@ En0 f10 expr out #txt
 En0 f10 336 120 384 120 #arcP
 En0 f3 expr out #txt
 En0 f3 528 120 584 120 #arcP
->Proto En0 .type einbuergerung_Gruppe6.Entscheid_faellenData #txt
+>Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <desc>Ja</desc>
         <swimlaneLabel>Migrationsamt</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
