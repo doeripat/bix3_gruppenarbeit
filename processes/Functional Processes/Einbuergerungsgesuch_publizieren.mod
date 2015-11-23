@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 17 18:36:19 CET 2015]
+[>Created: Mon Nov 23 16:00:52 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -34,10 +34,6 @@ En0 @DBStep f5 '' #zField
 En0 @PushWFArc f6 '' #zField
 En0 @PushWFArc f8 '' #zField
 En0 @PushWFArc f9 '' #zField
-En0 @TaskSwitch f17 '' #zField
-En0 @TkArc f22 '' #zField
-En0 @PushWFArc f14 '' #zField
-En0 @TkArc f10 '' #zField
 En0 @TaskSwitch f23 '' #zField
 En0 @RichDialog f25 '' #zField
 En0 @TaskSwitch f26 '' #zField
@@ -49,6 +45,9 @@ En0 @TkArc f33 '' #zField
 En0 @DBStep f34 '' #zField
 En0 @PushWFArc f35 '' #zField
 En0 @PushWFArc f3 '' #zField
+En0 @ProcessException f10 '' #zField
+En0 @PushWFArc f36 '' #zField
+En0 @PushWFArc f14 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out.data=param.data;
@@ -143,8 +142,48 @@ En0 f7 actionDecl 'einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData ou
 ' #txt
 En0 f7 actionTable 'out=in1;
 ' #txt
-En0 f7 outTypes "einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData","einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData" #txt
-En0 f7 outLinks "TaskA.ivp","TaskB.ivp" #txt
+En0 f7 outTypes "einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData" #txt
+En0 f7 outLinks "TaskA.ivp" #txt
+En0 f7 caseData '#
+#Mon Nov 23 15:59:48 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+En0 f7 taskData '#
+#Mon Nov 23 15:59:48 CET 2015
+TaskA.EXC=1506BC4D39F48130-f10-buffer
+TaskA.EXP=''1440h''
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.PRI=2
+TaskA.ROL=Everybody
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
 En0 f7 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
 TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
@@ -154,16 +193,10 @@ taskDef.setStartRequestPath("TaskA.ivp");
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Everybody");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryPeriod(1000 * (''1440h'').toNumber());
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDefinitions.add(taskDef);
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskB.ivp");
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryStartTaskElementPid("1506BC4D39F48130-f10-buffer");
 taskDefinitions.add(taskDef);
 ' #txt
 En0 f7 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
@@ -221,7 +254,7 @@ automatisch noch am gleichen Tag</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f19 472 138 208 60 -98 -24 #rect
+En0 f19 464 114 208 60 -98 -24 #rect
 En0 f19 @|IBIcon #fIcon
 En0 f19 -14336|-1|-16777216 #nodeStyle
 En0 f12 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
@@ -326,84 +359,6 @@ En0 f8 0 0.4032620619516948 0 0 #arcLabel
 En0 f9 expr data #txt
 En0 f9 outCond ivp=="TaskA.ivp" #txt
 En0 f9 1200 416 1264 416 #arcP
-En0 f17 actionDecl 'einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData out;
-' #txt
-En0 f17 actionTable 'out=in1;
-' #txt
-En0 f17 outTypes "einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData" #txt
-En0 f17 outLinks "TaskA.ivp" #txt
-En0 f17 caseData '#
-#Tue Nov 17 15:49:31 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-En0 f17 taskData '#
-#Tue Nov 17 15:49:31 CET 2015
-TaskA.EXP=''1440h''
-TaskA.EXPRI=2
-TaskA.EXROL=Everybody
-TaskA.EXTYPE=0
-TaskA.PRI=2
-TaskA.ROL=Everybody
-TaskA.SKIP_TASK_LIST=false
-TaskA.TYPE=0
-' #txt
-En0 f17 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''1440h'').toNumber());
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDefinitions.add(taskDef);
-' #txt
-En0 f17 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
-En0 f17 template "" #txt
-En0 f17 1416 400 32 32 0 16 #rect
-En0 f17 @|TaskSwitchIcon #fIcon
-En0 f22 expr out #txt
-En0 f22 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
-En0 f22 var in1 #txt
-En0 f22 1376 416 1416 416 #arcP
-En0 f14 expr data #txt
-En0 f14 outCond ivp=="TaskA.ivp" #txt
-En0 f14 1448 416 1488 416 #arcP
-En0 f10 expr data #txt
-En0 f10 outCond ivp=="TaskB.ivp" #txt
-En0 f10 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
-En0 f10 var in2 #txt
-En0 f10 1184 432 1432 432 #arcP
-En0 f10 1 1184 464 #addKink
-En0 f10 2 1432 464 #addKink
-En0 f10 1 0.5 0 0 #arcLabel
 En0 f23 actionDecl 'einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData out;
 ' #txt
 En0 f23 actionTable 'out=in1;
@@ -585,6 +540,27 @@ En0 f35 expr out #txt
 En0 f35 111 104 168 104 #arcP
 En0 f3 expr out #txt
 En0 f3 280 104 328 104 #arcP
+En0 f10 .resExport export #txt
+En0 f10 actionDecl 'einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData out;
+' #txt
+En0 f10 actionTable 'out=in;
+' #txt
+En0 f10 type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
+En0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ende</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f10 1425 89 30 30 -14 17 #rect
+En0 f10 @|ExceptionIcon #fIcon
+En0 f36 expr out #txt
+En0 f36 1455 104 1536 104 #arcP
+En0 f14 expr out #txt
+En0 f14 1376 416 1488 416 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Einbuergerungsgesuch_publizierenData #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -628,12 +604,6 @@ En0 f5 mainOut f8 tail #connect
 En0 f8 head f12 mainIn #connect
 En0 f7 out f9 tail #connect
 En0 f9 head f2 mainIn #connect
-En0 f2 mainOut f22 tail #connect
-En0 f22 head f17 in #connect
-En0 f17 out f14 tail #connect
-En0 f14 head f18 in #connect
-En0 f7 out f10 tail #connect
-En0 f10 head f17 in #connect
 En0 f26 out f27 tail #connect
 En0 f27 head f25 mainIn #connect
 En0 f26 out f28 tail #connect
@@ -648,3 +618,7 @@ En0 f0 mainOut f35 tail #connect
 En0 f35 head f34 mainIn #connect
 En0 f34 mainOut f3 tail #connect
 En0 f3 head f11 mainIn #connect
+En0 f10 mainOut f36 tail #connect
+En0 f36 head f20 mainIn #connect
+En0 f2 mainOut f14 tail #connect
+En0 f14 head f18 in #connect

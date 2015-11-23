@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 17 18:38:22 CET 2015]
+[>Created: Mon Nov 23 16:42:02 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -114,21 +114,23 @@ Bk8 @PushWFArc f2 '' #zField
 Bk8 @PushWFArc f0 '' #zField
 Bk8 @PushWFArc f3 '' #zField
 >Proto Bk8 Bk3 BpmnUserTask #zField
-dn0 f0 inParamDecl '<> param;' #txt
-dn0 f0 outParamDecl '<> result;
+dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+dn0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
 ' #txt
 dn0 f0 actionDecl 'einbuergerung_Gruppe6.dokumente_pruefenData out;
 ' #txt
-dn0 f0 callSignature call() #txt
+dn0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
 dn0 f0 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>call()</name>
+        <name>call(Data)</name>
+        <nameStyle>10,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-dn0 f0 65 361 30 30 -13 17 #rect
+dn0 f0 65 361 30 30 -26 17 #rect
 dn0 f0 @|StartSubIcon #fIcon
 dn0 f1 type einbuergerung_Gruppe6.dokumente_pruefenData #txt
 dn0 f1 1593 73 30 30 0 15 #rect

@@ -1,6 +1,0 @@
-dokumente_pruefenData #class
-einbuergerung_Gruppe6 #namespace
-request einbuergerung_Gruppe6.Request #field
-request PERSISTENT #fieldModifier
-commentOnRequest String #field
-commentOnRequest PERSISTENT #fieldModifier

@@ -4,6 +4,12 @@
     <startMethod>
         <name>start</name>
         <description>Default dialog start method.</description>
+        <outputParameter>
+            <name>email</name>
+            <description></description>
+            <parameterType>String</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </outputParameter>
     </startMethod>
     <property>
         <name>guid</name>

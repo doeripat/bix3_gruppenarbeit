@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Nov 15 13:26:58 CET 2015]
+[>Created: Mon Nov 23 16:42:29 CET 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -63,13 +63,15 @@ Eg0 f1 type einbuergerung_Gruppe6.Data #txt
 Eg0 f1 985 49 30 30 0 15 #rect
 Eg0 f1 @|EndIcon #fIcon
 Eg0 f2 type einbuergerung_Gruppe6.Data #txt
-Eg0 f2 processCall 'Functional Processes/Antragssteller_informieren:call()' #txt
+Eg0 f2 processCall 'Functional Processes/Antragssteller_informieren:call(einbuergerung_Gruppe6.Data)' #txt
 Eg0 f2 doCall true #txt
-Eg0 f2 requestActionDecl '<> param;
+Eg0 f2 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Eg0 f2 requestMappingAction 'param.data=in;
 ' #txt
 Eg0 f2 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Eg0 f2 responseMappingAction 'out=in;
+Eg0 f2 responseMappingAction 'out=result.data;
 ' #txt
 Eg0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -87,13 +89,15 @@ Eg0 f2 @|CallSubIcon #fIcon
 Eg0 f3 expr out #txt
 Eg0 f3 111 64 168 64 #arcP
 Eg0 f4 type einbuergerung_Gruppe6.Data #txt
-Eg0 f4 processCall 'Functional Processes/dokumente_pruefen:call()' #txt
+Eg0 f4 processCall 'Functional Processes/dokumente_pruefen:call(einbuergerung_Gruppe6.Data)' #txt
 Eg0 f4 doCall true #txt
-Eg0 f4 requestActionDecl '<> param;
+Eg0 f4 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Eg0 f4 requestMappingAction 'param.data=in;
 ' #txt
 Eg0 f4 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Eg0 f4 responseMappingAction 'out=in;
+Eg0 f4 responseMappingAction 'out=result.data;
 ' #txt
 Eg0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>

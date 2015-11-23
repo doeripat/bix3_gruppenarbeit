@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 18 16:58:24 CET 2015]
+[>Created: Mon Nov 23 16:37:48 CET 2015]
 1506BD6C657107E2 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen Big #zClass
@@ -57,6 +57,8 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>call(Data)</name>
+        <nameStyle>10,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt

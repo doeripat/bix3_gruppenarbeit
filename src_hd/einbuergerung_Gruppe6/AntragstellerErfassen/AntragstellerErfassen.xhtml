@@ -11,7 +11,7 @@
 		<ui:define name="title">AntragstellerErfassen</ui:define>
 		<ui:define name="content">
 			<h3>Antragsteller erfassen</h3>
-			<p>Bitte erfassen Sie hier einen neuen Antragsteller.</br>Passwort wird automatisch generiert und an die erfassten Email des Antragstellers gesendet.</p>
+			<p>Bitte erfassen Sie hier einen neuen Antragsteller. Passwort wird automatisch generiert und an die erfassten Email des Antragstellers gesendet.</p>
 			<h:form id="form">
 				<h:panelGrid columns="2">
 					<f:facet name="header">
@@ -19,7 +19,7 @@
 					</f:facet>
 					
 					<p:outputLabel for="requestEmail" value="Email"/>
-					<p:inputText id="requestEmail" value="#{}" required="true" />
+					<p:inputText id="requestEmail" value="#{data.email}" required="true" />
 					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Erfassen" update="form" icon="ui-icon-check" />
