@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 13:28:39 CET 2015]
+[>Created: Mon Nov 23 14:16:18 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -48,7 +48,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f0 113 305 30 30 -13 17 #rect
+An0 f0 105 305 30 30 -13 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 An0 f1 1177 505 30 30 0 15 #rect
@@ -88,6 +88,7 @@ An0 f2 @|RichDialogIcon #fIcon
 An0 f3 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
 ' #txt
 An0 f3 actionTable 'out=in;
+out.Password="egal1234";
 ' #txt
 An0 f3 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 An0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -105,6 +106,9 @@ An0 f4 actionDecl 'einbuergerung_Gruppe6.Antragssteller_informierenData out;
 ' #txt
 An0 f4 actionTable 'out=in;
 ' #txt
+An0 f4 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
+<INSERT><Table name=''Request''/><Value column=''password''><AnyExpression>in.Password</AnyExpression></Value><Value column=''email''><AnyExpression>in.Email</AnyExpression></Value></INSERT>' #txt
 An0 f4 dbUrl AmazonDB #txt
 An0 f4 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 An0 f4 lotSize 2147483647 #txt
@@ -121,7 +125,7 @@ An0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f4 464 138 128 44 -60 -8 #rect
 An0 f4 @|DBStepIcon #fIcon
-An0 f5 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
+An0 f5 beanConfig '"{/emailSubject ""Ihre Zugangsdaten für den Einbürgerungsprozess""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.Email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBei Ihrem Besuch bei der Kanzlei haben Sie sich für die  Einbürgerung informiert.\\nFalls Sie den Einbürgerungsprozess Starten möchten melden Sie sich bitte auf unserer Homepage mit folgenden Daten an:\\n\\nBenutzername: <%=in.Email%>\\nPasswort: <%=in.Password%>\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
 An0 f5 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 An0 f5 timeout 0 #txt
 An0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -281,14 +285,54 @@ An0 f17 actionTable 'out=in1;
 ' #txt
 An0 f17 outTypes "einbuergerung_Gruppe6.Antragssteller_informierenData" #txt
 An0 f17 outLinks "TaskA.ivp" #txt
+An0 f17 caseData '#
+#Mon Nov 23 13:36:37 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+An0 f17 taskData '#
+#Mon Nov 23 13:36:37 CET 2015
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Neuer Antragsteller erfassen
+TaskA.PRI=2
+TaskA.ROL=Kanzleimitarbeiter
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
 An0 f17 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
 TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Neuer Antragsteller erfassen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Kanzleimitarbeiter");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -301,7 +345,7 @@ An0 f17 @|TaskSwitchIcon #fIcon
 An0 f18 expr out #txt
 An0 f18 type einbuergerung_Gruppe6.Antragssteller_informierenData #txt
 An0 f18 var in1 #txt
-An0 f18 143 320 208 320 #arcP
+An0 f18 135 320 208 320 #arcP
 An0 f9 expr data #txt
 An0 f9 outCond ivp=="TaskA.ivp" #txt
 An0 f9 240 320 288 320 #arcP

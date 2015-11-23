@@ -1,2 +1,6 @@
 Antragssteller_informierenData #class
 einbuergerung_Gruppe6 #namespace
+Email String #field
+Email PERSISTENT #fieldModifier
+Password String #field
+Password PERSISTENT #fieldModifier

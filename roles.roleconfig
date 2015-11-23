@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <role>
     <identifier>Everybody</identifier>
+    <role>
+        <identifier>Kanzleimitarbeiter</identifier>
+    </role>
+    <role>
+        <identifier>Buerger</identifier>
+    </role>
+    <role>
+        <identifier>Antragsteller</identifier>
+    </role>
+    <role>
+        <identifier>Migrationsamt Pruefer</identifier>
+    </role>
+    <role>
+        <identifier>Migrationsamt Interviewer</identifier>
+    </role>
 </role>
