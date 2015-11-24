@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 19:04:25 CET 2015]
+[>Created: Tue Nov 24 20:58:39 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -160,13 +160,12 @@ vs0 f16 @|IBIcon #fIcon
 vs0 f17 952 118 1024 148 #arcP
 vs0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-vs0 f11 actionTable 'out=in1;
-out.documentTypeToTest="deutschkenntnisse";
+vs0 f11 actionTable 'out.request=in1.request;
 ' #txt
 vs0 f11 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f11 outLinks "TaskA.ivp" #txt
 vs0 f11 caseData '#
-#Tue Nov 17 18:08:53 CET 2015
+#Tue Nov 24 20:54:22 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -194,7 +193,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f11 taskData '#
-#Tue Nov 17 18:08:53 CET 2015
+#Tue Nov 24 20:54:22 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -228,13 +227,12 @@ vs0 f12 1 352 72 #addKink
 vs0 f12 1 0.2637719086116223 0 0 #arcLabel
 vs0 f18 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-vs0 f18 actionTable 'out=in1;
-out.documentTypeToTest="wohnsitz";
+vs0 f18 actionTable 'out.request=in1.request;
 ' #txt
 vs0 f18 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f18 outLinks "TaskA.ivp" #txt
 vs0 f18 caseData '#
-#Tue Nov 17 18:32:52 CET 2015
+#Tue Nov 24 20:56:58 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -262,7 +260,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f18 taskData '#
-#Tue Nov 17 18:32:52 CET 2015
+#Tue Nov 24 20:56:58 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -296,13 +294,12 @@ vs0 f20 1 416 136 #addKink
 vs0 f20 1 0.15868872895418298 0 0 #arcLabel
 vs0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-vs0 f22 actionTable 'out=in1;
-out.documentTypeToTest="finanzen";
+vs0 f22 actionTable 'out.request=in1.request;
 ' #txt
 vs0 f22 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f22 outLinks "TaskA.ivp" #txt
 vs0 f22 caseData '#
-#Tue Nov 17 18:33:20 CET 2015
+#Tue Nov 24 20:57:15 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -330,7 +327,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f22 taskData '#
-#Tue Nov 17 18:33:20 CET 2015
+#Tue Nov 24 20:57:15 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -439,13 +436,12 @@ vs0 f27 var in1 #txt
 vs0 f27 496 286 496 376 #arcP
 vs0 f30 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-vs0 f30 actionTable 'out=in1;
-out.documentTypeToTest="leumund";
+vs0 f30 actionTable 'out.request=in1.request;
 ' #txt
 vs0 f30 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f30 outLinks "TaskA.ivp" #txt
 vs0 f30 caseData '#
-#Tue Nov 17 18:34:24 CET 2015
+#Tue Nov 24 20:58:07 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -473,7 +469,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f30 taskData '#
-#Tue Nov 17 18:34:24 CET 2015
+#Tue Nov 24 20:58:07 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -500,12 +496,15 @@ vs0 f30 template "" #txt
 vs0 f30 680 248 32 32 0 16 #rect
 vs0 f30 @|TaskSwitchIcon #fIcon
 vs0 f33 type einbuergerung_Gruppe6.Data #txt
-vs0 f33 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
+vs0 f33 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
 vs0 f33 doCall true #txt
+vs0 f33 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+vs0 f33 requestMappingAction 'param.data.request=in.request;
+' #txt
 vs0 f33 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-vs0 f33 responseMappingAction 'out=in;
-out.request.documents=result.documents;
+vs0 f33 responseMappingAction 'out=result.data;
 ' #txt
 vs0 f33 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -527,11 +526,16 @@ vs0 f19 696 72 960 152 #arcP
 vs0 f19 1 960 72 #addKink
 vs0 f19 0 0.6783945034378248 0 0 #arcLabel
 vs0 f3 type einbuergerung_Gruppe6.Data #txt
-vs0 f3 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
+vs0 f3 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
 vs0 f3 doCall true #txt
+vs0 f3 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+vs0 f3 requestMappingAction 'param.data.request=in.request;
+' #txt
 vs0 f3 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f3 responseMappingAction 'out=in;
+out.request=in.request;
 ' #txt
 vs0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -550,11 +554,15 @@ vs0 f34 expr data #txt
 vs0 f34 outCond ivp=="TaskA.ivp" #txt
 vs0 f34 464 72 584 72 #arcP
 vs0 f7 type einbuergerung_Gruppe6.Data #txt
-vs0 f7 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
+vs0 f7 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
 vs0 f7 doCall true #txt
+vs0 f7 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+vs0 f7 requestMappingAction 'param.data.request=in.request;
+' #txt
 vs0 f7 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-vs0 f7 responseMappingAction 'out=in;
+vs0 f7 responseMappingAction 'out.request=in.request;
 ' #txt
 vs0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -570,11 +578,16 @@ prüfen</name>
 vs0 f7 584 114 112 44 -25 -20 #rect
 vs0 f7 @|CallSubIcon #fIcon
 vs0 f8 type einbuergerung_Gruppe6.Data #txt
-vs0 f8 processCall 'Functional Processes/DokumentPruefen:call(String,String)' #txt
+vs0 f8 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
 vs0 f8 doCall true #txt
+vs0 f8 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+vs0 f8 requestMappingAction 'param.data.request=in.request;
+' #txt
 vs0 f8 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f8 responseMappingAction 'out=in;
+out.request=in.request;
 ' #txt
 vs0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
