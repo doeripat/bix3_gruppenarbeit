@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 6449758590249984981L;
+  private static final long serialVersionUID = -43922622197790820L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -307,6 +307,46 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setPersonList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> _personList)
   {
     personList = _personList;
+  }
+
+  private java.sql.Date publicationDate;
+
+  /**
+   * Gets the field publicationDate.
+   * @return the value of the field publicationDate; may be null.
+   */
+  public java.sql.Date getPublicationDate()
+  {
+    return publicationDate;
+  }
+
+  /**
+   * Sets the field publicationDate.
+   * @param _publicationDate the new value of the field publicationDate.
+   */
+  public void setPublicationDate(java.sql.Date _publicationDate)
+  {
+    publicationDate = _publicationDate;
+  }
+
+  private java.util.Date endObjectionPeriod;
+
+  /**
+   * Gets the field endObjectionPeriod.
+   * @return the value of the field endObjectionPeriod; may be null.
+   */
+  public java.util.Date getEndObjectionPeriod()
+  {
+    return endObjectionPeriod;
+  }
+
+  /**
+   * Sets the field endObjectionPeriod.
+   * @param _endObjectionPeriod the new value of the field endObjectionPeriod.
+   */
+  public void setEndObjectionPeriod(java.util.Date _endObjectionPeriod)
+  {
+    endObjectionPeriod = _endObjectionPeriod;
   }
 
 }
