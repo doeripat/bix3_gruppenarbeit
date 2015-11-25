@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Nov 15 13:11:49 CET 2015]
+[>Created: Wed Nov 25 11:07:42 CET 2015]
 1510B0EFA90E246F 3.17 #module
 >Proto >Proto Collection #zClass
 Ls0 LoginProcess Big #zClass
@@ -29,15 +29,17 @@ Ls0 f0 disableUIEvents true #txt
 Ls0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
 <> param = methodEvent.getInputArguments();
 ' #txt
-Ls0 f0 outParameterDecl '<java.lang.String username,java.lang.String password> result;
+Ls0 f0 outParameterDecl '<java.lang.String email,java.lang.String password> result;
 ' #txt
-Ls0 f0 outParameterMapAction 'result.username=in.username;
+Ls0 f0 outParameterMapAction 'result.email=in.email;
 result.password=in.password;
 ' #txt
 Ls0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>start()</name>
+        <nameStyle>7,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt

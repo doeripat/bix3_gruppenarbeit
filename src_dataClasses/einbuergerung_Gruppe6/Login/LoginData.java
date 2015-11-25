@@ -7,26 +7,26 @@ package einbuergerung_Gruppe6.Login;
 public class LoginData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -2924147475403725049L;
+  private static final long serialVersionUID = 2924147475505701965L;
 
-  private transient java.lang.String username;
+  private transient java.lang.String email;
 
   /**
-   * Gets the field username.
-   * @return the value of the field username; may be null.
+   * Gets the field email.
+   * @return the value of the field email; may be null.
    */
-  public java.lang.String getUsername()
+  public java.lang.String getEmail()
   {
-    return username;
+    return email;
   }
 
   /**
-   * Sets the field username.
-   * @param _username the new value of the field username.
+   * Sets the field email.
+   * @param _email the new value of the field email.
    */
-  public void setUsername(java.lang.String _username)
+  public void setEmail(java.lang.String _email)
   {
-    username = _username;
+    email = _email;
   }
 
   private transient java.lang.String password;

@@ -19,37 +19,34 @@
 					</f:facet>
 
 			        <p:outputLabel for="personGenderCode" value="Geschlecht" />
-			        <p:selectOneRadio id="personGenderCode" value="#{}">
+			        <p:selectOneRadio id="personGenderCode" value="#{data.gendercode}" required="true">
 			            <f:selectItem itemLabel="Männlich" itemValue="1" />
 			            <f:selectItem itemLabel="Weiblich" itemValue="2" />
 			        </p:selectOneRadio>
 					
 					<p:outputLabel for="personFirstname" value="Vorname"/>
-					<p:inputText id="personFirstname" value="#{}" required="true" />
+					<p:inputText id="personFirstname" value="#{data.firstname}" required="true" />
 					
 					<p:outputLabel for="personLastname" value="Nachname"/>
-					<p:inputText id="personLastname" value="#{}" required="true" />
+					<p:inputText id="personLastname" value="#{data.lastname}" required="true" />
 					
 					<p:outputLabel for="personBirthday" value="Geburtstag" />
-        			<p:calendar id="german" value="#{}" locale="de" navigator="true" pattern="yyyy-MMM-dd" />
+        			<p:calendar id="personBirthday" value="#{data.birthday}" locale="de" navigator="true" pattern="yyyy-mm-dd" required="true"/>
 					
 					<p:outputLabel for="personNationality" value="Nationalität"/>
-					<p:inputText id="personNationality" value="#{}" required="true" />
+					<p:inputText id="personNationality" value="#{data.nationality}" required="true" />
 					
-					<p:outputLabel for="requestMobilePhone" value="Telefon (mobile)"/>
-					<p:inputText id="requestMobilePhone" value="#{}" required="true" />
-					
-					<p:outputLabel for="requestPhone" value="Telefon"/>
-					<p:inputText id="requestPhone" value="#{}" required="false" />
+					<p:outputLabel for="requestPhone" value="Telefonnummer"/>
+					<p:inputText id="requestPhone" value="#{data.phone}" required="true" />
 					
 					<p:outputLabel for="requestAddress" value="Adresse"/>
-					<p:inputText id="requestAddress" value="#{}" required="false" />
+					<p:inputText id="requestAddress" value="#{data.address}" required="true" />
 					
 					<p:outputLabel for="requestPostcode" value="Postleitzahl"/>
-					<p:inputText id="requestPostcode" value="#{}" required="false" />
+					<p:inputText id="requestPostcode" value="#{data.postcode}" required="true" />
 					
 					<p:outputLabel for="requestCity" value="Ort"/>
-					<p:inputText id="requestCity" value="#{}" required="false" />
+					<p:inputText id="requestCity" value="#{data.city}" required="true" />
 					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
