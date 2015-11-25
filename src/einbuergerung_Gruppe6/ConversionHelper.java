@@ -18,7 +18,7 @@ public class ConversionHelper {
 	/*
 	 * Converts the record set data type to list data type
 	 */
-	public static List<String> FromRecordSetToList(Recordset rs, List<String> destinationList, String field)
+	public static List<String> fromRecordSetToList(Recordset rs, List<String> destinationList, String field)
 	{
 		int recordsetSize = rs.size();
 		destinationList.clear();

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 18 17:05:19 CET 2015]
+[>Created: Wed Nov 25 17:07:07 CET 2015]
 1511B279E238973B 3.17 #module
 >Proto >Proto Collection #zClass
 Ps0 PersonalienVervollstaendigenProcess Big #zClass
@@ -23,6 +23,9 @@ Ps0 @RichDialogEnd f4 '' #zField
 Ps0 @DBStep f6 '' #zField
 Ps0 @PushWFArc f7 '' #zField
 Ps0 @PushWFArc f5 '' #zField
+Ps0 @RichDialogMethodStart f8 '' #zField
+Ps0 @RichDialogProcessEnd f9 '' #zField
+Ps0 @PushWFArc f10 '' #zField
 >Proto Ps0 Ps0 PersonalienVervollstaendigenProcess #zField
 Ps0 f0 guid 1511B279E3BD2F03 #txt
 Ps0 f0 type einbuergerung_Gruppe6.PersonalienVervollstaendigen.PersonalienVervollstaendigenData #txt
@@ -90,6 +93,31 @@ Ps0 f7 expr out #txt
 Ps0 f7 109 160 168 160 #arcP
 Ps0 f5 expr out #txt
 Ps0 f5 280 160 339 160 #arcP
+Ps0 f8 guid 1513F2EFDDD8F6A2 #txt
+Ps0 f8 type einbuergerung_Gruppe6.PersonalienVervollstaendigen.PersonalienVervollstaendigenData #txt
+Ps0 f8 method add() #txt
+Ps0 f8 disableUIEvents false #txt
+Ps0 f8 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
+<> param = methodEvent.getInputArguments();
+' #txt
+Ps0 f8 outParameterDecl '<> result;
+' #txt
+Ps0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>add()</name>
+        <nameStyle>5,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ps0 f8 83 243 26 26 -14 15 #rect
+Ps0 f8 @|RichDialogMethodStartIcon #fIcon
+Ps0 f9 type einbuergerung_Gruppe6.PersonalienVervollstaendigen.PersonalienVervollstaendigenData #txt
+Ps0 f9 339 243 26 26 0 12 #rect
+Ps0 f9 @|RichDialogProcessEndIcon #fIcon
+Ps0 f10 expr out #txt
+Ps0 f10 109 256 339 256 #arcP
 >Proto Ps0 .type einbuergerung_Gruppe6.PersonalienVervollstaendigen.PersonalienVervollstaendigenData #txt
 >Proto Ps0 .processKind HTML_DIALOG #txt
 >Proto Ps0 -8 -8 16 16 16 26 #rect
@@ -100,3 +128,5 @@ Ps0 f3 mainOut f7 tail #connect
 Ps0 f7 head f6 mainIn #connect
 Ps0 f6 mainOut f5 tail #connect
 Ps0 f5 head f4 mainIn #connect
+Ps0 f8 mainOut f10 tail #connect
+Ps0 f10 head f9 mainIn #connect

@@ -19,7 +19,7 @@
 					</f:facet>
 
 			        <p:outputLabel for="personGenderCode" value="Geschlecht" />
-			        <p:selectOneRadio id="personGenderCode" value="#{data.gendercode}" required="true">
+			        <p:selectOneRadio id="personGenderCode" value="#{data.gendercode}">
 			            <f:selectItem itemLabel="Männlich" itemValue="1" />
 			            <f:selectItem itemLabel="Weiblich" itemValue="2" />
 			        </p:selectOneRadio>
@@ -31,7 +31,7 @@
 					<p:inputText id="personLastname" value="#{data.lastname}" required="true" />
 					
 					<p:outputLabel for="personBirthday" value="Geburtstag" />
-        			<p:calendar id="personBirthday" value="#{data.birthday}" locale="de" navigator="true" pattern="yyyy-mm-dd" required="true"/>
+        			<p:calendar id="personBirthday" value="#{data.birthday}" locale="de" navigator="true" pattern="yyyy-mm-dd"/>
 					
 					<p:outputLabel for="personNationality" value="Nationalität"/>
 					<p:inputText id="personNationality" value="#{data.nationality}" required="true" />
@@ -49,6 +49,7 @@
 					<p:inputText id="requestCity" value="#{data.city}" required="true" />
 					
 					<br />
+					<p:commandButton actionListener="#{logic.add}" value="Person hinzufügen" update="form" icon="ui-icon-check" />
 					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 				</h:panelGrid>
 			</h:form>

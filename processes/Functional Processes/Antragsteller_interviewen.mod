@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 24 19:36:29 CET 2015]
+[>Created: Wed Nov 25 12:43:52 CET 2015]
 1506BD6C657107E2 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen Big #zClass
@@ -43,6 +43,8 @@ An0 @PushWFArc f11 '' #zField
 An0 @PushWFArc f12 '' #zField
 An0 @EndTask f13 '' #zField
 An0 @PushWFArc f14 '' #zField
+An0 @StartRequest f15 '' #zField
+An0 @PushWFArc f16 '' #zField
 >Proto An0 An0 Antragsteller_interviewen #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -67,7 +69,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f0 41 153 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 1385 153 30 30 0 15 #rect
+An0 f1 1489 153 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f5 type einbuergerung_Gruppe6.Data #txt
 An0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -80,7 +82,7 @@ vorhanden?</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f5 824 152 32 32 -32 18 #rect
+An0 f5 928 152 32 32 -32 18 #rect
 An0 f5 @|AlternativeIcon #fIcon
 An0 f10 expr in #txt
 An0 f10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -92,9 +94,9 @@ An0 f10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f10 840 152 1400 153 #arcP
-An0 f10 1 840 128 #addKink
-An0 f10 2 1400 128 #addKink
+An0 f10 944 152 1504 153 #arcP
+An0 f10 1 944 128 #addKink
+An0 f10 2 1504 128 #addKink
 An0 f10 0 0.5 -16 0 #arcLabel
 An0 f23 targetWindow NEW:card: #txt
 An0 f23 targetDisplay TOP #txt
@@ -116,11 +118,13 @@ An0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Termin wählen</name>
         <nameStyle>13,7
 </nameStyle>
-        <desc>Auswahl freier Termin über Kalender</desc>
+        <desc>Auswahl freier Termin über Kalender
+
+Termin direkt im Request speichern</desc>
     </language>
 </elementInfo>
 ' #txt
-An0 f23 264 346 112 44 -41 -8 #rect
+An0 f23 368 346 112 44 -41 -8 #rect
 An0 f23 @|RichDialogIcon #fIcon
 An0 f24 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 An0 f24 type einbuergerung_Gruppe6.Data #txt
@@ -134,7 +138,7 @@ An0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f24 424 346 112 44 -52 -8 #rect
+An0 f24 528 346 112 44 -52 -8 #rect
 An0 f24 @|EMailIcon #fIcon
 An0 f25 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -157,7 +161,7 @@ taskDefinitions.add(taskDef);
 ' #txt
 An0 f25 type einbuergerung_Gruppe6.Data #txt
 An0 f25 template "" #txt
-An0 f25 464 152 32 32 0 16 #rect
+An0 f25 568 152 32 32 0 16 #rect
 An0 f25 @|TaskSwitchIcon #fIcon
 An0 f26 targetWindow NEW:card: #txt
 An0 f26 targetDisplay TOP #txt
@@ -182,17 +186,17 @@ Notizen und Einwände festhalten</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f26 536 146 208 44 -85 -16 #rect
+An0 f26 640 146 208 44 -85 -16 #rect
 An0 f26 @|RichDialogIcon #fIcon
 An0 f6 expr out #txt
-An0 f6 376 368 424 368 #arcP
+An0 f6 480 368 528 368 #arcP
 An0 f20 expr out #txt
 An0 f20 type einbuergerung_Gruppe6.Data #txt
 An0 f20 var in1 #txt
-An0 f20 480 346 480 184 #arcP
+An0 f20 584 346 584 184 #arcP
 An0 f28 expr data #txt
 An0 f28 outCond ivp=="TaskA.ivp" #txt
-An0 f28 496 168 536 168 #arcP
+An0 f28 600 168 640 168 #arcP
 An0 f2 expr out #txt
 An0 f2 71 168 136 168 #arcP
 An0 f21 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
@@ -239,7 +243,7 @@ An0 f4 var in1 #txt
 An0 f4 200 190 200 352 #arcP
 An0 f22 expr data #txt
 An0 f22 outCond ivp=="TaskA.ivp" #txt
-An0 f22 216 368 264 368 #arcP
+An0 f22 216 368 368 368 #arcP
 An0 f29 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 An0 f29 type einbuergerung_Gruppe6.Data #txt
 An0 f29 timeout 0 #txt
@@ -253,7 +257,7 @@ An0 f29 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f29 928 146 144 44 -54 -16 #rect
+An0 f29 1032 146 144 44 -54 -16 #rect
 An0 f29 @|EMailIcon #fIcon
 An0 f30 targetWindow NEW:card: #txt
 An0 f30 targetDisplay TOP #txt
@@ -278,7 +282,7 @@ An0 f30 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f30 1064 346 128 44 -55 -8 #rect
+An0 f30 1168 346 128 44 -55 -8 #rect
 An0 f30 @|RichDialogIcon #fIcon
 An0 f7 expr in #txt
 An0 f7 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -290,7 +294,7 @@ An0 f7 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f7 856 168 928 168 #arcP
+An0 f7 960 168 1032 168 #arcP
 An0 f7 0 0.37272727272727274 1 -8 #arcLabel
 An0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -313,18 +317,18 @@ taskDefinitions.add(taskDef);
 ' #txt
 An0 f9 type einbuergerung_Gruppe6.Data #txt
 An0 f9 template "" #txt
-An0 f9 984 352 32 32 0 16 #rect
+An0 f9 1088 352 32 32 0 16 #rect
 An0 f9 @|TaskSwitchIcon #fIcon
 An0 f32 expr out #txt
 An0 f32 type einbuergerung_Gruppe6.Data #txt
 An0 f32 var in1 #txt
-An0 f32 1000 190 1000 352 #arcP
+An0 f32 1104 190 1104 352 #arcP
 An0 f32 0 0.5587894248608535 0 0 #arcLabel
 An0 f33 expr data #txt
 An0 f33 outCond ivp=="TaskA.ivp" #txt
-An0 f33 1016 368 1064 368 #arcP
+An0 f33 1120 368 1168 368 #arcP
 An0 f36 expr out #txt
-An0 f36 744 168 824 168 #arcP
+An0 f36 848 168 928 168 #arcP
 An0 f31 targetWindow NEW:card: #txt
 An0 f31 targetDisplay TOP #txt
 An0 f31 startMethod start() #txt
@@ -349,7 +353,7 @@ An0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f31 1320 346 160 44 -74 -8 #rect
+An0 f31 1424 346 160 44 -74 -8 #rect
 An0 f31 @|RichDialogIcon #fIcon
 An0 f34 type einbuergerung_Gruppe6.Data #txt
 An0 f34 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -363,21 +367,42 @@ erwünscht?</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f34 1240 352 32 32 -36 -49 #rect
+An0 f34 1344 352 32 32 -36 -49 #rect
 An0 f34 @|AlternativeIcon #fIcon
 An0 f8 expr out #txt
-An0 f8 1192 368 1240 368 #arcP
+An0 f8 1296 368 1344 368 #arcP
 An0 f11 expr in #txt
-An0 f11 1272 368 1320 368 #arcP
+An0 f11 1376 368 1424 368 #arcP
 An0 f12 expr out #txt
-An0 f12 1400 346 1400 183 #arcP
+An0 f12 1504 346 1504 183 #arcP
 An0 f13 type einbuergerung_Gruppe6.Data #txt
-An0 f13 1385 425 30 30 0 15 #rect
+An0 f13 1489 425 30 30 0 15 #rect
 An0 f13 @|EndIcon #fIcon
 An0 f14 expr in #txt
-An0 f14 1256 384 1385 440 #arcP
-An0 f14 1 1256 440 #addKink
+An0 f14 1360 384 1489 440 #arcP
+An0 f14 1 1360 440 #addKink
 An0 f14 1 0.19244880768791459 0 0 #arcLabel
+An0 f15 outLink start.ivp #txt
+An0 f15 type einbuergerung_Gruppe6.Data #txt
+An0 f15 inParamDecl '<> param;' #txt
+An0 f15 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f15 guid 1513E74EAFF8C22A #txt
+An0 f15 requestEnabled true #txt
+An0 f15 triggerEnabled false #txt
+An0 f15 callSignature start() #txt
+An0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+An0 f15 @C|.responsibility Everybody #txt
+An0 f15 281 353 30 30 -21 17 #rect
+An0 f15 @|StartRequestIcon #fIcon
+An0 f16 expr out #txt
+An0 f16 311 368 368 368 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -430,3 +455,5 @@ An0 f31 mainOut f12 tail #connect
 An0 f12 head f1 mainIn #connect
 An0 f34 out f14 tail #connect
 An0 f14 head f13 mainIn #connect
+An0 f15 mainOut f16 tail #connect
+An0 f16 head f23 mainIn #connect

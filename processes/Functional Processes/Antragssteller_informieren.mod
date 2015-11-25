@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 16:29:03 CET 2015]
+[>Created: Wed Nov 25 16:07:46 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -29,9 +29,9 @@ An0 @PushWFArc f9 '' #zField
 An0 @TkArc f11 '' #zField
 An0 @PushWFArc f6 '' #zField
 An0 @EMail f5 '' #zField
-An0 @PushWFArc f7 '' #zField
 An0 @GridStep f3 '' #zField
-An0 @DBStep f4 '' #zField
+An0 @PushWFArc f4 '' #zField
+An0 @StartRequest f7 '' #zField
 An0 @PushWFArc f8 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
@@ -294,7 +294,7 @@ An0 f11 var in1 #txt
 An0 f11 728 182 728 504 #arcP
 An0 f6 expr out #txt
 An0 f6 352 298 352 182 #arcP
-An0 f5 beanConfig '"{/emailSubject ""Ihre Zugangsdaten für den Einbürgerungsprozess""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBei Ihrem Besuch bei der Kanzlei haben Sie sich für die  Einbürgerung informiert.\\nFalls Sie den Einbürgerungsprozess Starten möchten melden Sie sich bitte auf unserer Homepage mit folgenden Daten an:\\n\\nBenutzername: <%=in.request.email%>\\nPasswort: <%=in.request.passwordl%>\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
+An0 f5 beanConfig '"{/emailSubject ""Ihre Zugangsdaten für den Einbürgerungsprozess""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBei Ihrem Besuch bei der Kanzlei haben Sie sich für die  Einbürgerung informiert.\\nFalls Sie den Einbürgerungsprozess Starten möchten melden Sie sich bitte auf unserer Homepage mit folgenden Daten an:\\n\\nBenutzername: <%=in.request.email%>\\nPasswort: <%=in.request.password%>\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
 An0 f5 type einbuergerung_Gruppe6.Data #txt
 An0 f5 timeout 0 #txt
 An0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -309,50 +309,47 @@ an Antragsteller senden</name>
 ' #txt
 An0 f5 640 138 176 44 -68 -16 #rect
 An0 f5 @|EMailIcon #fIcon
-An0 f7 expr out #txt
-An0 f7 416 160 464 160 #arcP
 An0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f3 actionTable 'out=in;
-out.request.password="1234egal";
+out.request.password=einbuergerung_Gruppe6.CodingHelper.generatePassword();
+out.request.uniqueIdentifier=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
 ' #txt
 An0 f3 type einbuergerung_Gruppe6.Data #txt
 An0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Passwort generieren</name>
-        <nameStyle>19,7
+        <name>UID &amp; Passwort generieren</name>
+        <nameStyle>25,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 f3 288 138 128 44 -57 -8 #rect
+An0 f3 272 138 160 44 -75 -8 #rect
 An0 f3 @|StepIcon #fIcon
-An0 f4 actionDecl 'einbuergerung_Gruppe6.Data out;
+An0 f4 expr out #txt
+An0 f4 432 160 640 160 #arcP
+An0 f7 outLink start.ivp #txt
+An0 f7 type einbuergerung_Gruppe6.Data #txt
+An0 f7 inParamDecl '<> param;' #txt
+An0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-An0 f4 actionTable 'out=in;
-' #txt
-An0 f4 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
-<UPDATE><Table name=''Request''/><Value column=''id''><AnyExpression>in.request.password</AnyExpression></Value><Value column=''uniqueIdentifier''><AnyExpression>in.request.email</AnyExpression></Value></UPDATE>' #txt
-An0 f4 dbUrl AmazonDB #txt
-An0 f4 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-An0 f4 lotSize 2147483647 #txt
-An0 f4 startIdx 0 #txt
-An0 f4 type einbuergerung_Gruppe6.Data #txt
-An0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+An0 f7 guid 1513F2F9986D2994 #txt
+An0 f7 requestEnabled true #txt
+An0 f7 triggerEnabled false #txt
+An0 f7 callSignature start() #txt
+An0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Passwort persistieren</name>
-        <nameStyle>21,7
-</nameStyle>
+        <name>start.ivp</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f4 464 138 128 44 -60 -8 #rect
-An0 f4 @|DBStepIcon #fIcon
+An0 f7 @C|.responsibility Everybody #txt
+An0 f7 929 561 30 30 -21 17 #rect
+An0 f7 @|StartRequestIcon #fIcon
 An0 f8 expr out #txt
-An0 f8 592 160 640 160 #arcP
+An0 f8 957 568 1048 542 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -386,10 +383,6 @@ An0 f8 592 160 640 160 #arcP
 >Proto An0 @|BIcon #fIcon
 An0 f2 mainOut f6 tail #connect
 An0 f6 head f3 mainIn #connect
-An0 f3 mainOut f7 tail #connect
-An0 f7 head f4 mainIn #connect
-An0 f4 mainOut f8 tail #connect
-An0 f8 head f5 mainIn #connect
 An0 f5 mainOut f11 tail #connect
 An0 f11 head f10 in #connect
 An0 f12 mainOut f14 tail #connect
@@ -402,3 +395,7 @@ An0 f0 mainOut f18 tail #connect
 An0 f18 head f17 in #connect
 An0 f17 out f9 tail #connect
 An0 f9 head f2 mainIn #connect
+An0 f3 mainOut f4 tail #connect
+An0 f4 head f5 mainIn #connect
+An0 f7 mainOut f8 tail #connect
+An0 f8 head f12 mainIn #connect
