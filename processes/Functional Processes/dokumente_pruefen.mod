@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 25 11:27:21 CET 2015]
+[>Created: Wed Nov 25 16:59:05 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -255,7 +255,7 @@ dn0 f11 actionTable 'out=in1;
 dn0 f11 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f11 outLinks "TaskA.ivp" #txt
 dn0 f11 caseData '#
-#Sun Nov 15 15:39:59 CET 2015
+#Wed Nov 25 15:14:59 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -283,12 +283,14 @@ type.code=
 type.name=
 ' #txt
 dn0 f11 taskData '#
-#Sun Nov 15 15:39:59 CET 2015
+#Wed Nov 25 15:14:59 CET 2015
+TaskA.DESC=Bitte f\u00FCllen Ihr Gesuchsformular aus.
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
+TaskA.NAM=Ges\u00FCchsformular ausf\u00FCllen
 TaskA.PRI=2
-TaskA.ROL=Everybody
+TaskA.ROL=Antragsteller
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -298,8 +300,10 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Gesüchsformular ausfüllen"));
+taskDef.setDescription(engine.expandMacros("Bitte füllen Ihr Gesuchsformular aus."));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Antragsteller");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -610,22 +614,15 @@ Bk1 g1 @|MOGIcon #fIcon
 Bk1 f1 targetWindow NEW:card: #txt
 Bk1 f1 targetDisplay TOP #txt
 Bk1 f1 richDialogId einbuergerung_Gruppe6.GesuchsformularAusfuellen #txt
-Bk1 f1 startMethod start(String,String) #txt
+Bk1 f1 startMethod start(einbuergerung_Gruppe6.Request) #txt
 Bk1 f1 type einbuergerung_Gruppe6.Data #txt
-Bk1 f1 requestActionDecl '<String uniqueIdentifier, String email> param;' #txt
-Bk1 f1 requestMappingAction 'param.uniqueIdentifier=in.request.uniqueIdentifier;
-param.email=in.request.email;
+Bk1 f1 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+Bk1 f1 requestMappingAction 'param.request=in.request;
 ' #txt
 Bk1 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk1 f1 responseMappingAction 'out=in;
-out.request.address=result.address;
-out.request.city=result.city;
-out.request.documents=result.documents;
-out.request.mobilePhone=result.mobilePhone;
-out.request.personList=result.personList;
-out.request.phone=result.phone;
-out.request.postcode=result.postcode;
+out.request=in.request;
 ' #txt
 Bk1 f1 windowConfiguration '* ' #txt
 Bk1 f1 isAsynch false #txt

@@ -7,186 +7,26 @@ package einbuergerung_Gruppe6.GesuchsformularAusfuellen;
 public class GesuchsformularAusfuellenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -3888877242535501283L;
+  private static final long serialVersionUID = 2376867754906940047L;
 
-  private transient java.lang.String uniqueIdentifier;
+  private einbuergerung_Gruppe6.Request request;
 
   /**
-   * Gets the field uniqueIdentifier.
-   * @return the value of the field uniqueIdentifier; may be null.
+   * Gets the field request.
+   * @return the value of the field request; may be null.
    */
-  public java.lang.String getUniqueIdentifier()
+  public einbuergerung_Gruppe6.Request getRequest()
   {
-    return uniqueIdentifier;
+    return request;
   }
 
   /**
-   * Sets the field uniqueIdentifier.
-   * @param _uniqueIdentifier the new value of the field uniqueIdentifier.
+   * Sets the field request.
+   * @param _request the new value of the field request.
    */
-  public void setUniqueIdentifier(java.lang.String _uniqueIdentifier)
+  public void setRequest(einbuergerung_Gruppe6.Request _request)
   {
-    uniqueIdentifier = _uniqueIdentifier;
-  }
-
-  private transient ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> documents;
-
-  /**
-   * Gets the field documents.
-   * @return the value of the field documents; may be null.
-   */
-  public ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> getDocuments()
-  {
-    return documents;
-  }
-
-  /**
-   * Sets the field documents.
-   * @param _documents the new value of the field documents.
-   */
-  public void setDocuments(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> _documents)
-  {
-    documents = _documents;
-  }
-
-  private transient java.lang.String mobilePhone;
-
-  /**
-   * Gets the field mobilePhone.
-   * @return the value of the field mobilePhone; may be null.
-   */
-  public java.lang.String getMobilePhone()
-  {
-    return mobilePhone;
-  }
-
-  /**
-   * Sets the field mobilePhone.
-   * @param _mobilePhone the new value of the field mobilePhone.
-   */
-  public void setMobilePhone(java.lang.String _mobilePhone)
-  {
-    mobilePhone = _mobilePhone;
-  }
-
-  private transient java.lang.String phone;
-
-  /**
-   * Gets the field phone.
-   * @return the value of the field phone; may be null.
-   */
-  public java.lang.String getPhone()
-  {
-    return phone;
-  }
-
-  /**
-   * Sets the field phone.
-   * @param _phone the new value of the field phone.
-   */
-  public void setPhone(java.lang.String _phone)
-  {
-    phone = _phone;
-  }
-
-  private transient java.lang.String address;
-
-  /**
-   * Gets the field address.
-   * @return the value of the field address; may be null.
-   */
-  public java.lang.String getAddress()
-  {
-    return address;
-  }
-
-  /**
-   * Sets the field address.
-   * @param _address the new value of the field address.
-   */
-  public void setAddress(java.lang.String _address)
-  {
-    address = _address;
-  }
-
-  private transient java.lang.String postcode;
-
-  /**
-   * Gets the field postcode.
-   * @return the value of the field postcode; may be null.
-   */
-  public java.lang.String getPostcode()
-  {
-    return postcode;
-  }
-
-  /**
-   * Sets the field postcode.
-   * @param _postcode the new value of the field postcode.
-   */
-  public void setPostcode(java.lang.String _postcode)
-  {
-    postcode = _postcode;
-  }
-
-  private transient java.lang.String email;
-
-  /**
-   * Gets the field email.
-   * @return the value of the field email; may be null.
-   */
-  public java.lang.String getEmail()
-  {
-    return email;
-  }
-
-  /**
-   * Sets the field email.
-   * @param _email the new value of the field email.
-   */
-  public void setEmail(java.lang.String _email)
-  {
-    email = _email;
-  }
-
-  private transient java.lang.String city;
-
-  /**
-   * Gets the field city.
-   * @return the value of the field city; may be null.
-   */
-  public java.lang.String getCity()
-  {
-    return city;
-  }
-
-  /**
-   * Sets the field city.
-   * @param _city the new value of the field city.
-   */
-  public void setCity(java.lang.String _city)
-  {
-    city = _city;
-  }
-
-  private transient ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> personList;
-
-  /**
-   * Gets the field personList.
-   * @return the value of the field personList; may be null.
-   */
-  public ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> getPersonList()
-  {
-    return personList;
-  }
-
-  /**
-   * Sets the field personList.
-   * @param _personList the new value of the field personList.
-   */
-  public void setPersonList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> _personList)
-  {
-    personList = _personList;
+    request = _request;
   }
 
 }
