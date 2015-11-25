@@ -2,3 +2,7 @@ GesuchsformularAusfuellenData #class
 einbuergerung_Gruppe6.GesuchsformularAusfuellen #namespace
 request einbuergerung_Gruppe6.Request #field
 request PERSISTENT #fieldModifier
+fileToUpload org.primefaces.event.FileUploadEvent #field
+fileToUpload PERSISTENT #fieldModifier
+document einbuergerung_Gruppe6.Document #field
+document PERSISTENT #fieldModifier

@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.GesuchsformularAusfuellen;
 public class GesuchsformularAusfuellenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 2376867754906940047L;
+  private static final long serialVersionUID = 4672087121296539360L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -27,6 +27,46 @@ public class GesuchsformularAusfuellenData extends ch.ivyteam.ivy.scripting.obje
   public void setRequest(einbuergerung_Gruppe6.Request _request)
   {
     request = _request;
+  }
+
+  private org.primefaces.event.FileUploadEvent fileToUpload;
+
+  /**
+   * Gets the field fileToUpload.
+   * @return the value of the field fileToUpload; may be null.
+   */
+  public org.primefaces.event.FileUploadEvent getFileToUpload()
+  {
+    return fileToUpload;
+  }
+
+  /**
+   * Sets the field fileToUpload.
+   * @param _fileToUpload the new value of the field fileToUpload.
+   */
+  public void setFileToUpload(org.primefaces.event.FileUploadEvent _fileToUpload)
+  {
+    fileToUpload = _fileToUpload;
+  }
+
+  private einbuergerung_Gruppe6.Document document;
+
+  /**
+   * Gets the field document.
+   * @return the value of the field document; may be null.
+   */
+  public einbuergerung_Gruppe6.Document getDocument()
+  {
+    return document;
+  }
+
+  /**
+   * Sets the field document.
+   * @param _document the new value of the field document.
+   */
+  public void setDocument(einbuergerung_Gruppe6.Document _document)
+  {
+    document = _document;
   }
 
 }
