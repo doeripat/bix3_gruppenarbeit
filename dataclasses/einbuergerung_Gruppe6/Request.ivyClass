@@ -30,7 +30,7 @@ city String #field
 city PERSISTENT #fieldModifier
 personList List<einbuergerung_Gruppe6.Person> #field
 personList PERSISTENT #fieldModifier
-publicationDate java.sql.Date #field
+publicationDate DateTime #field
 publicationDate PERSISTENT #fieldModifier
-endObjectionPeriod java.util.Date #field
+endObjectionPeriod DateTime #field
 endObjectionPeriod PERSISTENT #fieldModifier

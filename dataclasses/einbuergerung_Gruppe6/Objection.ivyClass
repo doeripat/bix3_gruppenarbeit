@@ -4,5 +4,5 @@ author String #field
 author PERSISTENT #fieldModifier
 text String #field
 text PERSISTENT #fieldModifier
-date String #field
+date DateTime #field
 date PERSISTENT #fieldModifier

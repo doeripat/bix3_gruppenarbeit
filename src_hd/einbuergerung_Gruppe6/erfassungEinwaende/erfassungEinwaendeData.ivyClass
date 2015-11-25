@@ -1,0 +1,10 @@
+erfassungEinwaendeData #class
+einbuergerung_Gruppe6.erfassungEinwaende #namespace
+autor String #field
+autor PERSISTENT #fieldModifier
+einwand String #field
+einwand PERSISTENT #fieldModifier
+requestID String #field
+requestID PERSISTENT #fieldModifier
+date DateTime #field
+date PERSISTENT #fieldModifier
