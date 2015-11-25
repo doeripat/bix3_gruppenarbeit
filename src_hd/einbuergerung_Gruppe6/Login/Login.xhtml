@@ -19,10 +19,10 @@
 					</f:facet>
 					
 					<p:outputLabel for="requestEmail" value="Email"/>
-					<p:inputText id="requestEmail" value="#{}"></p:inputText>
+					<p:inputText id="requestEmail" value="#{data.email}" required="true"></p:inputText>
 					
 					<p:outputLabel for="requestPasswort" value="Passwort"/>
-					<p:inputText id="requestPasswort" value="#{}"></p:inputText>
+					<p:inputText id="requestPasswort" value="#{data.password}" required="true"></p:inputText>
 					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Login" update="form" icon="ui-icon-check" />

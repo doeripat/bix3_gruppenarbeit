@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Nov 24 20:52:45 CET 2015]
+[>Created: Wed Nov 25 11:27:21 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -741,8 +741,8 @@ Bk7 f1 requestActionDecl '<> param;' #txt
 Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk7 f1 responseMappingAction 'out=in;
+out.request.email=result.email;
 out.request.password=result.password;
-out.request.username=result.username;
 ' #txt
 Bk7 f1 windowConfiguration '* ' #txt
 Bk7 f1 isAsynch false #txt

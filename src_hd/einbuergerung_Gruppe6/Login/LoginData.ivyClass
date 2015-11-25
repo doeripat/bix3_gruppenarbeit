@@ -1,4 +1,4 @@
 LoginData #class
 einbuergerung_Gruppe6.Login #namespace
-username String #field
+email String #field
 password String #field
