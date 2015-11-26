@@ -1,5 +1,5 @@
-personalienVervollstaendigenData #class
-einbuergerung_Gruppe6.personalienVervollstaendigen #namespace
+personalienVervollstaendigen2Data #class
+einbuergerung_Gruppe6.personalienVervollstaendigen2 #namespace
 request einbuergerung_Gruppe6.Request #field
 person einbuergerung_Gruppe6.Person #field
 addPerson Boolean #field

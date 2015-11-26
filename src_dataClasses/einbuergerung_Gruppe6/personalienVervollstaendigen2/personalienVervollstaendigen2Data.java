@@ -1,10 +1,10 @@
-package einbuergerung_Gruppe6.personalienVervollstaendigen;
+package einbuergerung_Gruppe6.personalienVervollstaendigen2;
 
 /**
  */
 @SuppressWarnings("all")
-@javax.annotation.Generated(comments="This is the java file of the ivy data class personalienVervollstaendigenData", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
-public class personalienVervollstaendigenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
+@javax.annotation.Generated(comments="This is the java file of the ivy data class personalienVervollstaendigen2Data", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
+public class personalienVervollstaendigen2Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
   private static final long serialVersionUID = 7499141545659757534L;
