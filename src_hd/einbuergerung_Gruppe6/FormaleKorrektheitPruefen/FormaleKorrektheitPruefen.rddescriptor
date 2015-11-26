@@ -23,45 +23,15 @@
             <nullPermitted>false</nullPermitted>
         </inputParameter>
         <inputParameter>
-            <name>mobilePhone</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>phone</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>address</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>postcode</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>email</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>city</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
             <name>personList</name>
             <description></description>
             <parameterType>List&lt;einbuergerung_Gruppe6.Person&gt;</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+        <inputParameter>
+            <name>comment</name>
+            <description></description>
+            <parameterType>String</parameterType>
             <nullPermitted>false</nullPermitted>
         </inputParameter>
         <outputParameter>
@@ -71,13 +41,7 @@
             <nullPermitted>false</nullPermitted>
         </outputParameter>
         <outputParameter>
-            <name>documents</name>
-            <description></description>
-            <parameterType>List&lt;einbuergerung_Gruppe6.Document&gt;</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </outputParameter>
-        <outputParameter>
-            <name>commentOnRequest</name>
+            <name>comment</name>
             <description></description>
             <parameterType>String</parameterType>
             <nullPermitted>false</nullPermitted>

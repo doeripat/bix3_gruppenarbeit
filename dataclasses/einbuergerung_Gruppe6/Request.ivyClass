@@ -36,3 +36,5 @@ endObjectionPeriod DateTime #field
 endObjectionPeriod PERSISTENT #fieldModifier
 document einbuergerung_Gruppe6.Document #field
 document PERSISTENT #fieldModifier
+commentOnRequest String #field
+commentOnRequest PERSISTENT #fieldModifier

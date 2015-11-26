@@ -6,8 +6,8 @@ lastname String #field
 lastname PERSISTENT #fieldModifier
 birthday java.util.Date #field
 birthday PERSISTENT #fieldModifier
-genderCode java.lang.Integer #field
-genderCode PERSISTENT #fieldModifier
+gender java.lang.Integer #field
+gender PERSISTENT #fieldModifier
 nationality String #field
 nationality PERSISTENT #fieldModifier
 role String #field

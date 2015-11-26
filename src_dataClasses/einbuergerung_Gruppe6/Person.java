@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -700439726992369787L;
+  private static final long serialVersionUID = -700439724823911712L;
 
   private java.lang.String firstname;
 
@@ -69,24 +69,24 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     birthday = _birthday;
   }
 
-  private java.lang.Integer genderCode;
+  private java.lang.Integer gender;
 
   /**
-   * Gets the field genderCode.
-   * @return the value of the field genderCode; may be null.
+   * Gets the field gender.
+   * @return the value of the field gender; may be null.
    */
-  public java.lang.Integer getGenderCode()
+  public java.lang.Integer getGender()
   {
-    return genderCode;
+    return gender;
   }
 
   /**
-   * Sets the field genderCode.
-   * @param _genderCode the new value of the field genderCode.
+   * Sets the field gender.
+   * @param _gender the new value of the field gender.
    */
-  public void setGenderCode(java.lang.Integer _genderCode)
+  public void setGender(java.lang.Integer _gender)
   {
-    genderCode = _genderCode;
+    gender = _gender;
   }
 
   private java.lang.String nationality;

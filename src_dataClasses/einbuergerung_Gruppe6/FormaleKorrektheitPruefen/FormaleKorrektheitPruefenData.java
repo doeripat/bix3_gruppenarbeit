@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.FormaleKorrektheitPruefen;
 public class FormaleKorrektheitPruefenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -19808716683465640L;
+  private static final long serialVersionUID = 5383635212985853333L;
 
   private transient java.lang.String uniqueIdentifier;
 
@@ -69,126 +69,6 @@ public class FormaleKorrektheitPruefenData extends ch.ivyteam.ivy.scripting.obje
     documents = _documents;
   }
 
-  private transient java.lang.String mobilePhone;
-
-  /**
-   * Gets the field mobilePhone.
-   * @return the value of the field mobilePhone; may be null.
-   */
-  public java.lang.String getMobilePhone()
-  {
-    return mobilePhone;
-  }
-
-  /**
-   * Sets the field mobilePhone.
-   * @param _mobilePhone the new value of the field mobilePhone.
-   */
-  public void setMobilePhone(java.lang.String _mobilePhone)
-  {
-    mobilePhone = _mobilePhone;
-  }
-
-  private transient java.lang.String phone;
-
-  /**
-   * Gets the field phone.
-   * @return the value of the field phone; may be null.
-   */
-  public java.lang.String getPhone()
-  {
-    return phone;
-  }
-
-  /**
-   * Sets the field phone.
-   * @param _phone the new value of the field phone.
-   */
-  public void setPhone(java.lang.String _phone)
-  {
-    phone = _phone;
-  }
-
-  private transient java.lang.String address;
-
-  /**
-   * Gets the field address.
-   * @return the value of the field address; may be null.
-   */
-  public java.lang.String getAddress()
-  {
-    return address;
-  }
-
-  /**
-   * Sets the field address.
-   * @param _address the new value of the field address.
-   */
-  public void setAddress(java.lang.String _address)
-  {
-    address = _address;
-  }
-
-  private transient java.lang.String postcode;
-
-  /**
-   * Gets the field postcode.
-   * @return the value of the field postcode; may be null.
-   */
-  public java.lang.String getPostcode()
-  {
-    return postcode;
-  }
-
-  /**
-   * Sets the field postcode.
-   * @param _postcode the new value of the field postcode.
-   */
-  public void setPostcode(java.lang.String _postcode)
-  {
-    postcode = _postcode;
-  }
-
-  private transient java.lang.String email;
-
-  /**
-   * Gets the field email.
-   * @return the value of the field email; may be null.
-   */
-  public java.lang.String getEmail()
-  {
-    return email;
-  }
-
-  /**
-   * Sets the field email.
-   * @param _email the new value of the field email.
-   */
-  public void setEmail(java.lang.String _email)
-  {
-    email = _email;
-  }
-
-  private transient java.lang.String city;
-
-  /**
-   * Gets the field city.
-   * @return the value of the field city; may be null.
-   */
-  public java.lang.String getCity()
-  {
-    return city;
-  }
-
-  /**
-   * Sets the field city.
-   * @param _city the new value of the field city.
-   */
-  public void setCity(java.lang.String _city)
-  {
-    city = _city;
-  }
-
   private transient ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> personList;
 
   /**
@@ -209,24 +89,64 @@ public class FormaleKorrektheitPruefenData extends ch.ivyteam.ivy.scripting.obje
     personList = _personList;
   }
 
-  private transient java.lang.String commentOnRequest;
+  private ch.ivyteam.ivy.scripting.objects.Recordset statiRS;
 
   /**
-   * Gets the field commentOnRequest.
-   * @return the value of the field commentOnRequest; may be null.
+   * Gets the field statiRS.
+   * @return the value of the field statiRS; may be null.
    */
-  public java.lang.String getCommentOnRequest()
+  public ch.ivyteam.ivy.scripting.objects.Recordset getStatiRS()
   {
-    return commentOnRequest;
+    return statiRS;
   }
 
   /**
-   * Sets the field commentOnRequest.
-   * @param _commentOnRequest the new value of the field commentOnRequest.
+   * Sets the field statiRS.
+   * @param _statiRS the new value of the field statiRS.
    */
-  public void setCommentOnRequest(java.lang.String _commentOnRequest)
+  public void setStatiRS(ch.ivyteam.ivy.scripting.objects.Recordset _statiRS)
   {
-    commentOnRequest = _commentOnRequest;
+    statiRS = _statiRS;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.List<java.lang.String> statiList;
+
+  /**
+   * Gets the field statiList.
+   * @return the value of the field statiList; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.List<java.lang.String> getStatiList()
+  {
+    return statiList;
+  }
+
+  /**
+   * Sets the field statiList.
+   * @param _statiList the new value of the field statiList.
+   */
+  public void setStatiList(ch.ivyteam.ivy.scripting.objects.List<java.lang.String> _statiList)
+  {
+    statiList = _statiList;
+  }
+
+  private java.lang.String comment;
+
+  /**
+   * Gets the field comment.
+   * @return the value of the field comment; may be null.
+   */
+  public java.lang.String getComment()
+  {
+    return comment;
+  }
+
+  /**
+   * Sets the field comment.
+   * @param _comment the new value of the field comment.
+   */
+  public void setComment(java.lang.String _comment)
+  {
+    comment = _comment;
   }
 
 }

@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -8980160933984956115L;
+  private static final long serialVersionUID = 1221306643359069016L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -367,6 +367,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setDocument(einbuergerung_Gruppe6.Document _document)
   {
     document = _document;
+  }
+
+  private java.lang.String commentOnRequest;
+
+  /**
+   * Gets the field commentOnRequest.
+   * @return the value of the field commentOnRequest; may be null.
+   */
+  public java.lang.String getCommentOnRequest()
+  {
+    return commentOnRequest;
+  }
+
+  /**
+   * Sets the field commentOnRequest.
+   * @param _commentOnRequest the new value of the field commentOnRequest.
+   */
+  public void setCommentOnRequest(java.lang.String _commentOnRequest)
+  {
+    commentOnRequest = _commentOnRequest;
   }
 
 }
