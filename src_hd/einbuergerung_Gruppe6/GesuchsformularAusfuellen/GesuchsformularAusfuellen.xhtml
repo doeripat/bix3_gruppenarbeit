@@ -15,37 +15,17 @@
 			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
 			</h3>
 			
-			<h:form id="form" enctype=“multipart/form-data“>
-				<h:panelGrid columns="2">
+			<h:form id="form" enctype="multipart/form-data">
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
 					
-					<p:dataTable var="dokument" value="#{request.documents}" editable="true" editMode="cell">
-						  <p:column headerText="Person">
-						    <p:cellEditor>
-						      <f:facet name="output"><h:outputText value="#{dokument.type}" /></f:facet>
-						      <f:facet name="input">
-						        <h:selectOneMenu value="#{person.anrede}" style="width:100%" required="true">
-						          <f:selectItem itemLabel="Deutschkenntnise" itemValue="Deutschkenntnise" />
-						          <f:selectItem itemLabel="Finanzen" itemValue="Finanzen" />
-						          <f:selectItem itemLabel="Wohnsitz" itemValue="Wohnsitz" />
-						        </h:selectOneMenu>
-						      </f:facet>
-						    </p:cellEditor>
-						  </p:column>
-						  <p:column headerText="Dokument">
-							<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUpload}"
-								allowTypes="/(.|/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
-						  </p:column>
-						</p:dataTable>
-						<br />
-						<p:commandButton actionListener="#{logic.addDokument}" value="Neues Dokumente" update=":form:addDemo" icon="ui-icon-plusthick" />
-					<br />
-					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
-				</h:panelGrid>
+					<p:outputLabel for="Migrations-Nr" value="Migrations-Nr"/>
+					<p:outputLabel id="Migrations-Nr" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
+					
+					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="false" fileUploadListener="#{logic.fileUpload}"
+								allowTypes="/(.|/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />					
 			</h:form>
-			
 		</ui:define>
 	</ui:composition>
 </h:body>

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 25 20:42:32 CET 2015]
+[>Created: Thu Nov 26 16:21:04 CET 2015]
 1510B16C5DBEAAD6 3.17 #module
 >Proto >Proto Collection #zClass
 Gs0 GesuchsformularAusfuellenProcess Big #zClass
@@ -26,6 +26,11 @@ Gs0 @RichDialogProcessEnd f7 '' #zField
 Gs0 @GridStep f9 '' #zField
 Gs0 @PushWFArc f10 '' #zField
 Gs0 @PushWFArc f8 '' #zField
+Gs0 @RichDialogMethodStart f11 '' #zField
+Gs0 @RichDialogProcessEnd f12 '' #zField
+Gs0 @GridStep f14 '' #zField
+Gs0 @PushWFArc f15 '' #zField
+Gs0 @PushWFArc f13 '' #zField
 >Proto Gs0 Gs0 GesuchsformularAusfuellenProcess #zField
 Gs0 f0 guid 1510B16C5FA8F6FD #txt
 Gs0 f0 type einbuergerung_Gruppe6.GesuchsformularAusfuellen.GesuchsformularAusfuellenData #txt
@@ -77,13 +82,12 @@ Gs0 f5 expr out #txt
 Gs0 f5 109 192 467 192 #arcP
 Gs0 f6 guid 1514014ACF4AD499 #txt
 Gs0 f6 type einbuergerung_Gruppe6.GesuchsformularAusfuellen.GesuchsformularAusfuellenData #txt
-Gs0 f6 method fileUpload(org.primefaces.event.FileUploadEvent,String) #txt
+Gs0 f6 method fileUpload(org.primefaces.event.FileUploadEvent) #txt
 Gs0 f6 disableUIEvents false #txt
 Gs0 f6 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
-<org.primefaces.event.FileUploadEvent file,java.lang.String type> param = methodEvent.getInputArguments();
+<org.primefaces.event.FileUploadEvent file> param = methodEvent.getInputArguments();
 ' #txt
-Gs0 f6 inParameterMapAction 'out.document.type=param.type;
-out.fileToUpload=param.file;
+Gs0 f6 inParameterMapAction 'out.fileToUpload=param.file;
 ' #txt
 Gs0 f6 outParameterDecl '<> result;
 ' #txt
@@ -198,6 +202,52 @@ Gs0 f10 expr out #txt
 Gs0 f10 109 288 256 288 #arcP
 Gs0 f8 expr out #txt
 Gs0 f8 368 288 555 288 #arcP
+Gs0 f11 guid 151404B7093F6678 #txt
+Gs0 f11 type einbuergerung_Gruppe6.GesuchsformularAusfuellen.GesuchsformularAusfuellenData #txt
+Gs0 f11 method addDokument() #txt
+Gs0 f11 disableUIEvents false #txt
+Gs0 f11 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
+<> param = methodEvent.getInputArguments();
+' #txt
+Gs0 f11 outParameterDecl '<> result;
+' #txt
+Gs0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>addDokument()</name>
+    </language>
+</elementInfo>
+' #txt
+Gs0 f11 83 371 26 26 -43 12 #rect
+Gs0 f11 @|RichDialogMethodStartIcon #fIcon
+Gs0 f12 type einbuergerung_Gruppe6.GesuchsformularAusfuellen.GesuchsformularAusfuellenData #txt
+Gs0 f12 563 371 26 26 0 12 #rect
+Gs0 f12 @|RichDialogProcessEndIcon #fIcon
+Gs0 f14 actionDecl 'einbuergerung_Gruppe6.GesuchsformularAusfuellen.GesuchsformularAusfuellenData out;
+' #txt
+Gs0 f14 actionTable 'out=in;
+' #txt
+Gs0 f14 actionCode 'import einbuergerung_Gruppe6.Document;
+
+Document emptyDocument;
+
+out.request.documents.add(emptyDocument);' #txt
+Gs0 f14 type einbuergerung_Gruppe6.GesuchsformularAusfuellen.GesuchsformularAusfuellenData #txt
+Gs0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Add Row</name>
+        <nameStyle>7,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Gs0 f14 232 362 112 44 -24 -8 #rect
+Gs0 f14 @|StepIcon #fIcon
+Gs0 f15 expr out #txt
+Gs0 f15 109 384 232 384 #arcP
+Gs0 f13 expr out #txt
+Gs0 f13 344 384 563 384 #arcP
 >Proto Gs0 .type einbuergerung_Gruppe6.GesuchsformularAusfuellen.GesuchsformularAusfuellenData #txt
 >Proto Gs0 .processKind HTML_DIALOG #txt
 >Proto Gs0 -8 -8 16 16 16 26 #rect
@@ -210,3 +260,7 @@ Gs0 f6 mainOut f10 tail #connect
 Gs0 f10 head f9 mainIn #connect
 Gs0 f9 mainOut f8 tail #connect
 Gs0 f8 head f7 mainIn #connect
+Gs0 f11 mainOut f15 tail #connect
+Gs0 f15 head f14 mainIn #connect
+Gs0 f14 mainOut f13 tail #connect
+Gs0 f13 head f12 mainIn #connect

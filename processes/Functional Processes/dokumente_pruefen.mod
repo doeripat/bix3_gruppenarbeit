@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 25 16:59:05 CET 2015]
+[>Created: Thu Nov 26 14:59:38 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -33,7 +33,6 @@ dn0 Bk2 U40 'User 4' #zField
 dn0 @InfoButton f17 '' #zField
 dn0 @AnnotationArc f18 '' #zField
 dn0 Bk7 U10 'User 1' #zField
-dn0 @PushWFArc f5 '' #zField
 dn0 @TaskSwitch f11 '' #zField
 dn0 @TkArc f19 '' #zField
 dn0 @PushWFArc f3 '' #zField
@@ -53,6 +52,7 @@ dn0 @TkArc f20 '' #zField
 dn0 @EMail f14 '' #zField
 dn0 @PushWFArc f16 '' #zField
 dn0 @PushWFArc f27 '' #zField
+dn0 @PushWFArc f5 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
@@ -67,6 +67,8 @@ Bk1 @PushTrueWFOutG-01 g1 '' #zField
 Bk1 @RichDialog f1 '' #zField
 Bk1 @PushWFArc f2 '' #zField
 Bk1 @PushWFArc f0 '' #zField
+Bk1 @StartRequest f3 '' #zField
+Bk1 @PushWFArc f4 '' #zField
 >Proto Bk1 Bk0 BpmnUserTask #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -97,6 +99,7 @@ Bk7 @PushTrueWFOutG-01 g1 '' #zField
 Bk7 @RichDialog f1 '' #zField
 Bk7 @PushWFArc f2 '' #zField
 Bk7 @PushWFArc f0 '' #zField
+Bk7 @PushTrueWFInG-01 g2 '' #zField
 >Proto Bk7 Bk6 BpmnUserTask #zField
 Bk8 @TextInP .resExport .resExport #zField
 Bk8 @TextInP .type .type #zField
@@ -247,7 +250,6 @@ dn0 U10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 dn0 U10 248 354 112 44 -30 -8 #rect
 dn0 U10 @|BpmnUserTaskIcon #fIcon
-dn0 f5 360 376 416 376 #arcP
 dn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f11 actionTable 'out=in1;
@@ -586,6 +588,7 @@ dn0 f16 expr out #txt
 dn0 f16 1232 144 1296 144 #arcP
 dn0 f27 expr out #txt
 dn0 f27 1424 144 1488 144 #arcP
+dn0 f5 360 376 416 376 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -642,6 +645,27 @@ Bk1 f1 @|RichDialogIcon #fIcon
 Bk1 f2 77 256 208 256 #arcP
 Bk1 f0 expr out #txt
 Bk1 f0 368 256 523 256 #arcP
+Bk1 f3 outLink start.ivp #txt
+Bk1 f3 type einbuergerung_Gruppe6.Data #txt
+Bk1 f3 inParamDecl '<> param;' #txt
+Bk1 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk1 f3 guid 15144179597A3465 #txt
+Bk1 f3 requestEnabled true #txt
+Bk1 f3 triggerEnabled false #txt
+Bk1 f3 callSignature start() #txt
+Bk1 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+Bk1 f3 @C|.responsibility Everybody #txt
+Bk1 f3 177 161 30 30 -21 17 #rect
+Bk1 f3 @|StartRequestIcon #fIcon
+Bk1 f4 expr out #txt
+Bk1 f4 203 185 288 234 #arcP
 >Proto Bk0 -8 -8 16 16 16 26 #rect
 >Proto Bk0 '' #fIcon
 Bk2 g0 35 299 26 26 0 5 #rect
@@ -725,9 +749,9 @@ Bk2 f2 expr out #txt
 Bk2 f2 232 312 360 312 #arcP
 >Proto Bk1 0 0 32 24 18 0 #rect
 >Proto Bk1 @|BpmnReceiveTaskIcon #fIcon
-Bk7 g0 51 243 26 26 0 5 #rect
+Bk7 g0 51 235 26 26 0 5 #rect
 Bk7 g0 @|MIGIcon #fIcon
-Bk7 g1 563 243 26 26 0 5 #rect
+Bk7 g1 563 251 26 26 0 5 #rect
 Bk7 g1 @|MOGIcon #fIcon
 Bk7 f1 targetWindow NEW:card: #txt
 Bk7 f1 targetDisplay TOP #txt
@@ -756,12 +780,14 @@ Bk7 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk7 f1 216 234 112 44 -15 -8 #rect
 Bk7 f1 @|RichDialogIcon #fIcon
-Bk7 f2 77 256 216 256 #arcP
+Bk7 f2 76 248 216 256 #arcP
 Bk7 f0 expr out #txt
-Bk7 f0 328 256 563 256 #arcP
+Bk7 f0 328 256 563 263 #arcP
+Bk7 g2 259 51 26 26 0 5 #rect
+Bk7 g2 @|MIGIcon #fIcon
 >Proto Bk6 0 0 32 24 18 0 #rect
 >Proto Bk6 @|BpmnServiceTaskIcon #fIcon
-Bk8 g0 83 243 26 26 0 5 #rect
+Bk8 g0 75 243 26 26 0 5 #rect
 Bk8 g0 @|MIGIcon #fIcon
 Bk8 g1 563 243 26 26 0 5 #rect
 Bk8 g1 @|MOGIcon #fIcon
@@ -805,7 +831,7 @@ Bk8 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk8 f1 280 234 160 44 -73 -8 #rect
 Bk8 f1 @|RichDialogIcon #fIcon
-Bk8 f2 109 256 280 256 #arcP
+Bk8 f2 101 256 280 256 #arcP
 Bk8 f0 expr out #txt
 Bk8 f0 440 256 563 256 #arcP
 Bk8 f3 360 435 360 278 #arcP
@@ -817,8 +843,6 @@ dn0 f23 out f26 tail #connect
 dn0 f26 head f25 mainIn #connect
 dn0 f17 ao f18 tail #connect
 dn0 f18 head U30 ai #connect
-dn0 U10 g1 f5 tail #connect
-dn0 f5 head U30 g0 #connect
 dn0 f0 mainOut f19 tail #connect
 dn0 f19 head f11 in #connect
 dn0 f11 out f3 tail #connect
@@ -843,10 +867,14 @@ dn0 f12 mainOut f16 tail #connect
 dn0 f16 head f14 mainIn #connect
 dn0 f14 mainOut f27 tail #connect
 dn0 f27 head f23 in #connect
+dn0 U10 g1 f5 tail #connect
+dn0 f5 head U30 g0 #connect
 Bk1 g0 m f2 tail #connect
 Bk1 f2 head f1 mainIn #connect
 Bk1 f1 mainOut f0 tail #connect
 Bk1 f0 head g1 m #connect
+Bk1 f3 mainOut f4 tail #connect
+Bk1 f4 head f1 mainIn #connect
 Bk1 0 0 840 616 0 #ivRect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect

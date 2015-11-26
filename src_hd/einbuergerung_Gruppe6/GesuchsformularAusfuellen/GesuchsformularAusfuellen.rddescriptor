@@ -10,12 +10,10 @@
             <parameterType>org.primefaces.event.FileUploadEvent</parameterType>
             <nullPermitted>false</nullPermitted>
         </inputParameter>
-        <inputParameter>
-            <name>type</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
+    </method>
+    <method>
+        <name>addDokument</name>
+        <description></description>
     </method>
     <startMethod>
         <name>start</name>
