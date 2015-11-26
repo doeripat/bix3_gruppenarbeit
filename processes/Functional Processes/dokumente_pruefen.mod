@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Nov 26 14:59:38 CET 2015]
+[>Created: Thu Nov 26 21:42:41 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -64,10 +64,10 @@ Bk1 @TextInP .xml .xml #zField
 Bk1 @TextInP .responsibility .responsibility #zField
 Bk1 @PushTrueWFInG-01 g0 '' #zField
 Bk1 @PushTrueWFOutG-01 g1 '' #zField
-Bk1 @RichDialog f1 '' #zField
-Bk1 @PushWFArc f2 '' #zField
-Bk1 @PushWFArc f0 '' #zField
 Bk1 @StartRequest f3 '' #zField
+Bk1 @RichDialog f0 '' #zField
+Bk1 @PushWFArc f1 '' #zField
+Bk1 @PushWFArc f2 '' #zField
 Bk1 @PushWFArc f4 '' #zField
 >Proto Bk1 Bk0 BpmnUserTask #zField
 Bk2 @TextInP .resExport .resExport #zField
@@ -614,37 +614,6 @@ Bk1 g0 51 243 26 26 0 5 #rect
 Bk1 g0 @|MIGIcon #fIcon
 Bk1 g1 523 243 26 26 0 5 #rect
 Bk1 g1 @|MOGIcon #fIcon
-Bk1 f1 targetWindow NEW:card: #txt
-Bk1 f1 targetDisplay TOP #txt
-Bk1 f1 richDialogId einbuergerung_Gruppe6.GesuchsformularAusfuellen #txt
-Bk1 f1 startMethod start(einbuergerung_Gruppe6.Request) #txt
-Bk1 f1 type einbuergerung_Gruppe6.Data #txt
-Bk1 f1 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
-Bk1 f1 requestMappingAction 'param.request=in.request;
-' #txt
-Bk1 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk1 f1 responseMappingAction 'out=in;
-out.request=in.request;
-' #txt
-Bk1 f1 windowConfiguration '* ' #txt
-Bk1 f1 isAsynch false #txt
-Bk1 f1 isInnerRd false #txt
-Bk1 f1 userContext '* ' #txt
-Bk1 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>GesuchsformularAusfüllen</name>
-        <nameStyle>24,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Bk1 f1 208 234 160 44 -73 -8 #rect
-Bk1 f1 @|RichDialogIcon #fIcon
-Bk1 f2 77 256 208 256 #arcP
-Bk1 f0 expr out #txt
-Bk1 f0 368 256 523 256 #arcP
 Bk1 f3 outLink start.ivp #txt
 Bk1 f3 type einbuergerung_Gruppe6.Data #txt
 Bk1 f3 inParamDecl '<> param;' #txt
@@ -664,8 +633,36 @@ Bk1 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Bk1 f3 @C|.responsibility Everybody #txt
 Bk1 f3 177 161 30 30 -21 17 #rect
 Bk1 f3 @|StartRequestIcon #fIcon
+Bk1 f0 targetWindow NEW:card: #txt
+Bk1 f0 targetDisplay TOP #txt
+Bk1 f0 type einbuergerung_Gruppe6.Data #txt
+Bk1 f0 requestActionDecl '<> param;' #txt
+Bk1 f0 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk1 f0 responseMappingAction 'out=in;
+' #txt
+Bk1 f0 windowConfiguration '* ' #txt
+Bk1 f0 isAsynch false #txt
+Bk1 f0 isInnerRd false #txt
+Bk1 f0 userContext '* ' #txt
+Bk1 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Dokumente in CMS 
+laden</name>
+        <nameStyle>18,7
+5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk1 f0 216 234 144 44 -51 -16 #rect
+Bk1 f0 @|RichDialogIcon #fIcon
+Bk1 f1 77 256 216 256 #arcP
+Bk1 f2 expr out #txt
+Bk1 f2 203 185 288 234 #arcP
 Bk1 f4 expr out #txt
-Bk1 f4 203 185 288 234 #arcP
+Bk1 f4 360 256 523 256 #arcP
 >Proto Bk0 -8 -8 16 16 16 26 #rect
 >Proto Bk0 '' #fIcon
 Bk2 g0 35 299 26 26 0 5 #rect
@@ -869,12 +866,12 @@ dn0 f14 mainOut f27 tail #connect
 dn0 f27 head f23 in #connect
 dn0 U10 g1 f5 tail #connect
 dn0 f5 head U30 g0 #connect
-Bk1 g0 m f2 tail #connect
-Bk1 f2 head f1 mainIn #connect
-Bk1 f1 mainOut f0 tail #connect
-Bk1 f0 head g1 m #connect
-Bk1 f3 mainOut f4 tail #connect
-Bk1 f4 head f1 mainIn #connect
+Bk1 g0 m f1 tail #connect
+Bk1 f1 head f0 mainIn #connect
+Bk1 f3 mainOut f2 tail #connect
+Bk1 f2 head f0 mainIn #connect
+Bk1 f0 mainOut f4 tail #connect
+Bk1 f4 head g1 m #connect
 Bk1 0 0 840 616 0 #ivRect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect

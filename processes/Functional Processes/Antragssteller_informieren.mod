@@ -310,7 +310,7 @@ An0 f4 expr out #txt
 An0 f4 432 160 640 160 #arcP
 An0 f12 targetWindow NEW:card: #txt
 An0 f12 targetDisplay TOP #txt
-An0 f12 richDialogId einbuergerung_Gruppe6.personalienVervollstaendigen2 #txt
+An0 f12 richDialogId einbuergerung_Gruppe6.personalienVervollstaendigen_v2 #txt
 An0 f12 startMethod start(einbuergerung_Gruppe6.Request,einbuergerung_Gruppe6.Person) #txt
 An0 f12 type einbuergerung_Gruppe6.Data #txt
 An0 f12 requestActionDecl '<einbuergerung_Gruppe6.Request request, einbuergerung_Gruppe6.Person person> param;' #txt
