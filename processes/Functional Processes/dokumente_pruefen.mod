@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 00:36:23 CET 2015]
+[>Created: Fri Nov 27 00:50:11 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -223,7 +223,7 @@ auf required gesetzt)</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f17 696 794 288 76 -141 -32 #rect
+dn0 f17 344 466 288 76 -141 -32 #rect
 dn0 f17 @|IBIcon #fIcon
 dn0 U10 .resExport export #txt
 dn0 U10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -465,7 +465,7 @@ dn0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f21 584 128 32 32 -73 18 #rect
+dn0 f21 584 128 32 32 -102 18 #rect
 dn0 f21 @|TaskSwitchIcon #fIcon
 dn0 f7 expr data #txt
 dn0 f7 outCond ivp=="TaskA.ivp" #txt
@@ -571,7 +571,7 @@ dn0 f16 1232 144 1296 144 #arcP
 dn0 f27 expr out #txt
 dn0 f27 1424 144 1488 144 #arcP
 dn0 f5 368 376 424 376 #arcP
-dn0 f18 696 832 488 398 #arcP
+dn0 f18 488 466 488 398 #arcP
 dn0 U30 .resExport export #txt
 dn0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -746,7 +746,7 @@ Bk7 f0 328 256 563 263 #arcP
 >Proto Bk6 @|BpmnServiceTaskIcon #fIcon
 Bk8 g0 75 243 26 26 0 5 #rect
 Bk8 g0 @|MIGIcon #fIcon
-Bk8 g1 899 243 26 26 0 5 #rect
+Bk8 g1 563 243 26 26 0 5 #rect
 Bk8 g1 @|MOGIcon #fIcon
 Bk8 f1 targetWindow NEW:card: #txt
 Bk8 f1 targetDisplay TOP #txt
@@ -839,7 +839,7 @@ Bk8 f5 244 63 352 106 #arcP
 Bk8 f6 expr out #txt
 Bk8 f6 352 150 360 234 #arcP
 Bk8 f0 expr out #txt
-Bk8 f0 440 256 899 256 #arcP
+Bk8 f0 440 256 563 256 #arcP
 >Proto Bk3 0 0 32 24 18 0 #rect
 >Proto Bk3 @|BpmnUserTaskIcon #fIcon
 Bk1 g0 51 243 26 26 0 5 #rect
