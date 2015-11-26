@@ -21,15 +21,32 @@
 						<p:messages></p:messages>
 					</f:facet>
 					
-					<p:outputLabel for="personFirstname" value="Firstname"/>
+					<p:outputLabel for="personRole" value="Rolle" />
+					<p:selectOneMenu id="personRole" value="#{data.person.role}" required="true">
+						<f:selectItem itemLabel="Rolle auswählen" />
+						<f:selectItem itemLabel="Erwachener" itemValue="adult" />
+						<f:selectItem itemLabel="Kind" itemValue="child" />
+					</p:selectOneMenu>
+					
+					<p:outputLabel for="personGenderCode" value="Geschlecht" />
+			        <p:selectOneRadio id="personGenderCode" value="#{data.person.genderCode}">
+			            <f:selectItem itemLabel="Männlich" itemValue="1" />
+			            <f:selectItem itemLabel="Weiblich" itemValue="2" />
+			        </p:selectOneRadio>
+					
+					<p:outputLabel for="personFirstname" value="Vorname"/>
 					<p:inputText id="personFirstname" value="#{data.person.firstname}"></p:inputText>
 					
-					<p:outputLabel for="personLastname" value="Lastname"/>
+					<p:outputLabel for="personLastname" value="Nachname"/>
 					<p:inputText id="personLastname" value="#{data.person.lastname}"></p:inputText>
 					
-					<!-- No 'form field [java.util.Date]' template found for field 'person.birthday'. -->
+					<p:outputLabel for="personBirthday" value="Geburtsdatum"/>
+					<p:calendar id="personBirthday" value="#{data.person.birthday}" pattern="dd.MM.yyyy" size="16" required="true">
+					<f:convertDateTime pattern="dd.MM.yyyy" />
+					</p:calendar>
 					
-					<!-- No 'form field [Integer]' template found for field 'person.genderCode'. -->
+					<p:outputLabel for="personNationality" value="Nationalität"/>
+					<p:inputText id="personNationality" value="#{data.person.nationality}"></p:inputText>
 					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />

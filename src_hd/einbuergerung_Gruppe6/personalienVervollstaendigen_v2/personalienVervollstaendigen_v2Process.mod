@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Nov 26 20:49:12 CET 2015]
+[>Created: Thu Nov 26 22:21:05 CET 2015]
 1514536D2505B710 3.17 #module
 >Proto >Proto Collection #zClass
 ps0 personalienVervollstaendigen_v2Process Big #zClass
@@ -39,6 +39,7 @@ ps0 f0 outParameterDecl '<einbuergerung_Gruppe6.Request request,einbuergerung_Gr
 ' #txt
 ps0 f0 outParameterMapAction 'result.request=in.request;
 result.person=in.person;
+result.person.role="applicant";
 result.addPerson=in.addPerson;
 ' #txt
 ps0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

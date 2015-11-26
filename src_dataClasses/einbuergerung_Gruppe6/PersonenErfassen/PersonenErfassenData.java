@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.PersonenErfassen;
 public class PersonenErfassenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -9005830385210112111L;
+  private static final long serialVersionUID = 5782542669917161089L;
 
   private transient ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> personList;
 
@@ -47,6 +47,26 @@ public class PersonenErfassenData extends ch.ivyteam.ivy.scripting.objects.Compo
   public void setAddPerson(java.lang.Boolean _addPerson)
   {
     addPerson = _addPerson;
+  }
+
+  private einbuergerung_Gruppe6.Person selectedPerson;
+
+  /**
+   * Gets the field selectedPerson.
+   * @return the value of the field selectedPerson; may be null.
+   */
+  public einbuergerung_Gruppe6.Person getSelectedPerson()
+  {
+    return selectedPerson;
+  }
+
+  /**
+   * Sets the field selectedPerson.
+   * @param _selectedPerson the new value of the field selectedPerson.
+   */
+  public void setSelectedPerson(einbuergerung_Gruppe6.Person _selectedPerson)
+  {
+    selectedPerson = _selectedPerson;
   }
 
 }

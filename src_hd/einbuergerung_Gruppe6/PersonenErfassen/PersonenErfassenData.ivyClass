@@ -2,3 +2,5 @@ PersonenErfassenData #class
 einbuergerung_Gruppe6.PersonenErfassen #namespace
 personList List<einbuergerung_Gruppe6.Person> #field
 addPerson Boolean #field
+selectedPerson einbuergerung_Gruppe6.Person #field
+selectedPerson PERSISTENT #fieldModifier

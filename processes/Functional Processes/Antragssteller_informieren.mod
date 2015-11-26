@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Nov 26 20:48:09 CET 2015]
+[>Created: Thu Nov 26 23:12:35 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -36,13 +36,13 @@ An0 @RichDialog f20 '' #zField
 An0 @PushWFArc f21 '' #zField
 An0 @PushWFArc f23 '' #zField
 An0 @PushWFArc f14 '' #zField
-An0 @PushWFArc f25 '' #zField
-An0 @StartRequest f19 '' #zField
-An0 @PushWFArc f22 '' #zField
 An0 @Alternative f26 '' #zField
 An0 @PushWFArc f27 '' #zField
 An0 @PushWFArc f24 '' #zField
 An0 @PushWFArc f28 '' #zField
+An0 @PushWFArc f25 '' #zField
+An0 @StartRequest f19 '' #zField
+An0 @PushWFArc f22 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -65,7 +65,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f0 105 305 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 1305 505 30 30 0 15 #rect
+An0 f1 1521 505 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f2 targetWindow NEW:card: #txt
 An0 f2 targetDisplay TOP #txt
@@ -339,7 +339,7 @@ vervollständigen</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f12 864 402 128 44 -42 -16 #rect
+An0 f12 992 498 128 44 -42 -16 #rect
 An0 f12 @|RichDialogIcon #fIcon
 An0 f7 targetWindow NEW:card: #txt
 An0 f7 targetDisplay TOP #txt
@@ -368,13 +368,13 @@ An0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f7 968 490 112 44 -53 -8 #rect
+An0 f7 1248 498 112 44 -53 -8 #rect
 An0 f7 @|RichDialogIcon #fIcon
 An0 f8 type einbuergerung_Gruppe6.Data #txt
-An0 f8 1152 496 32 32 0 16 #rect
+An0 f8 1416 504 32 32 0 16 #rect
 An0 f8 @|AlternativeIcon #fIcon
 An0 f16 expr out #txt
-An0 f16 1080 512 1152 512 #arcP
+An0 f16 1360 520 1416 520 #arcP
 An0 f20 targetWindow NEW:card: #txt
 An0 f20 targetDisplay TOP #txt
 An0 f20 richDialogId einbuergerung_Gruppe6.PersonHinzufuegen #txt
@@ -399,23 +399,39 @@ An0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f20 1016 570 112 44 -51 -8 #rect
+An0 f20 1248 562 112 44 -51 -8 #rect
 An0 f20 @|RichDialogIcon #fIcon
 An0 f21 expr in #txt
 An0 f21 outCond in.addPerson==true #txt
-An0 f21 1159 519 1072 570 #arcP
+An0 f21 1432 536 1360 584 #arcP
+An0 f21 1 1432 584 #addKink
+An0 f21 1 0.16111158056855635 0 0 #arcLabel
 An0 f23 expr out #txt
-An0 f23 1072 570 1024 534 #arcP
+An0 f23 1304 562 1304 542 #arcP
 An0 f14 expr out #txt
-An0 f14 856 498 928 446 #arcP
+An0 f14 912 520 992 520 #arcP
+An0 f26 type einbuergerung_Gruppe6.Data #txt
+An0 f26 1168 504 32 32 0 16 #rect
+An0 f26 @|AlternativeIcon #fIcon
+An0 f27 expr out #txt
+An0 f27 1120 520 1168 520 #arcP
+An0 f27 0 0.4999999999999999 0 0 #arcLabel
+An0 f24 expr in #txt
+An0 f24 outCond in.addPerson==true #txt
+An0 f24 1200 520 1248 520 #arcP
+An0 f28 expr in #txt
+An0 f28 1184 504 1536 505 #arcP
+An0 f28 1 1184 472 #addKink
+An0 f28 2 1536 472 #addKink
+An0 f28 1 0.485394020881295 0 0 #arcLabel
 An0 f25 expr in #txt
-An0 f25 1183 513 1305 519 #arcP
+An0 f25 1448 520 1521 520 #arcP
 An0 f19 outLink start.ivp #txt
 An0 f19 type einbuergerung_Gruppe6.Data #txt
 An0 f19 inParamDecl '<> param;' #txt
 An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-An0 f19 guid 151453FDC1EC9CFD #txt
+An0 f19 guid 15145DAE37F4801E #txt
 An0 f19 requestEnabled true #txt
 An0 f19 triggerEnabled false #txt
 An0 f19 callSignature start() #txt
@@ -427,21 +443,10 @@ An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 An0 f19 @C|.responsibility Everybody #txt
-An0 f19 721 561 30 30 -21 17 #rect
+An0 f19 777 577 30 30 -21 17 #rect
 An0 f19 @|StartRequestIcon #fIcon
 An0 f22 expr out #txt
-An0 f22 749 569 809 542 #arcP
-An0 f26 type einbuergerung_Gruppe6.Data #txt
-An0 f26 1088 400 32 32 0 16 #rect
-An0 f26 @|AlternativeIcon #fIcon
-An0 f27 expr out #txt
-An0 f27 992 424 1089 417 #arcP
-An0 f27 0 0.4999999999999999 0 0 #arcLabel
-An0 f24 expr in #txt
-An0 f24 outCond in.addPerson==true #txt
-An0 f24 1097 425 1024 490 #arcP
-An0 f28 expr in #txt
-An0 f28 1115 421 1306 513 #arcP
+An0 f22 801 580 856 542 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -456,7 +461,7 @@ An0 f28 1115 421 1306 513 #arcP
     <swimlaneSize>384</swimlaneSize>
     <swimlaneSize>192</swimlaneSize>
     <swimlaneSize>192</swimlaneSize>
-    <swimlaneSize>144</swimlaneSize>
+    <swimlaneSize>184</swimlaneSize>
     <swimlaneColor gradient="false">-3355393</swimlaneColor>
     <swimlaneColor gradient="false">-3355393</swimlaneColor>
     <swimlaneColor gradient="false">-52</swimlaneColor>
@@ -493,13 +498,13 @@ An0 f20 mainOut f23 tail #connect
 An0 f23 head f7 mainIn #connect
 An0 f13 mainOut f14 tail #connect
 An0 f14 head f12 mainIn #connect
-An0 f8 out f25 tail #connect
-An0 f25 head f1 mainIn #connect
-An0 f19 mainOut f22 tail #connect
-An0 f22 head f13 mainIn #connect
 An0 f12 mainOut f27 tail #connect
 An0 f27 head f26 in #connect
 An0 f26 out f24 tail #connect
 An0 f24 head f7 mainIn #connect
 An0 f26 out f28 tail #connect
 An0 f28 head f1 mainIn #connect
+An0 f8 out f25 tail #connect
+An0 f25 head f1 mainIn #connect
+An0 f19 mainOut f22 tail #connect
+An0 f22 head f13 mainIn #connect

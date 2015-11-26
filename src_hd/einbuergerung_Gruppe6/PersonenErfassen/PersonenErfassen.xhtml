@@ -21,13 +21,34 @@
 						<p:messages></p:messages>
 					</f:facet>
 					
-					<p:dataTable var="person" value="#{data.personList}">
+					<p:dataTable id="personTable" var="person" value="#{data.personList}">
 						<p:column headerText="Anrede">
+							<h:outputText value="Antragsteller" rendered="#{person.role == 'applicant'}"/>
+					    	<h:outputText value="Erwachsener" rendered="#{person.role == 'adult'}"/>
+					    	<h:outputText value="Kind" rendered="#{person.role == 'child'}"/>
+					  	</p:column> 
+					  	
+						<p:column headerText="Anrede">
+					    	<h:outputText value="Herr" rendered="#{person.genderCode == 1}"/>
+					    	<h:outputText value="Frau" rendered="#{person.genderCode == 2}"/>
+					  	</p:column> 
+					  	
+						<p:column headerText="Vorname">
 					    	<h:outputText value="#{person.firstname}" />
 					  	</p:column>
-					  	<p:column headerText="eMail">
+					  	
+					  	<p:column headerText="Nachname">
 					    	<h:outputText value="#{person.lastname}" />
 					  	</p:column>
+					  	
+					  	<p:column headerText="Geburtsdatum">
+					    	<h:outputText value="#{person.birthday}" />
+					  	</p:column>
+					  	
+					  	<p:column style="width:32px;text-align: center">
+							<!-- <p:commandButton actionListener="#{logic.editPerson(person)}" update="personTable" icon="ui-icon-pencil" /> -->
+							<p:commandButton actionListener="#{logic.deletePerson(person)}" update="personTable" icon="ui-icon-trash" />
+						</p:column>
 					</p:dataTable>
 					
 					<br />
