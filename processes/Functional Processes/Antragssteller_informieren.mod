@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Nov 26 17:26:47 CET 2015]
+[>Created: Thu Nov 26 20:48:09 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -28,13 +28,21 @@ An0 @PushWFArc f6 '' #zField
 An0 @EMail f5 '' #zField
 An0 @GridStep f3 '' #zField
 An0 @PushWFArc f4 '' #zField
-An0 @PushWFArc f14 '' #zField
 An0 @RichDialog f12 '' #zField
-An0 @StartRequest f19 '' #zField
 An0 @RichDialog f7 '' #zField
 An0 @Alternative f8 '' #zField
 An0 @PushWFArc f16 '' #zField
+An0 @RichDialog f20 '' #zField
+An0 @PushWFArc f21 '' #zField
+An0 @PushWFArc f23 '' #zField
+An0 @PushWFArc f14 '' #zField
+An0 @PushWFArc f25 '' #zField
+An0 @StartRequest f19 '' #zField
 An0 @PushWFArc f22 '' #zField
+An0 @Alternative f26 '' #zField
+An0 @PushWFArc f27 '' #zField
+An0 @PushWFArc f24 '' #zField
+An0 @PushWFArc f28 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -300,17 +308,21 @@ An0 f3 272 138 160 44 -75 -8 #rect
 An0 f3 @|StepIcon #fIcon
 An0 f4 expr out #txt
 An0 f4 432 160 640 160 #arcP
-An0 f14 expr out #txt
-An0 f14 1169 470 1305 515 #arcP
 An0 f12 targetWindow NEW:card: #txt
 An0 f12 targetDisplay TOP #txt
-An0 f12 richDialogId einbuergerung_Gruppe6.PersonalienVervollstaendigen #txt
-An0 f12 startMethod start() #txt
+An0 f12 richDialogId einbuergerung_Gruppe6.personalienVervollstaendigen #txt
+An0 f12 startMethod start(einbuergerung_Gruppe6.Request,einbuergerung_Gruppe6.Person) #txt
 An0 f12 type einbuergerung_Gruppe6.Data #txt
-An0 f12 requestActionDecl '<> param;' #txt
+An0 f12 requestActionDecl '<einbuergerung_Gruppe6.Request request, einbuergerung_Gruppe6.Person person> param;' #txt
+An0 f12 requestMappingAction 'param.request=in.request;
+param.person=in.person;
+' #txt
 An0 f12 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f12 responseMappingAction 'out=in;
+out.addPerson=result.addPerson;
+out.request=result.request;
+out.request.personList=in.request.personList.add(result.person);
 ' #txt
 An0 f12 windowConfiguration '* ' #txt
 An0 f12 isAsynch false #txt
@@ -327,27 +339,8 @@ vervollständigen</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f12 1048 426 128 44 -42 -16 #rect
+An0 f12 864 402 128 44 -42 -16 #rect
 An0 f12 @|RichDialogIcon #fIcon
-An0 f19 outLink start.ivp #txt
-An0 f19 type einbuergerung_Gruppe6.Data #txt
-An0 f19 inParamDecl '<> param;' #txt
-An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f19 guid 15144314A35A0FF4 #txt
-An0 f19 requestEnabled true #txt
-An0 f19 triggerEnabled false #txt
-An0 f19 callSignature start() #txt
-An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-An0 f19 @C|.responsibility Everybody #txt
-An0 f19 833 561 30 30 -21 17 #rect
-An0 f19 @|StartRequestIcon #fIcon
 An0 f7 targetWindow NEW:card: #txt
 An0 f7 targetDisplay TOP #txt
 An0 f7 richDialogId einbuergerung_Gruppe6.PersonenErfassen #txt
@@ -382,8 +375,73 @@ An0 f8 1152 496 32 32 0 16 #rect
 An0 f8 @|AlternativeIcon #fIcon
 An0 f16 expr out #txt
 An0 f16 1080 512 1152 512 #arcP
+An0 f20 targetWindow NEW:card: #txt
+An0 f20 targetDisplay TOP #txt
+An0 f20 richDialogId einbuergerung_Gruppe6.PersonHinzufuegen #txt
+An0 f20 startMethod start() #txt
+An0 f20 type einbuergerung_Gruppe6.Data #txt
+An0 f20 requestActionDecl '<> param;' #txt
+An0 f20 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f20 responseMappingAction 'out=in;
+out.request.personList=in.request.personList.add(result.person);
+' #txt
+An0 f20 windowConfiguration '* ' #txt
+An0 f20 isAsynch false #txt
+An0 f20 isInnerRd false #txt
+An0 f20 userContext '* ' #txt
+An0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Person hinzufügen</name>
+        <nameStyle>17,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f20 1016 570 112 44 -51 -8 #rect
+An0 f20 @|RichDialogIcon #fIcon
+An0 f21 expr in #txt
+An0 f21 outCond in.addPerson==true #txt
+An0 f21 1159 519 1072 570 #arcP
+An0 f23 expr out #txt
+An0 f23 1072 570 1024 534 #arcP
+An0 f14 expr out #txt
+An0 f14 856 498 928 446 #arcP
+An0 f25 expr in #txt
+An0 f25 1183 513 1305 519 #arcP
+An0 f19 outLink start.ivp #txt
+An0 f19 type einbuergerung_Gruppe6.Data #txt
+An0 f19 inParamDecl '<> param;' #txt
+An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f19 guid 151453FDC1EC9CFD #txt
+An0 f19 requestEnabled true #txt
+An0 f19 triggerEnabled false #txt
+An0 f19 callSignature start() #txt
+An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+An0 f19 @C|.responsibility Everybody #txt
+An0 f19 721 561 30 30 -21 17 #rect
+An0 f19 @|StartRequestIcon #fIcon
 An0 f22 expr out #txt
-An0 f22 862 570 968 532 #arcP
+An0 f22 749 569 809 542 #arcP
+An0 f26 type einbuergerung_Gruppe6.Data #txt
+An0 f26 1088 400 32 32 0 16 #rect
+An0 f26 @|AlternativeIcon #fIcon
+An0 f27 expr out #txt
+An0 f27 992 424 1089 417 #arcP
+An0 f27 0 0.4999999999999999 0 0 #arcLabel
+An0 f24 expr in #txt
+An0 f24 outCond in.addPerson==true #txt
+An0 f24 1097 425 1024 490 #arcP
+An0 f28 expr in #txt
+An0 f28 1115 421 1306 513 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -419,8 +477,6 @@ An0 f2 mainOut f6 tail #connect
 An0 f6 head f3 mainIn #connect
 An0 f5 mainOut f11 tail #connect
 An0 f11 head f10 in #connect
-An0 f12 mainOut f14 tail #connect
-An0 f14 head f1 mainIn #connect
 An0 f10 out f15 tail #connect
 An0 f15 head f13 mainIn #connect
 An0 f0 mainOut f18 tail #connect
@@ -431,5 +487,19 @@ An0 f3 mainOut f4 tail #connect
 An0 f4 head f5 mainIn #connect
 An0 f7 mainOut f16 tail #connect
 An0 f16 head f8 in #connect
+An0 f8 out f21 tail #connect
+An0 f21 head f20 mainIn #connect
+An0 f20 mainOut f23 tail #connect
+An0 f23 head f7 mainIn #connect
+An0 f13 mainOut f14 tail #connect
+An0 f14 head f12 mainIn #connect
+An0 f8 out f25 tail #connect
+An0 f25 head f1 mainIn #connect
 An0 f19 mainOut f22 tail #connect
-An0 f22 head f7 mainIn #connect
+An0 f22 head f13 mainIn #connect
+An0 f12 mainOut f27 tail #connect
+An0 f27 head f26 in #connect
+An0 f26 out f24 tail #connect
+An0 f24 head f7 mainIn #connect
+An0 f26 out f28 tail #connect
+An0 f28 head f1 mainIn #connect

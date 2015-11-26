@@ -8,51 +8,63 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <h:body>
 	<ui:composition template="/layouts/basic.xhtml">
-		<ui:define name="title">PersonalienVervollstaendigen</ui:define>
+		<ui:define name="title">personalienVervollstaendigen</ui:define>
 		<ui:define name="content">
-			<h3>Personalien vervollständigen</h3>
-			<p>Bitte vervollständigen Sie ihre Personalien</p>
+			<h3>
+			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
+			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			</h3>
+			
 			<h:form id="form">
 				<h:panelGrid columns="2">
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-
-			        <p:outputLabel for="personGenderCode" value="Geschlecht" />
-			        <p:selectOneRadio id="personGenderCode" value="#{data.gendercode}">
+					
+					<p:outputLabel for="requestEmail" value="Email"/>
+					<p:inputText id="requestEmail" value="#{data.request.email}"></p:inputText>
+					
+					<p:outputLabel for="requestPassword" value="Passwort"/>
+					<p:inputText id="requestPassword" value="#{data.request.password}"></p:inputText>
+					
+					<p:outputLabel for="personGenderCode" value="Geschlecht" />
+			        <p:selectOneRadio id="personGenderCode" value="#{data.person.genderCode}">
 			            <f:selectItem itemLabel="Männlich" itemValue="1" />
 			            <f:selectItem itemLabel="Weiblich" itemValue="2" />
 			        </p:selectOneRadio>
-					
-					<p:outputLabel for="personFirstname" value="Vorname"/>
-					<p:inputText id="personFirstname" value="#{data.firstname}" required="true" />
+			        
+			        <p:outputLabel for="personFirstname" value="Vorname"/>
+					<p:inputText id="personFirstname" value="#{data.person.firstname}"></p:inputText>
 					
 					<p:outputLabel for="personLastname" value="Nachname"/>
-					<p:inputText id="personLastname" value="#{data.lastname}" required="true" />
+					<p:inputText id="personLastname" value="#{data.person.lastname}"></p:inputText>
 					
-					<p:outputLabel for="personBirthday" value="Geburtstag" />
-        			<p:calendar id="personBirthday" value="#{data.birthday}" locale="de" navigator="true" pattern="yyyy-mm-dd"/>
+					<p:outputLabel for="personBirthday" value="Geburtsdatum"/>
+					<p:calendar id="personBirthday" value="#{data.person.birthday}" pattern="dd.MM.yyyy" size="16" required="true">
+					<f:convertDateTime pattern="dd.MM.yyyy" />
+					</p:calendar>
 					
-					<p:outputLabel for="personNationality" value="Nationalität"/>
-					<p:inputText id="personNationality" value="#{data.nationality}" required="true" />
-					
-					<p:outputLabel for="requestPhone" value="Telefonnummer"/>
-					<p:inputText id="requestPhone" value="#{data.phone}" required="true" />
+					<p:outputLabel for="requestPhone" value="Telefon"/>
+					<p:inputText id="requestPhone" value="#{data.request.phone}"></p:inputText>
 					
 					<p:outputLabel for="requestAddress" value="Adresse"/>
-					<p:inputText id="requestAddress" value="#{data.address}" required="true" />
+					<p:inputText id="requestAddress" value="#{data.request.address}"></p:inputText>
 					
 					<p:outputLabel for="requestPostcode" value="Postleitzahl"/>
-					<p:inputText id="requestPostcode" value="#{data.postcode}" required="true" />
+					<p:inputText id="requestPostcode" value="#{data.request.postcode}"></p:inputText>
 					
 					<p:outputLabel for="requestCity" value="Ort"/>
-					<p:inputText id="requestCity" value="#{data.city}" required="true" />
+					<p:inputText id="requestCity" value="#{data.request.city}"></p:inputText>
+					
+					<p:outputLabel for="personNationality" value="Nationalität"/>
+					<p:inputText id="personNationality" value="#{data.person.nationality}"></p:inputText>
 					
 					<br />
-					<p:commandButton actionListener="#{logic.add}" value="Person hinzufügen" update="form" icon="ui-icon-check" />
-					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
+					<p:commandButton actionListener="#{logic.addPerson}" value="weitere Personen hinzufügen" update="form" icon="ui-icon-plusthick" />
+					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
 				</h:panelGrid>
 			</h:form>
+			
 		</ui:define>
 	</ui:composition>
 </h:body>

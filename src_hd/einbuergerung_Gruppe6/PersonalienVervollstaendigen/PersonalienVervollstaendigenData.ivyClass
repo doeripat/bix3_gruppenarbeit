@@ -1,20 +1,6 @@
-PersonalienVervollstaendigenData #class
-einbuergerung_Gruppe6.PersonalienVervollstaendigen #namespace
-gendercode java.lang.Integer #field
-gendercode PERSISTENT #fieldModifier
-firstname String #field
-firstname PERSISTENT #fieldModifier
-lastname String #field
-lastname PERSISTENT #fieldModifier
-birthday java.util.Date #field
-birthday PERSISTENT #fieldModifier
-nationality String #field
-nationality PERSISTENT #fieldModifier
-phone String #field
-phone PERSISTENT #fieldModifier
-address String #field
-address PERSISTENT #fieldModifier
-postcode String #field
-postcode PERSISTENT #fieldModifier
-city String #field
-city PERSISTENT #fieldModifier
+personalienVervollstaendigenData #class
+einbuergerung_Gruppe6.personalienVervollstaendigen #namespace
+request einbuergerung_Gruppe6.Request #field
+person einbuergerung_Gruppe6.Person #field
+addPerson Boolean #field
+addPerson PERSISTENT #fieldModifier
