@@ -21,7 +21,14 @@
 						<p:messages></p:messages>
 					</f:facet>
 					
-					
+					<p:dataTable var="person" value="#{data.personList}">
+						<p:column headerText="Anrede">
+					    	<h:outputText value="#{person.firstname}" />
+					  	</p:column>
+					  	<p:column headerText="eMail">
+					    	<h:outputText value="#{person.lastname}" />
+					  	</p:column>
+					</p:dataTable>
 					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 25 12:43:52 CET 2015]
+[>Created: Thu Nov 26 17:28:26 CET 2015]
 1506BD6C657107E2 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen Big #zClass
@@ -17,18 +17,15 @@ An0 @StartSub f0 '' #zField
 An0 @EndSub f1 '' #zField
 An0 @Alternative f5 '' #zField
 An0 @PushWFArc f10 '' #zField
-An0 @RichDialog f23 '' #zField
 An0 @EMail f24 '' #zField
 An0 @TaskSwitch f25 '' #zField
 An0 @RichDialog f26 '' #zField
-An0 @PushWFArc f6 '' #zField
 An0 @TkArc f20 '' #zField
 An0 @PushWFArc f28 '' #zField
 An0 @PushWFArc f2 '' #zField
 An0 @EMail f21 '' #zField
 An0 @TaskSwitch f3 '' #zField
 An0 @TkArc f4 '' #zField
-An0 @PushWFArc f22 '' #zField
 An0 @EMail f29 '' #zField
 An0 @RichDialog f30 '' #zField
 An0 @PushWFArc f7 '' #zField
@@ -43,7 +40,8 @@ An0 @PushWFArc f11 '' #zField
 An0 @PushWFArc f12 '' #zField
 An0 @EndTask f13 '' #zField
 An0 @PushWFArc f14 '' #zField
-An0 @StartRequest f15 '' #zField
+An0 @RichDialog f6 '' #zField
+An0 @PushWFArc f15 '' #zField
 An0 @PushWFArc f16 '' #zField
 >Proto An0 An0 Antragsteller_interviewen #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
@@ -98,34 +96,6 @@ An0 f10 944 152 1504 153 #arcP
 An0 f10 1 944 128 #addKink
 An0 f10 2 1504 128 #addKink
 An0 f10 0 0.5 -16 0 #arcLabel
-An0 f23 targetWindow NEW:card: #txt
-An0 f23 targetDisplay TOP #txt
-An0 f23 richDialogId einbuergerung_Gruppe6.TerminWaehlen #txt
-An0 f23 startMethod start() #txt
-An0 f23 type einbuergerung_Gruppe6.Data #txt
-An0 f23 requestActionDecl '<> param;' #txt
-An0 f23 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f23 responseMappingAction 'out=in;
-' #txt
-An0 f23 windowConfiguration '* ' #txt
-An0 f23 isAsynch false #txt
-An0 f23 isInnerRd false #txt
-An0 f23 userContext '* ' #txt
-An0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Termin wählen</name>
-        <nameStyle>13,7
-</nameStyle>
-        <desc>Auswahl freier Termin über Kalender
-
-Termin direkt im Request speichern</desc>
-    </language>
-</elementInfo>
-' #txt
-An0 f23 368 346 112 44 -41 -8 #rect
-An0 f23 @|RichDialogIcon #fIcon
 An0 f24 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 An0 f24 type einbuergerung_Gruppe6.Data #txt
 An0 f24 timeout 0 #txt
@@ -188,8 +158,6 @@ Notizen und Einwände festhalten</name>
 ' #txt
 An0 f26 640 146 208 44 -85 -16 #rect
 An0 f26 @|RichDialogIcon #fIcon
-An0 f6 expr out #txt
-An0 f6 480 368 528 368 #arcP
 An0 f20 expr out #txt
 An0 f20 type einbuergerung_Gruppe6.Data #txt
 An0 f20 var in1 #txt
@@ -241,9 +209,6 @@ An0 f4 expr out #txt
 An0 f4 type einbuergerung_Gruppe6.Data #txt
 An0 f4 var in1 #txt
 An0 f4 200 190 200 352 #arcP
-An0 f22 expr data #txt
-An0 f22 outCond ivp=="TaskA.ivp" #txt
-An0 f22 216 368 368 368 #arcP
 An0 f29 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 An0 f29 type einbuergerung_Gruppe6.Data #txt
 An0 f29 timeout 0 #txt
@@ -382,27 +347,34 @@ An0 f14 expr in #txt
 An0 f14 1360 384 1489 440 #arcP
 An0 f14 1 1360 440 #addKink
 An0 f14 1 0.19244880768791459 0 0 #arcLabel
-An0 f15 outLink start.ivp #txt
-An0 f15 type einbuergerung_Gruppe6.Data #txt
-An0 f15 inParamDecl '<> param;' #txt
-An0 f15 actionDecl 'einbuergerung_Gruppe6.Data out;
+An0 f6 targetWindow NEW:card: #txt
+An0 f6 targetDisplay TOP #txt
+An0 f6 type einbuergerung_Gruppe6.Data #txt
+An0 f6 requestActionDecl '<> param;' #txt
+An0 f6 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-An0 f15 guid 1513E74EAFF8C22A #txt
-An0 f15 requestEnabled true #txt
-An0 f15 triggerEnabled false #txt
-An0 f15 callSignature start() #txt
-An0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+An0 f6 responseMappingAction 'out=in;
+' #txt
+An0 f6 windowConfiguration '* ' #txt
+An0 f6 isAsynch false #txt
+An0 f6 isInnerRd false #txt
+An0 f6 userContext '* ' #txt
+An0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>start.ivp</name>
+        <name>Termin wählen</name>
+        <nameStyle>13,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 f15 @C|.responsibility Everybody #txt
-An0 f15 281 353 30 30 -21 17 #rect
-An0 f15 @|StartRequestIcon #fIcon
+An0 f6 296 330 112 44 -41 -8 #rect
+An0 f6 @|RichDialogIcon #fIcon
+An0 f15 expr data #txt
+An0 f15 outCond ivp=="TaskA.ivp" #txt
+An0 f15 214 366 296 352 #arcP
 An0 f16 expr out #txt
-An0 f16 311 368 368 368 #arcP
+An0 f16 408 352 528 368 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -429,16 +401,12 @@ An0 f5 out f10 tail #connect
 An0 f10 head f1 mainIn #connect
 An0 f0 mainOut f2 tail #connect
 An0 f2 head f21 mainIn #connect
-An0 f23 mainOut f6 tail #connect
-An0 f6 head f24 mainIn #connect
 An0 f24 mainOut f20 tail #connect
 An0 f20 head f25 in #connect
 An0 f25 out f28 tail #connect
 An0 f28 head f26 mainIn #connect
 An0 f21 mainOut f4 tail #connect
 An0 f4 head f3 in #connect
-An0 f3 out f22 tail #connect
-An0 f22 head f23 mainIn #connect
 An0 f5 out f7 tail #connect
 An0 f7 head f29 mainIn #connect
 An0 f29 mainOut f32 tail #connect
@@ -455,5 +423,7 @@ An0 f31 mainOut f12 tail #connect
 An0 f12 head f1 mainIn #connect
 An0 f34 out f14 tail #connect
 An0 f14 head f13 mainIn #connect
-An0 f15 mainOut f16 tail #connect
-An0 f16 head f23 mainIn #connect
+An0 f3 out f15 tail #connect
+An0 f15 head f6 mainIn #connect
+An0 f6 mainOut f16 tail #connect
+An0 f16 head f24 mainIn #connect
