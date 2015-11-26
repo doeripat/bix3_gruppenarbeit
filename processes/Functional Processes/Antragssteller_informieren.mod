@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 25 16:07:46 CET 2015]
+[>Created: Thu Nov 26 16:35:39 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -17,11 +17,8 @@ An0 @StartSub f0 '' #zField
 An0 @EndSub f1 '' #zField
 An0 @RichDialog f2 '' #zField
 An0 @TaskSwitch f10 '' #zField
-An0 @RichDialog f12 '' #zField
-An0 @PushWFArc f14 '' #zField
 An0 @RichDialog f13 '' #zField
 An0 @PushWFArc f15 '' #zField
-An0 @PushWFArc f16 '' #zField
 An0 @InfoButton f47 '' #zField
 An0 @TaskSwitch f17 '' #zField
 An0 @TkArc f18 '' #zField
@@ -31,8 +28,16 @@ An0 @PushWFArc f6 '' #zField
 An0 @EMail f5 '' #zField
 An0 @GridStep f3 '' #zField
 An0 @PushWFArc f4 '' #zField
-An0 @StartRequest f7 '' #zField
-An0 @PushWFArc f8 '' #zField
+An0 @PushWFArc f14 '' #zField
+An0 @RichDialog f12 '' #zField
+An0 @StartRequest f19 '' #zField
+An0 @RichDialog f7 '' #zField
+An0 @Alternative f8 '' #zField
+An0 @PushWFArc f16 '' #zField
+An0 @RichDialog f20 '' #zField
+An0 @PushWFArc f21 '' #zField
+An0 @PushWFArc f22 '' #zField
+An0 @PushWFArc f23 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -55,7 +60,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f0 105 305 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 1177 505 30 30 0 15 #rect
+An0 f1 1305 505 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f2 targetWindow NEW:card: #txt
 An0 f2 targetDisplay TOP #txt
@@ -143,35 +148,6 @@ An0 f10 type einbuergerung_Gruppe6.Data #txt
 An0 f10 template "" #txt
 An0 f10 712 504 32 32 0 16 #rect
 An0 f10 @|TaskSwitchIcon #fIcon
-An0 f12 targetWindow NEW:card: #txt
-An0 f12 targetDisplay TOP #txt
-An0 f12 richDialogId einbuergerung_Gruppe6.PersonalienVervollstaendigen #txt
-An0 f12 startMethod start() #txt
-An0 f12 type einbuergerung_Gruppe6.Data #txt
-An0 f12 requestActionDecl '<> param;' #txt
-An0 f12 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f12 responseMappingAction 'out=in;
-' #txt
-An0 f12 windowConfiguration '* ' #txt
-An0 f12 isAsynch false #txt
-An0 f12 isInnerRd false #txt
-An0 f12 userContext '* ' #txt
-An0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Personalien
-vervollständigen</name>
-        <nameStyle>28,7
-</nameStyle>
-        <desc>Gesuch weiterführen?</desc>
-    </language>
-</elementInfo>
-' #txt
-An0 f12 984 498 128 44 -42 -16 #rect
-An0 f12 @|RichDialogIcon #fIcon
-An0 f14 expr out #txt
-An0 f14 1112 520 1177 520 #arcP
 An0 f13 targetWindow NEW:card: #txt
 An0 f13 targetDisplay TOP #txt
 An0 f13 richDialogId einbuergerung_Gruppe6.Login #txt
@@ -201,8 +177,6 @@ An0 f13 @|RichDialogIcon #fIcon
 An0 f15 expr data #txt
 An0 f15 outCond ivp=="TaskA.ivp" #txt
 An0 f15 744 520 800 520 #arcP
-An0 f16 expr out #txt
-An0 f16 912 520 984 520 #arcP
 An0 f47 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -329,27 +303,121 @@ An0 f3 272 138 160 44 -75 -8 #rect
 An0 f3 @|StepIcon #fIcon
 An0 f4 expr out #txt
 An0 f4 432 160 640 160 #arcP
-An0 f7 outLink start.ivp #txt
-An0 f7 type einbuergerung_Gruppe6.Data #txt
-An0 f7 inParamDecl '<> param;' #txt
-An0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
+An0 f14 expr out #txt
+An0 f14 1169 470 1305 515 #arcP
+An0 f12 targetWindow NEW:card: #txt
+An0 f12 targetDisplay TOP #txt
+An0 f12 richDialogId einbuergerung_Gruppe6.PersonalienVervollstaendigen #txt
+An0 f12 startMethod start() #txt
+An0 f12 type einbuergerung_Gruppe6.Data #txt
+An0 f12 requestActionDecl '<> param;' #txt
+An0 f12 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-An0 f7 guid 1513F2F9986D2994 #txt
-An0 f7 requestEnabled true #txt
-An0 f7 triggerEnabled false #txt
-An0 f7 callSignature start() #txt
-An0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+An0 f12 responseMappingAction 'out=in;
+' #txt
+An0 f12 windowConfiguration '* ' #txt
+An0 f12 isAsynch false #txt
+An0 f12 isInnerRd false #txt
+An0 f12 userContext '* ' #txt
+An0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Personalien
+vervollständigen</name>
+        <nameStyle>28,7
+</nameStyle>
+        <desc>Gesuch weiterführen?</desc>
+    </language>
+</elementInfo>
+' #txt
+An0 f12 1048 426 128 44 -42 -16 #rect
+An0 f12 @|RichDialogIcon #fIcon
+An0 f19 outLink start.ivp #txt
+An0 f19 type einbuergerung_Gruppe6.Data #txt
+An0 f19 inParamDecl '<> param;' #txt
+An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f19 guid 15144314A35A0FF4 #txt
+An0 f19 requestEnabled true #txt
+An0 f19 triggerEnabled false #txt
+An0 f19 callSignature start() #txt
+An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>start.ivp</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f7 @C|.responsibility Everybody #txt
-An0 f7 929 561 30 30 -21 17 #rect
-An0 f7 @|StartRequestIcon #fIcon
-An0 f8 expr out #txt
-An0 f8 957 568 1048 542 #arcP
+An0 f19 @C|.responsibility Everybody #txt
+An0 f19 833 561 30 30 -21 17 #rect
+An0 f19 @|StartRequestIcon #fIcon
+An0 f7 targetWindow NEW:card: #txt
+An0 f7 targetDisplay TOP #txt
+An0 f7 richDialogId einbuergerung_Gruppe6.PersonenErfassen #txt
+An0 f7 startMethod start(List<einbuergerung_Gruppe6.Person>) #txt
+An0 f7 type einbuergerung_Gruppe6.Data #txt
+An0 f7 requestActionDecl '<List<einbuergerung_Gruppe6.Person> personList> param;' #txt
+An0 f7 requestMappingAction 'param.personList=in.request.personList;
+' #txt
+An0 f7 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f7 responseMappingAction 'out=in;
+out.addPerson=result.addPerson;
+out.request.personList=result.personList;
+' #txt
+An0 f7 windowConfiguration '* ' #txt
+An0 f7 isAsynch false #txt
+An0 f7 isInnerRd false #txt
+An0 f7 userContext '* ' #txt
+An0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Personen erfassen</name>
+        <nameStyle>17,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f7 968 490 112 44 -53 -8 #rect
+An0 f7 @|RichDialogIcon #fIcon
+An0 f8 type einbuergerung_Gruppe6.Data #txt
+An0 f8 1152 496 32 32 0 16 #rect
+An0 f8 @|AlternativeIcon #fIcon
+An0 f16 expr out #txt
+An0 f16 1080 512 1152 512 #arcP
+An0 f20 targetWindow NEW:card: #txt
+An0 f20 targetDisplay TOP #txt
+An0 f20 richDialogId einbuergerung_Gruppe6.PersonHinzufuegen #txt
+An0 f20 startMethod start() #txt
+An0 f20 type einbuergerung_Gruppe6.Data #txt
+An0 f20 requestActionDecl '<> param;' #txt
+An0 f20 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f20 responseMappingAction 'out=in;
+out.request.personList=in.request.personList.add(result.person);
+' #txt
+An0 f20 windowConfiguration '* ' #txt
+An0 f20 isAsynch false #txt
+An0 f20 isInnerRd false #txt
+An0 f20 userContext '* ' #txt
+An0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Person hinzufügen</name>
+        <nameStyle>17,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f20 1096 586 112 44 -51 -8 #rect
+An0 f20 @|RichDialogIcon #fIcon
+An0 f21 expr in #txt
+An0 f21 outCond in.addPerson==true #txt
+An0 f21 1166 526 1152 586 #arcP
+An0 f22 expr out #txt
+An0 f22 862 570 968 532 #arcP
+An0 f23 expr out #txt
+An0 f23 1152 586 1024 534 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -389,13 +457,17 @@ An0 f12 mainOut f14 tail #connect
 An0 f14 head f1 mainIn #connect
 An0 f10 out f15 tail #connect
 An0 f15 head f13 mainIn #connect
-An0 f13 mainOut f16 tail #connect
-An0 f16 head f12 mainIn #connect
 An0 f0 mainOut f18 tail #connect
 An0 f18 head f17 in #connect
 An0 f17 out f9 tail #connect
 An0 f9 head f2 mainIn #connect
 An0 f3 mainOut f4 tail #connect
 An0 f4 head f5 mainIn #connect
-An0 f7 mainOut f8 tail #connect
-An0 f8 head f12 mainIn #connect
+An0 f7 mainOut f16 tail #connect
+An0 f16 head f8 in #connect
+An0 f8 out f21 tail #connect
+An0 f21 head f20 mainIn #connect
+An0 f19 mainOut f22 tail #connect
+An0 f22 head f7 mainIn #connect
+An0 f20 mainOut f23 tail #connect
+An0 f23 head f7 mainIn #connect
