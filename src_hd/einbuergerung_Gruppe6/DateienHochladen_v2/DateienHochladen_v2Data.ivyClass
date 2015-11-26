@@ -1,0 +1,5 @@
+DateienHochladen_v2Data #class
+einbuergerung_Gruppe6.DateienHochladen_v2 #namespace
+document einbuergerung_Gruppe6.Document #field
+fileUploadEvent org.primefaces.event.FileUploadEvent #field
+fileUploadEvent PERSISTENT #fieldModifier

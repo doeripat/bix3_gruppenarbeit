@@ -7,26 +7,66 @@ package einbuergerung_Gruppe6;
 public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 4577035468498201802L;
+  private static final long serialVersionUID = -1435034011002805796L;
 
-  private java.lang.String link;
+  private java.lang.String fileName;
 
   /**
-   * Gets the field link.
-   * @return the value of the field link; may be null.
+   * Gets the field fileName.
+   * @return the value of the field fileName; may be null.
    */
-  public java.lang.String getLink()
+  public java.lang.String getFileName()
   {
-    return link;
+    return fileName;
   }
 
   /**
-   * Sets the field link.
-   * @param _link the new value of the field link.
+   * Sets the field fileName.
+   * @param _fileName the new value of the field fileName.
    */
-  public void setLink(java.lang.String _link)
+  public void setFileName(java.lang.String _fileName)
   {
-    link = _link;
+    fileName = _fileName;
+  }
+
+  private java.lang.String fileType;
+
+  /**
+   * Gets the field fileType.
+   * @return the value of the field fileType; may be null.
+   */
+  public java.lang.String getFileType()
+  {
+    return fileType;
+  }
+
+  /**
+   * Sets the field fileType.
+   * @param _fileType the new value of the field fileType.
+   */
+  public void setFileType(java.lang.String _fileType)
+  {
+    fileType = _fileType;
+  }
+
+  private java.lang.String filePath;
+
+  /**
+   * Gets the field filePath.
+   * @return the value of the field filePath; may be null.
+   */
+  public java.lang.String getFilePath()
+  {
+    return filePath;
+  }
+
+  /**
+   * Sets the field filePath.
+   * @param _filePath the new value of the field filePath.
+   */
+  public void setFilePath(java.lang.String _filePath)
+  {
+    filePath = _filePath;
   }
 
   private java.util.Date dataUpload;
@@ -129,24 +169,24 @@ public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     comment = _comment;
   }
 
-  private java.lang.String type;
+  private org.primefaces.model.DefaultStreamedContent fileStreamedContent;
 
   /**
-   * Gets the field type.
-   * @return the value of the field type; may be null.
+   * Gets the field fileStreamedContent.
+   * @return the value of the field fileStreamedContent; may be null.
    */
-  public java.lang.String getType()
+  public org.primefaces.model.DefaultStreamedContent getFileStreamedContent()
   {
-    return type;
+    return fileStreamedContent;
   }
 
   /**
-   * Sets the field type.
-   * @param _type the new value of the field type.
+   * Sets the field fileStreamedContent.
+   * @param _fileStreamedContent the new value of the field fileStreamedContent.
    */
-  public void setType(java.lang.String _type)
+  public void setFileStreamedContent(org.primefaces.model.DefaultStreamedContent _fileStreamedContent)
   {
-    type = _type;
+    fileStreamedContent = _fileStreamedContent;
   }
 
 }

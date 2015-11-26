@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Nov 26 21:42:41 CET 2015]
+[>Created: Thu Nov 26 21:51:45 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -635,11 +635,14 @@ Bk1 f3 177 161 30 30 -21 17 #rect
 Bk1 f3 @|StartRequestIcon #fIcon
 Bk1 f0 targetWindow NEW:card: #txt
 Bk1 f0 targetDisplay TOP #txt
+Bk1 f0 richDialogId einbuergerung_Gruppe6.DateienHochladen_v2 #txt
+Bk1 f0 startMethod start() #txt
 Bk1 f0 type einbuergerung_Gruppe6.Data #txt
 Bk1 f0 requestActionDecl '<> param;' #txt
 Bk1 f0 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk1 f0 responseMappingAction 'out=in;
+out.request.document=result.document;
 ' #txt
 Bk1 f0 windowConfiguration '* ' #txt
 Bk1 f0 isAsynch false #txt

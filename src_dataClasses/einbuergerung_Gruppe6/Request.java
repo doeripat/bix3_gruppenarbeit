@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -8869502776736217188L;
+  private static final long serialVersionUID = -8980160933984956115L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -347,6 +347,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setEndObjectionPeriod(ch.ivyteam.ivy.scripting.objects.DateTime _endObjectionPeriod)
   {
     endObjectionPeriod = _endObjectionPeriod;
+  }
+
+  private einbuergerung_Gruppe6.Document document;
+
+  /**
+   * Gets the field document.
+   * @return the value of the field document; may be null.
+   */
+  public einbuergerung_Gruppe6.Document getDocument()
+  {
+    return document;
+  }
+
+  /**
+   * Sets the field document.
+   * @param _document the new value of the field document.
+   */
+  public void setDocument(einbuergerung_Gruppe6.Document _document)
+  {
+    document = _document;
   }
 
 }

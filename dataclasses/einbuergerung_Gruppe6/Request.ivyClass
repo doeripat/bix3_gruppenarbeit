@@ -34,3 +34,5 @@ publicationDate DateTime #field
 publicationDate PERSISTENT #fieldModifier
 endObjectionPeriod DateTime #field
 endObjectionPeriod PERSISTENT #fieldModifier
+document einbuergerung_Gruppe6.Document #field
+document PERSISTENT #fieldModifier

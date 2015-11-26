@@ -1,7 +1,11 @@
 Document #class
 einbuergerung_Gruppe6 #namespace
-link String #field
-link PERSISTENT #fieldModifier
+fileName String #field
+fileName PERSISTENT #fieldModifier
+fileType String #field
+fileType PERSISTENT #fieldModifier
+filePath String #field
+filePath PERSISTENT #fieldModifier
 dataUpload java.util.Date #field
 dataUpload PERSISTENT #fieldModifier
 isComplete Boolean #field
@@ -12,5 +16,5 @@ isValid Boolean #field
 isValid PERSISTENT #fieldModifier
 comment String #field
 comment PERSISTENT #fieldModifier
-type String #field
-type PERSISTENT #fieldModifier
+fileStreamedContent org.primefaces.model.DefaultStreamedContent #field
+fileStreamedContent PERSISTENT #fieldModifier
