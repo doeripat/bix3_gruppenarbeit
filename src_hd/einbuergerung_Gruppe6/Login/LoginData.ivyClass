@@ -1,4 +1,10 @@
 LoginData #class
 einbuergerung_Gruppe6.Login #namespace
-email String #field
-password String #field
+emailUser String #field
+emailSystem String #field
+emailSystem PERSISTENT #fieldModifier
+passwordUser String #field
+passwordSystem String #field
+passwordSystem PERSISTENT #fieldModifier
+message String #field
+message PERSISTENT #fieldModifier

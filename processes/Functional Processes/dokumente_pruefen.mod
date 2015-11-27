@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 11:31:40 CET 2015]
+[>Created: Fri Nov 27 12:02:20 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -675,9 +675,12 @@ Bk2 f0 528 312 595 312 #arcP
 Bk2 f3 targetWindow NEW:card: #txt
 Bk2 f3 targetDisplay TOP #txt
 Bk2 f3 richDialogId einbuergerung_Gruppe6.Login #txt
-Bk2 f3 startMethod start() #txt
+Bk2 f3 startMethod start(String,String) #txt
 Bk2 f3 type einbuergerung_Gruppe6.Data #txt
-Bk2 f3 requestActionDecl '<> param;' #txt
+Bk2 f3 requestActionDecl '<String email, String password> param;' #txt
+Bk2 f3 requestMappingAction 'param.email=in.request.email;
+param.password=in.request.password;
+' #txt
 Bk2 f3 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f3 responseMappingAction 'out=in;
@@ -709,14 +712,15 @@ Bk7 g1 @|MOGIcon #fIcon
 Bk7 f1 targetWindow NEW:card: #txt
 Bk7 f1 targetDisplay TOP #txt
 Bk7 f1 richDialogId einbuergerung_Gruppe6.Login #txt
-Bk7 f1 startMethod start() #txt
+Bk7 f1 startMethod start(String,String) #txt
 Bk7 f1 type einbuergerung_Gruppe6.Data #txt
-Bk7 f1 requestActionDecl '<> param;' #txt
+Bk7 f1 requestActionDecl '<String email, String password> param;' #txt
+Bk7 f1 requestMappingAction 'param.email=in.request.email;
+param.password=in.request.password;
+' #txt
 Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk7 f1 responseMappingAction 'out=in;
-out.request.email=result.email;
-out.request.password=result.password;
 ' #txt
 Bk7 f1 windowConfiguration '* ' #txt
 Bk7 f1 isAsynch false #txt
