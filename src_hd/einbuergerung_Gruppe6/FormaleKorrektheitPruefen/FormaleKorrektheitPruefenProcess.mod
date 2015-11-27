@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 00:30:22 CET 2015]
+[>Created: Fri Nov 27 01:24:34 CET 2015]
 1510B9FE62E66C66 3.17 #module
 >Proto >Proto Collection #zClass
 Fs0 FormaleKorrektheitPruefenProcess Big #zClass
@@ -33,7 +33,8 @@ Fs0 f0 disableUIEvents true #txt
 Fs0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
 <java.lang.String uniqueIdentifier,java.lang.String status,List<einbuergerung_Gruppe6.Document> documents,List<einbuergerung_Gruppe6.Person> personList,java.lang.String comment> param = methodEvent.getInputArguments();
 ' #txt
-Fs0 f0 inParameterMapAction 'out.documents=param.documents;
+Fs0 f0 inParameterMapAction 'out.comment=param.comment;
+out.documents=param.documents;
 out.personList=param.personList;
 out.status=param.status;
 out.uniqueIdentifier=param.uniqueIdentifier;

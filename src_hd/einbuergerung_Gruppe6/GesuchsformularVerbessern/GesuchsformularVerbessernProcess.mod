@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Nov 15 15:55:03 CET 2015]
+[>Created: Fri Nov 27 00:58:45 CET 2015]
 1510BA46CE187D22 3.17 #module
 >Proto >Proto Collection #zClass
 Gs0 GesuchsformularVerbessernProcess Big #zClass
@@ -24,38 +24,27 @@ Gs0 @PushWFArc f5 '' #zField
 >Proto Gs0 Gs0 GesuchsformularVerbessernProcess #zField
 Gs0 f0 guid 1510BA46D1047B86 #txt
 Gs0 f0 type einbuergerung_Gruppe6.GesuchsformularVerbessern.GesuchsformularVerbessernData #txt
-Gs0 f0 method start(String,String,List<einbuergerung_Gruppe6.Document>,String,String,String,String,String,String,List<einbuergerung_Gruppe6.Person>,String) #txt
+Gs0 f0 method start(String,String,List<einbuergerung_Gruppe6.Document>,List<einbuergerung_Gruppe6.Person>,String) #txt
 Gs0 f0 disableUIEvents true #txt
 Gs0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
-<java.lang.String uniqueIdentifier,java.lang.String status,List<einbuergerung_Gruppe6.Document> documents,java.lang.String mobilePhone,java.lang.String phone,java.lang.String address,java.lang.String postcode,java.lang.String email,java.lang.String city,List<einbuergerung_Gruppe6.Person> personList,java.lang.String commentOnRequest> param = methodEvent.getInputArguments();
+<java.lang.String uniqueIdentifier,java.lang.String status,List<einbuergerung_Gruppe6.Document> documents,List<einbuergerung_Gruppe6.Person> personList,java.lang.String commentOnRequest> param = methodEvent.getInputArguments();
 ' #txt
-Gs0 f0 inParameterMapAction 'out.uniqueIdentifier=param.uniqueIdentifier;
-out.status=param.status;
+Gs0 f0 inParameterMapAction 'out.commentOnRequest=param.commentOnRequest;
 out.documents=param.documents;
-out.mobilePhone=param.mobilePhone;
-out.phone=param.phone;
-out.address=param.address;
-out.postcode=param.postcode;
-out.email=param.email;
-out.city=param.city;
 out.personList=param.personList;
-out.commentOnRequest=param.commentOnRequest;
+out.status=param.status;
+out.uniqueIdentifier=param.uniqueIdentifier;
 ' #txt
-Gs0 f0 outParameterDecl '<List<einbuergerung_Gruppe6.Document> documents,java.lang.String mobilePhone,java.lang.String phone,java.lang.String address,java.lang.String postcode,java.lang.String email,java.lang.String city,List<einbuergerung_Gruppe6.Person> personList> result;
+Gs0 f0 outParameterDecl '<List<einbuergerung_Gruppe6.Document> documents> result;
 ' #txt
 Gs0 f0 outParameterMapAction 'result.documents=in.documents;
-result.mobilePhone=in.mobilePhone;
-result.phone=in.phone;
-result.address=in.address;
-result.postcode=in.postcode;
-result.email=in.email;
-result.city=in.city;
-result.personList=in.personList;
 ' #txt
 Gs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>start(String,String,List&lt;Document&gt;,String,String,String,String,String,String,List&lt;Person&gt;,String)</name>
+        <nameStyle>97,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt

@@ -22,35 +22,15 @@
 					</f:facet>
 					
 					<p:outputLabel for="uniqueIdentifier" value="Unique Identifier"/>
-					<p:inputText id="uniqueIdentifier" value="#{data.uniqueIdentifier}"></p:inputText>
+					<p:outputLabel id="uniqueIdentifier" value="#{data.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
 					
 					<p:outputLabel for="status" value="Status"/>
-					<p:inputText id="status" value="#{data.status}"></p:inputText>
-					
-					<!-- No 'form field [List<einbuergerung_Gruppe6.Document>]' template found for field 'documents'. -->
-					
-					<p:outputLabel for="mobilePhone" value="Mobile Phone"/>
-					<p:inputText id="mobilePhone" value="#{data.mobilePhone}"></p:inputText>
-					
-					<p:outputLabel for="phone" value="Phone"/>
-					<p:inputText id="phone" value="#{data.phone}"></p:inputText>
-					
-					<p:outputLabel for="address" value="Address"/>
-					<p:inputText id="address" value="#{data.address}"></p:inputText>
-					
-					<p:outputLabel for="postcode" value="Postcode"/>
-					<p:inputText id="postcode" value="#{data.postcode}"></p:inputText>
-					
-					<p:outputLabel for="email" value="Email"/>
-					<p:inputText id="email" value="#{data.email}"></p:inputText>
-					
-					<p:outputLabel for="city" value="City"/>
-					<p:inputText id="city" value="#{data.city}"></p:inputText>
-					
-					<!-- No 'form field [List<einbuergerung_Gruppe6.Person>]' template found for field 'personList'. -->
+					<p:outputLabel id="status" value="#{data.status}" styleClass="readonly_text"></p:outputLabel>
 					
 					<p:outputLabel for="commentOnRequest" value="Comment On Request"/>
-					<p:inputText id="commentOnRequest" value="#{data.commentOnRequest}"></p:inputText>
+					<p:outputLabel id="commentOnRequest" value="#{data.commentOnRequest}" cols="33" rows="3"></p:outputLabel>
+					
+					<!-- TODO: FileUploadField -->
 					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />

@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.GesuchsformularVerbessern;
 public class GesuchsformularVerbessernData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -19808716683465640L;
+  private static final long serialVersionUID = 545536272608923272L;
 
   private transient java.lang.String uniqueIdentifier;
 
@@ -67,126 +67,6 @@ public class GesuchsformularVerbessernData extends ch.ivyteam.ivy.scripting.obje
   public void setDocuments(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> _documents)
   {
     documents = _documents;
-  }
-
-  private transient java.lang.String mobilePhone;
-
-  /**
-   * Gets the field mobilePhone.
-   * @return the value of the field mobilePhone; may be null.
-   */
-  public java.lang.String getMobilePhone()
-  {
-    return mobilePhone;
-  }
-
-  /**
-   * Sets the field mobilePhone.
-   * @param _mobilePhone the new value of the field mobilePhone.
-   */
-  public void setMobilePhone(java.lang.String _mobilePhone)
-  {
-    mobilePhone = _mobilePhone;
-  }
-
-  private transient java.lang.String phone;
-
-  /**
-   * Gets the field phone.
-   * @return the value of the field phone; may be null.
-   */
-  public java.lang.String getPhone()
-  {
-    return phone;
-  }
-
-  /**
-   * Sets the field phone.
-   * @param _phone the new value of the field phone.
-   */
-  public void setPhone(java.lang.String _phone)
-  {
-    phone = _phone;
-  }
-
-  private transient java.lang.String address;
-
-  /**
-   * Gets the field address.
-   * @return the value of the field address; may be null.
-   */
-  public java.lang.String getAddress()
-  {
-    return address;
-  }
-
-  /**
-   * Sets the field address.
-   * @param _address the new value of the field address.
-   */
-  public void setAddress(java.lang.String _address)
-  {
-    address = _address;
-  }
-
-  private transient java.lang.String postcode;
-
-  /**
-   * Gets the field postcode.
-   * @return the value of the field postcode; may be null.
-   */
-  public java.lang.String getPostcode()
-  {
-    return postcode;
-  }
-
-  /**
-   * Sets the field postcode.
-   * @param _postcode the new value of the field postcode.
-   */
-  public void setPostcode(java.lang.String _postcode)
-  {
-    postcode = _postcode;
-  }
-
-  private transient java.lang.String email;
-
-  /**
-   * Gets the field email.
-   * @return the value of the field email; may be null.
-   */
-  public java.lang.String getEmail()
-  {
-    return email;
-  }
-
-  /**
-   * Sets the field email.
-   * @param _email the new value of the field email.
-   */
-  public void setEmail(java.lang.String _email)
-  {
-    email = _email;
-  }
-
-  private transient java.lang.String city;
-
-  /**
-   * Gets the field city.
-   * @return the value of the field city; may be null.
-   */
-  public java.lang.String getCity()
-  {
-    return city;
-  }
-
-  /**
-   * Sets the field city.
-   * @param _city the new value of the field city.
-   */
-  public void setCity(java.lang.String _city)
-  {
-    city = _city;
   }
 
   private transient ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> personList;

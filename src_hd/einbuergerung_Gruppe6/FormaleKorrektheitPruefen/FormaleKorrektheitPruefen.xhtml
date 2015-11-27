@@ -22,19 +22,19 @@
 					</f:facet>
 					
 					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
-					<p:outputLabel id="uniqueIdentifier" value="#{data.uniqueIdentifier}"></p:outputLabel>
+					<p:outputLabel id="uniqueIdentifier" value="#{data.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
 					
 					<p:outputLabel value="Personen"/>
 					<ui:repeat  var="p" value="#{data.personList}">
-						<p:outputLabel value="#{p.firstname}"/>
+						<p:outputLabel value="#{p.firstname}" styleClass="readonly_text"/>
 						<br/>
-						<p:outputLabel value="#{p.lastname}"/>
+						<p:outputLabel value="#{p.lastname}" styleClass="readonly_text"/>
 						<hr/>
 					</ui:repeat>
 					
 					<p:outputLabel  value="Dokumente"/>
 					<ui:repeat var="d" value="#{data.documents}">
-						<p:outputLabel  value="#{d.fileName}"/>
+						<p:outputLabel  value="#{d.fileName}" styleClass="readonly_text"/>
 					<br />
 					</ui:repeat>
 					

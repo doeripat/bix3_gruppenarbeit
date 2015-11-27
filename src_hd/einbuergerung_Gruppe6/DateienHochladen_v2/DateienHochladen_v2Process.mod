@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Nov 26 22:07:29 CET 2015]
+[>Created: Fri Nov 27 11:26:08 CET 2015]
 1514590D4E7F0C89 3.17 #module
 >Proto >Proto Collection #zClass
 Ds0 DateienHochladen_v2Process Big #zClass
@@ -116,7 +116,7 @@ IContentObject baseFolder = ivy.cms.findContentObject("/Uploads");
 
 // Der Name des CMS-Objekts wird aus dem Dateinamen abgeleitet
 String coName = fileName.substring(0, fileName.lastIndexOf("."));
-if (coName.contains("") || coName.contains("/"))
+if (coName.contains("\\") || coName.contains("/"))
 {
     // Wegen Internet Explorer erforderlich
     int fileNameStartIndex = coName.replace("", "/").lastIndexOf("/");
@@ -159,7 +159,7 @@ else
 }
 
 // Im CMS nicht erlaubte Zeichen werden aus dem Namen des CMS-Objekts entfernt
-coName = coName.replaceAll("[^p{Alnum}_-]+[^p{Alnum}_.+-]*", "_");
+coName = coName.replaceAll("[^\\p{Alnum}_-]+[^\\p{Alnum}_.+\\-]*", "_");
 
 // Das CMS-Objekt wird angelegt, wobei alle Metadaten leer bleiben mit Ausnahme von Name und Typ. Der Inhalt des CMS-Objekts selbst wird aus dem InputStream der Datei erstellt.
 IContentObject newCMSObject = baseFolder.addChild(coName, "", coType, null);
