@@ -1,0 +1,4 @@
+antragstellerErfassen_v2Data #class
+einbuergerung_Gruppe6.antragstellerErfassen_v2 #namespace
+email String #field
+email PERSISTENT #fieldModifier

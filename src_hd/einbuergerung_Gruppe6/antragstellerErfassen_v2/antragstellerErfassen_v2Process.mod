@@ -2,7 +2,7 @@
 [>Created: Fri Nov 27 12:00:53 CET 2015]
 1511B22C2F2A2477 3.17 #module
 >Proto >Proto Collection #zClass
-As0 antragstellerErfassenProcess Big #zClass
+As0 antragstellerErfassen_v2Process Big #zClass
 As0 RD #cInfo
 As0 #process
 As0 @TextInP .ui2RdDataAction .ui2RdDataAction #zField
@@ -21,9 +21,9 @@ As0 @PushWFArc f2 '' #zField
 As0 @RichDialogProcessStart f3 '' #zField
 As0 @RichDialogEnd f4 '' #zField
 As0 @PushWFArc f5 '' #zField
->Proto As0 As0 antragstellerErfassenProcess #zField
+>Proto As0 As0 antragstellerErfassen_v2Process #zField
 As0 f0 guid 1511B22C31671515 #txt
-As0 f0 type einbuergerung_Gruppe6.antragstellerErfassen.antragstellerErfassenData #txt
+As0 f0 type einbuergerung_Gruppe6.antragstellerErfassen_v2.antragstellerErfassen_v2Data #txt
 As0 f0 method start() #txt
 As0 f0 disableUIEvents true #txt
 As0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
@@ -44,14 +44,14 @@ As0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 As0 f0 83 51 26 26 -16 15 #rect
 As0 f0 @|RichDialogInitStartIcon #fIcon
-As0 f1 type einbuergerung_Gruppe6.antragstellerErfassen.antragstellerErfassenData #txt
+As0 f1 type einbuergerung_Gruppe6.antragstellerErfassen_v2.antragstellerErfassen_v2Data #txt
 As0 f1 211 51 26 26 0 12 #rect
 As0 f1 @|RichDialogProcessEndIcon #fIcon
 As0 f2 expr out #txt
 As0 f2 109 64 211 64 #arcP
 As0 f3 guid 1511B22C32093384 #txt
-As0 f3 type einbuergerung_Gruppe6.antragstellerErfassen.antragstellerErfassenData #txt
-As0 f3 actionDecl 'einbuergerung_Gruppe6.antragstellerErfassen.antragstellerErfassenData out;
+As0 f3 type einbuergerung_Gruppe6.antragstellerErfassen_v2.antragstellerErfassen_v2Data #txt
+As0 f3 actionDecl 'einbuergerung_Gruppe6.antragstellerErfassen_v2.antragstellerErfassen_v2Data out;
 ' #txt
 As0 f3 actionTable 'out=in;
 ' #txt
@@ -64,13 +64,13 @@ As0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 As0 f3 83 147 26 26 -15 12 #rect
 As0 f3 @|RichDialogProcessStartIcon #fIcon
-As0 f4 type einbuergerung_Gruppe6.antragstellerErfassen.antragstellerErfassenData #txt
+As0 f4 type einbuergerung_Gruppe6.antragstellerErfassen_v2.antragstellerErfassen_v2Data #txt
 As0 f4 guid 1511B22C321EECF1 #txt
 As0 f4 339 147 26 26 0 12 #rect
 As0 f4 @|RichDialogEndIcon #fIcon
 As0 f5 expr out #txt
 As0 f5 109 160 339 160 #arcP
->Proto As0 .type einbuergerung_Gruppe6.antragstellerErfassen.antragstellerErfassenData #txt
+>Proto As0 .type einbuergerung_Gruppe6.antragstellerErfassen_v2.antragstellerErfassen_v2Data #txt
 >Proto As0 .processKind HTML_DIALOG #txt
 >Proto As0 -8 -8 16 16 16 26 #rect
 >Proto As0 '' #fIcon

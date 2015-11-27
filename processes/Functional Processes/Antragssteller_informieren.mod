@@ -67,7 +67,7 @@ An0 f1 1681 505 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f2 targetWindow NEW:card: #txt
 An0 f2 targetDisplay TOP #txt
-An0 f2 richDialogId einbuergerung_Gruppe6.antragstellerErfassen #txt
+An0 f2 richDialogId einbuergerung_Gruppe6.antragstellerErfassen_v2 #txt
 An0 f2 startMethod start() #txt
 An0 f2 type einbuergerung_Gruppe6.Data #txt
 An0 f2 requestActionDecl '<> param;' #txt
