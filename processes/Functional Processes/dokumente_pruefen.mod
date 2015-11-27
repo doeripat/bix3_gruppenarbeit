@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 00:50:11 CET 2015]
+[>Created: Fri Nov 27 00:54:46 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -71,7 +71,7 @@ Bk2 @PushWFArc f0 '' #zField
 Bk2 @RichDialog f3 '' #zField
 Bk2 @PushWFArc f4 '' #zField
 Bk2 @PushWFArc f2 '' #zField
->Proto Bk2 Bk1 BpmnUserTask #zField
+>Proto Bk2 Bk0 BpmnUserTask #zField
 Bk7 @TextInP .resExport .resExport #zField
 Bk7 @TextInP .type .type #zField
 Bk7 @TextInP .processKind .processKind #zField
@@ -103,7 +103,7 @@ Bk8 @GridStep f4 '' #zField
 Bk8 @PushWFArc f5 '' #zField
 Bk8 @PushWFArc f6 '' #zField
 Bk8 @PushWFArc f0 '' #zField
->Proto Bk8 Bk3 BpmnUserTask #zField
+>Proto Bk8 Bk1 BpmnUserTask #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
 Bk1 @TextInP .processKind .processKind #zField
@@ -117,7 +117,7 @@ Bk1 @PushTrueWFOutG-01 g1 '' #zField
 Bk1 @RichDialog f0 '' #zField
 Bk1 @PushWFArc f1 '' #zField
 Bk1 @PushWFArc f4 '' #zField
->Proto Bk1 Bk0 BpmnUserTask #zField
+>Proto Bk1 Bk2 BpmnUserTask #zField
 dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 dn0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -681,9 +681,12 @@ Bk2 f0 480 312 595 312 #arcP
 Bk2 f3 targetWindow NEW:card: #txt
 Bk2 f3 targetDisplay TOP #txt
 Bk2 f3 richDialogId einbuergerung_Gruppe6.Login #txt
-Bk2 f3 startMethod start() #txt
+Bk2 f3 startMethod start(String,String) #txt
 Bk2 f3 type einbuergerung_Gruppe6.Data #txt
-Bk2 f3 requestActionDecl '<> param;' #txt
+Bk2 f3 requestActionDecl '<String email, String password> param;' #txt
+Bk2 f3 requestMappingAction 'param.email=in.request.email;
+param.password=in.request.password;
+' #txt
 Bk2 f3 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f3 responseMappingAction 'out=in;
@@ -706,8 +709,8 @@ Bk2 f3 @|RichDialogIcon #fIcon
 Bk2 f4 61 312 120 312 #arcP
 Bk2 f2 expr out #txt
 Bk2 f2 232 312 304 312 #arcP
->Proto Bk1 0 0 32 24 18 0 #rect
->Proto Bk1 @|BpmnReceiveTaskIcon #fIcon
+>Proto Bk0 -8 -8 16 16 16 26 #rect
+>Proto Bk0 '' #fIcon
 Bk7 g0 51 235 26 26 0 5 #rect
 Bk7 g0 @|MIGIcon #fIcon
 Bk7 g1 563 251 26 26 0 5 #rect
@@ -715,14 +718,15 @@ Bk7 g1 @|MOGIcon #fIcon
 Bk7 f1 targetWindow NEW:card: #txt
 Bk7 f1 targetDisplay TOP #txt
 Bk7 f1 richDialogId einbuergerung_Gruppe6.Login #txt
-Bk7 f1 startMethod start() #txt
+Bk7 f1 startMethod start(String,String) #txt
 Bk7 f1 type einbuergerung_Gruppe6.Data #txt
-Bk7 f1 requestActionDecl '<> param;' #txt
+Bk7 f1 requestActionDecl '<String email, String password> param;' #txt
+Bk7 f1 requestMappingAction 'param.email=in.request.email;
+param.password=in.request.password;
+' #txt
 Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk7 f1 responseMappingAction 'out=in;
-out.request.email=result.email;
-out.request.password=result.password;
 ' #txt
 Bk7 f1 windowConfiguration '* ' #txt
 Bk7 f1 isAsynch false #txt
@@ -840,8 +844,8 @@ Bk8 f6 expr out #txt
 Bk8 f6 352 150 360 234 #arcP
 Bk8 f0 expr out #txt
 Bk8 f0 440 256 563 256 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BpmnUserTaskIcon #fIcon
+>Proto Bk1 0 0 32 24 18 0 #rect
+>Proto Bk1 @|BpmnReceiveTaskIcon #fIcon
 Bk1 g0 51 243 26 26 0 5 #rect
 Bk1 g0 @|MIGIcon #fIcon
 Bk1 g1 523 243 26 26 0 5 #rect
@@ -877,8 +881,8 @@ Bk1 f0 @|RichDialogIcon #fIcon
 Bk1 f1 77 256 216 256 #arcP
 Bk1 f4 expr out #txt
 Bk1 f4 360 256 523 256 #arcP
->Proto Bk0 -8 -8 16 16 16 26 #rect
->Proto Bk0 '' #fIcon
+>Proto Bk2 -8 -8 16 16 16 26 #rect
+>Proto Bk2 '' #fIcon
 dn0 f23 out f15 tail #connect
 dn0 f15 head f1 mainIn #connect
 dn0 f23 out f26 tail #connect

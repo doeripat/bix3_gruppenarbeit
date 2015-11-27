@@ -10,10 +10,8 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">personalienVervollstaendigen</ui:define>
 		<ui:define name="content">
-			<h3>
-			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
-			</h3>
+			<h3>Personalien vervollständigen</h3>
+			<p>Bitte vervollständigen Sie Ihre Angaben:</p>
 			
 			<h:form id="form">
 				<h:panelGrid columns="2">
@@ -22,46 +20,44 @@
 					</f:facet>
 					
 					<p:outputLabel for="requestEmail" value="Email"/>
-					<p:inputText id="requestEmail" value="#{data.request.email}"></p:inputText>
+					<p:outputLabel id="requestEmail" value="#{data.request.email}" styleClass="readonly_text" />
 					
-					<p:outputLabel for="requestPassword" value="Passwort"/>
-					<p:inputText id="requestPassword" value="#{data.request.password}"></p:inputText>
-					
-					<p:outputLabel for="personGenderCode" value="Geschlecht" />
-			        <p:selectOneRadio id="personGenderCode" value="#{data.person.genderCode}">
+					<p:outputLabel for="personGender" value="Geschlecht" />
+			        <p:selectOneRadio id="personGender" value="#{data.person.gender}" required="true">
 			            <f:selectItem itemLabel="Männlich" itemValue="1" />
 			            <f:selectItem itemLabel="Weiblich" itemValue="2" />
 			        </p:selectOneRadio>
 			        
 			        <p:outputLabel for="personFirstname" value="Vorname"/>
-					<p:inputText id="personFirstname" value="#{data.person.firstname}"></p:inputText>
+					<p:inputText id="personFirstname" value="#{data.person.firstname}" required="true"></p:inputText>
 					
 					<p:outputLabel for="personLastname" value="Nachname"/>
-					<p:inputText id="personLastname" value="#{data.person.lastname}"></p:inputText>
+					<p:inputText id="personLastname" value="#{data.person.lastname}" required="true"></p:inputText>
 					
 					<p:outputLabel for="personBirthday" value="Geburtsdatum"/>
 					<p:calendar id="personBirthday" value="#{data.person.birthday}" pattern="dd.MM.yyyy" size="16" required="true">
-					<f:convertDateTime pattern="dd.MM.yyyy" />
+						<f:convertDateTime pattern="dd.MM.yyyy" />
 					</p:calendar>
 					
 					<p:outputLabel for="requestPhone" value="Telefon"/>
-					<p:inputText id="requestPhone" value="#{data.request.phone}"></p:inputText>
+					<p:inputText id="requestPhone" value="#{data.request.phone}" required="true"></p:inputText>
 					
 					<p:outputLabel for="requestAddress" value="Adresse"/>
-					<p:inputText id="requestAddress" value="#{data.request.address}"></p:inputText>
+					<p:inputText id="requestAddress" value="#{data.request.address}" required="true"></p:inputText>
 					
 					<p:outputLabel for="requestPostcode" value="Postleitzahl"/>
-					<p:inputText id="requestPostcode" value="#{data.request.postcode}"></p:inputText>
+					<p:inputText id="requestPostcode" value="#{data.request.postcode}" required="true"></p:inputText>
 					
 					<p:outputLabel for="requestCity" value="Ort"/>
-					<p:inputText id="requestCity" value="#{data.request.city}"></p:inputText>
+					<p:inputText id="requestCity" value="#{data.request.city}" required="true"></p:inputText>
 					
 					<p:outputLabel for="personNationality" value="Nationalität"/>
-					<p:inputText id="personNationality" value="#{data.person.nationality}"></p:inputText>
+					<p:inputText id="personNationality" value="#{data.person.nationality}" required="true"></p:inputText>
 					
-					<br />
-					<p:commandButton actionListener="#{logic.addPerson}" value="weitere Personen hinzufügen" update="form" icon="ui-icon-plusthick" />
-					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+
+					
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
+					<p:commandButton actionListener="#{logic.addPerson}" value="weitere Personen erfassen" update="form" icon="ui-icon-plusthick" />
 				</h:panelGrid>
 			</h:form>
 			

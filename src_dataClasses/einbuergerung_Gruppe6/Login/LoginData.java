@@ -7,46 +7,106 @@ package einbuergerung_Gruppe6.Login;
 public class LoginData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 2924147475505701965L;
+  private static final long serialVersionUID = 710604759929591489L;
 
-  private transient java.lang.String email;
+  private transient java.lang.String emailUser;
 
   /**
-   * Gets the field email.
-   * @return the value of the field email; may be null.
+   * Gets the field emailUser.
+   * @return the value of the field emailUser; may be null.
    */
-  public java.lang.String getEmail()
+  public java.lang.String getEmailUser()
   {
-    return email;
+    return emailUser;
   }
 
   /**
-   * Sets the field email.
-   * @param _email the new value of the field email.
+   * Sets the field emailUser.
+   * @param _emailUser the new value of the field emailUser.
    */
-  public void setEmail(java.lang.String _email)
+  public void setEmailUser(java.lang.String _emailUser)
   {
-    email = _email;
+    emailUser = _emailUser;
   }
 
-  private transient java.lang.String password;
+  private java.lang.String emailSystem;
 
   /**
-   * Gets the field password.
-   * @return the value of the field password; may be null.
+   * Gets the field emailSystem.
+   * @return the value of the field emailSystem; may be null.
    */
-  public java.lang.String getPassword()
+  public java.lang.String getEmailSystem()
   {
-    return password;
+    return emailSystem;
   }
 
   /**
-   * Sets the field password.
-   * @param _password the new value of the field password.
+   * Sets the field emailSystem.
+   * @param _emailSystem the new value of the field emailSystem.
    */
-  public void setPassword(java.lang.String _password)
+  public void setEmailSystem(java.lang.String _emailSystem)
   {
-    password = _password;
+    emailSystem = _emailSystem;
+  }
+
+  private transient java.lang.String passwordUser;
+
+  /**
+   * Gets the field passwordUser.
+   * @return the value of the field passwordUser; may be null.
+   */
+  public java.lang.String getPasswordUser()
+  {
+    return passwordUser;
+  }
+
+  /**
+   * Sets the field passwordUser.
+   * @param _passwordUser the new value of the field passwordUser.
+   */
+  public void setPasswordUser(java.lang.String _passwordUser)
+  {
+    passwordUser = _passwordUser;
+  }
+
+  private java.lang.String passwordSystem;
+
+  /**
+   * Gets the field passwordSystem.
+   * @return the value of the field passwordSystem; may be null.
+   */
+  public java.lang.String getPasswordSystem()
+  {
+    return passwordSystem;
+  }
+
+  /**
+   * Sets the field passwordSystem.
+   * @param _passwordSystem the new value of the field passwordSystem.
+   */
+  public void setPasswordSystem(java.lang.String _passwordSystem)
+  {
+    passwordSystem = _passwordSystem;
+  }
+
+  private java.lang.String message;
+
+  /**
+   * Gets the field message.
+   * @return the value of the field message; may be null.
+   */
+  public java.lang.String getMessage()
+  {
+    return message;
+  }
+
+  /**
+   * Sets the field message.
+   * @param _message the new value of the field message.
+   */
+  public void setMessage(java.lang.String _message)
+  {
+    message = _message;
   }
 
 }

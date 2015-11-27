@@ -10,50 +10,48 @@
 	<ui:composition template="/layouts/basic.xhtml">
 		<ui:define name="title">PersonenErfassen</ui:define>
 		<ui:define name="content">
-			<h3>
-			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
-			</h3>
+			<h3>Personen erfassen</h3>
+			<p>Erfassen Sie hier zusätzliche Familienmitglieder:</p>
 			
 			<h:form id="form">
-				<h:panelGrid columns="2">
+				<h:panelGrid>
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-					
-					<p:dataTable id="personTable" var="person" value="#{data.personList}">
-						<p:column headerText="Anrede">
-							<h:outputText value="Antragsteller" rendered="#{person.role == 'applicant'}"/>
-					    	<h:outputText value="Erwachsener" rendered="#{person.role == 'adult'}"/>
-					    	<h:outputText value="Kind" rendered="#{person.role == 'child'}"/>
-					  	</p:column> 
-					  	
-						<p:column headerText="Anrede">
-					    	<h:outputText value="Herr" rendered="#{person.genderCode == 1}"/>
-					    	<h:outputText value="Frau" rendered="#{person.genderCode == 2}"/>
-					  	</p:column> 
-					  	
-						<p:column headerText="Vorname">
-					    	<h:outputText value="#{person.firstname}" />
-					  	</p:column>
-					  	
-					  	<p:column headerText="Nachname">
-					    	<h:outputText value="#{person.lastname}" />
-					  	</p:column>
-					  	
-					  	<p:column headerText="Geburtsdatum">
-					    	<h:outputText value="#{person.birthday}" />
-					  	</p:column>
-					  	
-					  	<p:column style="width:32px;text-align: center">
-							<!-- <p:commandButton actionListener="#{logic.editPerson(person)}" update="personTable" icon="ui-icon-pencil" /> -->
-							<p:commandButton actionListener="#{logic.deletePerson(person)}" update="personTable" icon="ui-icon-trash" />
-						</p:column>
-					</p:dataTable>
-					
-					<br />
-					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
-					<p:commandButton actionListener="#{logic.addPerson}" value="Person hinzufügen" update="form" icon="ui-icon-plusthick" />
+					<p:row>
+						<p:dataTable id="personTable" var="person" value="#{data.personList}">
+							<p:column headerText="Anrede">
+								<h:outputText value="Antragsteller" rendered="#{person.role == 'applicant'}"/>
+						    	<h:outputText value="Erwachsener" rendered="#{person.role == 'adult'}"/>
+						    	<h:outputText value="Kind" rendered="#{person.role == 'child'}"/>
+						  	</p:column> 
+						  	
+							<p:column headerText="Anrede">
+						    	<h:outputText value="Herr" rendered="#{person.gender == 1}"/>
+						    	<h:outputText value="Frau" rendered="#{person.gender == 2}"/>
+						  	</p:column> 
+						  	
+							<p:column headerText="Vorname">
+						    	<h:outputText value="#{person.firstname}" />
+						  	</p:column>
+						  	
+						  	<p:column headerText="Nachname">
+						    	<h:outputText value="#{person.lastname}" />
+						  	</p:column>
+						  	
+						  	<p:column headerText="Geburtsdatum">
+						    	<h:outputText value="#{person.birthday}" />
+						  	</p:column>
+						  	
+						  	<p:column style="width:32px;text-align: center">
+								<p:commandButton actionListener="#{logic.deletePerson(person)}" update="personTable" icon="ui-icon-trash" rendered="#{person.role != 'applicant'}"/>
+							</p:column>
+						</p:dataTable>
+					</p:row>
+					<p:row >
+						<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
+						<p:commandButton actionListener="#{logic.addPerson}" value="Person hinzufügen" update="form" icon="ui-icon-plusthick" />
+					</p:row>
 				</h:panelGrid>
 			</h:form>
 			

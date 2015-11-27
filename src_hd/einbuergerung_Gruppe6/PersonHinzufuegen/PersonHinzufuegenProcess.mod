@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Nov 26 23:17:46 CET 2015]
+[>Created: Fri Nov 27 00:55:06 CET 2015]
 15144F2B1C0D4FD2 3.17 #module
 >Proto >Proto Collection #zClass
 Ps0 PersonHinzufuegenProcess Big #zClass
@@ -73,7 +73,7 @@ Ps0 f6 actionDecl 'einbuergerung_Gruppe6.PersonHinzufuegen.PersonHinzufuegenData
 Ps0 f6 actionTable 'out=in;
 out.person.birthday=null;
 out.person.firstname=null;
-out.person.genderCode=null;
+out.person.gender=null;
 out.person.lastname=null;
 out.person.nationality=null;
 out.person.role=null;

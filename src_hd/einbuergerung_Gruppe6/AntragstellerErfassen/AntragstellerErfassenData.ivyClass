@@ -1,4 +1,4 @@
-AntragstellerErfassenData #class
-einbuergerung_Gruppe6.AntragstellerErfassen #namespace
+antragstellerErfassenData #class
+einbuergerung_Gruppe6.antragstellerErfassen #namespace
 email String #field
 email PERSISTENT #fieldModifier

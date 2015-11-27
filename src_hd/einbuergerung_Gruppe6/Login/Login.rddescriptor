@@ -4,18 +4,18 @@
     <startMethod>
         <name>start</name>
         <description>Default dialog start method.</description>
-        <outputParameter>
+        <inputParameter>
             <name>email</name>
             <description></description>
             <parameterType>String</parameterType>
             <nullPermitted>false</nullPermitted>
-        </outputParameter>
-        <outputParameter>
+        </inputParameter>
+        <inputParameter>
             <name>password</name>
             <description></description>
             <parameterType>String</parameterType>
             <nullPermitted>false</nullPermitted>
-        </outputParameter>
+        </inputParameter>
     </startMethod>
     <property>
         <name>guid</name>
