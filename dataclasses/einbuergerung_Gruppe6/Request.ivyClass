@@ -38,3 +38,5 @@ document einbuergerung_Gruppe6.Document #field
 document PERSISTENT #fieldModifier
 commentOnRequest String #field
 commentOnRequest PERSISTENT #fieldModifier
+Continue Boolean #field
+Continue PERSISTENT #fieldModifier

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 25 16:13:39 CET 2015]
+[>Created: Sat Nov 28 14:23:49 CET 2015]
 1513E4291B3CE89A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 erfassungEinwaendeProcess Big #zClass
@@ -107,8 +107,7 @@ es0 f8 actionCode 'import java.util.Calendar;
 Calendar currentDate = Calendar.getInstance();
 currentDate.setTime(new Date());
 DateTime d = currentDate.getTime();
-in.date = d;
-' #txt
+in.date = d;' #txt
 es0 f8 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
 es0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>

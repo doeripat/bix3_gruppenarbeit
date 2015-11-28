@@ -4,10 +4,22 @@
     <startMethod>
         <name>start</name>
         <description>Default dialog start method.</description>
+        <inputParameter>
+            <name>request</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+        <outputParameter>
+            <name>request</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </outputParameter>
     </startMethod>
     <property>
         <name>guid</name>
-        <value>1511B437E42D89B1</value>
+        <value>1514E50277775028</value>
         <readOnly>true</readOnly>
     </property>
     <property>

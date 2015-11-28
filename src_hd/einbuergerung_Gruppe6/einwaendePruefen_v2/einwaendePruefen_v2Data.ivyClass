@@ -1,0 +1,5 @@
+einwaendePruefen_v2Data #class
+einbuergerung_Gruppe6.einwaendePruefen_v2 #namespace
+request einbuergerung_Gruppe6.Request #field
+readObjections Recordset #field
+readObjections PERSISTENT #fieldModifier

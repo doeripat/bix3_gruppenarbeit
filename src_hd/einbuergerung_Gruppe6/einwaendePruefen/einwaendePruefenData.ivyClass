@@ -1,5 +1,0 @@
-einwaendePruefenData #class
-einbuergerung_Gruppe6.einwaendePruefen #namespace
-objections List<einbuergerung_Gruppe6.Objection> #field
-readObjections Recordset #field
-readObjections PERSISTENT #fieldModifier

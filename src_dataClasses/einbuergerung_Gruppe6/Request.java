@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 1221306643359069016L;
+  private static final long serialVersionUID = 6557682136382373129L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -387,6 +387,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setCommentOnRequest(java.lang.String _commentOnRequest)
   {
     commentOnRequest = _commentOnRequest;
+  }
+
+  private java.lang.Boolean Continue;
+
+  /**
+   * Gets the field Continue.
+   * @return the value of the field Continue; may be null.
+   */
+  public java.lang.Boolean getContinue()
+  {
+    return Continue;
+  }
+
+  /**
+   * Sets the field Continue.
+   * @param _Continue the new value of the field Continue.
+   */
+  public void setContinue(java.lang.Boolean _Continue)
+  {
+    Continue = _Continue;
   }
 
 }

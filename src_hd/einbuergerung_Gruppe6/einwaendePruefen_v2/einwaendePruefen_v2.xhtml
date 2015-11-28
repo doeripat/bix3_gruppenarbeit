@@ -8,7 +8,7 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <h:body>
 	<ui:composition template="/layouts/basic.xhtml">
-		<ui:define name="title">einwaendePruefen</ui:define>
+		<ui:define name="title">einwaendePruefen_v2</ui:define>
 		<ui:define name="content">
 			<h3>
 			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
@@ -18,26 +18,23 @@
 			<h:form id="form">
 				<h:panelGrid columns="2">
 					<f:facet name="header">
-						<p:messages>Bitte folgende Liste überprüfen</p:messages>
+						<p:messages></p:messages>
 					</f:facet>
+					<p:dataTable var="objection" value="#{data.request.objections}">
+						  <p:column headerText="Autor">
+						    <h:outputText value="#{objection.author}" />
+						  </p:column>
+						  <p:column headerText="Datum">
+						    <h:outputText value="#{objection.date}" />
+						  </p:column>
+						  <p:column headerText="Begründung">
+						    <h:outputText value="#{objection.text}" />
+						  </p:column>
+						</p:dataTable>
 					
-					<p:dataTable var="objection" value="#{data.objections}">
-					    <p:column headerText="Autor">
-					        <h:outputText value="#{objection.author}" />
-					    </p:column>
-					 
-					    <p:column headerText="Datum">
-					        <h:outputText value="#{objection.date}" />
-					    </p:column>
-					 
-					    <p:column headerText="Text">
-					        <h:outputText value="#{objection.text}" />
-					    </p:column>
-					    
-					</p:dataTable>
 					
 					<br />
-					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 				</h:panelGrid>
 			</h:form>
 			

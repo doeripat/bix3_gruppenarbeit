@@ -4,16 +4,22 @@
     <startMethod>
         <name>start</name>
         <description>Default dialog start method.</description>
-        <outputParameter>
-            <name>objections</name>
+        <inputParameter>
+            <name>request</name>
             <description></description>
-            <parameterType>List&lt;einbuergerung_Gruppe6.Objection&gt;</parameterType>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+        <outputParameter>
+            <name>request</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
             <nullPermitted>false</nullPermitted>
         </outputParameter>
     </startMethod>
     <property>
         <name>guid</name>
-        <value>1513E7B5392FD642</value>
+        <value>1514E48259076EC7</value>
         <readOnly>true</readOnly>
     </property>
     <property>

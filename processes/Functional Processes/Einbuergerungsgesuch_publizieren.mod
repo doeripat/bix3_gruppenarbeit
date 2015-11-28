@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Nov 25 16:47:23 CET 2015]
+[>Created: Sat Nov 28 14:41:00 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -22,21 +22,11 @@ En0 @PushWFArc f24 '' #zField
 En0 @EndTask f15 '' #zField
 En0 @PushWFArc f16 '' #zField
 En0 @TaskSwitch f7 '' #zField
-En0 @RichDialog f2 '' #zField
 En0 @EMail f11 '' #zField
 En0 @InfoButton f19 '' #zField
 En0 @EMail f12 '' #zField
 En0 @TkArc f13 '' #zField
-En0 @RichDialog f30 '' #zField
 En0 @TaskSwitch f32 '' #zField
-En0 @PushWFArc f31 '' #zField
-En0 @DBStep f5 '' #zField
-En0 @PushWFArc f6 '' #zField
-En0 @PushWFArc f8 '' #zField
-En0 @PushWFArc f9 '' #zField
-En0 @ProcessException f10 '' #zField
-En0 @PushWFArc f36 '' #zField
-En0 @PushWFArc f14 '' #zField
 En0 @StartRequest f17 '' #zField
 En0 @RichDialog f22 '' #zField
 En0 @PushWFArc f37 '' #zField
@@ -47,7 +37,15 @@ En0 @PushWFArc f34 '' #zField
 En0 @PushWFArc f35 '' #zField
 En0 @TkArc f4 '' #zField
 En0 @StartRequest f23 '' #zField
-En0 @PushWFArc f25 '' #zField
+En0 @RichDialog f26 '' #zField
+En0 @PushWFArc f5 '' #zField
+En0 @PushWFArc f6 '' #zField
+En0 @ProcessException f10 '' #zField
+En0 @PushWFArc f8 '' #zField
+En0 @RichDialog f25 '' #zField
+En0 @PushWFArc f2 '' #zField
+En0 @PushWFArc f9 '' #zField
+En0 @PushWFArc f14 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
@@ -72,7 +70,7 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f0 81 89 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Data #txt
-En0 f1 1465 81 30 30 0 15 #rect
+En0 f1 1345 81 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
 En0 f18 type einbuergerung_Gruppe6.Data #txt
 En0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -86,7 +84,7 @@ erwünscht?</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f18 1272 392 32 32 -29 21 #rect
+En0 f18 1152 392 32 32 -29 21 #rect
 En0 f18 @|AlternativeIcon #fIcon
 En0 f20 type einbuergerung_Gruppe6.Data #txt
 En0 f20 processCall 'Functional Processes/Rechnungswesen:call(einbuergerung_Gruppe6.Data)' #txt
@@ -109,9 +107,10 @@ Weiterführung</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f20 1320 74 112 44 -38 -20 #rect
+En0 f20 1200 74 112 44 -38 -20 #rect
 En0 f20 @|CallSubIcon #fIcon
 En0 f21 expr in #txt
+En0 f21 outCond in.request.Continue #txt
 En0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -121,14 +120,14 @@ En0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f21 1288 392 1320 96 #arcP
-En0 f21 1 1288 96 #addKink
+En0 f21 1168 392 1200 96 #arcP
+En0 f21 1 1168 96 #addKink
 En0 f21 0 0.06418918918918919 -12 0 #arcLabel
 En0 f24 expr out #txt
-En0 f24 1432 96 1465 96 #arcP
+En0 f24 1312 96 1345 96 #arcP
 En0 f24 0 0.3970514322284797 0 0 #arcLabel
 En0 f15 type einbuergerung_Gruppe6.Data #txt
-En0 f15 1369 393 30 30 0 15 #rect
+En0 f15 1249 393 30 30 0 15 #rect
 En0 f15 @|EndIcon #fIcon
 En0 f16 expr in #txt
 En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -140,7 +139,7 @@ En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f16 1304 408 1369 408 #arcP
+En0 f16 1184 408 1249 408 #arcP
 En0 f16 0 0.3150684931506849 0 -12 #arcLabel
 En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -149,7 +148,7 @@ En0 f7 actionTable 'out=in1;
 En0 f7 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f7 outLinks "TaskA.ivp" #txt
 En0 f7 caseData '#
-#Mon Nov 23 15:59:48 CET 2015
+#Sat Nov 28 14:40:25 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -177,14 +176,15 @@ type.code=
 type.name=
 ' #txt
 En0 f7 taskData '#
-#Mon Nov 23 15:59:48 CET 2015
+#Sat Nov 28 14:40:25 CET 2015
 TaskA.EXC=1506BC4D39F48130-f10-buffer
 TaskA.EXP=''1440h''
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
+TaskA.NAM=Bitte \u00FCber Weiterf\u00FChrung entscheiden
 TaskA.PRI=2
-TaskA.ROL=Everybody
+TaskA.ROL=Antragsteller
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -194,8 +194,9 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte über Weiterführung entscheiden"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Antragsteller");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryPeriod(1000 * (''1440h'').toNumber());
 taskDef.setExpiryActivator("Everybody");
@@ -205,33 +206,8 @@ taskDefinitions.add(taskDef);
 ' #txt
 En0 f7 type einbuergerung_Gruppe6.Data #txt
 En0 f7 template "" #txt
-En0 f7 952 392 32 32 0 16 #rect
+En0 f7 832 392 32 32 0 16 #rect
 En0 f7 @|TaskSwitchIcon #fIcon
-En0 f2 targetWindow NEW:card: #txt
-En0 f2 targetDisplay TOP #txt
-En0 f2 startMethod start() #txt
-En0 f2 type einbuergerung_Gruppe6.Data #txt
-En0 f2 requestActionDecl '<> param;' #txt
-En0 f2 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f2 responseMappingAction 'out=in;
-' #txt
-En0 f2 windowConfiguration '* ' #txt
-En0 f2 isAsynch false #txt
-En0 f2 isInnerRd false #txt
-En0 f2 userContext '* ' #txt
-En0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Entscheid
-Weiterführung</name>
-        <nameStyle>23
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f2 1072 386 112 44 -38 -16 #rect
-En0 f2 @|RichDialogIcon #fIcon
 En0 f11 beanConfig '"{/emailSubject ""Neues Gesuch für Publikation""/emailFrom ""migration@amt.sz.ch""/emailReplyTo """"/emailTo ""christian@kappler.co""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Publikation:\\n\\nName: <%=in.request.personList%>\\nVorname: <%=in.request.personList%>\\nGeburtsdatum: <%=in.request.personList%>\\nUniqueidentifier: <%=in.request.personList%>""/emailAttachments * }"' #txt
 En0 f11 type einbuergerung_Gruppe6.Data #txt
 En0 f11 timeout 0 #txt
@@ -259,7 +235,7 @@ automatisch noch am gleichen Tag</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f19 288 138 208 60 -98 -24 #rect
+En0 f19 264 154 208 60 -98 -24 #rect
 En0 f19 @|IBIcon #fIcon
 En0 f19 -14336|-1|-16777216 #nodeStyle
 En0 f12 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
@@ -276,45 +252,20 @@ Entscheidung fällen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f12 896 82 144 44 -51 -16 #rect
+En0 f12 776 82 144 44 -51 -16 #rect
 En0 f12 @|EMailIcon #fIcon
 En0 f13 expr out #txt
 En0 f13 type einbuergerung_Gruppe6.Data #txt
 En0 f13 var in1 #txt
-En0 f13 968 126 968 392 #arcP
-En0 f30 targetWindow NEW:card: #txt
-En0 f30 targetDisplay TOP #txt
-En0 f30 richDialogId einbuergerung_Gruppe6.einwaendePruefen #txt
-En0 f30 startMethod start() #txt
-En0 f30 type einbuergerung_Gruppe6.Data #txt
-En0 f30 requestActionDecl '<> param;' #txt
-En0 f30 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f30 responseMappingAction 'out=in;
-out.request.objections=result.objections;
-' #txt
-En0 f30 windowConfiguration '* ' #txt
-En0 f30 isAsynch false #txt
-En0 f30 isInnerRd false #txt
-En0 f30 userContext '* ' #txt
-En0 f30 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Einwände
-Prüfen</name>
-        <nameStyle>15,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f30 584 82 112 44 -27 -16 #rect
-En0 f30 @|RichDialogIcon #fIcon
+En0 f13 848 126 848 392 #arcP
 En0 f32 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f32 actionTable 'out=in2;
 ' #txt
 En0 f32 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f32 outLinks "TaskA.ivp" #txt
 En0 f32 caseData '#
-#Wed Nov 25 16:17:17 CET 2015
+#Sat Nov 28 14:35:34 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -342,7 +293,7 @@ type.code=
 type.name=
 ' #txt
 En0 f32 taskData '#
-#Wed Nov 25 16:17:17 CET 2015
+#Sat Nov 28 14:35:34 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -377,61 +328,6 @@ En0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 En0 f32 496 88 32 32 -41 -37 #rect
 En0 f32 @|TaskSwitchIcon #fIcon
-En0 f31 expr data #txt
-En0 f31 outCond ivp=="TaskA.ivp" #txt
-En0 f31 528 104 584 104 #arcP
-En0 f31 0 0.4032620619516948 0 0 #arcLabel
-En0 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f5 actionTable 'out=in;
-' #txt
-En0 f5 dbUrl AmazonDB #txt
-En0 f5 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-En0 f5 lotSize 2147483647 #txt
-En0 f5 startIdx 0 #txt
-En0 f5 type einbuergerung_Gruppe6.Data #txt
-En0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Gültige Einwände
-In DB persistieren</name>
-        <nameStyle>35
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f5 728 82 128 44 -44 -16 #rect
-En0 f5 @|DBStepIcon #fIcon
-En0 f6 expr out #txt
-En0 f6 696 104 728 104 #arcP
-En0 f6 0 0.4032620619516948 0 0 #arcLabel
-En0 f8 expr out #txt
-En0 f8 856 104 896 104 #arcP
-En0 f8 0 0.4032620619516948 0 0 #arcLabel
-En0 f9 expr data #txt
-En0 f9 outCond ivp=="TaskA.ivp" #txt
-En0 f9 984 408 1072 408 #arcP
-En0 f10 .resExport export #txt
-En0 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f10 actionTable 'out=in;
-' #txt
-En0 f10 type einbuergerung_Gruppe6.Data #txt
-En0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Ende</name>
-        <nameStyle>4,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f10 1225 81 30 30 -14 17 #rect
-En0 f10 @|ExceptionIcon #fIcon
-En0 f36 expr out #txt
-En0 f36 1255 96 1320 96 #arcP
-En0 f14 expr out #txt
-En0 f14 1184 408 1272 408 #arcP
 En0 f17 outLink start.ivp #txt
 En0 f17 type einbuergerung_Gruppe6.Data #txt
 En0 f17 inParamDecl '<> param;' #txt
@@ -495,28 +391,36 @@ Calendar currentDate = Calendar.getInstance();
 currentDate.setTime(new Date());
 DateTime d = currentDate.getTime();
 in.request.publicationDate = d;
+
+
+Calendar endPeriod = Calendar.getInstance(); 
+endPeriod.setTime(new Date());
+endPeriod.add(Calendar.Date, 20);
+DateTime e = endPeriod.getTime(); 
+in.request.endObjectionPeriod = e;
 ' #txt
 En0 f3 type einbuergerung_Gruppe6.Data #txt
 En0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Set PublicationDate</name>
-        <nameStyle>19,7
+        <name>Set Publication Date
+and endPeriodTime</name>
+        <nameStyle>38,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 f3 320 82 112 44 -53 -8 #rect
+En0 f3 304 82 144 44 -51 -16 #rect
 En0 f3 @|StepIcon #fIcon
 En0 f34 expr out #txt
-En0 f34 272 104 320 104 #arcP
+En0 f34 272 104 304 104 #arcP
 En0 f34 0 0.28881725983930495 0 0 #arcLabel
 En0 f35 expr out #txt
 En0 f35 111 104 160 104 #arcP
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in2 #txt
-En0 f4 432 104 496 104 #arcP
+En0 f4 448 104 496 104 #arcP
 En0 f23 outLink start2.ivp #txt
 En0 f23 type einbuergerung_Gruppe6.Data #txt
 En0 f23 inParamDecl '<> param;' #txt
@@ -536,8 +440,96 @@ En0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f23 @C|.responsibility Everybody #txt
 En0 f23 529 145 30 30 -24 17 #rect
 En0 f23 @|StartRequestIcon #fIcon
-En0 f25 expr out #txt
-En0 f25 556 152 602 126 #arcP
+En0 f26 targetWindow NEW:card: #txt
+En0 f26 targetDisplay TOP #txt
+En0 f26 richDialogId einbuergerung_Gruppe6.einwaendePruefen_v2 #txt
+En0 f26 startMethod start(einbuergerung_Gruppe6.Request) #txt
+En0 f26 type einbuergerung_Gruppe6.Data #txt
+En0 f26 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+En0 f26 requestMappingAction 'param.request=in.request;
+' #txt
+En0 f26 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f26 responseMappingAction 'out=in;
+out.request=result.request;
+' #txt
+En0 f26 windowConfiguration '* ' #txt
+En0 f26 isAsynch false #txt
+En0 f26 isInnerRd false #txt
+En0 f26 userContext '* ' #txt
+En0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Einwände auf formale
+Korrektheit prüfen</name>
+        <nameStyle>21,7
+18,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f26 592 82 144 44 -54 -16 #rect
+En0 f26 @|RichDialogIcon #fIcon
+En0 f5 expr data #txt
+En0 f5 outCond ivp=="TaskA.ivp" #txt
+En0 f5 528 104 592 104 #arcP
+En0 f6 expr out #txt
+En0 f6 736 104 776 104 #arcP
+En0 f10 .resExport export #txt
+En0 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f10 actionTable 'out=in;
+' #txt
+En0 f10 type einbuergerung_Gruppe6.Data #txt
+En0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Keine Antwort</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f10 1249 465 30 30 -37 17 #rect
+En0 f10 @|ExceptionIcon #fIcon
+En0 f8 expr out #txt
+En0 f8 1264 465 1264 423 #arcP
+En0 f25 targetWindow NEW:card: #txt
+En0 f25 targetDisplay TOP #txt
+En0 f25 richDialogId einbuergerung_Gruppe6.entscheidWeiterfuehrung #txt
+En0 f25 startMethod start(einbuergerung_Gruppe6.Request) #txt
+En0 f25 type einbuergerung_Gruppe6.Data #txt
+En0 f25 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+En0 f25 requestMappingAction 'param.request=in.request;
+' #txt
+En0 f25 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f25 responseMappingAction 'out=in;
+out.request=result.request;
+' #txt
+En0 f25 windowConfiguration '* ' #txt
+En0 f25 isAsynch false #txt
+En0 f25 isInnerRd false #txt
+En0 f25 userContext '* ' #txt
+En0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Entscheid
+Weiterführung</name>
+        <nameStyle>23,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f25 960 386 112 44 -38 -16 #rect
+En0 f25 @|RichDialogIcon #fIcon
+En0 f2 expr data #txt
+En0 f2 outCond ivp=="TaskA.ivp" #txt
+En0 f2 864 408 960 408 #arcP
+En0 f9 expr out #txt
+En0 f9 1072 408 1152 408 #arcP
+En0 f14 expr out #txt
+En0 f14 557 153 664 126 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -573,18 +565,6 @@ En0 f18 out f16 tail #connect
 En0 f16 head f15 mainIn #connect
 En0 f12 mainOut f13 tail #connect
 En0 f13 head f7 in #connect
-En0 f32 out f31 tail #connect
-En0 f31 head f30 mainIn #connect
-En0 f30 mainOut f6 tail #connect
-En0 f6 head f5 mainIn #connect
-En0 f5 mainOut f8 tail #connect
-En0 f8 head f12 mainIn #connect
-En0 f7 out f9 tail #connect
-En0 f9 head f2 mainIn #connect
-En0 f10 mainOut f36 tail #connect
-En0 f36 head f20 mainIn #connect
-En0 f2 mainOut f14 tail #connect
-En0 f14 head f18 in #connect
 En0 f17 mainOut f37 tail #connect
 En0 f37 head f22 mainIn #connect
 En0 f22 mainOut f39 tail #connect
@@ -595,5 +575,15 @@ En0 f0 mainOut f35 tail #connect
 En0 f35 head f11 mainIn #connect
 En0 f3 mainOut f4 tail #connect
 En0 f4 head f32 in #connect
-En0 f23 mainOut f25 tail #connect
-En0 f25 head f30 mainIn #connect
+En0 f32 out f5 tail #connect
+En0 f5 head f26 mainIn #connect
+En0 f26 mainOut f6 tail #connect
+En0 f6 head f12 mainIn #connect
+En0 f10 mainOut f8 tail #connect
+En0 f8 head f15 mainIn #connect
+En0 f7 out f2 tail #connect
+En0 f2 head f25 mainIn #connect
+En0 f25 mainOut f9 tail #connect
+En0 f9 head f18 in #connect
+En0 f23 mainOut f14 tail #connect
+En0 f14 head f26 mainIn #connect
