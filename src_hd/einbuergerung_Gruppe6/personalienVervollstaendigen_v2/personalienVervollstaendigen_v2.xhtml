@@ -54,6 +54,11 @@
 					<p:outputLabel for="personNationality" value="Nationalität"/>
 					<p:inputText id="personNationality" value="#{data.person.nationality}" required="true"></p:inputText>
 					
+					<p:outputLabel for="requestDiscount" value=" Sind Sie Schüler, Lehrling oder Student?" />
+			        <p:selectOneRadio id="requestDiscount" value="#{data.request.discount}" required="true">
+			            <f:selectItem itemLabel="Ja" itemValue="true" />
+			            <f:selectItem itemLabel="Nein" itemValue="false" />
+			        </p:selectOneRadio>
 
 					
 					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />

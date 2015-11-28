@@ -6,3 +6,5 @@ addPerson Boolean #field
 addPerson PERSISTENT #fieldModifier
 person einbuergerung_Gruppe6.Person #field
 person PERSISTENT #fieldModifier
+invoice einbuergerung_Gruppe6.Invoice #field
+invoice PERSISTENT #fieldModifier

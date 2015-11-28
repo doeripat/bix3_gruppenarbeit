@@ -8,3 +8,7 @@ requestID String #field
 requestID PERSISTENT #fieldModifier
 date DateTime #field
 date PERSISTENT #fieldModifier
+endPeriodDate DateTime #field
+endPeriodDate PERSISTENT #fieldModifier
+valid Boolean #field
+valid PERSISTENT #fieldModifier

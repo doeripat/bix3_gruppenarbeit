@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Nov 28 15:23:40 CET 2015]
+[>Created: Sat Nov 28 17:44:36 CET 2015]
 1514E482577A784A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 einwaendePruefen_v2Process Big #zClass
@@ -27,16 +27,12 @@ es0 @PushWFArc f16 '' #zField
 es0 @PushWFArc f7 '' #zField
 es0 @PushWFArc f2 '' #zField
 es0 @PushWFArc f9 '' #zField
-es0 @PushWFArc f15 '' #zField
-es0 @DBStep f14 '' #zField
-es0 @GridStep f12 '' #zField
-es0 @PushWFArc f5 '' #zField
-es0 @PushWFArc f13 '' #zField
 es0 @RichDialogMethodStart f22 '' #zField
 es0 @RichDialogProcessEnd f23 '' #zField
 es0 @PushWFArc f18 '' #zField
 es0 @PushWFArc f17 '' #zField
 es0 @GridStep f25 '' #zField
+es0 @PushWFArc f5 '' #zField
 >Proto es0 es0 einwaendePruefen_v2Process #zField
 es0 f0 guid 1514E4825AAB5E81 #txt
 es0 f0 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
@@ -198,52 +194,6 @@ es0 f9 616 86 952 77 #arcP
 es0 f9 1 616 112 #addKink
 es0 f9 2 952 112 #addKink
 es0 f9 1 0.5133928571428571 0 0 #arcLabel
-es0 f15 expr out #txt
-es0 f15 408 328 520 328 #arcP
-es0 f14 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
-' #txt
-es0 f14 actionTable 'out=in;
-' #txt
-es0 f14 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
-<INSERT><Table name=''Objection''/></INSERT>' #txt
-es0 f14 dbUrl AmazonDB #txt
-es0 f14 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-es0 f14 lotSize 2147483647 #txt
-es0 f14 startIdx 0 #txt
-es0 f14 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
-es0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Add new recordset 
-to Database</name>
-        <nameStyle>30,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-es0 f14 520 306 128 44 -46 -16 #rect
-es0 f14 @|DBStepIcon #fIcon
-es0 f12 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
-' #txt
-es0 f12 actionTable 'out=in;
-' #txt
-es0 f12 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
-es0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Build recordset</name>
-        <nameStyle>15,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-es0 f12 296 306 112 44 -41 -8 #rect
-es0 f12 @|StepIcon #fIcon
-es0 f5 expr out #txt
-es0 f5 101 328 296 328 #arcP
-es0 f13 expr out #txt
-es0 f13 648 328 931 328 #arcP
 es0 f22 guid 1514E6D7528A0AF2 #txt
 es0 f22 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 es0 f22 method DeleteObjection(einbuergerung_Gruppe6.Objection) #txt
@@ -290,6 +240,8 @@ es0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 es0 f25 384 178 112 44 -45 -8 #rect
 es0 f25 @|StepIcon #fIcon
+es0 f5 expr out #txt
+es0 f5 101 328 931 328 #arcP
 >Proto es0 .type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 >Proto es0 .processKind HTML_DIALOG #txt
 >Proto es0 -8 -8 16 16 16 26 #rect
@@ -302,13 +254,9 @@ es0 f0 mainOut f2 tail #connect
 es0 f2 head f6 mainIn #connect
 es0 f8 mainOut f9 tail #connect
 es0 f9 head f1 mainIn #connect
-es0 f12 mainOut f15 tail #connect
-es0 f15 head f14 mainIn #connect
-es0 f3 mainOut f5 tail #connect
-es0 f5 head f12 mainIn #connect
-es0 f14 mainOut f13 tail #connect
-es0 f13 head f4 mainIn #connect
 es0 f22 mainOut f17 tail #connect
 es0 f17 head f25 mainIn #connect
 es0 f25 mainOut f18 tail #connect
 es0 f18 head f23 mainIn #connect
+es0 f3 mainOut f5 tail #connect
+es0 f5 head f4 mainIn #connect

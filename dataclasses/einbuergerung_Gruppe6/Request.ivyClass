@@ -40,3 +40,7 @@ commentOnRequest String #field
 commentOnRequest PERSISTENT #fieldModifier
 Continue Boolean #field
 Continue PERSISTENT #fieldModifier
+discount Boolean #field
+discount PERSISTENT #fieldModifier
+endReason String #field
+endReason PERSISTENT #fieldModifier

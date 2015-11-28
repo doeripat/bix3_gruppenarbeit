@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Nov 28 15:50:24 CET 2015]
+[>Created: Sat Nov 28 19:52:59 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -14,39 +14,29 @@ Rn0 @MessageFlowOutP-0n messageOut messageOut #zField
 Rn0 @TextInP .xml .xml #zField
 Rn0 @TextInP .responsibility .responsibility #zField
 Rn0 @StartSub f0 '' #zField
-Rn0 @GridStep f31 '' #zField
 Rn0 @EMail f32 '' #zField
-Rn0 @DBStep f33 '' #zField
-Rn0 @PushWFArc f3 '' #zField
-Rn0 @PushWFArc f34 '' #zField
-Rn0 @PushWFArc f35 '' #zField
-Rn0 @Split f7 '' #zField
-Rn0 @GridStep f37 '' #zField
-Rn0 @TaskSwitch f36 '' #zField
-Rn0 @PushWFArc f38 '' #zField
-Rn0 @PushWFArc f39 '' #zField
-Rn0 @TkArc f40 '' #zField
-Rn0 @TkArc f41 '' #zField
-Rn0 @Alternative f42 '' #zField
-Rn0 @PushWFArc f43 '' #zField
 Rn0 @EMail f44 '' #zField
-Rn0 @PushWFArc f45 '' #zField
-Rn0 @TaskSwitch f46 '' #zField
-Rn0 @TkArc f47 '' #zField
 Rn0 @Alternative f48 '' #zField
-Rn0 @PushWFArc f50 '' #zField
-Rn0 @DBStep f51 '' #zField
-Rn0 @EMail f52 '' #zField
-Rn0 @PushWFArc f53 '' #zField
-Rn0 @PushWFArc f54 '' #zField
-Rn0 @PushWFArc f55 '' #zField
 Rn0 @EndSub f1 '' #zField
+Rn0 @GridStep f3 '' #zField
+Rn0 @PushWFArc f4 '' #zField
+Rn0 @PushWFArc f2 '' #zField
+Rn0 @CallSub f6 '' #zField
+Rn0 @GridStep f9 '' #zField
 Rn0 @PushWFArc f10 '' #zField
-Rn0 @GridStep f56 '' #zField
-Rn0 @PushWFArc f57 '' #zField
-Rn0 @TkArc f49 '' #zField
+Rn0 @PushWFArc f5 '' #zField
+Rn0 @GridStep f11 '' #zField
+Rn0 @PushWFArc f13 '' #zField
+Rn0 @GridStep f15 '' #zField
+Rn0 @Alternative f18 '' #zField
+Rn0 @PushWFArc f20 '' #zField
+Rn0 @PushWFArc f12 '' #zField
+Rn0 @PushWFArc f21 '' #zField
+Rn0 @PushWFArc f7 '' #zField
+Rn0 @PushWFArc f8 '' #zField
+Rn0 @PushWFArc f14 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
-Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data,java.lang.Boolean paymentReceived> param;' #txt
+Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Invoice invoice,einbuergerung_Gruppe6.Data data> param;' #txt
 Rn0 f0 inParamTable 'out=param.data;
 ' #txt
 Rn0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
@@ -55,7 +45,7 @@ Rn0 f0 outParamTable 'result.data=in;
 ' #txt
 Rn0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Rn0 f0 callSignature call(einbuergerung_Gruppe6.Data,Boolean) #txt
+Rn0 f0 callSignature call(einbuergerung_Gruppe6.Invoice,einbuergerung_Gruppe6.Data) #txt
 Rn0 f0 type einbuergerung_Gruppe6.Data #txt
 Rn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -68,25 +58,7 @@ Rn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Rn0 f0 49 81 30 30 -26 17 #rect
 Rn0 f0 @|StartSubIcon #fIcon
-Rn0 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Rn0 f31 actionTable 'out=in;
-' #txt
-Rn0 f31 type einbuergerung_Gruppe6.Data #txt
-Rn0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>E-Rechnung
-generieren</name>
-        <nameStyle>21,7
-</nameStyle>
-        <desc>Aufgrund  von Grund Betrag festlegen</desc>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f31 288 74 112 44 -34 -16 #rect
-Rn0 f31 @|StepIcon #fIcon
-Rn0 f32 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
+Rn0 f32 beanConfig '"{/emailSubject ""Rechung <%=in.invoice.invoiceNumber%> für Gesuch <%=in.invoice.type%>""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBitte begleichen sie folgende Rechnung innert 30 Tagen\\n\\n-------------------------------------------------------------------\\nRechnung:\\n\\nGrund: \\n<%=in.invoice.type%> <%=in.request.uniqueIdentifier%>\\n\\nBetrag:\\nCHF <%=in.invoice.amount%>.00\\n\\nZugunsten von:\\nFinanzdirektion Kanton Schwyz\\nPostfach\\nSchwyz\\n\\nKonto: 70-130-3\\nIBAN: CH50 0000 0 0000 0 000 00 00\\n\\n-------------------------------------------------------------------""/emailAttachments * }"' #txt
 Rn0 f32 type einbuergerung_Gruppe6.Data #txt
 Rn0 f32 timeout 0 #txt
 Rn0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -94,124 +66,14 @@ Rn0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <language>
         <name>Rechnung
 senden</name>
-        <nameStyle>15
+        <nameStyle>15,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f32 424 74 112 44 -28 -16 #rect
+Rn0 f32 360 74 112 44 -28 -16 #rect
 Rn0 f32 @|EMailIcon #fIcon
-Rn0 f33 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Rn0 f33 actionTable 'out=in;
-' #txt
-Rn0 f33 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE ANY_SQL SYSTEM  ""sqlStatements.dtd"">
-<ANY_SQL><Verbatim quote=''true''></Verbatim></ANY_SQL>' #txt
-Rn0 f33 dbUrl AmazonDB #txt
-Rn0 f33 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-Rn0 f33 lotSize 2147483647 #txt
-Rn0 f33 startIdx 0 #txt
-Rn0 f33 type einbuergerung_Gruppe6.Data #txt
-Rn0 f33 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Daten von Antragsteller
-aus DB lesen</name>
-        <nameStyle>36
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f33 104 74 160 44 -59 -16 #rect
-Rn0 f33 @|DBStepIcon #fIcon
-Rn0 f3 expr out #txt
-Rn0 f3 79 96 104 96 #arcP
-Rn0 f34 expr out #txt
-Rn0 f34 264 96 288 96 #arcP
-Rn0 f35 expr out #txt
-Rn0 f35 400 96 424 96 #arcP
-Rn0 f7 actionDecl 'einbuergerung_Gruppe6.Data out1;
-einbuergerung_Gruppe6.Data out2;
-' #txt
-Rn0 f7 actionTable 'out1=in;
-' #txt
-Rn0 f7 type einbuergerung_Gruppe6.Data #txt
-Rn0 f7 552 80 32 32 0 16 #rect
-Rn0 f7 @|ThreadIcon #fIcon
-Rn0 f37 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Rn0 f37 actionTable 'out=in;
-' #txt
-Rn0 f37 type einbuergerung_Gruppe6.Data #txt
-Rn0 f37 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Random (Prototyp)
-Zahlung eingegangen</name>
-        <nameStyle>37
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f37 584 154 144 44 -54 -16 #rect
-Rn0 f37 @|StepIcon #fIcon
-Rn0 f36 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Rn0 f36 actionTable 'out=in1;
-' #txt
-Rn0 f36 outTypes "einbuergerung_Gruppe6.Data" #txt
-Rn0 f36 outLinks "TaskA.ivp" #txt
-Rn0 f36 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDefinitions.add(taskDef);
-' #txt
-Rn0 f36 type einbuergerung_Gruppe6.Data #txt
-Rn0 f36 template "" #txt
-Rn0 f36 728 80 32 32 0 16 #rect
-Rn0 f36 @|TaskSwitchIcon #fIcon
-Rn0 f38 expr out #txt
-Rn0 f38 536 96 552 96 #arcP
-Rn0 f39 expr out1 #txt
-Rn0 f39 568 112 584 176 #arcP
-Rn0 f39 1 568 176 #addKink
-Rn0 f39 0 0.8931809030229154 0 0 #arcLabel
-Rn0 f40 expr out2 #txt
-Rn0 f40 type einbuergerung_Gruppe6.Data #txt
-Rn0 f40 var in1 #txt
-Rn0 f40 584 96 728 96 #arcP
-Rn0 f41 expr out #txt
-Rn0 f41 type einbuergerung_Gruppe6.Data #txt
-Rn0 f41 var in2 #txt
-Rn0 f41 728 176 744 112 #arcP
-Rn0 f41 1 744 176 #addKink
-Rn0 f41 1 0.1068190969770843 0 0 #arcLabel
-Rn0 f42 type einbuergerung_Gruppe6.Data #txt
-Rn0 f42 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Zahlung
-eingegangen</name>
-        <nameStyle>19
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f42 784 80 32 32 -34 -56 #rect
-Rn0 f42 @|AlternativeIcon #fIcon
-Rn0 f43 expr data #txt
-Rn0 f43 outCond ivp=="TaskA.ivp" #txt
-Rn0 f43 760 96 784 96 #arcP
-Rn0 f44 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
+Rn0 f44 beanConfig '"{/emailSubject ""Zahlungserinnerung Gesuch <%=in.request.uniqueIdentifier%>""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nLeider konnten wir keinen Zahlungseingang für folgende Rechnung feststellen.\\nWir bitten sie den Betrag inner 30 Tagen zu begleichen ansonsten müssen wir das Einbürgerungsverfahren einstellen.\\n\\n-------------------------------------------------------------------\\nRechnung:\\n\\nGrund: \\n<%=in.invoice.type%> <%=in.request.uniqueIdentifier%>\\n\\nBetrag:\\nCHF <%=in.invoice.amount%>.00\\nDavon Mahngebühr:\\nCHF 25.00\\n\\nZugunsten von:\\nFinanzdirektion Kanton Schwyz\\nPostfach\\nSchwyz\\n\\nKonto: 70-130-3\\nIBAN: CH50 0000 0 0000 0 000 00 00\\n\\n-------------------------------------------------------------------""/emailAttachments * }"' #txt
 Rn0 f44 type einbuergerung_Gruppe6.Data #txt
 Rn0 f44 timeout 0 #txt
 Rn0 f44 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -219,135 +81,205 @@ Rn0 f44 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <language>
         <name>Zahlungs
 Erinnerung</name>
-        <nameStyle>19
+        <nameStyle>19,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f44 816 154 112 44 -30 -16 #rect
+Rn0 f44 1072 162 112 44 -30 -16 #rect
 Rn0 f44 @|EMailIcon #fIcon
-Rn0 f45 expr in #txt
-Rn0 f45 800 112 816 176 #arcP
-Rn0 f45 1 800 176 #addKink
-Rn0 f45 1 0.2598079352879466 0 0 #arcLabel
-Rn0 f46 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Rn0 f46 actionTable 'out=in1;
-' #txt
-Rn0 f46 outTypes "einbuergerung_Gruppe6.Data" #txt
-Rn0 f46 outLinks "TaskA.ivp" #txt
-Rn0 f46 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDefinitions.add(taskDef);
-' #txt
-Rn0 f46 type einbuergerung_Gruppe6.Data #txt
-Rn0 f46 template "" #txt
-Rn0 f46 1096 80 32 32 0 16 #rect
-Rn0 f46 @|TaskSwitchIcon #fIcon
-Rn0 f47 expr in #txt
-Rn0 f47 type einbuergerung_Gruppe6.Data #txt
-Rn0 f47 var in1 #txt
-Rn0 f47 816 96 1096 96 #arcP
 Rn0 f48 type einbuergerung_Gruppe6.Data #txt
 Rn0 f48 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Zahlung
 eingegangen</name>
-        <nameStyle>19
+        <nameStyle>19,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f48 1152 80 32 32 -34 -56 #rect
+Rn0 f48 760 80 32 32 -34 -56 #rect
 Rn0 f48 @|AlternativeIcon #fIcon
-Rn0 f50 expr data #txt
-Rn0 f50 outCond ivp=="TaskA.ivp" #txt
-Rn0 f50 1128 96 1152 96 #arcP
-Rn0 f51 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Rn0 f51 actionTable 'out=in;
-' #txt
-Rn0 f51 dbUrl AmazonDB #txt
-Rn0 f51 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-Rn0 f51 lotSize 2147483647 #txt
-Rn0 f51 startIdx 0 #txt
-Rn0 f51 type einbuergerung_Gruppe6.Data #txt
-Rn0 f51 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Status update</name>
-        <nameStyle>13
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f51 1368 74 112 44 -38 -8 #rect
-Rn0 f51 @|DBStepIcon #fIcon
-Rn0 f52 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
-Rn0 f52 type einbuergerung_Gruppe6.Data #txt
-Rn0 f52 timeout 0 #txt
-Rn0 f52 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Info
-Prozessabbruch</name>
-        <nameStyle>19
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f52 1216 74 128 44 -42 -16 #rect
-Rn0 f52 @|EMailIcon #fIcon
-Rn0 f53 expr in #txt
-Rn0 f53 1184 96 1216 96 #arcP
-Rn0 f54 expr in #txt
-Rn0 f54 1168 112 1424 118 #arcP
-Rn0 f54 1 1168 145 #addKink
-Rn0 f54 2 1424 145 #addKink
-Rn0 f54 1 0.48986486486486486 0 0 #arcLabel
-Rn0 f55 expr out #txt
-Rn0 f55 1344 96 1368 96 #arcP
 Rn0 f1 type einbuergerung_Gruppe6.Data #txt
-Rn0 f1 1513 81 30 30 0 15 #rect
+Rn0 f1 1049 81 30 30 0 15 #rect
 Rn0 f1 @|EndSubIcon #fIcon
-Rn0 f10 expr out #txt
-Rn0 f10 1480 96 1513 96 #arcP
-Rn0 f56 actionDecl 'einbuergerung_Gruppe6.Data out;
+Rn0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Rn0 f56 actionTable 'out=in;
+Rn0 f3 actionTable 'out=in;
 ' #txt
-Rn0 f56 type einbuergerung_Gruppe6.Data #txt
-Rn0 f56 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+Rn0 f3 actionCode 'in.invoice.invoiceNumber=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
+
+if(in.request.status == "Verfahrensgebühr"){
+	in.invoice.amount = 500;
+	in.invoice.type ="Verfahrensgebühr";
+	}
+			
+if(in.request.status == "Verfahrensgebühr"||in.request.discount){
+	in.invoice.amount = 1000;
+	in.invoice.type ="Einbürgerungsgebühr";
+	}
+else{
+	in.invoice.amount = 2500;
+	in.invoice.type ="Einbürgerungsgebühr";
+	}
+	' #txt
+Rn0 f3 type einbuergerung_Gruppe6.Data #txt
+Rn0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Calculate Amount
+Generate Invoice Nr</name>
+        <nameStyle>36,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f3 160 74 128 44 -46 -16 #rect
+Rn0 f3 @|StepIcon #fIcon
+Rn0 f4 expr out #txt
+Rn0 f4 79 96 160 96 #arcP
+Rn0 f2 expr out #txt
+Rn0 f2 288 96 360 96 #arcP
+Rn0 f6 type einbuergerung_Gruppe6.Data #txt
+Rn0 f6 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
+Rn0 f6 doCall true #txt
+Rn0 f6 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+Rn0 f6 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f6 responseMappingAction 'out=in;
+' #txt
+Rn0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Abbruch</name>
+        <nameStyle>7,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f6 912 226 112 44 -22 -8 #rect
+Rn0 f6 @|CallSubIcon #fIcon
+Rn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f9 actionTable 'out=in;
+' #txt
+Rn0 f9 actionCode in.request.invoices.add(in.invoice); #txt
+Rn0 f9 type einbuergerung_Gruppe6.Data #txt
+Rn0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Add invoice to 
+Request inovice list</name>
+        <nameStyle>16,7
+20,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f9 872 74 128 44 -46 -16 #rect
+Rn0 f9 @|StepIcon #fIcon
+Rn0 f10 expr in #txt
+Rn0 f10 outCond in.invoice.paymentReceived #txt
+Rn0 f10 792 96 872 96 #arcP
+Rn0 f5 expr out #txt
+Rn0 f5 1000 96 1049 96 #arcP
+Rn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f11 actionTable 'out=in;
+' #txt
+Rn0 f11 actionCode 'in.invoice.amount = in.invoice.amount + 25;
+in.invoice.penalty = true;' #txt
+Rn0 f11 type einbuergerung_Gruppe6.Data #txt
+Rn0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Add Penalty</name>
+        <nameStyle>11,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f11 912 162 112 44 -32 -8 #rect
+Rn0 f11 @|StepIcon #fIcon
+Rn0 f13 expr out #txt
+Rn0 f13 1024 184 1072 184 #arcP
+Rn0 f13 0 0.2598079352879466 0 0 #arcLabel
+Rn0 f15 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f15 actionTable 'out=in;
+' #txt
+Rn0 f15 actionCode 'import java.util.Random;
+
+Random random = new Random();
+in.invoice.paymentReceived=random.nextBoolean();
+' #txt
+Rn0 f15 type einbuergerung_Gruppe6.Data #txt
+Rn0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Random (Prototyp)
 Zahlung eingegangen</name>
-        <nameStyle>37
+        <nameStyle>37,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f56 952 154 144 44 -54 -16 #rect
-Rn0 f56 @|StepIcon #fIcon
-Rn0 f57 expr out #txt
-Rn0 f57 928 176 952 176 #arcP
-Rn0 f57 0 0.8790927857480085 0 0 #arcLabel
-Rn0 f49 expr out #txt
-Rn0 f49 type einbuergerung_Gruppe6.Data #txt
-Rn0 f49 var in2 #txt
-Rn0 f49 1096 176 1112 112 #arcP
-Rn0 f49 1 1112 176 #addKink
-Rn0 f49 0 0.8790927857480085 0 0 #arcLabel
+Rn0 f15 544 74 144 44 -54 -16 #rect
+Rn0 f15 @|StepIcon #fIcon
+Rn0 f18 type einbuergerung_Gruppe6.Data #txt
+Rn0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Already Penalty?</name>
+        <nameStyle>16,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f18 840 168 32 32 -51 -42 #rect
+Rn0 f18 @|AlternativeIcon #fIcon
+Rn0 f20 expr in #txt
+Rn0 f20 outCond !in.invoice.penalty #txt
+Rn0 f20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f20 872 184 912 184 #arcP
+Rn0 f20 0 0.35 0 12 #arcLabel
+Rn0 f12 expr out #txt
+Rn0 f12 688 96 760 96 #arcP
+Rn0 f21 expr in #txt
+Rn0 f21 outCond in.invoice.penalty #txt
+Rn0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f21 856 200 912 248 #arcP
+Rn0 f21 1 856 248 #addKink
+Rn0 f21 0 0.4166666666666667 -10 0 #arcLabel
+Rn0 f7 expr in #txt
+Rn0 f7 776 112 840 184 #arcP
+Rn0 f7 1 776 184 #addKink
+Rn0 f7 0 0.8258974536979345 0 0 #arcLabel
+Rn0 f8 expr out #txt
+Rn0 f8 1128 206 616 118 #arcP
+Rn0 f8 1 1128 280 #addKink
+Rn0 f8 2 616 280 #addKink
+Rn0 f8 2 0.425 0 0 #arcLabel
+Rn0 f14 expr out #txt
+Rn0 f14 472 96 544 96 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -357,7 +289,7 @@ Rn0 f49 0 0.8790927857480085 0 0 #arcLabel
         <swimlaneLabel>Rechnungswesen</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
-    <swimlaneSize>208</swimlaneSize>
+    <swimlaneSize>280</swimlaneSize>
     <swimlaneColor gradient="false">-3342490</swimlaneColor>
     <swimlaneType>POOL</swimlaneType>
     <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
@@ -365,37 +297,25 @@ Rn0 f49 0 0.8790927857480085 0 0 #arcLabel
 ' #txt
 >Proto Rn0 0 0 32 24 18 0 #rect
 >Proto Rn0 @|BIcon #fIcon
-Rn0 f0 mainOut f3 tail #connect
-Rn0 f3 head f33 mainIn #connect
-Rn0 f33 mainOut f34 tail #connect
-Rn0 f34 head f31 mainIn #connect
-Rn0 f31 mainOut f35 tail #connect
-Rn0 f35 head f32 mainIn #connect
-Rn0 f32 mainOut f38 tail #connect
-Rn0 f38 head f7 in #connect
-Rn0 f7 out f39 tail #connect
-Rn0 f39 head f37 mainIn #connect
-Rn0 f7 out f40 tail #connect
-Rn0 f40 head f36 in #connect
-Rn0 f37 mainOut f41 tail #connect
-Rn0 f41 head f36 in #connect
-Rn0 f36 out f43 tail #connect
-Rn0 f43 head f42 in #connect
-Rn0 f42 out f45 tail #connect
-Rn0 f45 head f44 mainIn #connect
-Rn0 f42 out f47 tail #connect
-Rn0 f47 head f46 in #connect
-Rn0 f46 out f50 tail #connect
-Rn0 f50 head f48 in #connect
-Rn0 f48 out f53 tail #connect
-Rn0 f53 head f52 mainIn #connect
-Rn0 f48 out f54 tail #connect
-Rn0 f54 head f51 mainIn #connect
-Rn0 f52 mainOut f55 tail #connect
-Rn0 f55 head f51 mainIn #connect
-Rn0 f51 mainOut f10 tail #connect
-Rn0 f10 head f1 mainIn #connect
-Rn0 f44 mainOut f57 tail #connect
-Rn0 f57 head f56 mainIn #connect
-Rn0 f56 mainOut f49 tail #connect
-Rn0 f49 head f46 in #connect
+Rn0 f0 mainOut f4 tail #connect
+Rn0 f4 head f3 mainIn #connect
+Rn0 f3 mainOut f2 tail #connect
+Rn0 f2 head f32 mainIn #connect
+Rn0 f48 out f10 tail #connect
+Rn0 f10 head f9 mainIn #connect
+Rn0 f9 mainOut f5 tail #connect
+Rn0 f5 head f1 mainIn #connect
+Rn0 f11 mainOut f13 tail #connect
+Rn0 f13 head f44 mainIn #connect
+Rn0 f15 mainOut f12 tail #connect
+Rn0 f12 head f48 in #connect
+Rn0 f18 out f20 tail #connect
+Rn0 f20 head f11 mainIn #connect
+Rn0 f18 out f21 tail #connect
+Rn0 f21 head f6 mainIn #connect
+Rn0 f48 out f7 tail #connect
+Rn0 f7 head f18 in #connect
+Rn0 f44 mainOut f8 tail #connect
+Rn0 f8 head f15 mainIn #connect
+Rn0 f32 mainOut f14 tail #connect
+Rn0 f14 head f15 mainIn #connect

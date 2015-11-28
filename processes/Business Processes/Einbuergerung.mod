@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 19:08:01 CET 2015]
+[>Created: Sat Nov 28 19:18:16 CET 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -26,19 +26,6 @@ Eg0 @PushWFArc f6 '' #zField
 Eg0 @CallSub f25 '' #zField
 Eg0 @PushWFArc f13 '' #zField
 Eg0 @PushWFArc f22 '' #zField
-Eg0 @CallSub f16 '' #zField
-Eg0 @ProcessException f17 '' #zField
-Eg0 @ProcessException f7 '' #zField
-Eg0 @ProcessException f9 '' #zField
-Eg0 @ProcessException f12 '' #zField
-Eg0 @ProcessException f14 '' #zField
-Eg0 @PushWFArc f15 '' #zField
-Eg0 @PushWFArc f18 '' #zField
-Eg0 @PushWFArc f19 '' #zField
-Eg0 @PushWFArc f20 '' #zField
-Eg0 @PushWFArc f21 '' #zField
-Eg0 @EndTask f23 '' #zField
-Eg0 @PushWFArc f24 '' #zField
 >Proto Eg0 Eg0 Einbuergerung #zField
 Eg0 f0 outLink start.ivp #txt
 Eg0 f0 type einbuergerung_Gruppe6.Data #txt
@@ -193,148 +180,6 @@ Eg0 f13 expr out #txt
 Eg0 f13 440 64 480 64 #arcP
 Eg0 f22 expr out #txt
 Eg0 f22 624 64 656 64 #arcP
-Eg0 f16 type einbuergerung_Gruppe6.Data #txt
-Eg0 f16 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
-Eg0 f16 doCall true #txt
-Eg0 f16 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
-' #txt
-Eg0 f16 requestMappingAction 'param.data=in;
-' #txt
-Eg0 f16 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Eg0 f16 responseMappingAction 'out=in;
-' #txt
-Eg0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abbruch</name>
-        <nameStyle>7,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Eg0 f16 992 162 112 44 -22 -8 #rect
-Eg0 f16 @|CallSubIcon #fIcon
-Eg0 f17 .resExport export #txt
-Eg0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Eg0 f17 actionTable 'out=in;
-' #txt
-Eg0 f17 type einbuergerung_Gruppe6.Data #txt
-Eg0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abbruch-
-Zwischenereignis</name>
-        <nameStyle>25,7
-</nameStyle>
-        <desc>Anmerkung: Kein Abbruch Zwischenereignis im Axon Ivy gefunden, daher wurde Excpetion Gateway verwendet</desc>
-    </language>
-</elementInfo>
-' #txt
-Eg0 f17 265 81 30 30 -49 17 #rect
-Eg0 f17 @|ExceptionIcon #fIcon
-Eg0 f7 .resExport export #txt
-Eg0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Eg0 f7 actionTable 'out=in;
-' #txt
-Eg0 f7 type einbuergerung_Gruppe6.Data #txt
-Eg0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abbruch-
-Zwischenereignis</name>
-        <nameStyle>25,7
-</nameStyle>
-        <desc>Anmerkung: Kein Abbruch Zwischenereignis im Axon Ivy gefunden, daher wurde Excpetion Gateway verwendet</desc>
-    </language>
-</elementInfo>
-' #txt
-Eg0 f7 425 81 30 30 -49 17 #rect
-Eg0 f7 @|ExceptionIcon #fIcon
-Eg0 f9 .resExport export #txt
-Eg0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Eg0 f9 actionTable 'out=in;
-' #txt
-Eg0 f9 type einbuergerung_Gruppe6.Data #txt
-Eg0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abbruch-
-Zwischenereignis</name>
-        <nameStyle>25,7
-</nameStyle>
-        <desc>Anmerkung: Kein Abbruch Zwischenereignis im Axon Ivy gefunden, daher wurde Excpetion Gateway verwendet</desc>
-    </language>
-</elementInfo>
-' #txt
-Eg0 f9 609 81 30 30 -49 17 #rect
-Eg0 f9 @|ExceptionIcon #fIcon
-Eg0 f12 .resExport export #txt
-Eg0 f12 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Eg0 f12 actionTable 'out=in;
-' #txt
-Eg0 f12 type einbuergerung_Gruppe6.Data #txt
-Eg0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abbruch-
-Zwischenereignis</name>
-        <nameStyle>25,7
-</nameStyle>
-        <desc>Anmerkung: Kein Abbruch Zwischenereignis im Axon Ivy gefunden, daher wurde Excpetion Gateway verwendet</desc>
-    </language>
-</elementInfo>
-' #txt
-Eg0 f12 753 81 30 30 -49 17 #rect
-Eg0 f12 @|ExceptionIcon #fIcon
-Eg0 f14 .resExport export #txt
-Eg0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Eg0 f14 actionTable 'out=in;
-' #txt
-Eg0 f14 type einbuergerung_Gruppe6.Data #txt
-Eg0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abbruch-
-Zwischenereignis</name>
-        <nameStyle>25,7
-</nameStyle>
-        <desc>Anmerkung: Kein Abbruch Zwischenereignis im Axon Ivy gefunden, daher wurde Excpetion Gateway verwendet</desc>
-    </language>
-</elementInfo>
-' #txt
-Eg0 f14 913 81 30 30 -49 17 #rect
-Eg0 f14 @|ExceptionIcon #fIcon
-Eg0 f15 expr out #txt
-Eg0 f15 280 111 992 184 #arcP
-Eg0 f15 1 280 184 #addKink
-Eg0 f15 1 0.44873595505618 0 0 #arcLabel
-Eg0 f18 expr out #txt
-Eg0 f18 440 111 992 184 #arcP
-Eg0 f18 1 440 184 #addKink
-Eg0 f18 1 0.4338768115942029 0 0 #arcLabel
-Eg0 f19 expr out #txt
-Eg0 f19 624 111 992 184 #arcP
-Eg0 f19 1 624 184 #addKink
-Eg0 f19 1 0.4008152173913043 0 0 #arcLabel
-Eg0 f20 expr out #txt
-Eg0 f20 768 111 992 184 #arcP
-Eg0 f20 1 768 184 #addKink
-Eg0 f20 1 0.33705357142857145 0 0 #arcLabel
-Eg0 f21 expr out #txt
-Eg0 f21 928 111 992 184 #arcP
-Eg0 f21 1 928 184 #addKink
-Eg0 f21 0 0.9383561643835616 0 0 #arcLabel
-Eg0 f23 type einbuergerung_Gruppe6.Data #txt
-Eg0 f23 1177 169 30 30 0 15 #rect
-Eg0 f23 @|EndIcon #fIcon
-Eg0 f24 expr out #txt
-Eg0 f24 1104 184 1177 184 #arcP
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Eg0 .processKind NORMAL #txt
 >Proto Eg0 0 0 32 24 18 0 #rect
@@ -351,15 +196,3 @@ Eg0 f4 mainOut f13 tail #connect
 Eg0 f13 head f25 mainIn #connect
 Eg0 f25 mainOut f22 tail #connect
 Eg0 f22 head f8 mainIn #connect
-Eg0 f17 mainOut f15 tail #connect
-Eg0 f15 head f16 mainIn #connect
-Eg0 f7 mainOut f18 tail #connect
-Eg0 f18 head f16 mainIn #connect
-Eg0 f9 mainOut f19 tail #connect
-Eg0 f19 head f16 mainIn #connect
-Eg0 f12 mainOut f20 tail #connect
-Eg0 f20 head f16 mainIn #connect
-Eg0 f14 mainOut f21 tail #connect
-Eg0 f21 head f16 mainIn #connect
-Eg0 f16 mainOut f24 tail #connect
-Eg0 f24 head f23 mainIn #connect

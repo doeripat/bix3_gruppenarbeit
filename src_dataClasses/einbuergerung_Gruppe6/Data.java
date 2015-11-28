@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -4108633432099311580L;
+  private static final long serialVersionUID = -8547067840787192289L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -67,6 +67,26 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setPerson(einbuergerung_Gruppe6.Person _person)
   {
     person = _person;
+  }
+
+  private einbuergerung_Gruppe6.Invoice invoice;
+
+  /**
+   * Gets the field invoice.
+   * @return the value of the field invoice; may be null.
+   */
+  public einbuergerung_Gruppe6.Invoice getInvoice()
+  {
+    return invoice;
+  }
+
+  /**
+   * Sets the field invoice.
+   * @param _invoice the new value of the field invoice.
+   */
+  public void setInvoice(einbuergerung_Gruppe6.Invoice _invoice)
+  {
+    invoice = _invoice;
   }
 
 }

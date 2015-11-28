@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 19:05:19 CET 2015]
+[>Created: Sat Nov 28 17:09:49 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -50,7 +50,7 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f0 57 105 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Data #txt
-En0 f1 913 105 30 30 0 15 #rect
+En0 f1 1001 105 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
 En0 f12 targetWindow NEW:card: #txt
 En0 f12 targetDisplay TOP #txt
@@ -75,7 +75,7 @@ Begründung erfassen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f12 192 98 144 44 -54 -16 #rect
+En0 f12 248 100 144 40 -54 -16 #rect
 En0 f12 @|RichDialogIcon #fIcon
 En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -102,7 +102,7 @@ En0 f13 144 104 32 32 0 16 #rect
 En0 f13 @|TaskSwitchIcon #fIcon
 En0 f15 expr data #txt
 En0 f15 outCond ivp=="TaskA.ivp" #txt
-En0 f15 176 120 192 120 #arcP
+En0 f15 176 120 248 120 #arcP
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
@@ -126,7 +126,7 @@ persistieren</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f5 584 98 112 44 -33 -16 #rect
+En0 f5 656 98 112 44 -33 -16 #rect
 En0 f5 @|DBStepIcon #fIcon
 En0 f11 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 En0 f11 type einbuergerung_Gruppe6.Data #txt
@@ -140,12 +140,12 @@ En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f11 736 98 112 44 -53 -8 #rect
+En0 f11 824 98 112 44 -53 -8 #rect
 En0 f11 @|EMailIcon #fIcon
 En0 f2 expr out #txt
-En0 f2 696 120 736 120 #arcP
+En0 f2 768 120 824 120 #arcP
 En0 f6 expr out #txt
-En0 f6 848 120 913 120 #arcP
+En0 f6 936 120 1001 120 #arcP
 En0 f8 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f8 actionTable 'out=in;
@@ -161,12 +161,12 @@ erstellen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f8 384 98 144 44 -53 -16 #rect
+En0 f8 456 98 144 44 -53 -16 #rect
 En0 f8 @|StepIcon #fIcon
 En0 f10 expr out #txt
-En0 f10 336 120 384 120 #arcP
+En0 f10 392 120 456 120 #arcP
 En0 f3 expr out #txt
-En0 f3 528 120 584 120 #arcP
+En0 f3 600 120 656 120 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

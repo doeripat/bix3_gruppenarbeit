@@ -1,6 +1,12 @@
 Invoice #class
 einbuergerung_Gruppe6 #namespace
-amount String #field
+amount Number #field
 amount PERSISTENT #fieldModifier
-penalty String #field
+penalty Boolean #field
 penalty PERSISTENT #fieldModifier
+type String #field
+type PERSISTENT #fieldModifier
+paymentReceived Boolean #field
+paymentReceived PERSISTENT #fieldModifier
+invoiceNumber String #field
+invoiceNumber PERSISTENT #fieldModifier

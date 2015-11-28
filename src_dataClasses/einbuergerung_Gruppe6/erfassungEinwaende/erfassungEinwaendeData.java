@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.erfassungEinwaende;
 public class erfassungEinwaendeData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 3800793658959862061L;
+  private static final long serialVersionUID = -4827510812153457565L;
 
   private java.lang.String autor;
 
@@ -87,6 +87,46 @@ public class erfassungEinwaendeData extends ch.ivyteam.ivy.scripting.objects.Com
   public void setDate(ch.ivyteam.ivy.scripting.objects.DateTime _date)
   {
     date = _date;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.DateTime endPeriodDate;
+
+  /**
+   * Gets the field endPeriodDate.
+   * @return the value of the field endPeriodDate; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.DateTime getEndPeriodDate()
+  {
+    return endPeriodDate;
+  }
+
+  /**
+   * Sets the field endPeriodDate.
+   * @param _endPeriodDate the new value of the field endPeriodDate.
+   */
+  public void setEndPeriodDate(ch.ivyteam.ivy.scripting.objects.DateTime _endPeriodDate)
+  {
+    endPeriodDate = _endPeriodDate;
+  }
+
+  private java.lang.Boolean valid;
+
+  /**
+   * Gets the field valid.
+   * @return the value of the field valid; may be null.
+   */
+  public java.lang.Boolean getValid()
+  {
+    return valid;
+  }
+
+  /**
+   * Sets the field valid.
+   * @param _valid the new value of the field valid.
+   */
+  public void setValid(java.lang.Boolean _valid)
+  {
+    valid = _valid;
   }
 
 }
