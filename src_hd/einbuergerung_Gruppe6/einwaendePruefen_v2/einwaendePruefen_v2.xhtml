@@ -20,7 +20,7 @@
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-					<p:dataTable var="objection" value="#{data.request.objections}">
+					<p:dataTable var="objection" value="#{data.request.objections}" id="deleteTable">
 						  <p:column headerText="Autor">
 						    <h:outputText value="#{objection.author}" />
 						  </p:column>
@@ -29,6 +29,9 @@
 						  </p:column>
 						  <p:column headerText="Begründung">
 						    <h:outputText value="#{objection.text}" />
+						  </p:column>
+						   <p:column style="width:32px;text-align: center">
+						    <p:commandButton actionListener="#{logic.DeleteObjection(objection)}" update="deleteTable" icon="ui-icon-trash" />
 						  </p:column>
 						</p:dataTable>
 					

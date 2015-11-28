@@ -3,3 +3,5 @@ einbuergerung_Gruppe6.einwaendePruefen_v2 #namespace
 request einbuergerung_Gruppe6.Request #field
 readObjections Recordset #field
 readObjections PERSISTENT #fieldModifier
+selectedObjection einbuergerung_Gruppe6.Objection #field
+selectedObjection PERSISTENT #fieldModifier

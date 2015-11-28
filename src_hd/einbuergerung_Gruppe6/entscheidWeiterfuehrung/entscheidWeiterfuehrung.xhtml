@@ -19,7 +19,7 @@
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-					<p:outputLabel for="further" value="Ja ich möchte fortfahren"/>
+					<p:outputLabel for="continue" value="Ja ich möchte fortfahren"/>
 						<p:selectBooleanCheckbox id="continue" value="#{data.request.Continue}" />
 						<p:column colspan="2">Folgende Einwände sind zu Ihrem Gesuch eingegangen:</p:column>
 
@@ -36,7 +36,7 @@
 						</p:dataTable>
 					
 					<br />
-					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 				</h:panelGrid>
 			</h:form>
 			

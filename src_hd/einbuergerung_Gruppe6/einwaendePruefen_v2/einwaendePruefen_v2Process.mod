@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Nov 28 14:33:19 CET 2015]
+[>Created: Sat Nov 28 15:23:40 CET 2015]
 1514E482577A784A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 einwaendePruefen_v2Process Big #zClass
@@ -32,6 +32,11 @@ es0 @DBStep f14 '' #zField
 es0 @GridStep f12 '' #zField
 es0 @PushWFArc f5 '' #zField
 es0 @PushWFArc f13 '' #zField
+es0 @RichDialogMethodStart f22 '' #zField
+es0 @RichDialogProcessEnd f23 '' #zField
+es0 @PushWFArc f18 '' #zField
+es0 @PushWFArc f17 '' #zField
+es0 @GridStep f25 '' #zField
 >Proto es0 es0 einwaendePruefen_v2Process #zField
 es0 f0 guid 1514E4825AAB5E81 #txt
 es0 f0 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
@@ -71,11 +76,11 @@ es0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-es0 f3 83 179 26 26 -15 12 #rect
+es0 f3 75 315 26 26 -15 12 #rect
 es0 f3 @|RichDialogProcessStartIcon #fIcon
 es0 f4 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 es0 f4 guid 1514E4825BAAA03F #txt
-es0 f4 939 179 26 26 0 12 #rect
+es0 f4 931 315 26 26 0 12 #rect
 es0 f4 @|RichDialogEndIcon #fIcon
 es0 f10 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
@@ -151,7 +156,7 @@ Refering to request</name>
     </language>
 </elementInfo>
 ' #txt
-es0 f11 384 42 144 44 -52 -16 #rect
+es0 f11 376 42 144 44 -52 -16 #rect
 es0 f11 @|DBStepIcon #fIcon
 es0 f6 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
@@ -178,27 +183,30 @@ form Database</name>
     </language>
 </elementInfo>
 ' #txt
-es0 f6 232 42 128 44 -41 -16 #rect
+es0 f6 208 42 128 44 -41 -16 #rect
 es0 f6 @|DBStepIcon #fIcon
 es0 f16 expr out #txt
-es0 f16 360 64 384 64 #arcP
+es0 f16 336 64 376 64 #arcP
 es0 f16 0 0.6056434123926123 0 0 #arcLabel
 es0 f7 expr out #txt
-es0 f7 528 64 560 64 #arcP
+es0 f7 520 64 560 64 #arcP
 es0 f7 0 0.6056434123926123 0 0 #arcLabel
 es0 f2 expr out #txt
-es0 f2 109 64 232 64 #arcP
+es0 f2 109 64 208 64 #arcP
 es0 f9 expr out #txt
 es0 f9 616 86 952 77 #arcP
 es0 f9 1 616 112 #addKink
 es0 f9 2 952 112 #addKink
 es0 f9 1 0.5133928571428571 0 0 #arcLabel
 es0 f15 expr out #txt
-es0 f15 416 192 528 192 #arcP
+es0 f15 408 328 520 328 #arcP
 es0 f14 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
 es0 f14 actionTable 'out=in;
 ' #txt
+es0 f14 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
+<INSERT><Table name=''Objection''/></INSERT>' #txt
 es0 f14 dbUrl AmazonDB #txt
 es0 f14 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 es0 f14 lotSize 2147483647 #txt
@@ -214,7 +222,7 @@ to Database</name>
     </language>
 </elementInfo>
 ' #txt
-es0 f14 528 170 128 44 -46 -16 #rect
+es0 f14 520 306 128 44 -46 -16 #rect
 es0 f14 @|DBStepIcon #fIcon
 es0 f12 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
@@ -230,12 +238,58 @@ es0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-es0 f12 304 170 112 44 -41 -8 #rect
+es0 f12 296 306 112 44 -41 -8 #rect
 es0 f12 @|StepIcon #fIcon
 es0 f5 expr out #txt
-es0 f5 109 192 304 192 #arcP
+es0 f5 101 328 296 328 #arcP
 es0 f13 expr out #txt
-es0 f13 656 192 939 192 #arcP
+es0 f13 648 328 931 328 #arcP
+es0 f22 guid 1514E6D7528A0AF2 #txt
+es0 f22 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
+es0 f22 method DeleteObjection(einbuergerung_Gruppe6.Objection) #txt
+es0 f22 disableUIEvents false #txt
+es0 f22 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
+<einbuergerung_Gruppe6.Objection objection> param = methodEvent.getInputArguments();
+' #txt
+es0 f22 inParameterMapAction 'out.selectedObjection=param.objection;
+' #txt
+es0 f22 outParameterDecl '<> result;
+' #txt
+es0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>DeleteObjection(Objection)</name>
+        <nameStyle>26,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+es0 f22 155 187 26 26 -74 15 #rect
+es0 f22 @|RichDialogMethodStartIcon #fIcon
+es0 f23 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
+es0 f23 771 187 26 26 0 12 #rect
+es0 f23 @|RichDialogProcessEndIcon #fIcon
+es0 f18 expr out #txt
+es0 f18 496 200 771 200 #arcP
+es0 f17 expr out #txt
+es0 f17 181 200 384 200 #arcP
+es0 f25 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
+' #txt
+es0 f25 actionTable 'out=in;
+out.request.objections=in.request.objections.remove(in.selectedObjection);
+' #txt
+es0 f25 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
+es0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Delete Objection</name>
+        <nameStyle>16,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+es0 f25 384 178 112 44 -45 -8 #rect
+es0 f25 @|StepIcon #fIcon
 >Proto es0 .type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 >Proto es0 .processKind HTML_DIALOG #txt
 >Proto es0 -8 -8 16 16 16 26 #rect
@@ -254,3 +308,7 @@ es0 f3 mainOut f5 tail #connect
 es0 f5 head f12 mainIn #connect
 es0 f14 mainOut f13 tail #connect
 es0 f13 head f4 mainIn #connect
+es0 f22 mainOut f17 tail #connect
+es0 f17 head f25 mainIn #connect
+es0 f25 mainOut f18 tail #connect
+es0 f18 head f23 mainIn #connect

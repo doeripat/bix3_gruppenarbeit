@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 23 19:07:11 CET 2015]
+[>Created: Sat Nov 28 15:50:24 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -46,7 +46,7 @@ Rn0 @GridStep f56 '' #zField
 Rn0 @PushWFArc f57 '' #zField
 Rn0 @TkArc f49 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
-Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data,java.lang.Boolean paymentReceived> param;' #txt
 Rn0 f0 inParamTable 'out=param.data;
 ' #txt
 Rn0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
@@ -55,7 +55,7 @@ Rn0 f0 outParamTable 'result.data=in;
 ' #txt
 Rn0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Rn0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
+Rn0 f0 callSignature call(einbuergerung_Gruppe6.Data,Boolean) #txt
 Rn0 f0 type einbuergerung_Gruppe6.Data #txt
 Rn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -78,7 +78,7 @@ Rn0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <language>
         <name>E-Rechnung
 generieren</name>
-        <nameStyle>21
+        <nameStyle>21,7
 </nameStyle>
         <desc>Aufgrund  von Grund Betrag festlegen</desc>
     </language>
@@ -312,8 +312,8 @@ Rn0 f53 expr in #txt
 Rn0 f53 1184 96 1216 96 #arcP
 Rn0 f54 expr in #txt
 Rn0 f54 1168 112 1424 118 #arcP
-Rn0 f54 1 1168 144 #addKink
-Rn0 f54 2 1424 144 #addKink
+Rn0 f54 1 1168 145 #addKink
+Rn0 f54 2 1424 145 #addKink
 Rn0 f54 1 0.48986486486486486 0 0 #arcLabel
 Rn0 f55 expr out #txt
 Rn0 f55 1344 96 1368 96 #arcP

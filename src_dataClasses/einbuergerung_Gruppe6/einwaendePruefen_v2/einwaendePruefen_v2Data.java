@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.einwaendePruefen_v2;
 public class einwaendePruefen_v2Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 4106177117222986927L;
+  private static final long serialVersionUID = -5935946905069760279L;
 
   private transient einbuergerung_Gruppe6.Request request;
 
@@ -47,6 +47,26 @@ public class einwaendePruefen_v2Data extends ch.ivyteam.ivy.scripting.objects.Co
   public void setReadObjections(ch.ivyteam.ivy.scripting.objects.Recordset _readObjections)
   {
     readObjections = _readObjections;
+  }
+
+  private einbuergerung_Gruppe6.Objection selectedObjection;
+
+  /**
+   * Gets the field selectedObjection.
+   * @return the value of the field selectedObjection; may be null.
+   */
+  public einbuergerung_Gruppe6.Objection getSelectedObjection()
+  {
+    return selectedObjection;
+  }
+
+  /**
+   * Sets the field selectedObjection.
+   * @param _selectedObjection the new value of the field selectedObjection.
+   */
+  public void setSelectedObjection(einbuergerung_Gruppe6.Objection _selectedObjection)
+  {
+    selectedObjection = _selectedObjection;
   }
 
 }
