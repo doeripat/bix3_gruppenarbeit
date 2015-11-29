@@ -12,3 +12,5 @@ endPeriodDate DateTime #field
 endPeriodDate PERSISTENT #fieldModifier
 valid Boolean #field
 valid PERSISTENT #fieldModifier
+message String #field
+message PERSISTENT #fieldModifier

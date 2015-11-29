@@ -19,6 +19,7 @@
 				<h:panelGrid columns="2">
 					<f:facet name="header">
 						<p:messages></p:messages>
+						<p rendered="#{data.message != null}" style="color: red;"><p:outputLabel id="message" value="#{data.message}" styleClass="readonly_text" /></p>
 					</f:facet>
 					
 					<p:outputLabel for="autor" value="Ihr Name"/>

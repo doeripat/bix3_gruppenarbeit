@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 12:02:20 CET 2015]
+[>Created: Sun Nov 29 15:59:16 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -55,6 +55,8 @@ dn0 @GridStep f20 '' #zField
 dn0 @PushWFArc f22 '' #zField
 dn0 @PushWFArc f28 '' #zField
 dn0 @TkArc f29 '' #zField
+dn0 @StartRequest f30 '' #zField
+dn0 @TkArc f32 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -85,6 +87,7 @@ Bk7 @PushTrueWFOutG-01 g1 '' #zField
 Bk7 @RichDialog f1 '' #zField
 Bk7 @PushWFArc f2 '' #zField
 Bk7 @PushWFArc f0 '' #zField
+Bk7 @PushTrueWFInG-01 g2 '' #zField
 >Proto Bk7 Bk6 BpmnUserTask #zField
 Bk8 @TextInP .resExport .resExport #zField
 Bk8 @TextInP .type .type #zField
@@ -117,6 +120,8 @@ Bk1 @PushTrueWFOutG-01 g1 '' #zField
 Bk1 @RichDialog f0 '' #zField
 Bk1 @PushWFArc f1 '' #zField
 Bk1 @PushWFArc f4 '' #zField
+Bk1 @StartRequest f2 '' #zField
+Bk1 @PushWFArc f3 '' #zField
 >Proto Bk1 Bk2 BpmnUserTask #zField
 dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 dn0 f0 inParamTable 'out=param.data;
@@ -570,8 +575,8 @@ dn0 f16 expr out #txt
 dn0 f16 1232 144 1296 144 #arcP
 dn0 f27 expr out #txt
 dn0 f27 1424 144 1488 144 #arcP
-dn0 f5 368 376 424 376 #arcP
-dn0 f18 488 466 488 398 #arcP
+dn0 f5 368 376 425 376 #arcP
+dn0 f18 488 466 488 400 #arcP
 dn0 U30 .resExport export #txt
 dn0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -583,7 +588,7 @@ ausfüllen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U30 424 354 128 44 -44 -16 #rect
+dn0 U30 425 352 126 48 -44 -16 #rect
 dn0 U30 @|BpmnUserTaskIcon #fIcon
 dn0 f20 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -603,7 +608,7 @@ BETA</name>
 ' #txt
 dn0 f20 424 210 128 44 -42 -16 #rect
 dn0 f20 @|StepIcon #fIcon
-dn0 f22 488 354 488 254 #arcP
+dn0 f22 488 352 488 254 #arcP
 dn0 f28 712 362 552 232 #arcP
 dn0 f28 1 712 232 #addKink
 dn0 f28 1 0.21121092218598994 0 0 #arcLabel
@@ -613,6 +618,79 @@ dn0 f29 var in1 #txt
 dn0 f29 488 210 584 144 #arcP
 dn0 f29 1 488 144 #addKink
 dn0 f29 1 0.18034898932662913 0 0 #arcLabel
+dn0 f30 outLink start4.ivp #txt
+dn0 f30 type einbuergerung_Gruppe6.Data #txt
+dn0 f30 inParamDecl '<> param;' #txt
+dn0 f30 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+dn0 f30 guid 15153BD867C990C9 #txt
+dn0 f30 requestEnabled true #txt
+dn0 f30 triggerEnabled false #txt
+dn0 f30 callSignature start4() #txt
+dn0 f30 persist false #txt
+dn0 f30 taskData '#
+#Sun Nov 29 15:57:20 CET 2015
+TaskTriggered.ROL=Everybody
+TaskTriggered.EXTYPE=0
+TaskTriggered.EXPRI=2
+TaskTriggered.TYPE=0
+TaskTriggered.PRI=2
+TaskTriggered.EXROL=Everybody
+' #txt
+dn0 f30 caseData '#
+#Sun Nov 29 15:57:20 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+dn0 f30 showInStartList 1 #txt
+dn0 f30 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
+ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
+import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskUpdDef.setExpiryActivator("Everybody");
+taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+engine.updateCurrentTask(taskUpdDef);
+' #txt
+dn0 f30 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start4.ivp</name>
+        <nameStyle>10,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f30 @C|.responsibility Everybody #txt
+dn0 f30 193 433 30 30 -24 17 #rect
+dn0 f30 @|StartRequestIcon #fIcon
+dn0 f32 expr out #txt
+dn0 f32 type einbuergerung_Gruppe6.Data #txt
+dn0 f32 var in2 #txt
+dn0 f32 201 434 181 387 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -740,6 +818,8 @@ Bk7 f1 @|RichDialogIcon #fIcon
 Bk7 f2 76 248 216 256 #arcP
 Bk7 f0 expr out #txt
 Bk7 f0 328 256 563 263 #arcP
+Bk7 g2 211 435 26 26 0 5 #rect
+Bk7 g2 @|MIGIcon #fIcon
 >Proto Bk6 0 0 32 24 18 0 #rect
 >Proto Bk6 @|BpmnServiceTaskIcon #fIcon
 Bk8 g0 75 243 26 26 0 5 #rect
@@ -875,6 +955,77 @@ Bk1 f0 @|RichDialogIcon #fIcon
 Bk1 f1 77 256 216 256 #arcP
 Bk1 f4 expr out #txt
 Bk1 f4 360 256 523 256 #arcP
+Bk1 f2 outLink startgaggi.ivp #txt
+Bk1 f2 type einbuergerung_Gruppe6.Data #txt
+Bk1 f2 inParamDecl '<> param;' #txt
+Bk1 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk1 f2 guid 15153C0E26F619C0 #txt
+Bk1 f2 requestEnabled true #txt
+Bk1 f2 triggerEnabled false #txt
+Bk1 f2 callSignature startgaggi() #txt
+Bk1 f2 persist false #txt
+Bk1 f2 taskData '#
+#Sun Nov 29 15:59:12 CET 2015
+TaskTriggered.ROL=Everybody
+TaskTriggered.EXTYPE=0
+TaskTriggered.EXPRI=2
+TaskTriggered.TYPE=0
+TaskTriggered.PRI=2
+TaskTriggered.EXROL=Everybody
+' #txt
+Bk1 f2 caseData '#
+#Sun Nov 29 15:59:12 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+Bk1 f2 showInStartList 1 #txt
+Bk1 f2 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
+ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
+import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskUpdDef.setExpiryActivator("Everybody");
+taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+engine.updateCurrentTask(taskUpdDef);
+' #txt
+Bk1 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>startgaggi.ivp</name>
+        <nameStyle>14,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk1 f2 @C|.responsibility Everybody #txt
+Bk1 f2 145 129 30 30 -36 17 #rect
+Bk1 f2 @|StartRequestIcon #fIcon
+Bk1 f3 expr out #txt
+Bk1 f3 171 153 288 234 #arcP
 >Proto Bk2 -8 -8 16 16 16 26 #rect
 >Proto Bk2 '' #fIcon
 dn0 f23 out f15 tail #connect
@@ -911,6 +1062,8 @@ dn0 U40 g1 f28 tail #connect
 dn0 f28 head f20 mainIn #connect
 dn0 f20 mainOut f29 tail #connect
 dn0 f29 head f21 in #connect
+dn0 f30 mainOut f32 tail #connect
+dn0 f32 head f11 in #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect
@@ -936,4 +1089,6 @@ Bk1 g0 m f1 tail #connect
 Bk1 f1 head f0 mainIn #connect
 Bk1 f0 mainOut f4 tail #connect
 Bk1 f4 head g1 m #connect
+Bk1 f2 mainOut f3 tail #connect
+Bk1 f3 head f0 mainIn #connect
 Bk1 0 0 840 616 0 #ivRect

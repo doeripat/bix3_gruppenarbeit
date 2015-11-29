@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Nov 28 19:26:41 CET 2015]
+[>Created: Sun Nov 29 16:22:22 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -19,11 +19,9 @@ En0 @Alternative f18 '' #zField
 En0 @CallSub f20 '' #zField
 En0 @PushWFArc f21 '' #zField
 En0 @PushWFArc f24 '' #zField
-En0 @TaskSwitch f7 '' #zField
 En0 @EMail f11 '' #zField
 En0 @InfoButton f19 '' #zField
 En0 @EMail f12 '' #zField
-En0 @TkArc f13 '' #zField
 En0 @TaskSwitch f32 '' #zField
 En0 @StartRequest f17 '' #zField
 En0 @RichDialog f22 '' #zField
@@ -38,10 +36,7 @@ En0 @PushWFArc f5 '' #zField
 En0 @PushWFArc f6 '' #zField
 En0 @ProcessException f10 '' #zField
 En0 @RichDialog f25 '' #zField
-En0 @PushWFArc f2 '' #zField
 En0 @PushWFArc f9 '' #zField
-En0 @StartRequest f14 '' #zField
-En0 @PushWFArc f23 '' #zField
 En0 @InfoButton f27 '' #zField
 En0 @DBStep f28 '' #zField
 En0 @PushWFArc f29 '' #zField
@@ -49,6 +44,9 @@ En0 @TkArc f4 '' #zField
 En0 @CallSub f30 '' #zField
 En0 @PushWFArc f8 '' #zField
 En0 @PushWFArc f15 '' #zField
+En0 @PushWFArc f2 '' #zField
+En0 @TkArc f13 '' #zField
+En0 @TaskSwitch f7 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
@@ -129,73 +127,6 @@ En0 f21 0 0.06418918918918919 -12 0 #arcLabel
 En0 f24 expr out #txt
 En0 f24 1360 96 1393 96 #arcP
 En0 f24 0 0.3970514322284797 0 0 #arcLabel
-En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f7 actionTable 'out=in1;
-' #txt
-En0 f7 outTypes "einbuergerung_Gruppe6.Data" #txt
-En0 f7 outLinks "TaskA.ivp" #txt
-En0 f7 caseData '#
-#Sat Nov 28 14:40:25 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-En0 f7 taskData '#
-#Sat Nov 28 14:40:25 CET 2015
-TaskA.EXC=1506BC4D39F48130-f10-buffer
-TaskA.EXP=''1440h''
-TaskA.EXPRI=2
-TaskA.EXROL=Everybody
-TaskA.EXTYPE=0
-TaskA.NAM=Bitte \u00FCber Weiterf\u00FChrung entscheiden
-TaskA.PRI=2
-TaskA.ROL=Antragsteller
-TaskA.SKIP_TASK_LIST=false
-TaskA.TYPE=0
-' #txt
-En0 f7 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Bitte über Weiterführung entscheiden"));
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Antragsteller");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''1440h'').toNumber());
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryStartTaskElementPid("1506BC4D39F48130-f10-buffer");
-taskDefinitions.add(taskDef);
-' #txt
-En0 f7 type einbuergerung_Gruppe6.Data #txt
-En0 f7 template "" #txt
-En0 f7 984 392 32 32 0 16 #rect
-En0 f7 @|TaskSwitchIcon #fIcon
 En0 f11 beanConfig '"{/emailSubject ""Neues Gesuch für Publikation""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""christian@kappler.co""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Publikation:\\n\\nGesuchs ID: <%=in.request.uniqueIdentifier%>\\n\\nName: <%=in.person.lastname%>\\nVorname: <%=in.person.firstname%>\\nGeburtsdatum: <%=in.person.birthday%>\\n""/emailAttachments * }"' #txt
 En0 f11 type einbuergerung_Gruppe6.Data #txt
 En0 f11 timeout 0 #txt
@@ -245,10 +176,6 @@ Entscheidung fällen</name>
 ' #txt
 En0 f12 928 82 144 44 -51 -16 #rect
 En0 f12 @|EMailIcon #fIcon
-En0 f13 expr out #txt
-En0 f13 type einbuergerung_Gruppe6.Data #txt
-En0 f13 var in1 #txt
-En0 f13 1000 126 1000 392 #arcP
 En0 f32 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f32 actionTable 'out=in1;
@@ -489,32 +416,8 @@ Weiterführung</name>
 ' #txt
 En0 f25 1056 386 112 44 -38 -16 #rect
 En0 f25 @|RichDialogIcon #fIcon
-En0 f2 expr data #txt
-En0 f2 outCond ivp=="TaskA.ivp" #txt
-En0 f2 1016 408 1056 408 #arcP
 En0 f9 expr out #txt
 En0 f9 1168 408 1200 408 #arcP
-En0 f14 outLink start2.ivp #txt
-En0 f14 type einbuergerung_Gruppe6.Data #txt
-En0 f14 inParamDecl '<> param;' #txt
-En0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f14 guid 1514E86BC5E8EEE6 #txt
-En0 f14 requestEnabled true #txt
-En0 f14 triggerEnabled false #txt
-En0 f14 callSignature start2() #txt
-En0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start2.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-En0 f14 @C|.responsibility Everybody #txt
-En0 f14 145 145 30 30 -24 17 #rect
-En0 f14 @|StartRequestIcon #fIcon
-En0 f23 expr out #txt
-En0 f23 165 146 184 126 #arcP
 En0 f27 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -584,6 +487,80 @@ En0 f8 expr out #txt
 En0 f8 1352 465 1352 430 #arcP
 En0 f15 expr in #txt
 En0 f15 1232 408 1296 408 #arcP
+En0 f2 expr data #txt
+En0 f2 outCond ivp=="TaskA.ivp" #txt
+En0 f2 1016 408 1056 408 #arcP
+En0 f13 expr out #txt
+En0 f13 type einbuergerung_Gruppe6.Data #txt
+En0 f13 var in1 #txt
+En0 f13 1000 126 1000 392 #arcP
+En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f7 actionTable 'out=in1;
+' #txt
+En0 f7 outTypes "einbuergerung_Gruppe6.Data" #txt
+En0 f7 outLinks "TaskA.ivp" #txt
+En0 f7 caseData '#
+#Sun Nov 29 14:37:31 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+En0 f7 taskData '#
+#Sun Nov 29 14:37:31 CET 2015
+TaskA.EXC=1506BC4D39F48130-f10-buffer
+TaskA.EXP=''1440h''
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Bitte \u00FCber Weiterf\u00FChrung entscheiden
+TaskA.PRI=2
+TaskA.ROL=Antragsteller
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
+En0 f7 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte über Weiterführung entscheiden"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Antragsteller");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryPeriod(1000 * (''1440h'').toNumber());
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryStartTaskElementPid("1506BC4D39F48130-f10-buffer");
+taskDefinitions.add(taskDef);
+' #txt
+En0 f7 type einbuergerung_Gruppe6.Data #txt
+En0 f7 template "" #txt
+En0 f7 984 392 32 32 0 16 #rect
+En0 f7 @|TaskSwitchIcon #fIcon
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -633,8 +610,6 @@ En0 f7 out f2 tail #connect
 En0 f2 head f25 mainIn #connect
 En0 f25 mainOut f9 tail #connect
 En0 f9 head f18 in #connect
-En0 f14 mainOut f23 tail #connect
-En0 f23 head f11 mainIn #connect
 En0 f3 mainOut f29 tail #connect
 En0 f29 head f28 mainIn #connect
 En0 f28 mainOut f4 tail #connect

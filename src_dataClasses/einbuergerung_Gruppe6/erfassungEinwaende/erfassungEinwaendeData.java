@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.erfassungEinwaende;
 public class erfassungEinwaendeData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -4827510812153457565L;
+  private static final long serialVersionUID = 4320326439696290872L;
 
   private java.lang.String autor;
 
@@ -127,6 +127,26 @@ public class erfassungEinwaendeData extends ch.ivyteam.ivy.scripting.objects.Com
   public void setValid(java.lang.Boolean _valid)
   {
     valid = _valid;
+  }
+
+  private java.lang.String message;
+
+  /**
+   * Gets the field message.
+   * @return the value of the field message; may be null.
+   */
+  public java.lang.String getMessage()
+  {
+    return message;
+  }
+
+  /**
+   * Sets the field message.
+   * @param _message the new value of the field message.
+   */
+  public void setMessage(java.lang.String _message)
+  {
+    message = _message;
   }
 
 }
