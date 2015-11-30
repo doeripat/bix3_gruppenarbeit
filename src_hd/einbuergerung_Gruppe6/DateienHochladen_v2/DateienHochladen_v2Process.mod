@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 13:51:14 CET 2015]
+[>Created: Mon Nov 30 15:30:27 CET 2015]
 1514590D4E7F0C89 3.17 #module
 >Proto >Proto Collection #zClass
 Ds0 DateienHochladen_v2Process Big #zClass
@@ -191,7 +191,8 @@ finally
 // Die relevanten Eigenschaften des CMS-Objekts werden ins Data-Objekt zurück gegeben
 Document document = new Document();
 document.fileName = newCMSObject.getName();
-document.fileEnding = extension; 
+document.fileEnding = extension;
+document.fileType = in.fileTypeDoc;
 document.filePath = cov.getContentObject().getUri();
 
 out.request.documents.add(document);' #txt
@@ -217,6 +218,9 @@ Ds0 f11 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v
 ' #txt
 Ds0 f11 actionTable 'out=in;
 ' #txt
+Ds0 f11 actionCode 'out.fileTypeAvailable.add("Deutschkenntnisse");
+out.fileTypeAvailable.add("Finanzenelle Verhältnisse");
+out.fileTypeAvailable.add("Wohnsitzbestätigung");' #txt
 Ds0 f11 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
 Ds0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -237,10 +241,12 @@ Ds0 f2 expr out #txt
 Ds0 f2 336 64 459 64 #arcP
 Ds0 f13 guid 1515861AD752BECE #txt
 Ds0 f13 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
-Ds0 f13 method fileDownload() #txt
+Ds0 f13 method fileDownload(einbuergerung_Gruppe6.Document) #txt
 Ds0 f13 disableUIEvents false #txt
 Ds0 f13 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
-<> param = methodEvent.getInputArguments();
+<einbuergerung_Gruppe6.Document document> param = methodEvent.getInputArguments();
+' #txt
+Ds0 f13 inParameterMapAction 'out.document=param.document;
 ' #txt
 Ds0 f13 outParameterDecl '<> result;
 ' #txt
@@ -248,10 +254,12 @@ Ds0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>fileDownload()</name>
+        <nameStyle>14,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Ds0 f13 83 339 26 26 -40 12 #rect
+Ds0 f13 83 339 26 26 -40 15 #rect
 Ds0 f13 @|RichDialogMethodStartIcon #fIcon
 Ds0 f14 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
 Ds0 f14 379 339 26 26 0 12 #rect
@@ -260,8 +268,53 @@ Ds0 f16 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v
 ' #txt
 Ds0 f16 actionTable 'out=in;
 ' #txt
+Ds0 f16 actionCode 'import einbuergerung_Gruppe6.Document;
+import ch.ivyteam.ivy.cm.IContentObjectValue;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import javax.faces.bean.ManagedBean;
+import org.primefaces.model.DefaultStreamedContent;
+import org.primefaces.model.StreamedContent;
+// Das ContentObject mit dem gewünschten Inhalt wird gesucht
+IContentObjectValue CMSObjectValue = ivy.cms.findContentObjectValue(in.document.filePath,null);
+// Ein InputStream wird aus dem Inhalt des ContentObjects erstellt
+InputStream stream;
+stream = CMSObjectValue.getContentAsBinaryStream();
+// Der korrekte Mime-Type wird aus der Dateiendung abgeleitet
+String mimeType;
+String type = in.document.fileEnding;
+if(type=="pdf") {
+  mimeType="application/pdf";
+  } else if(type=="png") {
+  mimeType="image/png";
+  } else if(type=="jpg") {
+    mimeType="image/jpeg";
+  } else if(type=="gif") {
+    mimeType="image/gif";
+  }
+// Der Stream, der Mime-Type und der Dateiname werden als sogenannter StreamedContent erstellt
+for(Document doc : in.request.documents)
+{
+	if (doc.filePath == in.document.filePath)
+	{
+		doc.fileStreamedContent = new DefaultStreamedContent(stream, mimeType, doc.fileName+"."+doc.fileEnding);
+	}
+}
+' #txt
 Ds0 f16 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
-Ds0 f16 168 330 112 44 0 -8 #rect
+Ds0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Download file
+from CMS</name>
+        <nameStyle>14,7
+8,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ds0 f16 168 330 112 44 -37 -16 #rect
 Ds0 f16 @|StepIcon #fIcon
 Ds0 f17 expr out #txt
 Ds0 f17 109 352 168 352 #arcP

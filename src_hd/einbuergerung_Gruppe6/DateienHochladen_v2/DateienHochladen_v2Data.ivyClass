@@ -3,5 +3,9 @@ einbuergerung_Gruppe6.DateienHochladen_v2 #namespace
 request einbuergerung_Gruppe6.Request #field
 fileUploadEvent org.primefaces.event.FileUploadEvent #field
 fileUploadEvent PERSISTENT #fieldModifier
-filetype String #field
-filetype PERSISTENT #fieldModifier
+document einbuergerung_Gruppe6.Document #field
+document PERSISTENT #fieldModifier
+fileTypeAvailable List<String> #field
+fileTypeAvailable PERSISTENT #fieldModifier
+fileTypeDoc String #field
+fileTypeDoc PERSISTENT #fieldModifier

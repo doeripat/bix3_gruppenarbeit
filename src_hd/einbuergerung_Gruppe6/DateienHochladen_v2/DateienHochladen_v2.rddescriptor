@@ -14,6 +14,12 @@
     <method>
         <name>fileDownload</name>
         <description></description>
+        <inputParameter>
+            <name>document</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Document</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
     </method>
     <startMethod>
         <name>start</name>

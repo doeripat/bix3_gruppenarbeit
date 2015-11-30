@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.DateienHochladen_v2;
 public class DateienHochladen_v2Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -3801147073148166410L;
+  private static final long serialVersionUID = -8537663306751238040L;
 
   private transient einbuergerung_Gruppe6.Request request;
 
@@ -49,24 +49,64 @@ public class DateienHochladen_v2Data extends ch.ivyteam.ivy.scripting.objects.Co
     fileUploadEvent = _fileUploadEvent;
   }
 
-  private java.lang.String filetype;
+  private einbuergerung_Gruppe6.Document document;
 
   /**
-   * Gets the field filetype.
-   * @return the value of the field filetype; may be null.
+   * Gets the field document.
+   * @return the value of the field document; may be null.
    */
-  public java.lang.String getFiletype()
+  public einbuergerung_Gruppe6.Document getDocument()
   {
-    return filetype;
+    return document;
   }
 
   /**
-   * Sets the field filetype.
-   * @param _filetype the new value of the field filetype.
+   * Sets the field document.
+   * @param _document the new value of the field document.
    */
-  public void setFiletype(java.lang.String _filetype)
+  public void setDocument(einbuergerung_Gruppe6.Document _document)
   {
-    filetype = _filetype;
+    document = _document;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.List<java.lang.String> fileTypeAvailable;
+
+  /**
+   * Gets the field fileTypeAvailable.
+   * @return the value of the field fileTypeAvailable; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.List<java.lang.String> getFileTypeAvailable()
+  {
+    return fileTypeAvailable;
+  }
+
+  /**
+   * Sets the field fileTypeAvailable.
+   * @param _fileTypeAvailable the new value of the field fileTypeAvailable.
+   */
+  public void setFileTypeAvailable(ch.ivyteam.ivy.scripting.objects.List<java.lang.String> _fileTypeAvailable)
+  {
+    fileTypeAvailable = _fileTypeAvailable;
+  }
+
+  private java.lang.String fileTypeDoc;
+
+  /**
+   * Gets the field fileTypeDoc.
+   * @return the value of the field fileTypeDoc; may be null.
+   */
+  public java.lang.String getFileTypeDoc()
+  {
+    return fileTypeDoc;
+  }
+
+  /**
+   * Sets the field fileTypeDoc.
+   * @param _fileTypeDoc the new value of the field fileTypeDoc.
+   */
+  public void setFileTypeDoc(java.lang.String _fileTypeDoc)
+  {
+    fileTypeDoc = _fileTypeDoc;
   }
 
 }

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 11:24:48 CET 2015]
+[>Created: Mon Nov 30 14:16:08 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -51,10 +51,10 @@ dn0 @PushWFArc f27 '' #zField
 dn0 @PushWFArc f5 '' #zField
 dn0 @AnnotationArc f18 '' #zField
 dn0 Bk1 U30 'User 3' #zField
-dn0 @GridStep f20 '' #zField
-dn0 @PushWFArc f22 '' #zField
-dn0 @PushWFArc f28 '' #zField
+dn0 @Alternative f30 '' #zField
 dn0 @TkArc f29 '' #zField
+dn0 @PushWFArc f32 '' #zField
+dn0 @PushWFArc f28 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -144,7 +144,7 @@ dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f0 65 361 30 30 -26 17 #rect
 dn0 f0 @|StartSubIcon #fIcon
 dn0 f1 type einbuergerung_Gruppe6.Data #txt
-dn0 f1 1593 73 30 30 0 15 #rect
+dn0 f1 1705 73 30 30 0 15 #rect
 dn0 f1 @|EndSubIcon #fIcon
 dn0 f8 type einbuergerung_Gruppe6.Data #txt
 dn0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -157,7 +157,7 @@ vollständig &amp; korrekt</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f8 848 128 32 32 -58 -52 #rect
+dn0 f8 960 128 32 32 -58 -52 #rect
 dn0 f8 @|AlternativeIcon #fIcon
 dn0 f23 type einbuergerung_Gruppe6.Data #txt
 dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -169,7 +169,7 @@ dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f23 1488 128 32 32 20 -8 #rect
+dn0 f23 1600 128 32 32 20 -8 #rect
 dn0 f23 @|AlternativeIcon #fIcon
 dn0 f15 expr in #txt
 dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -181,11 +181,11 @@ dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f15 1504 128 1593 88 #arcP
-dn0 f15 1 1504 88 #addKink
+dn0 f15 1616 128 1705 88 #arcP
+dn0 f15 1 1616 88 #addKink
 dn0 f15 0 0.6428571428571429 -16 0 #arcLabel
 dn0 f25 type einbuergerung_Gruppe6.Data #txt
-dn0 f25 1593 177 30 30 0 15 #rect
+dn0 f25 1705 177 30 30 0 15 #rect
 dn0 f25 @|EndIcon #fIcon
 dn0 f26 expr in #txt
 dn0 f26 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -197,8 +197,8 @@ dn0 f26 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f26 1504 160 1593 192 #arcP
-dn0 f26 1 1504 192 #addKink
+dn0 f26 1616 160 1705 192 #arcP
+dn0 f26 1 1616 192 #addKink
 dn0 f26 0 0.625 -24 0 #arcLabel
 dn0 U40 .resExport export #txt
 dn0 U40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -211,7 +211,7 @@ korrigieren</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U40 632 362 160 44 -59 -16 #rect
+dn0 U40 744 362 160 44 -59 -16 #rect
 dn0 U40 @|BpmnUserTaskIcon #fIcon
 dn0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -341,7 +341,7 @@ dn0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f6 928 122 128 44 -56 -8 #rect
+dn0 f6 1040 122 128 44 -56 -8 #rect
 dn0 f6 @|CallSubIcon #fIcon
 dn0 f12 type einbuergerung_Gruppe6.Data #txt
 dn0 f12 processCall 'Functional Processes/validate_documents:call(einbuergerung_Gruppe6.Data)' #txt
@@ -365,7 +365,7 @@ dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f12 1120 122 112 44 -33 -20 #rect
+dn0 f12 1232 122 112 44 -33 -20 #rect
 dn0 f12 @|CallSubIcon #fIcon
 dn0 f2 expr in #txt
 dn0 f2 outCond 'in.request.status == "Warten auf Zahlungseingang Verfahrensgebühr"' #txt
@@ -378,10 +378,10 @@ dn0 f2 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f2 880 144 928 144 #arcP
+dn0 f2 992 144 1040 144 #arcP
 dn0 f2 0 0.1964285714285714 0 -9 #arcLabel
 dn0 f4 expr out #txt
-dn0 f4 1056 144 1120 144 #arcP
+dn0 f4 1168 144 1232 144 #arcP
 dn0 f4 0 0.1964285714285714 0 -9 #arcLabel
 dn0 U50 .resExport export #txt
 dn0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -395,9 +395,9 @@ prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U50 656 114 144 60 -51 -24 #rect
+dn0 U50 768 114 144 60 -51 -24 #rect
 dn0 U50 @|BpmnUserTaskIcon #fIcon
-dn0 f13 800 144 848 144 #arcP
+dn0 f13 912 144 960 144 #arcP
 dn0 f21 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f21 actionTable 'out=in1;
@@ -468,11 +468,11 @@ dn0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f21 584 128 32 32 -102 18 #rect
+dn0 f21 696 128 32 32 -102 18 #rect
 dn0 f21 @|TaskSwitchIcon #fIcon
 dn0 f7 expr data #txt
 dn0 f7 outCond ivp=="TaskA.ivp" #txt
-dn0 f7 616 144 656 144 #arcP
+dn0 f7 728 144 768 144 #arcP
 dn0 f7 0 0.943880027099722 0 0 #arcLabel
 dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -544,15 +544,15 @@ dn0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f9 848 368 32 32 -53 18 #rect
+dn0 f9 960 368 32 32 -53 18 #rect
 dn0 f9 @|TaskSwitchIcon #fIcon
 dn0 f10 expr in #txt
 dn0 f10 type einbuergerung_Gruppe6.Data #txt
 dn0 f10 var in1 #txt
-dn0 f10 864 160 864 368 #arcP
+dn0 f10 976 160 976 368 #arcP
 dn0 f24 expr data #txt
 dn0 f24 outCond ivp=="TaskA.ivp" #txt
-dn0 f24 848 384 792 384 #arcP
+dn0 f24 960 384 904 384 #arcP
 dn0 f14 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 dn0 f14 type einbuergerung_Gruppe6.Data #txt
 dn0 f14 timeout 0 #txt
@@ -567,12 +567,12 @@ versenden</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f14 1296 122 128 44 -42 -16 #rect
+dn0 f14 1408 122 128 44 -42 -16 #rect
 dn0 f14 @|EMailIcon #fIcon
 dn0 f16 expr out #txt
-dn0 f16 1232 144 1296 144 #arcP
+dn0 f16 1344 144 1408 144 #arcP
 dn0 f27 expr out #txt
-dn0 f27 1424 144 1488 144 #arcP
+dn0 f27 1536 144 1600 144 #arcP
 dn0 f5 368 376 425 376 #arcP
 dn0 f18 488 466 488 400 #arcP
 dn0 U30 .resExport export #txt
@@ -588,34 +588,19 @@ ausfüllen</name>
 ' #txt
 dn0 U30 425 352 126 48 -44 -16 #rect
 dn0 U30 @|BpmnUserTaskIcon #fIcon
-dn0 f20 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f20 actionTable 'out=in;
-' #txt
-dn0 f20 type einbuergerung_Gruppe6.Data #txt
-dn0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Join without wait
-BETA</name>
-        <nameStyle>18,7
-4,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 f20 424 210 128 44 -42 -16 #rect
-dn0 f20 @|StepIcon #fIcon
-dn0 f22 488 352 488 254 #arcP
-dn0 f28 712 362 552 232 #arcP
-dn0 f28 1 712 232 #addKink
-dn0 f28 1 0.21121092218598994 0 0 #arcLabel
-dn0 f29 expr out #txt
+dn0 f30 type einbuergerung_Gruppe6.Data #txt
+dn0 f30 472 176 32 32 0 16 #rect
+dn0 f30 @|AlternativeIcon #fIcon
+dn0 f29 expr in #txt
 dn0 f29 type einbuergerung_Gruppe6.Data #txt
 dn0 f29 var in1 #txt
-dn0 f29 488 210 584 144 #arcP
+dn0 f29 488 176 696 144 #arcP
 dn0 f29 1 488 144 #addKink
 dn0 f29 1 0.18034898932662913 0 0 #arcLabel
+dn0 f32 824 362 504 192 #arcP
+dn0 f32 1 824 192 #addKink
+dn0 f32 1 0.21121092218598994 0 0 #arcLabel
+dn0 f28 488 352 488 208 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -983,12 +968,12 @@ dn0 f14 mainOut f27 tail #connect
 dn0 f27 head f23 in #connect
 dn0 U10 g1 f5 tail #connect
 dn0 f5 head U30 g0 #connect
-dn0 U30 g1 f22 tail #connect
-dn0 f22 head f20 mainIn #connect
-dn0 U40 g1 f28 tail #connect
-dn0 f28 head f20 mainIn #connect
-dn0 f20 mainOut f29 tail #connect
+dn0 f30 out f29 tail #connect
 dn0 f29 head f21 in #connect
+dn0 U40 g1 f32 tail #connect
+dn0 f32 head f30 in #connect
+dn0 U30 g1 f28 tail #connect
+dn0 f28 head f30 in #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect

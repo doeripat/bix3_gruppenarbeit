@@ -42,18 +42,21 @@
 								    <h:outputText value="#{d.fileName}" />
 								  </p:column>
 								  <p:column headerText="Link">
-								   <p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload}">
+								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}">
   									<p:fileDownload value="#{d.fileStreamedContent}" /> 
-									</p:commandLink>
-									
-									</p:column>
+									</p:commandLink>									
+								</p:column>
 								  <p:column headerText="Datum">
 								    <h:outputText value="#{d.fileType}" />
 								  </p:column>
 							</p:dataTable>
 					</p:column>
 					</p:row>
-					
+					<p:outputLabel for="status" value="Status" />
+					<p:selectOneMenu id="status" value="#{data.fileTypeDoc}" required="true">
+						<f:selectItem itemLabel="Status auswählen" />
+						<f:selectItems value="#{data.fileTypeAvailable}" />
+					</p:selectOneMenu>
 					<p:outputLabel  value="Dokumente hochladen"/>				
 					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUpload}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
 					<br/>
