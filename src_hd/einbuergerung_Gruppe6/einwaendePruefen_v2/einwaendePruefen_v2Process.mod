@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Nov 28 17:44:36 CET 2015]
+[>Created: Mon Nov 30 14:31:28 CET 2015]
 1514E482577A784A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 einwaendePruefen_v2Process Big #zClass
@@ -19,7 +19,6 @@ es0 @RichDialogInitStart f0 '' #zField
 es0 @RichDialogProcessEnd f1 '' #zField
 es0 @RichDialogProcessStart f3 '' #zField
 es0 @RichDialogEnd f4 '' #zField
-es0 @GridStep f10 '' #zField
 es0 @GridStep f8 '' #zField
 es0 @DBStep f11 '' #zField
 es0 @DBStep f6 '' #zField
@@ -57,7 +56,7 @@ es0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 es0 f0 83 51 26 26 -39 15 #rect
 es0 f0 @|RichDialogInitStartIcon #fIcon
 es0 f1 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
-es0 f1 939 51 26 26 0 12 #rect
+es0 f1 707 51 26 26 0 12 #rect
 es0 f1 @|RichDialogProcessEndIcon #fIcon
 es0 f3 guid 1514E4825B952512 #txt
 es0 f3 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
@@ -76,33 +75,8 @@ es0 f3 75 315 26 26 -15 12 #rect
 es0 f3 @|RichDialogProcessStartIcon #fIcon
 es0 f4 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 es0 f4 guid 1514E4825BAAA03F #txt
-es0 f4 931 315 26 26 0 12 #rect
+es0 f4 699 315 26 26 0 12 #rect
 es0 f4 @|RichDialogEndIcon #fIcon
-es0 f10 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
-' #txt
-es0 f10 actionTable 'out=in;
-' #txt
-es0 f10 actionCode 'import einbuergerung_Gruppe6.Objection;
-
-for(Objection objection : in.request.objections){
-	if(objection.date.compareTo(in.request.publicationDate) < 0 || objection.date.compareTo(in.request.endObjectionPeriod) > 0 ){
-		in.request.objections.remove(objection);
-	}
-}' #txt
-es0 f10 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
-es0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Delete Objections 
-with invalide Date</name>
-        <nameStyle>7,7
-30,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-es0 f10 704 42 128 44 -45 -16 #rect
-es0 f10 @|StepIcon #fIcon
 es0 f8 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
 es0 f8 actionTable 'out=in;
@@ -129,7 +103,7 @@ Objectionlist</name>
     </language>
 </elementInfo>
 ' #txt
-es0 f8 560 42 112 44 -34 -16 #rect
+es0 f8 520 42 112 44 -34 -16 #rect
 es0 f8 @|StepIcon #fIcon
 es0 f11 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
@@ -152,7 +126,7 @@ Refering to request</name>
     </language>
 </elementInfo>
 ' #txt
-es0 f11 376 42 144 44 -52 -16 #rect
+es0 f11 336 42 144 44 -52 -16 #rect
 es0 f11 @|DBStepIcon #fIcon
 es0 f6 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
@@ -179,21 +153,19 @@ form Database</name>
     </language>
 </elementInfo>
 ' #txt
-es0 f6 208 42 128 44 -41 -16 #rect
+es0 f6 168 42 128 44 -41 -16 #rect
 es0 f6 @|DBStepIcon #fIcon
 es0 f16 expr out #txt
-es0 f16 336 64 376 64 #arcP
+es0 f16 296 64 336 64 #arcP
 es0 f16 0 0.6056434123926123 0 0 #arcLabel
 es0 f7 expr out #txt
-es0 f7 520 64 560 64 #arcP
+es0 f7 480 64 520 64 #arcP
 es0 f7 0 0.6056434123926123 0 0 #arcLabel
 es0 f2 expr out #txt
-es0 f2 109 64 208 64 #arcP
+es0 f2 109 64 168 64 #arcP
 es0 f9 expr out #txt
-es0 f9 616 86 952 77 #arcP
-es0 f9 1 616 112 #addKink
-es0 f9 2 952 112 #addKink
-es0 f9 1 0.5133928571428571 0 0 #arcLabel
+es0 f9 632 64 707 64 #arcP
+es0 f9 0 0.4999999999999999 0 0 #arcLabel
 es0 f22 guid 1514E6D7528A0AF2 #txt
 es0 f22 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 es0 f22 method DeleteObjection(einbuergerung_Gruppe6.Objection) #txt
@@ -217,12 +189,12 @@ es0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 es0 f22 155 187 26 26 -74 15 #rect
 es0 f22 @|RichDialogMethodStartIcon #fIcon
 es0 f23 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
-es0 f23 771 187 26 26 0 12 #rect
+es0 f23 539 187 26 26 0 12 #rect
 es0 f23 @|RichDialogProcessEndIcon #fIcon
 es0 f18 expr out #txt
-es0 f18 496 200 771 200 #arcP
+es0 f18 384 200 539 200 #arcP
 es0 f17 expr out #txt
-es0 f17 181 200 384 200 #arcP
+es0 f17 181 200 272 200 #arcP
 es0 f25 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
 ' #txt
 es0 f25 actionTable 'out=in;
@@ -238,10 +210,10 @@ es0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-es0 f25 384 178 112 44 -45 -8 #rect
+es0 f25 272 178 112 44 -45 -8 #rect
 es0 f25 @|StepIcon #fIcon
 es0 f5 expr out #txt
-es0 f5 101 328 931 328 #arcP
+es0 f5 101 328 699 328 #arcP
 >Proto es0 .type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 >Proto es0 .processKind HTML_DIALOG #txt
 >Proto es0 -8 -8 16 16 16 26 #rect

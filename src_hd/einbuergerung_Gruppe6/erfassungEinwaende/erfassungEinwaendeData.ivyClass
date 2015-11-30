@@ -14,3 +14,5 @@ valid Boolean #field
 valid PERSISTENT #fieldModifier
 message String #field
 message PERSISTENT #fieldModifier
+recordsetDate Recordset #field
+recordsetDate PERSISTENT #fieldModifier

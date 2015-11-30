@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Nov 28 19:52:59 CET 2015]
+[>Created: Mon Nov 30 14:19:49 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -16,25 +16,24 @@ Rn0 @TextInP .responsibility .responsibility #zField
 Rn0 @StartSub f0 '' #zField
 Rn0 @EMail f32 '' #zField
 Rn0 @EMail f44 '' #zField
-Rn0 @Alternative f48 '' #zField
 Rn0 @EndSub f1 '' #zField
 Rn0 @GridStep f3 '' #zField
 Rn0 @PushWFArc f4 '' #zField
 Rn0 @PushWFArc f2 '' #zField
 Rn0 @CallSub f6 '' #zField
 Rn0 @GridStep f9 '' #zField
-Rn0 @PushWFArc f10 '' #zField
 Rn0 @PushWFArc f5 '' #zField
 Rn0 @GridStep f11 '' #zField
 Rn0 @PushWFArc f13 '' #zField
-Rn0 @GridStep f15 '' #zField
 Rn0 @Alternative f18 '' #zField
 Rn0 @PushWFArc f20 '' #zField
-Rn0 @PushWFArc f12 '' #zField
 Rn0 @PushWFArc f21 '' #zField
+Rn0 @TaskSwitch f16 '' #zField
+Rn0 @TkArc f8 '' #zField
+Rn0 @TkArc f12 '' #zField
+Rn0 @ProcessException f14 '' #zField
 Rn0 @PushWFArc f7 '' #zField
-Rn0 @PushWFArc f8 '' #zField
-Rn0 @PushWFArc f14 '' #zField
+Rn0 @PushWFArc f10 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
 Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Invoice invoice,einbuergerung_Gruppe6.Data data> param;' #txt
 Rn0 f0 inParamTable 'out=param.data;
@@ -86,23 +85,10 @@ Erinnerung</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f44 1072 162 112 44 -30 -16 #rect
+Rn0 f44 944 162 112 44 -30 -16 #rect
 Rn0 f44 @|EMailIcon #fIcon
-Rn0 f48 type einbuergerung_Gruppe6.Data #txt
-Rn0 f48 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Zahlung
-eingegangen</name>
-        <nameStyle>19,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f48 760 80 32 32 -34 -56 #rect
-Rn0 f48 @|AlternativeIcon #fIcon
 Rn0 f1 type einbuergerung_Gruppe6.Data #txt
-Rn0 f1 1049 81 30 30 0 15 #rect
+Rn0 f1 921 81 30 30 0 15 #rect
 Rn0 f1 @|EndSubIcon #fIcon
 Rn0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -159,7 +145,7 @@ Rn0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f6 912 226 112 44 -22 -8 #rect
+Rn0 f6 784 226 112 44 -22 -8 #rect
 Rn0 f6 @|CallSubIcon #fIcon
 Rn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -178,13 +164,10 @@ Request inovice list</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f9 872 74 128 44 -46 -16 #rect
+Rn0 f9 744 74 128 44 -46 -16 #rect
 Rn0 f9 @|StepIcon #fIcon
-Rn0 f10 expr in #txt
-Rn0 f10 outCond in.invoice.paymentReceived #txt
-Rn0 f10 792 96 872 96 #arcP
 Rn0 f5 expr out #txt
-Rn0 f5 1000 96 1049 96 #arcP
+Rn0 f5 872 96 921 96 #arcP
 Rn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f11 actionTable 'out=in;
@@ -201,33 +184,11 @@ Rn0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f11 912 162 112 44 -32 -8 #rect
+Rn0 f11 784 162 112 44 -32 -8 #rect
 Rn0 f11 @|StepIcon #fIcon
 Rn0 f13 expr out #txt
-Rn0 f13 1024 184 1072 184 #arcP
+Rn0 f13 896 184 944 184 #arcP
 Rn0 f13 0 0.2598079352879466 0 0 #arcLabel
-Rn0 f15 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Rn0 f15 actionTable 'out=in;
-' #txt
-Rn0 f15 actionCode 'import java.util.Random;
-
-Random random = new Random();
-in.invoice.paymentReceived=random.nextBoolean();
-' #txt
-Rn0 f15 type einbuergerung_Gruppe6.Data #txt
-Rn0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Random (Prototyp)
-Zahlung eingegangen</name>
-        <nameStyle>37,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Rn0 f15 544 74 144 44 -54 -16 #rect
-Rn0 f15 @|StepIcon #fIcon
 Rn0 f18 type einbuergerung_Gruppe6.Data #txt
 Rn0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -238,7 +199,7 @@ Rn0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f18 840 168 32 32 -51 -42 #rect
+Rn0 f18 712 168 32 32 -51 -42 #rect
 Rn0 f18 @|AlternativeIcon #fIcon
 Rn0 f20 expr in #txt
 Rn0 f20 outCond !in.invoice.penalty #txt
@@ -251,10 +212,8 @@ Rn0 f20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f20 872 184 912 184 #arcP
+Rn0 f20 744 184 784 184 #arcP
 Rn0 f20 0 0.35 0 12 #arcLabel
-Rn0 f12 expr out #txt
-Rn0 f12 688 96 760 96 #arcP
 Rn0 f21 expr in #txt
 Rn0 f21 outCond in.invoice.penalty #txt
 Rn0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -266,20 +225,109 @@ Rn0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f21 856 200 912 248 #arcP
-Rn0 f21 1 856 248 #addKink
+Rn0 f21 728 200 784 248 #arcP
+Rn0 f21 1 728 248 #addKink
 Rn0 f21 0 0.4166666666666667 -10 0 #arcLabel
-Rn0 f7 expr in #txt
-Rn0 f7 776 112 840 184 #arcP
-Rn0 f7 1 776 184 #addKink
-Rn0 f7 0 0.8258974536979345 0 0 #arcLabel
+Rn0 f16 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f16 actionTable 'out=in1;
+' #txt
+Rn0 f16 outTypes "einbuergerung_Gruppe6.Data" #txt
+Rn0 f16 outLinks "TaskA.ivp" #txt
+Rn0 f16 caseData '#
+#Mon Nov 30 14:19:43 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+Rn0 f16 taskData '#
+#Mon Nov 30 14:19:43 CET 2015
+TaskA.EXC=1505C5AC6EFDC232-f14-buffer
+TaskA.EXP=''10s''
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Ist die Zahlung eingegangen (Erst bei Zahlungseingang klicken\!)
+TaskA.PRI=2
+TaskA.ROL=Kanzleimitarbeiter
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
+Rn0 f16 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Ist die Zahlung eingegangen (Erst bei Zahlungseingang klicken!)"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Kanzleimitarbeiter");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryPeriod(1000 * (''10s'').toNumber());
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryStartTaskElementPid("1505C5AC6EFDC232-f14-buffer");
+taskDefinitions.add(taskDef);
+' #txt
+Rn0 f16 type einbuergerung_Gruppe6.Data #txt
+Rn0 f16 template "" #txt
+Rn0 f16 528 80 32 32 0 16 #rect
+Rn0 f16 @|TaskSwitchIcon #fIcon
 Rn0 f8 expr out #txt
-Rn0 f8 1128 206 616 118 #arcP
-Rn0 f8 1 1128 280 #addKink
-Rn0 f8 2 616 280 #addKink
-Rn0 f8 2 0.425 0 0 #arcLabel
-Rn0 f14 expr out #txt
-Rn0 f14 472 96 544 96 #arcP
+Rn0 f8 type einbuergerung_Gruppe6.Data #txt
+Rn0 f8 var in1 #txt
+Rn0 f8 1000 206 544 112 #arcP
+Rn0 f8 1 1000 288 #addKink
+Rn0 f8 2 544 288 #addKink
+Rn0 f8 1 0.5153508771929824 0 0 #arcLabel
+Rn0 f12 expr out #txt
+Rn0 f12 type einbuergerung_Gruppe6.Data #txt
+Rn0 f12 var in2 #txt
+Rn0 f12 472 96 528 96 #arcP
+Rn0 f14 .resExport export #txt
+Rn0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f14 actionTable 'out=in;
+' #txt
+Rn0 f14 type einbuergerung_Gruppe6.Data #txt
+Rn0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Keine Zahlung</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f14 617 169 30 30 -40 17 #rect
+Rn0 f14 @|ExceptionIcon #fIcon
+Rn0 f7 expr out #txt
+Rn0 f7 647 184 712 184 #arcP
+Rn0 f10 expr data #txt
+Rn0 f10 outCond ivp=="TaskA.ivp" #txt
+Rn0 f10 560 96 744 96 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -301,21 +349,19 @@ Rn0 f0 mainOut f4 tail #connect
 Rn0 f4 head f3 mainIn #connect
 Rn0 f3 mainOut f2 tail #connect
 Rn0 f2 head f32 mainIn #connect
-Rn0 f48 out f10 tail #connect
-Rn0 f10 head f9 mainIn #connect
 Rn0 f9 mainOut f5 tail #connect
 Rn0 f5 head f1 mainIn #connect
 Rn0 f11 mainOut f13 tail #connect
 Rn0 f13 head f44 mainIn #connect
-Rn0 f15 mainOut f12 tail #connect
-Rn0 f12 head f48 in #connect
 Rn0 f18 out f20 tail #connect
 Rn0 f20 head f11 mainIn #connect
 Rn0 f18 out f21 tail #connect
 Rn0 f21 head f6 mainIn #connect
-Rn0 f48 out f7 tail #connect
-Rn0 f7 head f18 in #connect
 Rn0 f44 mainOut f8 tail #connect
-Rn0 f8 head f15 mainIn #connect
-Rn0 f32 mainOut f14 tail #connect
-Rn0 f14 head f15 mainIn #connect
+Rn0 f8 head f16 in #connect
+Rn0 f32 mainOut f12 tail #connect
+Rn0 f12 head f16 in #connect
+Rn0 f14 mainOut f7 tail #connect
+Rn0 f7 head f18 in #connect
+Rn0 f16 out f10 tail #connect
+Rn0 f10 head f9 mainIn #connect

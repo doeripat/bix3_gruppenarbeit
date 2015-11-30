@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Nov 29 16:22:22 CET 2015]
+[>Created: Mon Nov 30 15:18:13 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -47,6 +47,8 @@ En0 @PushWFArc f15 '' #zField
 En0 @PushWFArc f2 '' #zField
 En0 @TkArc f13 '' #zField
 En0 @TaskSwitch f7 '' #zField
+En0 @StartRequest f14 '' #zField
+En0 @PushWFArc f16 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
@@ -183,7 +185,7 @@ En0 f32 actionTable 'out=in1;
 En0 f32 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f32 outLinks "TaskA.ivp" #txt
 En0 f32 caseData '#
-#Sat Nov 28 15:47:20 CET 2015
+#Mon Nov 30 10:31:42 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -211,10 +213,11 @@ type.code=
 type.name=
 ' #txt
 En0 f32 taskData '#
-#Sat Nov 28 15:47:20 CET 2015
+#Mon Nov 30 10:31:41 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
+TaskA.NAM=Bitte engegangene Einw\u00E4nde zu Gesuch <%\=in1.request.uniqueIdentifier%>
 TaskA.PRI=2
 TaskA.ROL=Migrationsamt Pruefer
 TaskA.SKIP_TASK_LIST=false
@@ -226,6 +229,7 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte engegangene Einwände zu Gesuch <%=in1.request.uniqueIdentifier%>"));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Migrationsamt Pruefer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -422,16 +426,14 @@ En0 f27 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>To Do:
-- Emails (List of Names?)
-- Style Dialog Entscheid Weiterführung
-- Validate Objection Date</name>
+- Emails (List of Names)</name>
         <nameStyle>7,7
-90,7
+24,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 f27 304 410 224 76 -105 -32 #rect
+En0 f27 344 426 144 44 -67 -16 #rect
 En0 f27 @|IBIcon #fIcon
 En0 f28 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -561,6 +563,27 @@ En0 f7 type einbuergerung_Gruppe6.Data #txt
 En0 f7 template "" #txt
 En0 f7 984 392 32 32 0 16 #rect
 En0 f7 @|TaskSwitchIcon #fIcon
+En0 f14 outLink start2.ivp #txt
+En0 f14 type einbuergerung_Gruppe6.Data #txt
+En0 f14 inParamDecl '<> param;' #txt
+En0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f14 guid 15157B990CCBD6D4 #txt
+En0 f14 requestEnabled true #txt
+En0 f14 triggerEnabled false #txt
+En0 f14 callSignature start2() #txt
+En0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start2.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+En0 f14 @C|.responsibility Everybody #txt
+En0 f14 145 145 30 30 -24 17 #rect
+En0 f14 @|StartRequestIcon #fIcon
+En0 f16 expr out #txt
+En0 f16 165 146 184 126 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -618,3 +641,5 @@ En0 f10 mainOut f8 tail #connect
 En0 f8 head f30 mainIn #connect
 En0 f18 out f15 tail #connect
 En0 f15 head f30 mainIn #connect
+En0 f14 mainOut f16 tail #connect
+En0 f16 head f11 mainIn #connect
