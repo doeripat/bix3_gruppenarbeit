@@ -12,3 +12,5 @@ nationality String #field
 nationality PERSISTENT #fieldModifier
 role String #field
 role PERSISTENT #fieldModifier
+yearCount Number #field
+yearCount PERSISTENT #fieldModifier

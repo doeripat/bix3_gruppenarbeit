@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 4395504614256445109L;
+  private static final long serialVersionUID = 3657094992151005323L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -447,6 +447,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setEndReason(java.lang.String _endReason)
   {
     endReason = _endReason;
+  }
+
+  private java.lang.String publicationData;
+
+  /**
+   * Gets the field publicationData.
+   * @return the value of the field publicationData; may be null.
+   */
+  public java.lang.String getPublicationData()
+  {
+    return publicationData;
+  }
+
+  /**
+   * Sets the field publicationData.
+   * @param _publicationData the new value of the field publicationData.
+   */
+  public void setPublicationData(java.lang.String _publicationData)
+  {
+    publicationData = _publicationData;
   }
 
 }

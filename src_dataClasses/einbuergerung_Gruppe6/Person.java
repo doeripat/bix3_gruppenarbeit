@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -700439724823911712L;
+  private static final long serialVersionUID = 1232673899518519882L;
 
   private java.lang.String firstname;
 
@@ -127,6 +127,26 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setRole(java.lang.String _role)
   {
     role = _role;
+  }
+
+  private java.lang.Number yearCount;
+
+  /**
+   * Gets the field yearCount.
+   * @return the value of the field yearCount; may be null.
+   */
+  public java.lang.Number getYearCount()
+  {
+    return yearCount;
+  }
+
+  /**
+   * Sets the field yearCount.
+   * @param _yearCount the new value of the field yearCount.
+   */
+  public void setYearCount(java.lang.Number _yearCount)
+  {
+    yearCount = _yearCount;
   }
 
 }

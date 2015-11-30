@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 15:18:13 CET 2015]
+[>Created: Mon Nov 30 19:05:40 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -30,7 +30,6 @@ En0 @EndTask f38 '' #zField
 En0 @PushWFArc f39 '' #zField
 En0 @GridStep f3 '' #zField
 En0 @PushWFArc f34 '' #zField
-En0 @PushWFArc f35 '' #zField
 En0 @RichDialog f26 '' #zField
 En0 @PushWFArc f5 '' #zField
 En0 @PushWFArc f6 '' #zField
@@ -49,6 +48,9 @@ En0 @TkArc f13 '' #zField
 En0 @TaskSwitch f7 '' #zField
 En0 @StartRequest f14 '' #zField
 En0 @PushWFArc f16 '' #zField
+En0 @GridStep f23 '' #zField
+En0 @PushWFArc f31 '' #zField
+En0 @PushWFArc f33 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
@@ -73,7 +75,7 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f0 49 89 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Data #txt
-En0 f1 1393 81 30 30 0 15 #rect
+En0 f1 1505 81 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
 En0 f18 type einbuergerung_Gruppe6.Data #txt
 En0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -87,7 +89,7 @@ erwünscht?</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f18 1200 392 32 32 -29 21 #rect
+En0 f18 1312 392 32 32 -29 21 #rect
 En0 f18 @|AlternativeIcon #fIcon
 En0 f20 type einbuergerung_Gruppe6.Data #txt
 En0 f20 processCall 'Functional Processes/Rechnungswesen:call(einbuergerung_Gruppe6.Invoice,einbuergerung_Gruppe6.Data)' #txt
@@ -110,7 +112,7 @@ Weiterführung</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f20 1248 74 112 44 -38 -20 #rect
+En0 f20 1360 74 112 44 -38 -20 #rect
 En0 f20 @|CallSubIcon #fIcon
 En0 f21 expr in #txt
 En0 f21 outCond in.request.Continue #txt
@@ -123,13 +125,13 @@ En0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f21 1216 392 1248 96 #arcP
-En0 f21 1 1216 96 #addKink
+En0 f21 1328 392 1360 96 #arcP
+En0 f21 1 1328 96 #addKink
 En0 f21 0 0.06418918918918919 -12 0 #arcLabel
 En0 f24 expr out #txt
-En0 f24 1360 96 1393 96 #arcP
+En0 f24 1472 96 1505 96 #arcP
 En0 f24 0 0.3970514322284797 0 0 #arcLabel
-En0 f11 beanConfig '"{/emailSubject ""Neues Gesuch für Publikation""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""christian@kappler.co""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Publikation:\\n\\nGesuchs ID: <%=in.request.uniqueIdentifier%>\\n\\nName: <%=in.person.lastname%>\\nVorname: <%=in.person.firstname%>\\nGeburtsdatum: <%=in.person.birthday%>\\n""/emailAttachments * }"' #txt
+En0 f11 beanConfig '"{/emailSubject ""Neues Gesuch für Publikation""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""christian@kappler.co""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Publikation:\\n\\n<%=in.request.publicationData%>\\n\\n""/emailAttachments * }"' #txt
 En0 f11 type einbuergerung_Gruppe6.Data #txt
 En0 f11 timeout 0 #txt
 En0 f11 exceptionHandler '>> Ignore Exception' #txt
@@ -143,7 +145,7 @@ Amtsblatt</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f11 128 82 112 44 -25 -16 #rect
+En0 f11 248 82 112 44 -25 -16 #rect
 En0 f11 @|EMailIcon #fIcon
 En0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -158,7 +160,7 @@ auf Homepage</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f19 240 130 208 76 -98 -32 #rect
+En0 f19 352 130 208 76 -98 -32 #rect
 En0 f19 @|IBIcon #fIcon
 En0 f19 -14336|-1|-16777216 #nodeStyle
 En0 f12 beanConfig '"{/emailSubject ""Entscheid Weiterführung Gesuch <%=in.request.uniqueIdentifier%>""/emailFrom ""noreply@migrationsamt.sz.ch""/emailReplyTo """"/emailTo ""christian@kappler.co""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBitte Loggen Sie sich auf unserer Webpage mit Ihrem Login ein und treffen Sie eine Entscheidung bezüglich der Weiterführung Ihres Einbürgerungsgesuchs.\\n\\nFreundlich Grüsse\\n\\nMigrationsamt""/emailAttachments * }"' #txt
@@ -176,7 +178,7 @@ Entscheidung fällen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f12 928 82 144 44 -51 -16 #rect
+En0 f12 1040 82 144 44 -51 -16 #rect
 En0 f12 @|EMailIcon #fIcon
 En0 f32 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -248,7 +250,7 @@ En0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f32 648 88 32 32 -41 -37 #rect
+En0 f32 760 88 32 32 -41 -37 #rect
 En0 f32 @|TaskSwitchIcon #fIcon
 En0 f17 outLink start.ivp #txt
 En0 f17 type einbuergerung_Gruppe6.Data #txt
@@ -294,15 +296,15 @@ Erfassung Einwände</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f22 216 258 144 44 -52 -16 #rect
+En0 f22 328 258 144 44 -52 -16 #rect
 En0 f22 @|RichDialogIcon #fIcon
 En0 f37 expr out #txt
-En0 f37 103 280 216 280 #arcP
+En0 f37 103 280 328 280 #arcP
 En0 f38 type einbuergerung_Gruppe6.Data #txt
-En0 f38 513 265 30 30 0 15 #rect
+En0 f38 625 265 30 30 0 15 #rect
 En0 f38 @|EndIcon #fIcon
 En0 f39 expr out #txt
-En0 f39 360 280 513 280 #arcP
+En0 f39 472 280 625 280 #arcP
 En0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f3 actionTable 'out=in;
@@ -332,13 +334,11 @@ and endPeriodTime</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f3 272 82 144 44 -51 -16 #rect
+En0 f3 384 82 144 44 -51 -16 #rect
 En0 f3 @|StepIcon #fIcon
 En0 f34 expr out #txt
-En0 f34 240 104 272 104 #arcP
+En0 f34 360 104 384 104 #arcP
 En0 f34 0 0.28881725983930495 0 0 #arcLabel
-En0 f35 expr out #txt
-En0 f35 79 104 128 104 #arcP
 En0 f26 targetWindow NEW:card: #txt
 En0 f26 targetDisplay TOP #txt
 En0 f26 richDialogId einbuergerung_Gruppe6.einwaendePruefen_v2 #txt
@@ -367,13 +367,13 @@ Korrektheit prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f26 744 82 144 44 -54 -16 #rect
+En0 f26 856 82 144 44 -54 -16 #rect
 En0 f26 @|RichDialogIcon #fIcon
 En0 f5 expr data #txt
 En0 f5 outCond ivp=="TaskA.ivp" #txt
-En0 f5 680 104 744 104 #arcP
+En0 f5 792 104 856 104 #arcP
 En0 f6 expr out #txt
-En0 f6 888 104 928 104 #arcP
+En0 f6 1000 104 1040 104 #arcP
 En0 f10 .resExport export #txt
 En0 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -389,7 +389,7 @@ En0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f10 1337 465 30 30 -37 17 #rect
+En0 f10 1449 465 30 30 -37 17 #rect
 En0 f10 @|ExceptionIcon #fIcon
 En0 f25 targetWindow NEW:card: #txt
 En0 f25 targetDisplay TOP #txt
@@ -418,10 +418,10 @@ Weiterführung</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f25 1056 386 112 44 -38 -16 #rect
+En0 f25 1168 386 112 44 -38 -16 #rect
 En0 f25 @|RichDialogIcon #fIcon
 En0 f9 expr out #txt
-En0 f9 1168 408 1200 408 #arcP
+En0 f9 1280 408 1312 408 #arcP
 En0 f27 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -433,7 +433,7 @@ En0 f27 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f27 344 426 144 44 -67 -16 #rect
+En0 f27 456 426 144 44 -67 -16 #rect
 En0 f27 @|IBIcon #fIcon
 En0 f28 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -457,14 +457,14 @@ En0 f28 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f28 464 82 144 44 -65 -8 #rect
+En0 f28 576 82 144 44 -65 -8 #rect
 En0 f28 @|DBStepIcon #fIcon
 En0 f29 expr out #txt
-En0 f29 416 104 464 104 #arcP
+En0 f29 528 104 576 104 #arcP
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
-En0 f4 608 104 648 104 #arcP
+En0 f4 720 104 760 104 #arcP
 En0 f30 type einbuergerung_Gruppe6.Data #txt
 En0 f30 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
 En0 f30 doCall true #txt
@@ -483,19 +483,19 @@ En0 f30 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f30 1296 386 112 44 -22 -8 #rect
+En0 f30 1408 386 112 44 -22 -8 #rect
 En0 f30 @|CallSubIcon #fIcon
 En0 f8 expr out #txt
-En0 f8 1352 465 1352 430 #arcP
+En0 f8 1464 465 1464 430 #arcP
 En0 f15 expr in #txt
-En0 f15 1232 408 1296 408 #arcP
+En0 f15 1344 408 1408 408 #arcP
 En0 f2 expr data #txt
 En0 f2 outCond ivp=="TaskA.ivp" #txt
-En0 f2 1016 408 1056 408 #arcP
+En0 f2 1128 408 1168 408 #arcP
 En0 f13 expr out #txt
 En0 f13 type einbuergerung_Gruppe6.Data #txt
 En0 f13 var in1 #txt
-En0 f13 1000 126 1000 392 #arcP
+En0 f13 1112 126 1112 392 #arcP
 En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f7 actionTable 'out=in1;
@@ -561,7 +561,7 @@ taskDefinitions.add(taskDef);
 ' #txt
 En0 f7 type einbuergerung_Gruppe6.Data #txt
 En0 f7 template "" #txt
-En0 f7 984 392 32 32 0 16 #rect
+En0 f7 1096 392 32 32 0 16 #rect
 En0 f7 @|TaskSwitchIcon #fIcon
 En0 f14 outLink start2.ivp #txt
 En0 f14 type einbuergerung_Gruppe6.Data #txt
@@ -580,10 +580,48 @@ En0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 En0 f14 @C|.responsibility Everybody #txt
-En0 f14 145 145 30 30 -24 17 #rect
+En0 f14 257 145 30 30 -24 17 #rect
 En0 f14 @|StartRequestIcon #fIcon
 En0 f16 expr out #txt
-En0 f16 165 146 184 126 #arcP
+En0 f16 279 146 304 126 #arcP
+En0 f23 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f23 actionTable 'out=in;
+' #txt
+En0 f23 actionCode 'import einbuergerung_Gruppe6.Person;
+Person person;
+String s="Gesuchs ID: "+in.request.uniqueIdentifier+"\n\n";
+
+for(int i=0; i<in.request.personList.size();i++){
+	person = in.request.personList.get(i);
+	
+	s=s+"Person "+(i+1)+"\n";
+	s=s+"Name: "+person.firstname+" "+person.lastname+"\n";
+	s=s+"Geburtsdatum: "+person.birthday.toString()+"\n";
+	s=s+"Nationalität: "+in.person.nationality+"\n";
+	s=s+"Anzahl Jahre in der Schweiz: "+in.person.yearCount+"\n\n";	
+	}
+	s=s+"Adresse: "+in.request.address;
+	out.request.publicationData=s;
+	' #txt
+En0 f23 type einbuergerung_Gruppe6.Data #txt
+En0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Build Publication
+String</name>
+        <nameStyle>18,7
+6,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f23 112 82 112 44 -43 -16 #rect
+En0 f23 @|StepIcon #fIcon
+En0 f31 expr out #txt
+En0 f31 79 104 112 104 #arcP
+En0 f33 expr out #txt
+En0 f33 224 104 248 104 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -623,8 +661,6 @@ En0 f22 mainOut f39 tail #connect
 En0 f39 head f38 mainIn #connect
 En0 f11 mainOut f34 tail #connect
 En0 f34 head f3 mainIn #connect
-En0 f0 mainOut f35 tail #connect
-En0 f35 head f11 mainIn #connect
 En0 f32 out f5 tail #connect
 En0 f5 head f26 mainIn #connect
 En0 f26 mainOut f6 tail #connect
@@ -643,3 +679,7 @@ En0 f18 out f15 tail #connect
 En0 f15 head f30 mainIn #connect
 En0 f14 mainOut f16 tail #connect
 En0 f16 head f11 mainIn #connect
+En0 f0 mainOut f31 tail #connect
+En0 f31 head f23 mainIn #connect
+En0 f23 mainOut f33 tail #connect
+En0 f33 head f11 mainIn #connect
