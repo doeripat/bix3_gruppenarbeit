@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Nov 29 15:59:16 CET 2015]
+[>Created: Mon Nov 30 11:24:48 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -55,8 +55,6 @@ dn0 @GridStep f20 '' #zField
 dn0 @PushWFArc f22 '' #zField
 dn0 @PushWFArc f28 '' #zField
 dn0 @TkArc f29 '' #zField
-dn0 @StartRequest f30 '' #zField
-dn0 @TkArc f32 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -370,7 +368,7 @@ dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f12 1120 122 112 44 -33 -20 #rect
 dn0 f12 @|CallSubIcon #fIcon
 dn0 f2 expr in #txt
-dn0 f2 outCond 'in.request.status == "Dokumente formal korrekt"' #txt
+dn0 f2 outCond 'in.request.status == "Warten auf Zahlungseingang Verfahrensgebühr"' #txt
 dn0 f2 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -618,79 +616,6 @@ dn0 f29 var in1 #txt
 dn0 f29 488 210 584 144 #arcP
 dn0 f29 1 488 144 #addKink
 dn0 f29 1 0.18034898932662913 0 0 #arcLabel
-dn0 f30 outLink start4.ivp #txt
-dn0 f30 type einbuergerung_Gruppe6.Data #txt
-dn0 f30 inParamDecl '<> param;' #txt
-dn0 f30 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f30 guid 15153BD867C990C9 #txt
-dn0 f30 requestEnabled true #txt
-dn0 f30 triggerEnabled false #txt
-dn0 f30 callSignature start4() #txt
-dn0 f30 persist false #txt
-dn0 f30 taskData '#
-#Sun Nov 29 15:57:20 CET 2015
-TaskTriggered.ROL=Everybody
-TaskTriggered.EXTYPE=0
-TaskTriggered.EXPRI=2
-TaskTriggered.TYPE=0
-TaskTriggered.PRI=2
-TaskTriggered.EXROL=Everybody
-' #txt
-dn0 f30 caseData '#
-#Sun Nov 29 15:57:20 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-dn0 f30 showInStartList 1 #txt
-dn0 f30 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
-ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
-import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskUpdDef.setExpiryActivator("Everybody");
-taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-engine.updateCurrentTask(taskUpdDef);
-' #txt
-dn0 f30 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start4.ivp</name>
-        <nameStyle>10,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 f30 @C|.responsibility Everybody #txt
-dn0 f30 193 433 30 30 -24 17 #rect
-dn0 f30 @|StartRequestIcon #fIcon
-dn0 f32 expr out #txt
-dn0 f32 type einbuergerung_Gruppe6.Data #txt
-dn0 f32 var in2 #txt
-dn0 f32 201 434 181 387 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -927,13 +852,15 @@ Bk1 g1 @|MOGIcon #fIcon
 Bk1 f0 targetWindow NEW:card: #txt
 Bk1 f0 targetDisplay TOP #txt
 Bk1 f0 richDialogId einbuergerung_Gruppe6.DateienHochladen_v2 #txt
-Bk1 f0 startMethod start() #txt
+Bk1 f0 startMethod start(einbuergerung_Gruppe6.Request) #txt
 Bk1 f0 type einbuergerung_Gruppe6.Data #txt
-Bk1 f0 requestActionDecl '<> param;' #txt
+Bk1 f0 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+Bk1 f0 requestMappingAction 'param.request=in.request;
+' #txt
 Bk1 f0 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk1 f0 responseMappingAction 'out=in;
-out.request.document=result.document;
+out.request=result.request;
 ' #txt
 Bk1 f0 windowConfiguration '* ' #txt
 Bk1 f0 isAsynch false #txt
@@ -1062,8 +989,6 @@ dn0 U40 g1 f28 tail #connect
 dn0 f28 head f20 mainIn #connect
 dn0 f20 mainOut f29 tail #connect
 dn0 f29 head f21 in #connect
-dn0 f30 mainOut f32 tail #connect
-dn0 f32 head f11 in #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect

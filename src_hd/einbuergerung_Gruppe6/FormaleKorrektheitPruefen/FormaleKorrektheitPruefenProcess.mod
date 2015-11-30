@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 01:24:34 CET 2015]
+[>Created: Mon Nov 30 11:23:47 CET 2015]
 1510B9FE62E66C66 3.17 #module
 >Proto >Proto Collection #zClass
 Fs0 FormaleKorrektheitPruefenProcess Big #zClass
@@ -19,11 +19,10 @@ Fs0 @RichDialogInitStart f0 '' #zField
 Fs0 @RichDialogProcessEnd f1 '' #zField
 Fs0 @RichDialogProcessStart f3 '' #zField
 Fs0 @RichDialogEnd f4 '' #zField
+Fs0 @GridStep f8 '' #zField
+Fs0 @PushWFArc f2 '' #zField
 Fs0 @DBStep f6 '' #zField
 Fs0 @PushWFArc f7 '' #zField
-Fs0 @GridStep f8 '' #zField
-Fs0 @PushWFArc f9 '' #zField
-Fs0 @PushWFArc f2 '' #zField
 Fs0 @PushWFArc f5 '' #zField
 >Proto Fs0 Fs0 FormaleKorrektheitPruefenProcess #zField
 Fs0 f0 guid 1510B9FE66D67084 #txt
@@ -75,8 +74,29 @@ Fs0 f3 83 147 26 26 -15 12 #rect
 Fs0 f3 @|RichDialogProcessStartIcon #fIcon
 Fs0 f4 type einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData #txt
 Fs0 f4 guid 1510B9FE67C275DE #txt
-Fs0 f4 371 147 26 26 0 12 #rect
+Fs0 f4 499 147 26 26 0 12 #rect
 Fs0 f4 @|RichDialogEndIcon #fIcon
+Fs0 f8 actionDecl 'einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData out;
+' #txt
+Fs0 f8 actionTable 'out=in;
+' #txt
+Fs0 f8 actionCode 'out.statiList.add("Bitte Antrag überarbeiten");
+out.statiList.add("Warten auf Zahlungseingang Verfahrensgebühr");' #txt
+Fs0 f8 type einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData #txt
+Fs0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Recordset in Liste 
+umwandeln</name>
+        <nameStyle>29,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Fs0 f8 248 42 128 44 -45 -16 #rect
+Fs0 f8 @|StepIcon #fIcon
+Fs0 f2 expr out #txt
+Fs0 f2 376 64 515 64 #arcP
 Fs0 f6 actionDecl 'einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData out;
 ' #txt
 Fs0 f6 actionTable 'out=in;
@@ -99,43 +119,20 @@ Fs0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Fs0 f6 176 42 112 44 -51 -8 #rect
+Fs0 f6 312 290 112 44 -51 -8 #rect
 Fs0 f6 @|DBStepIcon #fIcon
+Fs0 f6 -1|-1|-65536 #nodeStyle
 Fs0 f7 expr out #txt
-Fs0 f7 109 64 176 64 #arcP
-Fs0 f8 actionDecl 'einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData out;
-' #txt
-Fs0 f8 actionTable 'out=in;
-out.statiList=einbuergerung_Gruppe6.ConversionHelper.fromRecordSetToList(in.statiRS,in.statiList,"status");
-' #txt
-Fs0 f8 type einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData #txt
-Fs0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Recordset in Liste 
-umwandeln</name>
-        <nameStyle>29,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Fs0 f8 328 42 128 44 -45 -16 #rect
-Fs0 f8 @|StepIcon #fIcon
-Fs0 f9 expr out #txt
-Fs0 f9 288 64 328 64 #arcP
-Fs0 f2 expr out #txt
-Fs0 f2 456 64 515 64 #arcP
+Fs0 f7 109 64 248 64 #arcP
 Fs0 f5 expr out #txt
-Fs0 f5 109 160 371 160 #arcP
+Fs0 f5 109 160 499 160 #arcP
 >Proto Fs0 .type einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData #txt
 >Proto Fs0 .processKind HTML_DIALOG #txt
 >Proto Fs0 -8 -8 16 16 16 26 #rect
 >Proto Fs0 '' #fIcon
-Fs0 f0 mainOut f7 tail #connect
-Fs0 f7 head f6 mainIn #connect
-Fs0 f6 mainOut f9 tail #connect
-Fs0 f9 head f8 mainIn #connect
 Fs0 f8 mainOut f2 tail #connect
 Fs0 f2 head f1 mainIn #connect
+Fs0 f0 mainOut f7 tail #connect
+Fs0 f7 head f8 mainIn #connect
 Fs0 f3 mainOut f5 tail #connect
 Fs0 f5 head f4 mainIn #connect

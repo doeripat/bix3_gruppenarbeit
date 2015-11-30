@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -1435034011002805796L;
+  private static final long serialVersionUID = -6491304333990562345L;
 
   private java.lang.String fileName;
 
@@ -67,6 +67,46 @@ public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setFilePath(java.lang.String _filePath)
   {
     filePath = _filePath;
+  }
+
+  private java.lang.String fileEnding;
+
+  /**
+   * Gets the field fileEnding.
+   * @return the value of the field fileEnding; may be null.
+   */
+  public java.lang.String getFileEnding()
+  {
+    return fileEnding;
+  }
+
+  /**
+   * Sets the field fileEnding.
+   * @param _fileEnding the new value of the field fileEnding.
+   */
+  public void setFileEnding(java.lang.String _fileEnding)
+  {
+    fileEnding = _fileEnding;
+  }
+
+  private java.lang.String comment;
+
+  /**
+   * Gets the field comment.
+   * @return the value of the field comment; may be null.
+   */
+  public java.lang.String getComment()
+  {
+    return comment;
+  }
+
+  /**
+   * Sets the field comment.
+   * @param _comment the new value of the field comment.
+   */
+  public void setComment(java.lang.String _comment)
+  {
+    comment = _comment;
   }
 
   private java.util.Date dataUpload;
@@ -147,26 +187,6 @@ public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setIsValid(java.lang.Boolean _isValid)
   {
     isValid = _isValid;
-  }
-
-  private java.lang.String comment;
-
-  /**
-   * Gets the field comment.
-   * @return the value of the field comment; may be null.
-   */
-  public java.lang.String getComment()
-  {
-    return comment;
-  }
-
-  /**
-   * Sets the field comment.
-   * @param _comment the new value of the field comment.
-   */
-  public void setComment(java.lang.String _comment)
-  {
-    comment = _comment;
   }
 
   private org.primefaces.model.DefaultStreamedContent fileStreamedContent;

@@ -1,5 +1,7 @@
 DateienHochladen_v2Data #class
 einbuergerung_Gruppe6.DateienHochladen_v2 #namespace
-document einbuergerung_Gruppe6.Document #field
+request einbuergerung_Gruppe6.Request #field
 fileUploadEvent org.primefaces.event.FileUploadEvent #field
 fileUploadEvent PERSISTENT #fieldModifier
+filetype String #field
+filetype PERSISTENT #fieldModifier

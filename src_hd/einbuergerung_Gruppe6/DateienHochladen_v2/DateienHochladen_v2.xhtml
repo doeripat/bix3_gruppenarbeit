@@ -13,10 +13,52 @@
 			<h3>
 			Bitte Dateien Hochladen
 			</h3>
-			<h:form id="form" enctype="multipart/form-data">					
-					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUpload}" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+			<h:form id="form" enctype="multipart/form-data">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					
+					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
+					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
+					
+					<p:outputLabel value="Personen"/>
+					<ui:repeat  var="p" value="#{data.request.personList}">
+						<p:outputLabel value="#{p.firstname}" styleClass="readonly_text"/>
+						<br/>
+						<p:outputLabel value="#{p.lastname}" styleClass="readonly_text"/>
+						<hr/>
+					</ui:repeat>
+					
+					<!--  <p:outputLabel  value="Hochgeladene Dokumente"/>
+					<ui:repeat var="d" value="#{data.request.documents}">
+						<p:outputLabel  value="#{d.fileName}" styleClass="readonly_text"/>
+					</ui:repeat>-->
+					<br />
+					<p:row>
+						<p:column>
+							<p:dataTable var="d" value="#{data.request.documents}">					
+								  <p:column headerText="Dateiname">
+								    <h:outputText value="#{d.fileName}" />
+								  </p:column>
+								  <p:column headerText="Link">
+								   <p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload}">
+  									<p:fileDownload value="#{d.fileStreamedContent}" /> 
+									</p:commandLink>
+									
+									</p:column>
+								  <p:column headerText="Datum">
+								    <h:outputText value="#{d.fileType}" />
+								  </p:column>
+							</p:dataTable>
+					</p:column>
+					</p:row>
+					
+					<p:outputLabel  value="Dokumente hochladen"/>				
+					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUpload}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
 					<br/>
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					</h:panelGrid>
 			</h:form>			
 		</ui:define>
 	</ui:composition>

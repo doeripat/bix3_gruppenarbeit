@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 11:26:08 CET 2015]
+[>Created: Mon Nov 30 13:51:14 CET 2015]
 1514590D4E7F0C89 3.17 #module
 >Proto >Proto Collection #zClass
 Ds0 DateienHochladen_v2Process Big #zClass
@@ -17,7 +17,6 @@ Ds0 @TextInP .xml .xml #zField
 Ds0 @TextInP .responsibility .responsibility #zField
 Ds0 @RichDialogInitStart f0 '' #zField
 Ds0 @RichDialogProcessEnd f1 '' #zField
-Ds0 @PushWFArc f2 '' #zField
 Ds0 @RichDialogProcessStart f3 '' #zField
 Ds0 @RichDialogEnd f4 '' #zField
 Ds0 @PushWFArc f5 '' #zField
@@ -26,32 +25,42 @@ Ds0 @RichDialogProcessEnd f7 '' #zField
 Ds0 @GridStep f9 '' #zField
 Ds0 @PushWFArc f10 '' #zField
 Ds0 @PushWFArc f8 '' #zField
+Ds0 @GridStep f11 '' #zField
+Ds0 @PushWFArc f12 '' #zField
+Ds0 @PushWFArc f2 '' #zField
+Ds0 @RichDialogMethodStart f13 '' #zField
+Ds0 @RichDialogProcessEnd f14 '' #zField
+Ds0 @GridStep f16 '' #zField
+Ds0 @PushWFArc f17 '' #zField
+Ds0 @PushWFArc f15 '' #zField
 >Proto Ds0 Ds0 DateienHochladen_v2Process #zField
 Ds0 f0 guid 1514590D4F084296 #txt
 Ds0 f0 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
-Ds0 f0 method start() #txt
+Ds0 f0 method start(einbuergerung_Gruppe6.Request) #txt
 Ds0 f0 disableUIEvents true #txt
 Ds0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
-<> param = methodEvent.getInputArguments();
+<einbuergerung_Gruppe6.Request request> param = methodEvent.getInputArguments();
 ' #txt
-Ds0 f0 outParameterDecl '<einbuergerung_Gruppe6.Document document> result;
+Ds0 f0 inParameterMapAction 'out.request=param.request;
 ' #txt
-Ds0 f0 outParameterMapAction 'result.document=in.document;
+Ds0 f0 outParameterDecl '<einbuergerung_Gruppe6.Request request> result;
+' #txt
+Ds0 f0 outParameterMapAction 'result.request=in.request;
 ' #txt
 Ds0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>start()</name>
+        <nameStyle>7,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
 Ds0 f0 83 51 26 26 -16 15 #rect
 Ds0 f0 @|RichDialogInitStartIcon #fIcon
 Ds0 f1 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
-Ds0 f1 211 51 26 26 0 12 #rect
+Ds0 f1 459 51 26 26 0 12 #rect
 Ds0 f1 @|RichDialogProcessEndIcon #fIcon
-Ds0 f2 expr out #txt
-Ds0 f2 109 64 211 64 #arcP
 Ds0 f3 guid 1514590D4F02D575 #txt
 Ds0 f3 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
 Ds0 f3 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data out;
@@ -100,7 +109,8 @@ Ds0 f9 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2
 ' #txt
 Ds0 f9 actionTable 'out=in;
 ' #txt
-Ds0 f9 actionCode 'import java.io.InputStream;
+Ds0 f9 actionCode 'import einbuergerung_Gruppe6.Document;
+import java.io.InputStream;
 import org.primefaces.model.UploadedFile;
 import ch.ivyteam.ivy.cm.CoType;
 import ch.ivyteam.ivy.cm.IContentObject;
@@ -179,9 +189,12 @@ finally
 }
 
 // Die relevanten Eigenschaften des CMS-Objekts werden ins Data-Objekt zurück gegeben
-out.document.fileName = newCMSObject.getName();
-out.document.filePath = extension;
-out.document.filePath = cov.getContentObject().getUri();' #txt
+Document document = new Document();
+document.fileName = newCMSObject.getName();
+document.fileEnding = extension; 
+document.filePath = cov.getContentObject().getUri();
+
+out.request.documents.add(document);' #txt
 Ds0 f9 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
 Ds0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -200,15 +213,75 @@ Ds0 f10 expr out #txt
 Ds0 f10 109 256 168 256 #arcP
 Ds0 f8 expr out #txt
 Ds0 f8 280 256 371 256 #arcP
+Ds0 f11 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data out;
+' #txt
+Ds0 f11 actionTable 'out=in;
+' #txt
+Ds0 f11 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
+Ds0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Create Document
+Type List</name>
+        <nameStyle>16,7
+9,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ds0 f11 208 42 128 44 -44 -16 #rect
+Ds0 f11 @|StepIcon #fIcon
+Ds0 f12 expr out #txt
+Ds0 f12 109 64 208 64 #arcP
+Ds0 f2 expr out #txt
+Ds0 f2 336 64 459 64 #arcP
+Ds0 f13 guid 1515861AD752BECE #txt
+Ds0 f13 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
+Ds0 f13 method fileDownload() #txt
+Ds0 f13 disableUIEvents false #txt
+Ds0 f13 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
+<> param = methodEvent.getInputArguments();
+' #txt
+Ds0 f13 outParameterDecl '<> result;
+' #txt
+Ds0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>fileDownload()</name>
+    </language>
+</elementInfo>
+' #txt
+Ds0 f13 83 339 26 26 -40 12 #rect
+Ds0 f13 @|RichDialogMethodStartIcon #fIcon
+Ds0 f14 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
+Ds0 f14 379 339 26 26 0 12 #rect
+Ds0 f14 @|RichDialogProcessEndIcon #fIcon
+Ds0 f16 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data out;
+' #txt
+Ds0 f16 actionTable 'out=in;
+' #txt
+Ds0 f16 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
+Ds0 f16 168 330 112 44 0 -8 #rect
+Ds0 f16 @|StepIcon #fIcon
+Ds0 f17 expr out #txt
+Ds0 f17 109 352 168 352 #arcP
+Ds0 f15 expr out #txt
+Ds0 f15 280 352 379 352 #arcP
 >Proto Ds0 .type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
 >Proto Ds0 .processKind HTML_DIALOG #txt
 >Proto Ds0 -8 -8 16 16 16 26 #rect
 >Proto Ds0 '' #fIcon
-Ds0 f0 mainOut f2 tail #connect
-Ds0 f2 head f1 mainIn #connect
 Ds0 f3 mainOut f5 tail #connect
 Ds0 f5 head f4 mainIn #connect
 Ds0 f6 mainOut f10 tail #connect
 Ds0 f10 head f9 mainIn #connect
 Ds0 f9 mainOut f8 tail #connect
 Ds0 f8 head f7 mainIn #connect
+Ds0 f0 mainOut f12 tail #connect
+Ds0 f12 head f11 mainIn #connect
+Ds0 f11 mainOut f2 tail #connect
+Ds0 f2 head f1 mainIn #connect
+Ds0 f13 mainOut f17 tail #connect
+Ds0 f17 head f16 mainIn #connect
+Ds0 f16 mainOut f15 tail #connect
+Ds0 f15 head f14 mainIn #connect

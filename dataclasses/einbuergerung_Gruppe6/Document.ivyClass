@@ -6,6 +6,10 @@ fileType String #field
 fileType PERSISTENT #fieldModifier
 filePath String #field
 filePath PERSISTENT #fieldModifier
+fileEnding String #field
+fileEnding PERSISTENT #fieldModifier
+comment String #field
+comment PERSISTENT #fieldModifier
 dataUpload java.util.Date #field
 dataUpload PERSISTENT #fieldModifier
 isComplete Boolean #field
@@ -14,7 +18,5 @@ dateUpdated java.util.Date #field
 dateUpdated PERSISTENT #fieldModifier
 isValid Boolean #field
 isValid PERSISTENT #fieldModifier
-comment String #field
-comment PERSISTENT #fieldModifier
 fileStreamedContent org.primefaces.model.DefaultStreamedContent #field
 fileStreamedContent PERSISTENT #fieldModifier

@@ -7,26 +7,26 @@ package einbuergerung_Gruppe6.DateienHochladen_v2;
 public class DateienHochladen_v2Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -5168731585767539476L;
+  private static final long serialVersionUID = -3801147073148166410L;
 
-  private transient einbuergerung_Gruppe6.Document document;
+  private transient einbuergerung_Gruppe6.Request request;
 
   /**
-   * Gets the field document.
-   * @return the value of the field document; may be null.
+   * Gets the field request.
+   * @return the value of the field request; may be null.
    */
-  public einbuergerung_Gruppe6.Document getDocument()
+  public einbuergerung_Gruppe6.Request getRequest()
   {
-    return document;
+    return request;
   }
 
   /**
-   * Sets the field document.
-   * @param _document the new value of the field document.
+   * Sets the field request.
+   * @param _request the new value of the field request.
    */
-  public void setDocument(einbuergerung_Gruppe6.Document _document)
+  public void setRequest(einbuergerung_Gruppe6.Request _request)
   {
-    document = _document;
+    request = _request;
   }
 
   private org.primefaces.event.FileUploadEvent fileUploadEvent;
@@ -47,6 +47,26 @@ public class DateienHochladen_v2Data extends ch.ivyteam.ivy.scripting.objects.Co
   public void setFileUploadEvent(org.primefaces.event.FileUploadEvent _fileUploadEvent)
   {
     fileUploadEvent = _fileUploadEvent;
+  }
+
+  private java.lang.String filetype;
+
+  /**
+   * Gets the field filetype.
+   * @return the value of the field filetype; may be null.
+   */
+  public java.lang.String getFiletype()
+  {
+    return filetype;
+  }
+
+  /**
+   * Sets the field filetype.
+   * @param _filetype the new value of the field filetype.
+   */
+  public void setFiletype(java.lang.String _filetype)
+  {
+    filetype = _filetype;
   }
 
 }
