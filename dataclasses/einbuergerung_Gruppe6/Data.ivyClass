@@ -8,3 +8,9 @@ person einbuergerung_Gruppe6.Person #field
 person PERSISTENT #fieldModifier
 invoice einbuergerung_Gruppe6.Invoice #field
 invoice PERSISTENT #fieldModifier
+loopCount Number #field
+loopCount PERSISTENT #fieldModifier
+loopIterations Number #field
+loopIterations PERSISTENT #fieldModifier
+document com.sun.xml.internal.txw2.Document #field
+document PERSISTENT #fieldModifier

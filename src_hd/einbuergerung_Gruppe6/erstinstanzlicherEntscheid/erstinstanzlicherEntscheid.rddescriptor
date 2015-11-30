@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<richDialogDescriptor>
+    <autoScreenshot>true</autoScreenshot>
+    <startMethod>
+        <name>start</name>
+        <description>Default dialog start method.</description>
+        <inputParameter>
+            <name>request</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+        <inputParameter>
+            <name>person</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Person</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+        <outputParameter>
+            <name>request</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </outputParameter>
+        <outputParameter>
+            <name>person</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Person</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </outputParameter>
+    </startMethod>
+    <property>
+        <name>guid</name>
+        <value>1515A10C951C5D5E</value>
+        <readOnly>true</readOnly>
+    </property>
+    <property>
+        <name>version</name>
+        <value>1</value>
+        <readOnly>true</readOnly>
+    </property>
+    <property>
+        <name>binary</name>
+        <value>false</value>
+        <readOnly>true</readOnly>
+    </property>
+    <property>
+        <name>viewTechnology</name>
+        <value>JSF</value>
+        <readOnly>true</readOnly>
+    </property>
+</richDialogDescriptor>

@@ -20,3 +20,9 @@ isValid Boolean #field
 isValid PERSISTENT #fieldModifier
 fileStreamedContent org.primefaces.model.DefaultStreamedContent #field
 fileStreamedContent PERSISTENT #fieldModifier
+templatePath String #field
+templatePath PERSISTENT #fieldModifier
+fileOperationMesage ch.ivyteam.ivy.addons.docfactory.FileOperationMessage #field
+fileOperationMesage PERSISTENT #fieldModifier
+templateMergeFields List<ch.ivyteam.ivy.addons.docfactory.TemplateMergeField> #field
+templateMergeFields PERSISTENT #fieldModifier

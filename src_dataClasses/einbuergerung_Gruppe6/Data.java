@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -8547067840787192289L;
+  private static final long serialVersionUID = 5459598560213274589L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -87,6 +87,66 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setInvoice(einbuergerung_Gruppe6.Invoice _invoice)
   {
     invoice = _invoice;
+  }
+
+  private java.lang.Number loopCount;
+
+  /**
+   * Gets the field loopCount.
+   * @return the value of the field loopCount; may be null.
+   */
+  public java.lang.Number getLoopCount()
+  {
+    return loopCount;
+  }
+
+  /**
+   * Sets the field loopCount.
+   * @param _loopCount the new value of the field loopCount.
+   */
+  public void setLoopCount(java.lang.Number _loopCount)
+  {
+    loopCount = _loopCount;
+  }
+
+  private java.lang.Number loopIterations;
+
+  /**
+   * Gets the field loopIterations.
+   * @return the value of the field loopIterations; may be null.
+   */
+  public java.lang.Number getLoopIterations()
+  {
+    return loopIterations;
+  }
+
+  /**
+   * Sets the field loopIterations.
+   * @param _loopIterations the new value of the field loopIterations.
+   */
+  public void setLoopIterations(java.lang.Number _loopIterations)
+  {
+    loopIterations = _loopIterations;
+  }
+
+  private com.sun.xml.internal.txw2.Document document;
+
+  /**
+   * Gets the field document.
+   * @return the value of the field document; may be null.
+   */
+  public com.sun.xml.internal.txw2.Document getDocument()
+  {
+    return document;
+  }
+
+  /**
+   * Sets the field document.
+   * @param _document the new value of the field document.
+   */
+  public void setDocument(com.sun.xml.internal.txw2.Document _document)
+  {
+    document = _document;
   }
 
 }

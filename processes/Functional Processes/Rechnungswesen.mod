@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 14:19:49 CET 2015]
+[>Created: Mon Nov 30 21:56:53 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -88,7 +88,7 @@ Erinnerung</name>
 Rn0 f44 944 162 112 44 -30 -16 #rect
 Rn0 f44 @|EMailIcon #fIcon
 Rn0 f1 type einbuergerung_Gruppe6.Data #txt
-Rn0 f1 921 81 30 30 0 15 #rect
+Rn0 f1 785 81 30 30 0 15 #rect
 Rn0 f1 @|EndSubIcon #fIcon
 Rn0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -164,10 +164,10 @@ Request inovice list</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f9 744 74 128 44 -46 -16 #rect
+Rn0 f9 608 74 128 44 -46 -16 #rect
 Rn0 f9 @|StepIcon #fIcon
 Rn0 f5 expr out #txt
-Rn0 f5 872 96 921 96 #arcP
+Rn0 f5 736 96 785 96 #arcP
 Rn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f11 actionTable 'out=in;
@@ -235,7 +235,7 @@ Rn0 f16 actionTable 'out=in1;
 Rn0 f16 outTypes "einbuergerung_Gruppe6.Data" #txt
 Rn0 f16 outLinks "TaskA.ivp" #txt
 Rn0 f16 caseData '#
-#Mon Nov 30 14:19:43 CET 2015
+#Mon Nov 30 21:56:50 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -263,7 +263,7 @@ type.code=
 type.name=
 ' #txt
 Rn0 f16 taskData '#
-#Mon Nov 30 14:19:43 CET 2015
+#Mon Nov 30 21:56:50 CET 2015
 TaskA.EXC=1505C5AC6EFDC232-f14-buffer
 TaskA.EXP=''10s''
 TaskA.EXPRI=2
@@ -293,7 +293,17 @@ taskDefinitions.add(taskDef);
 ' #txt
 Rn0 f16 type einbuergerung_Gruppe6.Data #txt
 Rn0 f16 template "" #txt
-Rn0 f16 528 80 32 32 0 16 #rect
+Rn0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Zahlung erhalten
+30 Tage warten</name>
+        <nameStyle>31,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f16 528 80 32 32 -41 -59 #rect
 Rn0 f16 @|TaskSwitchIcon #fIcon
 Rn0 f8 expr out #txt
 Rn0 f8 type einbuergerung_Gruppe6.Data #txt
@@ -327,7 +337,7 @@ Rn0 f7 expr out #txt
 Rn0 f7 647 184 712 184 #arcP
 Rn0 f10 expr data #txt
 Rn0 f10 outCond ivp=="TaskA.ivp" #txt
-Rn0 f10 560 96 744 96 #arcP
+Rn0 f10 560 96 608 96 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 1232673899518519882L;
+  private static final long serialVersionUID = 1756412288579343642L;
 
   private java.lang.String firstname;
 
@@ -147,6 +147,66 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setYearCount(java.lang.Number _yearCount)
   {
     yearCount = _yearCount;
+  }
+
+  private java.lang.String authorityStatement;
+
+  /**
+   * Gets the field authorityStatement.
+   * @return the value of the field authorityStatement; may be null.
+   */
+  public java.lang.String getAuthorityStatement()
+  {
+    return authorityStatement;
+  }
+
+  /**
+   * Sets the field authorityStatement.
+   * @param _authorityStatement the new value of the field authorityStatement.
+   */
+  public void setAuthorityStatement(java.lang.String _authorityStatement)
+  {
+    authorityStatement = _authorityStatement;
+  }
+
+  private java.lang.String approved;
+
+  /**
+   * Gets the field approved.
+   * @return the value of the field approved; may be null.
+   */
+  public java.lang.String getApproved()
+  {
+    return approved;
+  }
+
+  /**
+   * Sets the field approved.
+   * @param _approved the new value of the field approved.
+   */
+  public void setApproved(java.lang.String _approved)
+  {
+    approved = _approved;
+  }
+
+  private einbuergerung_Gruppe6.Document disposal;
+
+  /**
+   * Gets the field disposal.
+   * @return the value of the field disposal; may be null.
+   */
+  public einbuergerung_Gruppe6.Document getDisposal()
+  {
+    return disposal;
+  }
+
+  /**
+   * Sets the field disposal.
+   * @param _disposal the new value of the field disposal.
+   */
+  public void setDisposal(einbuergerung_Gruppe6.Document _disposal)
+  {
+    disposal = _disposal;
   }
 
 }

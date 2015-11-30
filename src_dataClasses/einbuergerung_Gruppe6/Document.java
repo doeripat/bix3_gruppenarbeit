@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -6491304333990562345L;
+  private static final long serialVersionUID = -9222383028356790310L;
 
   private java.lang.String fileName;
 
@@ -207,6 +207,66 @@ public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setFileStreamedContent(org.primefaces.model.DefaultStreamedContent _fileStreamedContent)
   {
     fileStreamedContent = _fileStreamedContent;
+  }
+
+  private java.lang.String templatePath;
+
+  /**
+   * Gets the field templatePath.
+   * @return the value of the field templatePath; may be null.
+   */
+  public java.lang.String getTemplatePath()
+  {
+    return templatePath;
+  }
+
+  /**
+   * Sets the field templatePath.
+   * @param _templatePath the new value of the field templatePath.
+   */
+  public void setTemplatePath(java.lang.String _templatePath)
+  {
+    templatePath = _templatePath;
+  }
+
+  private ch.ivyteam.ivy.addons.docfactory.FileOperationMessage fileOperationMesage;
+
+  /**
+   * Gets the field fileOperationMesage.
+   * @return the value of the field fileOperationMesage; may be null.
+   */
+  public ch.ivyteam.ivy.addons.docfactory.FileOperationMessage getFileOperationMesage()
+  {
+    return fileOperationMesage;
+  }
+
+  /**
+   * Sets the field fileOperationMesage.
+   * @param _fileOperationMesage the new value of the field fileOperationMesage.
+   */
+  public void setFileOperationMesage(ch.ivyteam.ivy.addons.docfactory.FileOperationMessage _fileOperationMesage)
+  {
+    fileOperationMesage = _fileOperationMesage;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.List<ch.ivyteam.ivy.addons.docfactory.TemplateMergeField> templateMergeFields;
+
+  /**
+   * Gets the field templateMergeFields.
+   * @return the value of the field templateMergeFields; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.List<ch.ivyteam.ivy.addons.docfactory.TemplateMergeField> getTemplateMergeFields()
+  {
+    return templateMergeFields;
+  }
+
+  /**
+   * Sets the field templateMergeFields.
+   * @param _templateMergeFields the new value of the field templateMergeFields.
+   */
+  public void setTemplateMergeFields(ch.ivyteam.ivy.scripting.objects.List<ch.ivyteam.ivy.addons.docfactory.TemplateMergeField> _templateMergeFields)
+  {
+    templateMergeFields = _templateMergeFields;
   }
 
 }
