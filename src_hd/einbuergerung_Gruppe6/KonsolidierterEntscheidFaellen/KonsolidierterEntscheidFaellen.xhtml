@@ -8,16 +8,21 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <h:body>
 	<ui:composition template="/layouts/basic.xhtml">
-		<ui:define name="title">DateienHochladen_v2</ui:define>
+		<ui:define name="title">KonsolidierterEntscheidFaellen</ui:define>
 		<ui:define name="content">
 			<h3>
-			Bitte Dateien Hochladen
+			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
+			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
 			</h3>
-			<h:form id="form" enctype="multipart/form-data">
+			
+			<h:form id="form">
 				<h:panelGrid columns="2">
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
+					
+					<p:outputLabel for="requestUniqueIdentifier" value="Unique Identifier"/>
+					<p:inputText id="requestUniqueIdentifier" value="#{data.request.uniqueIdentifier}"></p:inputText>
 					
 					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
 					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
@@ -53,24 +58,29 @@
   									<p:fileDownload value="#{d.fileStreamedContent}" /> 
 									</p:commandLink>									
 								</p:column>
+								<p:column headerText="Dokument ansehen">
+										 <h:outputText value="#{d.comment}" />								
+								</p:column>
 							</p:dataTable>
 						</p:column>
-					</p:row>
-					<p:outputLabel  value="Nachweis Deutschkenntnisse hochladen"/>				
-					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadDeutschkenntnisse}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
-				
-					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen"/>				
-					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadFinanzen}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+					</p:row>					
+					<p:outputLabel for="requestCommentOnRequest" value="Comment On Request"/>
+					<p:inputText id="requestCommentOnRequest" value="#{data.request.commentOnRequest}"></p:inputText>
 					
-					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen"/>				
-					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadWohnsitz}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+					<p:outputLabel for="requestCommentFinanzen" value="Comment Finanzen"/>
+					<p:inputText id="requestCommentFinanzen" value="#{data.request.commentFinanzen}"></p:inputText>
 					
-					<p:outputLabel  value="Kommentar" rendered="#{data.request.commentOnRequest != null}"/>
-					<p:outputLabel value="#{data.request.commentOnRequest}" rendered="#{data.request.commentOnRequest != null}" /> 
-					<br/>
+					<p:outputLabel for="requestCommentWohnsitz" value="Comment Wohnsitz"/>
+					<p:inputText id="requestCommentWohnsitz" value="#{data.request.commentWohnsitz}"></p:inputText>
+					
+					<p:outputLabel for="requestCommentDeutschkenntnisse" value="Comment Deutschkenntnisse"/>
+					<p:inputText id="requestCommentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}"></p:inputText>
+					
+					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
 				</h:panelGrid>
-			</h:form>			
+			</h:form>
+			
 		</ui:define>
 	</ui:composition>
 </h:body>

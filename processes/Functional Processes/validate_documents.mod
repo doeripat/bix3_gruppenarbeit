@@ -1,12 +1,10 @@
 [Ivy]
-[>Created: Tue Dec 01 21:36:58 CET 2015]
+[>Created: Tue Dec 01 23:50:02 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
 vs0 B #cInfo
 vs0 #process
-Bk5 BpmnBusinessRuleTask Big #zClass
-Bk5 BpmnBusinessRuleTask #cInfo
 vs0 @TextInP .resExport .resExport #zField
 vs0 @TextInP .type .type #zField
 vs0 @TextInP .processKind .processKind #zField
@@ -17,10 +15,7 @@ vs0 @TextInP .xml .xml #zField
 vs0 @TextInP .responsibility .responsibility #zField
 vs0 @StartSub f0 '' #zField
 vs0 @EndSub f1 '' #zField
-vs0 Bk5 R60 'Rule 6' #zField
-vs0 @PushWFArc f15 '' #zField
 vs0 @InfoButton f16 '' #zField
-vs0 @AnnotationArc f17 '' #zField
 vs0 @CallSub f33 '' #zField
 vs0 @CallSub f7 '' #zField
 vs0 @CallSub f8 '' #zField
@@ -32,7 +27,6 @@ vs0 @TkArc f20 '' #zField
 vs0 @WSElement f3 '' #zField
 vs0 @PushWFArc f6 '' #zField
 vs0 @TkArc f9 '' #zField
-vs0 @PushWFArc f10 '' #zField
 vs0 @GridStep f22 '' #zField
 vs0 @PushWFArc f23 '' #zField
 vs0 @PushWFArc f12 '' #zField
@@ -43,19 +37,10 @@ vs0 @PushWFArc f14 '' #zField
 vs0 @GridStep f13 '' #zField
 vs0 @PushWFArc f21 '' #zField
 vs0 @TkArc f5 '' #zField
+vs0 @RichDialog f10 '' #zField
+vs0 @PushWFArc f15 '' #zField
+vs0 @PushWFArc f17 '' #zField
 >Proto vs0 vs0 validate_documents #zField
-Bk5 @TextInP .resExport .resExport #zField
-Bk5 @TextInP .type .type #zField
-Bk5 @TextInP .processKind .processKind #zField
-Bk5 @AnnotationInP-0n ai ai #zField
-Bk5 @MessageFlowInP-0n messageIn messageIn #zField
-Bk5 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk5 @TextInP .xml .xml #zField
-Bk5 @TextInP .responsibility .responsibility #zField
-Bk5 @PushTrueWFInG-01 g0 '' #zField
-Bk5 @PushTrueWFOutG-01 g1 '' #zField
-Bk5 @PushWFArc f0 '' #zField
->Proto Bk5 Bk4 BpmnBusinessRuleTask #zField
 vs0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 vs0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -79,21 +64,8 @@ vs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 vs0 f0 81 161 30 30 -26 17 #rect
 vs0 f0 @|StartSubIcon #fIcon
 vs0 f1 type einbuergerung_Gruppe6.Data #txt
-vs0 f1 1169 153 30 30 0 15 #rect
+vs0 f1 1385 153 30 30 0 15 #rect
 vs0 f1 @|EndSubIcon #fIcon
-vs0 R60 .resExport export #txt
-vs0 R60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>Gesuch an/ablehnen</name>
-        <nameStyle>18,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-vs0 R60 1024 146 128 44 -57 -8 #rect
-vs0 R60 @|BpmnBusinessRuleTaskIcon #fIcon
-vs0 f15 1152 168 1169 168 #arcP
 vs0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -109,7 +81,6 @@ dennoch annehmen etc.</name>
 ' #txt
 vs0 f16 1032 34 304 76 -144 -32 #rect
 vs0 f16 @|IBIcon #fIcon
-vs0 f17 1184 110 1088 146 #arcP
 vs0 f33 type einbuergerung_Gruppe6.Data #txt
 vs0 f33 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
 vs0 f33 doCall true #txt
@@ -299,17 +270,58 @@ vs0 f4 @|TaskSwitchIcon #fIcon
 vs0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f2 actionTable 'out=in1;
+out.request.documents=in1.request.documents.addAll(in2.request.documents.addAll(in3.request.documents));
 ' #txt
 vs0 f2 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f2 outLinks "TaskA.ivp" #txt
+vs0 f2 caseData '#
+#Tue Dec 01 23:50:00 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+vs0 f2 taskData '#
+#Tue Dec 01 23:50:00 CET 2015
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Bitte Konsolidierter Entscheid f\u00E4llen
+TaskA.PRI=2
+TaskA.ROL=Migrationsamt Pr\u00FCfer
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
 vs0 f2 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
 TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte Konsolidierter Entscheid fällen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Migrationsamt Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -358,9 +370,6 @@ vs0 f9 var in4 #txt
 vs0 f9 704 392 960 184 #arcP
 vs0 f9 1 960 392 #addKink
 vs0 f9 0 0.8471933154113785 0 0 #arcLabel
-vs0 f10 expr data #txt
-vs0 f10 outCond ivp=="TaskA.ivp" #txt
-vs0 f10 976 168 1024 168 #arcP
 vs0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f22 actionTable 'out=in;
@@ -446,6 +455,41 @@ vs0 f5 expr out #txt
 vs0 f5 type einbuergerung_Gruppe6.Data #txt
 vs0 f5 var in1 #txt
 vs0 f5 111 176 304 176 #arcP
+vs0 f10 targetWindow NEW:card: #txt
+vs0 f10 targetDisplay TOP #txt
+vs0 f10 richDialogId einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen #txt
+vs0 f10 startMethod start(einbuergerung_Gruppe6.Request) #txt
+vs0 f10 type einbuergerung_Gruppe6.Data #txt
+vs0 f10 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+vs0 f10 requestMappingAction 'param.request=in.request;
+' #txt
+vs0 f10 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f10 responseMappingAction 'out=in;
+out.request=result.request;
+' #txt
+vs0 f10 windowConfiguration '* ' #txt
+vs0 f10 isAsynch false #txt
+vs0 f10 isInnerRd false #txt
+vs0 f10 userContext '* ' #txt
+vs0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Entscheide
+Konsolidieren</name>
+        <nameStyle>11,7
+13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f10 1152 146 112 44 -38 -16 #rect
+vs0 f10 @|RichDialogIcon #fIcon
+vs0 f15 expr data #txt
+vs0 f15 outCond ivp=="TaskA.ivp" #txt
+vs0 f15 976 168 1152 168 #arcP
+vs0 f17 expr out #txt
+vs0 f17 1264 168 1385 168 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -467,17 +511,6 @@ vs0 f5 111 176 304 176 #arcP
 ' #txt
 >Proto vs0 0 0 32 24 18 0 #rect
 >Proto vs0 @|BIcon #fIcon
-Bk5 g0 51 243 26 26 0 5 #rect
-Bk5 g0 @|MIGIcon #fIcon
-Bk5 g1 563 243 26 26 0 5 #rect
-Bk5 g1 @|MOGIcon #fIcon
-Bk5 f0 77 256 563 256 #arcP
->Proto Bk4 0 0 32 24 18 0 #rect
->Proto Bk4 @|BpmnUserTaskIcon #fIcon
-vs0 R60 g1 f15 tail #connect
-vs0 f15 head f1 mainIn #connect
-vs0 f16 ao f17 tail #connect
-vs0 f17 head R60 ai #connect
 vs0 f33 mainOut f18 tail #connect
 vs0 f18 head f2 in #connect
 vs0 f7 mainOut f19 tail #connect
@@ -487,8 +520,6 @@ vs0 f20 head f2 in #connect
 vs0 f6 head f3 mainIn #connect
 vs0 f3 mainOut f9 tail #connect
 vs0 f9 head f2 in #connect
-vs0 f2 out f10 tail #connect
-vs0 f10 head R60 g0 #connect
 vs0 f13 mainOut f14 tail #connect
 vs0 f14 head f33 mainIn #connect
 vs0 f23 head f22 mainIn #connect
@@ -504,6 +535,7 @@ vs0 f4 out f21 tail #connect
 vs0 f21 head f13 mainIn #connect
 vs0 f0 mainOut f5 tail #connect
 vs0 f5 head f4 in #connect
-Bk5 g0 m f0 tail #connect
-Bk5 f0 head g1 m #connect
-Bk5 0 0 640 512 0 #ivRect
+vs0 f2 out f15 tail #connect
+vs0 f15 head f10 mainIn #connect
+vs0 f10 mainOut f17 tail #connect
+vs0 f17 head f1 mainIn #connect

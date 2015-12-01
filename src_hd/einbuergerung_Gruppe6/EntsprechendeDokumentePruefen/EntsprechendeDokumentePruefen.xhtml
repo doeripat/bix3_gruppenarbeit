@@ -43,20 +43,20 @@
 					<p:outputLabel value="Dokumente"/>
 					<p:row>
 						<p:column>
-							<p:dataTable var="d" value="#{data.tmpDocumentList}">
+							<p:dataTable var="d" value="#{data.request.documents}">
 									<p:column headerText="Dokumententyp">
-								    <h:outputText value="#{d.fileType}" />
+								    <h:outputText value="#{d.fileType}"  rendered="#{data.request.documentToProof == d.fileType}"/>
 								  </p:column>				
-								  <p:column headerText="Dateiname">
-								    <h:outputText value="#{d.fileName}" />
+								  <p:column headerText="Dateiname" >
+								    <h:outputText value="#{d.fileName}" rendered="#{data.request.documentToProof == d.fileType}"/>
 								  </p:column>
-								  <p:column headerText="Dokument ansehen">
-								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}">
+								  <p:column headerText="Dokument ansehen" >
+								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}" rendered="#{data.request.documentToProof == d.fileType}">
   									<p:fileDownload value="#{d.fileStreamedContent}" /> 
 									</p:commandLink>									
 								</p:column>
-								<p:column headerText="Kommentar zum Dokument">
-								    <h:outputText value="#{d.comment}" />
+								<p:column headerText="Kommentar zum Dokument" >
+								    <h:inputTextarea value="#{d.comment}" rendered="#{data.request.documentToProof == d.fileType}" rows="3" cols="33" />
 								  </p:column>
 							</p:dataTable>
 						</p:column>
