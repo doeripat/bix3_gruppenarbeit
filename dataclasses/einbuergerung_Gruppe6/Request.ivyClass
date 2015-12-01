@@ -46,3 +46,11 @@ endReason String #field
 endReason PERSISTENT #fieldModifier
 publicationData String #field
 publicationData PERSISTENT #fieldModifier
+documentToProof String #field
+documentToProof PERSISTENT #fieldModifier
+commentFinanzen String #field
+commentFinanzen PERSISTENT #fieldModifier
+commentWohnsitz String #field
+commentWohnsitz PERSISTENT #fieldModifier
+commentDeutschkenntnisse String #field
+commentDeutschkenntnisse PERSISTENT #fieldModifier

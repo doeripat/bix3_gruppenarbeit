@@ -1,0 +1,4 @@
+EntsprechendeDokumentePruefenData #class
+einbuergerung_Gruppe6.EntsprechendeDokumentePruefen #namespace
+request einbuergerung_Gruppe6.Request #field
+tmpDocumentList List<einbuergerung_Gruppe6.Document> #field

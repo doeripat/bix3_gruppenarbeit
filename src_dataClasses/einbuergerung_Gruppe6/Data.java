@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -2863967666236878883L;
+  private static final long serialVersionUID = -9211990780845712851L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -147,6 +147,26 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setDocument(einbuergerung_Gruppe6.Document _document)
   {
     document = _document;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> tmpDocumentList;
+
+  /**
+   * Gets the field tmpDocumentList.
+   * @return the value of the field tmpDocumentList; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> getTmpDocumentList()
+  {
+    return tmpDocumentList;
+  }
+
+  /**
+   * Sets the field tmpDocumentList.
+   * @param _tmpDocumentList the new value of the field tmpDocumentList.
+   */
+  public void setTmpDocumentList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> _tmpDocumentList)
+  {
+    tmpDocumentList = _tmpDocumentList;
   }
 
 }

@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.FormaleKorrektheitPruefen;
 public class FormaleKorrektheitPruefenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 5383635212985853333L;
+  private static final long serialVersionUID = 498176597413471488L;
 
   private transient java.lang.String uniqueIdentifier;
 
@@ -147,6 +147,26 @@ public class FormaleKorrektheitPruefenData extends ch.ivyteam.ivy.scripting.obje
   public void setComment(java.lang.String _comment)
   {
     comment = _comment;
+  }
+
+  private einbuergerung_Gruppe6.Document document;
+
+  /**
+   * Gets the field document.
+   * @return the value of the field document; may be null.
+   */
+  public einbuergerung_Gruppe6.Document getDocument()
+  {
+    return document;
+  }
+
+  /**
+   * Sets the field document.
+   * @param _document the new value of the field document.
+   */
+  public void setDocument(einbuergerung_Gruppe6.Document _document)
+  {
+    document = _document;
   }
 
 }

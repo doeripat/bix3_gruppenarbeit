@@ -1,0 +1,78 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+		<ui:define name="title">EntsprechendeDokumentePruefen</ui:define>
+		<ui:define name="content">
+			<h3>
+			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
+			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			</h3>
+			
+			<h:form id="form">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					
+					<p:outputLabel for="requestUniqueIdentifier" value="Unique Identifier"/>
+					<p:outputLabel id="requestUniqueIdentifier" value="#{data.request.uniqueIdentifier}"/>
+					
+					<p:outputLabel for="personen" value="Personen"/>
+					<p:row>
+						<p:column>
+							<p:dataTable var="p" value="#{data.request.personList}">
+								<p:column headerText="Geschlecht">
+								    <h:outputText value="#{p.gender}" />
+								  </p:column>				
+								  <p:column headerText="Name">
+								    <h:outputText value="#{p.firstname} #{p.lastname}" />
+								  </p:column>
+								  <p:column headerText="Geburtstag">
+									<h:outputText value="#{p.birthday}" />									
+								</p:column>
+							</p:dataTable>
+						</p:column>
+					</p:row>
+					<p:outputLabel value="Dokumente"/>
+					<p:row>
+						<p:column>
+							<p:dataTable var="d" value="#{data.request}">
+									<p:column headerText="Dokumententyp">
+								    <h:outputText value="#{d.fileType}" />
+								  </p:column>				
+								  <p:column headerText="Dateiname">
+								    <h:outputText value="#{d.fileName}" />
+								  </p:column>
+								  <p:column headerText="Dokument ansehen">
+								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}">
+  									<p:fileDownload value="#{d.fileStreamedContent}" /> 
+									</p:commandLink>									
+								</p:column>
+								<p:column headerText="Kommentar zum Dokument">
+								    <h:outputText value="#{d.comment}" />
+								  </p:column>
+							</p:dataTable>
+						</p:column>
+					</p:row>
+					<p:outputLabel for="comment" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"/>
+					<p:inputTextarea id="comment" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"></p:inputTextarea>
+					<p:outputLabel for="comment" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"/>
+					<p:inputTextarea id="comment" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"></p:inputTextarea>					
+					<p:outputLabel for="comment" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"/>
+					<p:inputTextarea id="comment" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"></p:inputTextarea>					
+					<br />
+					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
+			</h:form>
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

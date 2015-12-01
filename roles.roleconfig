@@ -11,9 +11,15 @@
         <identifier>Antragsteller</identifier>
     </role>
     <role>
-        <identifier>Migrationsamt Pruefer</identifier>
+        <identifier>Migrationsamt Interviewer</identifier>
     </role>
     <role>
-        <identifier>Migrationsamt Interviewer</identifier>
+        <identifier>Migrationsamt Deutschkenntnisse Prüfer</identifier>
+    </role>
+    <role>
+        <identifier>Migrationsamt Finanzielle Verhältnisse Prüfer</identifier>
+    </role>
+    <role>
+        <identifier>Migrationsamt Wohnsitzbestätigung Prüfer</identifier>
     </role>
 </role>

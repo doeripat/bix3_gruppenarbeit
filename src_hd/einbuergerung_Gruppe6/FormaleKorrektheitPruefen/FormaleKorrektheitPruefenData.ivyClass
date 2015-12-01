@@ -10,3 +10,5 @@ statiList List<String> #field
 statiList PERSISTENT #fieldModifier
 comment String #field
 comment PERSISTENT #fieldModifier
+document einbuergerung_Gruppe6.Document #field
+document PERSISTENT #fieldModifier

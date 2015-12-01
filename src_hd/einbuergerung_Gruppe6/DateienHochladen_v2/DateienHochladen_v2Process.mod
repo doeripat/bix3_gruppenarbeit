@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 11:19:53 CET 2015]
+[>Created: Tue Dec 01 17:46:37 CET 2015]
 1514590D4E7F0C89 3.17 #module
 >Proto >Proto Collection #zClass
 Ds0 DateienHochladen_v2Process Big #zClass
@@ -23,7 +23,6 @@ Ds0 @PushWFArc f5 '' #zField
 Ds0 @RichDialogMethodStart f6 '' #zField
 Ds0 @RichDialogProcessEnd f7 '' #zField
 Ds0 @GridStep f9 '' #zField
-Ds0 @PushWFArc f10 '' #zField
 Ds0 @PushWFArc f8 '' #zField
 Ds0 @GridStep f11 '' #zField
 Ds0 @PushWFArc f12 '' #zField
@@ -33,6 +32,13 @@ Ds0 @RichDialogProcessEnd f14 '' #zField
 Ds0 @GridStep f16 '' #zField
 Ds0 @PushWFArc f17 '' #zField
 Ds0 @PushWFArc f15 '' #zField
+Ds0 @Alternative f18 '' #zField
+Ds0 @PushWFArc f19 '' #zField
+Ds0 @PushWFArc f10 '' #zField
+Ds0 @RichDialogMethodStart f20 '' #zField
+Ds0 @RichDialogMethodStart f23 '' #zField
+Ds0 @PushWFArc f21 '' #zField
+Ds0 @PushWFArc f22 '' #zField
 >Proto Ds0 Ds0 DateienHochladen_v2Process #zField
 Ds0 f0 guid 1514590D4F084296 #txt
 Ds0 f0 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
@@ -82,12 +88,13 @@ Ds0 f5 expr out #txt
 Ds0 f5 109 160 211 160 #arcP
 Ds0 f6 guid 151459646F68DF44 #txt
 Ds0 f6 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
-Ds0 f6 method fileUpload(org.primefaces.event.FileUploadEvent) #txt
+Ds0 f6 method fileUploadDeutschkenntnisse(org.primefaces.event.FileUploadEvent) #txt
 Ds0 f6 disableUIEvents false #txt
 Ds0 f6 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
 <org.primefaces.event.FileUploadEvent event> param = methodEvent.getInputArguments();
 ' #txt
-Ds0 f6 inParameterMapAction 'out.fileUploadEvent=param.event;
+Ds0 f6 inParameterMapAction 'out.fileTypeDoc="Deutschkenntnisse";
+out.fileUploadEvent=param.event;
 ' #txt
 Ds0 f6 outParameterDecl '<> result;
 ' #txt
@@ -103,7 +110,7 @@ Ds0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Ds0 f6 83 243 26 26 -77 15 #rect
 Ds0 f6 @|RichDialogMethodStartIcon #fIcon
 Ds0 f7 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
-Ds0 f7 371 243 26 26 0 12 #rect
+Ds0 f7 667 307 26 26 0 12 #rect
 Ds0 f7 @|RichDialogProcessEndIcon #fIcon
 Ds0 f9 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data out;
 ' #txt
@@ -208,12 +215,10 @@ CMS</name>
     </language>
 </elementInfo>
 ' #txt
-Ds0 f9 168 234 112 44 -39 -16 #rect
+Ds0 f9 392 298 112 44 -39 -16 #rect
 Ds0 f9 @|StepIcon #fIcon
-Ds0 f10 expr out #txt
-Ds0 f10 109 256 168 256 #arcP
 Ds0 f8 expr out #txt
-Ds0 f8 280 256 371 256 #arcP
+Ds0 f8 504 320 667 320 #arcP
 Ds0 f11 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data out;
 ' #txt
 Ds0 f11 actionTable 'out=in;
@@ -259,10 +264,10 @@ Ds0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Ds0 f13 83 339 26 26 -40 15 #rect
+Ds0 f13 83 515 26 26 -40 15 #rect
 Ds0 f13 @|RichDialogMethodStartIcon #fIcon
 Ds0 f14 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
-Ds0 f14 379 339 26 26 0 12 #rect
+Ds0 f14 379 515 26 26 0 12 #rect
 Ds0 f14 @|RichDialogProcessEndIcon #fIcon
 Ds0 f16 actionDecl 'einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data out;
 ' #txt
@@ -314,20 +319,79 @@ from CMS</name>
     </language>
 </elementInfo>
 ' #txt
-Ds0 f16 168 330 112 44 -37 -16 #rect
+Ds0 f16 168 506 112 44 -37 -16 #rect
 Ds0 f16 @|StepIcon #fIcon
 Ds0 f17 expr out #txt
-Ds0 f17 109 352 168 352 #arcP
+Ds0 f17 109 528 168 528 #arcP
 Ds0 f15 expr out #txt
-Ds0 f15 280 352 379 352 #arcP
+Ds0 f15 280 528 379 528 #arcP
+Ds0 f18 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
+Ds0 f18 248 304 32 32 0 16 #rect
+Ds0 f18 @|AlternativeIcon #fIcon
+Ds0 f19 expr out #txt
+Ds0 f19 109 256 264 304 #arcP
+Ds0 f19 1 264 256 #addKink
+Ds0 f19 0 0.6960516974380256 0 0 #arcLabel
+Ds0 f10 expr in #txt
+Ds0 f10 280 320 392 320 #arcP
+Ds0 f20 guid 1515E6EA6E3D0BD3 #txt
+Ds0 f20 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
+Ds0 f20 method fileUploadFinanzen(org.primefaces.event.FileUploadEvent) #txt
+Ds0 f20 disableUIEvents false #txt
+Ds0 f20 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
+<org.primefaces.event.FileUploadEvent event> param = methodEvent.getInputArguments();
+' #txt
+Ds0 f20 inParameterMapAction 'out.fileTypeDoc="Finanzielle Verhältnisse";
+out.fileUploadEvent=param.event;
+' #txt
+Ds0 f20 outParameterDecl '<> result;
+' #txt
+Ds0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>fileUploadFinanzen(FileUploadEvent)</name>
+        <nameStyle>35,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ds0 f20 83 307 26 26 -102 15 #rect
+Ds0 f20 @|RichDialogMethodStartIcon #fIcon
+Ds0 f23 guid 1515E6EA6E3CDD8E #txt
+Ds0 f23 type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
+Ds0 f23 method fileUploadWohnsitz(org.primefaces.event.FileUploadEvent) #txt
+Ds0 f23 disableUIEvents false #txt
+Ds0 f23 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
+<org.primefaces.event.FileUploadEvent event> param = methodEvent.getInputArguments();
+' #txt
+Ds0 f23 inParameterMapAction 'out.fileTypeDoc="Wohnsitzbestätigung";
+out.fileUploadEvent=param.event;
+' #txt
+Ds0 f23 outParameterDecl '<> result;
+' #txt
+Ds0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>fileUploadWohnsitz(FileUploadEvent)</name>
+        <nameStyle>35,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ds0 f23 83 379 26 26 -102 15 #rect
+Ds0 f23 @|RichDialogMethodStartIcon #fIcon
+Ds0 f21 expr out #txt
+Ds0 f21 109 320 248 320 #arcP
+Ds0 f22 expr out #txt
+Ds0 f22 109 392 264 336 #arcP
+Ds0 f22 1 264 392 #addKink
+Ds0 f22 0 0.7160746913224667 0 0 #arcLabel
 >Proto Ds0 .type einbuergerung_Gruppe6.DateienHochladen_v2.DateienHochladen_v2Data #txt
 >Proto Ds0 .processKind HTML_DIALOG #txt
 >Proto Ds0 -8 -8 16 16 16 26 #rect
 >Proto Ds0 '' #fIcon
 Ds0 f3 mainOut f5 tail #connect
 Ds0 f5 head f4 mainIn #connect
-Ds0 f6 mainOut f10 tail #connect
-Ds0 f10 head f9 mainIn #connect
 Ds0 f9 mainOut f8 tail #connect
 Ds0 f8 head f7 mainIn #connect
 Ds0 f0 mainOut f12 tail #connect
@@ -338,3 +402,11 @@ Ds0 f13 mainOut f17 tail #connect
 Ds0 f17 head f16 mainIn #connect
 Ds0 f16 mainOut f15 tail #connect
 Ds0 f15 head f14 mainIn #connect
+Ds0 f6 mainOut f19 tail #connect
+Ds0 f19 head f18 in #connect
+Ds0 f18 out f10 tail #connect
+Ds0 f10 head f9 mainIn #connect
+Ds0 f20 mainOut f21 tail #connect
+Ds0 f21 head f18 in #connect
+Ds0 f23 mainOut f22 tail #connect
+Ds0 f22 head f18 in #connect

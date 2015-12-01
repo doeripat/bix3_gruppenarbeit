@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 3657094992151005323L;
+  private static final long serialVersionUID = 7842771481365318165L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -467,6 +467,86 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setPublicationData(java.lang.String _publicationData)
   {
     publicationData = _publicationData;
+  }
+
+  private java.lang.String documentToProof;
+
+  /**
+   * Gets the field documentToProof.
+   * @return the value of the field documentToProof; may be null.
+   */
+  public java.lang.String getDocumentToProof()
+  {
+    return documentToProof;
+  }
+
+  /**
+   * Sets the field documentToProof.
+   * @param _documentToProof the new value of the field documentToProof.
+   */
+  public void setDocumentToProof(java.lang.String _documentToProof)
+  {
+    documentToProof = _documentToProof;
+  }
+
+  private java.lang.String commentFinanzen;
+
+  /**
+   * Gets the field commentFinanzen.
+   * @return the value of the field commentFinanzen; may be null.
+   */
+  public java.lang.String getCommentFinanzen()
+  {
+    return commentFinanzen;
+  }
+
+  /**
+   * Sets the field commentFinanzen.
+   * @param _commentFinanzen the new value of the field commentFinanzen.
+   */
+  public void setCommentFinanzen(java.lang.String _commentFinanzen)
+  {
+    commentFinanzen = _commentFinanzen;
+  }
+
+  private java.lang.String commentWohnsitz;
+
+  /**
+   * Gets the field commentWohnsitz.
+   * @return the value of the field commentWohnsitz; may be null.
+   */
+  public java.lang.String getCommentWohnsitz()
+  {
+    return commentWohnsitz;
+  }
+
+  /**
+   * Sets the field commentWohnsitz.
+   * @param _commentWohnsitz the new value of the field commentWohnsitz.
+   */
+  public void setCommentWohnsitz(java.lang.String _commentWohnsitz)
+  {
+    commentWohnsitz = _commentWohnsitz;
+  }
+
+  private java.lang.String commentDeutschkenntnisse;
+
+  /**
+   * Gets the field commentDeutschkenntnisse.
+   * @return the value of the field commentDeutschkenntnisse; may be null.
+   */
+  public java.lang.String getCommentDeutschkenntnisse()
+  {
+    return commentDeutschkenntnisse;
+  }
+
+  /**
+   * Sets the field commentDeutschkenntnisse.
+   * @param _commentDeutschkenntnisse the new value of the field commentDeutschkenntnisse.
+   */
+  public void setCommentDeutschkenntnisse(java.lang.String _commentDeutschkenntnisse)
+  {
+    commentDeutschkenntnisse = _commentDeutschkenntnisse;
   }
 
 }

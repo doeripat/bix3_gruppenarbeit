@@ -2,7 +2,7 @@
 <richDialogDescriptor>
     <autoScreenshot>true</autoScreenshot>
     <method>
-        <name>fileUpload</name>
+        <name>fileUploadDeutschkenntnisse</name>
         <description></description>
         <inputParameter>
             <name>event</name>
@@ -18,6 +18,26 @@
             <name>document</name>
             <description></description>
             <parameterType>einbuergerung_Gruppe6.Document</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+    </method>
+    <method>
+        <name>fileUploadFinanzen</name>
+        <description></description>
+        <inputParameter>
+            <name>event</name>
+            <description></description>
+            <parameterType>org.primefaces.event.FileUploadEvent</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+    </method>
+    <method>
+        <name>fileUploadWohnsitz</name>
+        <description></description>
+        <inputParameter>
+            <name>event</name>
+            <description></description>
+            <parameterType>org.primefaces.event.FileUploadEvent</parameterType>
             <nullPermitted>false</nullPermitted>
         </inputParameter>
     </method>

@@ -22,46 +22,54 @@
 					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
 					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
 					
-					<p:outputLabel value="Personen"/>
-					<ui:repeat  var="p" value="#{data.request.personList}">
-						<p:outputLabel value="#{p.firstname}" styleClass="readonly_text"/>
-						<br/>
-						<p:outputLabel value="#{p.lastname}" styleClass="readonly_text"/>
-						<hr/>
-					</ui:repeat>
-					
-					<!--  <p:outputLabel  value="Hochgeladene Dokumente"/>
-					<ui:repeat var="d" value="#{data.request.documents}">
-						<p:outputLabel  value="#{d.fileName}" styleClass="readonly_text"/>
-					</ui:repeat>-->
-					<br />
+					<p:outputLabel for="uniqueIdentifier" value="Personen"/>
 					<p:row>
 						<p:column>
-							<p:dataTable var="d" value="#{data.request.documents}">					
+							<p:dataTable var="p" value="#{data.request.personList}">
+								<p:column headerText="Geschlecht">
+								    <h:outputText value="#{p.gender}" />
+								  </p:column>				
+								  <p:column headerText="Name">
+								    <h:outputText value="#{p.firstname} #{p.lastname}" />
+								  </p:column>
+								  <p:column headerText="Geburtstag">
+									<h:outputText value="#{p.birthday}" />									
+								</p:column>
+							</p:dataTable>
+						</p:column>
+					</p:row>
+					<p:outputLabel value="Dokumente"/>
+					<p:row>
+						<p:column>
+							<p:dataTable var="d" value="#{data.request.documents}">
+									<p:column headerText="Dokumententyp">
+								    <h:outputText value="#{d.fileType}" />
+								  </p:column>				
 								  <p:column headerText="Dateiname">
 								    <h:outputText value="#{d.fileName}" />
 								  </p:column>
-								  <p:column headerText="Link">
+								  <p:column headerText="Dokument ansehen">
 								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}">
   									<p:fileDownload value="#{d.fileStreamedContent}" /> 
 									</p:commandLink>									
 								</p:column>
-								  <p:column headerText="Datum">
-								    <h:outputText value="#{d.fileType}" />
-								  </p:column>
 							</p:dataTable>
-					</p:column>
+						</p:column>
 					</p:row>
-					<p:outputLabel for="status" value="Status" />
-					<p:selectOneMenu id="status" value="#{data.fileTypeDoc}" required="true">
-						<f:selectItem itemLabel="Status auswählen" />
-						<f:selectItems value="#{data.fileTypeAvailable}" />
-					</p:selectOneMenu>
-					<p:outputLabel  value="Dokumente hochladen"/>				
-					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUpload}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+					<p:outputLabel  value="Nachweis Deutschkenntnisse hochladen"/>				
+					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadDeutschkenntnisse}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+				
+					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen"/>				
+					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadFinanzen}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+					
+					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen"/>				
+					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadWohnsitz}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+					
+					<p:outputLabel  value="Kommentar" rendered="#{data.request.commentOnRequest != null}"/>
+					<p:outputLabel value="#{data.request.commentOnRequest}" rendered="#{data.request.commentOnRequest != null}" /> 
 					<br/>
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
-					</h:panelGrid>
+				</h:panelGrid>
 			</h:form>			
 		</ui:define>
 	</ui:composition>

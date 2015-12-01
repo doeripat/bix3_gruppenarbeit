@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 14:16:08 CET 2015]
+[>Created: Tue Dec 01 18:22:34 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -101,9 +101,6 @@ Bk8 @RichDialog f1 '' #zField
 Bk8 @PushWFArc f2 '' #zField
 Bk8 @GridStep f4 '' #zField
 Bk8 @PushWFArc f0 '' #zField
-Bk8 @StartRequest f3 '' #zField
-Bk8 @PushWFArc f5 '' #zField
-Bk8 @PushWFArc f6 '' #zField
 >Proto Bk8 Bk1 BpmnUserTask #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
@@ -628,20 +625,16 @@ Bk2 g1 595 299 26 26 0 5 #rect
 Bk2 g1 @|MOGIcon #fIcon
 Bk2 f1 targetWindow NEW:card: #txt
 Bk2 f1 targetDisplay TOP #txt
-Bk2 f1 richDialogId einbuergerung_Gruppe6.GesuchsformularVerbessern #txt
-Bk2 f1 startMethod start(String,String,List<einbuergerung_Gruppe6.Document>,List<einbuergerung_Gruppe6.Person>,String) #txt
+Bk2 f1 richDialogId einbuergerung_Gruppe6.DateienHochladen_v2 #txt
+Bk2 f1 startMethod start(einbuergerung_Gruppe6.Request) #txt
 Bk2 f1 type einbuergerung_Gruppe6.Data #txt
-Bk2 f1 requestActionDecl '<String uniqueIdentifier, String status, List<einbuergerung_Gruppe6.Document> documents, List<einbuergerung_Gruppe6.Person> personList, String commentOnRequest> param;' #txt
-Bk2 f1 requestMappingAction 'param.uniqueIdentifier=in.request.uniqueIdentifier;
-param.status=in.request.status;
-param.documents=in.request.documents;
-param.personList=in.request.personList;
-param.commentOnRequest=in.request.commentOnRequest;
+Bk2 f1 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+Bk2 f1 requestMappingAction 'param.request=in.request;
 ' #txt
 Bk2 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f1 responseMappingAction 'out=in;
-out.request.documents=result.documents;
+out.request=result.request;
 ' #txt
 Bk2 f1 windowConfiguration '* ' #txt
 Bk2 f1 isAsynch false #txt
@@ -803,31 +796,9 @@ Bk8 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk8 f4 296 106 112 44 -21 -8 #rect
 Bk8 f4 @|StepIcon #fIcon
+Bk8 f4 -613726|-1|-16777216 #nodeStyle
 Bk8 f0 expr out #txt
 Bk8 f0 440 256 563 256 #arcP
-Bk8 f3 outLink start.ivp #txt
-Bk8 f3 type einbuergerung_Gruppe6.Data #txt
-Bk8 f3 inParamDecl '<> param;' #txt
-Bk8 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk8 f3 guid 151487F755E7E122 #txt
-Bk8 f3 requestEnabled true #txt
-Bk8 f3 triggerEnabled false #txt
-Bk8 f3 callSignature start() #txt
-Bk8 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-Bk8 f3 @C|.responsibility Everybody #txt
-Bk8 f3 209 49 30 30 -21 17 #rect
-Bk8 f3 @|StartRequestIcon #fIcon
-Bk8 f5 expr out #txt
-Bk8 f5 237 70 308 106 #arcP
-Bk8 f6 expr out #txt
-Bk8 f6 352 150 360 234 #arcP
 >Proto Bk1 0 0 32 24 18 0 #rect
 >Proto Bk1 @|BpmnReceiveTaskIcon #fIcon
 Bk1 g0 51 243 26 26 0 5 #rect
@@ -990,10 +961,6 @@ Bk8 g0 m f2 tail #connect
 Bk8 f2 head f1 mainIn #connect
 Bk8 f1 mainOut f0 tail #connect
 Bk8 f0 head g1 m #connect
-Bk8 f3 mainOut f5 tail #connect
-Bk8 f5 head f4 mainIn #connect
-Bk8 f4 mainOut f6 tail #connect
-Bk8 f6 head f1 mainIn #connect
 Bk8 0 0 976 488 0 #ivRect
 Bk1 g0 m f1 tail #connect
 Bk1 f1 head f0 mainIn #connect

@@ -14,3 +14,5 @@ loopIterations Number #field
 loopIterations PERSISTENT #fieldModifier
 document einbuergerung_Gruppe6.Document #field
 document PERSISTENT #fieldModifier
+tmpDocumentList List<einbuergerung_Gruppe6.Document> #field
+tmpDocumentList PERSISTENT #fieldModifier
