@@ -22,4 +22,7 @@
     <role>
         <identifier>Migrationsamt Wohnsitzbestätigung Prüfer</identifier>
     </role>
+    <role>
+        <identifier>Migrationsamt Prüfer</identifier>
+    </role>
 </role>

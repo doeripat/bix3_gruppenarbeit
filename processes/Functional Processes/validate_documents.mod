@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 19:09:14 CET 2015]
+[>Created: Tue Dec 01 21:36:58 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -25,7 +25,6 @@ vs0 @CallSub f33 '' #zField
 vs0 @CallSub f7 '' #zField
 vs0 @CallSub f8 '' #zField
 vs0 @TaskSwitch f4 '' #zField
-vs0 @TkArc f5 '' #zField
 vs0 @TaskSwitch f2 '' #zField
 vs0 @TkArc f18 '' #zField
 vs0 @TkArc f19 '' #zField
@@ -34,15 +33,16 @@ vs0 @WSElement f3 '' #zField
 vs0 @PushWFArc f6 '' #zField
 vs0 @TkArc f9 '' #zField
 vs0 @PushWFArc f10 '' #zField
-vs0 @GridStep f13 '' #zField
-vs0 @PushWFArc f21 '' #zField
-vs0 @PushWFArc f14 '' #zField
 vs0 @GridStep f22 '' #zField
 vs0 @PushWFArc f23 '' #zField
 vs0 @PushWFArc f12 '' #zField
 vs0 @GridStep f24 '' #zField
 vs0 @PushWFArc f25 '' #zField
 vs0 @PushWFArc f11 '' #zField
+vs0 @PushWFArc f14 '' #zField
+vs0 @GridStep f13 '' #zField
+vs0 @PushWFArc f21 '' #zField
+vs0 @TkArc f5 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk5 @TextInP .resExport .resExport #zField
 Bk5 @TextInP .type .type #zField
@@ -189,9 +189,9 @@ vs0 f4 actionDecl 'einbuergerung_Gruppe6.Data out;
 vs0 f4 actionTable 'out=in1;
 ' #txt
 vs0 f4 outTypes "einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data" #txt
-vs0 f4 outLinks "TaskB.ivp","TaskC.ivp","TaskD.ivp","TaskA.ivp" #txt
+vs0 f4 outLinks "TaskB.ivp","TaskC.ivp","TaskA.ivp","TaskD.ivp" #txt
 vs0 f4 caseData '#
-#Tue Dec 01 19:01:24 CET 2015
+#Tue Dec 01 21:22:13 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -219,7 +219,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f4 taskData '#
-#Tue Dec 01 19:01:24 CET 2015
+#Tue Dec 01 21:22:13 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -275,18 +275,18 @@ taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskD.ivp");
-taskDef.setName(engine.expandMacros("Bitte Finanzielle Verhältnisse prüfen"));
+taskDef.setStartRequestPath("TaskA.ivp");
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Migrationsamt Finanzielle Verhältnisse Prüfer");
+taskDef.setActivator("SYSTEM");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
 taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setStartRequestPath("TaskD.ivp");
+taskDef.setName(engine.expandMacros("Bitte Finanzielle Verhältnisse prüfen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("SYSTEM");
+taskDef.setActivator("Migrationsamt Finanzielle Verhältnisse Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -296,10 +296,6 @@ vs0 f4 type einbuergerung_Gruppe6.Data #txt
 vs0 f4 template "" #txt
 vs0 f4 304 160 32 32 0 16 #rect
 vs0 f4 @|TaskSwitchIcon #fIcon
-vs0 f5 expr out #txt
-vs0 f5 type einbuergerung_Gruppe6.Data #txt
-vs0 f5 var in1 #txt
-vs0 f5 111 176 304 176 #arcP
 vs0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f2 actionTable 'out=in1;
@@ -365,33 +361,6 @@ vs0 f9 0 0.8471933154113785 0 0 #arcLabel
 vs0 f10 expr data #txt
 vs0 f10 outCond ivp=="TaskA.ivp" #txt
 vs0 f10 976 168 1024 168 #arcP
-vs0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-vs0 f13 actionTable 'out=in;
-out.request.documentToProof="Deutschkenntnisse";
-' #txt
-vs0 f13 type einbuergerung_Gruppe6.Data #txt
-vs0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>init documentToProof
-to Deutschkenntnisse</name>
-        <nameStyle>21,7
-20,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-vs0 f13 376 50 144 44 -54 -16 #rect
-vs0 f13 @|StepIcon #fIcon
-vs0 f21 expr data #txt
-vs0 f21 outCond ivp=="TaskD.ivp" #txt
-vs0 f21 320 160 376 72 #arcP
-vs0 f21 1 320 72 #addKink
-vs0 f21 1 0.3096891401817728 0 0 #arcLabel
-vs0 f14 expr out #txt
-vs0 f14 520 72 584 72 #arcP
-vs0 f14 0 0.3096891401817728 0 0 #arcLabel
 vs0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f22 actionTable 'out=in;
@@ -446,6 +415,37 @@ vs0 f25 1 0.438360561870366 0 0 #arcLabel
 vs0 f11 expr out #txt
 vs0 f11 536 200 584 200 #arcP
 vs0 f11 0 0.438360561870366 0 0 #arcLabel
+vs0 f14 expr out #txt
+vs0 f14 520 72 584 72 #arcP
+vs0 f14 0 0.3096891401817728 0 0 #arcLabel
+vs0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f13 actionTable 'out=in;
+out.request.documentToProof="Deutschkenntnisse";
+' #txt
+vs0 f13 type einbuergerung_Gruppe6.Data #txt
+vs0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>init documentToProof
+to Deutschkenntnisse</name>
+        <nameStyle>21,7
+20,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f13 376 50 144 44 -54 -16 #rect
+vs0 f13 @|StepIcon #fIcon
+vs0 f21 expr data #txt
+vs0 f21 outCond ivp=="TaskD.ivp" #txt
+vs0 f21 320 160 376 72 #arcP
+vs0 f21 1 320 72 #addKink
+vs0 f21 0 0.8181818181818182 0 0 #arcLabel
+vs0 f5 expr out #txt
+vs0 f5 type einbuergerung_Gruppe6.Data #txt
+vs0 f5 var in1 #txt
+vs0 f5 111 176 304 176 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -478,8 +478,6 @@ vs0 R60 g1 f15 tail #connect
 vs0 f15 head f1 mainIn #connect
 vs0 f16 ao f17 tail #connect
 vs0 f17 head R60 ai #connect
-vs0 f0 mainOut f5 tail #connect
-vs0 f5 head f4 in #connect
 vs0 f33 mainOut f18 tail #connect
 vs0 f18 head f2 in #connect
 vs0 f7 mainOut f19 tail #connect
@@ -491,7 +489,6 @@ vs0 f3 mainOut f9 tail #connect
 vs0 f9 head f2 in #connect
 vs0 f2 out f10 tail #connect
 vs0 f10 head R60 g0 #connect
-vs0 f21 head f13 mainIn #connect
 vs0 f13 mainOut f14 tail #connect
 vs0 f14 head f33 mainIn #connect
 vs0 f23 head f22 mainIn #connect
@@ -500,10 +497,13 @@ vs0 f12 head f7 mainIn #connect
 vs0 f4 out f25 tail #connect
 vs0 f25 head f24 mainIn #connect
 vs0 f4 out f23 tail #connect
-vs0 f4 out f21 tail #connect
 vs0 f4 out f6 tail #connect
 vs0 f24 mainOut f11 tail #connect
 vs0 f11 head f8 mainIn #connect
+vs0 f4 out f21 tail #connect
+vs0 f21 head f13 mainIn #connect
+vs0 f0 mainOut f5 tail #connect
+vs0 f5 head f4 in #connect
 Bk5 g0 m f0 tail #connect
 Bk5 f0 head g1 m #connect
 Bk5 0 0 640 512 0 #ivRect

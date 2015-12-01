@@ -24,7 +24,7 @@
 					<p:outputLabel for="requestUniqueIdentifier" value="Unique Identifier"/>
 					<p:outputLabel id="requestUniqueIdentifier" value="#{data.request.uniqueIdentifier}"/>
 					
-					<p:outputLabel for="personen" value="Personen"/>
+					<p:outputLabel value="Personen"/>
 					<p:row>
 						<p:column>
 							<p:dataTable var="p" value="#{data.request.personList}">
@@ -43,7 +43,7 @@
 					<p:outputLabel value="Dokumente"/>
 					<p:row>
 						<p:column>
-							<p:dataTable var="d" value="#{data.request}">
+							<p:dataTable var="d" value="#{data.tmpDocumentList}">
 									<p:column headerText="Dokumententyp">
 								    <h:outputText value="#{d.fileType}" />
 								  </p:column>				
@@ -61,12 +61,12 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-					<p:outputLabel for="comment" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"/>
-					<p:inputTextarea id="comment" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"></p:inputTextarea>
-					<p:outputLabel for="comment" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"/>
-					<p:inputTextarea id="comment" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"></p:inputTextarea>					
-					<p:outputLabel for="comment" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"/>
-					<p:inputTextarea id="comment" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"></p:inputTextarea>					
+					<p:outputLabel for="commentFinanzen" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"/>
+					<p:inputTextarea id="commentFinanzen" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"></p:inputTextarea>
+					<p:outputLabel for="commentDeutschkenntnisse" value="Kommentar Deutschkenntnisse" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"/>
+					<p:inputTextarea id="commentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"></p:inputTextarea>					
+					<p:outputLabel for="commentWohnsitzbestätigung" value="Kommentar Wohnsitzbestätigung" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"/>
+					<p:inputTextarea id="commentWohnsitzbestätigung" value="#{data.request.commentWohnsitz}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"></p:inputTextarea>					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
 				</h:panelGrid>

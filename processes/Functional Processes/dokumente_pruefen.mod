@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 18:22:34 CET 2015]
+[>Created: Tue Dec 01 21:38:36 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -325,6 +325,8 @@ dn0 f6 processCall 'Functional Processes/validate_documents:call(einbuergerung_G
 dn0 f6 doCall true #txt
 dn0 f6 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
 ' #txt
+dn0 f6 requestMappingAction 'param.data=in;
+' #txt
 dn0 f6 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f6 responseMappingAction 'out=result.data;
@@ -402,7 +404,7 @@ dn0 f21 actionTable 'out=in1;
 dn0 f21 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f21 outLinks "TaskA.ivp" #txt
 dn0 f21 caseData '#
-#Thu Nov 26 22:49:06 CET 2015
+#Tue Dec 01 21:05:42 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -430,13 +432,13 @@ type.code=
 type.name=
 ' #txt
 dn0 f21 taskData '#
-#Thu Nov 26 22:49:06 CET 2015
+#Tue Dec 01 21:05:42 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
 TaskA.NAM=Bitte Formale Korrektheit der Dokumente pr\u00FCfen
 TaskA.PRI=2
-TaskA.ROL=Migrationsamt Pruefer
+TaskA.ROL=Migrationsamt Pr\u00FCfer
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -448,7 +450,7 @@ taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
 taskDef.setName(engine.expandMacros("Bitte Formale Korrektheit der Dokumente prüfen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Migrationsamt Pruefer");
+taskDef.setActivator("Migrationsamt Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));

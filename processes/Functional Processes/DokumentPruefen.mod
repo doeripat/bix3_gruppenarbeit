@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 19:35:20 CET 2015]
+[>Created: Tue Dec 01 22:49:34 CET 2015]
 151165A416DBA684 3.17 #module
 >Proto >Proto Collection #zClass
 Dn0 DokumentPruefen Big #zClass
@@ -22,6 +22,10 @@ Dn0 @PushWFArc f3 '' #zField
 Dn0 @GridStep f5 '' #zField
 Dn0 @PushWFArc f7 '' #zField
 Dn0 @PushWFArc f4 '' #zField
+Dn0 @StartRequest f8 '' #zField
+Dn0 @GridStep f9 '' #zField
+Dn0 @PushWFArc f10 '' #zField
+Dn0 @PushWFArc f11 '' #zField
 >Proto Dn0 Dn0 DokumentPruefen #zField
 Dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 Dn0 f0 inParamTable 'out=param.data;
@@ -53,17 +57,11 @@ Dn0 f12 actionDecl 'einbuergerung_Gruppe6.Data out;
 Dn0 f12 actionTable 'out=in;
 ' #txt
 Dn0 f12 actionCode 'import einbuergerung_Gruppe6.Document;
-List<Document> documentsToProof = new List<Document>();
-
-for(Document doc : in.request.personList)
-{
-	if(doc.fileType == in.request.documentToProof)
-	{
-		documentsToProof.add(doc);
-	}
-}
-out.tmpDocumentList = documentsToProof;
-out.request.documents.removeAll(documentsToProof);' #txt
+for(Document doc : in.request.documents){
+if(in.request.documentToProof == doc.fileType){
+		out.addPerson = true;
+	} 
+		}' #txt
 Dn0 f12 type einbuergerung_Gruppe6.Data #txt
 Dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -136,6 +134,47 @@ Dn0 f7 expr out #txt
 Dn0 f7 600 64 624 64 #arcP
 Dn0 f4 expr out #txt
 Dn0 f4 784 64 889 64 #arcP
+Dn0 f8 outLink start.ivp #txt
+Dn0 f8 type einbuergerung_Gruppe6.Data #txt
+Dn0 f8 inParamDecl '<> param;' #txt
+Dn0 f8 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Dn0 f8 guid 1515F778302341AB #txt
+Dn0 f8 requestEnabled true #txt
+Dn0 f8 triggerEnabled false #txt
+Dn0 f8 callSignature start() #txt
+Dn0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+Dn0 f8 @C|.responsibility Everybody #txt
+Dn0 f8 177 177 30 30 -21 17 #rect
+Dn0 f8 @|StartRequestIcon #fIcon
+Dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Dn0 f9 actionTable 'out=in;
+' #txt
+Dn0 f9 actionCode 'import einbuergerung_Gruppe6.Document;
+
+
+for(int i = 0; i<4; i++)
+{
+	Document d = new Document();
+	d.fileName = "Yves"+i;
+	d.fileType = "Deutschkenntnisse";
+	out.request.documents.add(d);
+}
+' #txt
+Dn0 f9 type einbuergerung_Gruppe6.Data #txt
+Dn0 f9 264 122 112 44 0 -8 #rect
+Dn0 f9 @|StepIcon #fIcon
+Dn0 f10 expr out #txt
+Dn0 f10 206 186 264 165 #arcP
+Dn0 f11 expr out #txt
+Dn0 f11 320 122 336 86 #arcP
 >Proto Dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Dn0 .processKind CALLABLE_SUB #txt
 >Proto Dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -153,3 +192,7 @@ Dn0 f6 mainOut f7 tail #connect
 Dn0 f7 head f5 mainIn #connect
 Dn0 f5 mainOut f4 tail #connect
 Dn0 f4 head f1 mainIn #connect
+Dn0 f8 mainOut f10 tail #connect
+Dn0 f10 head f9 mainIn #connect
+Dn0 f9 mainOut f11 tail #connect
+Dn0 f11 head f12 mainIn #connect
