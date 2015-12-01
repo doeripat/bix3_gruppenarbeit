@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 5459598560213274589L;
+  private static final long serialVersionUID = -2863967666236878883L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -129,13 +129,13 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     loopIterations = _loopIterations;
   }
 
-  private com.sun.xml.internal.txw2.Document document;
+  private einbuergerung_Gruppe6.Document document;
 
   /**
    * Gets the field document.
    * @return the value of the field document; may be null.
    */
-  public com.sun.xml.internal.txw2.Document getDocument()
+  public einbuergerung_Gruppe6.Document getDocument()
   {
     return document;
   }
@@ -144,7 +144,7 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
    * Sets the field document.
    * @param _document the new value of the field document.
    */
-  public void setDocument(com.sun.xml.internal.txw2.Document _document)
+  public void setDocument(einbuergerung_Gruppe6.Document _document)
   {
     document = _document;
   }

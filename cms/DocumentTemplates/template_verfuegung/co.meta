@@ -1,2 +1,2 @@
-co: name={template_verfuegung} description={} changed={2015-11-30 21:31:02 GMT} changedby={Christian} visualorder={0} guid={1515A4E59B2713A1} parentguid={} typeguid={E6AFEA1FF894D833} id={} parentid={} typeid={}
-val: guid={1515A4E59BB3D069} datatype={} isdefault={true} langid={en} description={} validfrom={2015-11-30 21:31:02 GMT} validto={} changed={2015-11-30 21:31:02 GMT} changedby={Christian} properties={} id={}
+co: name={template_verfuegung} description={} changed={2015-12-01 11:29:24 GMT} changedby={Christian} visualorder={0} guid={1515D4DE5DB48023} parentguid={} typeguid={E6AFEA1FF894D833} id={} parentid={} typeid={}
+val: guid={1515D4DE5E377A7A} datatype={} isdefault={true} langid={en} description={} validfrom={2015-12-01 11:29:24 GMT} validto={} changed={2015-12-01 11:29:24 GMT} changedby={Christian} properties={} id={}

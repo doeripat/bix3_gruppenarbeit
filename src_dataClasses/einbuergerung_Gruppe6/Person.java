@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 1756412288579343642L;
+  private static final long serialVersionUID = 1723555269073900826L;
 
   private java.lang.String firstname;
 
@@ -169,13 +169,13 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     authorityStatement = _authorityStatement;
   }
 
-  private java.lang.String approved;
+  private java.lang.Boolean approved;
 
   /**
    * Gets the field approved.
    * @return the value of the field approved; may be null.
    */
-  public java.lang.String getApproved()
+  public java.lang.Boolean getApproved()
   {
     return approved;
   }
@@ -184,7 +184,7 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
    * Sets the field approved.
    * @param _approved the new value of the field approved.
    */
-  public void setApproved(java.lang.String _approved)
+  public void setApproved(java.lang.Boolean _approved)
   {
     approved = _approved;
   }

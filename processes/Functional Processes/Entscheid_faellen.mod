@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 23:06:26 CET 2015]
+[>Created: Tue Dec 01 12:32:02 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -55,10 +55,10 @@ Bk0 @CallSub f2 '' #zField
 Bk0 @PushWFArc f3 '' #zField
 Bk0 @GridStep f4 '' #zField
 Bk0 @PushWFArc f5 '' #zField
-Bk0 @PushWFArc f0 '' #zField
 Bk0 @GridStep f6 '' #zField
-Bk0 @PushWFArc f7 '' #zField
+Bk0 @PushWFArc f0 '' #zField
 Bk0 @PushWFArc f1 '' #zField
+Bk0 @PushWFArc f9 '' #zField
 >Proto Bk0 Bk0 BpmnServiceTask #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
@@ -284,7 +284,8 @@ En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f17 actionTable 'out=in;
 ' #txt
-En0 f17 actionCode 'in.request.personList.set(in.loopCount,in.person);
+En0 f17 actionCode 'in.person.disposal=in.document;
+in.request.personList.set(in.loopCount,in.person);
 in.loopCount++;
 in.person=in.request.personList.get(in.loopCount);' #txt
 En0 f17 type einbuergerung_Gruppe6.Data #txt
@@ -346,17 +347,17 @@ Bk0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 Bk0 f22 actionTable 'out=in;
 ' #txt
 Bk0 f22 actionCode 'import ch.ivyteam.ivy.cm.IContentObjectValue;
-File f = new File(in.person.disposal.filePath);
+File f = new File(in.document.filePath);
 if (! f.exists())
 {
   // legt leeres file an (muss vorhanden sein für export)
   f.createNewFile();
   // export content from cms
-  IContentObjectValue cov = ivy.cms.getContentObjectValue(in.person.disposal.templatePath, null,true);
+  IContentObjectValue cov = ivy.cms.getContentObjectValue(in.document.templatePath, null,true);
   cov.exportContentToFile(f.getJavaFile(), null);
 }
 if(f.exists()){
-  out.person.disposal.templatePath = f.getAbsolutePath();
+  out.document.templatePath = f.getAbsolutePath();
 }' #txt
 Bk0 f22 type einbuergerung_Gruppe6.Data #txt
 Bk0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -377,12 +378,22 @@ Bk0 f20 actionTable 'out=in;
 ' #txt
 Bk0 f20 actionCode 'import ch.ivyteam.ivy.addons.docfactory.TemplateMergeField;
 
-in.person.disposal.templateMergeFields.clear();
-in.person.disposal.templateMergeFields.add(new TemplateMergeField("titel","test"));
-in.person.disposal.templateMergeFields.add(new TemplateMergeField("inhalt","test"));
-in.person.disposal.templateMergeFields.add(new TemplateMergeField("betreuer","test"));
-in.person.disposal.templateMergeFields.add(new TemplateMergeField("student","test"));
-in.person.disposal.templateMergeFields.add(new TemplateMergeField("feld2","Heute ist das Wetter mässig"));' #txt
+in.document.templateMergeFields.clear();
+in.document.templateMergeFields.add(new TemplateMergeField("REQUESTID",in.request.uniqueIdentifier));
+in.document.templateMergeFields.add(new TemplateMergeField("NAME",in.person.lastname));
+in.document.templateMergeFields.add(new TemplateMergeField("FIRSTNAME",in.person.firstname));
+in.document.templateMergeFields.add(new TemplateMergeField("ADDRESS",in.request.address));
+in.document.templateMergeFields.add(new TemplateMergeField("EMAIL",in.request.email));
+in.document.templateMergeFields.add(new TemplateMergeField("PHONE",in.request.phone));
+
+if(in.person.approved){
+	in.document.templateMergeFields.add(new TemplateMergeField("DECISION","bewilligt"));
+	}
+else{
+	in.document.templateMergeFields.add(new TemplateMergeField("DECISION","abgelehnt"));
+	}
+
+in.document.templateMergeFields.add(new TemplateMergeField("REASON",in.person.authorityStatement));' #txt
 Bk0 f20 type einbuergerung_Gruppe6.Data #txt
 Bk0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -420,10 +431,10 @@ Bk0 f2 processCall 'Functional Processes/writeSerialLetterToOneCorrespondent:wri
 Bk0 f2 doCall true #txt
 Bk0 f2 requestActionDecl '<List<ch.ivyteam.ivy.addons.docfactory.TemplateMergeField> listOfTemplateMergeFields,java.lang.String optionalOutputpath,java.lang.String optionalLetterName,java.lang.String optionalOutputFormat,java.lang.String templatePath> param;
 ' #txt
-Bk0 f2 requestMappingAction 'param.listOfTemplateMergeFields=in.person.disposal.templateMergeFields;
-param.optionalLetterName=in.person.disposal.fileName;
-param.optionalOutputFormat="pdf";
-param.templatePath=in.person.disposal.templatePath;
+Bk0 f2 requestMappingAction 'param.listOfTemplateMergeFields=in.document.templateMergeFields;
+param.optionalLetterName=in.document.fileName;
+param.optionalOutputFormat=in.document.fileType;
+param.templatePath="C:/Axonivy_Workspace/Einbuergerung/cms/DocumentTemplates/template_verfuegung/1515D4DE5E377A7A.doc";
 ' #txt
 Bk0 f2 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -439,13 +450,19 @@ Bk0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk0 f2 624 138 224 44 -104 -8 #rect
+Bk0 f2 640 138 224 44 -104 -8 #rect
 Bk0 f2 @|CallSubIcon #fIcon
 Bk0 f3 expr out #txt
-Bk0 f3 592 160 624 160 #arcP
+Bk0 f3 592 160 640 160 #arcP
 Bk0 f4 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f4 actionTable 'out=in;
+' #txt
+Bk0 f4 actionCode '
+in.document.fileName = "Verfügung_Gesuch_"+in.person.firstname+"_"+in.person.lastname+"_"+in.request.uniqueIdentifier;
+in.document.templatePath="C:/Axonivy_Workspace/Einbuergerung/cms/DocumentTemplates/template_verfuegung";
+in.document.fileType="pdf";
+
 ' #txt
 Bk0 f4 type einbuergerung_Gruppe6.Data #txt
 Bk0 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -462,15 +479,13 @@ Attributes</name>
 Bk0 f4 200 138 112 44 -39 -16 #rect
 Bk0 f4 @|StepIcon #fIcon
 Bk0 f5 77 160 200 160 #arcP
-Bk0 f0 expr out #txt
-Bk0 f0 312 160 344 160 #arcP
 Bk0 f6 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f6 actionTable 'out=in;
 ' #txt
 Bk0 f6 actionCode 'import java.awt.Desktop;
 if(in.person.disposal.fileOperationMesage.files.size()>0) {
-  Desktop.getDesktop().open(in.person.disposal.fileOperationMesage.files.get(0));
+  //Desktop.getDesktop().open(in.person.disposal.fileOperationMesage.files.get(0));
 }' #txt
 Bk0 f6 type einbuergerung_Gruppe6.Data #txt
 Bk0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -484,12 +499,14 @@ Generation suceed</name>
     </language>
 </elementInfo>
 ' #txt
-Bk0 f6 888 138 128 44 -46 -16 #rect
+Bk0 f6 920 138 128 44 -46 -16 #rect
 Bk0 f6 @|StepIcon #fIcon
-Bk0 f7 expr out #txt
-Bk0 f7 848 160 888 160 #arcP
+Bk0 f0 expr out #txt
+Bk0 f0 312 160 344 160 #arcP
 Bk0 f1 expr out #txt
-Bk0 f1 1016 160 1107 160 #arcP
+Bk0 f1 864 160 920 160 #arcP
+Bk0 f9 expr out #txt
+Bk0 f9 1048 160 1107 160 #arcP
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 En0 f0 mainOut f4 tail #connect
@@ -522,8 +539,8 @@ Bk0 g0 m f5 tail #connect
 Bk0 f5 head f4 mainIn #connect
 Bk0 f4 mainOut f0 tail #connect
 Bk0 f0 head f22 mainIn #connect
-Bk0 f2 mainOut f7 tail #connect
-Bk0 f7 head f6 mainIn #connect
-Bk0 f6 mainOut f1 tail #connect
-Bk0 f1 head g1 m #connect
+Bk0 f2 mainOut f1 tail #connect
+Bk0 f1 head f6 mainIn #connect
+Bk0 f6 mainOut f9 tail #connect
+Bk0 f9 head g1 m #connect
 Bk0 0 0 1272 512 0 #ivRect

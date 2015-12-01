@@ -16,7 +16,7 @@ yearCount Number #field
 yearCount PERSISTENT #fieldModifier
 authorityStatement String #field
 authorityStatement PERSISTENT #fieldModifier
-approved String #field
+approved Boolean #field
 approved PERSISTENT #fieldModifier
 disposal einbuergerung_Gruppe6.Document #field
 disposal PERSISTENT #fieldModifier
