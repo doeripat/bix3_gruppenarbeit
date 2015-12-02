@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 02 22:17:50 CET 2015]
+[>Created: Wed Dec 02 22:36:10 CET 2015]
 1506BD6C657107E2 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen Big #zClass
@@ -484,7 +484,7 @@ An0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 An0 f17 @C|.responsibility Everybody #txt
-An0 f17 97 401 30 30 -21 17 #rect
+An0 f17 89 409 30 30 -21 17 #rect
 An0 f17 @|StartRequestIcon #fIcon
 An0 f18 targetWindow NEW:card: #txt
 An0 f18 targetDisplay TOP #txt
@@ -503,19 +503,19 @@ An0 f18 userContext '* ' #txt
 An0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Einwände einsehen</name>
+        <name>Einwände eröffnen</name>
         <nameStyle>17,7
 </nameStyle>
         <desc>Einwände werden für alle Personen erfasst und jede Person kann zu allen Einwänden Stellung nehmen</desc>
     </language>
 </elementInfo>
 ' #txt
-An0 f18 1080 146 128 44 -55 -8 #rect
+An0 f18 1080 146 112 44 -51 -8 #rect
 An0 f18 @|RichDialogIcon #fIcon
 An0 f22 expr out #txt
 An0 f22 1016 168 1080 168 #arcP
 An0 f23 expr out #txt
-An0 f23 1208 168 1248 168 #arcP
+An0 f23 1192 168 1248 168 #arcP
 An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f19 actionTable 'out=in;
@@ -551,7 +551,7 @@ An0 f35 600 168 656 168 #arcP
 An0 f28 expr out #txt
 An0 f28 768 168 856 168 #arcP
 An0 f36 expr out #txt
-An0 f36 125 410 659 190 #arcP
+An0 f36 117 418 660 190 #arcP
 An0 f36 0 0.49999999999999983 0 0 #arcLabel
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
