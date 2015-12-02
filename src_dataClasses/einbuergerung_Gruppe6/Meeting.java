@@ -7,46 +7,26 @@ package einbuergerung_Gruppe6;
 public class Meeting extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -2445802741598799514L;
+  private static final long serialVersionUID = -6595978652360717555L;
 
-  private ch.ivyteam.ivy.scripting.objects.DateTime fromDate;
+  private ch.ivyteam.ivy.scripting.objects.DateTime Date;
 
   /**
-   * Gets the field fromDate.
-   * @return the value of the field fromDate; may be null.
+   * Gets the field Date.
+   * @return the value of the field Date; may be null.
    */
-  public ch.ivyteam.ivy.scripting.objects.DateTime getFromDate()
+  public ch.ivyteam.ivy.scripting.objects.DateTime getDate()
   {
-    return fromDate;
+    return Date;
   }
 
   /**
-   * Sets the field fromDate.
-   * @param _fromDate the new value of the field fromDate.
+   * Sets the field Date.
+   * @param _Date the new value of the field Date.
    */
-  public void setFromDate(ch.ivyteam.ivy.scripting.objects.DateTime _fromDate)
+  public void setDate(ch.ivyteam.ivy.scripting.objects.DateTime _Date)
   {
-    fromDate = _fromDate;
-  }
-
-  private ch.ivyteam.ivy.scripting.objects.DateTime toDate;
-
-  /**
-   * Gets the field toDate.
-   * @return the value of the field toDate; may be null.
-   */
-  public ch.ivyteam.ivy.scripting.objects.DateTime getToDate()
-  {
-    return toDate;
-  }
-
-  /**
-   * Sets the field toDate.
-   * @param _toDate the new value of the field toDate.
-   */
-  public void setToDate(ch.ivyteam.ivy.scripting.objects.DateTime _toDate)
-  {
-    toDate = _toDate;
+    Date = _Date;
   }
 
   private java.lang.Boolean isCompleted;

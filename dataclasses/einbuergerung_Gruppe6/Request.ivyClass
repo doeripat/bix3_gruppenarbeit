@@ -10,7 +10,7 @@ invoices List<einbuergerung_Gruppe6.Invoice> #field
 invoices PERSISTENT #fieldModifier
 documents List<einbuergerung_Gruppe6.Document> #field
 documents PERSISTENT #fieldModifier
-meeting einbuergerung_Gruppe6.Meeting #field
+meeting DateTime #field
 meeting PERSISTENT #fieldModifier
 username String #field
 username PERSISTENT #fieldModifier

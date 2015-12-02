@@ -20,3 +20,7 @@ approved Boolean #field
 approved PERSISTENT #fieldModifier
 disposal einbuergerung_Gruppe6.Document #field
 disposal PERSISTENT #fieldModifier
+notes String #field
+notes PERSISTENT #fieldModifier
+meeting DateTime #field
+meeting PERSISTENT #fieldModifier

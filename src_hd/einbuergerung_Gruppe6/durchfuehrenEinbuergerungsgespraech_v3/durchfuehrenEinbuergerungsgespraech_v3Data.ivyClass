@@ -1,0 +1,10 @@
+durchfuehrenEinbuergerungsgespraech_v3Data #class
+einbuergerung_Gruppe6.durchfuehrenEinbuergerungsgespraech_v3 #namespace
+personList List<einbuergerung_Gruppe6.Person> #field
+person einbuergerung_Gruppe6.Person #field
+selectedPerson String #field
+selectedPerson PERSISTENT #fieldModifier
+personListString List<String> #field
+personListString PERSISTENT #fieldModifier
+notes String #field
+notes PERSISTENT #fieldModifier

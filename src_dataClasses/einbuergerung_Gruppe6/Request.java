@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 7842771481365318165L;
+  private static final long serialVersionUID = -6124295958582261227L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -109,13 +109,13 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     documents = _documents;
   }
 
-  private einbuergerung_Gruppe6.Meeting meeting;
+  private ch.ivyteam.ivy.scripting.objects.DateTime meeting;
 
   /**
    * Gets the field meeting.
    * @return the value of the field meeting; may be null.
    */
-  public einbuergerung_Gruppe6.Meeting getMeeting()
+  public ch.ivyteam.ivy.scripting.objects.DateTime getMeeting()
   {
     return meeting;
   }
@@ -124,7 +124,7 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
    * Sets the field meeting.
    * @param _meeting the new value of the field meeting.
    */
-  public void setMeeting(einbuergerung_Gruppe6.Meeting _meeting)
+  public void setMeeting(ch.ivyteam.ivy.scripting.objects.DateTime _meeting)
   {
     meeting = _meeting;
   }

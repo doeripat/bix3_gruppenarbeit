@@ -1,0 +1,9 @@
+terminWaehlenData #class
+einbuergerung_Gruppe6.terminWaehlen #namespace
+meeting DateTime #field
+dateStringList List<String> #field
+dateStringList PERSISTENT #fieldModifier
+selectedDateTimeString String #field
+selectedDateTimeString PERSISTENT #fieldModifier
+selectedDate DateTime #field
+selectedDate PERSISTENT #fieldModifier
