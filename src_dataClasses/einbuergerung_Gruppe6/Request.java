@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 5396437868335292794L;
+  private static final long serialVersionUID = -6124295958582261227L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -109,13 +109,13 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     documents = _documents;
   }
 
-  private einbuergerung_Gruppe6.Meeting meeting;
+  private ch.ivyteam.ivy.scripting.objects.DateTime meeting;
 
   /**
    * Gets the field meeting.
    * @return the value of the field meeting; may be null.
    */
-  public einbuergerung_Gruppe6.Meeting getMeeting()
+  public ch.ivyteam.ivy.scripting.objects.DateTime getMeeting()
   {
     return meeting;
   }
@@ -124,7 +124,7 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
    * Sets the field meeting.
    * @param _meeting the new value of the field meeting.
    */
-  public void setMeeting(einbuergerung_Gruppe6.Meeting _meeting)
+  public void setMeeting(ch.ivyteam.ivy.scripting.objects.DateTime _meeting)
   {
     meeting = _meeting;
   }
@@ -547,26 +547,6 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setCommentDeutschkenntnisse(java.lang.String _commentDeutschkenntnisse)
   {
     commentDeutschkenntnisse = _commentDeutschkenntnisse;
-  }
-
-  private ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> personRemovedList;
-
-  /**
-   * Gets the field personRemovedList.
-   * @return the value of the field personRemovedList; may be null.
-   */
-  public ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> getPersonRemovedList()
-  {
-    return personRemovedList;
-  }
-
-  /**
-   * Sets the field personRemovedList.
-   * @param _personRemovedList the new value of the field personRemovedList.
-   */
-  public void setPersonRemovedList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> _personRemovedList)
-  {
-    personRemovedList = _personRemovedList;
   }
 
 }

@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 1723555269073900826L;
+  private static final long serialVersionUID = -3642486631272297598L;
 
   private java.lang.String firstname;
 
@@ -207,6 +207,46 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setDisposal(einbuergerung_Gruppe6.Document _disposal)
   {
     disposal = _disposal;
+  }
+
+  private java.lang.String notes;
+
+  /**
+   * Gets the field notes.
+   * @return the value of the field notes; may be null.
+   */
+  public java.lang.String getNotes()
+  {
+    return notes;
+  }
+
+  /**
+   * Sets the field notes.
+   * @param _notes the new value of the field notes.
+   */
+  public void setNotes(java.lang.String _notes)
+  {
+    notes = _notes;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.DateTime meeting;
+
+  /**
+   * Gets the field meeting.
+   * @return the value of the field meeting; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.DateTime getMeeting()
+  {
+    return meeting;
+  }
+
+  /**
+   * Sets the field meeting.
+   * @param _meeting the new value of the field meeting.
+   */
+  public void setMeeting(ch.ivyteam.ivy.scripting.objects.DateTime _meeting)
+  {
+    meeting = _meeting;
   }
 
 }
