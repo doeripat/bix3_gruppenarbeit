@@ -1,0 +1,6 @@
+Leumund #class
+einbuergerung_Gruppe6 #namespace
+count java.lang.Integer #field
+count PERSISTENT #fieldModifier
+entries List<einbuergerung_Gruppe6.Entry> #field
+entries PERSISTENT #fieldModifier

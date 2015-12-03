@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 02 22:36:10 CET 2015]
+[>Created: Thu Dec 03 23:27:44 CET 2015]
 1506BD6C657107E2 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen Big #zClass
@@ -316,10 +316,12 @@ An0 f29 1352 146 144 44 -54 -16 #rect
 An0 f29 @|EMailIcon #fIcon
 An0 f30 targetWindow NEW:card: #txt
 An0 f30 targetDisplay TOP #txt
-An0 f30 richDialogId einbuergerung_Gruppe6.EinwaendeEinsehen #txt
-An0 f30 startMethod start() #txt
+An0 f30 richDialogId einbuergerung_Gruppe6.entscheidWeiterfuehrung #txt
+An0 f30 startMethod start(einbuergerung_Gruppe6.Request) #txt
 An0 f30 type einbuergerung_Gruppe6.Data #txt
-An0 f30 requestActionDecl '<> param;' #txt
+An0 f30 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+An0 f30 requestMappingAction 'param.request=in.request;
+' #txt
 An0 f30 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f30 responseMappingAction 'out=in;
@@ -488,10 +490,12 @@ An0 f17 89 409 30 30 -21 17 #rect
 An0 f17 @|StartRequestIcon #fIcon
 An0 f18 targetWindow NEW:card: #txt
 An0 f18 targetDisplay TOP #txt
-An0 f18 richDialogId IvyScript://einbuergerung_Gruppe6.EinwaendeEinsehen #txt
-An0 f18 startMethod start() #txt
+An0 f18 richDialogId einbuergerung_Gruppe6.eroeffnenEinwaende #txt
+An0 f18 startMethod start(einbuergerung_Gruppe6.Request) #txt
 An0 f18 type einbuergerung_Gruppe6.Data #txt
-An0 f18 requestActionDecl '<> param;' #txt
+An0 f18 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+An0 f18 requestMappingAction 'param.request=in.request;
+' #txt
 An0 f18 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f18 responseMappingAction 'out=in;

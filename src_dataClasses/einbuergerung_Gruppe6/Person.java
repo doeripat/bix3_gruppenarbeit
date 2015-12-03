@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -3642486631272297598L;
+  private static final long serialVersionUID = -893167271569210520L;
 
   private java.lang.String firstname;
 
@@ -247,6 +247,26 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setMeeting(ch.ivyteam.ivy.scripting.objects.DateTime _meeting)
   {
     meeting = _meeting;
+  }
+
+  private einbuergerung_Gruppe6.Leumund leumund;
+
+  /**
+   * Gets the field leumund.
+   * @return the value of the field leumund; may be null.
+   */
+  public einbuergerung_Gruppe6.Leumund getLeumund()
+  {
+    return leumund;
+  }
+
+  /**
+   * Sets the field leumund.
+   * @param _leumund the new value of the field leumund.
+   */
+  public void setLeumund(einbuergerung_Gruppe6.Leumund _leumund)
+  {
+    leumund = _leumund;
   }
 
 }

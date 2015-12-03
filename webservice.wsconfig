@@ -1,2 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<webServiceConfigurationNode/>
+<webServiceConfigurationNode>
+    <id>15169F39F986A5D6</id>
+    <webServiceConfig>
+        <name>LeumundBericht</name>
+        <id>15169E950451E157</id>
+        <description></description>
+        <wsdlUrl>http://venus.zhaw.ch:8080/ivy/ws/BIX3_Webservices/EinbuergerungWebservices/14545C277953BAA4?WSDL</wsdlUrl>
+        <transportSession>false</transportSession>
+        <sessionHandlingMode>0</sessionHandlingMode>
+        <wsdlGeneratedInfo>
+            <axisLocatorClassname></axisLocatorClassname>
+            <axisNamespacesNew>http\://unknown.namespace/=namespace.unknown
+ch.ivyteam.ivy.webservice.process=process.webservice.ivy.ivyteam.ch</axisNamespacesNew>
+            <axisOperationsToPort>BetreibungsregisterauszugPort=&quot;GetBetreibungsregisterauszug&quot;</axisOperationsToPort>
+            <axisEndPointForPortType>BetreibungsregisterauszugPort=http\://venus.zhaw.ch\:8080/ivy/ws/BIX3_Webservices/EinbuergerungWebservices/14545C277953BAA4</axisEndPointForPortType>
+            <axisParameterProperties>BetreibungsregisterauszugPortGetBetreibungsregisterauszug=&quot;arg0__@@__namespace.unknown.GetBetreibungsregisterauszugE__@@__&quot;</axisParameterProperties>
+            <axisPortList>BetreibungsregisterauszugPort</axisPortList>
+            <axisStubClassnameList>namespace.unknown.BetreibungsregisterauszugServiceStub</axisStubClassnameList>
+            <axisReturnTypes>BetreibungsregisterauszugPortGetBetreibungsregisterauszug=namespace.unknown.GetBetreibungsregisterauszugResponseE</axisReturnTypes>
+            <axisServiceClassname>namespace.unknown.BetreibungsregisterauszugService</axisServiceClassname>
+            <axisUsedJavaclasses>&quot;namespace\\unknown\\Betreibung.java&quot;,&quot;namespace\\unknown\\BetreibungsregisterauszugService.java&quot;,&quot;namespace\\unknown\\BetreibungsregisterauszugServiceStub.java&quot;,&quot;namespace\\unknown\\CompositeObject.java&quot;,&quot;namespace\\unknown\\ExtensionMapper.java&quot;,&quot;namespace\\unknown\\GetBetreibungsregisterauszug.java&quot;,&quot;namespace\\unknown\\GetBetreibungsregisterauszugE.java&quot;,&quot;namespace\\unknown\\GetBetreibungsregisterauszugResponse.java&quot;,&quot;namespace\\unknown\\GetBetreibungsregisterauszugResponseE.java&quot;,&quot;namespace\\unknown\\GetBetreibungsregisterauszugResult.java&quot;,&quot;namespace\\unknown\\NestedObject.java&quot;,&quot;namespace\\unknown\\WebServiceProcessTechnicalException.java&quot;,&quot;process\\webservice\\ivy\\ivyteam\\ch\\TechnicalException.java&quot;</axisUsedJavaclasses>
+            <codeGenerationTimestamp>1449180891855</codeGenerationTimestamp>
+            <wsdlWebserviceName>BetreibungsregisterauszugService</wsdlWebserviceName>
+            <wsClassGenerationImplementationUsed>AXIS_2_0</wsClassGenerationImplementationUsed>
+            <jarPacked>true</jarPacked>
+        </wsdlGeneratedInfo>
+        <webServiceVersion/>
+    </webServiceConfig>
+</webServiceConfigurationNode>
