@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 23:50:02 CET 2015]
+[>Created: Thu Dec 03 19:35:29 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -39,7 +39,20 @@ vs0 @PushWFArc f21 '' #zField
 vs0 @TkArc f5 '' #zField
 vs0 @RichDialog f10 '' #zField
 vs0 @PushWFArc f15 '' #zField
-vs0 @PushWFArc f17 '' #zField
+vs0 @GridStep f26 '' #zField
+vs0 @PushWFArc f27 '' #zField
+vs0 @StartRequest f28 '' #zField
+vs0 @PushWFArc f29 '' #zField
+vs0 @Alternative f17 '' #zField
+vs0 @PushWFArc f30 '' #zField
+vs0 @CallSub f32 '' #zField
+vs0 @PushWFArc f34 '' #zField
+vs0 @EMail f35 '' #zField
+vs0 @PushWFArc f36 '' #zField
+vs0 @Alternative f37 '' #zField
+vs0 @PushWFArc f38 '' #zField
+vs0 @PushWFArc f31 '' #zField
+vs0 @PushWFArc f39 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 vs0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 vs0 f0 inParamTable 'out=param.data;
@@ -64,7 +77,7 @@ vs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 vs0 f0 81 161 30 30 -26 17 #rect
 vs0 f0 @|StartSubIcon #fIcon
 vs0 f1 type einbuergerung_Gruppe6.Data #txt
-vs0 f1 1385 153 30 30 0 15 #rect
+vs0 f1 1713 153 30 30 0 15 #rect
 vs0 f1 @|EndSubIcon #fIcon
 vs0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -270,12 +283,12 @@ vs0 f4 @|TaskSwitchIcon #fIcon
 vs0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f2 actionTable 'out=in1;
-out.request.documents=in1.request.documents.addAll(in2.request.documents.addAll(in3.request.documents));
+out.request.documents=in1.request.documents;
 ' #txt
 vs0 f2 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f2 outLinks "TaskA.ivp" #txt
 vs0 f2 caseData '#
-#Tue Dec 01 23:50:00 CET 2015
+#Thu Dec 03 18:33:39 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -303,7 +316,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f2 taskData '#
-#Tue Dec 01 23:50:00 CET 2015
+#Thu Dec 03 18:33:39 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -483,13 +496,141 @@ Konsolidieren</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 f10 1152 146 112 44 -38 -16 #rect
+vs0 f10 1096 146 112 44 -38 -16 #rect
 vs0 f10 @|RichDialogIcon #fIcon
 vs0 f15 expr data #txt
 vs0 f15 outCond ivp=="TaskA.ivp" #txt
-vs0 f15 976 168 1152 168 #arcP
-vs0 f17 expr out #txt
-vs0 f17 1264 168 1385 168 #arcP
+vs0 f15 976 168 1096 168 #arcP
+vs0 f26 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f26 actionTable 'out=in;
+out.request.uniqueIdentifier="987435";
+' #txt
+vs0 f26 actionCode 'import einbuergerung_Gruppe6.Document;
+import einbuergerung_Gruppe6.Person;
+
+for(int i = 0;i<3;i++)
+{
+	Person p = new Person();
+	p.firstname = "Yves"+" "+i;
+	p.lastname = "Mauron"+" "+i;
+	out.request.personList.add(p);
+}
+for(int i = 0;i<3;i++)
+{
+	Document d = new Document();
+	d.fileName = "Testfile"+i;
+	out.request.documents.add(d);
+}' #txt
+vs0 f26 type einbuergerung_Gruppe6.Data #txt
+vs0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test init</name>
+        <nameStyle>9,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f26 1112 234 112 44 -21 -8 #rect
+vs0 f26 @|StepIcon #fIcon
+vs0 f26 -613726|-1|-16777216 #nodeStyle
+vs0 f27 expr out #txt
+vs0 f27 1168 234 1152 190 #arcP
+vs0 f28 outLink start.ivp #txt
+vs0 f28 type einbuergerung_Gruppe6.Data #txt
+vs0 f28 inParamDecl '<> param;' #txt
+vs0 f28 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f28 guid 1516900B0083BB2D #txt
+vs0 f28 requestEnabled true #txt
+vs0 f28 triggerEnabled false #txt
+vs0 f28 callSignature start() #txt
+vs0 f28 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+vs0 f28 @C|.responsibility Everybody #txt
+vs0 f28 1105 369 30 30 -21 17 #rect
+vs0 f28 @|StartRequestIcon #fIcon
+vs0 f29 expr out #txt
+vs0 f29 1125 369 1168 278 #arcP
+vs0 f17 type einbuergerung_Gruppe6.Data #txt
+vs0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Inform People</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f17 1328 152 32 32 -38 18 #rect
+vs0 f17 @|AlternativeIcon #fIcon
+vs0 f30 expr out #txt
+vs0 f30 1208 168 1328 168 #arcP
+vs0 f32 type einbuergerung_Gruppe6.Data #txt
+vs0 f32 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
+vs0 f32 doCall true #txt
+vs0 f32 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+vs0 f32 requestMappingAction 'param.data=in;
+' #txt
+vs0 f32 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f32 responseMappingAction 'out=in;
+' #txt
+vs0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Abbruch</name>
+        <nameStyle>7,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f32 1416 218 112 44 -22 -8 #rect
+vs0 f32 @|CallSubIcon #fIcon
+vs0 f34 expr in #txt
+vs0 f34 outCond 'in.request.personList == null' #txt
+vs0 f34 1344 184 1416 240 #arcP
+vs0 f34 1 1344 240 #addKink
+vs0 f34 1 0.13593935303326263 0 0 #arcLabel
+vs0 f35 beanConfig '"{/emailSubject ""Einbürgerung mit ID:<%=in.request.uniqueIdentifier%>""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\nLeider müssen wir ""/emailAttachments * }"' #txt
+vs0 f35 type einbuergerung_Gruppe6.Data #txt
+vs0 f35 timeout 0 #txt
+vs0 f35 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Abgelehnte Personen
+informieren</name>
+        <nameStyle>20,7
+11,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f35 1432 82 144 44 -53 -16 #rect
+vs0 f35 @|EMailIcon #fIcon
+vs0 f36 expr in #txt
+vs0 f36 1344 152 1432 104 #arcP
+vs0 f36 1 1344 104 #addKink
+vs0 f36 1 0.2202802937141729 0 0 #arcLabel
+vs0 f37 type einbuergerung_Gruppe6.Data #txt
+vs0 f37 1616 152 32 32 0 16 #rect
+vs0 f37 @|AlternativeIcon #fIcon
+vs0 f38 expr in #txt
+vs0 f38 outCond 'in.request.personRemovedList == null' #txt
+vs0 f38 1360 168 1616 168 #arcP
+vs0 f31 expr in #txt
+vs0 f31 1648 168 1713 168 #arcP
+vs0 f39 expr out #txt
+vs0 f39 1576 104 1632 152 #arcP
+vs0 f39 1 1632 104 #addKink
+vs0 f39 0 0.8455860359198729 0 0 #arcLabel
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -537,5 +678,19 @@ vs0 f0 mainOut f5 tail #connect
 vs0 f5 head f4 in #connect
 vs0 f2 out f15 tail #connect
 vs0 f15 head f10 mainIn #connect
-vs0 f10 mainOut f17 tail #connect
-vs0 f17 head f1 mainIn #connect
+vs0 f26 mainOut f27 tail #connect
+vs0 f27 head f10 mainIn #connect
+vs0 f28 mainOut f29 tail #connect
+vs0 f29 head f26 mainIn #connect
+vs0 f10 mainOut f30 tail #connect
+vs0 f30 head f17 in #connect
+vs0 f34 head f32 mainIn #connect
+vs0 f36 head f35 mainIn #connect
+vs0 f17 out f38 tail #connect
+vs0 f38 head f37 in #connect
+vs0 f17 out f34 tail #connect
+vs0 f17 out f36 tail #connect
+vs0 f37 out f31 tail #connect
+vs0 f31 head f1 mainIn #connect
+vs0 f35 mainOut f39 tail #connect
+vs0 f39 head f37 in #connect

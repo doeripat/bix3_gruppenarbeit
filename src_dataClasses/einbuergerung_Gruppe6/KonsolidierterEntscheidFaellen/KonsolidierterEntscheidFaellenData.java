@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen;
 public class KonsolidierterEntscheidFaellenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 2376867754906940047L;
+  private static final long serialVersionUID = -7743475191427882128L;
 
   private transient einbuergerung_Gruppe6.Request request;
 
@@ -27,6 +27,26 @@ public class KonsolidierterEntscheidFaellenData extends ch.ivyteam.ivy.scripting
   public void setRequest(einbuergerung_Gruppe6.Request _request)
   {
     request = _request;
+  }
+
+  private einbuergerung_Gruppe6.Person person;
+
+  /**
+   * Gets the field person.
+   * @return the value of the field person; may be null.
+   */
+  public einbuergerung_Gruppe6.Person getPerson()
+  {
+    return person;
+  }
+
+  /**
+   * Sets the field person.
+   * @param _person the new value of the field person.
+   */
+  public void setPerson(einbuergerung_Gruppe6.Person _person)
+  {
+    person = _person;
   }
 
 }

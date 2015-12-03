@@ -20,17 +20,14 @@
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-					
-					<p:outputLabel for="requestUniqueIdentifier" value="Unique Identifier"/>
-					<p:inputText id="requestUniqueIdentifier" value="#{data.request.uniqueIdentifier}"></p:inputText>
-					
-					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
+
+					<p:outputLabel for="uniqueIdentifier" value="Unique Identifier"/>
 					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
 					
 					<p:outputLabel  value="Personen"/>
 					<p:row>
 						<p:column>
-							<p:dataTable var="p" value="#{data.request.personList}">
+							<p:dataTable id="personTable" var="p" value="#{data.request.personList}">
 								<p:column headerText="Geschlecht">
 								    <h:outputText value="#{p.gender}" />
 								  </p:column>				
@@ -40,6 +37,9 @@
 								  <p:column headerText="Geburtstag">
 									<h:outputText value="#{p.birthday}" />									
 								</p:column>
+								<p:column style="width:32px;text-align: center" >
+						    <p:commandButton actionListener="#{logic.RejectPerson(p)}" update="personTable" icon="ui-icon-uncheck" />
+						  </p:column>
 							</p:dataTable>
 						</p:column>
 					</p:row>
@@ -58,23 +58,21 @@
   									<p:fileDownload value="#{d.fileStreamedContent}" /> 
 									</p:commandLink>									
 								</p:column>
-								<p:column headerText="Dokument ansehen">
-										 <h:outputText value="#{d.comment}" />								
-								</p:column>
 							</p:dataTable>
 						</p:column>
 					</p:row>					
-					<p:outputLabel for="requestCommentOnRequest" value="Comment On Request"/>
-					<p:inputText id="requestCommentOnRequest" value="#{data.request.commentOnRequest}"></p:inputText>
 					
 					<p:outputLabel for="requestCommentFinanzen" value="Comment Finanzen"/>
-					<p:inputText id="requestCommentFinanzen" value="#{data.request.commentFinanzen}"></p:inputText>
+					<p:outputLabel id="requestCommentFinanzen" value="#{data.request.commentFinanzen}"></p:outputLabel>
 					
 					<p:outputLabel for="requestCommentWohnsitz" value="Comment Wohnsitz"/>
-					<p:inputText id="requestCommentWohnsitz" value="#{data.request.commentWohnsitz}"></p:inputText>
+					<p:outputLabel id="requestCommentWohnsitz" value="#{data.request.commentWohnsitz}"></p:outputLabel>
 					
 					<p:outputLabel for="requestCommentDeutschkenntnisse" value="Comment Deutschkenntnisse"/>
-					<p:inputText id="requestCommentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}"></p:inputText>
+					<p:outputLabel id="requestCommentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}"></p:outputLabel>
+					
+					<p:outputLabel for="requestCommentOnRequest" value="Begründung bei Ablehnung"/>
+					<p:inputTextarea id="requestCommentOnRequest" value="#{data.request.commentOnRequest}" cols="33" rows="6"></p:inputTextarea>
 					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />

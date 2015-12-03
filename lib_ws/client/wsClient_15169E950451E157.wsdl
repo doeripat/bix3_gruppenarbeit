@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="BetreibungsregisterauszugService" targetNamespace="http://unknown.namespace/" xmlns:ns1="ch.ivyteam.ivy.webservice.process" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://unknown.namespace/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema elementFormDefault="unqualified" targetNamespace="http://unknown.namespace/" version="1.0" xmlns:tns="http://unknown.namespace/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="GetBetreibungsregisterauszug" type="tns:GetBetreibungsregisterauszug"/>
+<xs:element name="GetBetreibungsregisterauszugResponse" type="tns:GetBetreibungsregisterauszugResponse"/>
+<xs:complexType name="GetBetreibungsregisterauszug">
+<xs:sequence>
+<xs:element minOccurs="0" name="personenID" type="xs:string"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="GetBetreibungsregisterauszugResponse">
+<xs:sequence>
+<xs:element minOccurs="0" name="result" type="tns:getBetreibungsregisterauszugResult"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="getBetreibungsregisterauszugResult">
+<xs:sequence>
+<xs:element minOccurs="0" name="anzahlEintraege" type="xs:int"/>
+<xs:element maxOccurs="unbounded" minOccurs="0" name="betreibungen" nillable="true" type="tns:betreibung"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="betreibung">
+<xs:complexContent>
+<xs:extension base="tns:compositeObject">
+<xs:sequence>
+<xs:element minOccurs="0" name="datumEintrag" type="xs:string"/>
+<xs:element minOccurs="0" name="forderungshoeheCHF" type="xs:float"/>
+<xs:element minOccurs="0" name="glaeubiger" type="xs:string"/>
+<xs:element minOccurs="0" name="status" type="xs:string"/>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType abstract="true" name="compositeObject">
+<xs:complexContent>
+<xs:extension base="tns:nestedObject">
+<xs:sequence/>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+<xs:complexType abstract="true" name="nestedObject">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="ch.ivyteam.ivy.webservice.process" xmlns:tns="ch.ivyteam.ivy.webservice.process" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:element name="TechnicalException" nillable="true" type="xsd:string"/>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBetreibungsregisterauszug">
+    <wsdl:part element="tns:GetBetreibungsregisterauszug" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetBetreibungsregisterauszugResponse">
+    <wsdl:part element="tns:GetBetreibungsregisterauszugResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="WebServiceProcessTechnicalException">
+    <wsdl:part element="ns1:TechnicalException" name="WebServiceProcessTechnicalException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Betreibungsregisterauszug">
+    <wsdl:operation name="GetBetreibungsregisterauszug">
+      <wsdl:input message="tns:GetBetreibungsregisterauszug" name="GetBetreibungsregisterauszug">
+    </wsdl:input>
+      <wsdl:output message="tns:GetBetreibungsregisterauszugResponse" name="GetBetreibungsregisterauszugResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:WebServiceProcessTechnicalException" name="WebServiceProcessTechnicalException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BetreibungsregisterauszugServiceSoapBinding" type="tns:Betreibungsregisterauszug">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetBetreibungsregisterauszug">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetBetreibungsregisterauszug">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetBetreibungsregisterauszugResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="WebServiceProcessTechnicalException">
+        <soap:fault name="WebServiceProcessTechnicalException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BetreibungsregisterauszugService">
+    <wsdl:port binding="tns:BetreibungsregisterauszugServiceSoapBinding" name="BetreibungsregisterauszugPort">
+      <soap:address location="http://venus.zhaw.ch:8080/ivy/ws/BIX3_Webservices/EinbuergerungWebservices/14545C277953BAA4"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

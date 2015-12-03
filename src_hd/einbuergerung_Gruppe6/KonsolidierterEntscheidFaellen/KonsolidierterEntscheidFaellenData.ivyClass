@@ -1,3 +1,5 @@
 KonsolidierterEntscheidFaellenData #class
 einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen #namespace
 request einbuergerung_Gruppe6.Request #field
+person einbuergerung_Gruppe6.Person #field
+person PERSISTENT #fieldModifier

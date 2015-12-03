@@ -11,6 +11,26 @@
             <nullPermitted>false</nullPermitted>
         </inputParameter>
     </method>
+    <method>
+        <name>RejectPerson</name>
+        <description></description>
+        <inputParameter>
+            <name>person</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Person</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+    </method>
+    <method>
+        <name>RejectRejection</name>
+        <description></description>
+        <inputParameter>
+            <name>person</name>
+            <description></description>
+            <parameterType>einbuergerung_Gruppe6.Person</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+    </method>
     <startMethod>
         <name>start</name>
         <description>Default dialog start method.</description>

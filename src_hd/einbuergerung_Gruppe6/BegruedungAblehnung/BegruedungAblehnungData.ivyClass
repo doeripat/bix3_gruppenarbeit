@@ -1,0 +1,4 @@
+BegruedungAblehnungData #class
+einbuergerung_Gruppe6.BegruedungAblehnung #namespace
+person einbuergerung_Gruppe6.Person #field
+request einbuergerung_Gruppe6.Request #field

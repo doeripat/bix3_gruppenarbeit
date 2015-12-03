@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 7842771481365318165L;
+  private static final long serialVersionUID = 5396437868335292794L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -547,6 +547,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setCommentDeutschkenntnisse(java.lang.String _commentDeutschkenntnisse)
   {
     commentDeutschkenntnisse = _commentDeutschkenntnisse;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> personRemovedList;
+
+  /**
+   * Gets the field personRemovedList.
+   * @return the value of the field personRemovedList; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> getPersonRemovedList()
+  {
+    return personRemovedList;
+  }
+
+  /**
+   * Sets the field personRemovedList.
+   * @param _personRemovedList the new value of the field personRemovedList.
+   */
+  public void setPersonRemovedList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> _personRemovedList)
+  {
+    personRemovedList = _personRemovedList;
   }
 
 }
