@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 21:38:36 CET 2015]
+[>Created: Sat Dec 05 19:19:02 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -321,9 +321,9 @@ dn0 f3 expr data #txt
 dn0 f3 outCond ivp=="TaskA.ivp" #txt
 dn0 f3 192 376 256 376 #arcP
 dn0 f6 type einbuergerung_Gruppe6.Data #txt
-dn0 f6 processCall 'Functional Processes/validate_documents:call(einbuergerung_Gruppe6.Data)' #txt
+dn0 f6 processCall 'Functional Processes/Rechnungswesen:call(einbuergerung_Gruppe6.Invoice,einbuergerung_Gruppe6.Data)' #txt
 dn0 f6 doCall true #txt
-dn0 f6 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+dn0 f6 requestActionDecl '<einbuergerung_Gruppe6.Invoice invoice,einbuergerung_Gruppe6.Data data> param;
 ' #txt
 dn0 f6 requestMappingAction 'param.data=in;
 ' #txt
