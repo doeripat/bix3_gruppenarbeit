@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -8271210376157765254L;
+  private static final long serialVersionUID = -9097873959355218398L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -567,6 +567,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setPersonRemovedList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Person> _personRemovedList)
   {
     personRemovedList = _personRemovedList;
+  }
+
+  private java.lang.Boolean writtenStatement;
+
+  /**
+   * Gets the field writtenStatement.
+   * @return the value of the field writtenStatement; may be null.
+   */
+  public java.lang.Boolean getWrittenStatement()
+  {
+    return writtenStatement;
+  }
+
+  /**
+   * Sets the field writtenStatement.
+   * @param _writtenStatement the new value of the field writtenStatement.
+   */
+  public void setWrittenStatement(java.lang.Boolean _writtenStatement)
+  {
+    writtenStatement = _writtenStatement;
   }
 
 }

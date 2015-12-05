@@ -1,10 +1,10 @@
-package einbuergerung_Gruppe6.eroeffnenEinwaende;
+package einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen;
 
 /**
  */
 @SuppressWarnings("all")
-@javax.annotation.Generated(comments="This is the java file of the ivy data class eroeffnenEinwaendeData", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
-public class eroeffnenEinwaendeData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
+@javax.annotation.Generated(comments="This is the java file of the ivy data class schriftlicheStellungsnahmeVerfassenData", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
+public class schriftlicheStellungsnahmeVerfassenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
   private static final long serialVersionUID = 4106177117222986927L;

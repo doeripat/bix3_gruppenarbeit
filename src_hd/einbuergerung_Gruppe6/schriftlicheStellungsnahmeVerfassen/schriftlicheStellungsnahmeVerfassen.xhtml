@@ -39,10 +39,6 @@
 						</p:column>
 					</p:dataTable>
 					</p:row>
-					<p:row>
-						<p:outputLabel for="writtenStatement" value="schriftliches Statment erwünscht?" />
-				        <p:selectBooleanCheckbox id="writtenStatement" value="#{data.request.writtenStatement}" />
-			        </p:row>
 					
 					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 				</h:panelGrid>

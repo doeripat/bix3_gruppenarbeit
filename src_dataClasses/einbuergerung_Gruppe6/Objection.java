@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Objection extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -80864705053900694L;
+  private static final long serialVersionUID = 902795112850350691L;
 
   private java.lang.String author;
 
@@ -67,6 +67,26 @@ public class Objection extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setDate(ch.ivyteam.ivy.scripting.objects.DateTime _date)
   {
     date = _date;
+  }
+
+  private java.lang.String statement;
+
+  /**
+   * Gets the field statement.
+   * @return the value of the field statement; may be null.
+   */
+  public java.lang.String getStatement()
+  {
+    return statement;
+  }
+
+  /**
+   * Sets the field statement.
+   * @param _statement the new value of the field statement.
+   */
+  public void setStatement(java.lang.String _statement)
+  {
+    statement = _statement;
   }
 
 }

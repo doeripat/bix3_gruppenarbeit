@@ -6,3 +6,5 @@ text String #field
 text PERSISTENT #fieldModifier
 date DateTime #field
 date PERSISTENT #fieldModifier
+statement String #field
+statement PERSISTENT #fieldModifier

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 03 23:27:44 CET 2015]
+[>Created: Sat Dec 05 17:07:52 CET 2015]
 1506BD6C657107E2 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen Big #zClass
@@ -31,13 +31,6 @@ An0 @PushWFArc f7 '' #zField
 An0 @TaskSwitch f9 '' #zField
 An0 @TkArc f32 '' #zField
 An0 @PushWFArc f33 '' #zField
-An0 @RichDialog f31 '' #zField
-An0 @Alternative f34 '' #zField
-An0 @PushWFArc f8 '' #zField
-An0 @PushWFArc f11 '' #zField
-An0 @PushWFArc f12 '' #zField
-An0 @EndTask f13 '' #zField
-An0 @PushWFArc f14 '' #zField
 An0 @RichDialog f6 '' #zField
 An0 @PushWFArc f15 '' #zField
 An0 @PushWFArc f16 '' #zField
@@ -48,7 +41,8 @@ An0 @PushWFArc f23 '' #zField
 An0 @GridStep f19 '' #zField
 An0 @PushWFArc f35 '' #zField
 An0 @PushWFArc f28 '' #zField
-An0 @PushWFArc f36 '' #zField
+An0 @PushWFArc f27 '' #zField
+An0 @PushWFArc f8 '' #zField
 >Proto An0 An0 Antragsteller_interviewen #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -89,6 +83,7 @@ vorhanden?</name>
 An0 f5 1248 152 32 32 -32 18 #rect
 An0 f5 @|AlternativeIcon #fIcon
 An0 f10 expr in #txt
+An0 f10 outCond in.request.writtenStatement==false #txt
 An0 f10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -316,7 +311,7 @@ An0 f29 1352 146 144 44 -54 -16 #rect
 An0 f29 @|EMailIcon #fIcon
 An0 f30 targetWindow NEW:card: #txt
 An0 f30 targetDisplay TOP #txt
-An0 f30 richDialogId einbuergerung_Gruppe6.entscheidWeiterfuehrung #txt
+An0 f30 richDialogId einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen #txt
 An0 f30 startMethod start(einbuergerung_Gruppe6.Request) #txt
 An0 f30 type einbuergerung_Gruppe6.Data #txt
 An0 f30 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
@@ -325,6 +320,7 @@ An0 f30 requestMappingAction 'param.request=in.request;
 An0 f30 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f30 responseMappingAction 'out=in;
+out.request=result.request;
 ' #txt
 An0 f30 windowConfiguration '* ' #txt
 An0 f30 isAsynch false #txt
@@ -336,12 +332,14 @@ An0 f30 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Einwände einsehen</name>
         <nameStyle>17,7
 </nameStyle>
+        <desc> Zwischen Step um abzubrechen?</desc>
     </language>
 </elementInfo>
 ' #txt
 An0 f30 1360 346 128 44 -55 -8 #rect
 An0 f30 @|RichDialogIcon #fIcon
 An0 f7 expr in #txt
+An0 f7 outCond in.request.writtenStatement==true #txt
 An0 f7 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -384,59 +382,6 @@ An0 f32 0 0.5587894248608535 0 0 #arcLabel
 An0 f33 expr data #txt
 An0 f33 outCond ivp=="TaskA.ivp" #txt
 An0 f33 1312 368 1360 368 #arcP
-An0 f31 targetWindow NEW:card: #txt
-An0 f31 targetDisplay TOP #txt
-An0 f31 startMethod start() #txt
-An0 f31 type einbuergerung_Gruppe6.Data #txt
-An0 f31 requestActionDecl '<> param;' #txt
-An0 f31 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f31 responseMappingAction 'out=in;
-' #txt
-An0 f31 windowConfiguration '* ' #txt
-An0 f31 isAsynch false #txt
-An0 f31 isInnerRd false #txt
-An0 f31 userContext '* ' #txt
-An0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Stellungsnahme verfassen</name>
-        <nameStyle>24,7
-</nameStyle>
-        <desc>Stellungsnahme mit s?
-10 Tage warten?</desc>
-    </language>
-</elementInfo>
-' #txt
-An0 f31 1616 346 160 44 -74 -8 #rect
-An0 f31 @|RichDialogIcon #fIcon
-An0 f34 type einbuergerung_Gruppe6.Data #txt
-An0 f34 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Stellungsnahme
-erwünscht?</name>
-        <nameStyle>15,7
-10,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f34 1536 352 32 32 -36 -49 #rect
-An0 f34 @|AlternativeIcon #fIcon
-An0 f8 expr out #txt
-An0 f8 1488 368 1536 368 #arcP
-An0 f11 expr in #txt
-An0 f11 1568 368 1616 368 #arcP
-An0 f12 expr out #txt
-An0 f12 1696 346 1696 183 #arcP
-An0 f13 type einbuergerung_Gruppe6.Data #txt
-An0 f13 1681 425 30 30 0 15 #rect
-An0 f13 @|EndIcon #fIcon
-An0 f14 expr in #txt
-An0 f14 1552 384 1681 440 #arcP
-An0 f14 1 1552 440 #addKink
-An0 f14 1 0.19244880768791459 0 0 #arcLabel
 An0 f6 targetWindow NEW:card: #txt
 An0 f6 targetDisplay TOP #txt
 An0 f6 richDialogId einbuergerung_Gruppe6.terminWaehlen #txt
@@ -499,6 +444,7 @@ An0 f18 requestMappingAction 'param.request=in.request;
 An0 f18 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f18 responseMappingAction 'out=in;
+out.request=result.request;
 ' #txt
 An0 f18 windowConfiguration '* ' #txt
 An0 f18 isAsynch false #txt
@@ -510,7 +456,9 @@ An0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Einwände eröffnen</name>
         <nameStyle>17,7
 </nameStyle>
-        <desc>Einwände werden für alle Personen erfasst und jede Person kann zu allen Einwänden Stellung nehmen</desc>
+        <desc>Einwände werden für alle Personen erfasst und jede Person kann zu allen Einwänden Stellung nehmen
+
+Einwände werden aus DB gelesen obwohl bereits in Request Object</desc>
     </language>
 </elementInfo>
 ' #txt
@@ -554,9 +502,11 @@ An0 f35 outCond ivp=="TaskA.ivp" #txt
 An0 f35 600 168 656 168 #arcP
 An0 f28 expr out #txt
 An0 f28 768 168 856 168 #arcP
-An0 f36 expr out #txt
-An0 f36 117 418 660 190 #arcP
-An0 f36 0 0.49999999999999983 0 0 #arcLabel
+An0 f27 expr out #txt
+An0 f27 118 420 1080 168 #arcP
+An0 f27 0 0.49999999999999983 0 0 #arcLabel
+An0 f8 expr out #txt
+An0 f8 1424 346 1683 176 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -593,14 +543,6 @@ An0 f29 mainOut f32 tail #connect
 An0 f32 head f9 in #connect
 An0 f9 out f33 tail #connect
 An0 f33 head f30 mainIn #connect
-An0 f30 mainOut f8 tail #connect
-An0 f8 head f34 in #connect
-An0 f34 out f11 tail #connect
-An0 f11 head f31 mainIn #connect
-An0 f31 mainOut f12 tail #connect
-An0 f12 head f1 mainIn #connect
-An0 f34 out f14 tail #connect
-An0 f14 head f13 mainIn #connect
 An0 f3 out f15 tail #connect
 An0 f15 head f6 mainIn #connect
 An0 f6 mainOut f16 tail #connect
@@ -613,5 +555,7 @@ An0 f25 out f35 tail #connect
 An0 f35 head f19 mainIn #connect
 An0 f19 mainOut f28 tail #connect
 An0 f28 head f26 mainIn #connect
-An0 f17 mainOut f36 tail #connect
-An0 f36 head f19 mainIn #connect
+An0 f17 mainOut f27 tail #connect
+An0 f27 head f18 mainIn #connect
+An0 f30 mainOut f8 tail #connect
+An0 f8 head f1 mainIn #connect

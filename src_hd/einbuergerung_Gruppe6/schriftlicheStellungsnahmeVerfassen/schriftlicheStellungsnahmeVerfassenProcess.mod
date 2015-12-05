@@ -1,8 +1,8 @@
 [Ivy]
 [>Created: Sat Dec 05 17:00:04 CET 2015]
-151649F001BEEDE7 3.17 #module
+15172E4A19F9CBCB 3.17 #module
 >Proto >Proto Collection #zClass
-es0 eroeffnenEinwaendeProcess Big #zClass
+es0 schriftlicheStellungsnahmeVerfassenProcess Big #zClass
 es0 RD #cInfo
 es0 #process
 es0 @TextInP .ui2RdDataAction .ui2RdDataAction #zField
@@ -27,9 +27,9 @@ es0 @PushWFArc f7 '' #zField
 es0 @PushWFArc f2 '' #zField
 es0 @PushWFArc f5 '' #zField
 es0 @PushWFArc f9 '' #zField
->Proto es0 es0 eroeffnenEinwaendeProcess #zField
+>Proto es0 es0 schriftlicheStellungsnahmeVerfassenProcess #zField
 es0 f0 guid 1514E4825AAB5E81 #txt
-es0 f0 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
+es0 f0 type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
 es0 f0 method start(einbuergerung_Gruppe6.Request) #txt
 es0 f0 disableUIEvents true #txt
 es0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
@@ -52,12 +52,12 @@ es0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 es0 f0 83 51 26 26 -39 15 #rect
 es0 f0 @|RichDialogInitStartIcon #fIcon
-es0 f1 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
+es0 f1 type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
 es0 f1 851 51 26 26 0 12 #rect
 es0 f1 @|RichDialogProcessEndIcon #fIcon
 es0 f3 guid 1514E4825B952512 #txt
-es0 f3 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
-es0 f3 actionDecl 'einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData out;
+es0 f3 type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
+es0 f3 actionDecl 'einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData out;
 ' #txt
 es0 f3 actionTable 'out=in;
 ' #txt
@@ -70,11 +70,11 @@ es0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 es0 f3 75 315 26 26 -15 12 #rect
 es0 f3 @|RichDialogProcessStartIcon #fIcon
-es0 f4 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
+es0 f4 type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
 es0 f4 guid 1514E4825BAAA03F #txt
 es0 f4 699 315 26 26 0 12 #rect
 es0 f4 @|RichDialogEndIcon #fIcon
-es0 f8 actionDecl 'einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData out;
+es0 f8 actionDecl 'einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData out;
 ' #txt
 es0 f8 actionTable 'out=in;
 ' #txt
@@ -89,7 +89,7 @@ for(int i=0; i<in.readObjections.size();i++){
 	objection.statement = "";
   out.request.objections.add(objection.deepClone());
 	}' #txt
-es0 f8 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
+es0 f8 type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
 es0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -103,7 +103,7 @@ Objectionlist</name>
 ' #txt
 es0 f8 520 42 112 44 -34 -16 #rect
 es0 f8 @|StepIcon #fIcon
-es0 f11 actionDecl 'einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData out;
+es0 f11 actionDecl 'einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData out;
 ' #txt
 es0 f11 actionTable 'out=in;
 ' #txt
@@ -111,7 +111,7 @@ es0 f11 dbUrl AmazonDB #txt
 es0 f11 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 es0 f11 lotSize 2147483647 #txt
 es0 f11 startIdx 0 #txt
-es0 f11 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
+es0 f11 type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
 es0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -126,7 +126,7 @@ Refering to request</name>
 ' #txt
 es0 f11 336 42 144 44 -52 -16 #rect
 es0 f11 @|DBStepIcon #fIcon
-es0 f6 actionDecl 'einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData out;
+es0 f6 actionDecl 'einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData out;
 ' #txt
 es0 f6 actionTable 'out=in;
 out.readObjections=recordset;
@@ -138,7 +138,7 @@ es0 f6 dbUrl AmazonDB #txt
 es0 f6 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 es0 f6 lotSize 2147483647 #txt
 es0 f6 startIdx 0 #txt
-es0 f6 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
+es0 f6 type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
 es0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -165,7 +165,7 @@ es0 f5 expr out #txt
 es0 f5 101 328 699 328 #arcP
 es0 f9 expr out #txt
 es0 f9 632 64 851 64 #arcP
->Proto es0 .type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt
+>Proto es0 .type einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen.schriftlicheStellungsnahmeVerfassenData #txt
 >Proto es0 .processKind HTML_DIALOG #txt
 >Proto es0 -8 -8 16 16 16 26 #rect
 >Proto es0 '' #fIcon

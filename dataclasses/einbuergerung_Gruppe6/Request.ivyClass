@@ -56,3 +56,5 @@ commentDeutschkenntnisse String #field
 commentDeutschkenntnisse PERSISTENT #fieldModifier
 personRemovedList List<einbuergerung_Gruppe6.Person> #field
 personRemovedList PERSISTENT #fieldModifier
+writtenStatement Boolean #field
+writtenStatement PERSISTENT #fieldModifier
