@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 1524385370421325731L;
+  private static final long serialVersionUID = -8858635675055578460L;
 
   private java.lang.String firstname;
 
@@ -249,24 +249,24 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     meeting = _meeting;
   }
 
-  private einbuergerung_Gruppe6.Leumund leumund;
+  private einbuergerung_Gruppe6.Betreibung betreibung;
 
   /**
-   * Gets the field leumund.
-   * @return the value of the field leumund; may be null.
+   * Gets the field betreibung.
+   * @return the value of the field betreibung; may be null.
    */
-  public einbuergerung_Gruppe6.Leumund getLeumund()
+  public einbuergerung_Gruppe6.Betreibung getBetreibung()
   {
-    return leumund;
+    return betreibung;
   }
 
   /**
-   * Sets the field leumund.
-   * @param _leumund the new value of the field leumund.
+   * Sets the field betreibung.
+   * @param _betreibung the new value of the field betreibung.
    */
-  public void setLeumund(einbuergerung_Gruppe6.Leumund _leumund)
+  public void setBetreibung(einbuergerung_Gruppe6.Betreibung _betreibung)
   {
-    leumund = _leumund;
+    betreibung = _betreibung;
   }
 
   private java.lang.Boolean finishedMeeting;
@@ -307,46 +307,6 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setMeetingString(java.lang.String _meetingString)
   {
     meetingString = _meetingString;
-  }
-
-  private java.lang.String relationship;
-
-  /**
-   * Gets the field relationship.
-   * @return the value of the field relationship; may be null.
-   */
-  public java.lang.String getRelationship()
-  {
-    return relationship;
-  }
-
-  /**
-   * Sets the field relationship.
-   * @param _relationship the new value of the field relationship.
-   */
-  public void setRelationship(java.lang.String _relationship)
-  {
-    relationship = _relationship;
-  }
-
-  private int flag;
-
-  /**
-   * Gets the field flag.
-   * @return the value of the field flag; may be null.
-   */
-  public int getFlag()
-  {
-    return flag;
-  }
-
-  /**
-   * Sets the field flag.
-   * @param _flag the new value of the field flag.
-   */
-  public void setFlag(int _flag)
-  {
-    flag = _flag;
   }
 
 }

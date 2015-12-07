@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 03 20:13:33 CET 2015]
+[>Created: Mon Dec 07 16:38:37 CET 2015]
 1515FB6E69CE3927 3.17 #module
 >Proto >Proto Collection #zClass
 Ks0 KonsolidierterEntscheidFaellenProcess Big #zClass
@@ -17,10 +17,8 @@ Ks0 @TextInP .xml .xml #zField
 Ks0 @TextInP .responsibility .responsibility #zField
 Ks0 @RichDialogInitStart f0 '' #zField
 Ks0 @RichDialogProcessEnd f1 '' #zField
-Ks0 @PushWFArc f2 '' #zField
 Ks0 @RichDialogProcessStart f3 '' #zField
 Ks0 @RichDialogEnd f4 '' #zField
-Ks0 @PushWFArc f5 '' #zField
 Ks0 @RichDialogMethodStart f6 '' #zField
 Ks0 @RichDialogProcessEnd f7 '' #zField
 Ks0 @GridStep f16 '' #zField
@@ -37,6 +35,12 @@ Ks0 @RichDialogProcessEnd f18 '' #zField
 Ks0 @GridStep f20 '' #zField
 Ks0 @PushWFArc f21 '' #zField
 Ks0 @PushWFArc f19 '' #zField
+Ks0 @GridStep f22 '' #zField
+Ks0 @PushWFArc f23 '' #zField
+Ks0 @PushWFArc f2 '' #zField
+Ks0 @GridStep f24 '' #zField
+Ks0 @PushWFArc f25 '' #zField
+Ks0 @PushWFArc f5 '' #zField
 >Proto Ks0 Ks0 KonsolidierterEntscheidFaellenProcess #zField
 Ks0 f0 guid 1515FB6E6B05F1EA #txt
 Ks0 f0 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
@@ -61,13 +65,13 @@ Ks0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Ks0 f0 83 51 26 26 -39 15 #rect
 Ks0 f0 @|RichDialogInitStartIcon #fIcon
 Ks0 f1 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
-Ks0 f1 211 51 26 26 0 12 #rect
+Ks0 f1 347 51 26 26 0 12 #rect
 Ks0 f1 @|RichDialogProcessEndIcon #fIcon
-Ks0 f2 expr out #txt
-Ks0 f2 109 64 211 64 #arcP
 Ks0 f3 guid 1515FB6E6BAFC05D #txt
 Ks0 f3 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
 Ks0 f3 actionDecl 'einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData out;
+' #txt
+Ks0 f3 actionTable 'out=in;
 ' #txt
 Ks0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -80,10 +84,8 @@ Ks0 f3 83 147 26 26 -15 12 #rect
 Ks0 f3 @|RichDialogProcessStartIcon #fIcon
 Ks0 f4 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
 Ks0 f4 guid 1515FB6E6BA40633 #txt
-Ks0 f4 211 147 26 26 0 12 #rect
+Ks0 f4 339 147 26 26 0 12 #rect
 Ks0 f4 @|RichDialogEndIcon #fIcon
-Ks0 f5 expr out #txt
-Ks0 f5 109 160 211 160 #arcP
 Ks0 f6 guid 1515FC14D9A5302B #txt
 Ks0 f6 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
 Ks0 f6 method fileDownload(einbuergerung_Gruppe6.Document) #txt
@@ -107,7 +109,7 @@ Ks0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Ks0 f6 83 243 26 26 -68 15 #rect
 Ks0 f6 @|RichDialogMethodStartIcon #fIcon
 Ks0 f7 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
-Ks0 f7 427 243 26 26 0 12 #rect
+Ks0 f7 587 243 26 26 0 12 #rect
 Ks0 f7 @|RichDialogProcessEndIcon #fIcon
 Ks0 f16 actionDecl 'einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData out;
 ' #txt
@@ -164,7 +166,7 @@ Ks0 f16 @|StepIcon #fIcon
 Ks0 f8 expr out #txt
 Ks0 f8 109 256 208 256 #arcP
 Ks0 f9 expr out #txt
-Ks0 f9 320 256 427 256 #arcP
+Ks0 f9 320 256 587 256 #arcP
 Ks0 f10 guid 15168FB24A313B2F #txt
 Ks0 f10 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
 Ks0 f10 method RejectPerson(einbuergerung_Gruppe6.Person) #txt
@@ -193,8 +195,9 @@ Ks0 f11 @|RichDialogProcessEndIcon #fIcon
 Ks0 f13 actionDecl 'einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData out;
 ' #txt
 Ks0 f13 actionTable 'out=in;
-out.request.personList=in.request.personList.remove(in.person);
-out.request.personRemovedList=in.request.personRemovedList.add(in.person);
+' #txt
+Ks0 f13 actionCode 'out.person.approved = !in.person.approved;
+
 ' #txt
 Ks0 f13 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
 Ks0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -208,10 +211,10 @@ personRemovedList</name>
     </language>
 </elementInfo>
 ' #txt
-Ks0 f13 344 330 192 44 -76 -16 #rect
+Ks0 f13 264 330 192 44 -76 -16 #rect
 Ks0 f13 @|StepIcon #fIcon
 Ks0 f12 expr out #txt
-Ks0 f12 536 352 611 352 #arcP
+Ks0 f12 456 352 611 352 #arcP
 Ks0 f15 targetWindow NEW:card: #txt
 Ks0 f15 targetDisplay TOP #txt
 Ks0 f15 richDialogId einbuergerung_Gruppe6.BegruedungAblehnung #txt
@@ -240,10 +243,10 @@ begründen</name>
     </language>
 </elementInfo>
 ' #txt
-Ks0 f15 168 410 144 44 -52 -16 #rect
+Ks0 f15 768 466 144 44 -52 -16 #rect
 Ks0 f15 @|RichDialogIcon #fIcon
 Ks0 f14 expr out #txt
-Ks0 f14 109 352 344 352 #arcP
+Ks0 f14 109 352 264 352 #arcP
 Ks0 f17 guid 151694078015B45C #txt
 Ks0 f17 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
 Ks0 f17 method RejectRejection(einbuergerung_Gruppe6.Person) #txt
@@ -260,10 +263,10 @@ Ks0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Ks0 f17 83 499 26 26 -67 12 #rect
+Ks0 f17 83 443 26 26 -67 12 #rect
 Ks0 f17 @|RichDialogMethodStartIcon #fIcon
 Ks0 f18 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
-Ks0 f18 619 499 26 26 0 12 #rect
+Ks0 f18 619 443 26 26 0 12 #rect
 Ks0 f18 @|RichDialogProcessEndIcon #fIcon
 Ks0 f20 actionDecl 'einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData out;
 ' #txt
@@ -283,20 +286,82 @@ to personList</name>
     </language>
 </elementInfo>
 ' #txt
-Ks0 f20 184 490 272 44 -116 -16 #rect
+Ks0 f20 184 434 272 44 -116 -16 #rect
 Ks0 f20 @|StepIcon #fIcon
 Ks0 f21 expr out #txt
-Ks0 f21 109 512 184 512 #arcP
+Ks0 f21 109 456 184 456 #arcP
 Ks0 f19 expr out #txt
-Ks0 f19 456 512 619 512 #arcP
+Ks0 f19 456 456 619 456 #arcP
+Ks0 f22 actionDecl 'einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData out;
+' #txt
+Ks0 f22 actionTable 'out=in;
+' #txt
+Ks0 f22 actionCode 'import einbuergerung_Gruppe6.Person;
+
+for(Person p : in.request.personList)
+{
+	p.setApproved(true);
+}' #txt
+Ks0 f22 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
+Ks0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Set Approved
+attribute</name>
+        <nameStyle>13,7
+9,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ks0 f22 168 42 112 44 -36 -16 #rect
+Ks0 f22 @|StepIcon #fIcon
+Ks0 f23 expr out #txt
+Ks0 f23 109 64 168 64 #arcP
+Ks0 f2 expr out #txt
+Ks0 f2 280 64 347 64 #arcP
+Ks0 f24 actionDecl 'einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData out;
+' #txt
+Ks0 f24 actionTable 'out=in;
+' #txt
+Ks0 f24 actionCode 'import einbuergerung_Gruppe6.Person;
+
+List<Person> newPersonList = new List<Person>();
+
+for(Person p : in.request.personList)
+{
+	if(!p.approved)
+	{
+		out.request.personRemovedList.add(p);
+	}
+	else{
+		newPersonList.add(p);	
+	}
+	
+}
+out.request.setPersonList(newPersonList);' #txt
+Ks0 f24 type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
+Ks0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Remove Rejected Persons
+from PersonList</name>
+        <nameStyle>24,7
+15,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Ks0 f24 136 138 176 44 -69 -16 #rect
+Ks0 f24 @|StepIcon #fIcon
+Ks0 f25 expr out #txt
+Ks0 f25 109 160 136 160 #arcP
+Ks0 f5 expr out #txt
+Ks0 f5 312 160 339 160 #arcP
 >Proto Ks0 .type einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen.KonsolidierterEntscheidFaellenData #txt
 >Proto Ks0 .processKind HTML_DIALOG #txt
 >Proto Ks0 -8 -8 16 16 16 26 #rect
 >Proto Ks0 '' #fIcon
-Ks0 f0 mainOut f2 tail #connect
-Ks0 f2 head f1 mainIn #connect
-Ks0 f3 mainOut f5 tail #connect
-Ks0 f5 head f4 mainIn #connect
 Ks0 f6 mainOut f8 tail #connect
 Ks0 f8 head f16 mainIn #connect
 Ks0 f16 mainOut f9 tail #connect
@@ -309,3 +374,11 @@ Ks0 f17 mainOut f21 tail #connect
 Ks0 f21 head f20 mainIn #connect
 Ks0 f20 mainOut f19 tail #connect
 Ks0 f19 head f18 mainIn #connect
+Ks0 f0 mainOut f23 tail #connect
+Ks0 f23 head f22 mainIn #connect
+Ks0 f22 mainOut f2 tail #connect
+Ks0 f2 head f1 mainIn #connect
+Ks0 f3 mainOut f25 tail #connect
+Ks0 f25 head f24 mainIn #connect
+Ks0 f24 mainOut f5 tail #connect
+Ks0 f5 head f4 mainIn #connect

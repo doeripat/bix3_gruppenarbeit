@@ -1,0 +1,144 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+		<ui:define name="title">erstinstanzlicherEntscheid_V2</ui:define>
+		<ui:define name="content">
+			<h3>
+			Bitte treffen Sie aufgrund der Unterlagen eine Entscheidung für jede Person und Begründen Sie diese.
+			</h3>
+			
+			<h:form id="form">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					<p:column>
+					
+					<p:row>
+					<p:outputLabel  value="Antrag" style="font-size: 16pt;"/>
+					</p:row>
+					
+					<br />
+					<p:row>
+					<p:dataTable>
+						  <p:column headerText="Gesuchs ID">
+						    <h:outputText value="#{data.request.uniqueIdentifier}" />
+						  </p:column>
+						  <p:column headerText="Adresse">
+						    <h:outputText value="#{data.request.address}" />
+						    <h:outputText value=", " />
+						    <h:outputText value="#{data.request.postcode}" />
+						    <h:outputText value=" " />
+						    <h:outputText value="#{data.request.city}" />
+						  </p:column>
+						  <p:column headerText="Telefon">
+						    <h:outputText value="#{data.request.phone}" />
+						  </p:column>
+						  <p:column headerText="Kommentar Überprüfer">
+						    <h:outputText value="#{data.request.commentOnRequest}" />
+						  </p:column>
+					 </p:dataTable>
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Personen" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+						
+							<p:dataTable id="personTable" var="p" value="#{data.request.personList}" editable="true">
+								<p:column headerText="Geschlecht">
+								    <h:outputText value="#{p.gender}" />
+								  </p:column>				
+								  <p:column headerText="Name" >
+								    <h:outputText value="#{p.firstname} #{p.lastname}" />
+								  </p:column >
+								  <p:column headerText="Geburtstag">
+									<h:outputText value="#{p.birthday}" />									
+								</p:column>
+								<p:column headerText="Entscheid" style="width:130px">
+										<p:cellEditor>
+											<f:facet name="output"><h:outputText value="Angenommen" rendered="#{p.approved == true}"/></f:facet>
+											<f:facet name="output"><h:outputText value="Abgelehnt" rendered="#{p.approved == false}"/></f:facet>
+											<f:facet name="input">
+												<p:selectOneMenu id="approved" value="#{p.approved}" style="width:120px">
+					            					<f:selectItem  itemLabel="Angenommen" itemValue="true" />
+			            							<f:selectItem  itemLabel="Abgelehnt" itemValue="false" />
+					        					</p:selectOneMenu>
+				        					</f:facet>
+										</p:cellEditor>
+								</p:column>
+								<p:column headerText="Stellungnahme" style="width:300px">
+								<p:cellEditor>
+									<f:facet name="output"><h:outputText value="#{p.authorityStatement}" /></f:facet>
+									<f:facet name="input"><h:inputTextarea value="#{p.authorityStatement}" rows="6" cols="33" /></f:facet>
+								</p:cellEditor>
+								</p:column>
+								<p:column style="width:33px; text-align: center">
+								   			<p:rowEditor />
+								</p:column>
+							</p:dataTable>
+						
+					</p:row>
+					
+					<br />
+					<p:row>
+						<p:outputLabel  value="Dokumente" style="font-size: 16pt;"/>
+					</p:row>
+					
+					<p:row>
+					<p:dataTable var="d" value="#{data.request.documents}">
+									<p:column headerText="Dokumententyp">
+								    <h:outputText value="#{d.fileType}" />
+								  </p:column>				
+								  <p:column headerText="Dateiname">
+								    <h:outputText value="#{d.fileName}" />
+								  </p:column>
+								  <p:column headerText="Dokument ansehen">
+								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}">
+  									<p:fileDownload value="#{d.fileStreamedContent}" /> 
+									</p:commandLink>									
+								</p:column>
+							</p:dataTable>
+					</p:row>
+					
+					<br />
+					<p:row>
+						<p:outputLabel  value="Einwände" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					  <p:dataTable var="objection" value="#{data.request.objections}" id="objections">
+						  <p:column headerText="Autor">
+						    <h:outputText value="#{objection.author}" />
+						  </p:column>
+						  <p:column headerText="Datum">
+						    <h:outputText value="#{objection.date}" />
+						  </p:column>
+						  <p:column headerText="Begründung">
+						    <h:outputText value="#{objection.text}" />
+						    </p:column>
+						  <p:column headerText="Mündliche Stellungnahme">
+						    <h:outputText value="#{objection.statementOral}" />
+						  </p:column>
+						  <p:column headerText="Schriftliche Stellungsnahme">
+						    <h:outputText value="#{objection.statementWritten}" />
+						  </p:column>
+						   
+						</p:dataTable>
+					</p:row>
+					</p:column>
+					<br />
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
+			</h:form>
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
