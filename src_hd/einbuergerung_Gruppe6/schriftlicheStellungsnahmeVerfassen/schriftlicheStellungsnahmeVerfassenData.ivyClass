@@ -1,5 +1,0 @@
-schriftlicheStellungsnahmeVerfassenData #class
-einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen #namespace
-request einbuergerung_Gruppe6.Request #field
-readObjections Recordset #field
-readObjections PERSISTENT #fieldModifier

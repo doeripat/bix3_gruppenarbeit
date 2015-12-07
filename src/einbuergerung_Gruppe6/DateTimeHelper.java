@@ -8,6 +8,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+import ch.ivyteam.ivy.scripting.objects.Recordset;
+
 public class DateTimeHelper {
 	
 	public static List<Date> generateDateList(){
@@ -31,6 +33,7 @@ public class DateTimeHelper {
 						break;
 				}
 				cal.set(Calendar.MINUTE, 0);
+				cal.set(Calendar.SECOND, 0);
 				dateList.add(cal.getTime());
 			}
 		}
@@ -40,7 +43,7 @@ public class DateTimeHelper {
 	public static List<String> getDateStringList(List<Date> dateList){
 		
 		List<String> dateStringList = new ArrayList<>();
-		SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		
         for (Date date : dateList){
             dateStringList.add(formatter.format(date));
@@ -49,8 +52,35 @@ public class DateTimeHelper {
 		return dateStringList;
 	}
 	
+	public static List<String> convertRecordSetToDateStringList(Recordset rs, String field)
+	{
+		int recordsetSize = rs.size();
+		List<String> result = new ArrayList<String>();
+		//SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		for (int i = 0; i < recordsetSize; i++)
+		{
+			result.add(rs.getField(i, field).toString());
+		}
+		
+		return result;
+	};
+	
+	public static List<String> filterDateStringList(List<String> dateListString, List<String> reservedDateStringList ){
+		
+		List<String> filteredDateStringList = new ArrayList<String>();
+		
+        for (String date : dateListString){
+        	if (!(reservedDateStringList.contains(date))){
+        		filteredDateStringList.add(date);
+        	}
+        }
+
+        return filteredDateStringList;
+	}
+	
 	public static Date getSelectedMeetingDate(String selectedMeetingDateString) throws ParseException{
-		DateFormat dateFormatter = new SimpleDateFormat("dd.MM.yyyy HH:mm");
+		DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date stringDate = dateFormatter.parse(selectedMeetingDateString);
 		return stringDate;
 	}

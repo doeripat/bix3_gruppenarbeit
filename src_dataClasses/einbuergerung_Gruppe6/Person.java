@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -893167271569210520L;
+  private static final long serialVersionUID = 1865589391796622215L;
 
   private java.lang.String firstname;
 
@@ -267,6 +267,46 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setLeumund(einbuergerung_Gruppe6.Leumund _leumund)
   {
     leumund = _leumund;
+  }
+
+  private java.lang.Boolean finishedMeeting;
+
+  /**
+   * Gets the field finishedMeeting.
+   * @return the value of the field finishedMeeting; may be null.
+   */
+  public java.lang.Boolean getFinishedMeeting()
+  {
+    return finishedMeeting;
+  }
+
+  /**
+   * Sets the field finishedMeeting.
+   * @param _finishedMeeting the new value of the field finishedMeeting.
+   */
+  public void setFinishedMeeting(java.lang.Boolean _finishedMeeting)
+  {
+    finishedMeeting = _finishedMeeting;
+  }
+
+  private java.lang.String meetingString;
+
+  /**
+   * Gets the field meetingString.
+   * @return the value of the field meetingString; may be null.
+   */
+  public java.lang.String getMeetingString()
+  {
+    return meetingString;
+  }
+
+  /**
+   * Sets the field meetingString.
+   * @param _meetingString the new value of the field meetingString.
+   */
+  public void setMeetingString(java.lang.String _meetingString)
+  {
+    meetingString = _meetingString;
   }
 
 }

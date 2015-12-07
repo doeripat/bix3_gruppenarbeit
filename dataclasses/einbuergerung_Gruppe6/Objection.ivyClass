@@ -8,3 +8,5 @@ date DateTime #field
 date PERSISTENT #fieldModifier
 statement String #field
 statement PERSISTENT #fieldModifier
+statementApplicant String #field
+statementApplicant PERSISTENT #fieldModifier

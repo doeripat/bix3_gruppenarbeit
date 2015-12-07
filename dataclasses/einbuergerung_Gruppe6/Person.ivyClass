@@ -26,3 +26,7 @@ meeting DateTime #field
 meeting PERSISTENT #fieldModifier
 leumund einbuergerung_Gruppe6.Leumund #field
 leumund PERSISTENT #fieldModifier
+finishedMeeting Boolean #field
+finishedMeeting PERSISTENT #fieldModifier
+meetingString String #field
+meetingString PERSISTENT #fieldModifier

@@ -1,0 +1,20 @@
+terminWaehlen_v3Data #class
+einbuergerung_Gruppe6.terminWaehlen_v3 #namespace
+dateStringList List<String> #field
+dateStringList PERSISTENT #fieldModifier
+selectedDateTimeString String #field
+selectedDateTimeString PERSISTENT #fieldModifier
+selectedDateTime DateTime #field
+selectedDateTime PERSISTENT #fieldModifier
+meetingList Recordset #field
+meetingList PERSISTENT #fieldModifier
+reservedDateStringList List<String> #field
+reservedDateStringList PERSISTENT #fieldModifier
+selectedPersonString String #field
+selectedPersonString PERSISTENT #fieldModifier
+personListString List<String> #field
+personListString PERSISTENT #fieldModifier
+request einbuergerung_Gruppe6.Request #field
+request PERSISTENT #fieldModifier
+selectedPerson einbuergerung_Gruppe6.Person #field
+selectedPerson PERSISTENT #fieldModifier
