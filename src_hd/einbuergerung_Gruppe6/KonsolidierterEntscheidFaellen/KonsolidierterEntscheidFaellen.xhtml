@@ -37,24 +37,27 @@
 								  <p:column headerText="Geburtstag">
 									<h:outputText value="#{p.birthday}" />									
 								</p:column>
+								<p:column headerText="Status">
+									<h:outputText value="Angenommen" rendered="#{p.approved == true}"/>
+									<h:outputText value="Abgelehnt" rendered="#{p.approved == false}"/>	
+								</p:column>
 								<p:column headerText="Betreibungen">
-								<p:commandButton id="movieBtn" value="Betreibungen" type="button" />
-	    							<p:overlayPanel id="moviePanel" for="movieBtn" hideEffect="fade" dynamic="true" style="width:600px">
+								<p:commandButton id="betreibungBtn" value="Anz. #{p.betreibung.count}" type="button" />
+	    							<p:overlayPanel id="betreibung" for="betreibungBtn" hideEffect="fade" dynamic="true" style="width:600px">
 	       							<p:dataTable var="b" value="#{p.betreibung.entries}" rows="5" paginator="true">
-	            					
-	            					<p:column headerText="Directed By">
+	            					<p:column headerText="Datum">
 	                					<h:outputText value="#{b.datumEintrag}" />
 	            					</p:column>
 	 
-	            					<p:column headerText="Directed By">
+	            					<p:column headerText="Forderungshöhe">
 	                					<h:outputText value="#{b.forderungshoeheCHF}" />
 	            					</p:column>
 	 
-	            					<p:column headerText="Genres">
+	            					<p:column headerText="Gläubiger">
 	                					<h:outputText value="#{b.glaeubiger}" />
 	            					</p:column>
 	 
-	            					<p:column headerText="Run Time(min.)">
+	            					<p:column headerText="Status">
 	                					<h:outputText value="#{b.status}" />
 	            					</p:column>
 	        					</p:dataTable>
@@ -68,6 +71,7 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
+
 					<p:outputLabel value="Dokumente"/>
 					<p:row>
 						<p:column>

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 14:05:31 CET 2015]
+[>Created: Mon Dec 07 17:23:16 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -35,7 +35,6 @@ vs0 @PushWFArc f11 '' #zField
 vs0 @PushWFArc f14 '' #zField
 vs0 @GridStep f13 '' #zField
 vs0 @PushWFArc f21 '' #zField
-vs0 @TkArc f5 '' #zField
 vs0 @RichDialog f10 '' #zField
 vs0 @PushWFArc f15 '' #zField
 vs0 @Alternative f17 '' #zField
@@ -53,6 +52,11 @@ vs0 @TkArc f6 '' #zField
 vs0 @GridStep f9 '' #zField
 vs0 @PushWFArc f26 '' #zField
 vs0 @PushWFArc f27 '' #zField
+vs0 @TkArc f5 '' #zField
+vs0 @StartRequest f29 '' #zField
+vs0 @GridStep f28 '' #zField
+vs0 @PushWFArc f36 '' #zField
+vs0 @PushWFArc f40 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -73,13 +77,10 @@ Bk0 @PushWFArc f1 '' #zField
 Bk0 @PushWFArc f9 '' #zField
 Bk0 @GridStep f10 '' #zField
 Bk0 @PushWFArc f8 '' #zField
-Bk0 @StartRequest f12 '' #zField
-Bk0 @GridStep f26 '' #zField
-Bk0 @PushWFArc f13 '' #zField
-Bk0 @PushWFArc f14 '' #zField
 Bk0 @PushWFArc f11 '' #zField
 Bk0 @PushWFArc f0 '' #zField
 Bk0 @WSElement f3 '' #zField
+Bk0 @GridStep f26 '' #zField
 >Proto Bk0 Bk0 BpmnServiceTask #zField
 vs0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 vs0 f0 inParamTable 'out=param.data;
@@ -314,12 +315,12 @@ out.request.commentDeutschkenntnisse=in1.request.commentDeutschkenntnisse;
 out.request.commentFinanzen=in3.request.commentFinanzen;
 out.request.commentWohnsitz=in2.request.commentWohnsitz;
 out.request.documents=in1.request.documents;
-out.request.personRemovedList=in4.request.personList;
+out.request.personList=in4.request.personList;
 ' #txt
 vs0 f2 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f2 outLinks "TaskA.ivp" #txt
 vs0 f2 caseData '#
-#Mon Dec 07 13:03:02 CET 2015
+#Mon Dec 07 15:24:59 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -347,7 +348,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f2 taskData '#
-#Mon Dec 07 13:03:02 CET 2015
+#Mon Dec 07 15:24:59 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -474,10 +475,6 @@ vs0 f21 outCond ivp=="TaskD.ivp" #txt
 vs0 f21 320 160 480 72 #arcP
 vs0 f21 1 320 72 #addKink
 vs0 f21 0 0.8181818181818182 0 0 #arcLabel
-vs0 f5 expr out #txt
-vs0 f5 type einbuergerung_Gruppe6.Data #txt
-vs0 f5 var in1 #txt
-vs0 f5 111 176 304 176 #arcP
 vs0 f10 targetWindow NEW:card: #txt
 vs0 f10 targetDisplay TOP #txt
 vs0 f10 richDialogId einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen #txt
@@ -617,6 +614,87 @@ vs0 f26 1 0.2202802937141729 0 0 #arcLabel
 vs0 f27 expr out #txt
 vs0 f27 1528 104 1592 104 #arcP
 vs0 f27 0 0.2202802937141729 0 0 #arcLabel
+vs0 f5 expr out #txt
+vs0 f5 type einbuergerung_Gruppe6.Data #txt
+vs0 f5 var in1 #txt
+vs0 f5 111 176 304 176 #arcP
+vs0 f29 outLink start.ivp #txt
+vs0 f29 type einbuergerung_Gruppe6.Data #txt
+vs0 f29 inParamDecl '<> param;' #txt
+vs0 f29 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f29 guid 1517D0AC1B01B6EE #txt
+vs0 f29 requestEnabled true #txt
+vs0 f29 triggerEnabled false #txt
+vs0 f29 callSignature start() #txt
+vs0 f29 taskData '#
+#Mon Dec 07 16:23:55 CET 2015
+' #txt
+vs0 f29 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
+ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
+import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskUpdDef.setExpiryActivator("Everybody");
+taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+engine.updateCurrentTask(taskUpdDef);
+' #txt
+vs0 f29 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+vs0 f29 @C|.responsibility Everybody #txt
+vs0 f29 993 273 30 30 -21 17 #rect
+vs0 f29 @|StartRequestIcon #fIcon
+vs0 f28 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f28 actionTable 'out=in;
+out.request.commentDeutschkenntnisse="scheisse";
+out.request.commentFinanzen="schiesse";
+out.request.commentOnRequest="schiesse";
+out.request.commentWohnsitz="fjasjföaskjdöfajsdölkf";
+out.request.uniqueIdentifier="987435";
+' #txt
+vs0 f28 actionCode 'import einbuergerung_Gruppe6.Document;
+import einbuergerung_Gruppe6.Person;
+
+for(int i = 0;i<3;i++)
+{
+	Person p = new Person();
+	p.firstname = "Yves"+" "+i;
+	p.lastname = "Mauron"+" "+i;
+	out.request.personList.add(p);
+}
+
+for(int i = 0;i<3;i++)
+{
+	Document d = new Document();
+	d.fileName = "Testfile"+i;
+	if(i==0){ d.fileType = "Deutschkenntnisse";}
+	
+	
+	out.request.documents.add(d);
+}' #txt
+vs0 f28 type einbuergerung_Gruppe6.Data #txt
+vs0 f28 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test init</name>
+        <nameStyle>9,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f28 1096 266 112 44 -21 -8 #rect
+vs0 f28 @|StepIcon #fIcon
+vs0 f28 -613726|-1|-16777216 #nodeStyle
+vs0 f36 expr out #txt
+vs0 f36 1023 288 1096 288 #arcP
+vs0 f40 expr out #txt
+vs0 f40 1152 266 1152 190 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -647,7 +725,6 @@ Bk0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 Bk0 f2 actionTable 'out=in;
 out.loopCount=0;
 out.loopIterations=in.request.personList.size();
-out.person.firstname="FFFFFFF";
 ' #txt
 Bk0 f2 type einbuergerung_Gruppe6.Data #txt
 Bk0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -700,25 +777,53 @@ Bk0 f10 608 218 112 44 -23 -16 #rect
 Bk0 f10 @|StepIcon #fIcon
 Bk0 f8 expr out #txt
 Bk0 f8 720 240 792 240 #arcP
-Bk0 f12 outLink start.ivp #txt
-Bk0 f12 type einbuergerung_Gruppe6.Data #txt
-Bk0 f12 inParamDecl '<> param;' #txt
-Bk0 f12 actionDecl 'einbuergerung_Gruppe6.Data out;
+Bk0 f11 expr out #txt
+Bk0 f11 544 240 608 240 #arcP
+Bk0 f0 expr in #txt
+Bk0 f0 360 240 416 240 #arcP
+Bk0 f3 type einbuergerung_Gruppe6.Data #txt
+Bk0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Bk0 f12 guid 1516A22752EB0066 #txt
-Bk0 f12 requestEnabled true #txt
-Bk0 f12 triggerEnabled false #txt
-Bk0 f12 callSignature start() #txt
-Bk0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+Bk0 f3 actionTable 'out=in;
+' #txt
+Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Betreibung;
+
+in.request.personList.get(in.loopCount).betreibung = new Betreibung();
+
+Betreibung betreibung = new Betreibung();
+
+betreibung.count = wsResponse.getBetreibungsregisterauszugResponse.result.anzahlEintraege;
+betreibung.entries = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen;
+
+out.request.personList.get(in.loopCount).setBetreibung(betreibung);' #txt
+Bk0 f3 testData 'in.person.firstname="dhfhhf";
+in.request.uniqueIdentifier="177kjdsagf284n";
+' #txt
+Bk0 f3 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+Bk0 f3 timeout 0 #txt
+Bk0 f3 beanConfig '"KEY_PASSWORD=
+KEY_AXIS_PORTNAME=BetreibungsregisterauszugPort
+KEY_WEBSERVICECONFIG_ID=15169E950451E157
+KEY_DOMAIN=
+KEY_USERNAME=
+KEY_OPERATION=GetBetreibungsregisterauszug
+KEY_AUTHENTICATION_KIND=0
+KEY_HOST=
+KEY_USE_AUTHENTICATION=false
+KEY_AXIS_CSL_PARAMETER_DATA=""arg0.getBetreibungsregisterauszug.personenID__@@__String__@@__in.request.personList.get(in.loopCount).firstname+in.request.personList.get(in.loopCount).lastname"""' #txt
+Bk0 f3 returningObjectList '[wsResponse]' #txt
+Bk0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>start.ivp</name>
+        <name>Leumund Anfordern</name>
+        <nameStyle>17,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk0 f12 @C|.responsibility Everybody #txt
-Bk0 f12 41 121 30 30 -21 17 #rect
-Bk0 f12 @|StartRequestIcon #fIcon
+Bk0 f3 416 218 128 44 -54 -8 #rect
+Bk0 f3 @|WebServiceIcon #fIcon
+Bk0 f3 -613726|-1|-16777216 #nodeStyle
 Bk0 f26 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f26 actionTable 'out=in;
@@ -754,60 +859,9 @@ Bk0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk0 f26 168 130 112 44 -21 -8 #rect
+Bk0 f26 120 122 112 44 -21 -8 #rect
 Bk0 f26 @|StepIcon #fIcon
 Bk0 f26 -613726|-1|-16777216 #nodeStyle
-Bk0 f13 expr out #txt
-Bk0 f13 70 137 168 152 #arcP
-Bk0 f14 expr out #txt
-Bk0 f14 224 174 192 218 #arcP
-Bk0 f11 expr out #txt
-Bk0 f11 544 240 608 240 #arcP
-Bk0 f0 expr in #txt
-Bk0 f0 360 240 416 240 #arcP
-Bk0 f3 type einbuergerung_Gruppe6.Data #txt
-Bk0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk0 f3 actionTable 'out=in;
-' #txt
-Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Betreibung;
-
-in.request.personList.get(in.loopCount).betreibung = new Betreibung();
-
-Betreibung betreibung = new Betreibung();
-
-betreibung.count = wsResponse.getBetreibungsregisterauszugResponse.result.anzahlEintraege;
-betreibung.entries = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen;
-
-out.request.personList.get(in.loopCount).setBetreibung(betreibung);' #txt
-Bk0 f3 testData 'in.person.firstname="dhfhhf";
-in.request.uniqueIdentifier="177kjdsagf284n";
-' #txt
-Bk0 f3 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-Bk0 f3 timeout 0 #txt
-Bk0 f3 beanConfig '"KEY_PASSWORD=
-KEY_AXIS_PORTNAME=BetreibungsregisterauszugPort
-KEY_WEBSERVICECONFIG_ID=15169E950451E157
-KEY_DOMAIN=
-KEY_USERNAME=
-KEY_OPERATION=GetBetreibungsregisterauszug
-KEY_AUTHENTICATION_KIND=0
-KEY_HOST=
-KEY_USE_AUTHENTICATION=false
-KEY_AXIS_CSL_PARAMETER_DATA=""arg0.getBetreibungsregisterauszug.personenID__@@__String__@@__in.person.firstname"""' #txt
-Bk0 f3 returningObjectList '[wsResponse]' #txt
-Bk0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Leumund Anfordern</name>
-        <nameStyle>17,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Bk0 f3 416 218 128 44 -54 -8 #rect
-Bk0 f3 @|WebServiceIcon #fIcon
-Bk0 f3 -613726|-1|-16777216 #nodeStyle
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BpmnServiceTaskIcon #fIcon
 vs0 f33 mainOut f18 tail #connect
@@ -828,8 +882,6 @@ vs0 f24 mainOut f11 tail #connect
 vs0 f11 head f8 mainIn #connect
 vs0 f4 out f21 tail #connect
 vs0 f21 head f13 mainIn #connect
-vs0 f0 mainOut f5 tail #connect
-vs0 f5 head f4 in #connect
 vs0 f2 out f15 tail #connect
 vs0 f15 head f10 mainIn #connect
 vs0 f10 mainOut f30 tail #connect
@@ -850,6 +902,12 @@ vs0 f17 out f26 tail #connect
 vs0 f26 head f9 mainIn #connect
 vs0 f9 mainOut f27 tail #connect
 vs0 f27 head f35 mainIn #connect
+vs0 f0 mainOut f5 tail #connect
+vs0 f5 head f4 in #connect
+vs0 f29 mainOut f36 tail #connect
+vs0 f36 head f28 mainIn #connect
+vs0 f28 mainOut f40 tail #connect
+vs0 f40 head f10 mainIn #connect
 Bk0 g0 m f4 tail #connect
 Bk0 f4 head f2 mainIn #connect
 Bk0 f2 mainOut f6 tail #connect
@@ -864,8 +922,4 @@ Bk0 f3 mainOut f11 tail #connect
 Bk0 f11 head f10 mainIn #connect
 Bk0 f10 mainOut f8 tail #connect
 Bk0 f8 head f7 in #connect
-Bk0 f12 mainOut f13 tail #connect
-Bk0 f13 head f26 mainIn #connect
-Bk0 f26 mainOut f14 tail #connect
-Bk0 f14 head f2 mainIn #connect
 Bk0 0 0 960 464 0 #ivRect
