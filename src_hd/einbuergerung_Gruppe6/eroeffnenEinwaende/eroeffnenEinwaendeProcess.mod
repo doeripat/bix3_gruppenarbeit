@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Dec 05 17:00:04 CET 2015]
+[>Created: Mon Dec 07 14:18:03 CET 2015]
 151649F001BEEDE7 3.17 #module
 >Proto >Proto Collection #zClass
 es0 eroeffnenEinwaendeProcess Big #zClass
@@ -86,7 +86,6 @@ for(int i=0; i<in.readObjections.size();i++){
 	objection.author = in.readObjections.getField(i,"author").toString();
 	objection.text = in.readObjections.getField(i,"text").toString();
 	objection.date = in.readObjections.getField(i,"date").toDateTime();
-	objection.statement = "";
   out.request.objections.add(objection.deepClone());
 	}' #txt
 es0 f8 type einbuergerung_Gruppe6.eroeffnenEinwaende.eroeffnenEinwaendeData #txt

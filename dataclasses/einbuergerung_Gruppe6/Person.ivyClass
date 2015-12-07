@@ -24,8 +24,8 @@ notes String #field
 notes PERSISTENT #fieldModifier
 meeting DateTime #field
 meeting PERSISTENT #fieldModifier
-leumund einbuergerung_Gruppe6.Leumund #field
-leumund PERSISTENT #fieldModifier
+betreibung einbuergerung_Gruppe6.Betreibung #field
+betreibung PERSISTENT #fieldModifier
 finishedMeeting Boolean #field
 finishedMeeting PERSISTENT #fieldModifier
 meetingString String #field

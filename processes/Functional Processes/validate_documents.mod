@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 10:31:04 CET 2015]
+[>Created: Mon Dec 07 14:05:31 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -310,12 +310,16 @@ vs0 f4 @|TaskSwitchIcon #fIcon
 vs0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f2 actionTable 'out=in1;
+out.request.commentDeutschkenntnisse=in1.request.commentDeutschkenntnisse;
+out.request.commentFinanzen=in3.request.commentFinanzen;
+out.request.commentWohnsitz=in2.request.commentWohnsitz;
 out.request.documents=in1.request.documents;
+out.request.personRemovedList=in4.request.personList;
 ' #txt
 vs0 f2 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f2 outLinks "TaskA.ivp" #txt
 vs0 f2 caseData '#
-#Thu Dec 03 18:33:39 CET 2015
+#Mon Dec 07 13:03:02 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -343,7 +347,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f2 taskData '#
-#Thu Dec 03 18:33:39 CET 2015
+#Mon Dec 07 13:03:02 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -580,23 +584,23 @@ vs0 S10 .resExport export #txt
 vs0 S10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Leumundbericht
+        <name>Betreibungsregisterauszug
 anfordern</name>
-        <nameStyle>24,5,7
+        <nameStyle>35,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-vs0 S10 568 370 128 44 -42 -16 #rect
+vs0 S10 544 370 176 44 -69 -16 #rect
 vs0 S10 @|BpmnServiceTaskIcon #fIcon
 vs0 f3 expr data #txt
 vs0 f3 outCond ivp=="TaskA.ivp" #txt
-vs0 f3 320 192 568 392 #arcP
+vs0 f3 320 192 544 392 #arcP
 vs0 f3 1 320 392 #addKink
 vs0 f3 0 0.94 0 0 #arcLabel
 vs0 f6 type einbuergerung_Gruppe6.Data #txt
 vs0 f6 var in4 #txt
-vs0 f6 696 392 960 184 #arcP
+vs0 f6 720 392 960 184 #arcP
 vs0 f6 1 960 392 #addKink
 vs0 f6 0 0.7670498441016803 0 0 #arcLabel
 vs0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -730,10 +734,14 @@ for(int i = 0;i<3;i++)
 	p.lastname = "Mauron"+" "+i;
 	out.request.personList.add(p);
 }
+
 for(int i = 0;i<3;i++)
 {
 	Document d = new Document();
 	d.fileName = "Testfile"+i;
+	if(i==0){ d.fileType = "Deutschkenntnisse";}
+	
+	
 	out.request.documents.add(d);
 }' #txt
 Bk0 f26 type einbuergerung_Gruppe6.Data #txt
@@ -762,16 +770,16 @@ Bk0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f3 actionTable 'out=in;
 ' #txt
-Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Leumund;
+Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Betreibung;
 
-in.request.personList.get(in.loopCount).leumund = new Leumund();
+in.request.personList.get(in.loopCount).betreibung = new Betreibung();
 
-Leumund leumund = new Leumund();
+Betreibung betreibung = new Betreibung();
 
-leumund.count = wsResponse.getBetreibungsregisterauszugResponse.result.anzahlEintraege;
-leumund.entries = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen;
+betreibung.count = wsResponse.getBetreibungsregisterauszugResponse.result.anzahlEintraege;
+betreibung.entries = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen;
 
-out.request.personList.get(in.loopCount).setLeumund(leumund);' #txt
+out.request.personList.get(in.loopCount).setBetreibung(betreibung);' #txt
 Bk0 f3 testData 'in.person.firstname="dhfhhf";
 in.request.uniqueIdentifier="177kjdsagf284n";
 ' #txt

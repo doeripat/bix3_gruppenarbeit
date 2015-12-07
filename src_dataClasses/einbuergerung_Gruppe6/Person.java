@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 1865589391796622215L;
+  private static final long serialVersionUID = -8858635675055578460L;
 
   private java.lang.String firstname;
 
@@ -249,24 +249,24 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     meeting = _meeting;
   }
 
-  private einbuergerung_Gruppe6.Leumund leumund;
+  private einbuergerung_Gruppe6.Betreibung betreibung;
 
   /**
-   * Gets the field leumund.
-   * @return the value of the field leumund; may be null.
+   * Gets the field betreibung.
+   * @return the value of the field betreibung; may be null.
    */
-  public einbuergerung_Gruppe6.Leumund getLeumund()
+  public einbuergerung_Gruppe6.Betreibung getBetreibung()
   {
-    return leumund;
+    return betreibung;
   }
 
   /**
-   * Sets the field leumund.
-   * @param _leumund the new value of the field leumund.
+   * Sets the field betreibung.
+   * @param _betreibung the new value of the field betreibung.
    */
-  public void setLeumund(einbuergerung_Gruppe6.Leumund _leumund)
+  public void setBetreibung(einbuergerung_Gruppe6.Betreibung _betreibung)
   {
-    leumund = _leumund;
+    betreibung = _betreibung;
   }
 
   private java.lang.Boolean finishedMeeting;

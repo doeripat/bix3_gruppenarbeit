@@ -37,8 +37,33 @@
 								  <p:column headerText="Geburtstag">
 									<h:outputText value="#{p.birthday}" />									
 								</p:column>
+								<p:column headerText="Betreibungen">
+								<p:commandButton id="movieBtn" value="Betreibungen" type="button" />
+	    							<p:overlayPanel id="moviePanel" for="movieBtn" hideEffect="fade" dynamic="true" style="width:600px">
+	       							<p:dataTable var="b" value="#{p.betreibung.entries}" rows="5" paginator="true">
+	            					
+	            					<p:column headerText="Directed By">
+	                					<h:outputText value="#{b.datumEintrag}" />
+	            					</p:column>
+	 
+	            					<p:column headerText="Directed By">
+	                					<h:outputText value="#{b.forderungshoeheCHF}" />
+	            					</p:column>
+	 
+	            					<p:column headerText="Genres">
+	                					<h:outputText value="#{b.glaeubiger}" />
+	            					</p:column>
+	 
+	            					<p:column headerText="Run Time(min.)">
+	                					<h:outputText value="#{b.status}" />
+	            					</p:column>
+	        					</p:dataTable>
+	    						</p:overlayPanel>
+
+
+							</p:column>
 								<p:column style="width:32px;text-align: center" >
-						    <p:commandButton actionListener="#{logic.RejectPerson(p)}" update="personTable" icon="ui-icon-uncheck" />
+						    <p:commandButton actionListener="#{logic.RejectPerson(p)}" update="personTable" icon="ui-icon-trash" />
 						  </p:column>
 							</p:dataTable>
 						</p:column>
@@ -61,6 +86,8 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>					
+					
+					
 					
 					<p:outputLabel for="requestCommentFinanzen" value="Comment Finanzen"/>
 					<p:outputLabel id="requestCommentFinanzen" value="#{data.request.commentFinanzen}"></p:outputLabel>
