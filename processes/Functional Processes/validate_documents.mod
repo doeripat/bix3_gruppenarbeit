@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 04 00:40:47 CET 2015]
+[>Created: Mon Dec 07 10:25:36 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -43,7 +43,6 @@ vs0 @PushWFArc f30 '' #zField
 vs0 @CallSub f32 '' #zField
 vs0 @PushWFArc f34 '' #zField
 vs0 @EMail f35 '' #zField
-vs0 @PushWFArc f36 '' #zField
 vs0 @Alternative f37 '' #zField
 vs0 @PushWFArc f38 '' #zField
 vs0 @PushWFArc f31 '' #zField
@@ -51,6 +50,9 @@ vs0 @PushWFArc f39 '' #zField
 vs0 Bk0 S10 'Service 1' #zField
 vs0 @PushWFArc f3 '' #zField
 vs0 @TkArc f6 '' #zField
+vs0 @GridStep f9 '' #zField
+vs0 @PushWFArc f26 '' #zField
+vs0 @PushWFArc f27 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -61,23 +63,23 @@ Bk0 @MessageFlowOutP-0n messageOut messageOut #zField
 Bk0 @TextInP .xml .xml #zField
 Bk0 @TextInP .responsibility .responsibility #zField
 Bk0 @PushTrueWFInG-01 g0 '' #zField
-Bk0 @WSElement f3 '' #zField
 Bk0 @PushTrueWFOutG-01 g1 '' #zField
 Bk0 @GridStep f2 '' #zField
 Bk0 @PushWFArc f4 '' #zField
 Bk0 @Alternative f5 '' #zField
 Bk0 @PushWFArc f6 '' #zField
-Bk0 @PushWFArc f0 '' #zField
 Bk0 @Alternative f7 '' #zField
 Bk0 @PushWFArc f1 '' #zField
 Bk0 @PushWFArc f9 '' #zField
 Bk0 @GridStep f10 '' #zField
-Bk0 @PushWFArc f11 '' #zField
 Bk0 @PushWFArc f8 '' #zField
 Bk0 @StartRequest f12 '' #zField
 Bk0 @GridStep f26 '' #zField
 Bk0 @PushWFArc f13 '' #zField
 Bk0 @PushWFArc f14 '' #zField
+Bk0 @PushWFArc f11 '' #zField
+Bk0 @PushWFArc f0 '' #zField
+Bk0 @WSElement f3 '' #zField
 >Proto Bk0 Bk0 BpmnServiceTask #zField
 vs0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 vs0 f0 inParamTable 'out=param.data;
@@ -102,7 +104,7 @@ vs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 vs0 f0 81 161 30 30 -26 17 #rect
 vs0 f0 @|StartSubIcon #fIcon
 vs0 f1 type einbuergerung_Gruppe6.Data #txt
-vs0 f1 1713 153 30 30 0 15 #rect
+vs0 f1 1857 153 30 30 0 15 #rect
 vs0 f1 @|EndSubIcon #fIcon
 vs0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -142,7 +144,7 @@ prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 f33 584 50 112 44 -53 -20 #rect
+vs0 f33 688 50 112 44 -53 -20 #rect
 vs0 f33 @|CallSubIcon #fIcon
 vs0 f7 type einbuergerung_Gruppe6.Data #txt
 vs0 f7 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
@@ -167,7 +169,7 @@ prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 f7 584 114 112 44 -25 -20 #rect
+vs0 f7 688 114 112 44 -25 -20 #rect
 vs0 f7 @|CallSubIcon #fIcon
 vs0 f8 type einbuergerung_Gruppe6.Data #txt
 vs0 f8 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
@@ -191,7 +193,7 @@ vs0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-vs0 f8 584 178 112 44 -44 -8 #rect
+vs0 f8 688 178 112 44 -44 -8 #rect
 vs0 f8 @|CallSubIcon #fIcon
 vs0 f4 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -372,19 +374,19 @@ vs0 f2 @|TaskSwitchIcon #fIcon
 vs0 f18 expr out #txt
 vs0 f18 type einbuergerung_Gruppe6.Data #txt
 vs0 f18 var in1 #txt
-vs0 f18 696 72 960 152 #arcP
+vs0 f18 800 72 960 152 #arcP
 vs0 f18 1 960 72 #addKink
 vs0 f18 0 0.6757183864355031 0 0 #arcLabel
 vs0 f19 expr out #txt
 vs0 f19 type einbuergerung_Gruppe6.Data #txt
 vs0 f19 var in2 #txt
-vs0 f19 696 136 952 160 #arcP
+vs0 f19 800 136 952 160 #arcP
 vs0 f19 1 928 136 #addKink
 vs0 f19 0 0.5888942310345531 0 0 #arcLabel
 vs0 f20 expr out #txt
 vs0 f20 type einbuergerung_Gruppe6.Data #txt
 vs0 f20 var in3 #txt
-vs0 f20 696 200 952 176 #arcP
+vs0 f20 800 200 952 176 #arcP
 vs0 f20 1 928 200 #addKink
 vs0 f20 0 0.5761968514209642 0 0 #arcLabel
 vs0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -404,15 +406,15 @@ to Wohnsitzbestätigung</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 f22 368 114 160 44 -60 -16 #rect
+vs0 f22 472 114 160 44 -60 -16 #rect
 vs0 f22 @|StepIcon #fIcon
 vs0 f23 expr data #txt
 vs0 f23 outCond ivp=="TaskC.ivp" #txt
-vs0 f23 327 167 368 136 #arcP
+vs0 f23 327 167 472 136 #arcP
 vs0 f23 1 352 136 #addKink
 vs0 f23 1 0.3936055718244919 0 0 #arcLabel
 vs0 f12 expr out #txt
-vs0 f12 528 136 584 136 #arcP
+vs0 f12 632 136 688 136 #arcP
 vs0 f12 0 0.3936055718244919 0 0 #arcLabel
 vs0 f24 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -431,18 +433,18 @@ to Finanzielle Verhältnisse</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 f24 360 178 176 44 -68 -16 #rect
+vs0 f24 464 178 176 44 -68 -16 #rect
 vs0 f24 @|StepIcon #fIcon
 vs0 f25 expr data #txt
 vs0 f25 outCond ivp=="TaskB.ivp" #txt
-vs0 f25 329 183 360 200 #arcP
+vs0 f25 329 183 464 200 #arcP
 vs0 f25 1 352 200 #addKink
 vs0 f25 1 0.438360561870366 0 0 #arcLabel
 vs0 f11 expr out #txt
-vs0 f11 536 200 584 200 #arcP
+vs0 f11 640 200 688 200 #arcP
 vs0 f11 0 0.438360561870366 0 0 #arcLabel
 vs0 f14 expr out #txt
-vs0 f14 520 72 584 72 #arcP
+vs0 f14 624 72 688 72 #arcP
 vs0 f14 0 0.3096891401817728 0 0 #arcLabel
 vs0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -461,11 +463,11 @@ to Deutschkenntnisse</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 f13 376 50 144 44 -54 -16 #rect
+vs0 f13 480 50 144 44 -54 -16 #rect
 vs0 f13 @|StepIcon #fIcon
 vs0 f21 expr data #txt
 vs0 f21 outCond ivp=="TaskD.ivp" #txt
-vs0 f21 320 160 376 72 #arcP
+vs0 f21 320 160 480 72 #arcP
 vs0 f21 1 320 72 #addKink
 vs0 f21 0 0.8181818181818182 0 0 #arcLabel
 vs0 f5 expr out #txt
@@ -560,23 +562,19 @@ informieren</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 f35 1432 82 144 44 -53 -16 #rect
+vs0 f35 1592 82 144 44 -53 -16 #rect
 vs0 f35 @|EMailIcon #fIcon
-vs0 f36 expr in #txt
-vs0 f36 1344 152 1432 104 #arcP
-vs0 f36 1 1344 104 #addKink
-vs0 f36 1 0.2202802937141729 0 0 #arcLabel
 vs0 f37 type einbuergerung_Gruppe6.Data #txt
-vs0 f37 1616 152 32 32 0 16 #rect
+vs0 f37 1760 152 32 32 0 16 #rect
 vs0 f37 @|AlternativeIcon #fIcon
 vs0 f38 expr in #txt
 vs0 f38 outCond 'in.request.personRemovedList == null' #txt
-vs0 f38 1360 168 1616 168 #arcP
+vs0 f38 1360 168 1760 168 #arcP
 vs0 f31 expr in #txt
-vs0 f31 1648 168 1713 168 #arcP
+vs0 f31 1792 168 1857 168 #arcP
 vs0 f39 expr out #txt
-vs0 f39 1576 104 1632 152 #arcP
-vs0 f39 1 1632 104 #addKink
+vs0 f39 1736 104 1776 152 #arcP
+vs0 f39 1 1776 104 #addKink
 vs0 f39 0 0.8455860359198729 0 0 #arcLabel
 vs0 S10 .resExport export #txt
 vs0 S10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -589,18 +587,32 @@ anfordern</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 S10 488 370 128 44 -42 -16 #rect
+vs0 S10 568 370 128 44 -42 -16 #rect
 vs0 S10 @|BpmnServiceTaskIcon #fIcon
 vs0 f3 expr data #txt
 vs0 f3 outCond ivp=="TaskA.ivp" #txt
-vs0 f3 320 192 488 392 #arcP
+vs0 f3 320 192 568 392 #arcP
 vs0 f3 1 320 392 #addKink
 vs0 f3 0 0.94 0 0 #arcLabel
 vs0 f6 type einbuergerung_Gruppe6.Data #txt
 vs0 f6 var in4 #txt
-vs0 f6 616 392 960 184 #arcP
+vs0 f6 696 392 960 184 #arcP
 vs0 f6 1 960 392 #addKink
 vs0 f6 0 0.7670498441016803 0 0 #arcLabel
+vs0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f9 actionTable 'out=in;
+' #txt
+vs0 f9 type einbuergerung_Gruppe6.Data #txt
+vs0 f9 1416 82 112 44 0 -8 #rect
+vs0 f9 @|StepIcon #fIcon
+vs0 f26 expr in #txt
+vs0 f26 1344 152 1416 104 #arcP
+vs0 f26 1 1344 104 #addKink
+vs0 f26 1 0.2202802937141729 0 0 #arcLabel
+vs0 f27 expr out #txt
+vs0 f27 1528 104 1592 104 #arcP
+vs0 f27 0 0.2202802937141729 0 0 #arcLabel
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -624,56 +636,6 @@ vs0 f6 0 0.7670498441016803 0 0 #arcLabel
 >Proto vs0 @|BIcon #fIcon
 Bk0 g0 51 227 26 26 0 5 #rect
 Bk0 g0 @|MIGIcon #fIcon
-Bk0 f3 type einbuergerung_Gruppe6.Data #txt
-Bk0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk0 f3 actionTable 'out=in;
-' #txt
-Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Entry;
-import einbuergerung_Gruppe6.Leumund;
-Leumund leumund = new Leumund();
-
-leumund.count = wsResponse.getBetreibungsregisterauszugResponse.result.anzahlEintraege;
-leumund.entries = new List<Entry>();
-for (int i = 0; i < leumund.count;i++)
-{
-	//Hier kann ich nicht auf die Felder zugreifen...
-		Entry e = new Entry();
-		//e.date = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen.datumEintrag;
-		//e.amout = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen.forderungshoeheCHF;
-		//e.status	= wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen.status;
-		//e.creditor = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen.glaeubiger;
-		
-		leumund.entries.add(e);
-}
-out.request.personList.get(0).leumund = leumund;' #txt
-Bk0 f3 testData 'in.request.uniqueIdentifier="177kjdsagf284n";
-' #txt
-Bk0 f3 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-Bk0 f3 timeout 0 #txt
-Bk0 f3 beanConfig '"KEY_PASSWORD=
-KEY_AXIS_PORTNAME=BetreibungsregisterauszugPort
-KEY_WEBSERVICECONFIG_ID=15169E950451E157
-KEY_DOMAIN=
-KEY_USERNAME=
-KEY_OPERATION=GetBetreibungsregisterauszug
-KEY_AUTHENTICATION_KIND=0
-KEY_HOST=
-KEY_USE_AUTHENTICATION=false
-KEY_AXIS_CSL_PARAMETER_DATA=""arg0.getBetreibungsregisterauszug.personenID__@@__String__@@__in.person.firstname"""' #txt
-Bk0 f3 returningObjectList '[wsResponse]' #txt
-Bk0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Leumund Anfordern</name>
-        <nameStyle>17,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Bk0 f3 416 218 128 44 -54 -8 #rect
-Bk0 f3 @|WebServiceIcon #fIcon
-Bk0 f3 -613726|-1|-16777216 #nodeStyle
 Bk0 g1 883 227 26 26 0 5 #rect
 Bk0 g1 @|MOGIcon #fIcon
 Bk0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -701,8 +663,6 @@ Bk0 f5 328 224 32 32 0 16 #rect
 Bk0 f5 @|AlternativeIcon #fIcon
 Bk0 f6 expr out #txt
 Bk0 f6 248 240 328 240 #arcP
-Bk0 f0 expr in #txt
-Bk0 f0 360 240 416 240 #arcP
 Bk0 f7 type einbuergerung_Gruppe6.Data #txt
 Bk0 f7 792 224 32 32 0 16 #rect
 Bk0 f7 @|AlternativeIcon #fIcon
@@ -717,8 +677,9 @@ Bk0 f9 1 0.5226333257703704 0 0 #arcLabel
 Bk0 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f10 actionTable 'out=in;
-out.loopCount=in.loopCount+1;
 ' #txt
+Bk0 f10 actionCode 'int i = in.loopCount+1;
+out.setLoopCount(i);' #txt
 Bk0 f10 type einbuergerung_Gruppe6.Data #txt
 Bk0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -733,8 +694,6 @@ erhöhen</name>
 ' #txt
 Bk0 f10 608 218 112 44 -23 -16 #rect
 Bk0 f10 @|StepIcon #fIcon
-Bk0 f11 expr out #txt
-Bk0 f11 544 240 608 240 #arcP
 Bk0 f8 expr out #txt
 Bk0 f8 720 240 792 240 #arcP
 Bk0 f12 outLink start.ivp #txt
@@ -794,6 +753,54 @@ Bk0 f13 expr out #txt
 Bk0 f13 70 137 168 152 #arcP
 Bk0 f14 expr out #txt
 Bk0 f14 224 174 192 218 #arcP
+Bk0 f11 expr out #txt
+Bk0 f11 544 240 608 240 #arcP
+Bk0 f0 expr in #txt
+Bk0 f0 360 240 416 240 #arcP
+Bk0 f3 type einbuergerung_Gruppe6.Data #txt
+Bk0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk0 f3 actionTable 'out=in;
+' #txt
+Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Entry;
+import einbuergerung_Gruppe6.Leumund;
+
+in.request.personList.get(in.loopCount).leumund = new Leumund();
+
+Leumund leumund = new Leumund();
+
+leumund.count = wsResponse.getBetreibungsregisterauszugResponse.result.anzahlEintraege;
+leumund.entries = wsResponse.getBetreibungsregisterauszugResponse.result.betreibungen;
+
+out.request.personList.get(in.loopCount).setLeumund(leumund);' #txt
+Bk0 f3 testData 'in.person.firstname="dhfhhf";
+in.request.uniqueIdentifier="177kjdsagf284n";
+' #txt
+Bk0 f3 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+Bk0 f3 timeout 0 #txt
+Bk0 f3 beanConfig '"KEY_PASSWORD=
+KEY_AXIS_PORTNAME=BetreibungsregisterauszugPort
+KEY_WEBSERVICECONFIG_ID=15169E950451E157
+KEY_DOMAIN=
+KEY_USERNAME=
+KEY_OPERATION=GetBetreibungsregisterauszug
+KEY_AUTHENTICATION_KIND=0
+KEY_HOST=
+KEY_USE_AUTHENTICATION=false
+KEY_AXIS_CSL_PARAMETER_DATA=""arg0.getBetreibungsregisterauszug.personenID__@@__String__@@__in.person.firstname"""' #txt
+Bk0 f3 returningObjectList '[wsResponse]' #txt
+Bk0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Leumund Anfordern</name>
+        <nameStyle>17,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk0 f3 416 218 128 44 -54 -8 #rect
+Bk0 f3 @|WebServiceIcon #fIcon
+Bk0 f3 -613726|-1|-16777216 #nodeStyle
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BpmnServiceTaskIcon #fIcon
 vs0 f33 mainOut f18 tail #connect
@@ -821,11 +828,9 @@ vs0 f15 head f10 mainIn #connect
 vs0 f10 mainOut f30 tail #connect
 vs0 f30 head f17 in #connect
 vs0 f34 head f32 mainIn #connect
-vs0 f36 head f35 mainIn #connect
 vs0 f17 out f38 tail #connect
 vs0 f38 head f37 in #connect
 vs0 f17 out f34 tail #connect
-vs0 f17 out f36 tail #connect
 vs0 f37 out f31 tail #connect
 vs0 f31 head f1 mainIn #connect
 vs0 f35 mainOut f39 tail #connect
@@ -834,6 +839,10 @@ vs0 f4 out f3 tail #connect
 vs0 f3 head S10 g0 #connect
 vs0 S10 g1 f6 tail #connect
 vs0 f6 head f2 in #connect
+vs0 f17 out f26 tail #connect
+vs0 f26 head f9 mainIn #connect
+vs0 f9 mainOut f27 tail #connect
+vs0 f27 head f35 mainIn #connect
 Bk0 g0 m f4 tail #connect
 Bk0 f4 head f2 mainIn #connect
 Bk0 f2 mainOut f6 tail #connect

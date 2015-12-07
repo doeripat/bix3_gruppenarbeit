@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Dec 05 19:19:02 CET 2015]
+[>Created: Mon Dec 07 10:23:49 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -552,7 +552,7 @@ dn0 f10 976 160 976 368 #arcP
 dn0 f24 expr data #txt
 dn0 f24 outCond ivp=="TaskA.ivp" #txt
 dn0 f24 960 384 904 384 #arcP
-dn0 f14 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
+dn0 f14 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""<%@taglib prefix=\\""c\\"" uri=\\""http://java.sun.com/jsp/jstl/core\\""%>\\n\\n<c:forEach items=\\""$${allFestivals}\\"" var=\\""festival\\"">\\n    <tr>      \\n        <td>$${festival.festivalName}</td>\\n        <td>$${festival.location}</td>\\n        <td>$${festival.startDate}</td>\\n        <td>$${festival.endDate}</td>\\n        <td>$${festival.URL}</td>  \\n    </tr>\\n</c:forEach>""/emailAttachments * }"' #txt
 dn0 f14 type einbuergerung_Gruppe6.Data #txt
 dn0 f14 timeout 0 #txt
 dn0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

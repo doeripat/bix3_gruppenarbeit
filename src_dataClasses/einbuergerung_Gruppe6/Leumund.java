@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Leumund extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -7327460510889091905L;
+  private static final long serialVersionUID = 2442462950653484223L;
 
   private java.lang.Integer count;
 
@@ -29,13 +29,13 @@ public class Leumund extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     count = _count;
   }
 
-  private ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Entry> entries;
+  private ch.ivyteam.ivy.scripting.objects.List<namespace.unknown.Betreibung> entries;
 
   /**
    * Gets the field entries.
    * @return the value of the field entries; may be null.
    */
-  public ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Entry> getEntries()
+  public ch.ivyteam.ivy.scripting.objects.List<namespace.unknown.Betreibung> getEntries()
   {
     return entries;
   }
@@ -44,7 +44,7 @@ public class Leumund extends ch.ivyteam.ivy.scripting.objects.CompositeObject
    * Sets the field entries.
    * @param _entries the new value of the field entries.
    */
-  public void setEntries(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Entry> _entries)
+  public void setEntries(ch.ivyteam.ivy.scripting.objects.List<namespace.unknown.Betreibung> _entries)
   {
     entries = _entries;
   }
