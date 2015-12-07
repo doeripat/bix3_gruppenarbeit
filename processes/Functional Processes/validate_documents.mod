@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 10:25:36 CET 2015]
+[>Created: Mon Dec 07 10:31:04 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -762,8 +762,7 @@ Bk0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f3 actionTable 'out=in;
 ' #txt
-Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Entry;
-import einbuergerung_Gruppe6.Leumund;
+Bk0 f3 actionCode 'import einbuergerung_Gruppe6.Leumund;
 
 in.request.personList.get(in.loopCount).leumund = new Leumund();
 
