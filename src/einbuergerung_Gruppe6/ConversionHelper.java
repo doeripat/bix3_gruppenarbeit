@@ -32,4 +32,17 @@ public class ConversionHelper {
 		
 		return result;
 	};
+	
+	public static List<String> fromRecordSetToStringList(Recordset rs, String field)
+	{
+		int recordsetSize = rs.size();
+		List<String> result = new ArrayList<String>();
+		
+		for (int i = 0; i < recordsetSize; i++)
+		{
+			result.add(rs.getField(i, field).toString());
+		}
+		
+		return result;
+	};
 }

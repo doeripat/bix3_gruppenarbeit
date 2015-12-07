@@ -19,7 +19,12 @@
 				<h:panelGrid columns="2">
 					<f:facet name="header">
 						<p:messages></p:messages>
-					</f:facet>
+					</f:facet>			
+					<p:outputLabel for="person" value="Person" />
+					<p:selectOneMenu id="person" value="#{data.selectedPersonString}" required="true">
+						<f:selectItem itemLabel="Person auswählen" />
+						<f:selectItems value="#{data.personListString}" />
+					</p:selectOneMenu>
 					<p:outputLabel for="meeting" value="Verfügbare Termine" />
 			        <p:selectOneMenu id="meeting" value="#{data.selectedDateTimeString}" style="width:125px">
 			            <f:selectItems value="#{data.dateStringList}" />

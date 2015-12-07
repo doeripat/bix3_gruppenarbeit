@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+		<ui:define name="title">einwaendePruefen_v2</ui:define>
+		<ui:define name="content">
+			<h3>
+			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
+			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			</h3>
+			
+			<h:form id="form">
+				<h:panelGrid columns="1">
+					<p:row>
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					<p:dataTable var="objection" value="#{data.request.objections}" id="objectionTable" editable="true">
+						<p:column headerText="Datum">
+						  <h:outputText value="#{objection.date}" />
+						</p:column>
+						<p:column headerText="Begründung">
+						  <h:outputText value="#{objection.text}" />
+						</p:column>
+						<p:column headerText="Stellungnahme">
+								<p:cellEditor>
+									<f:facet name="output"><h:outputText value="#{objection.statement}" /></f:facet>
+									<f:facet name="input"><h:inputTextarea value="#{objection.statement}" rows="6" cols="33" /></f:facet>
+								</p:cellEditor>
+						</p:column>
+						<p:column style="width:32px; text-align: center">
+						   			<p:rowEditor />
+						</p:column>
+					</p:dataTable>
+					</p:row>
+					<p:row>
+						<p:outputLabel for="writtenStatement" value="schriftliches Statment erwünscht?" />
+				        <p:selectBooleanCheckbox id="writtenStatement" value="#{data.request.writtenStatement}" />
+			        </p:row>
+					
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
+			</h:form>
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

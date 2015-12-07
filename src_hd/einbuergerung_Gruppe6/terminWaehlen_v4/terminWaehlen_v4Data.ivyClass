@@ -1,0 +1,9 @@
+terminWaehlen_v4Data #class
+einbuergerung_Gruppe6.terminWaehlen_v4 #namespace
+request einbuergerung_Gruppe6.Request #field
+dateDropDownList List<String> #field
+dateDropDownList PERSISTENT #fieldModifier
+meetingList Recordset #field
+meetingList PERSISTENT #fieldModifier
+meetingListString List<String> #field
+meetingListString PERSISTENT #fieldModifier
