@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 17:26:45 CET 2015]
+[>Created: Mon Dec 07 18:59:34 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -28,7 +28,6 @@ En0 @GridStep f17 '' #zField
 En0 @PushWFArc f25 '' #zField
 En0 Bk0 S11 'Sub 1' #zField
 En0 @GridStep f26 '' #zField
-En0 @PushWFArc f14 '' #zField
 En0 @StartRequest f18 '' #zField
 En0 @PushWFArc f20 '' #zField
 En0 @TaskSwitch f13 '' #zField
@@ -39,10 +38,10 @@ En0 @PushWFArc f23 '' #zField
 En0 @RichDialog f27 '' #zField
 En0 @PushWFArc f28 '' #zField
 En0 @GridStep f7 '' #zField
-En0 @TkArc f4 '' #zField
 En0 @PushWFArc f9 '' #zField
 En0 @PushWFArc f10 '' #zField
 En0 @PushWFArc f12 '' #zField
+En0 @TkArc f4 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -88,7 +87,7 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f0 57 105 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Data #txt
-En0 f1 1201 193 30 30 0 15 #rect
+En0 f1 1089 193 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
 En0 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -109,7 +108,7 @@ persistieren</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f5 888 186 112 44 -33 -16 #rect
+En0 f5 776 186 112 44 -33 -16 #rect
 En0 f5 @|DBStepIcon #fIcon
 En0 f11 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 En0 f11 type einbuergerung_Gruppe6.Data #txt
@@ -123,12 +122,12 @@ En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f11 1048 186 112 44 -48 -8 #rect
+En0 f11 936 186 112 44 -48 -8 #rect
 En0 f11 @|EMailIcon #fIcon
 En0 f2 expr out #txt
-En0 f2 1000 208 1048 208 #arcP
+En0 f2 888 208 936 208 #arcP
 En0 f6 expr out #txt
-En0 f6 1160 208 1201 208 #arcP
+En0 f6 1048 208 1089 208 #arcP
 En0 f8 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f8 actionTable 'out=in;
@@ -144,10 +143,10 @@ zusammenstellen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f8 720 186 128 44 -44 -16 #rect
+En0 f8 608 186 128 44 -44 -16 #rect
 En0 f8 @|StepIcon #fIcon
 En0 f3 expr out #txt
-En0 f3 848 208 888 208 #arcP
+En0 f3 736 208 776 208 #arcP
 En0 f15 type einbuergerung_Gruppe6.Data #txt
 En0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -158,7 +157,7 @@ En0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f15 682 106 28 28 -32 -34 #rect
+En0 f15 570 106 28 28 -32 -34 #rect
 En0 f15 @|AlternativeIcon #fIcon
 En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -185,9 +184,9 @@ En0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f17 1248 98 112 44 -30 -8 #rect
+En0 f17 1136 98 112 44 -30 -8 #rect
 En0 f17 @|StepIcon #fIcon
-En0 f25 1208 120 1248 120 #arcP
+En0 f25 992 120 1136 120 #arcP
 En0 S11 .resExport export #txt
 En0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -198,7 +197,7 @@ En0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 S11 1096 98 112 44 -53 -8 #rect
+En0 S11 880 98 112 44 -53 -8 #rect
 En0 S11 @|BpmnServiceTaskIcon #fIcon
 En0 f26 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -249,11 +248,9 @@ En0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f26 120 98 112 44 -21 -8 #rect
+En0 f26 144 170 112 44 -21 -8 #rect
 En0 f26 @|StepIcon #fIcon
 En0 f26 -613726|-1|-16777216 #nodeStyle
-En0 f14 expr out #txt
-En0 f14 87 120 120 120 #arcP
 En0 f18 outLink start.ivp #txt
 En0 f18 type einbuergerung_Gruppe6.Data #txt
 En0 f18 inParamDecl '<> param;' #txt
@@ -274,7 +271,7 @@ En0 f18 @C|.responsibility Everybody #txt
 En0 f18 65 177 30 30 -21 17 #rect
 En0 f18 @|StartRequestIcon #fIcon
 En0 f20 expr out #txt
-En0 f20 92 183 176 142 #arcP
+En0 f20 95 192 144 192 #arcP
 En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f13 actionTable 'out=in1;
@@ -336,11 +333,11 @@ taskDefinitions.add(taskDef);
 ' #txt
 En0 f13 type einbuergerung_Gruppe6.Data #txt
 En0 f13 template "" #txt
-En0 f13 264 104 32 32 0 16 #rect
+En0 f13 152 104 32 32 0 16 #rect
 En0 f13 @|TaskSwitchIcon #fIcon
 En0 f19 expr in #txt
-En0 f19 696 134 720 208 #arcP
-En0 f19 1 696 208 #addKink
+En0 f19 584 134 608 208 #arcP
+En0 f19 1 584 208 #addKink
 En0 f19 1 0.051849802072150133 0 0 #arcLabel
 En0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -358,15 +355,15 @@ axon ivy workaround</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f22 736 98 144 44 -51 -16 #rect
+En0 f22 624 98 144 44 -51 -16 #rect
 En0 f22 @|StepIcon #fIcon
 En0 f21 expr in #txt
 En0 f21 outCond in.loopCount<in.loopIterations #txt
-En0 f21 710 120 736 120 #arcP
+En0 f21 598 120 624 120 #arcP
 En0 f23 expr out #txt
-En0 f23 1304 98 696 106 #arcP
-En0 f23 1 1304 64 #addKink
-En0 f23 2 696 64 #addKink
+En0 f23 1192 98 584 106 #arcP
+En0 f23 1 1192 64 #addKink
+En0 f23 2 584 64 #addKink
 En0 f23 1 0.50625 0 0 #arcLabel
 En0 f27 targetWindow NEW:card: #txt
 En0 f27 targetDisplay TOP #txt
@@ -398,11 +395,11 @@ Begründung erfassen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f27 336 98 144 44 -54 -16 #rect
+En0 f27 224 98 144 44 -54 -16 #rect
 En0 f27 @|RichDialogIcon #fIcon
 En0 f28 expr data #txt
 En0 f28 outCond ivp=="TaskA.ivp" #txt
-En0 f28 296 120 336 120 #arcP
+En0 f28 184 120 224 120 #arcP
 En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f7 actionTable 'out=in;
@@ -420,18 +417,18 @@ En0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f7 528 98 112 44 -23 -8 #rect
+En0 f7 416 98 112 44 -23 -8 #rect
 En0 f7 @|StepIcon #fIcon
+En0 f9 expr out #txt
+En0 f9 368 120 416 120 #arcP
+En0 f10 expr out #txt
+En0 f10 528 120 570 120 #arcP
+En0 f12 expr out #txt
+En0 f12 768 120 880 120 #arcP
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
-En0 f4 232 120 264 120 #arcP
-En0 f9 expr out #txt
-En0 f9 480 120 528 120 #arcP
-En0 f10 expr out #txt
-En0 f10 640 120 682 120 #arcP
-En0 f12 expr out #txt
-En0 f12 880 120 1096 120 #arcP
+En0 f4 87 120 152 120 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -452,8 +449,18 @@ Bk0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f22 actionTable 'out=in;
 ' #txt
-Bk0 f22 actionCode 'import ch.ivyteam.ivy.cm.IContentObjectValue;
-File f = new File(in.document.filePath);
+Bk0 f22 actionCode 'import einbuergerung_Gruppe6.Document;
+import java.io.InputStream;
+import org.primefaces.model.UploadedFile;
+import ch.ivyteam.ivy.cm.CoType;
+import ch.ivyteam.ivy.cm.IContentObject;
+
+import org.primefaces.model.DefaultStreamedContent;
+
+import ch.ivyteam.ivy.cm.IContentObjectValue;
+
+File f = new File(in.document.templatePath);
+
 if (! f.exists())
 {
   // legt leeres file an (muss vorhanden sein für export)
@@ -462,6 +469,7 @@ if (! f.exists())
   IContentObjectValue cov = ivy.cms.getContentObjectValue(in.document.templatePath, null,true);
   cov.exportContentToFile(f.getJavaFile(), null);
 }
+
 if(f.exists()){
   out.document.templatePath = f.getAbsolutePath();
 }' #txt
@@ -545,6 +553,7 @@ param.templatePath="C:/Axonivy_Workspace/Einbuergerung/cms/DocumentTemplates/tem
 Bk0 f2 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f2 responseMappingAction 'out=in;
+out.document.filePath=result.fileOperationMessage.files.get(0).getAbsolutePath();
 out.person.disposal.fileOperationMesage=result.fileOperationMessage;
 ' #txt
 Bk0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -566,8 +575,12 @@ Bk0 f4 actionTable 'out=in;
 ' #txt
 Bk0 f4 actionCode '
 in.document.fileName = "Verfügung_Gesuch_"+in.request.uniqueIdentifier+"_"+in.person.firstname+"_"+in.person.lastname;
-in.document.templatePath="C:/Axonivy_Workspace/Einbuergerung/cms/DocumentTemplates/template_verfuegung";
+//in.document.templatePath="C:/Axonivy_Workspace/Einbuergerung/cms/DocumentTemplates/template_verfuegung";
+in.document.setTemplatePath("/DocumentTemplates/template_verfuegung");
 in.document.fileType="pdf";
+
+
+
 
 ' #txt
 Bk0 f4 type einbuergerung_Gruppe6.Data #txt
@@ -589,32 +602,87 @@ Bk0 f6 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f6 actionTable 'out=in;
 ' #txt
-Bk0 f6 actionCode 'import java.awt.Desktop;
-if(in.person.disposal.fileOperationMesage.files.size()>0) {
-  //Desktop.getDesktop().open(in.person.disposal.fileOperationMesage.files.get(0));
-}' #txt
+Bk0 f6 actionCode 'import einbuergerung_Gruppe6.Document;
+import java.io.InputStream;
+import org.primefaces.model.UploadedFile;
+import ch.ivyteam.ivy.cm.CoType;
+import ch.ivyteam.ivy.cm.IContentObject;
+import ch.ivyteam.ivy.cm.IContentObjectValue;
+import org.primefaces.model.DefaultStreamedContent;
+
+// Der CMS-Ordner, in welchem die hochgeladene Datei abgelegt werden soll, wird bestimmt
+IContentObject baseFolder = ivy.cms.findContentObject("/Disposal");
+
+// Der Name des CMS-Objekts wird aus dem Dateinamen abgeleitet
+String coName = in.document.fileName;
+if (coName.contains("\\") || coName.contains("/"))
+{
+    // Wegen Internet Explorer erforderlich
+    int fileNameStartIndex = coName.replace("", "/").lastIndexOf("/");
+    coName = coName.substring(fileNameStartIndex+1);
+}
+String firstCoName = coName;
+Number counter = 1;
+while (baseFolder.getChild(coName) != null)
+{
+    coName = firstCoName + "_" + counter;
+    counter++;
+}
+
+// Der Typ des CMS-Objekts wird aus der Dateiendung abgeleitet
+String extension;
+CoType coType;
+coType = ch.ivyteam.ivy.cm.CoType.PDF;
+    extension = "pdf";
+
+
+// Im CMS nicht erlaubte Zeichen werden aus dem Namen des CMS-Objekts entfernt
+coName = coName.replaceAll("[^\\p{Alnum}_-]+[^\\p{Alnum}_.+\\-]*", "_");
+
+// Das CMS-Objekt wird angelegt, wobei alle Metadaten leer bleiben mit Ausnahme von Name und Typ. Der Inhalt des CMS-Objekts selbst wird aus dem InputStream der Datei erstellt.
+IContentObject newCMSObject = baseFolder.addChild(coName, "", coType, null);
+IContentObjectValue cov = newCMSObject.addValue("", null, null, null, "", true, null);
+InputStream inputStream = null;
+try
+{
+ //   inputStream = uploadedFile.getInputstream();
+    cov.setContent(inputStream, 0, null);
+}
+finally
+{
+    if (#inputStream != null)
+    {
+        inputStream.close();
+    }
+}
+
+// Die relevanten Eigenschaften des CMS-Objekts werden ins Data-Objekt zurück gegeben
+Document document = new Document();
+document.fileName = newCMSObject.getName();
+document.fileEnding = extension;
+//document.fileType = in.fileTypeDoc;
+document.filePath = cov.getContentObject().getUri();
+
+out.request.documents.add(document);' #txt
 Bk0 f6 type einbuergerung_Gruppe6.Data #txt
 Bk0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Check if File
-Generation suceed</name>
-        <nameStyle>14,7
-17,7
+        <name>Upload Files to CMS</name>
+        <nameStyle>19,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk0 f6 920 138 128 44 -46 -16 #rect
+Bk0 f6 920 138 128 44 -56 -8 #rect
 Bk0 f6 @|StepIcon #fIcon
 Bk0 f0 expr out #txt
 Bk0 f0 312 160 352 160 #arcP
 Bk0 f1 expr out #txt
-Bk0 f1 864 160 1120 147 #arcP
-Bk0 f1 1 896 160 #addKink
-Bk0 f1 2 896 104 #addKink
-Bk0 f1 3 1120 104 #addKink
-Bk0 f1 1 0.8343777176042345 0 0 #arcLabel
+Bk0 f1 752 138 1120 147 #arcP
+Bk0 f1 1 752 112 #addKink
+Bk0 f1 2 1120 112 #addKink
+Bk0 f1 1 0.1141200746581308 0 0 #arcLabel
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 En0 f5 mainOut f2 tail #connect
@@ -625,8 +693,6 @@ En0 f8 mainOut f3 tail #connect
 En0 f3 head f5 mainIn #connect
 En0 f25 head f17 mainIn #connect
 En0 S11 g1 f25 tail #connect
-En0 f0 mainOut f14 tail #connect
-En0 f14 head f26 mainIn #connect
 En0 f18 mainOut f20 tail #connect
 En0 f20 head f26 mainIn #connect
 En0 f19 head f8 mainIn #connect
@@ -637,14 +703,14 @@ En0 f17 mainOut f23 tail #connect
 En0 f23 head f15 in #connect
 En0 f13 out f28 tail #connect
 En0 f28 head f27 mainIn #connect
-En0 f26 mainOut f4 tail #connect
-En0 f4 head f13 in #connect
 En0 f27 mainOut f9 tail #connect
 En0 f9 head f7 mainIn #connect
 En0 f7 mainOut f10 tail #connect
 En0 f10 head f15 in #connect
 En0 f22 mainOut f12 tail #connect
 En0 f12 head S11 g0 #connect
+En0 f0 mainOut f4 tail #connect
+En0 f4 head f13 in #connect
 Bk0 f22 mainOut f10 tail #connect
 Bk0 f10 head f20 mainIn #connect
 Bk0 f20 mainOut f3 tail #connect

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 10:52:30 CET 2015]
+[>Created: Mon Dec 07 19:03:48 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -98,12 +98,12 @@ Rn0 f3 actionTable 'out=in;
 ' #txt
 Rn0 f3 actionCode 'in.invoice.invoiceNumber=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
 
-if(in.request.status == "Verfahrensgebühr"){
+if(in.request.status == "Warten auf Zahlungseingang Verfahrensgebühr"){
 	in.invoice.amount = 500;
 	in.invoice.type ="Verfahrensgebühr";
 	}
 			
-if(in.request.status == "Verfahrensgebühr"||in.request.discount){
+if(in.request.status == "Antrag wurde publiziert"||in.request.discount){
 	in.invoice.amount = 1000;
 	in.invoice.type ="Einbürgerungsgebühr";
 	}

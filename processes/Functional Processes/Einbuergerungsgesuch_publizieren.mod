@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 10:52:42 CET 2015]
+[>Created: Mon Dec 07 18:57:58 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -250,7 +250,7 @@ En0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f32 760 88 32 32 -41 -37 #rect
+En0 f32 768 88 32 32 -41 -37 #rect
 En0 f32 @|TaskSwitchIcon #fIcon
 En0 f17 outLink start.ivp #txt
 En0 f17 type einbuergerung_Gruppe6.Data #txt
@@ -371,7 +371,7 @@ En0 f26 856 82 144 44 -54 -16 #rect
 En0 f26 @|RichDialogIcon #fIcon
 En0 f5 expr data #txt
 En0 f5 outCond ivp=="TaskA.ivp" #txt
-En0 f5 792 104 856 104 #arcP
+En0 f5 800 104 856 104 #arcP
 En0 f6 expr out #txt
 En0 f6 1000 104 1040 104 #arcP
 En0 f10 .resExport export #txt
@@ -465,7 +465,7 @@ En0 f29 536 104 568 104 #arcP
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
-En0 f4 728 104 760 104 #arcP
+En0 f4 728 104 768 104 #arcP
 En0 f30 type einbuergerung_Gruppe6.Data #txt
 En0 f30 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
 En0 f30 doCall true #txt

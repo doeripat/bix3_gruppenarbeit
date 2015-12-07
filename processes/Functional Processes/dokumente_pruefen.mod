@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 11:24:46 CET 2015]
+[>Created: Mon Dec 07 19:02:21 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -36,7 +36,6 @@ dn0 @TkArc f19 '' #zField
 dn0 @PushWFArc f3 '' #zField
 dn0 @CallSub f6 '' #zField
 dn0 @CallSub f12 '' #zField
-dn0 @PushWFArc f2 '' #zField
 dn0 @PushWFArc f4 '' #zField
 dn0 Bk8 U50 'User 5' #zField
 dn0 @PushWFArc f13 '' #zField
@@ -61,6 +60,9 @@ dn0 @PushWFArc f31 '' #zField
 dn0 @GridStep f33 '' #zField
 dn0 @PushWFArc f34 '' #zField
 dn0 @PushWFArc f35 '' #zField
+dn0 @DBStep f36 '' #zField
+dn0 @PushWFArc f37 '' #zField
+dn0 @PushWFArc f2 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -147,7 +149,7 @@ dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f0 65 361 30 30 -26 17 #rect
 dn0 f0 @|StartSubIcon #fIcon
 dn0 f1 type einbuergerung_Gruppe6.Data #txt
-dn0 f1 1705 73 30 30 0 15 #rect
+dn0 f1 1841 73 30 30 0 15 #rect
 dn0 f1 @|EndSubIcon #fIcon
 dn0 f8 type einbuergerung_Gruppe6.Data #txt
 dn0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -172,7 +174,7 @@ dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f23 1600 128 32 32 20 -8 #rect
+dn0 f23 1736 128 32 32 20 -8 #rect
 dn0 f23 @|AlternativeIcon #fIcon
 dn0 f15 expr in #txt
 dn0 f15 outCond 'in.request.personList != null' #txt
@@ -185,11 +187,11 @@ dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f15 1616 128 1705 88 #arcP
-dn0 f15 1 1616 88 #addKink
+dn0 f15 1752 128 1841 88 #arcP
+dn0 f15 1 1752 88 #addKink
 dn0 f15 0 0.6428571428571429 -16 0 #arcLabel
 dn0 f25 type einbuergerung_Gruppe6.Data #txt
-dn0 f25 1705 177 30 30 0 15 #rect
+dn0 f25 1841 177 30 30 0 15 #rect
 dn0 f25 @|EndIcon #fIcon
 dn0 f26 expr in #txt
 dn0 f26 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -201,8 +203,8 @@ dn0 f26 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f26 1616 160 1705 192 #arcP
-dn0 f26 1 1616 192 #addKink
+dn0 f26 1752 160 1841 192 #arcP
+dn0 f26 1 1752 192 #addKink
 dn0 f26 0 0.625 -24 0 #arcLabel
 dn0 U40 .resExport export #txt
 dn0 U40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -347,7 +349,7 @@ dn0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f6 1040 122 128 44 -56 -8 #rect
+dn0 f6 1200 122 128 44 -56 -8 #rect
 dn0 f6 @|CallSubIcon #fIcon
 dn0 f12 type einbuergerung_Gruppe6.Data #txt
 dn0 f12 processCall 'Functional Processes/validate_documents:call(einbuergerung_Gruppe6.Data)' #txt
@@ -371,23 +373,10 @@ dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f12 1232 122 112 44 -33 -20 #rect
+dn0 f12 1368 122 112 44 -33 -20 #rect
 dn0 f12 @|CallSubIcon #fIcon
-dn0 f2 expr in #txt
-dn0 f2 outCond 'in.request.status == "Warten auf Zahlungseingang Verfahrensgebühr"' #txt
-dn0 f2 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Ja</name>
-        <nameStyle>2,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 f2 992 144 1040 144 #arcP
-dn0 f2 0 0.1964285714285714 0 -9 #arcLabel
 dn0 f4 expr out #txt
-dn0 f4 1168 144 1232 144 #arcP
+dn0 f4 1328 144 1368 144 #arcP
 dn0 f4 0 0.1964285714285714 0 -9 #arcLabel
 dn0 U50 .resExport export #txt
 dn0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -573,12 +562,12 @@ versenden</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f14 1408 122 128 44 -42 -16 #rect
+dn0 f14 1544 122 128 44 -42 -16 #rect
 dn0 f14 @|EMailIcon #fIcon
 dn0 f16 expr out #txt
-dn0 f16 1344 144 1408 144 #arcP
+dn0 f16 1480 144 1544 144 #arcP
 dn0 f27 expr out #txt
-dn0 f27 1536 144 1600 144 #arcP
+dn0 f27 1672 144 1736 144 #arcP
 dn0 f5 368 376 425 376 #arcP
 dn0 f18 488 466 488 400 #arcP
 dn0 U30 .resExport export #txt
@@ -650,7 +639,7 @@ dn0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f20 1328 50 112 44 -21 -8 #rect
+dn0 f20 1456 50 112 44 -21 -8 #rect
 dn0 f20 @|StepIcon #fIcon
 dn0 f20 -613726|-1|-16777216 #nodeStyle
 dn0 f22 outLink startbisi.ivp #txt
@@ -718,10 +707,10 @@ dn0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 dn0 f22 @C|.responsibility Everybody #txt
-dn0 f22 1233 33 30 30 -31 17 #rect
+dn0 f22 1361 33 30 30 -31 17 #rect
 dn0 f22 @|StartRequestIcon #fIcon
 dn0 f31 expr out #txt
-dn0 f31 1262 50 1328 72 #arcP
+dn0 f31 1390 50 1456 72 #arcP
 dn0 f33 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f33 actionTable 'out=in;
@@ -739,12 +728,52 @@ dn0 f33 actionCode 'if(in.request.personRemovedList.size() != 0 || in.request.pe
 	}
 }' #txt
 dn0 f33 type einbuergerung_Gruppe6.Data #txt
-dn0 f33 1464 50 112 44 0 -8 #rect
+dn0 f33 1592 50 112 44 0 -8 #rect
 dn0 f33 @|StepIcon #fIcon
 dn0 f34 expr out #txt
-dn0 f34 1440 72 1464 72 #arcP
+dn0 f34 1568 72 1592 72 #arcP
 dn0 f35 expr out #txt
-dn0 f35 1520 94 1472 122 #arcP
+dn0 f35 1648 94 1608 122 #arcP
+dn0 f36 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+dn0 f36 actionTable 'out=in;
+' #txt
+dn0 f36 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
+<UPDATE><Table name=''Request''/><Value column=''status''><String>""Warten auf Zahlungseingang Verfahrensgebühr""</String></Value><Condition><Relation kind=''=''><AnyExpression>in.request.uniqueIdentifier</AnyExpression><Column name=''uniqueIdentifier''/></Relation></Condition></UPDATE>' #txt
+dn0 f36 dbUrl AmazonDB #txt
+dn0 f36 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+dn0 f36 dbWizard in.request.uniqueIdentifier=uniqueIdentifier #txt
+dn0 f36 lotSize 2147483647 #txt
+dn0 f36 startIdx 0 #txt
+dn0 f36 type einbuergerung_Gruppe6.Data #txt
+dn0 f36 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status Update</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f36 1048 122 112 44 -39 -8 #rect
+dn0 f36 @|DBStepIcon #fIcon
+dn0 f37 expr in #txt
+dn0 f37 outCond 'in.request.status == "Warten auf Zahlungseingang Verfahrensgebühr"' #txt
+dn0 f37 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f37 992 144 1048 144 #arcP
+dn0 f37 0 0.1964285714285714 0 -9 #arcLabel
+dn0 f2 expr out #txt
+dn0 f2 1160 144 1200 144 #arcP
+dn0 f2 0 0.1964285714285714 0 -9 #arcLabel
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1068,15 +1097,12 @@ dn0 f0 mainOut f19 tail #connect
 dn0 f19 head f11 in #connect
 dn0 f11 out f3 tail #connect
 dn0 f3 head U10 g0 #connect
-dn0 f8 out f2 tail #connect
-dn0 f2 head f6 mainIn #connect
 dn0 f6 mainOut f4 tail #connect
 dn0 f4 head f12 mainIn #connect
 dn0 U50 g1 f13 tail #connect
 dn0 f13 head f8 in #connect
 dn0 f21 out f7 tail #connect
 dn0 f7 head U50 g0 #connect
-dn0 f8 out f10 tail #connect
 dn0 f10 head f9 in #connect
 dn0 f9 out f24 tail #connect
 dn0 f24 head U40 g0 #connect
@@ -1098,6 +1124,11 @@ dn0 f20 mainOut f34 tail #connect
 dn0 f34 head f33 mainIn #connect
 dn0 f33 mainOut f35 tail #connect
 dn0 f35 head f14 mainIn #connect
+dn0 f8 out f37 tail #connect
+dn0 f37 head f36 mainIn #connect
+dn0 f8 out f10 tail #connect
+dn0 f36 mainOut f2 tail #connect
+dn0 f2 head f6 mainIn #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect
