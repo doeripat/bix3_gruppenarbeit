@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 17:46:05 CET 2015]
+[>Created: Mon Dec 07 18:58:47 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -28,7 +28,6 @@ An0 @PushWFArc f7 '' #zField
 An0 @TaskSwitch f9 '' #zField
 An0 @TkArc f32 '' #zField
 An0 @PushWFArc f33 '' #zField
-An0 @RichDialog f6 '' #zField
 An0 @StartRequest f17 '' #zField
 An0 @RichDialog f18 '' #zField
 An0 @PushWFArc f22 '' #zField
@@ -55,11 +54,9 @@ An0 @DBStep f45 '' #zField
 An0 @DBStep f44 '' #zField
 An0 @Alternative f42 '' #zField
 An0 @PushWFArc f52 '' #zField
-An0 @PushWFArc f37 '' #zField
 An0 @GridStep f19 '' #zField
-An0 @PushWFArc f15 '' #zField
-An0 @TkArc f4 '' #zField
 An0 @PushWFArc f12 '' #zField
+An0 @TkArc f4 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -377,35 +374,6 @@ An0 f32 0 0.5587894248608535 0 0 #arcLabel
 An0 f33 expr data #txt
 An0 f33 outCond ivp=="TaskA.ivp" #txt
 An0 f33 1472 368 1520 368 #arcP
-An0 f6 targetWindow NEW:card: #txt
-An0 f6 targetDisplay TOP #txt
-An0 f6 richDialogId einbuergerung_Gruppe6.terminWaehlen_v3 #txt
-An0 f6 startMethod start(einbuergerung_Gruppe6.Request) #txt
-An0 f6 type einbuergerung_Gruppe6.Data #txt
-An0 f6 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
-An0 f6 requestMappingAction 'param.request=in.request;
-' #txt
-An0 f6 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f6 responseMappingAction 'out=in;
-out.request=result.request;
-' #txt
-An0 f6 windowConfiguration '* ' #txt
-An0 f6 isAsynch false #txt
-An0 f6 isInnerRd false #txt
-An0 f6 userContext '* ' #txt
-An0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Termin wählen</name>
-        <nameStyle>13,7
-</nameStyle>
-        <desc>Über Personen loopen mit bearbeitbarer Tabelle und Dropbox in Zelle</desc>
-    </language>
-</elementInfo>
-' #txt
-An0 f6 432 346 112 44 -41 -8 #rect
-An0 f6 @|RichDialogIcon #fIcon
 An0 f17 outLink start.ivp #txt
 An0 f17 type einbuergerung_Gruppe6.Data #txt
 An0 f17 inParamDecl '<> param;' #txt
@@ -495,6 +463,7 @@ absolviert?</name>
 An0 f11 1280 152 32 32 -67 18 #rect
 An0 f11 @|AlternativeIcon #fIcon
 An0 f14 expr in #txt
+An0 f14 outCond 'einbuergerung_Gruppe6.PersonHelper.isAllAdultsHadMeeting(in.request.personList) == true' #txt
 An0 f14 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -690,8 +659,6 @@ An0 f42 976 424 32 32 -69 22 #rect
 An0 f42 @|AlternativeIcon #fIcon
 An0 f52 expr out #txt
 An0 f52 544 440 648 440 #arcP
-An0 f37 expr out #txt
-An0 f37 106 357 200 286 #arcP
 An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f19 actionTable 'out=in;
@@ -728,16 +695,14 @@ An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f19 144 242 112 44 -39 -8 #rect
+An0 f19 288 250 112 44 -39 -8 #rect
 An0 f19 @|StepIcon #fIcon
-An0 f15 expr out #txt
-An0 f15 200 190 200 242 #arcP
+An0 f12 expr out #txt
+An0 f12 704 346 704 184 #arcP
 An0 f4 expr out #txt
 An0 f4 type einbuergerung_Gruppe6.Data #txt
 An0 f4 var in1 #txt
-An0 f4 200 286 200 424 #arcP
-An0 f12 expr out #txt
-An0 f12 704 346 704 184 #arcP
+An0 f4 200 190 200 424 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -798,13 +763,9 @@ An0 f44 mainOut f50 tail #connect
 An0 f50 head f35 mainIn #connect
 An0 f42 out f51 tail #connect
 An0 f51 head f24 mainIn #connect
-An0 f17 mainOut f37 tail #connect
-An0 f37 head f19 mainIn #connect
 An0 f16 mainOut f52 tail #connect
 An0 f52 head f44 mainIn #connect
-An0 f21 mainOut f15 tail #connect
-An0 f15 head f19 mainIn #connect
-An0 f19 mainOut f4 tail #connect
-An0 f4 head f3 in #connect
 An0 f24 mainOut f12 tail #connect
 An0 f12 head f39 in #connect
+An0 f21 mainOut f4 tail #connect
+An0 f4 head f3 in #connect

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 18:14:51 CET 2015]
+[>Created: Mon Dec 07 18:57:06 CET 2015]
 1517BAECF236852E 3.17 #module
 >Proto >Proto Collection #zClass
 ts0 terminWaehlen_v4Process Big #zClass
@@ -204,6 +204,7 @@ for (Person person : in.request.personList){
 		cal.setTime(dateFormatter.parse(person.getMeetingString()));
 		DateTime d = cal.getTime();
 		person.setMeeting(d);
+		person.setMeetingFinished(false);
 				
 	}
 }' #txt
@@ -211,13 +212,14 @@ ts0 f8 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 ts0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>set meeting(DateTime) for Person</name>
-        <nameStyle>32,7
+        <name>set meeting(DateTime) for Person +
+set meetingFinished</name>
+        <nameStyle>54,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-ts0 f8 320 138 192 44 -93 -8 #rect
+ts0 f8 304 138 224 44 -93 -16 #rect
 ts0 f8 @|StepIcon #fIcon
 ts0 f24 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -346,7 +348,7 @@ ts0 f26 @|StepIcon #fIcon
 ts0 f27 expr out #txt
 ts0 f27 109 160 168 160 #arcP
 ts0 f9 expr out #txt
-ts0 f9 280 160 320 160 #arcP
+ts0 f9 280 160 304 160 #arcP
 ts0 f28 expr out #txt
 ts0 f28 416 182 600 242 #arcP
 ts0 f13 expr out #txt

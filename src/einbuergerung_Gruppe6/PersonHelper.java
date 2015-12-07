@@ -29,6 +29,18 @@ public class PersonHelper {
 		return personListString;
 	}
 	
+	public static List<String> getAdultAndRelationshipPersonListString(List<Person> personList){
+		
+		List<String> personListString = new ArrayList<>();
+		for (Person person : personList){
+			if (person.getRole().equals("adult") || person.getRole().equals("applicant")){
+				personListString.add(person.getFirstname() + " " + person.getLastname() + " - Begleitung:" + person.getRelationship());
+			}
+		}
+		
+		return personListString;
+	}
+	
 	public static List<String> getPersonListStringFilterMeeting(List<Person> personList){
 		
 		List<String> personListString = new ArrayList<>();
@@ -86,6 +98,7 @@ public class PersonHelper {
 			personName = person.getFirstname() + " " + person.getLastname();
 			if (personName.equals(selectedPerson)){
 				person.setNotes(notes);
+				person.setMeetingFinished(true);
 			}
 			newPersonList.add(person);
 		}
@@ -133,7 +146,7 @@ public class PersonHelper {
 	public static Boolean isAllAdultsHadMeeting(List<Person> personList){
 		
 		for (Person person : personList){
-			if ((person.getRole().equals("applicant") || person.getRole().equals("adult")) && person.getFinishedMeeting() == null){
+			if ((person.getRole().equals("applicant") || person.getRole().equals("adult")) && person.getMeetingFinished() == false){
 				return false;
 			}
 		}

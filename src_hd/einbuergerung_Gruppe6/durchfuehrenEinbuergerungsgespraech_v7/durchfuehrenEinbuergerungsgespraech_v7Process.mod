@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sun Dec 06 17:11:05 CET 2015]
+[>Created: Mon Dec 07 18:55:04 CET 2015]
 1517BB0DB091677D 3.17 #module
 >Proto >Proto Collection #zClass
 ds0 durchfuehrenEinbuergerungsgespraech_v7Process Big #zClass
@@ -34,7 +34,7 @@ ds0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodE
 <List<einbuergerung_Gruppe6.Person> personList> param = methodEvent.getInputArguments();
 ' #txt
 ds0 f0 inParameterMapAction 'out.personList=param.personList;
-out.personListString=einbuergerung_Gruppe6.PersonHelper.getPersonListString(param.personList);
+out.personListString=einbuergerung_Gruppe6.PersonHelper.getAdultAndRelationshipPersonListString(param.personList);
 ' #txt
 ds0 f0 outParameterDecl '<List<einbuergerung_Gruppe6.Person> personList> result;
 ' #txt
@@ -103,18 +103,19 @@ ds0 f11 type einbuergerung_Gruppe6.durchfuehrenEinbuergerungsgespraech_v7.durchf
 ds0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>set notes</name>
-        <nameStyle>9,7
+        <name>set notes +
+set meetingFinished</name>
+        <nameStyle>31,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-ds0 f11 168 138 112 44 -25 -8 #rect
+ds0 f11 152 138 144 44 -52 -16 #rect
 ds0 f11 @|StepIcon #fIcon
 ds0 f12 expr out #txt
-ds0 f12 109 160 168 160 #arcP
+ds0 f12 109 160 152 160 #arcP
 ds0 f5 expr out #txt
-ds0 f5 280 160 339 160 #arcP
+ds0 f5 296 160 339 160 #arcP
 >Proto ds0 .type einbuergerung_Gruppe6.durchfuehrenEinbuergerungsgespraech_v7.durchfuehrenEinbuergerungsgespraech_v7Data #txt
 >Proto ds0 .processKind HTML_DIALOG #txt
 >Proto ds0 -8 -8 16 16 16 26 #rect

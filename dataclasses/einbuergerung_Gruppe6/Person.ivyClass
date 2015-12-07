@@ -26,8 +26,8 @@ meeting DateTime #field
 meeting PERSISTENT #fieldModifier
 betreibung einbuergerung_Gruppe6.Betreibung #field
 betreibung PERSISTENT #fieldModifier
-finishedMeeting Boolean #field
-finishedMeeting PERSISTENT #fieldModifier
+meetingFinished Boolean #field
+meetingFinished PERSISTENT #fieldModifier
 meetingString String #field
 meetingString PERSISTENT #fieldModifier
 relationship String #field
