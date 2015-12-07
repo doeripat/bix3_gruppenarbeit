@@ -32,5 +32,3 @@ meetingString String #field
 meetingString PERSISTENT #fieldModifier
 relationship String #field
 relationship PERSISTENT #fieldModifier
-flag int #field
-flag PERSISTENT #fieldModifier

@@ -57,11 +57,7 @@ public class PersonHelper {
 		
 		List<Person> newPersonList = new ArrayList<Person>();
 		
-		for (Person person : personList){
-			
-			Person tempPerson = new Person();
-			tempPerson.setFlag(0);
-			
+		for (Person person : personList){	
 			if (person.getRole().equals("child")){
 				for (Person person2 : personList){
 					if (((person2.getFirstname() + " " + person2.getLastname()).equals(person.getRelationship())) && (person2.getRole().equals("adult") || person2.getRole().equals("applicant"))){

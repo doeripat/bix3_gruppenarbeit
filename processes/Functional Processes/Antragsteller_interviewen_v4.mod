@@ -1,8 +1,8 @@
 [Ivy]
-[>Created: Mon Dec 07 17:46:05 CET 2015]
-1517BB13B27FE452 3.17 #module
+[>Created: Mon Dec 07 18:28:47 CET 2015]
+1517D7C33D81774D 3.17 #module
 >Proto >Proto Collection #zClass
-An0 Antragsteller_interviewen_v3 Big #zClass
+An0 Antragsteller_interviewen_v4 Big #zClass
 An0 B #cInfo
 An0 #process
 An0 @TextInP .resExport .resExport #zField
@@ -60,7 +60,7 @@ An0 @GridStep f19 '' #zField
 An0 @PushWFArc f15 '' #zField
 An0 @TkArc f4 '' #zField
 An0 @PushWFArc f12 '' #zField
->Proto An0 An0 Antragsteller_interviewen_v3 #zField
+>Proto An0 An0 Antragsteller_interviewen_v4 #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -575,8 +575,8 @@ An0 f50 expr out #txt
 An0 f50 792 440 824 440 #arcP
 An0 f49 expr out #txt
 An0 f49 1304 462 992 456 #arcP
-An0 f49 1 1304 520 #addKink
-An0 f49 2 992 520 #addKink
+An0 f49 1 1304 522 #addKink
+An0 f49 2 992 522 #addKink
 An0 f49 1 0.5096153846153846 0 0 #arcLabel
 An0 f48 expr out #txt
 An0 f48 1192 440 1248 440 #arcP
