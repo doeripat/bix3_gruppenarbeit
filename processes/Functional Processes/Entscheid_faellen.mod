@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 10:56:57 CET 2015]
+[>Created: Mon Dec 07 17:26:45 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -17,32 +17,32 @@ En0 @TextInP .xml .xml #zField
 En0 @TextInP .responsibility .responsibility #zField
 En0 @StartSub f0 '' #zField
 En0 @EndSub f1 '' #zField
-En0 @RichDialog f12 '' #zField
 En0 @DBStep f5 '' #zField
 En0 @EMail f11 '' #zField
 En0 @PushWFArc f2 '' #zField
 En0 @PushWFArc f6 '' #zField
 En0 @GridStep f8 '' #zField
 En0 @PushWFArc f3 '' #zField
-En0 @GridStep f7 '' #zField
 En0 @Alternative f15 '' #zField
 En0 @GridStep f17 '' #zField
-En0 @PushWFArc f24 '' #zField
 En0 @PushWFArc f25 '' #zField
 En0 Bk0 S11 'Sub 1' #zField
 En0 @GridStep f26 '' #zField
-En0 @PushWFArc f9 '' #zField
 En0 @PushWFArc f14 '' #zField
 En0 @StartRequest f18 '' #zField
 En0 @PushWFArc f20 '' #zField
 En0 @TaskSwitch f13 '' #zField
-En0 @TkArc f4 '' #zField
-En0 @PushWFArc f10 '' #zField
 En0 @PushWFArc f19 '' #zField
 En0 @GridStep f22 '' #zField
 En0 @PushWFArc f21 '' #zField
-En0 @PushWFArc f16 '' #zField
 En0 @PushWFArc f23 '' #zField
+En0 @RichDialog f27 '' #zField
+En0 @PushWFArc f28 '' #zField
+En0 @GridStep f7 '' #zField
+En0 @TkArc f4 '' #zField
+En0 @PushWFArc f9 '' #zField
+En0 @PushWFArc f10 '' #zField
+En0 @PushWFArc f12 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -88,39 +88,8 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f0 57 105 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Data #txt
-En0 f1 1009 193 30 30 0 15 #rect
+En0 f1 1201 193 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
-En0 f12 targetWindow NEW:card: #txt
-En0 f12 targetDisplay TOP #txt
-En0 f12 richDialogId einbuergerung_Gruppe6.erstinstanzlicherEntscheid #txt
-En0 f12 startMethod start(einbuergerung_Gruppe6.Request,einbuergerung_Gruppe6.Person) #txt
-En0 f12 type einbuergerung_Gruppe6.Data #txt
-En0 f12 requestActionDecl '<einbuergerung_Gruppe6.Request request, einbuergerung_Gruppe6.Person person> param;' #txt
-En0 f12 requestMappingAction 'param.request=in.request;
-param.person=in.person;
-' #txt
-En0 f12 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f12 responseMappingAction 'out=in;
-out.person=result.person;
-out.request=result.request;
-' #txt
-En0 f12 windowConfiguration '* ' #txt
-En0 f12 isAsynch false #txt
-En0 f12 isInnerRd false #txt
-En0 f12 userContext '* ' #txt
-En0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Entscheid und
-Begründung erfassen</name>
-        <nameStyle>33,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f12 720 98 144 44 -54 -16 #rect
-En0 f12 @|RichDialogIcon #fIcon
 En0 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f5 actionTable 'out=in;
@@ -140,7 +109,7 @@ persistieren</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f5 696 186 112 44 -33 -16 #rect
+En0 f5 888 186 112 44 -33 -16 #rect
 En0 f5 @|DBStepIcon #fIcon
 En0 f11 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage """"/emailAttachments * }"' #txt
 En0 f11 type einbuergerung_Gruppe6.Data #txt
@@ -154,12 +123,12 @@ En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f11 856 186 112 44 -48 -8 #rect
+En0 f11 1048 186 112 44 -48 -8 #rect
 En0 f11 @|EMailIcon #fIcon
 En0 f2 expr out #txt
-En0 f2 808 208 856 208 #arcP
+En0 f2 1000 208 1048 208 #arcP
 En0 f6 expr out #txt
-En0 f6 968 208 1009 208 #arcP
+En0 f6 1160 208 1201 208 #arcP
 En0 f8 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f8 actionTable 'out=in;
@@ -175,29 +144,10 @@ zusammenstellen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f8 528 186 128 44 -44 -16 #rect
+En0 f8 720 186 128 44 -44 -16 #rect
 En0 f8 @|StepIcon #fIcon
 En0 f3 expr out #txt
-En0 f3 656 208 696 208 #arcP
-En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f7 actionTable 'out=in;
-out.loopCount=0;
-out.loopIterations=in.request.personList.size();
-out.person=in.request.personList.get(0);
-' #txt
-En0 f7 type einbuergerung_Gruppe6.Data #txt
-En0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Init Loop</name>
-        <nameStyle>9,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f7 304 98 112 44 -23 -8 #rect
-En0 f7 @|StepIcon #fIcon
+En0 f3 848 208 888 208 #arcP
 En0 f15 type einbuergerung_Gruppe6.Data #txt
 En0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -208,7 +158,7 @@ En0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f15 490 106 28 28 -32 -34 #rect
+En0 f15 682 106 28 28 -32 -34 #rect
 En0 f15 @|AlternativeIcon #fIcon
 En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -235,11 +185,9 @@ En0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f17 1056 98 112 44 -30 -8 #rect
+En0 f17 1248 98 112 44 -30 -8 #rect
 En0 f17 @|StepIcon #fIcon
-En0 f24 expr out #txt
-En0 f24 864 120 904 120 #arcP
-En0 f25 1016 120 1056 120 #arcP
+En0 f25 1208 120 1248 120 #arcP
 En0 S11 .resExport export #txt
 En0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -250,7 +198,7 @@ En0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 S11 904 98 112 44 -53 -8 #rect
+En0 S11 1096 98 112 44 -53 -8 #rect
 En0 S11 @|BpmnServiceTaskIcon #fIcon
 En0 f26 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -301,13 +249,11 @@ En0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f26 168 98 112 44 -21 -8 #rect
+En0 f26 120 98 112 44 -21 -8 #rect
 En0 f26 @|StepIcon #fIcon
 En0 f26 -613726|-1|-16777216 #nodeStyle
-En0 f9 expr out #txt
-En0 f9 280 120 304 120 #arcP
 En0 f14 expr out #txt
-En0 f14 87 120 168 120 #arcP
+En0 f14 87 120 120 120 #arcP
 En0 f18 outLink start.ivp #txt
 En0 f18 type einbuergerung_Gruppe6.Data #txt
 En0 f18 inParamDecl '<> param;' #txt
@@ -328,7 +274,7 @@ En0 f18 @C|.responsibility Everybody #txt
 En0 f18 65 177 30 30 -21 17 #rect
 En0 f18 @|StartRequestIcon #fIcon
 En0 f20 expr out #txt
-En0 f20 93 185 180 142 #arcP
+En0 f20 92 183 176 142 #arcP
 En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f13 actionTable 'out=in1;
@@ -390,18 +336,11 @@ taskDefinitions.add(taskDef);
 ' #txt
 En0 f13 type einbuergerung_Gruppe6.Data #txt
 En0 f13 template "" #txt
-En0 f13 432 104 32 32 0 16 #rect
+En0 f13 264 104 32 32 0 16 #rect
 En0 f13 @|TaskSwitchIcon #fIcon
-En0 f4 expr out #txt
-En0 f4 type einbuergerung_Gruppe6.Data #txt
-En0 f4 var in1 #txt
-En0 f4 416 120 432 120 #arcP
-En0 f10 expr data #txt
-En0 f10 outCond ivp=="TaskA.ivp" #txt
-En0 f10 464 120 490 120 #arcP
 En0 f19 expr in #txt
-En0 f19 504 134 528 208 #arcP
-En0 f19 1 504 208 #addKink
+En0 f19 696 134 720 208 #arcP
+En0 f19 1 696 208 #addKink
 En0 f19 1 0.051849802072150133 0 0 #arcLabel
 En0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -419,18 +358,80 @@ axon ivy workaround</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f22 544 98 144 44 -51 -16 #rect
+En0 f22 736 98 144 44 -51 -16 #rect
 En0 f22 @|StepIcon #fIcon
 En0 f21 expr in #txt
 En0 f21 outCond in.loopCount<in.loopIterations #txt
-En0 f21 518 120 544 120 #arcP
-En0 f16 expr out #txt
-En0 f16 688 120 720 120 #arcP
+En0 f21 710 120 736 120 #arcP
 En0 f23 expr out #txt
-En0 f23 1112 98 504 106 #arcP
-En0 f23 1 1112 64 #addKink
-En0 f23 2 504 64 #addKink
+En0 f23 1304 98 696 106 #arcP
+En0 f23 1 1304 64 #addKink
+En0 f23 2 696 64 #addKink
 En0 f23 1 0.50625 0 0 #arcLabel
+En0 f27 targetWindow NEW:card: #txt
+En0 f27 targetDisplay TOP #txt
+En0 f27 richDialogId einbuergerung_Gruppe6.erstinstanzlicherEntscheid_V2 #txt
+En0 f27 startMethod start(einbuergerung_Gruppe6.Request,einbuergerung_Gruppe6.Document) #txt
+En0 f27 type einbuergerung_Gruppe6.Data #txt
+En0 f27 requestActionDecl '<einbuergerung_Gruppe6.Request request, einbuergerung_Gruppe6.Document document> param;' #txt
+En0 f27 requestMappingAction 'param.request=in.request;
+param.document=in.document;
+' #txt
+En0 f27 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f27 responseMappingAction 'out=in;
+out.document=result.document;
+out.request=result.request;
+' #txt
+En0 f27 windowConfiguration '* ' #txt
+En0 f27 isAsynch false #txt
+En0 f27 isInnerRd false #txt
+En0 f27 userContext '* ' #txt
+En0 f27 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Entscheid und
+Begründung erfassen</name>
+        <nameStyle>14,7
+19,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f27 336 98 144 44 -54 -16 #rect
+En0 f27 @|RichDialogIcon #fIcon
+En0 f28 expr data #txt
+En0 f28 outCond ivp=="TaskA.ivp" #txt
+En0 f28 296 120 336 120 #arcP
+En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f7 actionTable 'out=in;
+out.loopCount=0;
+out.loopIterations=in.request.personList.size();
+out.person=in.request.personList.get(0);
+' #txt
+En0 f7 type einbuergerung_Gruppe6.Data #txt
+En0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Init Loop</name>
+        <nameStyle>9,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f7 528 98 112 44 -23 -8 #rect
+En0 f7 @|StepIcon #fIcon
+En0 f4 expr out #txt
+En0 f4 type einbuergerung_Gruppe6.Data #txt
+En0 f4 var in1 #txt
+En0 f4 232 120 264 120 #arcP
+En0 f9 expr out #txt
+En0 f9 480 120 528 120 #arcP
+En0 f10 expr out #txt
+En0 f10 640 120 682 120 #arcP
+En0 f12 expr out #txt
+En0 f12 880 120 1096 120 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -623,27 +624,27 @@ En0 f6 head f1 mainIn #connect
 En0 f8 mainOut f3 tail #connect
 En0 f3 head f5 mainIn #connect
 En0 f25 head f17 mainIn #connect
-En0 f12 mainOut f24 tail #connect
-En0 f24 head S11 g0 #connect
 En0 S11 g1 f25 tail #connect
-En0 f26 mainOut f9 tail #connect
-En0 f9 head f7 mainIn #connect
 En0 f0 mainOut f14 tail #connect
 En0 f14 head f26 mainIn #connect
 En0 f18 mainOut f20 tail #connect
 En0 f20 head f26 mainIn #connect
-En0 f7 mainOut f4 tail #connect
-En0 f4 head f13 in #connect
-En0 f13 out f10 tail #connect
-En0 f10 head f15 in #connect
 En0 f19 head f8 mainIn #connect
 En0 f15 out f21 tail #connect
 En0 f21 head f22 mainIn #connect
 En0 f15 out f19 tail #connect
-En0 f22 mainOut f16 tail #connect
-En0 f16 head f12 mainIn #connect
 En0 f17 mainOut f23 tail #connect
 En0 f23 head f15 in #connect
+En0 f13 out f28 tail #connect
+En0 f28 head f27 mainIn #connect
+En0 f26 mainOut f4 tail #connect
+En0 f4 head f13 in #connect
+En0 f27 mainOut f9 tail #connect
+En0 f9 head f7 mainIn #connect
+En0 f7 mainOut f10 tail #connect
+En0 f10 head f15 in #connect
+En0 f22 mainOut f12 tail #connect
+En0 f12 head S11 g0 #connect
 Bk0 f22 mainOut f10 tail #connect
 Bk0 f10 head f20 mainIn #connect
 Bk0 f20 mainOut f3 tail #connect
