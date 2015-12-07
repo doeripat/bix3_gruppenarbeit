@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 17:46:37 CET 2015]
+[>Created: Mon Dec 07 19:24:06 CET 2015]
 1514590D4E7F0C89 3.17 #module
 >Proto >Proto Collection #zClass
 Ds0 DateienHochladen_v2Process Big #zClass
@@ -136,7 +136,7 @@ String coName = fileName.substring(0, fileName.lastIndexOf("."));
 if (coName.contains("\\") || coName.contains("/"))
 {
     // Wegen Internet Explorer erforderlich
-    int fileNameStartIndex = coName.replace("", "/").lastIndexOf("/");
+    int fileNameStartIndex = coName.replace("\\", "/").lastIndexOf("/");
     coName = coName.substring(fileNameStartIndex+1);
 }
 String firstCoName = coName;

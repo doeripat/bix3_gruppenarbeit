@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 15:17:40 CET 2015]
+[>Created: Mon Dec 07 21:10:38 CET 2015]
 1513E4291B3CE89A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 erfassungEinwaendeProcess Big #zClass
@@ -247,7 +247,7 @@ if(in.recordsetDate.size()==0){
 else{
 	Record temp;
 	temp=in.recordsetDate.getRecords().get(0);
-	
+	in.valid=true;
 	in.endPeriodDate=temp.getField("objection_period_end").toDateTime();
 	}' #txt
 es0 f23 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt

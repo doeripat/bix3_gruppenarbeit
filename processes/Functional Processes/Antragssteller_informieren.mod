@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 15:26:55 CET 2015]
+[>Created: Mon Dec 07 19:46:04 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -461,8 +461,8 @@ An0 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
 An0 f31 actionTable 'out=in;
 ' #txt
 An0 f31 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
-<UPDATE><Table name=''Request''/><Value column=''status''><String>""Antrag eingegangen""</String></Value></UPDATE>' #txt
+<!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
+<INSERT><Table name=''Request''/><Value column=''uniqueIdentifier''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''password''><AnyExpression>in.request.password</AnyExpression></Value><Value column=''status''><String>""Antrag eingangen""</String></Value></INSERT>' #txt
 An0 f31 dbUrl AmazonDB #txt
 An0 f31 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 An0 f31 lotSize 2147483647 #txt

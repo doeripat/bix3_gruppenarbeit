@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 18:58:47 CET 2015]
+[>Created: Mon Dec 07 21:07:20 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -34,7 +34,6 @@ An0 @PushWFArc f22 '' #zField
 An0 @PushWFArc f8 '' #zField
 An0 @EMail f24 '' #zField
 An0 @PushWFArc f31 '' #zField
-An0 @PushWFArc f13 '' #zField
 An0 @Alternative f11 '' #zField
 An0 @PushWFArc f14 '' #zField
 An0 @RichDialog f16 '' #zField
@@ -57,6 +56,7 @@ An0 @PushWFArc f52 '' #zField
 An0 @GridStep f19 '' #zField
 An0 @PushWFArc f12 '' #zField
 An0 @TkArc f4 '' #zField
+An0 @PushWFArc f6 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -445,8 +445,6 @@ An0 f24 @|EMailIcon #fIcon
 An0 f31 expr data #txt
 An0 f31 outCond ivp=="TaskA.ivp" #txt
 An0 f31 792 168 856 168 #arcP
-An0 f13 expr out #txt
-An0 f13 1192 168 1280 168 #arcP
 An0 f11 type einbuergerung_Gruppe6.Data #txt
 An0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -473,7 +471,9 @@ An0 f14 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f14 1312 168 1472 168 #arcP
+An0 f14 1306 174 1476 172 #arcP
+An0 f14 1 1360 208 #addKink
+An0 f14 1 0.2373128764349539 0 0 #arcLabel
 An0 f16 targetWindow NEW:card: #txt
 An0 f16 targetDisplay TOP #txt
 An0 f16 richDialogId einbuergerung_Gruppe6.terminWaehlen_v4 #txt
@@ -703,6 +703,10 @@ An0 f4 expr out #txt
 An0 f4 type einbuergerung_Gruppe6.Data #txt
 An0 f4 var in1 #txt
 An0 f4 200 190 200 424 #arcP
+An0 f6 expr out #txt
+An0 f6 1189 190 1474 170 #arcP
+An0 f6 1 1232 208 #addKink
+An0 f6 1 0.047321269787407305 0 0 #arcLabel
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -741,8 +745,6 @@ An0 f30 mainOut f8 tail #connect
 An0 f8 head f1 mainIn #connect
 An0 f25 out f31 tail #connect
 An0 f31 head f26 mainIn #connect
-An0 f18 mainOut f13 tail #connect
-An0 f13 head f11 in #connect
 An0 f11 out f14 tail #connect
 An0 f14 head f5 in #connect
 An0 f3 out f36 tail #connect
@@ -769,3 +771,5 @@ An0 f24 mainOut f12 tail #connect
 An0 f12 head f39 in #connect
 An0 f21 mainOut f4 tail #connect
 An0 f4 head f3 in #connect
+An0 f18 mainOut f6 tail #connect
+An0 f6 head f5 in #connect

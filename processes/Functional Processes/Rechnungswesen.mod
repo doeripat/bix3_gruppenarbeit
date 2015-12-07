@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 19:03:48 CET 2015]
+[>Created: Mon Dec 07 19:46:25 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -29,13 +29,15 @@ Rn0 @Alternative f18 '' #zField
 Rn0 @PushWFArc f20 '' #zField
 Rn0 @PushWFArc f21 '' #zField
 Rn0 @TaskSwitch f16 '' #zField
-Rn0 @TkArc f8 '' #zField
 Rn0 @ProcessException f14 '' #zField
 Rn0 @PushWFArc f7 '' #zField
 Rn0 @PushWFArc f10 '' #zField
 Rn0 @DBStep f35 '' #zField
 Rn0 @PushWFArc f15 '' #zField
-Rn0 @TkArc f12 '' #zField
+Rn0 @Alternative f22 '' #zField
+Rn0 @PushWFArc f23 '' #zField
+Rn0 @PushWFArc f24 '' #zField
+Rn0 @TkArc f8 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
 Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Invoice invoice,einbuergerung_Gruppe6.Data data> param;' #txt
 Rn0 f0 inParamTable 'out=param.data;
@@ -90,7 +92,7 @@ Erinnerung</name>
 Rn0 f44 944 162 112 44 -30 -16 #rect
 Rn0 f44 @|EMailIcon #fIcon
 Rn0 f1 type einbuergerung_Gruppe6.Data #txt
-Rn0 f1 785 81 30 30 0 15 #rect
+Rn0 f1 905 81 30 30 0 15 #rect
 Rn0 f1 @|EndSubIcon #fIcon
 Rn0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -166,10 +168,10 @@ Request inovice list</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f9 608 74 128 44 -46 -16 #rect
+Rn0 f9 728 74 128 44 -46 -16 #rect
 Rn0 f9 @|StepIcon #fIcon
 Rn0 f5 expr out #txt
-Rn0 f5 736 96 785 96 #arcP
+Rn0 f5 856 96 905 96 #arcP
 Rn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f11 actionTable 'out=in;
@@ -237,7 +239,7 @@ Rn0 f16 actionTable 'out=in1;
 Rn0 f16 outTypes "einbuergerung_Gruppe6.Data" #txt
 Rn0 f16 outLinks "TaskA.ivp" #txt
 Rn0 f16 caseData '#
-#Mon Nov 30 21:56:50 CET 2015
+#Mon Dec 07 19:42:03 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -265,15 +267,15 @@ type.code=
 type.name=
 ' #txt
 Rn0 f16 taskData '#
-#Mon Nov 30 21:56:50 CET 2015
+#Mon Dec 07 19:42:03 CET 2015
 TaskA.EXC=1505C5AC6EFDC232-f14-buffer
-TaskA.EXP=''10s''
+TaskA.EXP=''5s''
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
 TaskA.NAM=Ist die Zahlung eingegangen (Erst bei Zahlungseingang klicken\!)
 TaskA.PRI=2
-TaskA.ROL=Kanzleimitarbeiter
+TaskA.ROL=Migrationsamt Pr\u00FCfer
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -285,9 +287,9 @@ taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
 taskDef.setName(engine.expandMacros("Ist die Zahlung eingegangen (Erst bei Zahlungseingang klicken!)"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Kanzleimitarbeiter");
+taskDef.setActivator("Migrationsamt Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''10s'').toNumber());
+taskDef.setExpiryPeriod(1000 * (''5s'').toNumber());
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryStartTaskElementPid("1505C5AC6EFDC232-f14-buffer");
@@ -305,15 +307,8 @@ Rn0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f16 528 80 32 32 -41 -59 #rect
+Rn0 f16 632 80 32 32 -41 -59 #rect
 Rn0 f16 @|TaskSwitchIcon #fIcon
-Rn0 f8 expr out #txt
-Rn0 f8 type einbuergerung_Gruppe6.Data #txt
-Rn0 f8 var in1 #txt
-Rn0 f8 1000 206 544 112 #arcP
-Rn0 f8 1 1000 288 #addKink
-Rn0 f8 2 544 288 #addKink
-Rn0 f8 1 0.5153508771929824 0 0 #arcLabel
 Rn0 f14 .resExport export #txt
 Rn0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -335,7 +330,7 @@ Rn0 f7 expr out #txt
 Rn0 f7 647 184 712 184 #arcP
 Rn0 f10 expr data #txt
 Rn0 f10 outCond ivp=="TaskA.ivp" #txt
-Rn0 f10 560 96 608 96 #arcP
+Rn0 f10 664 96 728 96 #arcP
 Rn0 f35 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Rn0 f35 actionTable 'out=in;
@@ -362,10 +357,20 @@ Rn0 f35 392 74 112 44 -39 -8 #rect
 Rn0 f35 @|DBStepIcon #fIcon
 Rn0 f15 expr out #txt
 Rn0 f15 368 96 392 96 #arcP
-Rn0 f12 expr out #txt
-Rn0 f12 type einbuergerung_Gruppe6.Data #txt
-Rn0 f12 var in2 #txt
-Rn0 f12 504 96 528 96 #arcP
+Rn0 f22 type einbuergerung_Gruppe6.Data #txt
+Rn0 f22 544 80 32 32 0 16 #rect
+Rn0 f22 @|AlternativeIcon #fIcon
+Rn0 f23 expr out #txt
+Rn0 f23 504 96 544 96 #arcP
+Rn0 f24 expr out #txt
+Rn0 f24 1000 206 560 112 #arcP
+Rn0 f24 1 1000 288 #addKink
+Rn0 f24 2 560 288 #addKink
+Rn0 f24 1 0.5153508771929824 0 0 #arcLabel
+Rn0 f8 expr in #txt
+Rn0 f8 type einbuergerung_Gruppe6.Data #txt
+Rn0 f8 var in1 #txt
+Rn0 f8 576 96 632 96 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -395,13 +400,15 @@ Rn0 f18 out f20 tail #connect
 Rn0 f20 head f11 mainIn #connect
 Rn0 f18 out f21 tail #connect
 Rn0 f21 head f6 mainIn #connect
-Rn0 f44 mainOut f8 tail #connect
-Rn0 f8 head f16 in #connect
 Rn0 f14 mainOut f7 tail #connect
 Rn0 f7 head f18 in #connect
 Rn0 f16 out f10 tail #connect
 Rn0 f10 head f9 mainIn #connect
 Rn0 f32 mainOut f15 tail #connect
 Rn0 f15 head f35 mainIn #connect
-Rn0 f35 mainOut f12 tail #connect
-Rn0 f12 head f16 in #connect
+Rn0 f35 mainOut f23 tail #connect
+Rn0 f23 head f22 in #connect
+Rn0 f44 mainOut f24 tail #connect
+Rn0 f24 head f22 in #connect
+Rn0 f22 out f8 tail #connect
+Rn0 f8 head f16 in #connect

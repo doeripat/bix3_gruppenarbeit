@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 19:02:21 CET 2015]
+[>Created: Mon Dec 07 19:46:39 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -253,7 +253,7 @@ dn0 f11 actionTable 'out=in1;
 dn0 f11 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f11 outLinks "TaskA.ivp" #txt
 dn0 f11 caseData '#
-#Wed Nov 25 15:14:59 CET 2015
+#Mon Dec 07 19:46:38 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -281,12 +281,12 @@ type.code=
 type.name=
 ' #txt
 dn0 f11 taskData '#
-#Wed Nov 25 15:14:59 CET 2015
+#Mon Dec 07 19:46:38 CET 2015
 TaskA.DESC=Bitte f\u00FCllen Ihr Gesuchsformular aus.
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
-TaskA.NAM=Ges\u00FCchsformular ausf\u00FCllen
+TaskA.NAM=Gesuchsformular ausf\u00FCllen
 TaskA.PRI=2
 TaskA.ROL=Antragsteller
 TaskA.SKIP_TASK_LIST=false
@@ -298,7 +298,7 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Gesüchsformular ausfüllen"));
+taskDef.setName(engine.expandMacros("Gesuchsformular ausfüllen"));
 taskDef.setDescription(engine.expandMacros("Bitte füllen Ihr Gesuchsformular aus."));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Antragsteller");

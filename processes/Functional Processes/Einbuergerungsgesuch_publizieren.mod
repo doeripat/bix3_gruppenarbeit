@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 18:57:58 CET 2015]
+[>Created: Mon Dec 07 20:36:33 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -187,7 +187,7 @@ En0 f32 actionTable 'out=in1;
 En0 f32 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f32 outLinks "TaskA.ivp" #txt
 En0 f32 caseData '#
-#Mon Nov 30 10:31:42 CET 2015
+#Mon Dec 07 20:35:45 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -215,13 +215,13 @@ type.code=
 type.name=
 ' #txt
 En0 f32 taskData '#
-#Mon Nov 30 10:31:41 CET 2015
+#Mon Dec 07 20:35:45 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
-TaskA.NAM=Bitte engegangene Einw\u00E4nde zu Gesuch <%\=in1.request.uniqueIdentifier%>
+TaskA.NAM=Bitte engegangene Einw\u00E4nde zu Gesuch <%\=in1.request.uniqueIdentifier%> pr\u00FCfen
 TaskA.PRI=2
-TaskA.ROL=Migrationsamt Pruefer
+TaskA.ROL=Migrationsamt Pr\u00FCfer
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -231,9 +231,9 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Bitte engegangene Einwände zu Gesuch <%=in1.request.uniqueIdentifier%>"));
+taskDef.setName(engine.expandMacros("Bitte engegangene Einwände zu Gesuch <%=in1.request.uniqueIdentifier%> prüfen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Migrationsamt Pruefer");
+taskDef.setActivator("Migrationsamt Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -504,7 +504,7 @@ En0 f7 actionTable 'out=in1;
 En0 f7 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f7 outLinks "TaskA.ivp" #txt
 En0 f7 caseData '#
-#Sun Nov 29 14:37:31 CET 2015
+#Mon Dec 07 20:36:14 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -532,7 +532,7 @@ type.code=
 type.name=
 ' #txt
 En0 f7 taskData '#
-#Sun Nov 29 14:37:31 CET 2015
+#Mon Dec 07 20:36:14 CET 2015
 TaskA.EXC=1506BC4D39F48130-f10-buffer
 TaskA.EXP=''1440h''
 TaskA.EXPRI=2
