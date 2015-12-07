@@ -66,8 +66,10 @@ public class PersonHelper {
 							newPersonList.add(person2);
 					}
 				}
-				newPersonList.add(person);
+				if (!(newPersonList.contains(person)))
+					newPersonList.add(person);
 			} else {
+				if (!(newPersonList.contains(person)))
 					newPersonList.add(person);
 			}
 		}
