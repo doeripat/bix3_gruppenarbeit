@@ -12,4 +12,9 @@
         <username>Heidi Hildebrant</username>
         <role>Migrationsamt Wohnsitzbestätigung Prüfer</role>
     </user>
+    <user>
+        <username>soap</username>
+        <password>12345</password>
+        <role>WebServiceUser</role>
+    </user>
 </userConfig>
