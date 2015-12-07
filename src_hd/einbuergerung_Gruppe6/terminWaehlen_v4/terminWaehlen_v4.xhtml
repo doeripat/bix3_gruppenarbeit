@@ -18,7 +18,7 @@
 			<h:form id="form">
 				<h:panelGrid columns="2">
 					<f:facet name="header">
-						<p:messages></p:messages>
+						<p:messages rendered="#{data.message != null}"><p:outputLabel id="message" value="#{data.message}" styleClass="readonly_text" /></p:messages>
 					</f:facet>
 					<p:dataTable var="person" value="#{data.request.personList}" id="personTable" editable="true">
 						<p:column headerText="Vorname">
@@ -30,12 +30,22 @@
 						<p:column headerText="Rolle">
 						  <h:outputText value="#{person.role}" />
 						</p:column>
-						<p:column headerText="Terminwahl">
+						<p:column headerText="Terminwahl" rendered="#{person.role == 'adult' || person.role == 'applicant'}">
 								<p:cellEditor>
 									<f:facet name="output"><h:outputText value="#{person.meetingString}" /></f:facet>
 									<f:facet name="input">
-										<p:selectOneMenu id="meeting" value="#{person.meetingString}" style="width:125px">
+										<p:selectOneMenu id="meeting" value="#{person.meetingString}" style="width:150px">
 			            					<f:selectItems value="#{data.dateDropDownList}" />
+			        					</p:selectOneMenu>
+		        					</f:facet>
+								</p:cellEditor>
+						</p:column>
+						<p:column headerText="Terminwahl" rendered="#{person.role == 'child'}">
+								<p:cellEditor>
+									<f:facet name="output"><h:outputText value="#{person.relationship}" /></f:facet>
+									<f:facet name="input">
+										<p:selectOneMenu id="relationship" value="#{person.relationship}" style="width:150px">
+			            					<f:selectItems value="#{data.adultDropDownList}" />
 			        					</p:selectOneMenu>
 		        					</f:facet>
 								</p:cellEditor>
@@ -44,7 +54,7 @@
 						   			<p:rowEditor />
 						</p:column>
 					</p:dataTable>
-					
+									
 					<br/>
 					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 				</h:panelGrid>

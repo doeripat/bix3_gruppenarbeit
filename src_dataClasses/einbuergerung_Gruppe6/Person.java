@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 1865589391796622215L;
+  private static final long serialVersionUID = 1524385370421325731L;
 
   private java.lang.String firstname;
 
@@ -307,6 +307,46 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setMeetingString(java.lang.String _meetingString)
   {
     meetingString = _meetingString;
+  }
+
+  private java.lang.String relationship;
+
+  /**
+   * Gets the field relationship.
+   * @return the value of the field relationship; may be null.
+   */
+  public java.lang.String getRelationship()
+  {
+    return relationship;
+  }
+
+  /**
+   * Sets the field relationship.
+   * @param _relationship the new value of the field relationship.
+   */
+  public void setRelationship(java.lang.String _relationship)
+  {
+    relationship = _relationship;
+  }
+
+  private int flag;
+
+  /**
+   * Gets the field flag.
+   * @return the value of the field flag; may be null.
+   */
+  public int getFlag()
+  {
+    return flag;
+  }
+
+  /**
+   * Sets the field flag.
+   * @param _flag the new value of the field flag.
+   */
+  public void setFlag(int _flag)
+  {
+    flag = _flag;
   }
 
 }

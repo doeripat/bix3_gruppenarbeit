@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Nov 27 11:58:24 CET 2015]
+[>Created: Mon Dec 07 15:26:55 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -26,7 +26,6 @@ An0 @TkArc f11 '' #zField
 An0 @PushWFArc f6 '' #zField
 An0 @EMail f5 '' #zField
 An0 @GridStep f3 '' #zField
-An0 @PushWFArc f4 '' #zField
 An0 @RichDialog f12 '' #zField
 An0 @RichDialog f7 '' #zField
 An0 @Alternative f8 '' #zField
@@ -36,11 +35,16 @@ An0 @PushWFArc f21 '' #zField
 An0 @PushWFArc f23 '' #zField
 An0 @PushWFArc f14 '' #zField
 An0 @Alternative f26 '' #zField
-An0 @PushWFArc f27 '' #zField
 An0 @PushWFArc f24 '' #zField
-An0 @PushWFArc f28 '' #zField
-An0 @PushWFArc f25 '' #zField
 An0 @PushWFArc f15 '' #zField
+An0 @PushWFArc f4 '' #zField
+An0 @PushWFArc f22 '' #zField
+An0 @Alternative f25 '' #zField
+An0 @PushWFArc f27 '' #zField
+An0 @PushWFArc f29 '' #zField
+An0 @DBStep f31 '' #zField
+An0 @PushWFArc f19 '' #zField
+An0 @PushWFArc f28 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -63,7 +67,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f0 105 305 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 1681 505 30 30 0 15 #rect
+An0 f1 2417 505 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f2 targetWindow NEW:card: #txt
 An0 f2 targetDisplay TOP #txt
@@ -165,7 +169,7 @@ An0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f10 712 504 32 32 0 18 #rect
+An0 f10 720 504 32 32 0 18 #rect
 An0 f10 @|TaskSwitchIcon #fIcon
 An0 f13 targetWindow NEW:card: #txt
 An0 f13 targetDisplay TOP #txt
@@ -194,7 +198,7 @@ An0 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f13 960 498 112 44 -15 -8 #rect
+An0 f13 968 498 112 44 -15 -8 #rect
 An0 f13 @|RichDialogIcon #fIcon
 An0 f47 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -291,7 +295,7 @@ An0 f9 240 320 288 320 #arcP
 An0 f11 expr out #txt
 An0 f11 type einbuergerung_Gruppe6.Data #txt
 An0 f11 var in1 #txt
-An0 f11 728 182 728 504 #arcP
+An0 f11 736 182 736 504 #arcP
 An0 f6 expr out #txt
 An0 f6 352 298 352 182 #arcP
 An0 f5 beanConfig '"{/emailSubject ""Ihre Zugangsdaten für den Einbürgerungsprozess""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBei Ihrem Besuch bei der Kanzlei haben Sie sich für die  Einbürgerung informiert.\\nFalls Sie den Einbürgerungsprozess Starten möchten melden Sie sich bitte auf unserer Homepage mit folgenden Daten an:\\n\\nBenutzername: <%=in.request.email%>\\nPasswort: <%=in.request.password%>\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
@@ -307,7 +311,7 @@ an Antragsteller senden</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f5 640 138 176 44 -68 -16 #rect
+An0 f5 648 138 176 44 -68 -16 #rect
 An0 f5 @|EMailIcon #fIcon
 An0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -327,8 +331,6 @@ An0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f3 272 138 160 44 -75 -8 #rect
 An0 f3 @|StepIcon #fIcon
-An0 f4 expr out #txt
-An0 f4 432 160 640 160 #arcP
 An0 f12 targetWindow NEW:card: #txt
 An0 f12 targetDisplay TOP #txt
 An0 f12 richDialogId einbuergerung_Gruppe6.personalienVervollstaendigen_v2 #txt
@@ -360,7 +362,7 @@ vervollständigen</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f12 1152 498 128 44 -42 -16 #rect
+An0 f12 1160 498 128 44 -42 -16 #rect
 An0 f12 @|RichDialogIcon #fIcon
 An0 f7 targetWindow NEW:card: #txt
 An0 f7 targetDisplay TOP #txt
@@ -389,13 +391,13 @@ An0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f7 1408 498 112 44 -53 -8 #rect
+An0 f7 1736 498 112 44 -53 -8 #rect
 An0 f7 @|RichDialogIcon #fIcon
 An0 f8 type einbuergerung_Gruppe6.Data #txt
-An0 f8 1576 504 32 32 0 16 #rect
+An0 f8 1904 504 32 32 0 16 #rect
 An0 f8 @|AlternativeIcon #fIcon
 An0 f16 expr out #txt
-An0 f16 1520 520 1576 520 #arcP
+An0 f16 1848 520 1904 520 #arcP
 An0 f20 targetWindow NEW:card: #txt
 An0 f20 targetDisplay TOP #txt
 An0 f20 richDialogId einbuergerung_Gruppe6.PersonHinzufuegen #txt
@@ -420,36 +422,67 @@ An0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f20 1408 562 112 44 -51 -8 #rect
+An0 f20 1736 562 112 44 -51 -8 #rect
 An0 f20 @|RichDialogIcon #fIcon
 An0 f21 expr in #txt
 An0 f21 outCond in.addPerson==true #txt
-An0 f21 1592 536 1520 584 #arcP
-An0 f21 1 1592 584 #addKink
+An0 f21 1920 536 1848 584 #arcP
+An0 f21 1 1920 584 #addKink
 An0 f21 1 0.16111158056855635 0 0 #arcLabel
 An0 f23 expr out #txt
-An0 f23 1464 562 1464 542 #arcP
+An0 f23 1792 562 1792 542 #arcP
 An0 f14 expr out #txt
-An0 f14 1072 520 1152 520 #arcP
+An0 f14 1080 520 1160 520 #arcP
 An0 f26 type einbuergerung_Gruppe6.Data #txt
-An0 f26 1328 504 32 32 0 16 #rect
+An0 f26 1656 504 32 32 0 16 #rect
 An0 f26 @|AlternativeIcon #fIcon
-An0 f27 expr out #txt
-An0 f27 1280 520 1328 520 #arcP
-An0 f27 0 0.4999999999999999 0 0 #arcLabel
 An0 f24 expr in #txt
 An0 f24 outCond in.addPerson==true #txt
-An0 f24 1360 520 1408 520 #arcP
-An0 f28 expr in #txt
-An0 f28 1344 504 1696 505 #arcP
-An0 f28 1 1344 472 #addKink
-An0 f28 2 1696 472 #addKink
-An0 f28 1 0.485394020881295 0 0 #arcLabel
-An0 f25 expr in #txt
-An0 f25 1608 520 1681 520 #arcP
+An0 f24 1688 520 1736 520 #arcP
 An0 f15 expr data #txt
 An0 f15 outCond ivp=="TaskA.ivp" #txt
-An0 f15 744 520 960 520 #arcP
+An0 f15 752 520 968 520 #arcP
+An0 f4 expr out #txt
+An0 f4 432 160 648 160 #arcP
+An0 f22 expr out #txt
+An0 f22 1288 520 1656 520 #arcP
+An0 f25 type einbuergerung_Gruppe6.Data #txt
+An0 f25 2160 504 32 32 0 16 #rect
+An0 f25 @|AlternativeIcon #fIcon
+An0 f27 expr in #txt
+An0 f27 1936 520 2160 520 #arcP
+An0 f29 expr in #txt
+An0 f29 1672 504 2176 504 #arcP
+An0 f29 1 1672 472 #addKink
+An0 f29 2 2176 472 #addKink
+An0 f29 1 0.485394020881295 0 0 #arcLabel
+An0 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f31 actionTable 'out=in;
+' #txt
+An0 f31 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
+<UPDATE><Table name=''Request''/><Value column=''status''><String>""Antrag eingegangen""</String></Value></UPDATE>' #txt
+An0 f31 dbUrl AmazonDB #txt
+An0 f31 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+An0 f31 lotSize 2147483647 #txt
+An0 f31 startIdx 0 #txt
+An0 f31 type einbuergerung_Gruppe6.Data #txt
+An0 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status Update</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f31 2248 498 112 44 -39 -8 #rect
+An0 f31 @|DBStepIcon #fIcon
+An0 f19 expr in #txt
+An0 f19 2192 520 2248 520 #arcP
+An0 f28 expr out #txt
+An0 f28 2360 520 2417 520 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -489,8 +522,6 @@ An0 f0 mainOut f18 tail #connect
 An0 f18 head f17 in #connect
 An0 f17 out f9 tail #connect
 An0 f9 head f2 mainIn #connect
-An0 f3 mainOut f4 tail #connect
-An0 f4 head f5 mainIn #connect
 An0 f7 mainOut f16 tail #connect
 An0 f16 head f8 in #connect
 An0 f8 out f21 tail #connect
@@ -499,13 +530,19 @@ An0 f20 mainOut f23 tail #connect
 An0 f23 head f7 mainIn #connect
 An0 f13 mainOut f14 tail #connect
 An0 f14 head f12 mainIn #connect
-An0 f12 mainOut f27 tail #connect
-An0 f27 head f26 in #connect
 An0 f26 out f24 tail #connect
 An0 f24 head f7 mainIn #connect
-An0 f26 out f28 tail #connect
-An0 f28 head f1 mainIn #connect
-An0 f8 out f25 tail #connect
-An0 f25 head f1 mainIn #connect
 An0 f10 out f15 tail #connect
 An0 f15 head f13 mainIn #connect
+An0 f3 mainOut f4 tail #connect
+An0 f4 head f5 mainIn #connect
+An0 f12 mainOut f22 tail #connect
+An0 f22 head f26 in #connect
+An0 f8 out f27 tail #connect
+An0 f27 head f25 in #connect
+An0 f26 out f29 tail #connect
+An0 f29 head f25 in #connect
+An0 f25 out f19 tail #connect
+An0 f19 head f31 mainIn #connect
+An0 f31 mainOut f28 tail #connect
+An0 f28 head f1 mainIn #connect

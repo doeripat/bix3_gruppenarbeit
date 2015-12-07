@@ -7,3 +7,7 @@ meetingList Recordset #field
 meetingList PERSISTENT #fieldModifier
 meetingListString List<String> #field
 meetingListString PERSISTENT #fieldModifier
+adultDropDownList List<String> #field
+adultDropDownList PERSISTENT #fieldModifier
+message String #field
+message PERSISTENT #fieldModifier

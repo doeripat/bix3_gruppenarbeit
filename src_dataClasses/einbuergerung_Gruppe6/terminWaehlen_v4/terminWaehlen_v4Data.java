@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.terminWaehlen_v4;
 public class terminWaehlen_v4Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -1573809122857534461L;
+  private static final long serialVersionUID = 7941081688319318495L;
 
   private transient einbuergerung_Gruppe6.Request request;
 
@@ -87,6 +87,46 @@ public class terminWaehlen_v4Data extends ch.ivyteam.ivy.scripting.objects.Compo
   public void setMeetingListString(ch.ivyteam.ivy.scripting.objects.List<java.lang.String> _meetingListString)
   {
     meetingListString = _meetingListString;
+  }
+
+  private ch.ivyteam.ivy.scripting.objects.List<java.lang.String> adultDropDownList;
+
+  /**
+   * Gets the field adultDropDownList.
+   * @return the value of the field adultDropDownList; may be null.
+   */
+  public ch.ivyteam.ivy.scripting.objects.List<java.lang.String> getAdultDropDownList()
+  {
+    return adultDropDownList;
+  }
+
+  /**
+   * Sets the field adultDropDownList.
+   * @param _adultDropDownList the new value of the field adultDropDownList.
+   */
+  public void setAdultDropDownList(ch.ivyteam.ivy.scripting.objects.List<java.lang.String> _adultDropDownList)
+  {
+    adultDropDownList = _adultDropDownList;
+  }
+
+  private java.lang.String message;
+
+  /**
+   * Gets the field message.
+   * @return the value of the field message; may be null.
+   */
+  public java.lang.String getMessage()
+  {
+    return message;
+  }
+
+  /**
+   * Sets the field message.
+   * @param _message the new value of the field message.
+   */
+  public void setMessage(java.lang.String _message)
+  {
+    message = _message;
   }
 
 }

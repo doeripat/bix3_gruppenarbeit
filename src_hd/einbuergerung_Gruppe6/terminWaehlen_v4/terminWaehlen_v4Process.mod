@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 08:51:44 CET 2015]
+[>Created: Mon Dec 07 18:14:51 CET 2015]
 1517BAECF236852E 3.17 #module
 >Proto >Proto Collection #zClass
 ts0 terminWaehlen_v4Process Big #zClass
@@ -23,22 +23,27 @@ ts0 @GridStep f10 '' #zField
 ts0 @DBStep f6 '' #zField
 ts0 @GridStep f14 '' #zField
 ts0 @GridStep f16 '' #zField
-ts0 @PushWFArc f12 '' #zField
 ts0 @PushWFArc f15 '' #zField
 ts0 @PushWFArc f17 '' #zField
-ts0 @PushWFArc f7 '' #zField
 ts0 @PushWFArc f2 '' #zField
 ts0 @GridStep f8 '' #zField
-ts0 @PushWFArc f9 '' #zField
-ts0 @DBStep f11 '' #zField
-ts0 @PushWFArc f5 '' #zField
+ts0 @GridStep f24 '' #zField
+ts0 @PushWFArc f25 '' #zField
+ts0 @PushWFArc f12 '' #zField
+ts0 @GridStep f11 '' #zField
+ts0 @Alternative f5 '' #zField
 ts0 @Alternative f18 '' #zField
-ts0 @PushWFArc f13 '' #zField
-ts0 @GridStep f20 '' #zField
-ts0 @PushWFArc f21 '' #zField
 ts0 @PushWFArc f19 '' #zField
+ts0 @PushWFArc f7 '' #zField
+ts0 @PushWFArc f21 '' #zField
 ts0 @GridStep f22 '' #zField
 ts0 @PushWFArc f23 '' #zField
+ts0 @PushWFArc f20 '' #zField
+ts0 @GridStep f26 '' #zField
+ts0 @PushWFArc f27 '' #zField
+ts0 @PushWFArc f9 '' #zField
+ts0 @PushWFArc f28 '' #zField
+ts0 @PushWFArc f13 '' #zField
 >Proto ts0 ts0 terminWaehlen_v4Process #zField
 ts0 f0 guid 15178F8EA75289A1 #txt
 ts0 f0 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
@@ -63,7 +68,7 @@ ts0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ts0 f0 83 51 26 26 -39 15 #rect
 ts0 f0 @|RichDialogInitStartIcon #fIcon
 ts0 f1 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
-ts0 f1 827 51 26 26 0 12 #rect
+ts0 f1 1171 51 26 26 0 12 #rect
 ts0 f1 @|RichDialogProcessEndIcon #fIcon
 ts0 f3 guid 15178F8EA8051F91 #txt
 ts0 f3 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
@@ -82,7 +87,7 @@ ts0 f3 83 147 26 26 -15 12 #rect
 ts0 f3 @|RichDialogProcessStartIcon #fIcon
 ts0 f4 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 ts0 f4 guid 15178F8EA80DC9E6 #txt
-ts0 f4 899 147 26 26 0 12 #rect
+ts0 f4 987 147 26 26 0 12 #rect
 ts0 f4 @|RichDialogEndIcon #fIcon
 ts0 f10 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -105,7 +110,7 @@ ts0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f10 168 42 112 44 -31 -8 #rect
+ts0 f10 352 42 112 44 -31 -8 #rect
 ts0 f10 @|StepIcon #fIcon
 ts0 f6 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -136,7 +141,7 @@ from Database</name>
     </language>
 </elementInfo>
 ' #txt
-ts0 f6 320 42 128 44 -40 -16 #rect
+ts0 f6 664 42 128 44 -40 -16 #rect
 ts0 f6 @|DBStepIcon #fIcon
 ts0 f14 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -155,7 +160,7 @@ to List&lt;String&gt;</name>
     </language>
 </elementInfo>
 ' #txt
-ts0 f14 480 42 128 44 -44 -16 #rect
+ts0 f14 824 42 128 44 -44 -16 #rect
 ts0 f14 @|StepIcon #fIcon
 ts0 f16 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -172,18 +177,14 @@ ts0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f16 648 42 112 44 -51 -8 #rect
+ts0 f16 992 42 112 44 -51 -8 #rect
 ts0 f16 @|StepIcon #fIcon
-ts0 f12 expr out #txt
-ts0 f12 280 64 320 64 #arcP
 ts0 f15 expr out #txt
-ts0 f15 448 64 480 64 #arcP
+ts0 f15 792 64 824 64 #arcP
 ts0 f17 expr out #txt
-ts0 f17 608 64 648 64 #arcP
-ts0 f7 expr out #txt
-ts0 f7 109 64 168 64 #arcP
+ts0 f17 952 64 992 64 #arcP
 ts0 f2 expr out #txt
-ts0 f2 760 64 827 64 #arcP
+ts0 f2 1104 64 1171 64 #arcP
 ts0 f8 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
 ts0 f8 actionTable 'out=in;
@@ -216,72 +217,169 @@ ts0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f8 152 138 192 44 -93 -8 #rect
+ts0 f8 320 138 192 44 -93 -8 #rect
 ts0 f8 @|StepIcon #fIcon
-ts0 f9 expr out #txt
-ts0 f9 109 160 152 160 #arcP
+ts0 f24 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
+' #txt
+ts0 f24 actionTable 'out=in;
+out.adultDropDownList=einbuergerung_Gruppe6.PersonHelper.getAdultPersonListString(in.request.personList);
+' #txt
+ts0 f24 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
+ts0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>init adultPersonListString</name>
+        <nameStyle>26,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ts0 f24 496 42 144 44 -69 -8 #rect
+ts0 f24 @|StepIcon #fIcon
+ts0 f25 expr out #txt
+ts0 f25 464 64 496 64 #arcP
+ts0 f12 expr out #txt
+ts0 f12 640 64 664 64 #arcP
 ts0 f11 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
 ts0 f11 actionTable 'out=in;
+out.request.personList=einbuergerung_Gruppe6.PersonHelper.setResponsibilty(in.request.personList);
 ' #txt
-ts0 f11 lotSize 2147483647 #txt
-ts0 f11 startIdx 0 #txt
 ts0 f11 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
-ts0 f11 600 138 112 44 0 -8 #rect
-ts0 f11 @|DBStepIcon #fIcon
-ts0 f5 expr out #txt
-ts0 f5 712 160 899 160 #arcP
+ts0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>set togetherWith for Person</name>
+        <nameStyle>27,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ts0 f11 520 242 160 44 -74 -8 #rect
+ts0 f11 @|StepIcon #fIcon
+ts0 f5 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
+ts0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>vollständig
+ausgefüllt?</name>
+        <nameStyle>23,7
+</nameStyle>
+        <desc>alle Adults haben einen Termin
+alle Child haben eine Relationship</desc>
+    </language>
+</elementInfo>
+' #txt
+ts0 f5 656 144 32 32 -30 18 #rect
+ts0 f5 @|AlternativeIcon #fIcon
 ts0 f18 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
-ts0 f18 552 144 32 32 0 16 #rect
+ts0 f18 264 48 32 32 0 16 #rect
 ts0 f18 @|AlternativeIcon #fIcon
-ts0 f13 expr in #txt
-ts0 f13 584 160 600 160 #arcP
-ts0 f20 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
-' #txt
-ts0 f20 actionTable 'out=in;
-' #txt
-ts0 f20 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
-ts0 f20 384 138 112 44 0 -8 #rect
-ts0 f20 @|StepIcon #fIcon
-ts0 f21 expr out #txt
-ts0 f21 344 160 384 160 #arcP
 ts0 f19 expr out #txt
-ts0 f19 496 160 552 160 #arcP
+ts0 f19 109 64 264 64 #arcP
+ts0 f7 expr in #txt
+ts0 f7 296 64 352 64 #arcP
+ts0 f21 expr in #txt
+ts0 f21 outCond '(einbuergerung_Gruppe6.PersonHelper.isAllAdultsHaveMeetingRequest(in.request.personList)==true) || (einbuergerung_Gruppe6.PersonHelper.isAllChildsHaveRelationship(in.request.personList) == true)' #txt
+ts0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ts0 f21 688 160 987 160 #arcP
 ts0 f22 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
 ts0 f22 actionTable 'out=in;
+out.message="Bitte wählen Sie für alle Personen einen Termin";
 ' #txt
 ts0 f22 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
-ts0 f22 744 138 112 44 0 -8 #rect
+ts0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>set message</name>
+        <nameStyle>11,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ts0 f22 432 90 112 44 -36 -8 #rect
 ts0 f22 @|StepIcon #fIcon
-ts0 f23 expr out #txt
-ts0 f23 800 138 440 138 #arcP
-ts0 f23 1 800 112 #addKink
-ts0 f23 2 440 112 #addKink
-ts0 f23 1 0.5 0 0 #arcLabel
+ts0 f23 expr in #txt
+ts0 f23 outCond '(einbuergerung_Gruppe6.PersonHelper.isAllAdultsHaveMeetingRequest(in.request.personList)==false) || (einbuergerung_Gruppe6.PersonHelper.isAllChildsHaveRelationship(in.request.personList) == false)' #txt
+ts0 f23 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ts0 f23 672 144 544 112 #arcP
+ts0 f23 1 672 112 #addKink
+ts0 f23 1 0.39361702127659576 0 0 #arcLabel
+ts0 f20 expr out #txt
+ts0 f20 432 112 280 80 #arcP
+ts0 f20 1 280 112 #addKink
+ts0 f20 1 0.39361702127659576 0 0 #arcLabel
+ts0 f26 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
+' #txt
+ts0 f26 actionTable 'out=in;
+out.message=null;
+' #txt
+ts0 f26 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
+ts0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>init message</name>
+        <nameStyle>12,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+ts0 f26 168 138 112 44 -36 -8 #rect
+ts0 f26 @|StepIcon #fIcon
+ts0 f27 expr out #txt
+ts0 f27 109 160 168 160 #arcP
+ts0 f9 expr out #txt
+ts0 f9 280 160 320 160 #arcP
+ts0 f28 expr out #txt
+ts0 f28 416 182 600 242 #arcP
+ts0 f13 expr out #txt
+ts0 f13 600 242 665 169 #arcP
 >Proto ts0 .type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 >Proto ts0 .processKind HTML_DIALOG #txt
 >Proto ts0 -8 -8 16 16 16 26 #rect
 >Proto ts0 '' #fIcon
-ts0 f10 mainOut f12 tail #connect
-ts0 f12 head f6 mainIn #connect
 ts0 f6 mainOut f15 tail #connect
 ts0 f15 head f14 mainIn #connect
 ts0 f14 mainOut f17 tail #connect
 ts0 f17 head f16 mainIn #connect
-ts0 f0 mainOut f7 tail #connect
-ts0 f7 head f10 mainIn #connect
 ts0 f16 mainOut f2 tail #connect
 ts0 f2 head f1 mainIn #connect
-ts0 f3 mainOut f9 tail #connect
-ts0 f9 head f8 mainIn #connect
-ts0 f11 mainOut f5 tail #connect
-ts0 f5 head f4 mainIn #connect
-ts0 f18 out f13 tail #connect
-ts0 f13 head f11 mainIn #connect
-ts0 f8 mainOut f21 tail #connect
-ts0 f21 head f20 mainIn #connect
-ts0 f20 mainOut f19 tail #connect
+ts0 f10 mainOut f25 tail #connect
+ts0 f25 head f24 mainIn #connect
+ts0 f24 mainOut f12 tail #connect
+ts0 f12 head f6 mainIn #connect
+ts0 f0 mainOut f19 tail #connect
 ts0 f19 head f18 in #connect
-ts0 f22 mainOut f23 tail #connect
-ts0 f23 head f20 mainIn #connect
+ts0 f18 out f7 tail #connect
+ts0 f7 head f10 mainIn #connect
+ts0 f21 head f4 mainIn #connect
+ts0 f5 out f23 tail #connect
+ts0 f23 head f22 mainIn #connect
+ts0 f5 out f21 tail #connect
+ts0 f22 mainOut f20 tail #connect
+ts0 f20 head f18 in #connect
+ts0 f3 mainOut f27 tail #connect
+ts0 f27 head f26 mainIn #connect
+ts0 f26 mainOut f9 tail #connect
+ts0 f9 head f8 mainIn #connect
+ts0 f8 mainOut f28 tail #connect
+ts0 f28 head f11 mainIn #connect
+ts0 f11 mainOut f13 tail #connect
+ts0 f13 head f5 in #connect
