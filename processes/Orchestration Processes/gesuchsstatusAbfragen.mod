@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 15:16:53 CET 2015]
+[>Created: Mon Dec 07 15:54:06 CET 2015]
 1517CA9D518F38B5 3.17 #module
 >Proto >Proto Collection #zClass
 gn0 gesuchsstatusAbfragen Big #zClass
@@ -25,7 +25,8 @@ gn0 @PushWFArc f0 '' #zField
 gn0 ws0 inParamDecl '<java.lang.String uniqueIdentifier> param;' #txt
 gn0 ws0 inParamTable 'out.request.uniqueIdentifier=param.uniqueIdentifier;
 ' #txt
-gn0 ws0 outParamDecl '<java.lang.String gesuchsstatus> result;' #txt
+gn0 ws0 outParamDecl '<java.lang.String gesuchsstatus> result;
+' #txt
 gn0 ws0 outParamTable 'result.gesuchsstatus=in.request.status;
 ' #txt
 gn0 ws0 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -33,11 +34,11 @@ gn0 ws0 actionDecl 'einbuergerung_Gruppe6.Data out;
 gn0 ws0 callSignature GesuchsstatusAbfragen(String) #txt
 gn0 ws0 useUserDefinedException false #txt
 gn0 ws0 taskData '#
-#Mon Dec 07 15:11:02 CET 2015
+#Mon Dec 07 15:54:03 CET 2015
 TaskTriggered.PRI=2
 ' #txt
 gn0 ws0 caseData '#
-#Mon Dec 07 15:11:02 CET 2015
+#Mon Dec 07 15:54:03 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -83,7 +84,7 @@ gn0 ws0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-gn0 ws0 @C|.responsibility Everybody #txt
+gn0 ws0 @C|.responsibility WebServiceUser #txt
 gn0 ws0 81 49 30 30 -70 17 #rect
 gn0 ws0 @|StartWSIcon #fIcon
 gn0 ws1 type einbuergerung_Gruppe6.Data #txt
@@ -121,6 +122,7 @@ gn0 f2 111 64 160 64 #arcP
 gn0 f0 expr out #txt
 gn0 f0 288 64 337 64 #arcP
 >Proto gn0 .webServiceName einbuergerung_Gruppe6.gesuchsstatusAbfragen #txt
+>Proto gn0 .authenticationType HTTP_BASIC #txt
 >Proto gn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto gn0 .processKind WEB_SERVICE #txt
 >Proto gn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

@@ -25,4 +25,7 @@
     <role>
         <identifier>Migrationsamt Prüfer</identifier>
     </role>
+    <role>
+        <identifier>WebServiceUser</identifier>
+    </role>
 </role>
