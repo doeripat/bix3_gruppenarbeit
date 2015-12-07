@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 21:56:53 CET 2015]
+[>Created: Mon Dec 07 10:52:30 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -30,10 +30,12 @@ Rn0 @PushWFArc f20 '' #zField
 Rn0 @PushWFArc f21 '' #zField
 Rn0 @TaskSwitch f16 '' #zField
 Rn0 @TkArc f8 '' #zField
-Rn0 @TkArc f12 '' #zField
 Rn0 @ProcessException f14 '' #zField
 Rn0 @PushWFArc f7 '' #zField
 Rn0 @PushWFArc f10 '' #zField
+Rn0 @DBStep f35 '' #zField
+Rn0 @PushWFArc f15 '' #zField
+Rn0 @TkArc f12 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
 Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Invoice invoice,einbuergerung_Gruppe6.Data data> param;' #txt
 Rn0 f0 inParamTable 'out=param.data;
@@ -70,7 +72,7 @@ senden</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f32 360 74 112 44 -28 -16 #rect
+Rn0 f32 256 74 112 44 -28 -16 #rect
 Rn0 f32 @|EMailIcon #fIcon
 Rn0 f44 beanConfig '"{/emailSubject ""Zahlungserinnerung Gesuch <%=in.request.uniqueIdentifier%>""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nLeider konnten wir keinen Zahlungseingang für folgende Rechnung feststellen.\\nWir bitten sie den Betrag inner 30 Tagen zu begleichen ansonsten müssen wir das Einbürgerungsverfahren einstellen.\\n\\n-------------------------------------------------------------------\\nRechnung:\\n\\nGrund: \\n<%=in.invoice.type%> <%=in.request.uniqueIdentifier%>\\n\\nBetrag:\\nCHF <%=in.invoice.amount%>.00\\nDavon Mahngebühr:\\nCHF 25.00\\n\\nZugunsten von:\\nFinanzdirektion Kanton Schwyz\\nPostfach\\nSchwyz\\n\\nKonto: 70-130-3\\nIBAN: CH50 0000 0 0000 0 000 00 00\\n\\n-------------------------------------------------------------------""/emailAttachments * }"' #txt
 Rn0 f44 type einbuergerung_Gruppe6.Data #txt
@@ -121,12 +123,12 @@ Generate Invoice Nr</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f3 160 74 128 44 -46 -16 #rect
+Rn0 f3 104 74 128 44 -46 -16 #rect
 Rn0 f3 @|StepIcon #fIcon
 Rn0 f4 expr out #txt
-Rn0 f4 79 96 160 96 #arcP
+Rn0 f4 79 96 104 96 #arcP
 Rn0 f2 expr out #txt
-Rn0 f2 288 96 360 96 #arcP
+Rn0 f2 232 96 256 96 #arcP
 Rn0 f6 type einbuergerung_Gruppe6.Data #txt
 Rn0 f6 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
 Rn0 f6 doCall true #txt
@@ -312,10 +314,6 @@ Rn0 f8 1000 206 544 112 #arcP
 Rn0 f8 1 1000 288 #addKink
 Rn0 f8 2 544 288 #addKink
 Rn0 f8 1 0.5153508771929824 0 0 #arcLabel
-Rn0 f12 expr out #txt
-Rn0 f12 type einbuergerung_Gruppe6.Data #txt
-Rn0 f12 var in2 #txt
-Rn0 f12 472 96 528 96 #arcP
 Rn0 f14 .resExport export #txt
 Rn0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -338,6 +336,36 @@ Rn0 f7 647 184 712 184 #arcP
 Rn0 f10 expr data #txt
 Rn0 f10 outCond ivp=="TaskA.ivp" #txt
 Rn0 f10 560 96 608 96 #arcP
+Rn0 f35 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Rn0 f35 actionTable 'out=in;
+' #txt
+Rn0 f35 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
+<UPDATE><Table name=''Request''/><Value column=''status''><String>""Warten auf Zahlungseingang""</String></Value><Condition><Relation kind=''=''><AnyExpression>in.request.uniqueIdentifier</AnyExpression><Column name=''uniqueIdentifier''/></Relation></Condition></UPDATE>' #txt
+Rn0 f35 dbUrl AmazonDB #txt
+Rn0 f35 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+Rn0 f35 dbWizard 'in.request.uniqueIdentifier = uniqueIdentifier' #txt
+Rn0 f35 lotSize 2147483647 #txt
+Rn0 f35 startIdx 0 #txt
+Rn0 f35 type einbuergerung_Gruppe6.Data #txt
+Rn0 f35 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status Update</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f35 392 74 112 44 -39 -8 #rect
+Rn0 f35 @|DBStepIcon #fIcon
+Rn0 f15 expr out #txt
+Rn0 f15 368 96 392 96 #arcP
+Rn0 f12 expr out #txt
+Rn0 f12 type einbuergerung_Gruppe6.Data #txt
+Rn0 f12 var in2 #txt
+Rn0 f12 504 96 528 96 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -369,9 +397,11 @@ Rn0 f18 out f21 tail #connect
 Rn0 f21 head f6 mainIn #connect
 Rn0 f44 mainOut f8 tail #connect
 Rn0 f8 head f16 in #connect
-Rn0 f32 mainOut f12 tail #connect
-Rn0 f12 head f16 in #connect
 Rn0 f14 mainOut f7 tail #connect
 Rn0 f7 head f18 in #connect
 Rn0 f16 out f10 tail #connect
 Rn0 f10 head f9 mainIn #connect
+Rn0 f32 mainOut f15 tail #connect
+Rn0 f15 head f35 mainIn #connect
+Rn0 f35 mainOut f12 tail #connect
+Rn0 f12 head f16 in #connect

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 19:05:40 CET 2015]
+[>Created: Mon Dec 07 10:52:42 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -334,10 +334,10 @@ and endPeriodTime</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f3 384 82 144 44 -51 -16 #rect
+En0 f3 392 82 144 44 -51 -16 #rect
 En0 f3 @|StepIcon #fIcon
 En0 f34 expr out #txt
-En0 f34 360 104 384 104 #arcP
+En0 f34 360 104 392 104 #arcP
 En0 f34 0 0.28881725983930495 0 0 #arcLabel
 En0 f26 targetWindow NEW:card: #txt
 En0 f26 targetDisplay TOP #txt
@@ -441,7 +441,7 @@ En0 f28 actionTable 'out=in;
 ' #txt
 En0 f28 dbSql '<?xml version=""1.0"" standalone=""no""?>
 <!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
-<UPDATE><Table name=''Request''/><Value column=''objection_period_end''><AnyExpression>in.request.endObjectionPeriod</AnyExpression></Value><Condition><Relation kind=''=''><AnyExpression>in.request.uniqueIdentifier</AnyExpression><Column name=''uniqueIdentifier''/></Relation></Condition></UPDATE>' #txt
+<UPDATE><Table name=''Request''/><Value column=''objection_period_end''><AnyExpression>in.request.endObjectionPeriod</AnyExpression></Value><Value column=''status''><String>""Antrag wurde publiziert""</String></Value><Condition><Relation kind=''=''><AnyExpression>in.request.uniqueIdentifier</AnyExpression><Column name=''uniqueIdentifier''/></Relation></Condition></UPDATE>' #txt
 En0 f28 dbUrl AmazonDB #txt
 En0 f28 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 En0 f28 dbWizard 'in.request.uniqueIdentifier = uniqueIdentifier' #txt
@@ -451,20 +451,21 @@ En0 f28 type einbuergerung_Gruppe6.Data #txt
 En0 f28 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Set ObjectionPeriodEnd</name>
-        <nameStyle>22,7
+        <name>Set ObjectionPeriodEnd
+Status Update</name>
+        <nameStyle>36,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 f28 576 82 144 44 -65 -8 #rect
+En0 f28 568 82 160 44 -60 -16 #rect
 En0 f28 @|DBStepIcon #fIcon
 En0 f29 expr out #txt
-En0 f29 528 104 576 104 #arcP
+En0 f29 536 104 568 104 #arcP
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
-En0 f4 720 104 760 104 #arcP
+En0 f4 728 104 760 104 #arcP
 En0 f30 type einbuergerung_Gruppe6.Data #txt
 En0 f30 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
 En0 f30 doCall true #txt
@@ -601,7 +602,7 @@ for(int i=0; i<in.request.personList.size();i++){
 	s=s+"Nationalität: "+in.person.nationality+"\n";
 	s=s+"Anzahl Jahre in der Schweiz: "+in.person.yearCount+"\n\n";	
 	}
-	s=s+"Adresse: "+in.request.address;
+	s=s+"Adresse: "+in.request.address+", "+in.request.postcode+" "+in.request.city;
 	out.request.publicationData=s;
 	' #txt
 En0 f23 type einbuergerung_Gruppe6.Data #txt
