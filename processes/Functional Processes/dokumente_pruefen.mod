@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 10:23:49 CET 2015]
+[>Created: Mon Dec 07 11:24:46 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -55,6 +55,12 @@ dn0 @Alternative f30 '' #zField
 dn0 @TkArc f29 '' #zField
 dn0 @PushWFArc f32 '' #zField
 dn0 @PushWFArc f28 '' #zField
+dn0 @GridStep f20 '' #zField
+dn0 @StartRequest f22 '' #zField
+dn0 @PushWFArc f31 '' #zField
+dn0 @GridStep f33 '' #zField
+dn0 @PushWFArc f34 '' #zField
+dn0 @PushWFArc f35 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -169,6 +175,7 @@ dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 dn0 f23 1600 128 32 32 20 -8 #rect
 dn0 f23 @|AlternativeIcon #fIcon
 dn0 f15 expr in #txt
+dn0 f15 outCond 'in.request.personList != null' #txt
 dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -552,7 +559,7 @@ dn0 f10 976 160 976 368 #arcP
 dn0 f24 expr data #txt
 dn0 f24 outCond ivp=="TaskA.ivp" #txt
 dn0 f24 960 384 904 384 #arcP
-dn0 f14 beanConfig '"{/emailSubject """"/emailFrom """"/emailReplyTo """"/emailTo """"/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""<%@taglib prefix=\\""c\\"" uri=\\""http://java.sun.com/jsp/jstl/core\\""%>\\n\\n<c:forEach items=\\""$${allFestivals}\\"" var=\\""festival\\"">\\n    <tr>      \\n        <td>$${festival.festivalName}</td>\\n        <td>$${festival.location}</td>\\n        <td>$${festival.startDate}</td>\\n        <td>$${festival.endDate}</td>\\n        <td>$${festival.URL}</td>  \\n    </tr>\\n</c:forEach>""/emailAttachments * }"' #txt
+dn0 f14 beanConfig '"{/emailSubject ""Bescheid Dokumente prüfen""/emailFrom ""noreply@migrationsamt.ch""/emailReplyTo """"/emailTo ""mauroyve@students.zhaw.ch""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\n<%=in.mailString%>\\n\\nFreundliche Grüsse\\nDas Migrationsamt""/emailAttachments * }"' #txt
 dn0 f14 type einbuergerung_Gruppe6.Data #txt
 dn0 f14 timeout 0 #txt
 dn0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -600,6 +607,144 @@ dn0 f32 824 362 504 192 #arcP
 dn0 f32 1 824 192 #addKink
 dn0 f32 1 0.21121092218598994 0 0 #arcLabel
 dn0 f28 488 352 488 208 #arcP
+dn0 f20 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+dn0 f20 actionTable 'out=in;
+out.request.commentDeutschkenntnisse="deutsch";
+out.request.commentFinanzen="moneytoblow.ch";
+out.request.commentOnRequest="du bist scheisse";
+out.request.commentWohnsitz="kauf dir ein haus";
+out.request.uniqueIdentifier="987435";
+' #txt
+dn0 f20 actionCode 'import einbuergerung_Gruppe6.Document;
+import einbuergerung_Gruppe6.Person;
+
+for(int i = 0;i<3;i++)
+{
+	Person p = new Person();
+	p.firstname = "Yves"+" "+i;
+	p.lastname = "Mauron"+" "+i;
+	out.request.personList.add(p);
+}
+for(int i = 3;i<6;i++)
+{
+	Person p = new Person();
+	p.firstname = "Yves"+" "+i;
+	p.lastname = "Mauron"+" "+i;
+	out.request.personRemovedList.add(p);
+}
+
+for(int i = 0;i<3;i++)
+{
+	Document d = new Document();
+	d.fileName = "Testfile"+i;
+	out.request.documents.add(d);
+}' #txt
+dn0 f20 type einbuergerung_Gruppe6.Data #txt
+dn0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test init</name>
+        <nameStyle>9,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f20 1328 50 112 44 -21 -8 #rect
+dn0 f20 @|StepIcon #fIcon
+dn0 f20 -613726|-1|-16777216 #nodeStyle
+dn0 f22 outLink startbisi.ivp #txt
+dn0 f22 type einbuergerung_Gruppe6.Data #txt
+dn0 f22 inParamDecl '<> param;' #txt
+dn0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+dn0 f22 guid 1517BE1851252A93 #txt
+dn0 f22 requestEnabled true #txt
+dn0 f22 triggerEnabled false #txt
+dn0 f22 callSignature startbisi() #txt
+dn0 f22 persist false #txt
+dn0 f22 taskData '#
+#Mon Dec 07 10:59:32 CET 2015
+TaskTriggered.ROL=Everybody
+TaskTriggered.EXTYPE=0
+TaskTriggered.EXPRI=2
+TaskTriggered.TYPE=0
+TaskTriggered.PRI=2
+TaskTriggered.EXROL=Everybody
+' #txt
+dn0 f22 caseData '#
+#Mon Dec 07 10:59:32 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+dn0 f22 showInStartList 1 #txt
+dn0 f22 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
+ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
+import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskUpdDef.setExpiryActivator("Everybody");
+taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+engine.updateCurrentTask(taskUpdDef);
+' #txt
+dn0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>startbisi.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+dn0 f22 @C|.responsibility Everybody #txt
+dn0 f22 1233 33 30 30 -31 17 #rect
+dn0 f22 @|StartRequestIcon #fIcon
+dn0 f31 expr out #txt
+dn0 f31 1262 50 1328 72 #arcP
+dn0 f33 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+dn0 f33 actionTable 'out=in;
+' #txt
+dn0 f33 actionCode 'if(in.request.personRemovedList.size() != 0 || in.request.personRemovedList != null)
+{
+	out.setMailString("Alles i.O.");
+	if(in.request.personList.size() == 0 || in.request.personList == null)
+	{
+			out.setMailString("Alle aus dem Spiel");
+	}
+	else
+	{
+			out.setMailString("Einige aus dem Spiel");
+	}
+}' #txt
+dn0 f33 type einbuergerung_Gruppe6.Data #txt
+dn0 f33 1464 50 112 44 0 -8 #rect
+dn0 f33 @|StepIcon #fIcon
+dn0 f34 expr out #txt
+dn0 f34 1440 72 1464 72 #arcP
+dn0 f35 expr out #txt
+dn0 f35 1520 94 1472 122 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -947,6 +1092,12 @@ dn0 U40 g1 f32 tail #connect
 dn0 f32 head f30 in #connect
 dn0 U30 g1 f28 tail #connect
 dn0 f28 head f30 in #connect
+dn0 f22 mainOut f31 tail #connect
+dn0 f31 head f20 mainIn #connect
+dn0 f20 mainOut f34 tail #connect
+dn0 f34 head f33 mainIn #connect
+dn0 f33 mainOut f35 tail #connect
+dn0 f35 head f14 mainIn #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect

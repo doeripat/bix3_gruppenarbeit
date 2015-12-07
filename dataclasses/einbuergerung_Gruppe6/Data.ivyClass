@@ -16,3 +16,5 @@ document einbuergerung_Gruppe6.Document #field
 document PERSISTENT #fieldModifier
 tmpDocumentList List<einbuergerung_Gruppe6.Document> #field
 tmpDocumentList PERSISTENT #fieldModifier
+mailString String #field
+mailString PERSISTENT #fieldModifier

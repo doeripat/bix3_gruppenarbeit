@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -9211990780845712851L;
+  private static final long serialVersionUID = -6338641064881279739L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -167,6 +167,26 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setTmpDocumentList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> _tmpDocumentList)
   {
     tmpDocumentList = _tmpDocumentList;
+  }
+
+  private java.lang.String mailString;
+
+  /**
+   * Gets the field mailString.
+   * @return the value of the field mailString; may be null.
+   */
+  public java.lang.String getMailString()
+  {
+    return mailString;
+  }
+
+  /**
+   * Sets the field mailString.
+   * @param _mailString the new value of the field mailString.
+   */
+  public void setMailString(java.lang.String _mailString)
+  {
+    mailString = _mailString;
   }
 
 }
