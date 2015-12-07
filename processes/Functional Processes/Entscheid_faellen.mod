@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 10:34:39 CET 2015]
+[>Created: Mon Dec 07 10:56:57 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -119,7 +119,7 @@ Begründung erfassen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f12 696 98 144 44 -54 -16 #rect
+En0 f12 720 98 144 44 -54 -16 #rect
 En0 f12 @|RichDialogIcon #fIcon
 En0 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -196,7 +196,7 @@ En0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f7 296 98 112 44 -23 -8 #rect
+En0 f7 304 98 112 44 -23 -8 #rect
 En0 f7 @|StepIcon #fIcon
 En0 f15 type einbuergerung_Gruppe6.Data #txt
 En0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -208,7 +208,7 @@ En0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f15 490 106 28 28 6 -33 #rect
+En0 f15 490 106 28 28 -32 -34 #rect
 En0 f15 @|AlternativeIcon #fIcon
 En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -229,19 +229,17 @@ En0 f17 type einbuergerung_Gruppe6.Data #txt
 En0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Loop count
-count Person up</name>
-        <nameStyle>11,7
-15,7
+        <name>Loop count</name>
+        <nameStyle>10,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 f17 1024 98 128 44 -42 -16 #rect
+En0 f17 1056 98 112 44 -30 -8 #rect
 En0 f17 @|StepIcon #fIcon
 En0 f24 expr out #txt
-En0 f24 840 120 880 120 #arcP
-En0 f25 992 120 1024 120 #arcP
+En0 f24 864 120 904 120 #arcP
+En0 f25 1016 120 1056 120 #arcP
 En0 S11 .resExport export #txt
 En0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -252,7 +250,7 @@ En0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 S11 880 98 112 44 -53 -8 #rect
+En0 S11 904 98 112 44 -53 -8 #rect
 En0 S11 @|BpmnServiceTaskIcon #fIcon
 En0 f26 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -288,7 +286,8 @@ for(int i = 0;i<3;i++)
 {
 	Objection o = new Objection();
 	o.author = "Peter Enis"+i;
-	o.statement = "Bitches in da house"+i;
+	o.statementOral = "Bitches in da house"+i;
+	o.statementWritten = "Bitches in da house"+i;	
 	o.text = "Alles falsch"+i;
 	
 	}' #txt
@@ -306,7 +305,7 @@ En0 f26 168 98 112 44 -21 -8 #rect
 En0 f26 @|StepIcon #fIcon
 En0 f26 -613726|-1|-16777216 #nodeStyle
 En0 f9 expr out #txt
-En0 f9 280 120 296 120 #arcP
+En0 f9 280 120 304 120 #arcP
 En0 f14 expr out #txt
 En0 f14 87 120 168 120 #arcP
 En0 f18 outLink start.ivp #txt
@@ -396,7 +395,7 @@ En0 f13 @|TaskSwitchIcon #fIcon
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
-En0 f4 408 120 432 120 #arcP
+En0 f4 416 120 432 120 #arcP
 En0 f10 expr data #txt
 En0 f10 outCond ivp=="TaskA.ivp" #txt
 En0 f10 464 120 490 120 #arcP
@@ -410,16 +409,26 @@ En0 f22 actionTable 'out=in;
 out.person=in.request.personList.get(in.loopCount);
 ' #txt
 En0 f22 type einbuergerung_Gruppe6.Data #txt
-En0 f22 552 98 112 44 0 -8 #rect
+En0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>count Person up
+axon ivy workaround</name>
+        <nameStyle>35,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f22 544 98 144 44 -51 -16 #rect
 En0 f22 @|StepIcon #fIcon
 En0 f21 expr in #txt
 En0 f21 outCond in.loopCount<in.loopIterations #txt
-En0 f21 518 120 552 120 #arcP
+En0 f21 518 120 544 120 #arcP
 En0 f16 expr out #txt
-En0 f16 664 120 696 120 #arcP
+En0 f16 688 120 720 120 #arcP
 En0 f23 expr out #txt
-En0 f23 1088 98 504 106 #arcP
-En0 f23 1 1088 64 #addKink
+En0 f23 1112 98 504 106 #arcP
+En0 f23 1 1112 64 #addKink
 En0 f23 2 504 64 #addKink
 En0 f23 1 0.50625 0 0 #arcLabel
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
@@ -466,7 +475,7 @@ auslesen</name>
     </language>
 </elementInfo>
 ' #txt
-Bk0 f22 344 138 112 44 -39 -16 #rect
+Bk0 f22 352 138 112 44 -39 -16 #rect
 Bk0 f22 @|StepIcon #fIcon
 Bk0 f20 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -478,7 +487,7 @@ in.document.templateMergeFields.clear();
 in.document.templateMergeFields.add(new TemplateMergeField("REQUESTID",in.request.uniqueIdentifier));
 in.document.templateMergeFields.add(new TemplateMergeField("NAME",in.person.lastname));
 in.document.templateMergeFields.add(new TemplateMergeField("FIRSTNAME",in.person.firstname));
-in.document.templateMergeFields.add(new TemplateMergeField("ADDRESS",in.request.address));
+in.document.templateMergeFields.add(new TemplateMergeField("ADDRESS",in.request.address+", "+in.request.postcode+" "+in.request.city));
 in.document.templateMergeFields.add(new TemplateMergeField("EMAIL",in.request.email));
 in.document.templateMergeFields.add(new TemplateMergeField("PHONE",in.request.phone));
 
@@ -503,7 +512,7 @@ Bk0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Bk0 f20 496 138 112 44 -51 -8 #rect
 Bk0 f20 @|StepIcon #fIcon
 Bk0 f10 expr out #txt
-Bk0 f10 456 160 496 160 #arcP
+Bk0 f10 464 160 496 160 #arcP
 Bk0 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -598,12 +607,13 @@ Generation suceed</name>
 Bk0 f6 920 138 128 44 -46 -16 #rect
 Bk0 f6 @|StepIcon #fIcon
 Bk0 f0 expr out #txt
-Bk0 f0 312 160 344 160 #arcP
+Bk0 f0 312 160 352 160 #arcP
 Bk0 f1 expr out #txt
-Bk0 f1 835 138 1120 147 #arcP
-Bk0 f1 1 1000 96 #addKink
-Bk0 f1 2 1120 104 #addKink
-Bk0 f1 0 0.9147515596502257 0 0 #arcLabel
+Bk0 f1 864 160 1120 147 #arcP
+Bk0 f1 1 896 160 #addKink
+Bk0 f1 2 896 104 #addKink
+Bk0 f1 3 1120 104 #addKink
+Bk0 f1 1 0.8343777176042345 0 0 #arcLabel
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 En0 f5 mainOut f2 tail #connect

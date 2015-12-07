@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Objection extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 4218732535780685448L;
+  private static final long serialVersionUID = -4218732570990717257L;
 
   private java.lang.String author;
 
@@ -69,44 +69,44 @@ public class Objection extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     date = _date;
   }
 
-  private java.lang.String statement;
+  private java.lang.String statementWritten;
 
   /**
-   * Gets the field statement.
-   * @return the value of the field statement; may be null.
+   * Gets the field statementWritten.
+   * @return the value of the field statementWritten; may be null.
    */
-  public java.lang.String getStatement()
+  public java.lang.String getStatementWritten()
   {
-    return statement;
+    return statementWritten;
   }
 
   /**
-   * Sets the field statement.
-   * @param _statement the new value of the field statement.
+   * Sets the field statementWritten.
+   * @param _statementWritten the new value of the field statementWritten.
    */
-  public void setStatement(java.lang.String _statement)
+  public void setStatementWritten(java.lang.String _statementWritten)
   {
-    statement = _statement;
+    statementWritten = _statementWritten;
   }
 
-  private java.lang.String statementApplicant;
+  private java.lang.String statementOral;
 
   /**
-   * Gets the field statementApplicant.
-   * @return the value of the field statementApplicant; may be null.
+   * Gets the field statementOral.
+   * @return the value of the field statementOral; may be null.
    */
-  public java.lang.String getStatementApplicant()
+  public java.lang.String getStatementOral()
   {
-    return statementApplicant;
+    return statementOral;
   }
 
   /**
-   * Sets the field statementApplicant.
-   * @param _statementApplicant the new value of the field statementApplicant.
+   * Sets the field statementOral.
+   * @param _statementOral the new value of the field statementOral.
    */
-  public void setStatementApplicant(java.lang.String _statementApplicant)
+  public void setStatementOral(java.lang.String _statementOral)
   {
-    statementApplicant = _statementApplicant;
+    statementOral = _statementOral;
   }
 
 }

@@ -29,26 +29,6 @@
 					</p:row>
 					
 					<p:row>
-						<p:column colspan="2"><p:outputLabel for="continue" value="Folgende Einwände sind zu Ihrem Gesuch eingegangen:"/></p:column>
-					</p:row>
-					
-					<p:row>
-						<p:column>
-							<p:dataTable var="objection" value="#{data.request.objections}">
-								  <p:column headerText="Autor">
-								    <h:outputText value="#{objection.author}" />
-								  </p:column>
-								  <p:column headerText="Datum">
-								    <h:outputText value="#{objection.date}" />
-								  </p:column>
-								  <p:column headerText="Begründung">
-								    <h:outputText value="#{objection.text}" />
-								  </p:column>
-							</p:dataTable>
-					</p:column>
-					</p:row>
-					
-					<p:row>
 						<p:column><p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" /></p:column>
 					</p:row>
 				</p:panelGrid>
