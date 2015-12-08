@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Nov 30 14:31:28 CET 2015]
+[>Created: Tue Dec 08 17:42:39 CET 2015]
 1514E482577A784A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 einwaendePruefen_v2Process Big #zClass
@@ -109,8 +109,12 @@ es0 f11 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v
 ' #txt
 es0 f11 actionTable 'out=in;
 ' #txt
+es0 f11 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE DELETE SYSTEM  ""sqlStatements.dtd"">
+<DELETE><Table name=''Objection''/><Condition><Relation kind=''=''><AnyExpression>in.request.uniqueIdentifier</AnyExpression><Column name=''requestUI''/></Relation></Condition></DELETE>' #txt
 es0 f11 dbUrl AmazonDB #txt
 es0 f11 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+es0 f11 dbWizard in.request.uniqueIdentifier=requestUI #txt
 es0 f11 lotSize 2147483647 #txt
 es0 f11 startIdx 0 #txt
 es0 f11 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
@@ -135,9 +139,10 @@ out.readObjections=recordset;
 ' #txt
 es0 f6 dbSql '<?xml version=""1.0"" standalone=""no""?>
 <!DOCTYPE SELECT SYSTEM  ""sqlStatements.dtd"">
-<SELECT><Table name=''Objection''/></SELECT>' #txt
+<SELECT><Table name=''Objection''/><Condition><Relation kind=''=''><Column name=''requestUI''/><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Relation></Condition></SELECT>' #txt
 es0 f6 dbUrl AmazonDB #txt
 es0 f6 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+es0 f6 dbWizard 'requestUI = in.request.uniqueIdentifier' #txt
 es0 f6 lotSize 2147483647 #txt
 es0 f6 startIdx 0 #txt
 es0 f6 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
