@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -8503064406107124000L;
+  private static final long serialVersionUID = -7891193134897383386L;
 
   private java.lang.String firstname;
 
@@ -327,6 +327,26 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setRelationship(java.lang.String _relationship)
   {
     relationship = _relationship;
+  }
+
+  private java.lang.String maritalStatus;
+
+  /**
+   * Gets the field maritalStatus.
+   * @return the value of the field maritalStatus; may be null.
+   */
+  public java.lang.String getMaritalStatus()
+  {
+    return maritalStatus;
+  }
+
+  /**
+   * Sets the field maritalStatus.
+   * @param _maritalStatus the new value of the field maritalStatus.
+   */
+  public void setMaritalStatus(java.lang.String _maritalStatus)
+  {
+    maritalStatus = _maritalStatus;
   }
 
 }

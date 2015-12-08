@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 22:01:21 CET 2015]
+[>Created: Tue Dec 08 22:11:25 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -732,7 +732,7 @@ Bk1 f1 352 160 427 160 #arcP
 >Proto Bk1 0 0 32 24 18 0 #rect
 >Proto Bk1 @|BIcon #fIcon
 Bk2 f48 expr out #txt
-Bk2 f48 496 296 552 296 #arcP
+Bk2 f48 512 296 568 296 #arcP
 Bk2 f35 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f35 actionTable 'out=in;
@@ -761,8 +761,8 @@ Bk2 f20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f20 296 280 296 214 #arcP
-Bk2 f20 0 0.3793103448275862 0 0 #arcLabel
+Bk2 f20 312 280 312 214 #arcP
+Bk2 f20 0 0.3484848484848485 -8 0 #arcLabel
 Bk2 f24 beanConfig '"{/emailSubject ""Terminbestätigung Gesuch: <%=in.request.uniqueIdentifier%""/emailFrom ""noreply@migrationsamt.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Ihre Terminauswahl wurde angenohmen.\\nBitte erscheinen Sie pünktlich. Bei Nichterscheinen wird eine Gebühr erhoben!""/emailAttachments * }"' #txt
 Bk2 f24 type einbuergerung_Gruppe6.Data #txt
 Bk2 f24 timeout 0 #txt
@@ -777,7 +777,7 @@ Bk2 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f24 440 170 112 44 -52 -8 #rect
+Bk2 f24 424 170 112 44 -52 -8 #rect
 Bk2 f24 @|EMailIcon #fIcon
 Bk2 f15 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -801,10 +801,10 @@ Bk2 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f15 240 170 112 44 -39 -8 #rect
+Bk2 f15 256 170 112 44 -39 -8 #rect
 Bk2 f15 @|DBStepIcon #fIcon
 Bk2 f23 expr out #txt
-Bk2 f23 352 192 440 192 #arcP
+Bk2 f23 368 192 424 192 #arcP
 Bk2 f23 0 0.38461538461538464 0 0 #arcLabel
 Bk2 f47 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -821,15 +821,15 @@ Bk2 f47 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f47 552 274 112 44 -23 -8 #rect
+Bk2 f47 568 274 112 44 -23 -8 #rect
 Bk2 f47 @|StepIcon #fIcon
 Bk2 f49 expr out #txt
-Bk2 f49 608 318 296 312 #arcP
-Bk2 f49 1 608 372 #addKink
-Bk2 f49 2 296 372 #addKink
+Bk2 f49 624 318 312 312 #arcP
+Bk2 f49 1 624 372 #addKink
+Bk2 f49 2 312 372 #addKink
 Bk2 f49 1 0.5096153846153846 0 0 #arcLabel
 Bk2 f43 expr out #txt
-Bk2 f43 248 296 280 296 #arcP
+Bk2 f43 248 296 296 296 #arcP
 Bk2 f46 expr in #txt
 Bk2 f46 outCond 'in.loopIterations != in.loopCount' #txt
 Bk2 f46 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -841,7 +841,8 @@ Bk2 f46 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f46 312 296 368 296 #arcP
+Bk2 f46 328 296 384 296 #arcP
+Bk2 f46 0 0.44642857142857145 0 -9 #arcLabel
 Bk2 f42 type einbuergerung_Gruppe6.Data #txt
 Bk2 f42 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -852,7 +853,7 @@ Bk2 f42 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f42 280 280 32 32 -69 22 #rect
+Bk2 f42 296 280 32 32 -65 27 #rect
 Bk2 f42 @|AlternativeIcon #fIcon
 Bk2 f45 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -860,7 +861,7 @@ Bk2 f45 actionTable 'out=in;
 ' #txt
 Bk2 f45 dbSql '<?xml version=""1.0"" standalone=""no""?>
 <!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
-<INSERT><Table name=''Person''/><Value column=''firstname''><AnyExpression>in.request.personList.get(in.loopCount).firstname</AnyExpression></Value><Value column=''lastname''><AnyExpression>in.request.personList.get(in.loopCount).lastname</AnyExpression></Value><Value column=''birthday''><AnyExpression>in.request.personList.get(in.loopCount).birthday</AnyExpression></Value><Value column=''genderCode''><AnyExpression>in.request.personList.get(in.loopCount).gender</AnyExpression></Value><Value column=''nationality''><AnyExpression>in.request.personList.get(in.loopCount).nationality</AnyExpression></Value><Value column=''role''><AnyExpression>in.request.personList.get(in.loopCount).role</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''meeting''><AnyExpression>in.request.personList.get(in.loopCount).meeting</AnyExpression></Value></INSERT>' #txt
+<INSERT><Table name=''Person''/><Value column=''firstname''><AnyExpression>in.request.personList.get(in.loopCount).firstname</AnyExpression></Value><Value column=''lastname''><AnyExpression>in.request.personList.get(in.loopCount).lastname</AnyExpression></Value><Value column=''birthday''><AnyExpression>in.request.personList.get(in.loopCount).birthday</AnyExpression></Value><Value column=''genderCode''><AnyExpression>in.request.personList.get(in.loopCount).gender</AnyExpression></Value><Value column=''nationality''><AnyExpression>in.request.personList.get(in.loopCount).nationality</AnyExpression></Value><Value column=''role''><AnyExpression>in.request.personList.get(in.loopCount).role</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''meeting''><AnyExpression>in.request.personList.get(in.loopCount).meeting</AnyExpression></Value><Value column=''maritalStatus''><AnyExpression>in.request.personList.get(in.loopCount).maritalStatus</AnyExpression></Value></INSERT>' #txt
 Bk2 f45 dbUrl AmazonDB #txt
 Bk2 f45 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Bk2 f45 lotSize 2147483647 #txt
@@ -875,7 +876,7 @@ Bk2 f45 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f45 368 274 128 44 -54 -8 #rect
+Bk2 f45 384 274 128 44 -54 -8 #rect
 Bk2 f45 @|DBStepIcon #fIcon
 Bk2 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -884,9 +885,9 @@ Bk2 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 g0 51 195 26 26 0 5 #rect
+Bk2 g0 43 283 26 26 -27 21 #rect
 Bk2 g0 @|MIGIcon #fIcon
-Bk2 f0 74 215 192 274 #arcP
+Bk2 f0 69 296 136 296 #arcP
 Bk2 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -894,10 +895,10 @@ Bk2 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 g1 355 51 26 26 0 5 #rect
+Bk2 g1 651 179 26 26 0 5 #rect
 Bk2 g1 @|MOGIcon #fIcon
 Bk2 f1 expr out #txt
-Bk2 f1 496 170 377 73 #arcP
+Bk2 f1 536 192 651 192 #arcP
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BIcon #fIcon
 Bk4 f26 targetWindow NEW:card: #txt

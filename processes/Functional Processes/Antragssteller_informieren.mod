@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 21:47:58 CET 2015]
+[>Created: Tue Dec 08 22:17:15 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -81,6 +81,8 @@ Bk2 @PushTrueWFInG-01 g0 '' #zField
 Bk2 @PushWFArc f0 '' #zField
 Bk2 @PushTrueWFOutG-01 g1 '' #zField
 Bk2 @PushWFArc f1 '' #zField
+Bk2 @StartRequest f2 '' #zField
+Bk2 @PushWFArc f3 '' #zField
 >Proto Bk2 Bk2 BpmnUserTask #zField
 Bk4 @TextInP .resExport .resExport #zField
 Bk4 @TextInP .type .type #zField
@@ -637,6 +639,27 @@ Bk2 g1 1075 147 26 26 0 5 #rect
 Bk2 g1 @|MOGIcon #fIcon
 Bk2 f1 expr out #txt
 Bk2 f1 992 160 1075 160 #arcP
+Bk2 f2 outLink start.ivp #txt
+Bk2 f2 type einbuergerung_Gruppe6.Data #txt
+Bk2 f2 inParamDecl '<> param;' #txt
+Bk2 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk2 f2 guid 15183749098259F6 #txt
+Bk2 f2 requestEnabled true #txt
+Bk2 f2 triggerEnabled false #txt
+Bk2 f2 callSignature start() #txt
+Bk2 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+Bk2 f2 @C|.responsibility Everybody #txt
+Bk2 f2 145 305 30 30 -21 17 #rect
+Bk2 f2 @|StartRequestIcon #fIcon
+Bk2 f3 expr out #txt
+Bk2 f3 162 305 192 182 #arcP
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BIcon #fIcon
 Bk4 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -760,6 +783,8 @@ Bk2 g0 m f0 tail #connect
 Bk2 f0 head f13 mainIn #connect
 Bk2 f1 head g1 m #connect
 Bk2 f31 mainOut f1 tail #connect
+Bk2 f2 mainOut f3 tail #connect
+Bk2 f3 head f13 mainIn #connect
 Bk2 0 0 1152 416 0 #ivRect
 Bk4 g0 m f0 tail #connect
 Bk4 f0 head f3 mainIn #connect

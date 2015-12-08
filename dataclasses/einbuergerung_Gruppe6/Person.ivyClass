@@ -32,3 +32,5 @@ meetingString String #field
 meetingString PERSISTENT #fieldModifier
 relationship String #field
 relationship PERSISTENT #fieldModifier
+maritalStatus String #field
+maritalStatus PERSISTENT #fieldModifier

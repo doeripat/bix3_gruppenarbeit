@@ -51,8 +51,11 @@
 					<p:outputLabel for="requestCity" value="Ort"/>
 					<p:inputText id="requestCity" value="#{data.request.city}" required="true"></p:inputText>
 					
-					<p:outputLabel for="personNationality" value="Nationalität"/>
+					<p:outputLabel for="personNationality" value="Staatsangehörigkeit"/>
 					<p:inputText id="personNationality" value="#{data.person.nationality}" required="true"></p:inputText>
+					
+					<p:outputLabel for="personMaritalStatus" value="Zivilstand"/>
+					<p:inputText id="personMaritalStatus" value="#{data.person.maritalStatus}" required="true"></p:inputText>
 					
 					<p:outputLabel for="requestDiscount" value=" Sind Sie Schüler, Lehrling oder Student?" />
 			        <p:selectOneRadio id="requestDiscount" value="#{data.request.discount}" required="true">
