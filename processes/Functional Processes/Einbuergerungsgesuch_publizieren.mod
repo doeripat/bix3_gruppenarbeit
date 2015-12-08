@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 18:20:06 CET 2015]
+[>Created: Tue Dec 08 20:07:58 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -15,8 +15,6 @@ Bk4 BpmnSendTask Big #zClass
 Bk4 B #cInfo
 Bk5 BpmnUserTask Big #zClass
 Bk5 B #cInfo
-Bk6 BpmnUserTask Big #zClass
-Bk6 BpmnUserTask #cInfo
 En0 @TextInP .resExport .resExport #zField
 En0 @TextInP .type .type #zField
 En0 @TextInP .processKind .processKind #zField
@@ -40,7 +38,6 @@ En0 @CallSub f30 '' #zField
 En0 @PushWFArc f8 '' #zField
 En0 @PushWFArc f15 '' #zField
 En0 @TaskSwitch f7 '' #zField
-En0 @PushWFArc f14 '' #zField
 En0 @TkArc f16 '' #zField
 En0 Bk0 S11 'Sub 1' #zField
 En0 @PushWFArc f3 '' #zField
@@ -53,9 +50,8 @@ En0 @TkArc f6 '' #zField
 En0 Bk4 S40 'Sub 4' #zField
 En0 @PushWFArc f13 '' #zField
 En0 Bk5 S51 'Sub 5' #zField
-En0 Bk6 U10 'User 1' #zField
+En0 @PushWFArc f12 '' #zField
 En0 @PushWFArc f2 '' #zField
-En0 @PushWFArc f9 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -76,6 +72,7 @@ Bk0 @PushTrueWFInG-01 g0 '' #zField
 Bk0 @PushWFArc f0 '' #zField
 Bk0 @PushTrueWFOutG-01 g1 '' #zField
 Bk0 @PushWFArc f1 '' #zField
+Bk0 @PushTrueWFInG-01 g2 '' #zField
 >Proto Bk0 Bk0 BpmnServiceTask #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
@@ -118,7 +115,7 @@ Bk4 @PushTrueWFInG-01 g0 '' #zField
 Bk4 @PushWFArc f0 '' #zField
 Bk4 @PushTrueWFOutG-01 g1 '' #zField
 Bk4 @PushWFArc f1 '' #zField
->Proto Bk4 Bk4 BpmnSendTask #zField
+>Proto Bk4 Bk3 BpmnSendTask #zField
 Bk5 @TextInP .resExport .resExport #zField
 Bk5 @TextInP .type .type #zField
 Bk5 @TextInP .processKind .processKind #zField
@@ -129,25 +126,12 @@ Bk5 @TextInP .xml .xml #zField
 Bk5 @TextInP .responsibility .responsibility #zField
 Bk5 @RichDialog f25 '' #zField
 Bk5 @PushTrueWFInG-01 g0 '' #zField
-Bk5 @PushWFArc f0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
 Bk5 @PushWFArc f1 '' #zField
->Proto Bk5 Bk3 BpmnUserTask #zField
-Bk6 @TextInP .resExport .resExport #zField
-Bk6 @TextInP .type .type #zField
-Bk6 @TextInP .processKind .processKind #zField
-Bk6 @AnnotationInP-0n ai ai #zField
-Bk6 @MessageFlowInP-0n messageIn messageIn #zField
-Bk6 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk6 @TextInP .xml .xml #zField
-Bk6 @TextInP .responsibility .responsibility #zField
-Bk6 @PushTrueWFInG-01 g0 '' #zField
-Bk6 @PushTrueWFOutG-01 g1 '' #zField
-Bk6 @RichDialog f1 '' #zField
-Bk6 @PushWFArc f2 '' #zField
-Bk6 @PushWFArc f0 '' #zField
-Bk6 @PushTrueWFInG-01 g2 '' #zField
->Proto Bk6 Bk5 BpmnUserTask #zField
+Bk5 @RichDialog f2 '' #zField
+Bk5 @PushWFArc f3 '' #zField
+Bk5 @PushWFArc f0 '' #zField
+>Proto Bk5 Bk4 BpmnUserTask #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -171,7 +155,7 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 En0 f0 49 89 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Data #txt
-En0 f1 1249 81 30 30 0 15 #rect
+En0 f1 1137 81 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
 En0 f18 type einbuergerung_Gruppe6.Data #txt
 En0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -185,7 +169,7 @@ erwünscht?</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f18 1056 392 32 32 -29 21 #rect
+En0 f18 944 392 32 32 -29 21 #rect
 En0 f18 @|AlternativeIcon #fIcon
 En0 f20 type einbuergerung_Gruppe6.Data #txt
 En0 f20 processCall 'Functional Processes/Rechnungswesen:call(einbuergerung_Gruppe6.Invoice,einbuergerung_Gruppe6.Data)' #txt
@@ -208,7 +192,7 @@ Weiterführung</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f20 1104 74 112 44 -38 -20 #rect
+En0 f20 992 74 112 44 -38 -20 #rect
 En0 f20 @|CallSubIcon #fIcon
 En0 f21 expr in #txt
 En0 f21 outCond in.request.Continue #txt
@@ -221,11 +205,11 @@ En0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f21 1072 392 1104 96 #arcP
-En0 f21 1 1072 96 #addKink
+En0 f21 960 392 992 96 #arcP
+En0 f21 1 960 96 #addKink
 En0 f21 0 0.06418918918918919 -12 0 #arcLabel
 En0 f24 expr out #txt
-En0 f24 1216 96 1249 96 #arcP
+En0 f24 1104 96 1137 96 #arcP
 En0 f24 0 0.3970514322284797 0 0 #arcLabel
 En0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -352,7 +336,7 @@ En0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f10 1177 457 30 30 -37 17 #rect
+En0 f10 1065 457 30 30 -37 17 #rect
 En0 f10 @|ExceptionIcon #fIcon
 En0 f30 type einbuergerung_Gruppe6.Data #txt
 En0 f30 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
@@ -372,12 +356,12 @@ En0 f30 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f30 1136 386 112 44 -22 -8 #rect
+En0 f30 1024 386 112 44 -22 -8 #rect
 En0 f30 @|CallSubIcon #fIcon
 En0 f8 expr out #txt
-En0 f8 1192 457 1192 430 #arcP
+En0 f8 1080 457 1080 430 #arcP
 En0 f15 expr in #txt
-En0 f15 1088 408 1136 408 #arcP
+En0 f15 976 408 1024 408 #arcP
 En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f7 actionTable 'out=in1;
@@ -445,8 +429,6 @@ En0 f7 type einbuergerung_Gruppe6.Data #txt
 En0 f7 template "" #txt
 En0 f7 688 392 32 32 0 16 #rect
 En0 f7 @|TaskSwitchIcon #fIcon
-En0 f14 expr out #txt
-En0 f14 79 104 118 104 #arcP
 En0 f16 type einbuergerung_Gruppe6.Data #txt
 En0 f16 var in1 #txt
 En0 f16 282 104 328 104 #arcP
@@ -511,7 +493,7 @@ Entscheidung treffen</name>
 ' #txt
 En0 S40 620 82 168 44 -56 -20 #rect
 En0 S40 @|BpmnSendTaskIcon #fIcon
-En0 f13 1022 408 1056 408 #arcP
+En0 f13 910 408 944 408 #arcP
 En0 S51 .resExport export #txt
 En0 S51 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -523,24 +505,13 @@ Weiterführung</name>
     </language>
 </elementInfo>
 ' #txt
-En0 S51 882 386 140 44 -38 -20 #rect
+En0 S51 770 386 140 44 -38 -20 #rect
 En0 S51 @|BpmnUserTaskIcon #fIcon
-En0 U10 .resExport export #txt
-En0 U10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>User Login</name>
-        <nameStyle>10,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 U10 744 386 112 44 -30 -8 #rect
-En0 U10 @|BpmnUserTaskIcon #fIcon
+En0 f12 expr out #txt
+En0 f12 79 104 118 104 #arcP
 En0 f2 expr data #txt
 En0 f2 outCond ivp=="TaskA.ivp" #txt
-En0 f2 720 408 744 408 #arcP
-En0 f9 856 408 882 408 #arcP
+En0 f2 720 408 770 408 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -702,6 +673,8 @@ Bk0 g1 819 147 26 26 0 5 #rect
 Bk0 g1 @|MOGIcon #fIcon
 Bk0 f1 expr out #txt
 Bk0 f1 752 160 819 160 #arcP
+Bk0 g2 339 51 26 26 0 5 #rect
+Bk0 g2 @|MIGIcon #fIcon
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 Bk1 f22 targetWindow NEW:card: #txt
@@ -845,8 +818,8 @@ Bk4 g1 195 243 26 26 0 5 #rect
 Bk4 g1 @|MOGIcon #fIcon
 Bk4 f1 expr out #txt
 Bk4 f1 208 182 208 243 #arcP
->Proto Bk4 0 0 32 24 18 0 #rect
->Proto Bk4 @|BIcon #fIcon
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BIcon #fIcon
 Bk5 f25 targetWindow NEW:card: #txt
 Bk5 f25 targetDisplay TOP #txt
 Bk5 f25 richDialogId einbuergerung_Gruppe6.entscheidWeiterfuehrung #txt
@@ -874,7 +847,7 @@ Weiterführung</name>
     </language>
 </elementInfo>
 ' #txt
-Bk5 f25 136 138 112 44 -38 -16 #rect
+Bk5 f25 376 138 112 44 -38 -16 #rect
 Bk5 f25 @|RichDialogIcon #fIcon
 Bk5 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -885,7 +858,6 @@ Bk5 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk5 g0 51 147 26 26 0 5 #rect
 Bk5 g0 @|MIGIcon #fIcon
-Bk5 f0 77 160 136 160 #arcP
 Bk5 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -893,34 +865,28 @@ Bk5 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk5 g1 307 147 26 26 0 5 #rect
+Bk5 g1 659 147 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
 Bk5 f1 expr out #txt
-Bk5 f1 248 160 307 160 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BIcon #fIcon
-Bk6 g0 51 235 26 26 0 5 #rect
-Bk6 g0 @|MIGIcon #fIcon
-Bk6 g1 563 251 26 26 0 5 #rect
-Bk6 g1 @|MOGIcon #fIcon
-Bk6 f1 targetWindow NEW:card: #txt
-Bk6 f1 targetDisplay TOP #txt
-Bk6 f1 richDialogId einbuergerung_Gruppe6.Login #txt
-Bk6 f1 startMethod start(String,String) #txt
-Bk6 f1 type einbuergerung_Gruppe6.Data #txt
-Bk6 f1 requestActionDecl '<String email, String password> param;' #txt
-Bk6 f1 requestMappingAction 'param.email=in.request.email;
+Bk5 f1 488 160 659 160 #arcP
+Bk5 f2 targetWindow NEW:card: #txt
+Bk5 f2 targetDisplay TOP #txt
+Bk5 f2 richDialogId einbuergerung_Gruppe6.Login #txt
+Bk5 f2 startMethod start(String,String) #txt
+Bk5 f2 type einbuergerung_Gruppe6.Data #txt
+Bk5 f2 requestActionDecl '<String email, String password> param;' #txt
+Bk5 f2 requestMappingAction 'param.email=in.request.email;
 param.password=in.request.password;
 ' #txt
-Bk6 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+Bk5 f2 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-Bk6 f1 responseMappingAction 'out=in;
+Bk5 f2 responseMappingAction 'out=in;
 ' #txt
-Bk6 f1 windowConfiguration '* ' #txt
-Bk6 f1 isAsynch false #txt
-Bk6 f1 isInnerRd false #txt
-Bk6 f1 userContext '* ' #txt
-Bk6 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+Bk5 f2 windowConfiguration '* ' #txt
+Bk5 f2 isAsynch false #txt
+Bk5 f2 isInnerRd false #txt
+Bk5 f2 userContext '* ' #txt
+Bk5 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Login</name>
@@ -929,15 +895,13 @@ Bk6 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk6 f1 216 234 112 44 -15 -8 #rect
-Bk6 f1 @|RichDialogIcon #fIcon
-Bk6 f2 76 248 216 256 #arcP
-Bk6 f0 expr out #txt
-Bk6 f0 328 256 563 263 #arcP
-Bk6 g2 211 435 26 26 0 5 #rect
-Bk6 g2 @|MIGIcon #fIcon
->Proto Bk5 0 0 32 24 18 0 #rect
->Proto Bk5 @|BpmnServiceTaskIcon #fIcon
+Bk5 f2 184 138 112 44 -15 -8 #rect
+Bk5 f2 @|RichDialogIcon #fIcon
+Bk5 f3 77 160 184 160 #arcP
+Bk5 f0 expr out #txt
+Bk5 f0 296 160 376 160 #arcP
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BIcon #fIcon
 En0 f18 out f21 tail #connect
 En0 f21 head f20 mainIn #connect
 En0 f20 mainOut f24 tail #connect
@@ -947,8 +911,6 @@ En0 f8 head f30 mainIn #connect
 En0 f18 out f15 tail #connect
 En0 f15 head f30 mainIn #connect
 En0 f16 head f32 in #connect
-En0 f0 mainOut f14 tail #connect
-En0 f14 head S11 g0 #connect
 En0 S11 g1 f16 tail #connect
 En0 f4 head f38 mainIn #connect
 En0 f17 mainOut f3 tail #connect
@@ -962,10 +924,10 @@ En0 f5 head S40 g0 #connect
 En0 S40 g1 f6 tail #connect
 En0 f13 head f18 in #connect
 En0 S51 g1 f13 tail #connect
+En0 f0 mainOut f12 tail #connect
+En0 f12 head S11 g0 #connect
 En0 f7 out f2 tail #connect
-En0 f2 head U10 g0 #connect
-En0 U10 g1 f9 tail #connect
-En0 f9 head S51 g0 #connect
+En0 f2 head S51 g0 #connect
 Bk0 f11 mainOut f34 tail #connect
 Bk0 f34 head f3 mainIn #connect
 Bk0 f3 mainOut f29 tail #connect
@@ -992,13 +954,10 @@ Bk4 f0 head f12 mainIn #connect
 Bk4 f1 head g1 m #connect
 Bk4 f12 mainOut f1 tail #connect
 Bk4 0 0 416 320 0 #ivRect
-Bk5 g0 m f0 tail #connect
-Bk5 f0 head f25 mainIn #connect
 Bk5 f1 head g1 m #connect
 Bk5 f25 mainOut f1 tail #connect
-Bk5 0 0 384 320 0 #ivRect
-Bk6 g0 m f2 tail #connect
-Bk6 f2 head f1 mainIn #connect
-Bk6 f1 mainOut f0 tail #connect
-Bk6 f0 head g1 m #connect
-Bk6 0 0 640 512 0 #ivRect
+Bk5 g0 m f3 tail #connect
+Bk5 f3 head f2 mainIn #connect
+Bk5 f2 mainOut f0 tail #connect
+Bk5 f0 head f25 mainIn #connect
+Bk5 0 0 728 376 0 #ivRect

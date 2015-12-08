@@ -22,10 +22,10 @@
 				        </p:row>
 					</f:facet>
 					<p:row>
-						<p:column>
-							<p:selectBooleanCheckbox id="continue" value="#{data.request.Continue}" />
-							<p:outputLabel for="continue" value="Ja ich möchte fortfahren"/>
-						</p:column>
+						<p:selectOneRadio id="continue" value="#{data.request.Continue}" required="true">
+			            <f:selectItem itemLabel="Ja ich möchte fortfahren |" itemValue=true />
+			            <f:selectItem itemLabel="Nein ich möchte abbrechen" itemValue=false />
+			        </p:selectOneRadio>
 					</p:row>
 					
 					<p:row>
