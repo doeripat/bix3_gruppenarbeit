@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 18:59:34 CET 2015]
+[>Created: Tue Dec 08 13:33:16 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -30,17 +30,17 @@ En0 Bk0 S11 'Sub 1' #zField
 En0 @GridStep f26 '' #zField
 En0 @StartRequest f18 '' #zField
 En0 @PushWFArc f20 '' #zField
-En0 @TaskSwitch f13 '' #zField
 En0 @PushWFArc f19 '' #zField
 En0 @GridStep f22 '' #zField
 En0 @PushWFArc f21 '' #zField
 En0 @PushWFArc f23 '' #zField
 En0 @RichDialog f27 '' #zField
-En0 @PushWFArc f28 '' #zField
 En0 @GridStep f7 '' #zField
 En0 @PushWFArc f9 '' #zField
 En0 @PushWFArc f10 '' #zField
 En0 @PushWFArc f12 '' #zField
+En0 @PushWFArc f28 '' #zField
+En0 @TaskSwitch f13 '' #zField
 En0 @TkArc f4 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk0 @TextInP .resExport .resExport #zField
@@ -62,6 +62,7 @@ Bk0 @GridStep f4 '' #zField
 Bk0 @PushWFArc f5 '' #zField
 Bk0 @GridStep f6 '' #zField
 Bk0 @PushWFArc f0 '' #zField
+Bk0 @PushWFArc f7 '' #zField
 Bk0 @PushWFArc f1 '' #zField
 >Proto Bk0 Bk0 BpmnServiceTask #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
@@ -248,7 +249,7 @@ En0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f26 144 170 112 44 -21 -8 #rect
+En0 f26 128 202 112 44 -21 -8 #rect
 En0 f26 @|StepIcon #fIcon
 En0 f26 -613726|-1|-16777216 #nodeStyle
 En0 f18 outLink start.ivp #txt
@@ -268,73 +269,10 @@ En0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 En0 f18 @C|.responsibility Everybody #txt
-En0 f18 65 177 30 30 -21 17 #rect
+En0 f18 49 209 30 30 -21 17 #rect
 En0 f18 @|StartRequestIcon #fIcon
 En0 f20 expr out #txt
-En0 f20 95 192 144 192 #arcP
-En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f13 actionTable 'out=in1;
-' #txt
-En0 f13 outTypes "einbuergerung_Gruppe6.Data" #txt
-En0 f13 outLinks "TaskA.ivp" #txt
-En0 f13 caseData '#
-#Mon Dec 07 10:20:12 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-En0 f13 taskData '#
-#Mon Dec 07 10:20:12 CET 2015
-TaskA.EXPRI=2
-TaskA.EXROL=Everybody
-TaskA.EXTYPE=0
-TaskA.NAM=Bitte erstinstanzlichen Entscheid zu Gesuch <%\=in1.request.uniqueIdentifier%> f\u00E4llen
-TaskA.PRI=2
-TaskA.ROL=Kanzleimitarbeiter
-TaskA.SKIP_TASK_LIST=false
-TaskA.TYPE=0
-' #txt
-En0 f13 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Bitte erstinstanzlichen Entscheid zu Gesuch <%=in1.request.uniqueIdentifier%> fällen"));
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Kanzleimitarbeiter");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDefinitions.add(taskDef);
-' #txt
-En0 f13 type einbuergerung_Gruppe6.Data #txt
-En0 f13 template "" #txt
-En0 f13 152 104 32 32 0 16 #rect
-En0 f13 @|TaskSwitchIcon #fIcon
+En0 f20 79 224 128 224 #arcP
 En0 f19 expr in #txt
 En0 f19 584 134 608 208 #arcP
 En0 f19 1 584 208 #addKink
@@ -397,9 +335,6 @@ Begründung erfassen</name>
 ' #txt
 En0 f27 224 98 144 44 -54 -16 #rect
 En0 f27 @|RichDialogIcon #fIcon
-En0 f28 expr data #txt
-En0 f28 outCond ivp=="TaskA.ivp" #txt
-En0 f28 184 120 224 120 #arcP
 En0 f7 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f7 actionTable 'out=in;
@@ -425,10 +360,78 @@ En0 f10 expr out #txt
 En0 f10 528 120 570 120 #arcP
 En0 f12 expr out #txt
 En0 f12 768 120 880 120 #arcP
+En0 f28 expr data #txt
+En0 f28 outCond ivp=="TaskA.ivp" #txt
+En0 f28 184 120 224 120 #arcP
+En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f13 actionTable 'out=in1;
+' #txt
+En0 f13 outTypes "einbuergerung_Gruppe6.Data" #txt
+En0 f13 outLinks "TaskA.ivp" #txt
+En0 f13 caseData '#
+#Tue Dec 08 13:29:47 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+En0 f13 taskData '#
+#Tue Dec 08 13:29:47 CET 2015
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Bitte erstinstanzlichen Entscheid zu Gesuch <%\=in1.request.uniqueIdentifier%> f\u00E4llen
+TaskA.PRI=2
+TaskA.ROL=Migrationsamt Pr\u00FCfer
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
+En0 f13 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte erstinstanzlichen Entscheid zu Gesuch <%=in1.request.uniqueIdentifier%> fällen"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Migrationsamt Prüfer");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDefinitions.add(taskDef);
+' #txt
+En0 f13 type einbuergerung_Gruppe6.Data #txt
+En0 f13 template "" #txt
+En0 f13 152 104 32 32 0 16 #rect
+En0 f13 @|TaskSwitchIcon #fIcon
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
-En0 f4 87 120 152 120 #arcP
+En0 f4 184 202 152 120 #arcP
+En0 f4 1 128 120 #addKink
+En0 f4 0 0.7229254143544687 0 0 #arcLabel
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -553,6 +556,7 @@ param.templatePath="C:/Axonivy_Workspace/Einbuergerung/cms/DocumentTemplates/tem
 Bk0 f2 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f2 responseMappingAction 'out=in;
+out.document.fileOperationMesage=result.fileOperationMessage;
 out.document.filePath=result.fileOperationMessage.files.get(0).getAbsolutePath();
 out.person.disposal.fileOperationMesage=result.fileOperationMessage;
 ' #txt
@@ -602,7 +606,8 @@ Bk0 f6 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk0 f6 actionTable 'out=in;
 ' #txt
-Bk0 f6 actionCode 'import einbuergerung_Gruppe6.Document;
+Bk0 f6 actionCode 'import java.io.FileInputStream;
+import einbuergerung_Gruppe6.Document;
 import java.io.InputStream;
 import org.primefaces.model.UploadedFile;
 import ch.ivyteam.ivy.cm.CoType;
@@ -611,7 +616,7 @@ import ch.ivyteam.ivy.cm.IContentObjectValue;
 import org.primefaces.model.DefaultStreamedContent;
 
 // Der CMS-Ordner, in welchem die hochgeladene Datei abgelegt werden soll, wird bestimmt
-IContentObject baseFolder = ivy.cms.findContentObject("/Disposal");
+IContentObject baseFolder = ivy.cms.findContentObject("/Disposals");
 
 // Der Name des CMS-Objekts wird aus dem Dateinamen abgeleitet
 String coName = in.document.fileName;
@@ -642,7 +647,7 @@ coName = coName.replaceAll("[^\\p{Alnum}_-]+[^\\p{Alnum}_.+\\-]*", "_");
 // Das CMS-Objekt wird angelegt, wobei alle Metadaten leer bleiben mit Ausnahme von Name und Typ. Der Inhalt des CMS-Objekts selbst wird aus dem InputStream der Datei erstellt.
 IContentObject newCMSObject = baseFolder.addChild(coName, "", coType, null);
 IContentObjectValue cov = newCMSObject.addValue("", null, null, null, "", true, null);
-InputStream inputStream = null;
+InputStream inputStream = new FileInputStream(in.document.fileOperationMesage.files.get(0));
 try
 {
  //   inputStream = uploadedFile.getInputstream();
@@ -668,21 +673,23 @@ Bk0 f6 type einbuergerung_Gruppe6.Data #txt
 Bk0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Upload Files to CMS</name>
-        <nameStyle>19,7
+        <name>Upload File to CMS</name>
+        <nameStyle>18,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk0 f6 920 138 128 44 -56 -8 #rect
+Bk0 f6 928 138 112 44 -52 -8 #rect
 Bk0 f6 @|StepIcon #fIcon
 Bk0 f0 expr out #txt
 Bk0 f0 312 160 352 160 #arcP
+Bk0 f7 expr out #txt
+Bk0 f7 752 138 984 138 #arcP
+Bk0 f7 1 752 112 #addKink
+Bk0 f7 2 984 112 #addKink
+Bk0 f7 1 0.1141200746581308 0 0 #arcLabel
 Bk0 f1 expr out #txt
-Bk0 f1 752 138 1120 147 #arcP
-Bk0 f1 1 752 112 #addKink
-Bk0 f1 2 1120 112 #addKink
-Bk0 f1 1 0.1141200746581308 0 0 #arcLabel
+Bk0 f1 1040 160 1107 160 #arcP
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 En0 f5 mainOut f2 tail #connect
@@ -709,7 +716,7 @@ En0 f7 mainOut f10 tail #connect
 En0 f10 head f15 in #connect
 En0 f22 mainOut f12 tail #connect
 En0 f12 head S11 g0 #connect
-En0 f0 mainOut f4 tail #connect
+En0 f26 mainOut f4 tail #connect
 En0 f4 head f13 in #connect
 Bk0 f22 mainOut f10 tail #connect
 Bk0 f10 head f20 mainIn #connect
@@ -719,6 +726,8 @@ Bk0 g0 m f5 tail #connect
 Bk0 f5 head f4 mainIn #connect
 Bk0 f4 mainOut f0 tail #connect
 Bk0 f0 head f22 mainIn #connect
-Bk0 f2 mainOut f1 tail #connect
+Bk0 f2 mainOut f7 tail #connect
+Bk0 f7 head f6 mainIn #connect
+Bk0 f6 mainOut f1 tail #connect
 Bk0 f1 head g1 m #connect
 Bk0 0 0 1272 512 0 #ivRect
