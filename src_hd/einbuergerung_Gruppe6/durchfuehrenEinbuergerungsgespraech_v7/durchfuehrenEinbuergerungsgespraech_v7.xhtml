@@ -11,9 +11,10 @@
 		<ui:define name="title">durchfuehrenEinbuergerungsgespraech_v3</ui:define>
 		<ui:define name="content">
 			<h3>
-			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			Einbürgerungsgespräch durchführen.
 			</h3>
+			<p>Führen Sie das Einbürgerungsgespräch durch und machen Sie Notizen.</p>
+			
 			
 			<h:form id="form">
 				<h:panelGrid columns="2">
@@ -28,7 +29,8 @@
 						  <h:outputText value="#{person.lastname}" />
 						</p:column>
 						<p:column headerText="Rolle" rendered="#{!(person.role == 'child')}">
-						  <h:outputText value="#{person.role}" />
+						  <h:outputText value="Antragsteller" rendered="#{person.role == 'applicant'}"/>
+						  <h:outputText value="Erwachsener" rendered="#{person.role == 'adult'}"/>
 						</p:column>
 						<p:column headerText="Begleitung" rendered="#{!(person.role == 'child')}">
 						  <h:outputText value="#{person.relationship}" />
@@ -52,8 +54,14 @@
 						   			<p:rowEditor />
 						</p:column>
 					</p:dataTable>
+			
+					</br>
+					<p:row>
+						<h3>Einwände eröffnen</h3>
+						Eröffnen Sie dem Antragsteller am Ende des Gesprächs die eingegangen Einwände. Der Antragsteller kann mündlich und/oder schriftlich Stellung nehmen.
+					</p:row>		
 					
-					<br />
+					</br>
 					<p:dataTable var="objection" value="#{data.request.objections}" id="objectionTable" editable="true">
 						<p:column headerText="Datum">
 						  <h:outputText value="#{objection.date}" />

@@ -11,9 +11,10 @@
 		<ui:define name="title">terminWaehlen_v3</ui:define>
 		<ui:define name="content">
 			<h3>
-			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			Termine für Einbürgerungsgespräche auswählen 
 			</h3>
+			<p>Bitte wählen Sie für jeden Erwachsenen einen Termin für ein Einbürgerungsgespräch.</p>
+			<p>Ein Kind muss in Begleitung eines Erwachsenen sein. Erwachsene dürfen nicht zusammen an ein Einbürgerungsgespräch.</p>
 			
 			<h:form id="form">
 				<h:panelGrid columns="2">
@@ -27,8 +28,10 @@
 						<p:column headerText="Nachname">
 						  <h:outputText value="#{person.lastname}" />
 						</p:column>
-						<p:column headerText="Rolle">
-						  <h:outputText value="#{person.role}" />
+						<p:column headerText="Kategorie">
+						  <h:outputText value="Antragsteller" rendered="#{person.role == 'applicant'}"/>
+						  <h:outputText value="Erwachsener" rendered="#{person.role == 'adult'}"/>
+						  <h:outputText value="Kind" rendered="#{person.role == 'child'}"/>
 						</p:column>
 						<p:column headerText="Begleitung">
 								<h:outputText value="keine Begleitung nötig" rendered="#{person.role == 'applicant' || person.role == 'adult'}"/>

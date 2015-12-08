@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 18:57:06 CET 2015]
+[>Created: Tue Dec 08 22:50:40 CET 2015]
 1517BAECF236852E 3.17 #module
 >Proto >Proto Collection #zClass
 ts0 terminWaehlen_v4Process Big #zClass
@@ -68,7 +68,7 @@ ts0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ts0 f0 83 51 26 26 -39 15 #rect
 ts0 f0 @|RichDialogInitStartIcon #fIcon
 ts0 f1 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
-ts0 f1 1171 51 26 26 0 12 #rect
+ts0 f1 1211 51 26 26 0 12 #rect
 ts0 f1 @|RichDialogProcessEndIcon #fIcon
 ts0 f3 guid 15178F8EA8051F91 #txt
 ts0 f3 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
@@ -83,11 +83,11 @@ ts0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f3 83 147 26 26 -15 12 #rect
+ts0 f3 83 219 26 26 -15 12 #rect
 ts0 f3 @|RichDialogProcessStartIcon #fIcon
 ts0 f4 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 ts0 f4 guid 15178F8EA80DC9E6 #txt
-ts0 f4 987 147 26 26 0 12 #rect
+ts0 f4 907 219 26 26 0 12 #rect
 ts0 f4 @|RichDialogEndIcon #fIcon
 ts0 f10 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -110,7 +110,7 @@ ts0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f10 352 42 112 44 -31 -8 #rect
+ts0 f10 344 42 112 44 -31 -8 #rect
 ts0 f10 @|StepIcon #fIcon
 ts0 f6 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -141,7 +141,7 @@ from Database</name>
     </language>
 </elementInfo>
 ' #txt
-ts0 f6 664 42 128 44 -40 -16 #rect
+ts0 f6 696 42 128 44 -40 -16 #rect
 ts0 f6 @|DBStepIcon #fIcon
 ts0 f14 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -160,7 +160,7 @@ to List&lt;String&gt;</name>
     </language>
 </elementInfo>
 ' #txt
-ts0 f14 824 42 128 44 -44 -16 #rect
+ts0 f14 872 42 128 44 -44 -16 #rect
 ts0 f14 @|StepIcon #fIcon
 ts0 f16 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -177,14 +177,14 @@ ts0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f16 992 42 112 44 -51 -8 #rect
+ts0 f16 1048 42 112 44 -51 -8 #rect
 ts0 f16 @|StepIcon #fIcon
 ts0 f15 expr out #txt
-ts0 f15 792 64 824 64 #arcP
+ts0 f15 824 64 872 64 #arcP
 ts0 f17 expr out #txt
-ts0 f17 952 64 992 64 #arcP
+ts0 f17 1000 64 1048 64 #arcP
 ts0 f2 expr out #txt
-ts0 f2 1104 64 1171 64 #arcP
+ts0 f2 1160 64 1211 64 #arcP
 ts0 f8 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
 ts0 f8 actionTable 'out=in;
@@ -219,7 +219,7 @@ set meetingFinished</name>
     </language>
 </elementInfo>
 ' #txt
-ts0 f8 304 138 224 44 -93 -16 #rect
+ts0 f8 320 210 224 44 -93 -16 #rect
 ts0 f8 @|StepIcon #fIcon
 ts0 f24 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
@@ -236,12 +236,12 @@ ts0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f24 496 42 144 44 -69 -8 #rect
+ts0 f24 504 42 144 44 -69 -8 #rect
 ts0 f24 @|StepIcon #fIcon
 ts0 f25 expr out #txt
-ts0 f25 464 64 496 64 #arcP
+ts0 f25 456 64 504 64 #arcP
 ts0 f12 expr out #txt
-ts0 f12 640 64 664 64 #arcP
+ts0 f12 648 64 696 64 #arcP
 ts0 f11 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
 ts0 f11 actionTable 'out=in;
@@ -251,13 +251,13 @@ ts0 f11 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 ts0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>set togetherWith for Person</name>
+        <name>set relationship for Person</name>
         <nameStyle>27,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-ts0 f11 520 242 160 44 -74 -8 #rect
+ts0 f11 600 210 160 44 -72 -8 #rect
 ts0 f11 @|StepIcon #fIcon
 ts0 f5 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 ts0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -272,7 +272,7 @@ alle Child haben eine Relationship</desc>
     </language>
 </elementInfo>
 ' #txt
-ts0 f5 656 144 32 32 -30 18 #rect
+ts0 f5 816 216 32 32 -30 18 #rect
 ts0 f5 @|AlternativeIcon #fIcon
 ts0 f18 type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 ts0 f18 264 48 32 32 0 16 #rect
@@ -280,7 +280,7 @@ ts0 f18 @|AlternativeIcon #fIcon
 ts0 f19 expr out #txt
 ts0 f19 109 64 264 64 #arcP
 ts0 f7 expr in #txt
-ts0 f7 296 64 352 64 #arcP
+ts0 f7 296 64 344 64 #arcP
 ts0 f21 expr in #txt
 ts0 f21 outCond '(einbuergerung_Gruppe6.PersonHelper.isAllAdultsHaveMeetingRequest(in.request.personList)==true) || (einbuergerung_Gruppe6.PersonHelper.isAllChildsHaveRelationship(in.request.personList) == true)' #txt
 ts0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -292,7 +292,8 @@ ts0 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f21 688 160 987 160 #arcP
+ts0 f21 848 232 907 232 #arcP
+ts0 f21 0 0.4406779661016949 0 -9 #arcLabel
 ts0 f22 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
 ts0 f22 actionTable 'out=in;
@@ -308,7 +309,7 @@ ts0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f22 432 90 112 44 -36 -8 #rect
+ts0 f22 224 122 112 44 -36 -8 #rect
 ts0 f22 @|StepIcon #fIcon
 ts0 f23 expr in #txt
 ts0 f23 outCond '(einbuergerung_Gruppe6.PersonHelper.isAllAdultsHaveMeetingRequest(in.request.personList)==false) || (einbuergerung_Gruppe6.PersonHelper.isAllChildsHaveRelationship(in.request.personList) == false)' #txt
@@ -321,13 +322,12 @@ ts0 f23 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f23 672 144 544 112 #arcP
-ts0 f23 1 672 112 #addKink
-ts0 f23 1 0.39361702127659576 0 0 #arcLabel
+ts0 f23 832 216 336 144 #arcP
+ts0 f23 1 832 144 #addKink
+ts0 f23 1 0.39314516129032256 0 -8 #arcLabel
 ts0 f20 expr out #txt
-ts0 f20 432 112 280 80 #arcP
-ts0 f20 1 280 112 #addKink
-ts0 f20 1 0.39361702127659576 0 0 #arcLabel
+ts0 f20 280 122 280 80 #arcP
+ts0 f20 0 0.8945420906567992 0 0 #arcLabel
 ts0 f26 actionDecl 'einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data out;
 ' #txt
 ts0 f26 actionTable 'out=in;
@@ -343,16 +343,16 @@ ts0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-ts0 f26 168 138 112 44 -36 -8 #rect
+ts0 f26 160 210 112 44 -36 -8 #rect
 ts0 f26 @|StepIcon #fIcon
 ts0 f27 expr out #txt
-ts0 f27 109 160 168 160 #arcP
+ts0 f27 109 232 160 232 #arcP
 ts0 f9 expr out #txt
-ts0 f9 280 160 304 160 #arcP
+ts0 f9 272 232 320 232 #arcP
 ts0 f28 expr out #txt
-ts0 f28 416 182 600 242 #arcP
+ts0 f28 544 232 600 232 #arcP
 ts0 f13 expr out #txt
-ts0 f13 600 242 665 169 #arcP
+ts0 f13 760 232 816 232 #arcP
 >Proto ts0 .type einbuergerung_Gruppe6.terminWaehlen_v4.terminWaehlen_v4Data #txt
 >Proto ts0 .processKind HTML_DIALOG #txt
 >Proto ts0 -8 -8 16 16 16 26 #rect
