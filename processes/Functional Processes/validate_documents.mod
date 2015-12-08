@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 19:32:44 CET 2015]
+[>Created: Tue Dec 08 21:24:03 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -11,6 +11,8 @@ Bk1 BpmnUserTask Big #zClass
 Bk1 BpmnUserTask #cInfo
 Bk2 BpmnSendTask Big #zClass
 Bk2 BpmnSendTask #cInfo
+Bk3 BpmnServiceTask Big #zClass
+Bk3 BpmnServiceTask #cInfo
 vs0 @TextInP .resExport .resExport #zField
 vs0 @TextInP .type .type #zField
 vs0 @TextInP .processKind .processKind #zField
@@ -74,7 +76,9 @@ vs0 @TkArc f53 '' #zField
 vs0 @StartRequest f29 '' #zField
 vs0 @GridStep f28 '' #zField
 vs0 @PushWFArc f36 '' #zField
-vs0 @TkArc f5 '' #zField
+vs0 Bk3 S70 'Service 7' #zField
+vs0 @PushWFArc f5 '' #zField
+vs0 @TkArc f40 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -134,6 +138,20 @@ Bk2 @PushWFArc f0 '' #zField
 Bk2 @PushTrueWFInG-01 g2 '' #zField
 Bk2 @PushWFArc f5 '' #zField
 >Proto Bk2 Bk2 BpmnSendTask #zField
+Bk3 @TextInP .resExport .resExport #zField
+Bk3 @TextInP .type .type #zField
+Bk3 @TextInP .processKind .processKind #zField
+Bk3 @AnnotationInP-0n ai ai #zField
+Bk3 @MessageFlowInP-0n messageIn messageIn #zField
+Bk3 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk3 @TextInP .xml .xml #zField
+Bk3 @TextInP .responsibility .responsibility #zField
+Bk3 @PushTrueWFInG-01 g0 '' #zField
+Bk3 @PushTrueWFOutG-01 g1 '' #zField
+Bk3 @DBStep f1 '' #zField
+Bk3 @PushWFArc f2 '' #zField
+Bk3 @PushWFArc f0 '' #zField
+>Proto Bk3 Bk3 BpmnServiceTask #zField
 vs0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 vs0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -1021,10 +1039,23 @@ vs0 f28 @|StepIcon #fIcon
 vs0 f28 -613726|-1|-16777216 #nodeStyle
 vs0 f36 expr out #txt
 vs0 f36 87 272 160 272 #arcP
+vs0 S70 .resExport export #txt
+vs0 S70 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Status setzen</name>
+        <nameStyle>13,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 S70 152 154 112 44 -37 -8 #rect
+vs0 S70 @|BpmnServiceTaskIcon #fIcon
 vs0 f5 expr out #txt
-vs0 f5 type einbuergerung_Gruppe6.Data #txt
-vs0 f5 var in1 #txt
-vs0 f5 216 250 312 184 #arcP
+vs0 f5 111 176 152 176 #arcP
+vs0 f40 type einbuergerung_Gruppe6.Data #txt
+vs0 f40 var in1 #txt
+vs0 f40 264 176 304 176 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1321,6 +1352,41 @@ Bk2 g2 @|MIGIcon #fIcon
 Bk2 f5 480 77 480 170 #arcP
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BpmnSendTaskIcon #fIcon
+Bk3 g0 51 243 26 26 0 5 #rect
+Bk3 g0 @|MIGIcon #fIcon
+Bk3 g1 563 243 26 26 0 5 #rect
+Bk3 g1 @|MOGIcon #fIcon
+Bk3 f1 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk3 f1 actionTable 'out=in;
+' #txt
+Bk3 f1 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
+<UPDATE><Table name=''Request''/><Value column=''status''><String>""Antrag wird geprüft""</String></Value><Condition><Relation kind=''=''><AnyExpression>in.request.uniqueIdentifier</AnyExpression><Column name=''uniqueIdentifier''/></Relation></Condition></UPDATE>' #txt
+Bk3 f1 dbUrl AmazonDB #txt
+Bk3 f1 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+Bk3 f1 dbWizard 'in.request.uniqueIdentifier = uniqueIdentifier' #txt
+Bk3 f1 lotSize 2147483647 #txt
+Bk3 f1 startIdx 0 #txt
+Bk3 f1 type einbuergerung_Gruppe6.Data #txt
+Bk3 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status in DB
+Updaten</name>
+        <nameStyle>13,7
+7,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk3 f1 232 234 112 44 -34 -16 #rect
+Bk3 f1 @|DBStepIcon #fIcon
+Bk3 f2 77 256 232 256 #arcP
+Bk3 f0 expr out #txt
+Bk3 f0 344 256 563 256 #arcP
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BpmnServiceTaskIcon #fIcon
 vs0 f33 mainOut f18 tail #connect
 vs0 f18 head f2 in #connect
 vs0 f7 mainOut f19 tail #connect
@@ -1377,8 +1443,10 @@ vs0 f48 mainOut f53 tail #connect
 vs0 f53 head f2 in #connect
 vs0 f29 mainOut f36 tail #connect
 vs0 f36 head f28 mainIn #connect
-vs0 f28 mainOut f5 tail #connect
-vs0 f5 head f4 in #connect
+vs0 f0 mainOut f5 tail #connect
+vs0 f5 head S70 g0 #connect
+vs0 S70 g1 f40 tail #connect
+vs0 f40 head f4 in #connect
 Bk0 g0 m f4 tail #connect
 Bk0 f4 head f2 mainIn #connect
 Bk0 f2 mainOut f6 tail #connect
@@ -1410,3 +1478,8 @@ Bk2 f0 head g1 m #connect
 Bk2 g2 m f5 tail #connect
 Bk2 f5 head f3 mainIn #connect
 Bk2 0 0 808 400 0 #ivRect
+Bk3 g0 m f2 tail #connect
+Bk3 f2 head f1 mainIn #connect
+Bk3 f1 mainOut f0 tail #connect
+Bk3 f0 head g1 m #connect
+Bk3 0 0 640 512 0 #ivRect

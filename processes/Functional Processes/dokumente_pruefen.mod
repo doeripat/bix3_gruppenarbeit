@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 20:26:11 CET 2015]
+[>Created: Tue Dec 08 21:30:51 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -7,8 +7,6 @@ dn0 B #cInfo
 dn0 #process
 Bk2 BpmnUserTask Big #zClass
 Bk2 BpmnUserTask #cInfo
-Bk7 BpmnUserTask Big #zClass
-Bk7 BpmnUserTask #cInfo
 Bk8 BpmnUserTask Big #zClass
 Bk8 BpmnUserTask #cInfo
 Bk1 BpmnUserTask Big #zClass
@@ -36,10 +34,8 @@ dn0 @EndTask f25 '' #zField
 dn0 @PushWFArc f26 '' #zField
 dn0 Bk2 U40 'User 4' #zField
 dn0 @InfoButton f17 '' #zField
-dn0 Bk7 U10 'User 1' #zField
 dn0 @TaskSwitch f11 '' #zField
 dn0 @TkArc f19 '' #zField
-dn0 @PushWFArc f3 '' #zField
 dn0 @CallSub f6 '' #zField
 dn0 @CallSub f12 '' #zField
 dn0 @PushWFArc f4 '' #zField
@@ -52,7 +48,6 @@ dn0 @TkArc f10 '' #zField
 dn0 @EMail f14 '' #zField
 dn0 @PushWFArc f16 '' #zField
 dn0 @PushWFArc f27 '' #zField
-dn0 @PushWFArc f5 '' #zField
 dn0 @AnnotationArc f18 '' #zField
 dn0 Bk1 U30 'User 3' #zField
 dn0 @Alternative f30 '' #zField
@@ -63,7 +58,6 @@ dn0 @StartRequest f22 '' #zField
 dn0 @PushWFArc f31 '' #zField
 dn0 @GridStep f33 '' #zField
 dn0 @PushWFArc f34 '' #zField
-dn0 @PushWFArc f35 '' #zField
 dn0 @ProcessException f40 '' #zField
 dn0 Bk0 S20 'Send 2' #zField
 dn0 @Alternative f43 '' #zField
@@ -81,8 +75,7 @@ dn0 @PushWFArc f47 '' #zField
 dn0 Bk4 S70 'Service 7' #zField
 dn0 @PushWFArc f2 '' #zField
 dn0 @PushWFArc f36 '' #zField
-dn0 @StartRequest f37 '' #zField
-dn0 @PushWFArc f48 '' #zField
+dn0 @PushWFArc f3 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -100,21 +93,6 @@ Bk2 @RichDialog f3 '' #zField
 Bk2 @PushWFArc f4 '' #zField
 Bk2 @PushWFArc f2 '' #zField
 >Proto Bk2 Bk0 BpmnUserTask #zField
-Bk7 @TextInP .resExport .resExport #zField
-Bk7 @TextInP .type .type #zField
-Bk7 @TextInP .processKind .processKind #zField
-Bk7 @AnnotationInP-0n ai ai #zField
-Bk7 @MessageFlowInP-0n messageIn messageIn #zField
-Bk7 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk7 @TextInP .xml .xml #zField
-Bk7 @TextInP .responsibility .responsibility #zField
-Bk7 @PushTrueWFInG-01 g0 '' #zField
-Bk7 @PushTrueWFOutG-01 g1 '' #zField
-Bk7 @RichDialog f1 '' #zField
-Bk7 @PushWFArc f2 '' #zField
-Bk7 @PushWFArc f0 '' #zField
-Bk7 @PushTrueWFInG-01 g2 '' #zField
->Proto Bk7 Bk6 BpmnUserTask #zField
 Bk8 @TextInP .resExport .resExport #zField
 Bk8 @TextInP .type .type #zField
 Bk8 @TextInP .processKind .processKind #zField
@@ -143,10 +121,12 @@ Bk1 @TextInP .responsibility .responsibility #zField
 Bk1 @PushTrueWFInG-01 g0 '' #zField
 Bk1 @PushTrueWFOutG-01 g1 '' #zField
 Bk1 @RichDialog f0 '' #zField
-Bk1 @PushWFArc f1 '' #zField
 Bk1 @PushWFArc f4 '' #zField
 Bk1 @StartRequest f2 '' #zField
 Bk1 @PushWFArc f3 '' #zField
+Bk1 @RichDialog f5 '' #zField
+Bk1 @PushWFArc f1 '' #zField
+Bk1 @PushWFArc f6 '' #zField
 >Proto Bk1 Bk2 BpmnUserTask #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -186,6 +166,8 @@ Bk4 @TextInP .xml .xml #zField
 Bk4 @TextInP .responsibility .responsibility #zField
 Bk4 @PushTrueWFInG-01 g0 '' #zField
 Bk4 @PushTrueWFOutG-01 g1 '' #zField
+Bk4 @DBStep f1 '' #zField
+Bk4 @PushWFArc f2 '' #zField
 Bk4 @PushWFArc f0 '' #zField
 >Proto Bk4 Bk5 BpmnServiceTask #zField
 dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
@@ -296,18 +278,6 @@ auf required gesetzt)</name>
 ' #txt
 dn0 f17 424 418 288 76 -141 -32 #rect
 dn0 f17 @|IBIcon #fIcon
-dn0 U10 .resExport export #txt
-dn0 U10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>User Login</name>
-        <nameStyle>10,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 U10 256 354 112 44 -30 -8 #rect
-dn0 U10 @|BpmnUserTaskIcon #fIcon
 dn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f11 actionTable 'out=in1;
@@ -388,9 +358,6 @@ dn0 f19 expr out #txt
 dn0 f19 type einbuergerung_Gruppe6.Data #txt
 dn0 f19 var in1 #txt
 dn0 f19 95 376 160 376 #arcP
-dn0 f3 expr data #txt
-dn0 f3 outCond ivp=="TaskA.ivp" #txt
-dn0 f3 192 376 256 376 #arcP
 dn0 f6 type einbuergerung_Gruppe6.Data #txt
 dn0 f6 processCall 'Functional Processes/Rechnungswesen:call(einbuergerung_Gruppe6.Invoice,einbuergerung_Gruppe6.Data)' #txt
 dn0 f6 doCall true #txt
@@ -628,8 +595,8 @@ dn0 f16 expr out #txt
 dn0 f16 1480 144 1544 144 #arcP
 dn0 f27 expr out #txt
 dn0 f27 1672 144 1736 144 #arcP
-dn0 f5 368 376 425 376 #arcP
-dn0 f18 568 418 488 400 #arcP
+dn0 f27 0 0.489447831216052 0 0 #arcLabel
+dn0 f18 424 456 344 400 #arcP
 dn0 U30 .resExport export #txt
 dn0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -641,7 +608,7 @@ ausfüllen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U30 425 352 126 48 -44 -16 #rect
+dn0 U30 281 352 126 48 -44 -16 #rect
 dn0 U30 @|BpmnUserTaskIcon #fIcon
 dn0 f30 type einbuergerung_Gruppe6.Data #txt
 dn0 f30 560 128 32 32 0 16 #rect
@@ -791,8 +758,6 @@ dn0 f33 1592 50 112 44 0 -8 #rect
 dn0 f33 @|StepIcon #fIcon
 dn0 f34 expr out #txt
 dn0 f34 1568 72 1592 72 #arcP
-dn0 f35 expr out #txt
-dn0 f35 1648 94 1608 122 #arcP
 dn0 f40 .resExport export #txt
 dn0 f40 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -871,8 +836,9 @@ dn0 f28 504 144 560 144 #arcP
 dn0 f28 0 0.7039731099576579 0 0 #arcLabel
 dn0 f39 type einbuergerung_Gruppe6.Data #txt
 dn0 f39 var in1 #txt
-dn0 f39 488 352 488 160 #arcP
-dn0 f39 0 0.5229514531114031 0 0 #arcLabel
+dn0 f39 407 376 488 160 #arcP
+dn0 f39 1 488 376 #addKink
+dn0 f39 1 0.22629816776977746 0 0 #arcLabel
 dn0 f38 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f38 actionTable 'out=in1;
@@ -972,75 +938,9 @@ dn0 S70 @|BpmnServiceTaskIcon #fIcon
 dn0 f2 expr in #txt
 dn0 f2 992 144 1032 144 #arcP
 dn0 f36 1144 144 1200 144 #arcP
-dn0 f37 outLink startbisifuedli.ivp #txt
-dn0 f37 type einbuergerung_Gruppe6.Data #txt
-dn0 f37 inParamDecl '<> param;' #txt
-dn0 f37 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f37 guid 1518308E363AC849 #txt
-dn0 f37 requestEnabled true #txt
-dn0 f37 triggerEnabled false #txt
-dn0 f37 callSignature startbisifuedli() #txt
-dn0 f37 persist false #txt
-dn0 f37 taskData '#
-#Tue Dec 08 20:19:51 CET 2015
-TaskTriggered.ROL=Everybody
-TaskTriggered.EXTYPE=0
-TaskTriggered.EXPRI=2
-TaskTriggered.TYPE=0
-TaskTriggered.PRI=2
-TaskTriggered.EXROL=Everybody
-' #txt
-dn0 f37 caseData '#
-#Tue Dec 08 20:19:51 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-dn0 f37 showInStartList 1 #txt
-dn0 f37 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
-ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
-import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskUpdDef.setExpiryActivator("Everybody");
-taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-engine.updateCurrentTask(taskUpdDef);
-' #txt
-dn0 f37 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>startbisifuedli.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-dn0 f37 @C|.responsibility Everybody #txt
-dn0 f37 721 49 30 30 -46 17 #rect
-dn0 f37 @|StartRequestIcon #fIcon
-dn0 f48 expr out #txt
-dn0 f48 747 73 840 114 #arcP
+dn0 f3 expr data #txt
+dn0 f3 outCond ivp=="TaskA.ivp" #txt
+dn0 f3 192 376 281 376 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1129,45 +1029,6 @@ Bk2 f2 expr out #txt
 Bk2 f2 312 312 352 312 #arcP
 >Proto Bk0 -8 -8 16 16 16 26 #rect
 >Proto Bk0 '' #fIcon
-Bk7 g0 51 235 26 26 0 5 #rect
-Bk7 g0 @|MIGIcon #fIcon
-Bk7 g1 563 251 26 26 0 5 #rect
-Bk7 g1 @|MOGIcon #fIcon
-Bk7 f1 targetWindow NEW:card: #txt
-Bk7 f1 targetDisplay TOP #txt
-Bk7 f1 richDialogId einbuergerung_Gruppe6.Login #txt
-Bk7 f1 startMethod start(String,String) #txt
-Bk7 f1 type einbuergerung_Gruppe6.Data #txt
-Bk7 f1 requestActionDecl '<String email, String password> param;' #txt
-Bk7 f1 requestMappingAction 'param.email=in.request.email;
-param.password=in.request.password;
-' #txt
-Bk7 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk7 f1 responseMappingAction 'out=in;
-' #txt
-Bk7 f1 windowConfiguration '* ' #txt
-Bk7 f1 isAsynch false #txt
-Bk7 f1 isInnerRd false #txt
-Bk7 f1 userContext '* ' #txt
-Bk7 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Login</name>
-        <nameStyle>5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Bk7 f1 216 234 112 44 -15 -8 #rect
-Bk7 f1 @|RichDialogIcon #fIcon
-Bk7 f2 76 248 216 256 #arcP
-Bk7 f0 expr out #txt
-Bk7 f0 328 256 563 263 #arcP
-Bk7 g2 211 435 26 26 0 5 #rect
-Bk7 g2 @|MIGIcon #fIcon
->Proto Bk6 0 0 32 24 18 0 #rect
->Proto Bk6 @|BpmnServiceTaskIcon #fIcon
 Bk8 g0 75 243 26 26 0 5 #rect
 Bk8 g0 @|MIGIcon #fIcon
 Bk8 g1 563 243 26 26 0 5 #rect
@@ -1283,11 +1144,10 @@ laden</name>
     </language>
 </elementInfo>
 ' #txt
-Bk1 f0 216 234 144 44 -51 -16 #rect
+Bk1 f0 312 234 144 44 -51 -16 #rect
 Bk1 f0 @|RichDialogIcon #fIcon
-Bk1 f1 77 256 216 256 #arcP
 Bk1 f4 expr out #txt
-Bk1 f4 360 256 523 256 #arcP
+Bk1 f4 456 256 523 256 #arcP
 Bk1 f2 outLink startgaggi.ivp #txt
 Bk1 f2 type einbuergerung_Gruppe6.Data #txt
 Bk1 f2 inParamDecl '<> param;' #txt
@@ -1368,7 +1228,38 @@ Bk1 f2 @C|.responsibility Everybody #txt
 Bk1 f2 145 129 30 30 -36 17 #rect
 Bk1 f2 @|StartRequestIcon #fIcon
 Bk1 f3 expr out #txt
-Bk1 f3 171 153 288 234 #arcP
+Bk1 f3 173 150 384 234 #arcP
+Bk1 f5 targetWindow NEW:card: #txt
+Bk1 f5 targetDisplay TOP #txt
+Bk1 f5 richDialogId einbuergerung_Gruppe6.Login #txt
+Bk1 f5 startMethod start(String,String) #txt
+Bk1 f5 type einbuergerung_Gruppe6.Data #txt
+Bk1 f5 requestActionDecl '<String email, String password> param;' #txt
+Bk1 f5 requestMappingAction 'param.email=in.request.email;
+param.password=in.request.password;
+' #txt
+Bk1 f5 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk1 f5 responseMappingAction 'out=in;
+' #txt
+Bk1 f5 windowConfiguration '* ' #txt
+Bk1 f5 isAsynch false #txt
+Bk1 f5 isInnerRd false #txt
+Bk1 f5 userContext '* ' #txt
+Bk1 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Login</name>
+        <nameStyle>5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk1 f5 144 234 112 44 -15 -8 #rect
+Bk1 f5 @|RichDialogIcon #fIcon
+Bk1 f1 77 256 144 256 #arcP
+Bk1 f6 expr out #txt
+Bk1 f6 256 256 312 256 #arcP
 >Proto Bk2 -8 -8 16 16 16 26 #rect
 >Proto Bk2 '' #fIcon
 Bk0 g0 51 243 26 26 0 5 #rect
@@ -1427,7 +1318,35 @@ Bk4 g0 51 243 26 26 0 5 #rect
 Bk4 g0 @|MIGIcon #fIcon
 Bk4 g1 563 243 26 26 0 5 #rect
 Bk4 g1 @|MOGIcon #fIcon
-Bk4 f0 77 256 563 256 #arcP
+Bk4 f1 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk4 f1 actionTable 'out=in;
+' #txt
+Bk4 f1 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
+<UPDATE><Table name=''Request''/><Value column=''status''><String>""Warten auf Zahlungseingang Verfahrensgebühr""</String></Value><Condition><Relation kind=''=''><AnyExpression>in.request.uniqueIdentifier</AnyExpression><Column name=''uniqueIdentifier''/></Relation></Condition></UPDATE>' #txt
+Bk4 f1 dbUrl AmazonDB #txt
+Bk4 f1 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+Bk4 f1 dbWizard 'in.request.uniqueIdentifier = uniqueIdentifier' #txt
+Bk4 f1 lotSize 2147483647 #txt
+Bk4 f1 startIdx 0 #txt
+Bk4 f1 type einbuergerung_Gruppe6.Data #txt
+Bk4 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status in DB
+Updaten</name>
+        <nameStyle>13,7
+7,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk4 f1 232 234 112 44 -34 -16 #rect
+Bk4 f1 @|DBStepIcon #fIcon
+Bk4 f2 77 256 232 256 #arcP
+Bk4 f0 expr out #txt
+Bk4 f0 344 256 563 256 #arcP
 >Proto Bk5 0 0 32 24 18 0 #rect
 >Proto Bk5 @|BpmnServiceTaskIcon #fIcon
 dn0 f23 out f15 tail #connect
@@ -1438,8 +1357,6 @@ dn0 f17 ao f18 tail #connect
 dn0 f18 head U30 ai #connect
 dn0 f0 mainOut f19 tail #connect
 dn0 f19 head f11 in #connect
-dn0 f11 out f3 tail #connect
-dn0 f3 head U10 g0 #connect
 dn0 f6 mainOut f4 tail #connect
 dn0 f4 head f12 mainIn #connect
 dn0 U50 g1 f13 tail #connect
@@ -1451,8 +1368,6 @@ dn0 f12 mainOut f16 tail #connect
 dn0 f16 head f14 mainIn #connect
 dn0 f14 mainOut f27 tail #connect
 dn0 f27 head f23 in #connect
-dn0 U10 g1 f5 tail #connect
-dn0 f5 head U30 g0 #connect
 dn0 f30 out f29 tail #connect
 dn0 f29 head f21 in #connect
 dn0 U40 g1 f32 tail #connect
@@ -1461,8 +1376,6 @@ dn0 f22 mainOut f31 tail #connect
 dn0 f31 head f20 mainIn #connect
 dn0 f20 mainOut f34 tail #connect
 dn0 f34 head f33 mainIn #connect
-dn0 f33 mainOut f35 tail #connect
-dn0 f35 head f14 mainIn #connect
 dn0 f8 out f10 tail #connect
 dn0 U30 g1 f39 tail #connect
 dn0 f39 head f38 in #connect
@@ -1484,8 +1397,8 @@ dn0 f8 out f2 tail #connect
 dn0 f2 head S70 g0 #connect
 dn0 S70 g1 f36 tail #connect
 dn0 f36 head f6 mainIn #connect
-dn0 f37 mainOut f48 tail #connect
-dn0 f48 head U50 g2 #connect
+dn0 f11 out f3 tail #connect
+dn0 f3 head U30 g0 #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect
@@ -1493,11 +1406,6 @@ Bk2 f4 head f3 mainIn #connect
 Bk2 f3 mainOut f2 tail #connect
 Bk2 f2 head f1 mainIn #connect
 Bk2 0 0 640 512 0 #ivRect
-Bk7 g0 m f2 tail #connect
-Bk7 f2 head f1 mainIn #connect
-Bk7 f1 mainOut f0 tail #connect
-Bk7 f0 head g1 m #connect
-Bk7 0 0 640 512 0 #ivRect
 Bk8 g0 m f2 tail #connect
 Bk8 f2 head f1 mainIn #connect
 Bk8 f1 mainOut f0 tail #connect
@@ -1505,12 +1413,14 @@ Bk8 f0 head g1 m #connect
 Bk8 g2 m f3 tail #connect
 Bk8 f3 head f1 mainIn #connect
 Bk8 0 0 976 488 0 #ivRect
-Bk1 g0 m f1 tail #connect
-Bk1 f1 head f0 mainIn #connect
 Bk1 f0 mainOut f4 tail #connect
 Bk1 f4 head g1 m #connect
 Bk1 f2 mainOut f3 tail #connect
 Bk1 f3 head f0 mainIn #connect
+Bk1 g0 m f1 tail #connect
+Bk1 f1 head f5 mainIn #connect
+Bk1 f5 mainOut f6 tail #connect
+Bk1 f6 head f0 mainIn #connect
 Bk1 0 0 840 616 0 #ivRect
 Bk0 g0 m f2 tail #connect
 Bk0 f2 head f1 mainIn #connect
@@ -1522,6 +1432,8 @@ Bk0 0 0 640 512 0 #ivRect
 Bk3 g0 m f0 tail #connect
 Bk3 f0 head g1 m #connect
 Bk3 0 0 640 512 0 #ivRect
-Bk4 g0 m f0 tail #connect
+Bk4 g0 m f2 tail #connect
+Bk4 f2 head f1 mainIn #connect
+Bk4 f1 mainOut f0 tail #connect
 Bk4 f0 head g1 m #connect
 Bk4 0 0 640 512 0 #ivRect
