@@ -30,22 +30,24 @@
 						<p:column headerText="Rolle">
 						  <h:outputText value="#{person.role}" />
 						</p:column>
-						<p:column headerText="Terminwahl" rendered="#{person.role == 'adult' || person.role == 'applicant'}">
-								<p:cellEditor>
-									<f:facet name="output"><h:outputText value="#{person.meetingString}" /></f:facet>
+						<p:column headerText="Begleitung">
+								<h:outputText value="keine Begleitung nötig" rendered="#{person.role == 'applicant' || person.role == 'adult'}"/>
+								<p:cellEditor rendered="#{person.role == 'child'}">
+									<f:facet name="output"><h:outputText value="#{person.relationship}"/></f:facet>
 									<f:facet name="input">
-										<p:selectOneMenu id="meeting" value="#{person.meetingString}" style="width:150px">
-			            					<f:selectItems value="#{data.dateDropDownList}" />
+										<p:selectOneMenu id="relationship" value="#{person.relationship}" style="width:200px">
+			            					<f:selectItems value="#{data.adultDropDownList}" />
 			        					</p:selectOneMenu>
 		        					</f:facet>
 								</p:cellEditor>
 						</p:column>
-						<p:column headerText="Terminwahl" rendered="#{person.role == 'child'}">
-								<p:cellEditor>
-									<f:facet name="output"><h:outputText value="#{person.relationship}" /></f:facet>
+						<p:column headerText="Terminwahl">
+								<h:outputText value="keine Terminwahl nötig" rendered="#{person.role == 'child'}"/>
+								<p:cellEditor rendered="#{person.role == 'applicant' || person.role == 'adult'}">
+									<f:facet name="output"><h:outputText value="#{person.meetingString}" /></f:facet>
 									<f:facet name="input">
-										<p:selectOneMenu id="relationship" value="#{person.relationship}" style="width:150px">
-			            					<f:selectItems value="#{data.adultDropDownList}" />
+										<p:selectOneMenu id="meeting" value="#{person.meetingString}" style="width:200px">
+			            					<f:selectItems value="#{data.dateDropDownList}" />
 			        					</p:selectOneMenu>
 		        					</f:facet>
 								</p:cellEditor>
@@ -54,7 +56,7 @@
 						   			<p:rowEditor />
 						</p:column>
 					</p:dataTable>
-									
+																				
 					<br/>
 					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 				</h:panelGrid>
