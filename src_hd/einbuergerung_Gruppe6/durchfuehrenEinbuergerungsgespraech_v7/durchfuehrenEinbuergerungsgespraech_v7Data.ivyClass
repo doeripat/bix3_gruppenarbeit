@@ -1,10 +1,6 @@
 durchfuehrenEinbuergerungsgespraech_v7Data #class
 einbuergerung_Gruppe6.durchfuehrenEinbuergerungsgespraech_v7 #namespace
-personList List<einbuergerung_Gruppe6.Person> #field
-person einbuergerung_Gruppe6.Person #field
-selectedPerson String #field
-selectedPerson PERSISTENT #fieldModifier
-personListString List<String> #field
-personListString PERSISTENT #fieldModifier
-notes String #field
-notes PERSISTENT #fieldModifier
+request einbuergerung_Gruppe6.Request #field
+request PERSISTENT #fieldModifier
+writtenStatementTemp Boolean #field
+writtenStatementTemp PERSISTENT #fieldModifier

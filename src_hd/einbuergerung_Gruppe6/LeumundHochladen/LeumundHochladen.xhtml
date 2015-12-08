@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+		<ui:define name="title">LeumundHochladen</ui:define>
+		<ui:define name="content">
+			<h3>
+			Bitte Dateien Hochladen
+			</h3>
+			<h:form id="form" enctype="multipart/form-data">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					
+					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
+					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
+					
+					<p:outputLabel  value="Personen"/>
+					<p:row>
+						<p:column>
+							<p:dataTable var="p" value="#{data.request.personList}">
+								<p:column headerText="Geschlecht">
+								    <h:outputText value="#{p.gender}" />
+								  </p:column>				
+								  <p:column headerText="Name">
+								    <h:outputText value="#{p.firstname} #{p.lastname}" />
+								  </p:column>
+								  <p:column headerText="Geburtstag">
+									<h:outputText value="#{p.birthday}" />									
+								</p:column>
+							</p:dataTable>
+						</p:column>
+					</p:row>
+					<p:outputLabel value="Dokumente"/>
+					<p:row>
+						<p:column>
+							<p:dataTable var="d" value="#{data.request.documents}" >
+									<p:column headerText="Dokumententyp" >
+								    <h:outputText value="#{d.fileType}"  rendered="#{d.fileType == 'Leumund'}"/>
+								  </p:column>				
+								  <p:column headerText="Dateiname" >
+								    <h:outputText value="#{d.fileName}"  rendered="#{d.fileType == 'Leumund'}"/>
+								  </p:column>
+								  <p:column headerText="Dokument ansehen" >
+								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}"  rendered="#{d.fileType == 'Leumund'}">
+  									<p:fileDownload value="#{d.fileStreamedContent}" /> 
+									</p:commandLink>									
+								</p:column>
+							</p:dataTable>
+						</p:column>
+					</p:row>
+					<p:outputLabel  value="Leumunde hochladen"/>				
+					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadLeumund}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+				
+					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
+			</h:form>	
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

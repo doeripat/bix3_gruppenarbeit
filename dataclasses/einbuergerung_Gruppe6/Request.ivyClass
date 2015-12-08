@@ -56,3 +56,5 @@ personRemovedList List<einbuergerung_Gruppe6.Person> #field
 personRemovedList PERSISTENT #fieldModifier
 writtenStatement Boolean #field
 writtenStatement PERSISTENT #fieldModifier
+commentLeumund String #field
+commentLeumund PERSISTENT #fieldModifier

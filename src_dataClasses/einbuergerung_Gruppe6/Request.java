@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 8675053996458954725L;
+  private static final long serialVersionUID = 6281865496687222299L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -429,6 +429,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     discount = _discount;
   }
 
+  private java.lang.String endReason;
+
+  /**
+   * Gets the field endReason.
+   * @return the value of the field endReason; may be null.
+   */
+  public java.lang.String getEndReason()
+  {
+    return endReason;
+  }
+
+  /**
+   * Sets the field endReason.
+   * @param _endReason the new value of the field endReason.
+   */
+  public void setEndReason(java.lang.String _endReason)
+  {
+    endReason = _endReason;
+  }
+
   private java.lang.String publicationData;
 
   /**
@@ -567,6 +587,26 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setWrittenStatement(java.lang.Boolean _writtenStatement)
   {
     writtenStatement = _writtenStatement;
+  }
+
+  private java.lang.String commentLeumund;
+
+  /**
+   * Gets the field commentLeumund.
+   * @return the value of the field commentLeumund; may be null.
+   */
+  public java.lang.String getCommentLeumund()
+  {
+    return commentLeumund;
+  }
+
+  /**
+   * Sets the field commentLeumund.
+   * @param _commentLeumund the new value of the field commentLeumund.
+   */
+  public void setCommentLeumund(java.lang.String _commentLeumund)
+  {
+    commentLeumund = _commentLeumund;
   }
 
 }

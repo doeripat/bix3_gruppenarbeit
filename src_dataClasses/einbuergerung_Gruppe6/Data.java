@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 6020778135400973006L;
+  private static final long serialVersionUID = 596446702605997958L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -189,24 +189,44 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     mailString = _mailString;
   }
 
-  private einbuergerung_Gruppe6.Objection objection;
+  private einbuergerung_Gruppe6.Polizeibeamter polizeibeamter;
 
   /**
-   * Gets the field objection.
-   * @return the value of the field objection; may be null.
+   * Gets the field polizeibeamter.
+   * @return the value of the field polizeibeamter; may be null.
    */
-  public einbuergerung_Gruppe6.Objection getObjection()
+  public einbuergerung_Gruppe6.Polizeibeamter getPolizeibeamter()
   {
-    return objection;
+    return polizeibeamter;
   }
 
   /**
-   * Sets the field objection.
-   * @param _objection the new value of the field objection.
+   * Sets the field polizeibeamter.
+   * @param _polizeibeamter the new value of the field polizeibeamter.
    */
-  public void setObjection(einbuergerung_Gruppe6.Objection _objection)
+  public void setPolizeibeamter(einbuergerung_Gruppe6.Polizeibeamter _polizeibeamter)
   {
-    objection = _objection;
+    polizeibeamter = _polizeibeamter;
+  }
+
+  private java.lang.Boolean allBoolean;
+
+  /**
+   * Gets the field allBoolean.
+   * @return the value of the field allBoolean; may be null.
+   */
+  public java.lang.Boolean getAllBoolean()
+  {
+    return allBoolean;
+  }
+
+  /**
+   * Sets the field allBoolean.
+   * @param _allBoolean the new value of the field allBoolean.
+   */
+  public void setAllBoolean(java.lang.Boolean _allBoolean)
+  {
+    allBoolean = _allBoolean;
   }
 
 }
