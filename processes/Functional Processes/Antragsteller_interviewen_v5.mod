@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 15:09:44 CET 2015]
+[>Created: Tue Dec 08 15:14:28 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -52,13 +52,14 @@ An0 @DBStep f15 '' #zField
 An0 @PushWFArc f20 '' #zField
 An0 @PushWFArc f23 '' #zField
 An0 @PushWFArc f4 '' #zField
-An0 @TkArc f6 '' #zField
 An0 @Alternative f18 '' #zField
 An0 @PushWFArc f22 '' #zField
 An0 @PushWFArc f8 '' #zField
 An0 @DBStep f10 '' #zField
 An0 @PushWFArc f28 '' #zField
 An0 @PushWFArc f34 '' #zField
+An0 @PushWFArc f6 '' #zField
+An0 @TkArc f37 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -657,10 +658,6 @@ An0 f23 936 352 760 352 #arcP
 An0 f23 0 0.38461538461538464 0 0 #arcLabel
 An0 f4 expr out #txt
 An0 f4 1016 168 1280 168 #arcP
-An0 f6 expr out #txt
-An0 f6 type einbuergerung_Gruppe6.Data #txt
-An0 f6 var in1 #txt
-An0 f6 200 190 200 424 #arcP
 An0 f18 type einbuergerung_Gruppe6.Data #txt
 An0 f18 1744 144 32 32 0 16 #rect
 An0 f18 @|AlternativeIcon #fIcon
@@ -709,6 +706,12 @@ An0 f28 expr in #txt
 An0 f28 1776 160 1824 160 #arcP
 An0 f34 expr out #txt
 An0 f34 1936 160 1993 160 #arcP
+An0 f6 expr out #txt
+An0 f6 110 364 280 304 #arcP
+An0 f37 expr out #txt
+An0 f37 type einbuergerung_Gruppe6.Data #txt
+An0 f37 var in1 #txt
+An0 f37 336 326 208 432 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -766,8 +769,6 @@ An0 f15 mainOut f23 tail #connect
 An0 f23 head f24 mainIn #connect
 An0 f26 mainOut f4 tail #connect
 An0 f4 head f11 in #connect
-An0 f21 mainOut f6 tail #connect
-An0 f6 head f3 in #connect
 An0 f30 mainOut f22 tail #connect
 An0 f22 head f18 in #connect
 An0 f5 out f8 tail #connect
@@ -777,3 +778,7 @@ An0 f18 out f28 tail #connect
 An0 f28 head f10 mainIn #connect
 An0 f10 mainOut f34 tail #connect
 An0 f34 head f1 mainIn #connect
+An0 f17 mainOut f6 tail #connect
+An0 f6 head f19 mainIn #connect
+An0 f19 mainOut f37 tail #connect
+An0 f37 head f3 in #connect

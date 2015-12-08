@@ -33,16 +33,19 @@
 						<p:column headerText="Begleitung" rendered="#{!(person.role == 'child')}">
 						  <h:outputText value="#{person.relationship}" />
 						</p:column>
-						<p:column headerText="Abgeschlossen?" rendered="#{!(person.role == 'child')}">
-						  		<p:cellEditor>
-									<f:facet name="output"><h:outputText value="#{person.meetingFinished}" /></f:facet>
-									<f:facet name="input"><p:selectBooleanCheckbox value="#{person.meetingFinished}" /></f:facet>
-								</p:cellEditor>
+						<p:column headerText="Datum und Zeit" rendered="#{!(person.role == 'child')}">
+						  <h:outputText value="#{person.meetingString}" />
 						</p:column>
 						<p:column headerText="Notizen" rendered="#{!(person.role == 'child')}">
 								<p:cellEditor>
 									<f:facet name="output"><h:outputText value="#{person.notes}" /></f:facet>
 									<f:facet name="input"><h:inputTextarea value="#{person.notes}" rows="6" cols="33" /></f:facet>
+								</p:cellEditor>
+						</p:column>
+						<p:column headerText="Abgeschlossen?" rendered="#{!(person.role == 'child')}">
+						  		<p:cellEditor>
+									<f:facet name="output"><h:outputText value="#{person.meetingFinished}" /></f:facet>
+									<f:facet name="input"><p:selectBooleanCheckbox value="#{person.meetingFinished}" /></f:facet>
 								</p:cellEditor>
 						</p:column>
 						<p:column style="width:32px; text-align: center" rendered="#{!(person.role == 'child')}">

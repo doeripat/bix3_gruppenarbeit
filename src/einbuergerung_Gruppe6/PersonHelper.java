@@ -150,7 +150,7 @@ public class PersonHelper {
 	public static Boolean isAllAdultsHadMeeting(List<Person> personList){
 		
 		for (Person person : personList){
-			if ((person.getRole().equals("applicant") || person.getRole().equals("adult")) && person.getMeetingFinished() == null){
+			if ((person.getRole().equals("applicant") || person.getRole().equals("adult")) && (person.getMeetingFinished() == null || person.getMeetingFinished() == false)){
 				return false;
 			}
 		}
