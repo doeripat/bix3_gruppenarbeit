@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 15:00:39 CET 2015]
+[>Created: Tue Dec 08 15:09:44 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -16,7 +16,6 @@ An0 @TextInP .responsibility .responsibility #zField
 An0 @StartSub f0 '' #zField
 An0 @EndSub f1 '' #zField
 An0 @Alternative f5 '' #zField
-An0 @PushWFArc f10 '' #zField
 An0 @TaskSwitch f25 '' #zField
 An0 @RichDialog f26 '' #zField
 An0 @PushWFArc f2 '' #zField
@@ -29,7 +28,6 @@ An0 @TaskSwitch f9 '' #zField
 An0 @TkArc f32 '' #zField
 An0 @PushWFArc f33 '' #zField
 An0 @StartRequest f17 '' #zField
-An0 @PushWFArc f8 '' #zField
 An0 @EMail f24 '' #zField
 An0 @PushWFArc f31 '' #zField
 An0 @Alternative f11 '' #zField
@@ -55,6 +53,12 @@ An0 @PushWFArc f20 '' #zField
 An0 @PushWFArc f23 '' #zField
 An0 @PushWFArc f4 '' #zField
 An0 @TkArc f6 '' #zField
+An0 @Alternative f18 '' #zField
+An0 @PushWFArc f22 '' #zField
+An0 @PushWFArc f8 '' #zField
+An0 @DBStep f10 '' #zField
+An0 @PushWFArc f28 '' #zField
+An0 @PushWFArc f34 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -79,7 +83,7 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f0 41 153 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 1841 153 30 30 0 15 #rect
+An0 f1 1993 145 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f5 type einbuergerung_Gruppe6.Data #txt
 An0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -94,21 +98,6 @@ erwünscht?</name>
 ' #txt
 An0 f5 1472 152 32 32 -76 18 #rect
 An0 f5 @|AlternativeIcon #fIcon
-An0 f10 expr in #txt
-An0 f10 outCond in.request.writtenStatement==false #txt
-An0 f10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Nein</name>
-        <nameStyle>4,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f10 1488 152 1856 153 #arcP
-An0 f10 1 1488 128 #addKink
-An0 f10 2 1856 128 #addKink
-An0 f10 0 0.5 -16 0 #arcLabel
 An0 f25 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f25 actionTable 'out=in1;
@@ -391,8 +380,6 @@ An0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f17 @C|.responsibility Everybody #txt
 An0 f17 81 353 30 30 -21 17 #rect
 An0 f17 @|StartRequestIcon #fIcon
-An0 f8 expr out #txt
-An0 f8 1584 346 1843 176 #arcP
 An0 f24 beanConfig '"{/emailSubject ""Terminbestätigung Gesuch: <%=in.request.uniqueIdentifier%""/emailFrom ""noreply@migrationsamt.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Ihre Terminauswahl wurde angenohmen.\\nBitte erscheinen Sie pünktlich. Bei Nichterscheinen wird eine Gebühr erhoben!""/emailAttachments * }"' #txt
 An0 f24 type einbuergerung_Gruppe6.Data #txt
 An0 f24 timeout 0 #txt
@@ -674,6 +661,54 @@ An0 f6 expr out #txt
 An0 f6 type einbuergerung_Gruppe6.Data #txt
 An0 f6 var in1 #txt
 An0 f6 200 190 200 424 #arcP
+An0 f18 type einbuergerung_Gruppe6.Data #txt
+An0 f18 1744 144 32 32 0 16 #rect
+An0 f18 @|AlternativeIcon #fIcon
+An0 f22 expr out #txt
+An0 f22 1584 346 1753 169 #arcP
+An0 f8 expr in #txt
+An0 f8 outCond in.request.writtenStatement==false #txt
+An0 f8 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f8 1488 152 1760 144 #arcP
+An0 f8 1 1488 128 #addKink
+An0 f8 2 1760 128 #addKink
+An0 f8 0 0.5 -16 0 #arcLabel
+An0 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f10 actionTable 'out=in;
+' #txt
+An0 f10 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
+<UPDATE><Table name=''Request''/><Value column=''status''><String>""Interview durchgeführt warten auf Entscheid""</String></Value><Condition><Relation kind=''LIKE''><Column name=''uniqueIdentifier''/><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Relation></Condition></UPDATE>' #txt
+An0 f10 dbUrl AmazonDB #txt
+An0 f10 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+An0 f10 dbWizard 'uniqueIdentifier LIKE in.request.uniqueIdentifier' #txt
+An0 f10 lotSize 2147483647 #txt
+An0 f10 startIdx 0 #txt
+An0 f10 type einbuergerung_Gruppe6.Data #txt
+An0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status Update</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f10 1824 138 112 44 -39 -8 #rect
+An0 f10 @|DBStepIcon #fIcon
+An0 f28 expr in #txt
+An0 f28 1776 160 1824 160 #arcP
+An0 f34 expr out #txt
+An0 f34 1936 160 1993 160 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -696,18 +731,13 @@ An0 f6 200 190 200 424 #arcP
 ' #txt
 >Proto An0 0 0 32 24 18 0 #rect
 >Proto An0 @|BIcon #fIcon
-An0 f5 out f10 tail #connect
-An0 f10 head f1 mainIn #connect
 An0 f0 mainOut f2 tail #connect
 An0 f2 head f21 mainIn #connect
-An0 f5 out f7 tail #connect
 An0 f7 head f29 mainIn #connect
 An0 f29 mainOut f32 tail #connect
 An0 f32 head f9 in #connect
 An0 f9 out f33 tail #connect
 An0 f33 head f30 mainIn #connect
-An0 f30 mainOut f8 tail #connect
-An0 f8 head f1 mainIn #connect
 An0 f25 out f31 tail #connect
 An0 f31 head f26 mainIn #connect
 An0 f11 out f14 tail #connect
@@ -738,3 +768,12 @@ An0 f26 mainOut f4 tail #connect
 An0 f4 head f11 in #connect
 An0 f21 mainOut f6 tail #connect
 An0 f6 head f3 in #connect
+An0 f30 mainOut f22 tail #connect
+An0 f22 head f18 in #connect
+An0 f5 out f8 tail #connect
+An0 f8 head f18 in #connect
+An0 f5 out f7 tail #connect
+An0 f18 out f28 tail #connect
+An0 f28 head f10 mainIn #connect
+An0 f10 mainOut f34 tail #connect
+An0 f34 head f1 mainIn #connect
