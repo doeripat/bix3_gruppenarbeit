@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 16:56:22 CET 2015]
+[>Created: Tue Dec 08 17:10:04 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -39,6 +39,7 @@ En0 @RichDialog f10 '' #zField
 En0 @PushWFArc f15 '' #zField
 En0 @PushWFArc f8 '' #zField
 En0 @PushWFArc f11 '' #zField
+En0 @TkArc f12 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -418,6 +419,7 @@ En0 f2 888 96 32 32 -43 -44 #rect
 En0 f2 @|AlternativeIcon #fIcon
 En0 f5 840 112 888 112 #arcP
 En0 f6 expr in #txt
+En0 f6 outCond !in.allBoolean #txt
 En0 f6 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -464,6 +466,11 @@ En0 f8 expr data #txt
 En0 f8 outCond ivp=="TaskA.ivp" #txt
 En0 f8 920 272 952 272 #arcP
 En0 f11 616 112 648 112 #arcP
+En0 f12 expr in #txt
+En0 f12 outCond in.allBoolean #txt
+En0 f12 type einbuergerung_Gruppe6.Data #txt
+En0 f12 var in1 #txt
+En0 f12 904 128 904 256 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -943,13 +950,14 @@ Bk5 f3 actionTable 'out=in;
 Bk5 f3 actionCode 'import einbuergerung_Gruppe6.Person;
 Person person;
 String s="Gesuchs ID: "+in.request.uniqueIdentifier+"\n\n";
-
+in.allBoolean=false;
 for(int i=0; i<in.request.personList.size();i++){
 	person = in.request.personList.get(i);
 	
 	s=s+"Person "+(i+1)+"\n";
 	if(person.approved){
-	  s=s+"Entscheid: Angenommen\n";}
+	  s=s+"Entscheid: Angenommen\n";
+		in.allBoolean=true;}
 	else{
 		s=s+"Entscheid: Abgelehnt\n";}
 	s=s+"Begründung: "+person.authorityStatement+"\n";
@@ -1234,6 +1242,8 @@ En0 f3 out f8 tail #connect
 En0 f8 head f10 mainIn #connect
 En0 S21 g1 f11 tail #connect
 En0 f11 head S41 g0 #connect
+En0 f2 out f12 tail #connect
+En0 f12 head f3 in #connect
 Bk2 f21 head f22 mainIn #connect
 Bk2 f17 mainOut f23 tail #connect
 Bk2 f23 head f15 in #connect

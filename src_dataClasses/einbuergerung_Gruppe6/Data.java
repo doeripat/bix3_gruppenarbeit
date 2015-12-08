@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 596446702605997958L;
+  private static final long serialVersionUID = -4652201412747196695L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -227,6 +227,26 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setAllBoolean(java.lang.Boolean _allBoolean)
   {
     allBoolean = _allBoolean;
+  }
+
+  private einbuergerung_Gruppe6.Objection objection;
+
+  /**
+   * Gets the field objection.
+   * @return the value of the field objection; may be null.
+   */
+  public einbuergerung_Gruppe6.Objection getObjection()
+  {
+    return objection;
+  }
+
+  /**
+   * Sets the field objection.
+   * @param _objection the new value of the field objection.
+   */
+  public void setObjection(einbuergerung_Gruppe6.Objection _objection)
+  {
+    objection = _objection;
   }
 
 }

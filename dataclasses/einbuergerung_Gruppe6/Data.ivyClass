@@ -22,3 +22,5 @@ polizeibeamter einbuergerung_Gruppe6.Polizeibeamter #field
 polizeibeamter PERSISTENT #fieldModifier
 allBoolean Boolean #field
 allBoolean PERSISTENT #fieldModifier
+objection einbuergerung_Gruppe6.Objection #field
+objection PERSISTENT #fieldModifier
