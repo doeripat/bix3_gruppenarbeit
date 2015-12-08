@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 15:14:28 CET 2015]
+[>Created: Tue Dec 08 20:53:12 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -58,8 +58,7 @@ An0 @PushWFArc f8 '' #zField
 An0 @DBStep f10 '' #zField
 An0 @PushWFArc f28 '' #zField
 An0 @PushWFArc f34 '' #zField
-An0 @PushWFArc f6 '' #zField
-An0 @TkArc f37 '' #zField
+An0 @TkArc f6 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -707,11 +706,9 @@ An0 f28 1776 160 1824 160 #arcP
 An0 f34 expr out #txt
 An0 f34 1936 160 1993 160 #arcP
 An0 f6 expr out #txt
-An0 f6 110 364 280 304 #arcP
-An0 f37 expr out #txt
-An0 f37 type einbuergerung_Gruppe6.Data #txt
-An0 f37 var in1 #txt
-An0 f37 336 326 208 432 #arcP
+An0 f6 type einbuergerung_Gruppe6.Data #txt
+An0 f6 var in1 #txt
+An0 f6 200 190 200 424 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -778,7 +775,5 @@ An0 f18 out f28 tail #connect
 An0 f28 head f10 mainIn #connect
 An0 f10 mainOut f34 tail #connect
 An0 f34 head f1 mainIn #connect
-An0 f17 mainOut f6 tail #connect
-An0 f6 head f19 mainIn #connect
-An0 f19 mainOut f37 tail #connect
-An0 f37 head f3 in #connect
+An0 f21 mainOut f6 tail #connect
+An0 f6 head f3 in #connect
