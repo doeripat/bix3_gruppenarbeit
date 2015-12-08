@@ -1,0 +1,9 @@
+LeumundHochladenData #class
+einbuergerung_Gruppe6.LeumundHochladen #namespace
+request einbuergerung_Gruppe6.Request #field
+fileUploadEvent org.primefaces.event.FileUploadEvent #field
+fileUploadEvent PERSISTENT #fieldModifier
+fileTypeDoc String #field
+fileTypeDoc PERSISTENT #fieldModifier
+document einbuergerung_Gruppe6.Document #field
+document PERSISTENT #fieldModifier

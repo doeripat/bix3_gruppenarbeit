@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -6338641064881279739L;
+  private static final long serialVersionUID = 8999130706403586901L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -187,6 +187,26 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setMailString(java.lang.String _mailString)
   {
     mailString = _mailString;
+  }
+
+  private einbuergerung_Gruppe6.Polizeibeamter polizeibeamter;
+
+  /**
+   * Gets the field polizeibeamter.
+   * @return the value of the field polizeibeamter; may be null.
+   */
+  public einbuergerung_Gruppe6.Polizeibeamter getPolizeibeamter()
+  {
+    return polizeibeamter;
+  }
+
+  /**
+   * Sets the field polizeibeamter.
+   * @param _polizeibeamter the new value of the field polizeibeamter.
+   */
+  public void setPolizeibeamter(einbuergerung_Gruppe6.Polizeibeamter _polizeibeamter)
+  {
+    polizeibeamter = _polizeibeamter;
   }
 
 }
