@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 18:15:15 CET 2015]
+[>Created: Tue Dec 08 19:32:44 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -1291,6 +1291,8 @@ Bk2 g1 @|MOGIcon #fIcon
 Bk2 f1 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f1 actionTable 'out=in;
+out.externeBehoerde.password=einbuergerung_Gruppe6.CodingHelper.generatePassword();
+out.externeBehoerde.username=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
 out.mailString="Wir bitten Sie um die entsprechenden Leumunde. Weitere Informationen finden Sie auf unserem Portal.";
 ' #txt
 Bk2 f1 type einbuergerung_Gruppe6.Data #txt
