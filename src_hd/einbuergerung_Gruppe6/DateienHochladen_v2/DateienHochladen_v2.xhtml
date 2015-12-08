@@ -21,22 +21,33 @@
 						</p:messages>
 							<br />	
 					</f:facet>
+					<p:column>
 					
-					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
-					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>
+					<p:row>
+					<p:outputLabel  value="Antrag" style="font-size: 16pt;"/>
+					</p:row>
 					
-					<p:outputLabel for="adresse" value="Adresse"/>
-					<p:outputLabel id="adresse" value="#{data.request.address}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>
-
-					<p:outputLabel for="plzort" value="PLZ / Ort"/>
-					<p:outputLabel id="plzort" value="#{data.request.postcode} #{data.request.city}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>					
-					
-					<p:outputLabel for="email" value="Kontakt-Email"/>
-					<p:outputLabel id="email" value="#{data.request.email}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>	
-
-					<p:outputLabel for="phone" value="Kontakt-Telefon"/>
-					<p:outputLabel id="phone" value="#{data.request.phone}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>	
-					
+					<p:row>
+						<table style="width: 60%">
+							 <tr>
+							 	<td><h:outputText value="RequestID" style="font-weight: bold;" /></td>
+							 	<td><h:outputText value="#{data.request.uniqueIdentifier}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Adresse" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.address}" />
+								<h:outputText value=", " />
+								<h:outputText value="#{data.request.postcode}" />
+								<h:outputText value=" " />
+								<h:outputText value="#{data.request.city}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Telefon" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.phone}" /></td>
+							 </tr>
+						</table>
+					</p:row>
+					<p:row>
 					<p:outputLabel  value="Personen"/>
 					<p:row>
 						<p:column>
@@ -53,7 +64,8 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-
+					</p:row>
+					<p:row>
 					<p:outputLabel value="Dokumente"/>
 					<p:row>
 						<p:column>
@@ -72,6 +84,8 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
+					</p:row>
+					<p:row>
 					<p:outputLabel  value="Nachweis Deutschkenntnisse hochladen"/>				
 					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadDeutschkenntnisse}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
 				
@@ -83,8 +97,10 @@
 					
 					<p:outputLabel  value="Kommentar" rendered="#{data.request.commentOnRequest != null}"/>
 					<p:outputLabel value="#{data.request.commentOnRequest}" rendered="#{data.request.commentOnRequest != null}" /> 
-					<br/>
+					</p:row>
+					<p:row>
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					</p:row>
 				</h:panelGrid>
 			</h:form>			
 		</ui:define>
