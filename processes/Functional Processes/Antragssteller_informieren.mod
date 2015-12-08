@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 21:42:19 CET 2015]
+[>Created: Tue Dec 08 21:47:58 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -417,7 +417,7 @@ username ebenfalls nicht gebraucht
     </language>
 </elementInfo>
 ' #txt
-Bk0 f2 136 138 128 44 -60 -8 #rect
+Bk0 f2 144 138 128 44 -60 -8 #rect
 Bk0 f2 @|RichDialogIcon #fIcon
 Bk0 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -428,7 +428,7 @@ Bk0 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk0 g0 51 147 26 26 0 5 #rect
 Bk0 g0 @|MIGIcon #fIcon
-Bk0 f0 77 160 136 160 #arcP
+Bk0 f0 77 160 144 160 #arcP
 Bk0 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -436,10 +436,10 @@ Bk0 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk0 g1 331 147 26 26 0 5 #rect
+Bk0 g1 339 147 26 26 0 5 #rect
 Bk0 g1 @|MOGIcon #fIcon
 Bk0 f1 expr out #txt
-Bk0 f1 264 160 331 160 #arcP
+Bk0 f1 272 160 339 160 #arcP
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 Bk2 f7 targetWindow NEW:card: #txt
@@ -655,7 +655,7 @@ Bk4 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk4 f3 136 138 160 44 -75 -8 #rect
+Bk4 f3 144 138 160 44 -75 -8 #rect
 Bk4 f3 @|StepIcon #fIcon
 Bk4 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -664,9 +664,9 @@ Bk4 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk4 g0 211 243 26 26 0 5 #rect
+Bk4 g0 51 147 26 26 0 5 #rect
 Bk4 g0 @|MIGIcon #fIcon
-Bk4 f0 222 243 216 182 #arcP
+Bk4 f0 77 160 144 160 #arcP
 Bk4 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -677,7 +677,7 @@ Bk4 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Bk4 g1 371 147 26 26 0 5 #rect
 Bk4 g1 @|MOGIcon #fIcon
 Bk4 f1 expr out #txt
-Bk4 f1 296 160 371 160 #arcP
+Bk4 f1 304 160 371 160 #arcP
 >Proto Bk3 0 0 32 24 18 0 #rect
 >Proto Bk3 @|BIcon #fIcon
 Bk5 f5 beanConfig '"{/emailSubject ""Ihre Zugangsdaten für den Einbürgerungsprozess""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBei Ihrem Besuch bei der Kanzlei haben Sie sich über die  Einbürgerung informiert.\\nFalls Sie den Einbürgerungsprozess starten möchten melden Sie sich bitte auf unserer Homepage mit folgenden Logindaten an:\\n\\nBenutzername: <%=in.request.email%>\\nPasswort: <%=in.request.password%>\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
@@ -694,7 +694,7 @@ an Antragsteller senden</name>
     </language>
 </elementInfo>
 ' #txt
-Bk5 f5 136 138 176 44 -68 -16 #rect
+Bk5 f5 128 138 176 44 -68 -16 #rect
 Bk5 f5 @|EMailIcon #fIcon
 Bk5 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -703,9 +703,9 @@ Bk5 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk5 g0 51 147 26 26 0 5 #rect
+Bk5 g0 43 147 26 26 0 5 #rect
 Bk5 g0 @|MIGIcon #fIcon
-Bk5 f0 77 160 136 160 #arcP
+Bk5 f0 69 160 128 160 #arcP
 Bk5 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -713,10 +713,10 @@ Bk5 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk5 g1 211 243 26 26 0 5 #rect
+Bk5 g1 363 147 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
 Bk5 f1 expr out #txt
-Bk5 f1 224 182 224 243 #arcP
+Bk5 f1 304 160 363 160 #arcP
 >Proto Bk1 0 0 32 24 18 0 #rect
 >Proto Bk1 @|BIcon #fIcon
 An0 f0 mainOut f18 tail #connect
