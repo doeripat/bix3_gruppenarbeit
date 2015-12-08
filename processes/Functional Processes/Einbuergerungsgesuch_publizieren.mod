@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 20:36:33 CET 2015]
+[>Created: Tue Dec 08 16:46:39 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -46,8 +46,6 @@ En0 @PushWFArc f15 '' #zField
 En0 @PushWFArc f2 '' #zField
 En0 @TkArc f13 '' #zField
 En0 @TaskSwitch f7 '' #zField
-En0 @StartRequest f14 '' #zField
-En0 @PushWFArc f16 '' #zField
 En0 @GridStep f23 '' #zField
 En0 @PushWFArc f31 '' #zField
 En0 @PushWFArc f33 '' #zField
@@ -564,27 +562,6 @@ En0 f7 type einbuergerung_Gruppe6.Data #txt
 En0 f7 template "" #txt
 En0 f7 1096 392 32 32 0 16 #rect
 En0 f7 @|TaskSwitchIcon #fIcon
-En0 f14 outLink start2.ivp #txt
-En0 f14 type einbuergerung_Gruppe6.Data #txt
-En0 f14 inParamDecl '<> param;' #txt
-En0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f14 guid 15157B990CCBD6D4 #txt
-En0 f14 requestEnabled true #txt
-En0 f14 triggerEnabled false #txt
-En0 f14 callSignature start2() #txt
-En0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start2.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-En0 f14 @C|.responsibility Everybody #txt
-En0 f14 257 145 30 30 -24 17 #rect
-En0 f14 @|StartRequestIcon #fIcon
-En0 f16 expr out #txt
-En0 f16 279 146 304 126 #arcP
 En0 f23 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f23 actionTable 'out=in;
@@ -678,8 +655,6 @@ En0 f10 mainOut f8 tail #connect
 En0 f8 head f30 mainIn #connect
 En0 f18 out f15 tail #connect
 En0 f15 head f30 mainIn #connect
-En0 f14 mainOut f16 tail #connect
-En0 f16 head f11 mainIn #connect
 En0 f0 mainOut f31 tail #connect
 En0 f31 head f23 mainIn #connect
 En0 f23 mainOut f33 tail #connect

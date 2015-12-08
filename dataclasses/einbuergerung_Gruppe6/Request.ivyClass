@@ -42,8 +42,6 @@ Continue Boolean #field
 Continue PERSISTENT #fieldModifier
 discount Boolean #field
 discount PERSISTENT #fieldModifier
-endReason String #field
-endReason PERSISTENT #fieldModifier
 publicationData String #field
 publicationData PERSISTENT #fieldModifier
 documentToProof String #field

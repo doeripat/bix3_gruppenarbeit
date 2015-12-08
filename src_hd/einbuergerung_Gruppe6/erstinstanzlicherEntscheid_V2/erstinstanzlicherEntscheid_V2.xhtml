@@ -25,66 +25,52 @@
 					<p:outputLabel  value="Antrag" style="font-size: 16pt;"/>
 					</p:row>
 					
-					<br />
 					<p:row>
-					<p:dataTable>
-						  <p:column headerText="Gesuchs ID">
-						    <h:outputText value="#{data.request.uniqueIdentifier}" />
-						  </p:column>
-						  <p:column headerText="Adresse">
-						    <h:outputText value="#{data.request.address}" />
-						    <h:outputText value=", " />
-						    <h:outputText value="#{data.request.postcode}" />
-						    <h:outputText value=" " />
-						    <h:outputText value="#{data.request.city}" />
-						  </p:column>
-						  <p:column headerText="Telefon">
-						    <h:outputText value="#{data.request.phone}" />
-						  </p:column>
-						  <p:column headerText="Kommentar Überprüfer">
-						    <h:outputText value="#{data.request.commentOnRequest}" />
-						  </p:column>
-					 </p:dataTable>
+					<table style="width: 60%">
+					 <tr>
+					 	<td><h:outputText value="RequestID" style="font-weight: bold;" /></td>
+					 	<td><h:outputText value="#{data.request.uniqueIdentifier}" /></td>
+					 </tr>
+					 <tr>
+					 	<td><h:outputText value="Adresse" style="font-weight: bold;"/></td>
+					 	<td><h:outputText value="#{data.request.address}" />
+						<h:outputText value=", " />
+						<h:outputText value="#{data.request.postcode}" />
+						<h:outputText value=" " />
+						<h:outputText value="#{data.request.city}" /></td>
+					 </tr>
+					 <tr>
+					 	<td><h:outputText value="Telefon" style="font-weight: bold;"/></td>
+					 	<td><h:outputText value="#{data.request.phone}" /></td>
+					 </tr>
+					<tr>
+					 	<td><h:outputText value="Kommentar Überprüfer" style="font-weight: bold;"/></td>
+					 	<td><h:outputText value="#{data.request.commentOnRequest}" /></td>
+					 </tr>
+					</table>
 					</p:row>
+					
+					
 					<br />
 					<p:row>
 					<p:outputLabel  value="Personen" style="font-size: 16pt;"/>
 					</p:row>
 					<p:row>
 						
-							<p:dataTable id="personTable" var="p" value="#{data.request.personList}" editable="true">
+							<p:dataTable id="personTable" var="person" value="#{data.request.personList}">
 								<p:column headerText="Geschlecht">
-								    <h:outputText value="#{p.gender}" />
+								    <h:outputText value="#{person.gender}" />
 								  </p:column>				
 								  <p:column headerText="Name" >
-								    <h:outputText value="#{p.firstname} #{p.lastname}" />
+								    <h:outputText value="#{person.firstname} #{person.lastname}" />
 								  </p:column >
 								  <p:column headerText="Geburtstag">
-									<h:outputText value="#{p.birthday}" />									
+									<h:outputText value="#{person.birthday}" />									
 								</p:column>
-								<p:column headerText="Entscheid" style="width:130px">
-										<p:cellEditor>
-											<f:facet name="output"><h:outputText value="Angenommen" rendered="#{p.approved == true}"/></f:facet>
-											<f:facet name="output"><h:outputText value="Abgelehnt" rendered="#{p.approved == false}"/></f:facet>
-											<f:facet name="input">
-												<p:selectOneMenu id="approved" value="#{p.approved}" style="width:120px">
-					            					<f:selectItem  itemLabel="Angenommen" itemValue="true" />
-			            							<f:selectItem  itemLabel="Abgelehnt" itemValue="false" />
-					        					</p:selectOneMenu>
-				        					</f:facet>
-										</p:cellEditor>
-								</p:column>
-								<p:column headerText="Stellungnahme" style="width:300px">
-								<p:cellEditor>
-									<f:facet name="output"><h:outputText value="#{p.authorityStatement}" /></f:facet>
-									<f:facet name="input"><h:inputTextarea value="#{p.authorityStatement}" rows="6" cols="33" /></f:facet>
-								</p:cellEditor>
-								</p:column>
-								<p:column style="width:33px; text-align: center">
-								   			<p:rowEditor />
+								<p:column headerText="Kommentar Gespräch">
+									<h:outputText value="#{person.notes}" />									
 								</p:column>
 							</p:dataTable>
-						
 					</p:row>
 					
 					<br />
@@ -132,6 +118,40 @@
 						   
 						</p:dataTable>
 					</p:row>
+					<br />
+					<p:row>
+						<p:outputLabel  value="Entscheid" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					 <p:dataTable id="p" var="p" value="#{data.request.personList}" editable="true">
+								  <p:column headerText="Name" >
+								    <h:outputText value="#{p.firstname} #{p.lastname}" />
+								  </p:column >
+								  
+								<p:column headerText="Entscheid" style="width:20%; text-align: center;">
+										<p:cellEditor style="width:80%; text-align: center;">
+											<f:facet name="output"><h:outputText value="Angenommen" rendered="#{p.approved == true}"/></f:facet>
+											<f:facet name="output"><h:outputText value="Abgelehnt" rendered="#{p.approved == false}"/></f:facet>
+											<f:facet name="input">
+												<p:selectOneMenu id="approved" value="#{p.approved}" style="width:80%">
+					            					<f:selectItem  itemLabel="Angenommen" itemValue="true" />
+			            							<f:selectItem  itemLabel="Abgelehnt" itemValue="false" />
+					        					</p:selectOneMenu>
+				        					</f:facet>
+										</p:cellEditor>
+								</p:column>
+								<p:column headerText="Stellungnahme" style="width:45%; text-align: center;">
+								<p:cellEditor style="width:80%; text-align: center;">
+									<f:facet name="output"><h:outputText value="#{p.authorityStatement}" /></f:facet>
+									<f:facet name="input"><h:inputTextarea value="#{p.authorityStatement}" rows="6" cols="50" /></f:facet>
+								</p:cellEditor>
+								</p:column>
+								<p:column style="width:33px; text-align: center">
+								   			<p:rowEditor />
+								</p:column>
+							</p:dataTable>
+					</p:row>
+					<br />
 					</p:column>
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />

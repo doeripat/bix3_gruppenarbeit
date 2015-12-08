@@ -1,0 +1,5 @@
+unterlagenDownloadData #class
+einbuergerung_Gruppe6.unterlagenDownload #namespace
+request einbuergerung_Gruppe6.Request #field
+document einbuergerung_Gruppe6.Document #field
+document PERSISTENT #fieldModifier

@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ic="http://ivyteam.ch/jsf/component"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:pm="http://primefaces.org/mobile">
+<h:body>
+	<ui:composition template="/layouts/basic.xhtml">
+		<ui:define name="title">unterlagenDownload</ui:define>
+		<ui:define name="content">
+			<h3>
+			Bitte alle Dokumente beziehen diese stehen danach nicht mehr zur Verfügung
+			(Die Authentifizierung des Bewerbers wird durch uns garantiert bei Bedarf der Vollmacht wenden Sie sich bitte an uns)
+			</h3>
+			
+			<h:form id="form">
+				<h:panelGrid columns="2">
+					<f:facet name="header">
+						<p:messages></p:messages>
+					</f:facet>
+					<p:column>
+					<p:row>
+						<p:outputLabel  value="Dokumente" style="font-size: 16pt;"/>
+					</p:row>
+					
+					<p:row>
+					<p:dataTable var="d" value="#{data.request.documents}">
+									<p:column headerText="Dokumententyp">
+								    <h:outputText value="#{d.fileType}" />
+								  </p:column>				
+								  <p:column headerText="Dateiname">
+								    <h:outputText value="#{d.fileName}" />
+								  </p:column>
+								  <p:column headerText="Dokument Downloaden">
+								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}">
+  									<p:fileDownload value="#{d.fileStreamedContent}" /> 
+									</p:commandLink>									
+								</p:column>
+							</p:dataTable>
+					</p:row>
+					
+					</p:column>
+					<br />
+					<p:commandButton actionListener="#{logic.close}" value="Beenden" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
+			</h:form>
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

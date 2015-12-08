@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -6338641064881279739L;
+  private static final long serialVersionUID = 6020778135400973006L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -187,6 +187,26 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setMailString(java.lang.String _mailString)
   {
     mailString = _mailString;
+  }
+
+  private einbuergerung_Gruppe6.Objection objection;
+
+  /**
+   * Gets the field objection.
+   * @return the value of the field objection; may be null.
+   */
+  public einbuergerung_Gruppe6.Objection getObjection()
+  {
+    return objection;
+  }
+
+  /**
+   * Sets the field objection.
+   * @param _objection the new value of the field objection.
+   */
+  public void setObjection(einbuergerung_Gruppe6.Objection _objection)
+  {
+    objection = _objection;
   }
 
 }

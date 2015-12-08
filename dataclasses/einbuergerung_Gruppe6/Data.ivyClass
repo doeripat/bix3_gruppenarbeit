@@ -18,3 +18,5 @@ tmpDocumentList List<einbuergerung_Gruppe6.Document> #field
 tmpDocumentList PERSISTENT #fieldModifier
 mailString String #field
 mailString PERSISTENT #fieldModifier
+objection einbuergerung_Gruppe6.Objection #field
+objection PERSISTENT #fieldModifier
