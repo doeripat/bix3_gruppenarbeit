@@ -47,8 +47,10 @@
 							 </tr>
 						</table>
 					</p:row>
+					<br />
 					<p:row>
-					<p:outputLabel  value="Personen"/>
+					<p:outputLabel  value="Personen" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
 							<p:dataTable var="p" value="#{data.request.personList}">
@@ -64,9 +66,10 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-					</p:row>
+					<br />
 					<p:row>
-					<p:outputLabel value="Dokumente"/>
+					<p:outputLabel  value="Dokumente" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
 							<p:dataTable var="d" value="#{data.request.documents}">
@@ -84,23 +87,40 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Nachweis Deutschkenntnisse hochladen" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>				
+					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadDeutschkenntnisse}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen" style="font-size: 16pt;"/>				
 					</p:row>
 					<p:row>
-					<p:outputLabel  value="Nachweis Deutschkenntnisse hochladen"/>				
-					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadDeutschkenntnisse}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
-				
-					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen"/>				
 					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadFinanzen}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
-					
-					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen"/>				
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen" style="font-size: 16pt;"/>			
+					</p:row>
+					<p:row>
 					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadWohnsitz}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
-					
-					<p:outputLabel  value="Kommentar" rendered="#{data.request.commentOnRequest != null}"/>
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Kommentar" rendered="#{data.request.commentOnRequest != null}" style="font-size: 16pt;"/> 
+					</p:row>
+					<p:row>
 					<p:outputLabel value="#{data.request.commentOnRequest}" rendered="#{data.request.commentOnRequest != null}" /> 
 					</p:row>
+					<br />
 					<p:row>
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
 					</p:row>
+					<br />
+					</p:column>
 				</h:panelGrid>
 			</h:form>			
 		</ui:define>

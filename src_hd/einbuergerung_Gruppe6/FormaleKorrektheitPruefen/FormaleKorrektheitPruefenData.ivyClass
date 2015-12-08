@@ -12,3 +12,5 @@ comment String #field
 comment PERSISTENT #fieldModifier
 document einbuergerung_Gruppe6.Document #field
 document PERSISTENT #fieldModifier
+allBoolean Boolean #field
+allBoolean PERSISTENT #fieldModifier

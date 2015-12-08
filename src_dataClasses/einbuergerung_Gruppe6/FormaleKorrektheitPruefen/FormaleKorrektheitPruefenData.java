@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.FormaleKorrektheitPruefen;
 public class FormaleKorrektheitPruefenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 498176597413471488L;
+  private static final long serialVersionUID = -2396578608179973449L;
 
   private transient java.lang.String uniqueIdentifier;
 
@@ -167,6 +167,26 @@ public class FormaleKorrektheitPruefenData extends ch.ivyteam.ivy.scripting.obje
   public void setDocument(einbuergerung_Gruppe6.Document _document)
   {
     document = _document;
+  }
+
+  private java.lang.Boolean allBoolean;
+
+  /**
+   * Gets the field allBoolean.
+   * @return the value of the field allBoolean; may be null.
+   */
+  public java.lang.Boolean getAllBoolean()
+  {
+    return allBoolean;
+  }
+
+  /**
+   * Sets the field allBoolean.
+   * @param _allBoolean the new value of the field allBoolean.
+   */
+  public void setAllBoolean(java.lang.Boolean _allBoolean)
+  {
+    allBoolean = _allBoolean;
   }
 
 }

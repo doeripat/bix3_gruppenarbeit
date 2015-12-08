@@ -59,11 +59,11 @@
 						</p:column>
 					</p:row>
 					
-					<p:outputLabel for="status" value="Status" />
-					<p:selectOneMenu id="status" value="#{data.status}" required="true">
-						<f:selectItem itemLabel="Status auswählen" />
-						<f:selectItems value="#{data.statiList}" />
-					</p:selectOneMenu>
+					<p:outputLabel for="allBoolean" value="Antrag ok?" />	
+					<p:selectOneRadio id="allBoolean" value="#{data.allBoolean}" required="true">
+			            <f:selectItem itemLabel="Ja" itemValue="true" />
+			            <f:selectItem itemLabel="Nein" itemValue="false" />
+			        </p:selectOneRadio>
 					
 					<p:outputLabel for="comment" value="Kommentar"/>
 					<p:inputTextarea id="comment" value="#{data.comment}" rows="6" cols="33"></p:inputTextarea>

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 18:14:21 CET 2015]
+[>Created: Tue Dec 08 20:45:12 CET 2015]
 1510B9FE62E66C66 3.17 #module
 >Proto >Proto Collection #zClass
 Fs0 FormaleKorrektheitPruefenProcess Big #zClass
@@ -32,21 +32,22 @@ Fs0 @PushWFArc f12 '' #zField
 >Proto Fs0 Fs0 FormaleKorrektheitPruefenProcess #zField
 Fs0 f0 guid 1510B9FE66D67084 #txt
 Fs0 f0 type einbuergerung_Gruppe6.FormaleKorrektheitPruefen.FormaleKorrektheitPruefenData #txt
-Fs0 f0 method start(String,String,List<einbuergerung_Gruppe6.Document>,List<einbuergerung_Gruppe6.Person>,String) #txt
+Fs0 f0 method start(String,String,List<einbuergerung_Gruppe6.Document>,List<einbuergerung_Gruppe6.Person>,String,Boolean) #txt
 Fs0 f0 disableUIEvents true #txt
 Fs0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
-<java.lang.String uniqueIdentifier,java.lang.String status,List<einbuergerung_Gruppe6.Document> documents,List<einbuergerung_Gruppe6.Person> personList,java.lang.String comment> param = methodEvent.getInputArguments();
+<java.lang.String uniqueIdentifier,java.lang.String status,List<einbuergerung_Gruppe6.Document> documents,List<einbuergerung_Gruppe6.Person> personList,java.lang.String comment,java.lang.Boolean allboolean> param = methodEvent.getInputArguments();
 ' #txt
-Fs0 f0 inParameterMapAction 'out.comment=param.comment;
+Fs0 f0 inParameterMapAction 'out.allBoolean=true;
+out.comment=param.comment;
 out.documents=param.documents;
 out.personList=param.personList;
 out.status=param.status;
 out.uniqueIdentifier=param.uniqueIdentifier;
 ' #txt
-Fs0 f0 outParameterDecl '<java.lang.String status,java.lang.String comment> result;
+Fs0 f0 outParameterDecl '<java.lang.String comment,java.lang.Boolean allboolean> result;
 ' #txt
-Fs0 f0 outParameterMapAction 'result.status=in.status;
-result.comment=in.comment;
+Fs0 f0 outParameterMapAction 'result.comment=in.comment;
+result.allboolean=in.allBoolean;
 ' #txt
 Fs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
