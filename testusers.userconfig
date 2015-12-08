@@ -17,4 +17,8 @@
         <password>12345</password>
         <role>WebServiceUser</role>
     </user>
+    <user>
+        <username>Fredi Dep des Innern</username>
+        <role>Dept des Innern Kt SZ</role>
+    </user>
 </userConfig>
