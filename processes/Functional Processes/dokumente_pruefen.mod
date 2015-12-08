@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 16:37:07 CET 2015]
+[>Created: Tue Dec 08 16:59:05 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -15,6 +15,8 @@ Bk1 BpmnUserTask Big #zClass
 Bk1 BpmnUserTask #cInfo
 Bk0 BpmnSendTask Big #zClass
 Bk0 BpmnSendTask #cInfo
+Bk3 BpmnSendTask Big #zClass
+Bk3 BpmnSendTask #cInfo
 dn0 @TextInP .resExport .resExport #zField
 dn0 @TextInP .type .type #zField
 dn0 @TextInP .processKind .processKind #zField
@@ -45,7 +47,6 @@ dn0 @TaskSwitch f21 '' #zField
 dn0 @PushWFArc f7 '' #zField
 dn0 @TaskSwitch f9 '' #zField
 dn0 @TkArc f10 '' #zField
-dn0 @PushWFArc f24 '' #zField
 dn0 @EMail f14 '' #zField
 dn0 @PushWFArc f16 '' #zField
 dn0 @PushWFArc f27 '' #zField
@@ -64,17 +65,20 @@ dn0 @PushWFArc f35 '' #zField
 dn0 @DBStep f36 '' #zField
 dn0 @PushWFArc f37 '' #zField
 dn0 @PushWFArc f2 '' #zField
-dn0 @TaskSwitch f38 '' #zField
-dn0 @TkArc f39 '' #zField
-dn0 @PushWFArc f28 '' #zField
 dn0 @ProcessException f40 '' #zField
 dn0 Bk0 S20 'Send 2' #zField
-dn0 @TkArc f42 '' #zField
 dn0 @Alternative f43 '' #zField
 dn0 @PushWFArc f44 '' #zField
 dn0 @PushWFArc f41 '' #zField
 dn0 @CallSub f45 '' #zField
 dn0 @PushWFArc f46 '' #zField
+dn0 @TkArc f42 '' #zField
+dn0 @PushWFArc f28 '' #zField
+dn0 @TkArc f39 '' #zField
+dn0 @TaskSwitch f38 '' #zField
+dn0 Bk3 S60 'Send 6' #zField
+dn0 @PushWFArc f24 '' #zField
+dn0 @PushWFArc f47 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -154,6 +158,18 @@ Bk0 @GridStep f3 '' #zField
 Bk0 @PushWFArc f4 '' #zField
 Bk0 @PushWFArc f0 '' #zField
 >Proto Bk0 Bk3 BpmnSendTask #zField
+Bk3 @TextInP .resExport .resExport #zField
+Bk3 @TextInP .type .type #zField
+Bk3 @TextInP .processKind .processKind #zField
+Bk3 @AnnotationInP-0n ai ai #zField
+Bk3 @MessageFlowInP-0n messageIn messageIn #zField
+Bk3 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk3 @TextInP .xml .xml #zField
+Bk3 @TextInP .responsibility .responsibility #zField
+Bk3 @PushTrueWFInG-01 g0 '' #zField
+Bk3 @PushTrueWFOutG-01 g1 '' #zField
+Bk3 @PushWFArc f0 '' #zField
+>Proto Bk3 Bk4 BpmnSendTask #zField
 dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 dn0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -245,7 +261,7 @@ korrigieren</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U40 744 362 160 44 -59 -16 #rect
+dn0 U40 616 354 160 44 -59 -16 #rect
 dn0 U40 @|BpmnUserTaskIcon #fIcon
 dn0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -491,11 +507,11 @@ dn0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f21 696 128 32 32 -102 18 #rect
+dn0 f21 664 128 32 32 -69 24 #rect
 dn0 f21 @|TaskSwitchIcon #fIcon
 dn0 f7 expr data #txt
 dn0 f7 outCond ivp=="TaskA.ivp" #txt
-dn0 f7 728 144 768 144 #arcP
+dn0 f7 696 144 768 144 #arcP
 dn0 f7 0 0.943880027099722 0 0 #arcLabel
 dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -567,15 +583,12 @@ dn0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f9 960 368 32 32 -53 18 #rect
+dn0 f9 960 360 32 32 -53 18 #rect
 dn0 f9 @|TaskSwitchIcon #fIcon
 dn0 f10 expr in #txt
 dn0 f10 type einbuergerung_Gruppe6.Data #txt
 dn0 f10 var in1 #txt
-dn0 f10 976 160 976 368 #arcP
-dn0 f24 expr data #txt
-dn0 f24 outCond ivp=="TaskA.ivp" #txt
-dn0 f24 960 384 904 384 #arcP
+dn0 f10 976 160 976 360 #arcP
 dn0 f14 beanConfig '"{/emailSubject ""Bescheid Dokumente prüfen""/emailFrom ""noreply@migrationsamt.ch""/emailReplyTo """"/emailTo ""mauroyve@students.zhaw.ch""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\n<%=in.mailString%>\\n\\nFreundliche Grüsse\\nDas Migrationsamt""/emailAttachments * }"' #txt
 dn0 f14 type einbuergerung_Gruppe6.Data #txt
 dn0 f14 timeout 0 #txt
@@ -617,10 +630,10 @@ dn0 f30 @|AlternativeIcon #fIcon
 dn0 f29 expr in #txt
 dn0 f29 type einbuergerung_Gruppe6.Data #txt
 dn0 f29 var in1 #txt
-dn0 f29 592 144 696 144 #arcP
+dn0 f29 592 144 664 144 #arcP
 dn0 f29 0 0.2896357907497452 0 0 #arcLabel
-dn0 f32 824 362 576 160 #arcP
-dn0 f32 1 824 208 #addKink
+dn0 f32 696 354 576 160 #arcP
+dn0 f32 1 696 208 #addKink
 dn0 f32 2 576 208 #addKink
 dn0 f32 2 0.21121092218598994 0 0 #arcLabel
 dn0 f20 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -801,81 +814,6 @@ dn0 f37 0 0.1964285714285714 0 -9 #arcLabel
 dn0 f2 expr out #txt
 dn0 f2 1160 144 1200 144 #arcP
 dn0 f2 0 0.1964285714285714 0 -9 #arcLabel
-dn0 f38 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f38 actionTable 'out=in1;
-' #txt
-dn0 f38 outTypes "einbuergerung_Gruppe6.Data" #txt
-dn0 f38 outLinks "TaskA.ivp" #txt
-dn0 f38 caseData '#
-#Tue Dec 08 16:35:47 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-dn0 f38 taskData '#
-#Tue Dec 08 16:35:47 CET 2015
-TaskA.EXC=1505C51442680211-f40-buffer
-TaskA.EXP=''480h''
-TaskA.EXPRI=2
-TaskA.EXROL=Everybody
-TaskA.EXTYPE=0
-TaskA.NAM=Ist Freigabequittung von Antrag Nr. <%\=in1.request.uniqueIdentifier%>
-TaskA.PRI=2
-TaskA.ROL=Everybody
-TaskA.SKIP_TASK_LIST=false
-TaskA.TYPE=0
-' #txt
-dn0 f38 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Ist Freigabequittung von Antrag Nr. <%=in1.request.uniqueIdentifier%>"));
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''480h'').toNumber());
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryStartTaskElementPid("1505C51442680211-f40-buffer");
-taskDefinitions.add(taskDef);
-' #txt
-dn0 f38 type einbuergerung_Gruppe6.Data #txt
-dn0 f38 template "" #txt
-dn0 f38 472 128 32 32 0 16 #rect
-dn0 f38 @|TaskSwitchIcon #fIcon
-dn0 f39 type einbuergerung_Gruppe6.Data #txt
-dn0 f39 var in1 #txt
-dn0 f39 488 352 488 160 #arcP
-dn0 f39 0 0.5229514531114031 0 0 #arcLabel
-dn0 f28 expr data #txt
-dn0 f28 outCond ivp=="TaskA.ivp" #txt
-dn0 f28 504 144 560 144 #arcP
-dn0 f28 0 0.7039731099576579 0 0 #arcLabel
 dn0 f40 .resExport export #txt
 dn0 f40 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -908,12 +846,6 @@ anfordern</name>
 ' #txt
 dn0 S20 272 154 128 44 -43 -16 #rect
 dn0 S20 @|BpmnSendTaskIcon #fIcon
-dn0 f42 type einbuergerung_Gruppe6.Data #txt
-dn0 f42 var in2 #txt
-dn0 f42 400 176 472 144 #arcP
-dn0 f42 1 424 176 #addKink
-dn0 f42 2 424 144 #addKink
-dn0 f42 1 0.7682251756129785 0 0 #arcLabel
 dn0 f43 type einbuergerung_Gruppe6.Data #txt
 dn0 f43 168 120 32 32 0 16 #rect
 dn0 f43 @|AlternativeIcon #fIcon
@@ -948,6 +880,104 @@ dn0 f46 expr in #txt
 dn0 f46 184 120 280 96 #arcP
 dn0 f46 1 184 96 #addKink
 dn0 f46 1 0.26653193467584174 0 0 #arcLabel
+dn0 f42 type einbuergerung_Gruppe6.Data #txt
+dn0 f42 var in2 #txt
+dn0 f42 400 176 472 144 #arcP
+dn0 f42 1 424 176 #addKink
+dn0 f42 2 424 144 #addKink
+dn0 f42 1 0.7682251756129785 0 0 #arcLabel
+dn0 f28 expr data #txt
+dn0 f28 outCond ivp=="TaskA.ivp" #txt
+dn0 f28 504 144 560 144 #arcP
+dn0 f28 0 0.7039731099576579 0 0 #arcLabel
+dn0 f39 type einbuergerung_Gruppe6.Data #txt
+dn0 f39 var in1 #txt
+dn0 f39 488 352 488 160 #arcP
+dn0 f39 0 0.5229514531114031 0 0 #arcLabel
+dn0 f38 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+dn0 f38 actionTable 'out=in1;
+' #txt
+dn0 f38 outTypes "einbuergerung_Gruppe6.Data" #txt
+dn0 f38 outLinks "TaskA.ivp" #txt
+dn0 f38 caseData '#
+#Tue Dec 08 16:44:56 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+dn0 f38 taskData '#
+#Tue Dec 08 16:44:56 CET 2015
+TaskA.EXC=1505C51442680211-f40-buffer
+TaskA.EXP=''480h''
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Ist Freigabequittung von Antrag Nr. <%\=in1.request.uniqueIdentifier%> angekommen
+TaskA.PRI=2
+TaskA.ROL=Everybody
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
+dn0 f38 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Ist Freigabequittung von Antrag Nr. <%=in1.request.uniqueIdentifier%> angekommen"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Everybody");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryPeriod(1000 * (''480h'').toNumber());
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryStartTaskElementPid("1505C51442680211-f40-buffer");
+taskDefinitions.add(taskDef);
+' #txt
+dn0 f38 type einbuergerung_Gruppe6.Data #txt
+dn0 f38 template "" #txt
+dn0 f38 472 128 32 32 0 16 #rect
+dn0 f38 @|TaskSwitchIcon #fIcon
+dn0 S60 .resExport export #txt
+dn0 S60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Antragssteller 
+benachrichtigen</name>
+        <nameStyle>31,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 S60 816 354 128 44 -42 -16 #rect
+dn0 S60 @|BpmnSendTaskIcon #fIcon
+dn0 f24 expr data #txt
+dn0 f24 outCond ivp=="TaskA.ivp" #txt
+dn0 f24 960 376 944 376 #arcP
+dn0 f47 816 376 776 376 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1307,6 +1337,13 @@ Bk0 f0 expr out #txt
 Bk0 f0 504 256 563 256 #arcP
 >Proto Bk3 0 0 32 24 18 0 #rect
 >Proto Bk3 @|BpmnSendTaskIcon #fIcon
+Bk3 g0 563 243 26 26 0 5 #rect
+Bk3 g0 @|MIGIcon #fIcon
+Bk3 g1 51 243 26 26 0 5 #rect
+Bk3 g1 @|MOGIcon #fIcon
+Bk3 f0 563 256 77 256 #arcP
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BpmnSendTaskIcon #fIcon
 dn0 f23 out f15 tail #connect
 dn0 f15 head f1 mainIn #connect
 dn0 f23 out f26 tail #connect
@@ -1324,8 +1361,6 @@ dn0 f13 head f8 in #connect
 dn0 f21 out f7 tail #connect
 dn0 f7 head U50 g0 #connect
 dn0 f10 head f9 in #connect
-dn0 f9 out f24 tail #connect
-dn0 f24 head U40 g0 #connect
 dn0 f12 mainOut f16 tail #connect
 dn0 f16 head f14 mainIn #connect
 dn0 f14 mainOut f27 tail #connect
@@ -1359,6 +1394,10 @@ dn0 f43 out f41 tail #connect
 dn0 f41 head S20 g0 #connect
 dn0 f43 out f46 tail #connect
 dn0 f46 head f45 mainIn #connect
+dn0 f9 out f24 tail #connect
+dn0 f24 head S60 g0 #connect
+dn0 S60 g1 f47 tail #connect
+dn0 f47 head U40 g0 #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect
@@ -1390,3 +1429,6 @@ Bk0 f4 head f3 mainIn #connect
 Bk0 f3 mainOut f0 tail #connect
 Bk0 f0 head g1 m #connect
 Bk0 0 0 640 512 0 #ivRect
+Bk3 g0 m f0 tail #connect
+Bk3 f0 head g1 m #connect
+Bk3 0 0 640 512 0 #ivRect
