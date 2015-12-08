@@ -20,18 +20,64 @@
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-					<p:outputLabel for="person" value="Person" />
-					<p:selectOneMenu id="person" value="#{data.selectedPerson}" required="true">
-						<f:selectItem itemLabel="Person auswählen" />
-						<f:selectItems value="#{data.personListString}" />
-					</p:selectOneMenu>
-					
-					<p:outputLabel for="notes" value="Notizen"/>
-					<p:inputTextarea id="notes" value="#{data.notes}" rows="6" cols="33"/>
-					
+					<p:dataTable var="person" value="#{data.request.personList}" id="adultTable" editable="true">
+						<p:column headerText="Vorname" rendered="#{!(person.role == 'child')}">
+						  <h:outputText value="#{person.firstname}" />
+						</p:column>
+						<p:column headerText="Begründung" rendered="#{!(person.role == 'child')}">
+						  <h:outputText value="#{person.lastname}" />
+						</p:column>
+						<p:column headerText="Rolle" rendered="#{!(person.role == 'child')}">
+						  <h:outputText value="#{person.role}" />
+						</p:column>
+						<p:column headerText="Begleitung" rendered="#{!(person.role == 'child')}">
+						  <h:outputText value="#{person.relationship}" />
+						</p:column>
+						<p:column headerText="Abgeschlossen?" rendered="#{!(person.role == 'child')}">
+						  		<p:cellEditor>
+									<f:facet name="output"><h:outputText value="#{person.meetingFinished}" /></f:facet>
+									<f:facet name="input"><p:selectBooleanCheckbox value="#{person.meetingFinished}" /></f:facet>
+								</p:cellEditor>
+						</p:column>
+						<p:column headerText="Notizen" rendered="#{!(person.role == 'child')}">
+								<p:cellEditor>
+									<f:facet name="output"><h:outputText value="#{person.notes}" /></f:facet>
+									<f:facet name="input"><h:inputTextarea value="#{person.notes}" rows="6" cols="33" /></f:facet>
+								</p:cellEditor>
+						</p:column>
+						<p:column style="width:32px; text-align: center" rendered="#{!(person.role == 'child')}">
+						   			<p:rowEditor />
+						</p:column>
+					</p:dataTable>
 					
 					<br />
-					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					<p:dataTable var="objection" value="#{data.request.objections}" id="objectionTable" editable="true">
+						<p:column headerText="Datum">
+						  <h:outputText value="#{objection.date}" />
+						</p:column>
+						<p:column headerText="Begründung">
+						  <h:outputText value="#{objection.text}" />
+						</p:column>
+						<p:column headerText="Stellungnahme">
+								<p:cellEditor>
+									<f:facet name="output"><h:outputText value="#{objection.statementOral}" /></f:facet>
+									<f:facet name="input"><h:inputTextarea value="#{objection.statementOral}" rows="6" cols="33" /></f:facet>
+								</p:cellEditor>
+						</p:column>
+						<p:column style="width:32px; text-align: center">
+						   			<p:rowEditor />
+						</p:column>
+					</p:dataTable>
+					
+					<br />
+					<p:row>
+						<p:outputLabel for="writtenStatement" value="schriftliches Statment erwünscht?" />
+						<h:outputText value="&#160;" />
+				        <p:selectBooleanCheckbox id="writtenStatement" value="#{data.writtenStatementTemp}" />
+			        </p:row>
+			        
+			        <br />
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 				</h:panelGrid>
 			</h:form>
 			

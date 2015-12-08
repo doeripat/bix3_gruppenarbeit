@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 21:07:20 CET 2015]
+[>Created: Tue Dec 08 15:00:39 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -29,8 +29,6 @@ An0 @TaskSwitch f9 '' #zField
 An0 @TkArc f32 '' #zField
 An0 @PushWFArc f33 '' #zField
 An0 @StartRequest f17 '' #zField
-An0 @RichDialog f18 '' #zField
-An0 @PushWFArc f22 '' #zField
 An0 @PushWFArc f8 '' #zField
 An0 @EMail f24 '' #zField
 An0 @PushWFArc f31 '' #zField
@@ -41,8 +39,6 @@ An0 @PushWFArc f36 '' #zField
 An0 @Alternative f39 '' #zField
 An0 @TkArc f27 '' #zField
 An0 @PushWFArc f41 '' #zField
-An0 @PushWFArc f51 '' #zField
-An0 @PushWFArc f50 '' #zField
 An0 @PushWFArc f49 '' #zField
 An0 @PushWFArc f48 '' #zField
 An0 @PushWFArc f46 '' #zField
@@ -50,13 +46,15 @@ An0 @PushWFArc f43 '' #zField
 An0 @GridStep f47 '' #zField
 An0 @GridStep f35 '' #zField
 An0 @DBStep f45 '' #zField
-An0 @DBStep f44 '' #zField
 An0 @Alternative f42 '' #zField
-An0 @PushWFArc f52 '' #zField
 An0 @GridStep f19 '' #zField
 An0 @PushWFArc f12 '' #zField
-An0 @TkArc f4 '' #zField
-An0 @PushWFArc f6 '' #zField
+An0 @PushWFArc f13 '' #zField
+An0 @DBStep f15 '' #zField
+An0 @PushWFArc f20 '' #zField
+An0 @PushWFArc f23 '' #zField
+An0 @PushWFArc f4 '' #zField
+An0 @TkArc f6 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
@@ -118,7 +116,7 @@ An0 f25 actionTable 'out=in1;
 An0 f25 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f25 outLinks "TaskA.ivp" #txt
 An0 f25 caseData '#
-#Wed Dec 02 18:54:16 CET 2015
+#Tue Dec 08 13:04:56 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -146,7 +144,7 @@ type.code=
 type.name=
 ' #txt
 An0 f25 taskData '#
-#Wed Dec 02 18:54:16 CET 2015
+#Tue Dec 08 13:04:56 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -177,15 +175,15 @@ An0 f25 @|TaskSwitchIcon #fIcon
 An0 f26 targetWindow NEW:card: #txt
 An0 f26 targetDisplay TOP #txt
 An0 f26 richDialogId einbuergerung_Gruppe6.durchfuehrenEinbuergerungsgespraech_v7 #txt
-An0 f26 startMethod start(List<einbuergerung_Gruppe6.Person>) #txt
+An0 f26 startMethod start(einbuergerung_Gruppe6.Request) #txt
 An0 f26 type einbuergerung_Gruppe6.Data #txt
-An0 f26 requestActionDecl '<List<einbuergerung_Gruppe6.Person> personList> param;' #txt
-An0 f26 requestMappingAction 'param.personList=in.request.personList;
+An0 f26 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+An0 f26 requestMappingAction 'param.request=in.request;
 ' #txt
 An0 f26 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f26 responseMappingAction 'out=in;
-out.request.personList=result.personList;
+out.request=result.request;
 ' #txt
 An0 f26 windowConfiguration '* ' #txt
 An0 f26 isAsynch false #txt
@@ -393,37 +391,6 @@ An0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 f17 @C|.responsibility Everybody #txt
 An0 f17 81 353 30 30 -21 17 #rect
 An0 f17 @|StartRequestIcon #fIcon
-An0 f18 targetWindow NEW:card: #txt
-An0 f18 targetDisplay TOP #txt
-An0 f18 richDialogId einbuergerung_Gruppe6.eroeffnenEinwaende_v3 #txt
-An0 f18 startMethod start(einbuergerung_Gruppe6.Request) #txt
-An0 f18 type einbuergerung_Gruppe6.Data #txt
-An0 f18 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
-An0 f18 requestMappingAction 'param.request=in.request;
-' #txt
-An0 f18 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f18 responseMappingAction 'out=in;
-out.request=result.request;
-' #txt
-An0 f18 windowConfiguration '* ' #txt
-An0 f18 isAsynch false #txt
-An0 f18 isInnerRd false #txt
-An0 f18 userContext '* ' #txt
-An0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Einwände eröffnen</name>
-        <nameStyle>17,7
-</nameStyle>
-        <desc>Einwände werden für alle Personen erfasst und jede Person kann zu allen Einwänden Stellung nehmen</desc>
-    </language>
-</elementInfo>
-' #txt
-An0 f18 1080 146 112 44 -51 -8 #rect
-An0 f18 @|RichDialogIcon #fIcon
-An0 f22 expr out #txt
-An0 f22 1016 168 1080 168 #arcP
 An0 f8 expr out #txt
 An0 f8 1584 346 1843 176 #arcP
 An0 f24 beanConfig '"{/emailSubject ""Terminbestätigung Gesuch: <%=in.request.uniqueIdentifier%""/emailFrom ""noreply@migrationsamt.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Ihre Terminauswahl wurde angenohmen.\\nBitte erscheinen Sie pünktlich. Bei Nichterscheinen wird eine Gebühr erhoben!""/emailAttachments * }"' #txt
@@ -440,7 +407,7 @@ An0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f24 648 346 112 44 -52 -8 #rect
+An0 f24 648 330 112 44 -52 -8 #rect
 An0 f24 @|EMailIcon #fIcon
 An0 f31 expr data #txt
 An0 f31 outCond ivp=="TaskA.ivp" #txt
@@ -471,9 +438,8 @@ An0 f14 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f14 1306 174 1476 172 #arcP
-An0 f14 1 1360 208 #addKink
-An0 f14 1 0.2373128764349539 0 0 #arcLabel
+An0 f14 1312 168 1472 168 #arcP
+An0 f14 0 0.49883949924285 0 0 #arcLabel
 An0 f16 targetWindow NEW:card: #txt
 An0 f16 targetDisplay TOP #txt
 An0 f16 richDialogId einbuergerung_Gruppe6.terminWaehlen_v4 #txt
@@ -513,7 +479,6 @@ An0 f27 type einbuergerung_Gruppe6.Data #txt
 An0 f27 var in1 #txt
 An0 f27 720 168 760 168 #arcP
 An0 f41 expr in #txt
-An0 f41 outCond 'einbuergerung_Gruppe6.PersonHelper.isAllAdultsHadMeeting(in.request.personList) == false' #txt
 An0 f41 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -527,21 +492,6 @@ An0 f41 1296 152 704 152 #arcP
 An0 f41 1 1296 128 #addKink
 An0 f41 2 704 128 #addKink
 An0 f41 1 0.5 0 0 #arcLabel
-An0 f51 expr in #txt
-An0 f51 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Ja</name>
-        <nameStyle>2,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f51 992 424 760 368 #arcP
-An0 f51 1 992 368 #addKink
-An0 f51 1 0.3793103448275862 0 0 #arcLabel
-An0 f50 expr out #txt
-An0 f50 792 440 824 440 #arcP
 An0 f49 expr out #txt
 An0 f49 1304 462 992 456 #arcP
 An0 f49 1 1304 520 #addKink
@@ -621,30 +571,6 @@ An0 f45 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f45 1064 418 128 44 -54 -8 #rect
 An0 f45 @|DBStepIcon #fIcon
-An0 f44 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f44 actionTable 'out=in;
-' #txt
-An0 f44 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
-<INSERT><Table name=''Request''/><Value column=''uniqueIdentifier''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''password''><AnyExpression>in.request.password</AnyExpression></Value><Value column=''phone''><AnyExpression>in.request.phone</AnyExpression></Value><Value column=''address''><AnyExpression>in.request.address</AnyExpression></Value><Value column=''postcode''><AnyExpression>in.request.postcode</AnyExpression></Value><Value column=''email''><AnyExpression>in.request.email</AnyExpression></Value><Value column=''city''><AnyExpression>in.request.city</AnyExpression></Value><Value column=''status''><String>""Warten auf Interview""</String></Value></INSERT>' #txt
-An0 f44 dbUrl AmazonDB #txt
-An0 f44 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-An0 f44 lotSize 2147483647 #txt
-An0 f44 startIdx 0 #txt
-An0 f44 type einbuergerung_Gruppe6.Data #txt
-An0 f44 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Request persistieren
-&amp; Status Update</name>
-        <nameStyle>36,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f44 648 418 144 44 -53 -16 #rect
-An0 f44 @|DBStepIcon #fIcon
 An0 f42 type einbuergerung_Gruppe6.Data #txt
 An0 f42 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -657,23 +583,23 @@ An0 f42 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f42 976 424 32 32 -69 22 #rect
 An0 f42 @|AlternativeIcon #fIcon
-An0 f52 expr out #txt
-An0 f52 544 440 648 440 #arcP
 An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f19 actionTable 'out=in;
 ' #txt
-An0 f19 actionCode 'import einbuergerung_Gruppe6.Request;
+An0 f19 actionCode 'import einbuergerung_Gruppe6.CodingHelper;
+import einbuergerung_Gruppe6.Request;
 import einbuergerung_Gruppe6.Person;
 
+CodingHelper cH = new CodingHelper();
 List<Person> personList = new List<Person>();
 
-for(int i = 0; i <=5; i++){
+for(int i = 1; i <=3; i++){
 	Person person = new Person();
 	person.firstname = "Fabio"+i;
 	person.lastname = "Wullschleger"+i;
 	
-	if (i==0){
+	if (i==1){
 		person.role = "applicant";	
 	}else if(i%2==0){
 		person.role = "adult";
@@ -683,6 +609,8 @@ for(int i = 0; i <=5; i++){
 	personList.add(person);
 }
 
+
+in.request.setUniqueIdentifier(cH.generateUniqueIdentifier());
 in.request.password = "root";
 in.request.personList = personList;' #txt
 An0 f19 type einbuergerung_Gruppe6.Data #txt
@@ -695,18 +623,57 @@ An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f19 288 250 112 44 -39 -8 #rect
+An0 f19 280 282 112 44 -39 -8 #rect
 An0 f19 @|StepIcon #fIcon
 An0 f12 expr out #txt
-An0 f12 704 346 704 184 #arcP
+An0 f12 704 330 704 184 #arcP
+An0 f13 expr out #txt
+An0 f13 544 440 824 440 #arcP
+An0 f15 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f15 actionTable 'out=in;
+' #txt
+An0 f15 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE UPDATE SYSTEM  ""sqlStatements.dtd"">
+<UPDATE><Table name=''Request''/><Value column=''status''><String>""Warten auf Interview""</String></Value><Condition><Relation kind=''LIKE''><Column name=''uniqueIdentifier''/><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Relation></Condition></UPDATE>' #txt
+An0 f15 dbUrl AmazonDB #txt
+An0 f15 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+An0 f15 dbWizard 'uniqueIdentifier LIKE in.request.uniqueIdentifier' #txt
+An0 f15 lotSize 2147483647 #txt
+An0 f15 startIdx 0 #txt
+An0 f15 type einbuergerung_Gruppe6.Data #txt
+An0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status Update</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f15 936 330 112 44 -39 -8 #rect
+An0 f15 @|DBStepIcon #fIcon
+An0 f20 expr in #txt
+An0 f20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f20 992 424 992 374 #arcP
+An0 f20 0 0.3793103448275862 0 0 #arcLabel
+An0 f23 expr out #txt
+An0 f23 936 352 760 352 #arcP
+An0 f23 0 0.38461538461538464 0 0 #arcLabel
 An0 f4 expr out #txt
-An0 f4 type einbuergerung_Gruppe6.Data #txt
-An0 f4 var in1 #txt
-An0 f4 200 190 200 424 #arcP
+An0 f4 1016 168 1280 168 #arcP
 An0 f6 expr out #txt
-An0 f6 1189 190 1474 170 #arcP
-An0 f6 1 1232 208 #addKink
-An0 f6 1 0.047321269787407305 0 0 #arcLabel
+An0 f6 type einbuergerung_Gruppe6.Data #txt
+An0 f6 var in1 #txt
+An0 f6 200 190 200 424 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -739,8 +706,6 @@ An0 f29 mainOut f32 tail #connect
 An0 f32 head f9 in #connect
 An0 f9 out f33 tail #connect
 An0 f33 head f30 mainIn #connect
-An0 f26 mainOut f22 tail #connect
-An0 f22 head f18 mainIn #connect
 An0 f30 mainOut f8 tail #connect
 An0 f8 head f1 mainIn #connect
 An0 f25 out f31 tail #connect
@@ -761,15 +726,15 @@ An0 f45 mainOut f48 tail #connect
 An0 f48 head f47 mainIn #connect
 An0 f47 mainOut f49 tail #connect
 An0 f49 head f42 in #connect
-An0 f44 mainOut f50 tail #connect
-An0 f50 head f35 mainIn #connect
-An0 f42 out f51 tail #connect
-An0 f51 head f24 mainIn #connect
-An0 f16 mainOut f52 tail #connect
-An0 f52 head f44 mainIn #connect
 An0 f24 mainOut f12 tail #connect
 An0 f12 head f39 in #connect
-An0 f21 mainOut f4 tail #connect
-An0 f4 head f3 in #connect
-An0 f18 mainOut f6 tail #connect
-An0 f6 head f5 in #connect
+An0 f16 mainOut f13 tail #connect
+An0 f13 head f35 mainIn #connect
+An0 f42 out f20 tail #connect
+An0 f20 head f15 mainIn #connect
+An0 f15 mainOut f23 tail #connect
+An0 f23 head f24 mainIn #connect
+An0 f26 mainOut f4 tail #connect
+An0 f4 head f11 in #connect
+An0 f21 mainOut f6 tail #connect
+An0 f6 head f3 in #connect
