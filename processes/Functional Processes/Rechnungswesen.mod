@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 18:08:07 CET 2015]
+[>Created: Tue Dec 08 20:05:31 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -72,7 +72,7 @@ Bk2 @PushTrueWFInG-01 g0 '' #zField
 Bk2 @PushWFArc f0 '' #zField
 Bk2 @PushTrueWFOutG-01 g1 '' #zField
 Bk2 @PushWFArc f1 '' #zField
->Proto Bk2 Bk2 BpmnServiceTask #zField
+>Proto Bk2 Bk1 BpmnServiceTask #zField
 Bk3 @TextInP .resExport .resExport #zField
 Bk3 @TextInP .type .type #zField
 Bk3 @TextInP .processKind .processKind #zField
@@ -86,7 +86,7 @@ Bk3 @PushTrueWFInG-01 g0 '' #zField
 Bk3 @PushWFArc f0 '' #zField
 Bk3 @PushTrueWFOutG-01 g1 '' #zField
 Bk3 @PushWFArc f1 '' #zField
->Proto Bk3 Bk1 BpmnServiceTask #zField
+>Proto Bk3 Bk2 BpmnServiceTask #zField
 Rn0 f0 inParamDecl '<einbuergerung_Gruppe6.Invoice invoice,einbuergerung_Gruppe6.Data data> param;' #txt
 Rn0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -287,19 +287,23 @@ Bk0 f3 actionTable 'out=in;
 ' #txt
 Bk0 f3 actionCode 'in.invoice.invoiceNumber=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
 
-if(in.request.status == "Warten auf Zahlungseingang Verfahrensgebühr"){
+if(in.allBoolean){
 	in.invoice.amount = 500;
 	in.invoice.type ="Verfahrensgebühr";
+	out.allBoolean=false;
 	}
 			
-if(in.request.status == "Antrag wurde publiziert"||in.request.discount){
-	in.invoice.amount = 1000;
-	in.invoice.type ="Einbürgerungsgebühr";
-	}
 else{
-	in.invoice.amount = 2500;
-	in.invoice.type ="Einbürgerungsgebühr";
+	if(in.request.discount){	
+		in.invoice.amount = 1000;
+		in.invoice.type ="Einbürgerungsgebühr";
+		}
+	else{
+		in.invoice.amount = 2500;
+		in.invoice.type ="Einbürgerungsgebühr";
+		}
 	}
+
 	' #txt
 Bk0 f3 type einbuergerung_Gruppe6.Data #txt
 Bk0 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -495,8 +499,8 @@ Bk2 g1 @|MOGIcon #fIcon
 Bk2 f1 expr out #txt
 Bk2 f1 480 160 539 160 #arcP
 Bk2 f1 0 0.08788598574821853 0 0 #arcLabel
->Proto Bk2 0 0 32 24 18 0 #rect
->Proto Bk2 @|BIcon #fIcon
+>Proto Bk1 0 0 32 24 18 0 #rect
+>Proto Bk1 @|BIcon #fIcon
 Bk3 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk3 f9 actionTable 'out=in;
@@ -537,8 +541,8 @@ Bk3 g1 339 147 26 26 0 5 #rect
 Bk3 g1 @|MOGIcon #fIcon
 Bk3 f1 expr out #txt
 Bk3 f1 264 160 339 160 #arcP
->Proto Bk1 0 0 32 24 18 0 #rect
->Proto Bk1 @|BIcon #fIcon
+>Proto Bk2 0 0 32 24 18 0 #rect
+>Proto Bk2 @|BIcon #fIcon
 Rn0 f22 out f8 tail #connect
 Rn0 f8 head f16 in #connect
 Rn0 f17 head f22 in #connect
