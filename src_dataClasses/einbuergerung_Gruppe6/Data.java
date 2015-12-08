@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 8999130706403586901L;
+  private static final long serialVersionUID = 596446702605997958L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -207,6 +207,26 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setPolizeibeamter(einbuergerung_Gruppe6.Polizeibeamter _polizeibeamter)
   {
     polizeibeamter = _polizeibeamter;
+  }
+
+  private java.lang.Boolean allBoolean;
+
+  /**
+   * Gets the field allBoolean.
+   * @return the value of the field allBoolean; may be null.
+   */
+  public java.lang.Boolean getAllBoolean()
+  {
+    return allBoolean;
+  }
+
+  /**
+   * Sets the field allBoolean.
+   * @param _allBoolean the new value of the field allBoolean.
+   */
+  public void setAllBoolean(java.lang.Boolean _allBoolean)
+  {
+    allBoolean = _allBoolean;
   }
 
 }

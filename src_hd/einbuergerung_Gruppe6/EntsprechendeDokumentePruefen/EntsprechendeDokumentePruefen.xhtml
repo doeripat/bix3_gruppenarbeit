@@ -58,6 +58,7 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
+					
 					<p:outputLabel for="commentFinanzen" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"/>
 					<p:inputTextarea id="commentFinanzen" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"></p:inputTextarea>
 					<p:outputLabel for="commentDeutschkenntnisse" value="Kommentar Deutschkenntnisse" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"/>
