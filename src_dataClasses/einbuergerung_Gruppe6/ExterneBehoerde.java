@@ -3,8 +3,8 @@ package einbuergerung_Gruppe6;
 /**
  */
 @SuppressWarnings("all")
-@javax.annotation.Generated(comments="This is the java file of the ivy data class Polizeibeamter", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
-public class Polizeibeamter extends ch.ivyteam.ivy.scripting.objects.CompositeObject
+@javax.annotation.Generated(comments="This is the java file of the ivy data class ExterneBehoerde", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
+public class ExterneBehoerde extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
   private static final long serialVersionUID = -2924147475403725049L;

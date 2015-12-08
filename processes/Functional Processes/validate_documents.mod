@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 15:25:40 CET 2015]
+[>Created: Tue Dec 08 18:15:15 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -795,8 +795,6 @@ vs0 f46 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f46 actionTable 'out=in;
 out.mailString="Leider ist der Leumund für das Gesuch noch nicht eingetroffen. Wir bitten Sie das so rasch als möglich zu erledigen. Der Benutzernamen und das Passwort haben sich geändert, sie finden die Angaben unten";
-out.polizeibeamter.password=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
-out.polizeibeamter.username=einbuergerung_Gruppe6.CodingHelper.generatePassword();
 ' #txt
 vs0 f46 type einbuergerung_Gruppe6.Data #txt
 vs0 f46 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1211,8 +1209,8 @@ Bk1 f1 richDialogId einbuergerung_Gruppe6.Login #txt
 Bk1 f1 startMethod start(String,String) #txt
 Bk1 f1 type einbuergerung_Gruppe6.Data #txt
 Bk1 f1 requestActionDecl '<String email, String password> param;' #txt
-Bk1 f1 requestMappingAction 'param.email=in.polizeibeamter.username;
-param.password=in.polizeibeamter.password;
+Bk1 f1 requestMappingAction 'param.email=in.externeBehoerde.username;
+param.password=in.externeBehoerde.password;
 ' #txt
 Bk1 f1 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -1294,8 +1292,6 @@ Bk2 f1 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f1 actionTable 'out=in;
 out.mailString="Wir bitten Sie um die entsprechenden Leumunde. Weitere Informationen finden Sie auf unserem Portal.";
-out.polizeibeamter.password=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
-out.polizeibeamter.username=einbuergerung_Gruppe6.CodingHelper.generatePassword();
 ' #txt
 Bk2 f1 type einbuergerung_Gruppe6.Data #txt
 Bk2 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

@@ -18,8 +18,8 @@ tmpDocumentList List<einbuergerung_Gruppe6.Document> #field
 tmpDocumentList PERSISTENT #fieldModifier
 mailString String #field
 mailString PERSISTENT #fieldModifier
-polizeibeamter einbuergerung_Gruppe6.Polizeibeamter #field
-polizeibeamter PERSISTENT #fieldModifier
+externeBehoerde einbuergerung_Gruppe6.ExterneBehoerde #field
+externeBehoerde PERSISTENT #fieldModifier
 allBoolean Boolean #field
 allBoolean PERSISTENT #fieldModifier
 objection einbuergerung_Gruppe6.Objection #field

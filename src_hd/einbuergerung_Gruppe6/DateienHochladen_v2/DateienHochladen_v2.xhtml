@@ -16,11 +16,26 @@
 			<h:form id="form" enctype="multipart/form-data">
 				<h:panelGrid columns="2">
 					<f:facet name="header">
-						<p:messages></p:messages>
+						<p:messages>
+						Bitte laden Sie alle benötigten Dokumente hoch. Weitere Erläuterungen finden Sie in der ECHO Broschüre, welche Sie <a href="http://www.echo-ch.ch/" target="_blank">hier</a> anfordern können.
+						</p:messages>
+							<br />	
 					</f:facet>
 					
 					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
-					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
+					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>
+					
+					<p:outputLabel for="adresse" value="Adresse"/>
+					<p:outputLabel id="adresse" value="#{data.request.address}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>
+
+					<p:outputLabel for="plzort" value="PLZ / Ort"/>
+					<p:outputLabel id="plzort" value="#{data.request.postcode} #{data.request.city}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>					
+					
+					<p:outputLabel for="email" value="Kontakt-Email"/>
+					<p:outputLabel id="email" value="#{data.request.email}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>	
+
+					<p:outputLabel for="phone" value="Kontakt-Telefon"/>
+					<p:outputLabel id="phone" value="#{data.request.phone}" styleClass="readonly_text" style="font-weight:normal;"></p:outputLabel>	
 					
 					<p:outputLabel  value="Personen"/>
 					<p:row>
@@ -38,6 +53,7 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
+
 					<p:outputLabel value="Dokumente"/>
 					<p:row>
 						<p:column>

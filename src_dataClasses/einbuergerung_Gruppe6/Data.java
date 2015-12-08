@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -4652201412747196695L;
+  private static final long serialVersionUID = 1959960797612498270L;
 
   private einbuergerung_Gruppe6.Request request;
 
@@ -189,24 +189,24 @@ public class Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     mailString = _mailString;
   }
 
-  private einbuergerung_Gruppe6.Polizeibeamter polizeibeamter;
+  private einbuergerung_Gruppe6.ExterneBehoerde externeBehoerde;
 
   /**
-   * Gets the field polizeibeamter.
-   * @return the value of the field polizeibeamter; may be null.
+   * Gets the field externeBehoerde.
+   * @return the value of the field externeBehoerde; may be null.
    */
-  public einbuergerung_Gruppe6.Polizeibeamter getPolizeibeamter()
+  public einbuergerung_Gruppe6.ExterneBehoerde getExterneBehoerde()
   {
-    return polizeibeamter;
+    return externeBehoerde;
   }
 
   /**
-   * Sets the field polizeibeamter.
-   * @param _polizeibeamter the new value of the field polizeibeamter.
+   * Sets the field externeBehoerde.
+   * @param _externeBehoerde the new value of the field externeBehoerde.
    */
-  public void setPolizeibeamter(einbuergerung_Gruppe6.Polizeibeamter _polizeibeamter)
+  public void setExterneBehoerde(einbuergerung_Gruppe6.ExterneBehoerde _externeBehoerde)
   {
-    polizeibeamter = _polizeibeamter;
+    externeBehoerde = _externeBehoerde;
   }
 
   private java.lang.Boolean allBoolean;

@@ -1,4 +1,4 @@
-Polizeibeamter #class
+ExterneBehoerde #class
 einbuergerung_Gruppe6 #namespace
 username String #field
 username PERSISTENT #fieldModifier

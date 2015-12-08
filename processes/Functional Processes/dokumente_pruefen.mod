@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 16:59:05 CET 2015]
+[>Created: Tue Dec 08 17:18:43 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -1222,6 +1222,16 @@ Bk1 f4 360 256 523 256 #arcP
 Bk1 f2 outLink startgaggi.ivp #txt
 Bk1 f2 type einbuergerung_Gruppe6.Data #txt
 Bk1 f2 inParamDecl '<> param;' #txt
+Bk1 f2 inParamTable 'out.request.address="asdfsadf";
+out.request.city="asdfsadf";
+out.request.email="asdfsadf";
+out.request.phone="asdfsadf";
+out.request.postcode="asdfsadf";
+out.request.publicationData="asdfsadf";
+out.request.status="asdfsadf";
+out.request.uniqueIdentifier="asdfsadf";
+out.request.username="asdfsadf";
+' #txt
 Bk1 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk1 f2 guid 15153C0E26F619C0 #txt
@@ -1230,7 +1240,7 @@ Bk1 f2 triggerEnabled false #txt
 Bk1 f2 callSignature startgaggi() #txt
 Bk1 f2 persist false #txt
 Bk1 f2 taskData '#
-#Sun Nov 29 15:59:12 CET 2015
+#Tue Dec 08 17:18:42 CET 2015
 TaskTriggered.ROL=Everybody
 TaskTriggered.EXTYPE=0
 TaskTriggered.EXPRI=2
@@ -1239,7 +1249,7 @@ TaskTriggered.PRI=2
 TaskTriggered.EXROL=Everybody
 ' #txt
 Bk1 f2 caseData '#
-#Sun Nov 29 15:59:12 CET 2015
+#Tue Dec 08 17:18:42 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
