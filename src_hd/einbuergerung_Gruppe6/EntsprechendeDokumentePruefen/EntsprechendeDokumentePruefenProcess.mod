@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 21:13:42 CET 2015]
+[>Created: Tue Dec 08 15:47:02 CET 2015]
 1515EC3ED5F55D48 3.17 #module
 >Proto >Proto Collection #zClass
 Es0 EntsprechendeDokumentePruefenProcess Big #zClass
@@ -84,16 +84,20 @@ Es0 f6 disableUIEvents false #txt
 Es0 f6 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
 <einbuergerung_Gruppe6.Document document> param = methodEvent.getInputArguments();
 ' #txt
+Es0 f6 inParameterMapAction 'out.document=param.document;
+' #txt
 Es0 f6 outParameterDecl '<> result;
 ' #txt
 Es0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>fileDownload(Document)</name>
+        <nameStyle>22,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Es0 f6 83 243 26 26 -68 12 #rect
+Es0 f6 83 243 26 26 -68 15 #rect
 Es0 f6 @|RichDialogMethodStartIcon #fIcon
 Es0 f7 type einbuergerung_Gruppe6.EntsprechendeDokumentePruefen.EntsprechendeDokumentePruefenData #txt
 Es0 f7 371 243 26 26 0 12 #rect
@@ -111,13 +115,13 @@ import javax.faces.bean.ManagedBean;
 import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.StreamedContent;
 // Das ContentObject mit dem gewünschten Inhalt wird gesucht
-IContentObjectValue CMSObjectValue = ivy.cms.findContentObjectValue(in.request.document.filePath,null);
+IContentObjectValue CMSObjectValue = ivy.cms.findContentObjectValue(in.document.filePath,null);
 // Ein InputStream wird aus dem Inhalt des ContentObjects erstellt
 InputStream stream;
 stream = CMSObjectValue.getContentAsBinaryStream();
 // Der korrekte Mime-Type wird aus der Dateiendung abgeleitet
 String mimeType;
-String type = in.request.document.fileEnding;
+String type = in.document.fileEnding;
 if(type=="pdf") {
   mimeType="application/pdf";
   } else if(type=="png") {

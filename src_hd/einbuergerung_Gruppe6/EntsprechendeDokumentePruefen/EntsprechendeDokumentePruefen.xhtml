@@ -50,7 +50,7 @@
 								  <p:column headerText="Dateiname" >
 								    <h:outputText value="#{d.fileName}" rendered="#{data.request.documentToProof == d.fileType}"/>
 								  </p:column>
-								  <p:column headerText="Dokument ansehen" >
+								  <p:column headerText="Dokument ansehen">
 								   	<p:commandLink value="#{d.fileName}.#{d.fileEnding}" ajax="false" actionListener="#{logic.fileDownload(d)}" rendered="#{data.request.documentToProof == d.fileType}">
   										<p:fileDownload value="#{d.fileStreamedContent}"/> 
 									</p:commandLink>									
@@ -64,6 +64,8 @@
 					<p:inputTextarea id="commentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"></p:inputTextarea>					
 					<p:outputLabel for="commentWohnsitzbestätigung" value="Kommentar Wohnsitzbestätigung" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"/>
 					<p:inputTextarea id="commentWohnsitzbestätigung" value="#{data.request.commentWohnsitz}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"></p:inputTextarea>					
+					<p:outputLabel for="commentLeumund" value="Kommentar Leumund" rendered="#{data.request.documentToProof == 'Leumund'}"/>
+					<p:inputTextarea id="commentLeumund" value="#{data.request.commentLeumund}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Leumund'}"></p:inputTextarea>					
 					<br />
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
 				</h:panelGrid>

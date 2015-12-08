@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6.EntsprechendeDokumentePruefen;
 public class EntsprechendeDokumentePruefenData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = 3554180251179066303L;
+  private static final long serialVersionUID = 6888407867526526520L;
 
   private transient einbuergerung_Gruppe6.Request request;
 
@@ -47,6 +47,26 @@ public class EntsprechendeDokumentePruefenData extends ch.ivyteam.ivy.scripting.
   public void setTmpDocumentList(ch.ivyteam.ivy.scripting.objects.List<einbuergerung_Gruppe6.Document> _tmpDocumentList)
   {
     tmpDocumentList = _tmpDocumentList;
+  }
+
+  private einbuergerung_Gruppe6.Document document;
+
+  /**
+   * Gets the field document.
+   * @return the value of the field document; may be null.
+   */
+  public einbuergerung_Gruppe6.Document getDocument()
+  {
+    return document;
+  }
+
+  /**
+   * Sets the field document.
+   * @param _document the new value of the field document.
+   */
+  public void setDocument(einbuergerung_Gruppe6.Document _document)
+  {
+    document = _document;
   }
 
 }

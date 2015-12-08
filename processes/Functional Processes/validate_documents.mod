@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 13:58:47 CET 2015]
+[>Created: Tue Dec 08 15:25:40 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -56,21 +56,25 @@ vs0 @TkArc f6 '' #zField
 vs0 @GridStep f9 '' #zField
 vs0 @PushWFArc f26 '' #zField
 vs0 @PushWFArc f27 '' #zField
-vs0 @TkArc f5 '' #zField
-vs0 @StartRequest f29 '' #zField
-vs0 @GridStep f28 '' #zField
-vs0 @PushWFArc f36 '' #zField
-vs0 @PushWFArc f40 '' #zField
 vs0 Bk1 U20 'User 2' #zField
 vs0 Bk2 S30 'Send 3' #zField
-vs0 @TkArc f43 '' #zField
 vs0 @TaskSwitch f44 '' #zField
 vs0 @TkArc f45 '' #zField
 vs0 @PushWFArc f42 '' #zField
 vs0 @ProcessException f46 '' #zField
 vs0 @PushWFArc f47 '' #zField
-vs0 @StartRequest f41 '' #zField
-vs0 @PushWFArc f48 '' #zField
+vs0 @PushWFArc f41 '' #zField
+vs0 @GridStep f43 '' #zField
+vs0 @CallSub f48 '' #zField
+vs0 @PushWFArc f49 '' #zField
+vs0 @TaskSwitch f51 '' #zField
+vs0 @TkArc f52 '' #zField
+vs0 @PushWFArc f50 '' #zField
+vs0 @TkArc f53 '' #zField
+vs0 @StartRequest f29 '' #zField
+vs0 @GridStep f28 '' #zField
+vs0 @PushWFArc f36 '' #zField
+vs0 @TkArc f5 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -248,10 +252,10 @@ vs0 f4 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f4 actionTable 'out=in1;
 ' #txt
-vs0 f4 outTypes "einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data" #txt
-vs0 f4 outLinks "TaskB.ivp","TaskC.ivp","TaskD.ivp","TaskA.ivp" #txt
+vs0 f4 outTypes "einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data" #txt
+vs0 f4 outLinks "TaskB.ivp","TaskC.ivp","TaskD.ivp","TaskA.ivp","TaskE.ivp" #txt
 vs0 f4 caseData '#
-#Thu Dec 03 23:48:21 CET 2015
+#Tue Dec 08 15:14:01 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -279,7 +283,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f4 taskData '#
-#Thu Dec 03 23:48:21 CET 2015
+#Tue Dec 08 15:14:01 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -311,6 +315,14 @@ TaskD.PRI=2
 TaskD.ROL=Migrationsamt Finanzielle Verh\u00E4ltnisse Pr\u00FCfer
 TaskD.SKIP_TASK_LIST=false
 TaskD.TYPE=0
+TaskE.EXPRI=2
+TaskE.EXROL=Everybody
+TaskE.EXTYPE=0
+TaskE.NAM=Leumund bei Polizei anfordern
+TaskE.PRI=2
+TaskE.ROL=Everybody
+TaskE.SKIP_TASK_LIST=false
+TaskE.TYPE=0
 ' #txt
 vs0 f4 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
@@ -351,6 +363,15 @@ taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDefinitions.add(taskDef);
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskE.ivp");
+taskDef.setName(engine.expandMacros("Leumund bei Polizei anfordern"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Everybody");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDefinitions.add(taskDef);
 ' #txt
 vs0 f4 type einbuergerung_Gruppe6.Data #txt
 vs0 f4 template "" #txt
@@ -362,13 +383,13 @@ vs0 f2 actionTable 'out=in1;
 out.request.commentDeutschkenntnisse=in1.request.commentDeutschkenntnisse;
 out.request.commentFinanzen=in3.request.commentFinanzen;
 out.request.commentWohnsitz=in2.request.commentWohnsitz;
-out.request.documents=in1.request.documents;
+out.request.documents=in5.request.documents;
 out.request.personList=in4.request.personList;
 ' #txt
 vs0 f2 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f2 outLinks "TaskA.ivp" #txt
 vs0 f2 caseData '#
-#Mon Dec 07 15:24:59 CET 2015
+#Tue Dec 08 15:15:42 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -396,7 +417,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f2 taskData '#
-#Mon Dec 07 15:24:59 CET 2015
+#Tue Dec 08 15:15:42 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -636,17 +657,17 @@ anfordern</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 S10 544 370 176 44 -69 -16 #rect
+vs0 S10 544 570 176 44 -69 -16 #rect
 vs0 S10 @|BpmnServiceTaskIcon #fIcon
 vs0 f3 expr data #txt
 vs0 f3 outCond ivp=="TaskA.ivp" #txt
-vs0 f3 320 192 544 392 #arcP
-vs0 f3 1 320 392 #addKink
+vs0 f3 320 192 544 592 #arcP
+vs0 f3 1 320 592 #addKink
 vs0 f3 0 0.94 0 0 #arcLabel
 vs0 f6 type einbuergerung_Gruppe6.Data #txt
 vs0 f6 var in4 #txt
-vs0 f6 720 392 960 184 #arcP
-vs0 f6 1 960 392 #addKink
+vs0 f6 720 592 960 184 #arcP
+vs0 f6 1 960 592 #addKink
 vs0 f6 0 0.7670498441016803 0 0 #arcLabel
 vs0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -662,87 +683,6 @@ vs0 f26 1 0.2202802937141729 0 0 #arcLabel
 vs0 f27 expr out #txt
 vs0 f27 1528 104 1592 104 #arcP
 vs0 f27 0 0.2202802937141729 0 0 #arcLabel
-vs0 f5 expr out #txt
-vs0 f5 type einbuergerung_Gruppe6.Data #txt
-vs0 f5 var in1 #txt
-vs0 f5 111 176 304 176 #arcP
-vs0 f29 outLink start.ivp #txt
-vs0 f29 type einbuergerung_Gruppe6.Data #txt
-vs0 f29 inParamDecl '<> param;' #txt
-vs0 f29 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-vs0 f29 guid 1517D0AC1B01B6EE #txt
-vs0 f29 requestEnabled true #txt
-vs0 f29 triggerEnabled false #txt
-vs0 f29 callSignature start() #txt
-vs0 f29 taskData '#
-#Mon Dec 07 16:23:55 CET 2015
-' #txt
-vs0 f29 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
-ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
-import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskUpdDef.setExpiryActivator("Everybody");
-taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-engine.updateCurrentTask(taskUpdDef);
-' #txt
-vs0 f29 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-vs0 f29 @C|.responsibility Everybody #txt
-vs0 f29 993 273 30 30 -21 17 #rect
-vs0 f29 @|StartRequestIcon #fIcon
-vs0 f28 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-vs0 f28 actionTable 'out=in;
-out.request.commentDeutschkenntnisse="scheisse";
-out.request.commentFinanzen="schiesse";
-out.request.commentOnRequest="schiesse";
-out.request.commentWohnsitz="fjasjföaskjdöfajsdölkf";
-out.request.uniqueIdentifier="987435";
-' #txt
-vs0 f28 actionCode 'import einbuergerung_Gruppe6.Document;
-import einbuergerung_Gruppe6.Person;
-
-for(int i = 0;i<3;i++)
-{
-	Person p = new Person();
-	p.firstname = "Yves"+" "+i;
-	p.lastname = "Mauron"+" "+i;
-	out.request.personList.add(p);
-}
-
-for(int i = 0;i<3;i++)
-{
-	Document d = new Document();
-	d.fileName = "Testfile"+i;
-	if(i==0){ d.fileType = "Deutschkenntnisse";}
-	
-	
-	out.request.documents.add(d);
-}' #txt
-vs0 f28 type einbuergerung_Gruppe6.Data #txt
-vs0 f28 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Test init</name>
-        <nameStyle>9,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-vs0 f28 1096 266 112 44 -21 -8 #rect
-vs0 f28 @|StepIcon #fIcon
-vs0 f28 -613726|-1|-16777216 #nodeStyle
-vs0 f36 expr out #txt
-vs0 f36 1023 288 1096 288 #arcP
-vs0 f40 expr out #txt
-vs0 f40 1152 266 1152 190 #arcP
 vs0 U20 .resExport export #txt
 vs0 U20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -753,7 +693,7 @@ vs0 U20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-vs0 U20 720 586 128 44 -57 -8 #rect
+vs0 U20 712 426 128 44 -57 -8 #rect
 vs0 U20 @|BpmnUserTaskIcon #fIcon
 vs0 S30 .resExport export #txt
 vs0 S30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -766,13 +706,8 @@ Polizei versenden</name>
     </language>
 </elementInfo>
 ' #txt
-vs0 S30 440 586 128 44 -44 -16 #rect
+vs0 S30 432 426 128 44 -44 -16 #rect
 vs0 S30 @|BpmnSendTaskIcon #fIcon
-vs0 f43 type einbuergerung_Gruppe6.Data #txt
-vs0 f43 var in5 #txt
-vs0 f43 848 608 960 184 #arcP
-vs0 f43 1 960 608 #addKink
-vs0 f43 1 0.267251445006336 0 0 #arcLabel
 vs0 f44 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f44 actionTable 'out=in1;
@@ -780,7 +715,7 @@ vs0 f44 actionTable 'out=in1;
 vs0 f44 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f44 outLinks "TaskA.ivp" #txt
 vs0 f44 caseData '#
-#Tue Dec 08 13:58:46 CET 2015
+#Tue Dec 08 14:52:09 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -808,7 +743,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f44 taskData '#
-#Tue Dec 08 13:58:46 CET 2015
+#Tue Dec 08 14:52:09 CET 2015
 TaskA.EXC=1505C75E929B75AE-f46-buffer
 TaskA.EXP=''480h''
 TaskA.EXPRI=2
@@ -847,14 +782,14 @@ vs0 f44 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-vs0 f44 624 592 32 32 -57 18 #rect
+vs0 f44 616 432 32 32 -57 18 #rect
 vs0 f44 @|TaskSwitchIcon #fIcon
 vs0 f45 type einbuergerung_Gruppe6.Data #txt
 vs0 f45 var in1 #txt
-vs0 f45 568 608 624 608 #arcP
+vs0 f45 560 448 616 448 #arcP
 vs0 f42 expr data #txt
 vs0 f42 outCond ivp=="TaskA.ivp" #txt
-vs0 f42 656 608 720 608 #arcP
+vs0 f42 648 448 712 448 #arcP
 vs0 f46 .resExport export #txt
 vs0 f46 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -873,46 +808,238 @@ vs0 f46 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-vs0 f46 625 521 30 30 -75 17 #rect
+vs0 f46 617 361 30 30 -75 17 #rect
 vs0 f46 @|ExceptionIcon #fIcon
 vs0 f47 expr out #txt
-vs0 f47 625 536 504 586 #arcP
-vs0 f47 1 504 536 #addKink
+vs0 f47 617 376 496 426 #arcP
+vs0 f47 1 496 376 #addKink
 vs0 f47 0 0.7671806916643845 0 0 #arcLabel
-vs0 f41 outLink start2.ivp #txt
-vs0 f41 type einbuergerung_Gruppe6.Data #txt
-vs0 f41 inParamDecl '<> param;' #txt
-vs0 f41 actionDecl 'einbuergerung_Gruppe6.Data out;
+vs0 f41 expr data #txt
+vs0 f41 outCond ivp=="TaskE.ivp" #txt
+vs0 f41 320 192 432 448 #arcP
+vs0 f41 1 320 448 #addKink
+vs0 f41 0 0.7200682689218203 0 0 #arcLabel
+vs0 f43 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-vs0 f41 guid 151819EEEED83280 #txt
-vs0 f41 requestEnabled true #txt
-vs0 f41 triggerEnabled false #txt
-vs0 f41 callSignature start2() #txt
-vs0 f41 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+vs0 f43 actionTable 'out=in;
+out.request.documentToProof="Leumund";
+' #txt
+vs0 f43 type einbuergerung_Gruppe6.Data #txt
+vs0 f43 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>start2.ivp</name>
+        <name>init documentToProof
+to Finanzielle Verhältnisse</name>
+        <nameStyle>21,7
+27,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-vs0 f41 @C|.responsibility Everybody #txt
-vs0 f41 337 593 30 30 -24 17 #rect
-vs0 f41 @|StartRequestIcon #fIcon
-vs0 f48 expr out #txt
-vs0 f48 367 608 440 608 #arcP
+vs0 f43 472 250 176 44 -68 -16 #rect
+vs0 f43 @|StepIcon #fIcon
+vs0 f48 type einbuergerung_Gruppe6.Data #txt
+vs0 f48 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
+vs0 f48 doCall true #txt
+vs0 f48 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+vs0 f48 requestMappingAction 'param.data=in;
+param.data.request=in.request;
+' #txt
+vs0 f48 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f48 responseMappingAction 'out=in;
+out.request=in.request;
+' #txt
+vs0 f48 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Leumund prüfen</name>
+        <nameStyle>14,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f48 696 250 112 44 -45 -8 #rect
+vs0 f48 @|CallSubIcon #fIcon
+vs0 f49 expr out #txt
+vs0 f49 648 272 696 272 #arcP
+vs0 f49 0 0.438360561870366 0 0 #arcLabel
+vs0 f51 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f51 actionTable 'out=in1;
+' #txt
+vs0 f51 outTypes "einbuergerung_Gruppe6.Data" #txt
+vs0 f51 outLinks "TaskA.ivp" #txt
+vs0 f51 caseData '#
+#Tue Dec 08 15:14:37 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+vs0 f51 taskData '#
+#Tue Dec 08 15:14:37 CET 2015
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Bitte Leumund pr\u00FCfen
+TaskA.PRI=2
+TaskA.ROL=Migrationsamt Pr\u00FCfer
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
+vs0 f51 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte Leumund prüfen"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Migrationsamt Prüfer");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDefinitions.add(taskDef);
+' #txt
+vs0 f51 type einbuergerung_Gruppe6.Data #txt
+vs0 f51 template "" #txt
+vs0 f51 400 256 32 32 0 16 #rect
+vs0 f51 @|TaskSwitchIcon #fIcon
+vs0 f52 type einbuergerung_Gruppe6.Data #txt
+vs0 f52 var in1 #txt
+vs0 f52 776 426 416 288 #arcP
+vs0 f52 1 776 336 #addKink
+vs0 f52 2 416 336 #addKink
+vs0 f52 1 0.470214896496134 0 0 #arcLabel
+vs0 f50 expr data #txt
+vs0 f50 outCond ivp=="TaskA.ivp" #txt
+vs0 f50 432 272 472 272 #arcP
+vs0 f50 0 0.470214896496134 0 0 #arcLabel
+vs0 f53 expr out #txt
+vs0 f53 type einbuergerung_Gruppe6.Data #txt
+vs0 f53 var in5 #txt
+vs0 f53 808 272 957 181 #arcP
+vs0 f53 1 936 272 #addKink
+vs0 f53 0 0.8522836416730138 0 0 #arcLabel
+vs0 f29 outLink start.ivp #txt
+vs0 f29 type einbuergerung_Gruppe6.Data #txt
+vs0 f29 inParamDecl '<> param;' #txt
+vs0 f29 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f29 guid 15181FBABA2E76E5 #txt
+vs0 f29 requestEnabled true #txt
+vs0 f29 triggerEnabled false #txt
+vs0 f29 callSignature start() #txt
+vs0 f29 taskData '#
+#Tue Dec 08 15:25:33 CET 2015
+' #txt
+vs0 f29 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
+ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
+import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskUpdDef.setExpiryActivator("Everybody");
+taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+engine.updateCurrentTask(taskUpdDef);
+' #txt
+vs0 f29 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>start.ivp</name>
+    </language>
+</elementInfo>
+' #txt
+vs0 f29 @C|.responsibility Everybody #txt
+vs0 f29 57 257 30 30 -21 17 #rect
+vs0 f29 @|StartRequestIcon #fIcon
+vs0 f28 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f28 actionTable 'out=in;
+out.request.commentDeutschkenntnisse="scheisse";
+out.request.commentFinanzen="schiesse";
+out.request.commentOnRequest="schiesse";
+out.request.commentWohnsitz="fjasjföaskjdöfajsdölkf";
+out.request.uniqueIdentifier="987435";
+' #txt
+vs0 f28 actionCode 'import einbuergerung_Gruppe6.Document;
+import einbuergerung_Gruppe6.Person;
+
+for(int i = 0;i<3;i++)
+{
+	Person p = new Person();
+	p.firstname = "Yves"+" "+i;
+	p.lastname = "Mauron"+" "+i;
+	out.request.personList.add(p);
+}
+
+for(int i = 0;i<4;i++)
+{
+	Document d = new Document();
+	d.fileName = "Testfile"+i;
+	if(i==0){ d.fileType = "Deutschkenntnisse";}
+	
+	
+	out.request.documents.add(d);
+}
+	out.request.documents.get(0).setFileType("Leumund");
+	out.request.documents.get(1).setFileType("Deutschkenntnisse");
+	out.request.documents.get(2).setFileType("Wohnsitzbestätigung");
+	out.request.documents.get(3).setFileType("Finanzielle Verhältnisse");' #txt
+vs0 f28 type einbuergerung_Gruppe6.Data #txt
+vs0 f28 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test init</name>
+        <nameStyle>9,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f28 160 250 112 44 -21 -8 #rect
+vs0 f28 @|StepIcon #fIcon
+vs0 f28 -613726|-1|-16777216 #nodeStyle
+vs0 f36 expr out #txt
+vs0 f36 87 272 160 272 #arcP
+vs0 f5 expr out #txt
+vs0 f5 type einbuergerung_Gruppe6.Data #txt
+vs0 f5 var in1 #txt
+vs0 f5 216 250 312 184 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <swimlaneLabel>Migrationsamt</swimlaneLabel>
-        <swimlaneLabel>Betreibungsamt</swimlaneLabel>
         <swimlaneLabel>Polizei</swimlaneLabel>
+        <swimlaneLabel>Betreibungsamt</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
     <swimlaneSize>288</swimlaneSize>
-    <swimlaneSize>128</swimlaneSize>
-    <swimlaneSize>160</swimlaneSize>
+    <swimlaneSize>136</swimlaneSize>
+    <swimlaneSize>136</swimlaneSize>
     <swimlaneColor gradient="false">-3342337</swimlaneColor>
     <swimlaneColor gradient="false">-3355444</swimlaneColor>
     <swimlaneColor gradient="false">-16737895</swimlaneColor>
@@ -1234,22 +1361,26 @@ vs0 f17 out f26 tail #connect
 vs0 f26 head f9 mainIn #connect
 vs0 f9 mainOut f27 tail #connect
 vs0 f27 head f35 mainIn #connect
-vs0 f0 mainOut f5 tail #connect
-vs0 f5 head f4 in #connect
-vs0 f29 mainOut f36 tail #connect
-vs0 f36 head f28 mainIn #connect
-vs0 f28 mainOut f40 tail #connect
-vs0 f40 head f10 mainIn #connect
-vs0 U20 g1 f43 tail #connect
-vs0 f43 head f2 in #connect
 vs0 S30 g1 f45 tail #connect
 vs0 f45 head f44 in #connect
 vs0 f44 out f42 tail #connect
 vs0 f42 head U20 g0 #connect
 vs0 f46 mainOut f47 tail #connect
 vs0 f47 head S30 g2 #connect
-vs0 f41 mainOut f48 tail #connect
-vs0 f48 head S30 g0 #connect
+vs0 f4 out f41 tail #connect
+vs0 f41 head S30 g0 #connect
+vs0 f43 mainOut f49 tail #connect
+vs0 f49 head f48 mainIn #connect
+vs0 U20 g1 f52 tail #connect
+vs0 f52 head f51 in #connect
+vs0 f51 out f50 tail #connect
+vs0 f50 head f43 mainIn #connect
+vs0 f48 mainOut f53 tail #connect
+vs0 f53 head f2 in #connect
+vs0 f29 mainOut f36 tail #connect
+vs0 f36 head f28 mainIn #connect
+vs0 f28 mainOut f5 tail #connect
+vs0 f5 head f4 in #connect
 Bk0 g0 m f4 tail #connect
 Bk0 f4 head f2 mainIn #connect
 Bk0 f2 mainOut f6 tail #connect

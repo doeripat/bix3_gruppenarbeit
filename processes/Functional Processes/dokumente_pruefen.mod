@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 19:46:39 CET 2015]
+[>Created: Tue Dec 08 14:49:51 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -232,7 +232,7 @@ auf required gesetzt)</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f17 344 466 288 76 -141 -32 #rect
+dn0 f17 424 418 288 76 -141 -32 #rect
 dn0 f17 @|IBIcon #fIcon
 dn0 U10 .resExport export #txt
 dn0 U10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -569,7 +569,7 @@ dn0 f16 1480 144 1544 144 #arcP
 dn0 f27 expr out #txt
 dn0 f27 1672 144 1736 144 #arcP
 dn0 f5 368 376 425 376 #arcP
-dn0 f18 488 466 488 400 #arcP
+dn0 f18 568 418 488 400 #arcP
 dn0 U30 .resExport export #txt
 dn0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
