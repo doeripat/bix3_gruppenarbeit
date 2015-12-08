@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 20:15:20 CET 2015]
+[>Created: Tue Dec 08 20:55:00 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -15,8 +15,6 @@ Bk1 BpmnSendTask Big #zClass
 Bk1 BpmnSendTask #cInfo
 Bk0 BpmnUserTask Big #zClass
 Bk0 BpmnUserTask #cInfo
-Bk4 BpmnUserTask Big #zClass
-Bk4 BpmnUserTask #cInfo
 En0 @TextInP .resExport .resExport #zField
 En0 @TextInP .type .type #zField
 En0 @TextInP .processKind .processKind #zField
@@ -25,9 +23,7 @@ En0 @MessageFlowInP-0n messageIn messageIn #zField
 En0 @MessageFlowOutP-0n messageOut messageOut #zField
 En0 @TextInP .xml .xml #zField
 En0 @TextInP .responsibility .responsibility #zField
-En0 @StartSub f0 '' #zField
 En0 @EndSub f1 '' #zField
-En0 @GridStep f26 '' #zField
 En0 @TaskSwitch f13 '' #zField
 En0 @PushWFArc f7 '' #zField
 En0 @PushWFArc f9 '' #zField
@@ -41,15 +37,15 @@ En0 Bk1 S30 'Send 3' #zField
 En0 Bk0 U10 'User 1' #zField
 En0 @PushWFArc f3 '' #zField
 En0 @TaskSwitch f17 '' #zField
-En0 @TkArc f19 '' #zField
 En0 @PushWFArc f8 '' #zField
 En0 @PushWFArc f12 '' #zField
-En0 @StartRequest f16 '' #zField
-En0 @PushWFArc f18 '' #zField
 En0 @TkArc f4 '' #zField
-En0 @PushWFArc f10 '' #zField
+En0 @StartSub f0 '' #zField
+En0 @StartRequest f11 '' #zField
+En0 @TkArc f15 '' #zField
+En0 @PushWFArc f16 '' #zField
+En0 @EndTask f10 '' #zField
 En0 @PushWFArc f14 '' #zField
-En0 Bk4 U50 'User 5' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -173,96 +169,9 @@ Bk0 @RichDialog f10 '' #zField
 Bk0 @PushWFArc f0 '' #zField
 Bk0 @PushWFArc f3 '' #zField
 >Proto Bk0 Bk4 BpmnUserTask #zField
-Bk4 @TextInP .resExport .resExport #zField
-Bk4 @TextInP .type .type #zField
-Bk4 @TextInP .processKind .processKind #zField
-Bk4 @AnnotationInP-0n ai ai #zField
-Bk4 @MessageFlowInP-0n messageIn messageIn #zField
-Bk4 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk4 @TextInP .xml .xml #zField
-Bk4 @TextInP .responsibility .responsibility #zField
-Bk4 @PushTrueWFInG-01 g0 '' #zField
-Bk4 @PushTrueWFOutG-01 g1 '' #zField
-Bk4 @PushWFArc f0 '' #zField
->Proto Bk4 Bk5 BpmnUserTask #zField
-En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
-En0 f0 inParamTable 'out=param.data;
-' #txt
-En0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
-' #txt
-En0 f0 outParamTable 'result.data=in;
-' #txt
-En0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
-En0 f0 type einbuergerung_Gruppe6.Data #txt
-En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>call(Data)</name>
-        <nameStyle>10,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f0 57 97 30 30 -26 17 #rect
-En0 f0 @|StartSubIcon #fIcon
 En0 f1 type einbuergerung_Gruppe6.Data #txt
 En0 f1 1225 97 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
-En0 f26 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f26 actionTable 'out=in;
-out.request.address="Pflanzschulstr 37";
-out.request.city="Winterthur";
-out.request.commentDeutschkenntnisse="asdfasdf";
-out.request.commentFinanzen="asdfasdf";
-out.request.commentOnRequest="asdfasdf";
-out.request.commentWohnsitz="asdfasdf";
-out.request.uniqueIdentifier="987435";
-' #txt
-En0 f26 actionCode 'import einbuergerung_Gruppe6.Objection;
-import einbuergerung_Gruppe6.Document;
-import einbuergerung_Gruppe6.Person;
-
-
-for(int i = 0;i<2;i++)
-{
-	Person p = new Person();
-	p.firstname = "Christianra5bitte		"+" "+i;
-	p.lastname = "Kappler	"+" "+i;
-	out.request.personList.add(p);
-}
-//for(int i = 0;i<3;i++)
-//{
-//	Document d = new Document();
-//	d.fileName = "Testfile"+i;
-//	out.request.documents.add(d);
-//}
-
-for(int i = 0;i<3;i++)
-{
-	Objection o = new Objection();
-	o.author = "Peter Enis"+i;
-	o.statementOral = "Bitches in da house"+i;
-	o.statementWritten = "Bitches in da house"+i;	
-	o.text = "Alles falsch"+i;
-	out.request.objections.add(o);
-	
-	}' #txt
-En0 f26 type einbuergerung_Gruppe6.Data #txt
-En0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Test init</name>
-        <nameStyle>9,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 f26 104 34 112 44 -21 -8 #rect
-En0 f26 @|StepIcon #fIcon
-En0 f26 -613726|-1|-16777216 #nodeStyle
 En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f13 actionTable 'out=in1;
@@ -486,9 +395,6 @@ En0 f17 type einbuergerung_Gruppe6.Data #txt
 En0 f17 template "" #txt
 En0 f17 1008 256 32 32 0 16 #rect
 En0 f17 @|TaskSwitchIcon #fIcon
-En0 f19 type einbuergerung_Gruppe6.Data #txt
-En0 f19 var in1 #txt
-En0 f19 1024 174 1024 256 #arcP
 En0 f8 expr data #txt
 En0 f8 outCond ivp=="TaskA.ivp" #txt
 En0 f8 1040 272 1056 272 #arcP
@@ -496,49 +402,62 @@ En0 f12 expr in #txt
 En0 f12 896 128 944 152 #arcP
 En0 f12 1 896 152 #addKink
 En0 f12 1 0.9110086358710967 0 0 #arcLabel
-En0 f16 outLink start.ivp #txt
-En0 f16 type einbuergerung_Gruppe6.Data #txt
-En0 f16 inParamDecl '<> param;' #txt
-En0 f16 actionDecl 'einbuergerung_Gruppe6.Data out;
+En0 f4 expr out #txt
+En0 f4 type einbuergerung_Gruppe6.Data #txt
+En0 f4 var in1 #txt
+En0 f4 87 112 120 112 #arcP
+En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
+En0 f0 inParamTable 'out=param.data;
 ' #txt
-En0 f16 guid 15182ECDFB41F886 #txt
-En0 f16 requestEnabled true #txt
-En0 f16 triggerEnabled false #txt
-En0 f16 callSignature start() #txt
-En0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+En0 f0 outParamDecl '<einbuergerung_Gruppe6.Data data> result;
+' #txt
+En0 f0 outParamTable 'result.data=in;
+' #txt
+En0 f0 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f0 callSignature call(einbuergerung_Gruppe6.Data) #txt
+En0 f0 type einbuergerung_Gruppe6.Data #txt
+En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>call(Data)</name>
+        <nameStyle>10,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f0 57 97 30 30 -26 17 #rect
+En0 f0 @|StartSubIcon #fIcon
+En0 f11 outLink start.ivp #txt
+En0 f11 type einbuergerung_Gruppe6.Data #txt
+En0 f11 inParamDecl '<> param;' #txt
+En0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+En0 f11 guid 1518328963711454 #txt
+En0 f11 requestEnabled true #txt
+En0 f11 triggerEnabled false #txt
+En0 f11 callSignature start() #txt
+En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>start.ivp</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f16 @C|.responsibility Everybody #txt
-En0 f16 41 41 30 30 -21 17 #rect
-En0 f16 @|StartRequestIcon #fIcon
-En0 f18 expr out #txt
-En0 f18 71 56 104 56 #arcP
-En0 f4 expr out #txt
-En0 f4 type einbuergerung_Gruppe6.Data #txt
-En0 f4 var in1 #txt
-En0 f4 87 112 120 112 #arcP
-En0 f10 1200 272 1240 127 #arcP
-En0 f10 1 1240 272 #addKink
-En0 f10 1 0.11510200897141676 0 0 #arcLabel
-En0 f14 1336 144 1254 114 #arcP
-En0 f14 0 0.6011530636463085 0 0 #arcLabel
-En0 U50 .resExport export #txt
-En0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>Alle Dokumente Zusammenstellen
-und per Post an Dep des Innern schicken</name>
-        <nameStyle>70,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-En0 U50 1336 122 256 44 -108 -16 #rect
-En0 U50 @|BpmnUserTaskIcon #fIcon
+En0 f11 @C|.responsibility Everybody #txt
+En0 f11 945 257 30 30 -21 17 #rect
+En0 f11 @|StartRequestIcon #fIcon
+En0 f15 expr out #txt
+En0 f15 type einbuergerung_Gruppe6.Data #txt
+En0 f15 var in1 #txt
+En0 f15 975 272 1008 272 #arcP
+En0 f16 1104 152 1229 122 #arcP
+En0 f16 1 1200 152 #addKink
+En0 f16 0 0.7369076128238367 0 0 #arcLabel
+En0 f10 type einbuergerung_Gruppe6.Data #txt
+En0 f10 1233 257 30 30 0 15 #rect
+En0 f10 @|EndIcon #fIcon
+En0 f14 1200 272 1233 272 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1410,13 +1329,6 @@ Bk0 f3 expr out #txt
 Bk0 f3 488 248 547 248 #arcP
 >Proto Bk4 0 0 32 24 18 0 #rect
 >Proto Bk4 @|BpmnSendTaskIcon #fIcon
-Bk4 g0 51 211 26 26 0 5 #rect
-Bk4 g0 @|MIGIcon #fIcon
-Bk4 g1 563 211 26 26 0 5 #rect
-Bk4 g1 @|MOGIcon #fIcon
-Bk4 f0 77 224 563 224 #arcP
->Proto Bk5 0 0 32 24 18 0 #rect
->Proto Bk5 @|BpmnUserTaskIcon #fIcon
 En0 f13 out f7 tail #connect
 En0 f9 head S21 g0 #connect
 En0 f7 head S11 g0 #connect
@@ -1425,22 +1337,20 @@ En0 S41 g1 f5 tail #connect
 En0 f5 head f2 in #connect
 En0 f2 out f6 tail #connect
 En0 f6 head f1 mainIn #connect
-En0 U50 g1 f14 tail #connect
-En0 f14 head f1 mainIn #connect
 En0 S21 g1 f3 tail #connect
 En0 f3 head S41 g0 #connect
-En0 S30 g1 f19 tail #connect
-En0 f19 head f17 in #connect
 En0 f17 out f8 tail #connect
 En0 f8 head U10 g0 #connect
 En0 f2 out f12 tail #connect
 En0 f12 head S30 g0 #connect
-En0 f16 mainOut f18 tail #connect
-En0 f18 head f26 mainIn #connect
 En0 f0 mainOut f4 tail #connect
 En0 f4 head f13 in #connect
-En0 U10 g1 f10 tail #connect
-En0 f10 head f1 mainIn #connect
+En0 f11 mainOut f15 tail #connect
+En0 f15 head f17 in #connect
+En0 S30 g1 f16 tail #connect
+En0 f16 head f1 mainIn #connect
+En0 U10 g1 f14 tail #connect
+En0 f14 head f10 mainIn #connect
 Bk2 f21 head f22 mainIn #connect
 Bk2 f17 mainOut f23 tail #connect
 Bk2 f23 head f15 in #connect
@@ -1522,6 +1432,3 @@ Bk0 f0 head f10 mainIn #connect
 Bk0 f10 mainOut f3 tail #connect
 Bk0 f3 head g1 m #connect
 Bk0 0 0 640 512 0 #ivRect
-Bk4 g0 m f0 tail #connect
-Bk4 f0 head g1 m #connect
-Bk4 0 0 640 512 0 #ivRect
