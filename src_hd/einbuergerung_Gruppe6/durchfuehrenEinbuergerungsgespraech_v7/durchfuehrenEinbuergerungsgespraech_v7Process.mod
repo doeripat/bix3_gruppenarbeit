@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 14:52:40 CET 2015]
+[>Created: Wed Dec 09 18:16:01 CET 2015]
 1517BB0DB091677D 3.17 #module
 >Proto >Proto Collection #zClass
 ds0 durchfuehrenEinbuergerungsgespraech_v7Process Big #zClass
@@ -77,7 +77,7 @@ ds0 f6 actionDecl 'einbuergerung_Gruppe6.durchfuehrenEinbuergerungsgespraech_v7.
 ds0 f6 actionTable 'out=in;
 ' #txt
 ds0 f6 actionCode 'if (in.writtenStatementTemp == true){
-	out.request.writtenStatement == true;
+	out.request.writtenStatement = true;
 }' #txt
 ds0 f6 type einbuergerung_Gruppe6.durchfuehrenEinbuergerungsgespraech_v7.durchfuehrenEinbuergerungsgespraech_v7Data #txt
 ds0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

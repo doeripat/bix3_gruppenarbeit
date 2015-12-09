@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 22:11:25 CET 2015]
+[>Created: Wed Dec 09 18:15:59 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -41,19 +41,16 @@ An0 @TkArc f27 '' #zField
 An0 @PushWFArc f41 '' #zField
 An0 @GridStep f19 '' #zField
 An0 @Alternative f18 '' #zField
-An0 @PushWFArc f8 '' #zField
 An0 @PushWFArc f37 '' #zField
 An0 @TkArc f38 '' #zField
 An0 Bk0 S11 'Sub 5.1' #zField
 An0 @PushWFArc f2 '' #zField
 An0 Bk1 S21 'Sub 5.2' #zField
 An0 @PushWFArc f13 '' #zField
-An0 @PushWFArc f16 '' #zField
 An0 Bk2 S31 'Sub 5.3' #zField
 An0 @PushWFArc f6 '' #zField
 An0 @PushWFArc f12 '' #zField
 An0 Bk4 S40 'Sub 5.4' #zField
-An0 @PushWFArc f4 '' #zField
 An0 @TkArc f15 '' #zField
 An0 Bk5 S51 'Sub 5.5' #zField
 An0 @PushWFArc f7 '' #zField
@@ -62,6 +59,11 @@ An0 Bk6 S61 'Sub 5.6' #zField
 An0 @PushWFArc f21 '' #zField
 An0 @PushWFArc f22 '' #zField
 An0 Bk7 S71 'Sub 5.7' #zField
+An0 @PushWFArc f16 '' #zField
+An0 @PushWFArc f10 '' #zField
+An0 @PushWFArc f23 '' #zField
+An0 @PushWFArc f4 '' #zField
+An0 @PushWFArc f8 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -129,7 +131,7 @@ Bk4 @PushTrueWFInG-01 g0 '' #zField
 Bk4 @PushWFArc f0 '' #zField
 Bk4 @PushTrueWFOutG-01 g1 '' #zField
 Bk4 @PushWFArc f1 '' #zField
->Proto Bk4 Bk4 BpmnUserTask #zField
+>Proto Bk4 Bk3 BpmnUserTask #zField
 Bk5 @TextInP .resExport .resExport #zField
 Bk5 @TextInP .type .type #zField
 Bk5 @TextInP .processKind .processKind #zField
@@ -143,7 +145,7 @@ Bk5 @PushTrueWFInG-01 g0 '' #zField
 Bk5 @PushWFArc f0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
 Bk5 @PushWFArc f1 '' #zField
->Proto Bk5 Bk3 BpmnSendTask #zField
+>Proto Bk5 Bk4 BpmnSendTask #zField
 Bk6 @TextInP .resExport .resExport #zField
 Bk6 @TextInP .type .type #zField
 Bk6 @TextInP .processKind .processKind #zField
@@ -376,7 +378,7 @@ An0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 An0 f17 @C|.responsibility Everybody #txt
-An0 f17 105 281 30 30 -21 17 #rect
+An0 f17 441 113 30 30 -21 17 #rect
 An0 f17 @|StartRequestIcon #fIcon
 An0 f11 type einbuergerung_Gruppe6.Data #txt
 An0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -467,26 +469,11 @@ An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f19 104 218 112 44 -39 -8 #rect
+An0 f19 448 194 112 44 -39 -8 #rect
 An0 f19 @|StepIcon #fIcon
 An0 f18 type einbuergerung_Gruppe6.Data #txt
 An0 f18 1536 144 32 32 0 16 #rect
 An0 f18 @|AlternativeIcon #fIcon
-An0 f8 expr in #txt
-An0 f8 outCond in.request.writtenStatement==false #txt
-An0 f8 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Nein</name>
-        <nameStyle>4,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f8 1168 144 1552 144 #arcP
-An0 f8 1 1168 112 #addKink
-An0 f8 2 1552 112 #addKink
-An0 f8 0 0.3913043478260869 -13 0 #arcLabel
 An0 f37 expr out #txt
 An0 f37 103 160 154 160 #arcP
 An0 f38 type einbuergerung_Gruppe6.Data #txt
@@ -524,7 +511,6 @@ wählen</name>
 An0 S21 306 290 172 60 -67 -28 #rect
 An0 S21 @|BpmnUserTaskIcon #fIcon
 An0 f13 478 320 530 320 #arcP
-An0 f16 624 298 624 176 #arcP
 An0 S31 .resExport export #txt
 An0 S31 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -555,19 +541,6 @@ Notizen festhalten</name>
 ' #txt
 An0 S40 762 138 172 44 -67 -20 #rect
 An0 S40 @|BpmnUserTaskIcon #fIcon
-An0 f4 expr in #txt
-An0 f4 outCond in.request.writtenStatement==true #txt
-An0 f4 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Ja</name>
-        <nameStyle>2,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f4 1184 160 1258 160 #arcP
-An0 f4 0 0.43103448275862066 0 -7 #arcLabel
 An0 f15 type einbuergerung_Gruppe6.Data #txt
 An0 f15 var in1 #txt
 An0 f15 1360 190 1360 304 #arcP
@@ -617,6 +590,38 @@ An0 S71 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 S71 1616 138 112 44 -39 -8 #rect
 An0 S71 @|BpmnServiceTaskIcon #fIcon
+An0 f16 624 298 624 176 #arcP
+An0 f10 expr out #txt
+An0 f10 551 194 613 165 #arcP
+An0 f23 expr out #txt
+An0 f23 463 141 504 194 #arcP
+An0 f4 expr in #txt
+An0 f4 outCond in.request.writtenStatement==true #txt
+An0 f4 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f4 1184 160 1258 160 #arcP
+An0 f4 0 0.47297297297297297 0 -9 #arcLabel
+An0 f8 expr in #txt
+An0 f8 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f8 1168 144 1552 144 #arcP
+An0 f8 1 1168 112 #addKink
+An0 f8 2 1552 112 #addKink
+An0 f8 0 0.375 -14 0 #arcLabel
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -951,8 +956,8 @@ Bk4 g1 371 147 26 26 0 5 #rect
 Bk4 g1 @|MOGIcon #fIcon
 Bk4 f1 expr out #txt
 Bk4 f1 296 160 371 160 #arcP
->Proto Bk4 0 0 32 24 18 0 #rect
->Proto Bk4 @|BIcon #fIcon
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BIcon #fIcon
 Bk5 f29 beanConfig '"{/emailSubject ""schriftliche Stellungsnahme verfassen - Gesuch: <%=in.request.uniqueIdentifier%>""/emailFrom ""noreply@migrationsamt.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nSie haben an Ihrem Einbürgerungsgespräch angegeben, dass Sie gerne eine schriftliche Stellungsnahme\\nzu einem oder mehreren Einwänden verfassen möchten.\\nBitte loggen Sie sich auf unserer Webpage ein um die schriftliche Stellungsnahme zu verfassen.\\n\\nMit freundlichen Grüssen""/emailAttachments * }"' #txt
 Bk5 f29 type einbuergerung_Gruppe6.Data #txt
 Bk5 f29 timeout 0 #txt
@@ -998,8 +1003,8 @@ Bk5 g1 395 147 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
 Bk5 f1 expr out #txt
 Bk5 f1 328 160 395 160 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BIcon #fIcon
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BIcon #fIcon
 Bk6 f30 targetWindow NEW:card: #txt
 Bk6 f30 targetDisplay TOP #txt
 Bk6 f30 richDialogId einbuergerung_Gruppe6.schriftlicheStellungsnahmeVerfassen_v2 #txt
@@ -1107,7 +1112,6 @@ An0 f39 out f27 tail #connect
 An0 f27 head f25 in #connect
 An0 f11 out f41 tail #connect
 An0 f41 head f39 in #connect
-An0 f8 head f18 in #connect
 An0 f38 head f3 in #connect
 An0 f0 mainOut f37 tail #connect
 An0 f37 head S11 g0 #connect
@@ -1123,9 +1127,6 @@ An0 f25 out f6 tail #connect
 An0 f6 head S40 g0 #connect
 An0 S40 g1 f12 tail #connect
 An0 f15 head f9 in #connect
-An0 f5 out f8 tail #connect
-An0 f5 out f4 tail #connect
-An0 f4 head S51 g0 #connect
 An0 S51 g1 f15 tail #connect
 An0 f20 head f18 in #connect
 An0 f9 out f7 tail #connect
@@ -1135,6 +1136,14 @@ An0 f22 head f1 mainIn #connect
 An0 f18 out f21 tail #connect
 An0 f21 head S71 g0 #connect
 An0 S71 g1 f22 tail #connect
+An0 f19 mainOut f10 tail #connect
+An0 f10 head f39 in #connect
+An0 f17 mainOut f23 tail #connect
+An0 f23 head f19 mainIn #connect
+An0 f5 out f4 tail #connect
+An0 f4 head S51 g0 #connect
+An0 f5 out f8 tail #connect
+An0 f8 head f18 in #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head f21 mainIn #connect
 Bk0 f1 head g1 m #connect

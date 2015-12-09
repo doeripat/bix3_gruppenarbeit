@@ -84,7 +84,8 @@
 					<p:row>
 						<p:outputLabel for="writtenStatement" value="schriftliches Statment erwünscht?" />
 						<h:outputText value="&#160;" />
-				        <p:selectBooleanCheckbox id="writtenStatement" value="#{data.writtenStatementTemp}" />
+				        <p:selectBooleanCheckbox id="writtenStatement" value="#{data.writtenStatementTemp}" rendered="#{data.request.writtenStatement != true}"/>
+				        <h:outputText value="=> schriftliches Statement wurde bereits gewünscht" rendered="#{data.request.writtenStatement == true}"/>
 			        </p:row>
 			        
 			        <br />
