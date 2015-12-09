@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 13:14:55 CET 2015]
+[>Created: Wed Dec 09 22:07:04 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -13,6 +13,8 @@ Bk2 BpmnSendTask Big #zClass
 Bk2 BpmnSendTask #cInfo
 Bk3 BpmnServiceTask Big #zClass
 Bk3 BpmnServiceTask #cInfo
+Bk4 BpmnUserTask Big #zClass
+Bk4 B #cInfo
 vs0 @TextInP .resExport .resExport #zField
 vs0 @TextInP .type .type #zField
 vs0 @TextInP .processKind .processKind #zField
@@ -41,23 +43,9 @@ vs0 @PushWFArc f11 '' #zField
 vs0 @PushWFArc f14 '' #zField
 vs0 @GridStep f13 '' #zField
 vs0 @PushWFArc f21 '' #zField
-vs0 @RichDialog f10 '' #zField
-vs0 @PushWFArc f15 '' #zField
-vs0 @Alternative f17 '' #zField
-vs0 @PushWFArc f30 '' #zField
-vs0 @CallSub f32 '' #zField
-vs0 @PushWFArc f34 '' #zField
-vs0 @EMail f35 '' #zField
-vs0 @Alternative f37 '' #zField
-vs0 @PushWFArc f38 '' #zField
-vs0 @PushWFArc f31 '' #zField
-vs0 @PushWFArc f39 '' #zField
 vs0 Bk0 S10 'Service 1' #zField
 vs0 @PushWFArc f3 '' #zField
 vs0 @TkArc f6 '' #zField
-vs0 @GridStep f9 '' #zField
-vs0 @PushWFArc f26 '' #zField
-vs0 @PushWFArc f27 '' #zField
 vs0 Bk1 U20 'User 2' #zField
 vs0 Bk2 S30 'Send 3' #zField
 vs0 @TaskSwitch f44 '' #zField
@@ -79,6 +67,9 @@ vs0 @PushWFArc f36 '' #zField
 vs0 Bk3 S70 'Service 7' #zField
 vs0 @PushWFArc f5 '' #zField
 vs0 @TkArc f40 '' #zField
+vs0 @PushWFArc f54 '' #zField
+vs0 Bk4 S41 'Sub 4' #zField
+vs0 @PushWFArc f9 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -152,6 +143,20 @@ Bk3 @DBStep f1 '' #zField
 Bk3 @PushWFArc f2 '' #zField
 Bk3 @PushWFArc f0 '' #zField
 >Proto Bk3 Bk3 BpmnServiceTask #zField
+Bk4 @TextInP .resExport .resExport #zField
+Bk4 @TextInP .type .type #zField
+Bk4 @TextInP .processKind .processKind #zField
+Bk4 @AnnotationInP-0n ai ai #zField
+Bk4 @MessageFlowInP-0n messageIn messageIn #zField
+Bk4 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk4 @TextInP .xml .xml #zField
+Bk4 @TextInP .responsibility .responsibility #zField
+Bk4 @RichDialog f10 '' #zField
+Bk4 @PushTrueWFInG-01 g0 '' #zField
+Bk4 @PushWFArc f0 '' #zField
+Bk4 @PushTrueWFOutG-01 g1 '' #zField
+Bk4 @PushWFArc f1 '' #zField
+>Proto Bk4 Bk4 BpmnUserTask #zField
 vs0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 vs0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -175,7 +180,7 @@ vs0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 vs0 f0 81 161 30 30 -26 17 #rect
 vs0 f0 @|StartSubIcon #fIcon
 vs0 f1 type einbuergerung_Gruppe6.Data #txt
-vs0 f1 1857 153 30 30 0 15 #rect
+vs0 f1 1329 153 30 30 0 15 #rect
 vs0 f1 @|EndSubIcon #fIcon
 vs0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -400,6 +405,7 @@ vs0 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
 vs0 f2 actionTable 'out=in1;
 out.request.commentDeutschkenntnisse=in1.request.commentDeutschkenntnisse;
 out.request.commentFinanzen=in3.request.commentFinanzen;
+out.request.commentLeumund=in5.request.commentLeumund;
 out.request.commentWohnsitz=in2.request.commentWohnsitz;
 out.request.documents=in5.request.documents;
 out.request.personList=in4.request.personList;
@@ -407,7 +413,7 @@ out.request.personList=in4.request.personList;
 vs0 f2 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f2 outLinks "TaskA.ivp" #txt
 vs0 f2 caseData '#
-#Tue Dec 08 15:15:42 CET 2015
+#Wed Dec 09 22:07:00 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -435,7 +441,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f2 taskData '#
-#Tue Dec 08 15:15:42 CET 2015
+#Wed Dec 09 22:07:00 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -562,108 +568,6 @@ vs0 f21 outCond ivp=="TaskD.ivp" #txt
 vs0 f21 320 160 480 72 #arcP
 vs0 f21 1 320 72 #addKink
 vs0 f21 0 0.8181818181818182 0 0 #arcLabel
-vs0 f10 targetWindow NEW:card: #txt
-vs0 f10 targetDisplay TOP #txt
-vs0 f10 richDialogId einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen #txt
-vs0 f10 startMethod start(einbuergerung_Gruppe6.Request) #txt
-vs0 f10 type einbuergerung_Gruppe6.Data #txt
-vs0 f10 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
-vs0 f10 requestMappingAction 'param.request=in.request;
-' #txt
-vs0 f10 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-vs0 f10 responseMappingAction 'out=in;
-out.request=result.request;
-' #txt
-vs0 f10 windowConfiguration '* ' #txt
-vs0 f10 isAsynch false #txt
-vs0 f10 isInnerRd false #txt
-vs0 f10 userContext '* ' #txt
-vs0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Entscheide
-Konsolidieren</name>
-        <nameStyle>11,7
-13,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-vs0 f10 1096 146 112 44 -38 -16 #rect
-vs0 f10 @|RichDialogIcon #fIcon
-vs0 f15 expr data #txt
-vs0 f15 outCond ivp=="TaskA.ivp" #txt
-vs0 f15 976 168 1096 168 #arcP
-vs0 f17 type einbuergerung_Gruppe6.Data #txt
-vs0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Inform People</name>
-        <nameStyle>13,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-vs0 f17 1328 152 32 32 -38 18 #rect
-vs0 f17 @|AlternativeIcon #fIcon
-vs0 f30 expr out #txt
-vs0 f30 1208 168 1328 168 #arcP
-vs0 f32 type einbuergerung_Gruppe6.Data #txt
-vs0 f32 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
-vs0 f32 doCall true #txt
-vs0 f32 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
-' #txt
-vs0 f32 requestMappingAction 'param.data=in;
-' #txt
-vs0 f32 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-vs0 f32 responseMappingAction 'out=in;
-' #txt
-vs0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abbruch</name>
-        <nameStyle>7,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-vs0 f32 1416 218 112 44 -22 -8 #rect
-vs0 f32 @|CallSubIcon #fIcon
-vs0 f34 expr in #txt
-vs0 f34 outCond 'in.request.personList == null' #txt
-vs0 f34 1344 184 1416 240 #arcP
-vs0 f34 1 1344 240 #addKink
-vs0 f34 1 0.13593935303326263 0 0 #arcLabel
-vs0 f35 beanConfig '"{/emailSubject ""Einbürgerung mit ID:<%=in.request.uniqueIdentifier%>""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\nLeider müssen wir ""/emailAttachments * }"' #txt
-vs0 f35 type einbuergerung_Gruppe6.Data #txt
-vs0 f35 timeout 0 #txt
-vs0 f35 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Abgelehnte Personen
-informieren</name>
-        <nameStyle>20,7
-11,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-vs0 f35 1592 82 144 44 -53 -16 #rect
-vs0 f35 @|EMailIcon #fIcon
-vs0 f37 type einbuergerung_Gruppe6.Data #txt
-vs0 f37 1760 152 32 32 0 16 #rect
-vs0 f37 @|AlternativeIcon #fIcon
-vs0 f38 expr in #txt
-vs0 f38 outCond 'in.request.personRemovedList == null' #txt
-vs0 f38 1360 168 1760 168 #arcP
-vs0 f31 expr in #txt
-vs0 f31 1792 168 1857 168 #arcP
-vs0 f39 expr out #txt
-vs0 f39 1736 104 1776 152 #arcP
-vs0 f39 1 1776 104 #addKink
-vs0 f39 0 0.8455860359198729 0 0 #arcLabel
 vs0 S10 .resExport export #txt
 vs0 S10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -687,20 +591,6 @@ vs0 f6 var in4 #txt
 vs0 f6 720 592 960 184 #arcP
 vs0 f6 1 960 592 #addKink
 vs0 f6 0 0.7670498441016803 0 0 #arcLabel
-vs0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-vs0 f9 actionTable 'out=in;
-' #txt
-vs0 f9 type einbuergerung_Gruppe6.Data #txt
-vs0 f9 1416 82 112 44 0 -8 #rect
-vs0 f9 @|StepIcon #fIcon
-vs0 f26 expr in #txt
-vs0 f26 1344 152 1416 104 #arcP
-vs0 f26 1 1344 104 #addKink
-vs0 f26 1 0.2202802937141729 0 0 #arcLabel
-vs0 f27 expr out #txt
-vs0 f27 1528 104 1592 104 #arcP
-vs0 f27 0 0.2202802937141729 0 0 #arcLabel
 vs0 U20 .resExport export #txt
 vs0 U20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -1056,6 +946,23 @@ vs0 f5 111 176 152 176 #arcP
 vs0 f40 type einbuergerung_Gruppe6.Data #txt
 vs0 f40 var in1 #txt
 vs0 f40 264 176 304 176 #arcP
+vs0 f54 expr data #txt
+vs0 f54 outCond ivp=="TaskA.ivp" #txt
+vs0 f54 976 168 1080 168 #arcP
+vs0 S41 .resExport export #txt
+vs0 S41 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Konsolidierter Entscheid
+fällen</name>
+        <nameStyle>31,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 S41 1080 146 144 44 -67 -20 #rect
+vs0 S41 @|BpmnUserTaskIcon #fIcon
+vs0 f9 1224 168 1329 168 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1387,6 +1294,59 @@ Bk3 f0 expr out #txt
 Bk3 f0 344 256 563 256 #arcP
 >Proto Bk3 0 0 32 24 18 0 #rect
 >Proto Bk3 @|BpmnServiceTaskIcon #fIcon
+Bk4 f10 targetWindow NEW:card: #txt
+Bk4 f10 targetDisplay TOP #txt
+Bk4 f10 richDialogId einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen #txt
+Bk4 f10 startMethod start(einbuergerung_Gruppe6.Request) #txt
+Bk4 f10 type einbuergerung_Gruppe6.Data #txt
+Bk4 f10 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+Bk4 f10 requestMappingAction 'param.request=in.request;
+' #txt
+Bk4 f10 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk4 f10 responseMappingAction 'out=in;
+out.request=result.request;
+' #txt
+Bk4 f10 windowConfiguration '* ' #txt
+Bk4 f10 isAsynch false #txt
+Bk4 f10 isInnerRd false #txt
+Bk4 f10 userContext '* ' #txt
+Bk4 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Entscheide
+Konsolidieren</name>
+        <nameStyle>11,7
+13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk4 f10 136 138 112 44 -38 -16 #rect
+Bk4 f10 @|RichDialogIcon #fIcon
+Bk4 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>in 1</name>
+    </language>
+</elementInfo>
+' #txt
+Bk4 g0 51 147 26 26 0 5 #rect
+Bk4 g0 @|MIGIcon #fIcon
+Bk4 f0 77 160 136 160 #arcP
+Bk4 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>out 1</name>
+    </language>
+</elementInfo>
+' #txt
+Bk4 g1 307 147 26 26 0 5 #rect
+Bk4 g1 @|MOGIcon #fIcon
+Bk4 f1 expr out #txt
+Bk4 f1 248 160 307 160 #arcP
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BIcon #fIcon
 vs0 f33 mainOut f18 tail #connect
 vs0 f18 head f2 in #connect
 vs0 f7 mainOut f19 tail #connect
@@ -1405,26 +1365,10 @@ vs0 f24 mainOut f11 tail #connect
 vs0 f11 head f8 mainIn #connect
 vs0 f4 out f21 tail #connect
 vs0 f21 head f13 mainIn #connect
-vs0 f2 out f15 tail #connect
-vs0 f15 head f10 mainIn #connect
-vs0 f10 mainOut f30 tail #connect
-vs0 f30 head f17 in #connect
-vs0 f34 head f32 mainIn #connect
-vs0 f17 out f38 tail #connect
-vs0 f38 head f37 in #connect
-vs0 f17 out f34 tail #connect
-vs0 f37 out f31 tail #connect
-vs0 f31 head f1 mainIn #connect
-vs0 f35 mainOut f39 tail #connect
-vs0 f39 head f37 in #connect
 vs0 f4 out f3 tail #connect
 vs0 f3 head S10 g0 #connect
 vs0 S10 g1 f6 tail #connect
 vs0 f6 head f2 in #connect
-vs0 f17 out f26 tail #connect
-vs0 f26 head f9 mainIn #connect
-vs0 f9 mainOut f27 tail #connect
-vs0 f27 head f35 mainIn #connect
 vs0 S30 g1 f45 tail #connect
 vs0 f45 head f44 in #connect
 vs0 f44 out f42 tail #connect
@@ -1447,6 +1391,10 @@ vs0 f0 mainOut f5 tail #connect
 vs0 f5 head S70 g0 #connect
 vs0 S70 g1 f40 tail #connect
 vs0 f40 head f4 in #connect
+vs0 f2 out f54 tail #connect
+vs0 f54 head S41 g0 #connect
+vs0 S41 g1 f9 tail #connect
+vs0 f9 head f1 mainIn #connect
 Bk0 g0 m f4 tail #connect
 Bk0 f4 head f2 mainIn #connect
 Bk0 f2 mainOut f6 tail #connect
@@ -1483,3 +1431,8 @@ Bk3 f2 head f1 mainIn #connect
 Bk3 f1 mainOut f0 tail #connect
 Bk3 f0 head g1 m #connect
 Bk3 0 0 640 512 0 #ivRect
+Bk4 g0 m f0 tail #connect
+Bk4 f0 head f10 mainIn #connect
+Bk4 f1 head g1 m #connect
+Bk4 f10 mainOut f1 tail #connect
+Bk4 0 0 384 320 0 #ivRect

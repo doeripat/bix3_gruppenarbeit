@@ -110,10 +110,10 @@
 					</p:row>
 					<br />
 					<p:row>
-					<p:outputLabel  value="Kommentar" rendered="#{data.request.commentOnRequest != null}" style="font-size: 16pt;"/> 
+					<p:outputLabel for="comment" value="Kommentar" rendered="#{data.request.commentOnRequest != null}" style="font-size: 16pt;"/> 
 					</p:row>
 					<p:row>
-					<p:outputLabel value="#{data.request.commentOnRequest}" rendered="#{data.request.commentOnRequest != null}" /> 
+					<p:outputLabel id="comment" value="#{data.request.commentOnRequest}" rendered="#{data.request.commentOnRequest != null}" /> 
 					</p:row>
 					<br />
 					<p:row>

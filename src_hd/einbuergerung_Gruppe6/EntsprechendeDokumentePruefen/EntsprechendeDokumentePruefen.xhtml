@@ -20,11 +20,36 @@
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
+					<p:column>
 					
-					<p:outputLabel for="requestUniqueIdentifier" value="Unique Identifier"/>
-					<p:outputLabel id="requestUniqueIdentifier" value="#{data.request.uniqueIdentifier}"/>
+					<p:row>
+					<p:outputLabel  value="Antrag" style="font-size: 16pt;"/>
+					</p:row>
 					
-					<p:outputLabel value="Personen"/>
+					<p:row>
+						<table style="width: 60%">
+							 <tr>
+							 	<td><h:outputText value="RequestID" style="font-weight: bold;" /></td>
+							 	<td><h:outputText value="#{data.request.uniqueIdentifier}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Adresse" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.address}" />
+								<h:outputText value=", " />
+								<h:outputText value="#{data.request.postcode}" />
+								<h:outputText value=" " />
+								<h:outputText value="#{data.request.city}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Telefon" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.phone}" /></td>
+							 </tr>
+						</table>
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Personen" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
 							<p:dataTable var="p" value="#{data.request.personList}">
@@ -40,7 +65,10 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-					<p:outputLabel value="Dokumente"/>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Dokumente" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
 							<p:dataTable var="d" value="#{data.request.documents}">
@@ -58,17 +86,39 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-					
-					<p:outputLabel for="commentFinanzen" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"/>
-					<p:inputTextarea id="commentFinanzen" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}"></p:inputTextarea>
-					<p:outputLabel for="commentDeutschkenntnisse" value="Kommentar Deutschkenntnisse" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"/>
-					<p:inputTextarea id="commentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}"></p:inputTextarea>					
-					<p:outputLabel for="commentWohnsitzbestätigung" value="Kommentar Wohnsitzbestätigung" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"/>
-					<p:inputTextarea id="commentWohnsitzbestätigung" value="#{data.request.commentWohnsitz}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}"></p:inputTextarea>					
-					<p:outputLabel for="commentLeumund" value="Kommentar Leumund" rendered="#{data.request.documentToProof == 'Leumund'}"/>
-					<p:inputTextarea id="commentLeumund" value="#{data.request.commentLeumund}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Leumund'}"></p:inputTextarea>					
 					<br />
+					<p:row>
+					<p:outputLabel for="commentFinanzen" value="Kommentar Finanzen" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:inputTextarea id="commentFinanzen" value="#{data.request.commentFinanzen}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Finanzielle Verhältnisse'}" style="width:100%"></p:inputTextarea>
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel for="commentDeutschkenntnisse" value="Kommentar Deutschkenntnisse" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:inputTextarea id="commentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Deutschkenntnisse'}" style="width:100%"></p:inputTextarea>					
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel for="commentWohnsitzbestätigung" value="Kommentar Wohnsitzbestätigung" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:inputTextarea id="commentWohnsitzbestätigung" value="#{data.request.commentWohnsitz}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Wohnsitzbestätigung'}" style="width:100%"></p:inputTextarea>					
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel for="commentLeumund" value="Kommentar Leumund" rendered="#{data.request.documentToProof == 'Leumund'}" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:inputTextarea id="commentLeumund" value="#{data.request.commentLeumund}" rows="6" cols="33" rendered="#{data.request.documentToProof == 'Leumund'}" style="width:100%"></p:inputTextarea>					
+					</p:row>
+					<br />
+					<p:row>
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					</p:row>
+				</p:column>
 				</h:panelGrid>
 			</h:form>
 			

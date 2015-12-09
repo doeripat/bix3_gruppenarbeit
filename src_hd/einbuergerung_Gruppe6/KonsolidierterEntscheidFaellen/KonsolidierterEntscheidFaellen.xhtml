@@ -11,8 +11,7 @@
 		<ui:define name="title">KonsolidierterEntscheidFaellen</ui:define>
 		<ui:define name="content">
 			<h3>
-			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			Bitte überprüfen Sie die Dokumente und lesen Sie Kommentare der jeweiligen Spezialisten durch. Bitte ändern sie den Status der Personen auf "abgelehnt", falls Sie den Anforderungen nicht genügen.
 			</h3>
 			
 			<h:form id="form">
@@ -20,11 +19,36 @@
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
-
-					<p:outputLabel for="uniqueIdentifier" value="Unique Identifier"/>
-					<p:outputLabel id="uniqueIdentifier" value="#{data.request.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
+					<p:column>
 					
-					<p:outputLabel  value="Personen"/>
+					<p:row>
+					<p:outputLabel  value="Antrag" style="font-size: 16pt;"/>
+					</p:row>
+					
+					<p:row>
+						<table style="width: 60%">
+							 <tr>
+							 	<td><h:outputText value="RequestID" style="font-weight: bold;" /></td>
+							 	<td><h:outputText value="#{data.request.uniqueIdentifier}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Adresse" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.address}" />
+								<h:outputText value=", " />
+								<h:outputText value="#{data.request.postcode}" />
+								<h:outputText value=" " />
+								<h:outputText value="#{data.request.city}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Telefon" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.phone}" /></td>
+							 </tr>
+						</table>
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Personen" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
 							<p:dataTable id="personTable" var="p" value="#{data.request.personList}">
@@ -71,8 +95,10 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-
-					<p:outputLabel value="Dokumente"/>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Personen" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
 							<p:dataTable var="d" value="#{data.request.documents}">
@@ -90,23 +116,46 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>					
-					
-					
-					
-					<p:outputLabel for="requestCommentFinanzen" value="Comment Finanzen"/>
-					<p:outputLabel id="requestCommentFinanzen" value="#{data.request.commentFinanzen}"></p:outputLabel>
-					
-					<p:outputLabel for="requestCommentWohnsitz" value="Comment Wohnsitz"/>
-					<p:outputLabel id="requestCommentWohnsitz" value="#{data.request.commentWohnsitz}"></p:outputLabel>
-					
-					<p:outputLabel for="requestCommentDeutschkenntnisse" value="Comment Deutschkenntnisse"/>
-					<p:outputLabel id="requestCommentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}"></p:outputLabel>
-					
-					<p:outputLabel for="requestCommentOnRequest" value="Begründung bei Ablehnung"/>
-					<p:inputTextarea id="requestCommentOnRequest" value="#{data.request.commentOnRequest}" cols="33" rows="6"></p:inputTextarea>
-					
+					<p:row>
+					<p:outputLabel for="commentFinanzen" value="Kommentar Finanzen" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:outputLabel id="commentFinanzen" value="#{data.request.commentFinanzen}" rows="6" cols="33"  style="width:100%"></p:outputLabel>
+					</p:row>
 					<br />
+					<p:row>
+					<p:outputLabel for="commentDeutschkenntnisse" value="Kommentar Deutschkenntnisse"  style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:outputLabel id="commentDeutschkenntnisse" value="#{data.request.commentDeutschkenntnisse}" rows="6" cols="33" style="width:100%"></p:outputLabel>					
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel for="commentWohnsitzbestätigung" value="Kommentar Wohnsitzbestätigung" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:outputLabel id="commentWohnsitzbestätigung" value="#{data.request.commentWohnsitz}" rows="6" cols="33" style="width:100%"></p:outputLabel>					
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel for="commentLeumund" value="Kommentar Leumund"  style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:outputLabel id="commentLeumund" value="#{data.request.commentLeumund}" rows="6" cols="33" style="width:100%"></p:outputLabel>					
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel for="requestCommentOnRequest" value="Begründung bei Ablehnung"  style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:inputTextarea id="requestCommentOnRequest" value="#{data.request.commentOnRequest}" rows="6" cols="33" style="width:100%"></p:inputTextarea>					
+					</p:row>
+					<br />
+
+					<p:row>
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					</p:row>
+					</p:column>
 				</h:panelGrid>
 			</h:form>
 			

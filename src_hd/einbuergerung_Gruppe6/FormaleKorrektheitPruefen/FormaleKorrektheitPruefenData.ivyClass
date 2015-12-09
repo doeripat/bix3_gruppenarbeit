@@ -1,16 +1,8 @@
 FormaleKorrektheitPruefenData #class
 einbuergerung_Gruppe6.FormaleKorrektheitPruefen #namespace
-uniqueIdentifier String #field
-status String #field
-documents List<einbuergerung_Gruppe6.Document> #field
-personList List<einbuergerung_Gruppe6.Person> #field
-statiRS Recordset #field
-statiRS PERSISTENT #fieldModifier
-statiList List<String> #field
-statiList PERSISTENT #fieldModifier
-comment String #field
-comment PERSISTENT #fieldModifier
 document einbuergerung_Gruppe6.Document #field
 document PERSISTENT #fieldModifier
 allBoolean Boolean #field
 allBoolean PERSISTENT #fieldModifier
+request einbuergerung_Gruppe6.Request #field
+request PERSISTENT #fieldModifier

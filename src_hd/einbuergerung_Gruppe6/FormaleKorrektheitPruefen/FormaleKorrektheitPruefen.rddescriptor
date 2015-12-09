@@ -15,51 +15,27 @@
         <name>start</name>
         <description>Default dialog start method.</description>
         <inputParameter>
-            <name>uniqueIdentifier</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>status</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>documents</name>
-            <description></description>
-            <parameterType>List&lt;einbuergerung_Gruppe6.Document&gt;</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>personList</name>
-            <description></description>
-            <parameterType>List&lt;einbuergerung_Gruppe6.Person&gt;</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
-            <name>comment</name>
-            <description></description>
-            <parameterType>String</parameterType>
-            <nullPermitted>false</nullPermitted>
-        </inputParameter>
-        <inputParameter>
             <name>allboolean</name>
             <description></description>
             <parameterType>Boolean</parameterType>
             <nullPermitted>false</nullPermitted>
         </inputParameter>
-        <outputParameter>
-            <name>comment</name>
+        <inputParameter>
+            <name>request</name>
             <description></description>
-            <parameterType>String</parameterType>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
+            <nullPermitted>false</nullPermitted>
+        </inputParameter>
+        <outputParameter>
+            <name>allboolean</name>
+            <description></description>
+            <parameterType>Boolean</parameterType>
             <nullPermitted>false</nullPermitted>
         </outputParameter>
         <outputParameter>
-            <name>allboolean</name>
+            <name>request</name>
             <description></description>
-            <parameterType>Boolean</parameterType>
+            <parameterType>einbuergerung_Gruppe6.Request</parameterType>
             <nullPermitted>false</nullPermitted>
         </outputParameter>
     </startMethod>

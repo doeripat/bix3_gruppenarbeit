@@ -11,8 +11,7 @@
 		<ui:define name="title">FormaleKorrektheitPruefen</ui:define>
 		<ui:define name="content">
 			<h3>
-			This is a <a href="http://developer.axonivy.com/doc/5.1.latest/DesignerGuideHtml/ivy.userinterface.html#ivy-htmldialogs">Html Dialog</a> 
-			implemented with JSF and <a href="http://primefaces.org/">Primefaces</a> as widget library
+			Bitte überprüfen Sie, ob der Antrag Formal Korrekt sind und ob alle Dokumente hochgeladen wurden.
 			</h3>
 			
 			<h:form id="form">
@@ -20,14 +19,39 @@
 					<f:facet name="header">
 						<p:messages></p:messages>
 					</f:facet>
+					<p:column>
 					
-					<p:outputLabel for="uniqueIdentifier" value="Antrags-ID"/>
-					<p:outputLabel id="uniqueIdentifier" value="#{data.uniqueIdentifier}" styleClass="readonly_text"></p:outputLabel>
+					<p:row>
+					<p:outputLabel  value="Antrag" style="font-size: 16pt;"/>
+					</p:row>
 					
-					<p:outputLabel value="Personen"/>
+					<p:row>
+						<table style="width: 60%">
+							 <tr>
+							 	<td><h:outputText value="RequestID" style="font-weight: bold;" /></td>
+							 	<td><h:outputText value="#{data.request.uniqueIdentifier}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Adresse" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.address}" />
+								<h:outputText value=", " />
+								<h:outputText value="#{data.request.postcode}" />
+								<h:outputText value=" " />
+								<h:outputText value="#{data.request.city}" /></td>
+							 </tr>
+							 <tr>
+							 	<td><h:outputText value="Telefon" style="font-weight: bold;"/></td>
+							 	<td><h:outputText value="#{data.request.phone}" /></td>
+							 </tr>
+						</table>
+					</p:row>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Personen" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
-							<p:dataTable var="p" value="#{data.personList}">
+							<p:dataTable var="p" value="#{data.request.personList}">
 								<p:column headerText="Geschlecht">
 								    <h:outputText value="#{p.gender}" />
 								  </p:column>				
@@ -40,10 +64,13 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-					<p:outputLabel value="Dokumente"/>
+					<br />
+					<p:row>
+					<p:outputLabel  value="Dokumente" style="font-size: 16pt;"/>
+					</p:row>
 					<p:row>
 						<p:column>
-							<p:dataTable var="d" value="#{data.documents}">
+							<p:dataTable var="d" value="#{data.request.documents}">
 									<p:column headerText="Dokumententyp">
 								    <h:outputText value="#{d.fileType}" />
 								  </p:column>				
@@ -58,18 +85,28 @@
 							</p:dataTable>
 						</p:column>
 					</p:row>
-					
-					<p:outputLabel for="allBoolean" value="Antrag ok?" />	
+					<br />
+					<p:row>
+					<p:outputLabel for="allBoolean" value="Antrag ok?" style="font-size: 16pt;"/>
+					</p:row>			
+					<p:row>
 					<p:selectOneRadio id="allBoolean" value="#{data.allBoolean}" required="true">
 			            <f:selectItem itemLabel="Ja" itemValue="true" />
 			            <f:selectItem itemLabel="Nein" itemValue="false" />
 			        </p:selectOneRadio>
-					
-					<p:outputLabel for="comment" value="Kommentar"/>
-					<p:inputTextarea id="comment" value="#{data.comment}" rows="6" cols="33"></p:inputTextarea>
+					</p:row>
+					<p:row>
+					<p:outputLabel for="comment" value="Kommentar" style="font-size: 16pt;"/>
+					</p:row>
+					<p:row>
+					<p:inputTextarea id="comment" value="#{data.request.commentOnRequest}" rows="6" cols="33" style="width:100%"></p:inputTextarea>
+					</p:row>
 					<br />
+					<p:row>
 					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
-				</h:panelGrid>
+					</p:row>
+					</p:column>
+					</h:panelGrid>
 			</h:form>
 			
 		</ui:define>
