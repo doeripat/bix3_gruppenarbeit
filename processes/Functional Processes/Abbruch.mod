@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 20:30:00 CET 2015]
+[>Created: Wed Dec 09 11:21:57 CET 2015]
 15075B42E89EFB47 3.17 #module
 >Proto >Proto Collection #zClass
 Ah0 Abbruch Big #zClass
@@ -112,7 +112,7 @@ Ah0 f2 452 120 553 120 #arcP
 ' #txt
 >Proto Ah0 0 0 32 24 18 0 #rect
 >Proto Ah0 @|BIcon #fIcon
-Bk0 f11 beanConfig '"{/emailSubject ""Einbürgerungsprozess beendet""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nIhr Antrag auf Einbürgerung wurde verworfen.\\nFall Sie sich weiterhin für eine Einbürgerung interessieren, stellen Sie bitte einen neuen Antrag.\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
+Bk0 f11 beanConfig '"{/emailSubject ""Einbürgerungsprozess beendet""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nIhr Antrag auf Einbürgerung wurde verworfen.\\nFalls Sie sich weiterhin für eine Einbürgerung interessieren, stellen Sie bitte einen neuen Antrag.\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
 Bk0 f11 type einbuergerung_Gruppe6.Data #txt
 Bk0 f11 timeout 0 #txt
 Bk0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

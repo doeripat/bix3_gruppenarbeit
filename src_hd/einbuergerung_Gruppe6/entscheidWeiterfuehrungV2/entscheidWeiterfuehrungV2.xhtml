@@ -8,30 +8,28 @@
 	xmlns:pm="http://primefaces.org/mobile">
 <h:body>
 	<ui:composition template="/layouts/basic.xhtml">
-		<ui:define name="title">entscheidWeiterfuehrung</ui:define>
+		<ui:define name="title">entscheidWeiterfuehrungV2</ui:define>
 		<ui:define name="content">
 			<h3>
 			Wollen Sie mit dem Einbürgerungsprozess fortfahren?
 			</h3>
 			
 			<h:form id="form">
-				<p:panelGrid>
+				<h:panelGrid columns="1">
 					<f:facet name="header">
-						<p:row>
-				            <p:message></p:message>
-				        </p:row>
+						<p:messages></p:messages>
 					</f:facet>
-					<p:row>
-						<p:selectOneRadio id="continue" value="#{data.request.Continue}" required="true">
-			            <f:selectItem itemLabel="Ja ich möchte fortfahren |" itemValue=true />
-			            <f:selectItem itemLabel="Nein ich möchte abbrechen" itemValue=false />
-			        </p:selectOneRadio>
-					</p:row>
+					<br/>
 					
-					<p:row>
-						<p:column><p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" /></p:column>
-					</p:row>
-				</p:panelGrid>
+						<p:selectOneRadio id="continue" value="#{data.request.Continue}" required="true">
+			            <f:selectItem itemLabel="Ja ich möchte fortfahren |" itemValue="true" />
+			            <f:selectItem itemLabel="Nein ich möchte abbrechen" itemValue="false" />
+			        </p:selectOneRadio>
+					
+					
+					<br />
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
+				</h:panelGrid>
 			</h:form>
 			
 		</ui:define>

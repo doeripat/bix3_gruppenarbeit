@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 20:07:58 CET 2015]
+[>Created: Wed Dec 09 11:18:28 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -45,13 +45,13 @@ En0 @PushWFArc f4 '' #zField
 En0 Bk1 S21 'Sub 2' #zField
 En0 @PushWFArc f11 '' #zField
 En0 Bk2 S31 'Sub 3' #zField
-En0 @PushWFArc f5 '' #zField
 En0 @TkArc f6 '' #zField
 En0 Bk4 S40 'Sub 4' #zField
 En0 @PushWFArc f13 '' #zField
 En0 Bk5 S51 'Sub 5' #zField
 En0 @PushWFArc f12 '' #zField
 En0 @PushWFArc f2 '' #zField
+En0 @PushWFArc f5 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -124,13 +124,13 @@ Bk5 @MessageFlowInP-0n messageIn messageIn #zField
 Bk5 @MessageFlowOutP-0n messageOut messageOut #zField
 Bk5 @TextInP .xml .xml #zField
 Bk5 @TextInP .responsibility .responsibility #zField
-Bk5 @RichDialog f25 '' #zField
 Bk5 @PushTrueWFInG-01 g0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
-Bk5 @PushWFArc f1 '' #zField
 Bk5 @RichDialog f2 '' #zField
 Bk5 @PushWFArc f3 '' #zField
+Bk5 @RichDialog f4 '' #zField
 Bk5 @PushWFArc f0 '' #zField
+Bk5 @PushWFArc f1 '' #zField
 >Proto Bk5 Bk4 BpmnUserTask #zField
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
@@ -234,7 +234,7 @@ En0 f32 actionTable 'out=in1;
 En0 f32 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f32 outLinks "TaskA.ivp" #txt
 En0 f32 caseData '#
-#Mon Dec 07 20:35:45 CET 2015
+#Wed Dec 09 11:17:23 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -262,7 +262,7 @@ type.code=
 type.name=
 ' #txt
 En0 f32 taskData '#
-#Mon Dec 07 20:35:45 CET 2015
+#Wed Dec 09 11:17:23 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -291,8 +291,8 @@ En0 f32 template "" #txt
 En0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Wait for 20 Days</name>
-        <nameStyle>16,7
+        <name>20 Tage warten</name>
+        <nameStyle>14,7
 </nameStyle>
     </language>
 </elementInfo>
@@ -330,13 +330,14 @@ En0 f10 type einbuergerung_Gruppe6.Data #txt
 En0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Keine Antwort</name>
-        <nameStyle>13,7
+        <name>Nach 60 Tagen
+keine Antwort</name>
+        <nameStyle>27,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 f10 1065 457 30 30 -37 17 #rect
+En0 f10 1065 457 30 30 21 -14 #rect
 En0 f10 @|ExceptionIcon #fIcon
 En0 f30 type einbuergerung_Gruppe6.Data #txt
 En0 f30 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
@@ -476,7 +477,6 @@ Korrektheit prüfen</name>
 ' #txt
 En0 S31 414 82 164 44 -60 -20 #rect
 En0 S31 @|BpmnUserTaskIcon #fIcon
-En0 f5 578 104 620 104 #arcP
 En0 f6 type einbuergerung_Gruppe6.Data #txt
 En0 f6 var in1 #txt
 En0 f6 704 126 704 392 #arcP
@@ -512,6 +512,7 @@ En0 f12 79 104 118 104 #arcP
 En0 f2 expr data #txt
 En0 f2 outCond ivp=="TaskA.ivp" #txt
 En0 f2 720 408 770 408 #arcP
+En0 f5 578 104 620 104 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -820,35 +821,6 @@ Bk4 f1 expr out #txt
 Bk4 f1 208 182 208 243 #arcP
 >Proto Bk3 0 0 32 24 18 0 #rect
 >Proto Bk3 @|BIcon #fIcon
-Bk5 f25 targetWindow NEW:card: #txt
-Bk5 f25 targetDisplay TOP #txt
-Bk5 f25 richDialogId einbuergerung_Gruppe6.entscheidWeiterfuehrung #txt
-Bk5 f25 startMethod start(einbuergerung_Gruppe6.Request) #txt
-Bk5 f25 type einbuergerung_Gruppe6.Data #txt
-Bk5 f25 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
-Bk5 f25 requestMappingAction 'param.request=in.request;
-' #txt
-Bk5 f25 responseActionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk5 f25 responseMappingAction 'out=in;
-out.request=result.request;
-' #txt
-Bk5 f25 windowConfiguration '* ' #txt
-Bk5 f25 isAsynch false #txt
-Bk5 f25 isInnerRd false #txt
-Bk5 f25 userContext '* ' #txt
-Bk5 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Entscheid
-Weiterführung</name>
-        <nameStyle>23,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Bk5 f25 376 138 112 44 -38 -16 #rect
-Bk5 f25 @|RichDialogIcon #fIcon
 Bk5 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -865,10 +837,8 @@ Bk5 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk5 g1 659 147 26 26 0 5 #rect
+Bk5 g1 563 147 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
-Bk5 f1 expr out #txt
-Bk5 f1 488 160 659 160 #arcP
 Bk5 f2 targetWindow NEW:card: #txt
 Bk5 f2 targetDisplay TOP #txt
 Bk5 f2 richDialogId einbuergerung_Gruppe6.Login #txt
@@ -898,8 +868,40 @@ Bk5 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Bk5 f2 184 138 112 44 -15 -8 #rect
 Bk5 f2 @|RichDialogIcon #fIcon
 Bk5 f3 77 160 184 160 #arcP
+Bk5 f4 targetWindow NEW:card: #txt
+Bk5 f4 targetDisplay TOP #txt
+Bk5 f4 richDialogId einbuergerung_Gruppe6.entscheidWeiterfuehrungV2 #txt
+Bk5 f4 startMethod start(einbuergerung_Gruppe6.Request) #txt
+Bk5 f4 type einbuergerung_Gruppe6.Data #txt
+Bk5 f4 requestActionDecl '<einbuergerung_Gruppe6.Request request> param;' #txt
+Bk5 f4 requestMappingAction 'param.request=in.request;
+' #txt
+Bk5 f4 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk5 f4 responseMappingAction 'out=in;
+out.request=result.request;
+' #txt
+Bk5 f4 windowConfiguration '* ' #txt
+Bk5 f4 isAsynch false #txt
+Bk5 f4 isInnerRd false #txt
+Bk5 f4 userContext '* ' #txt
+Bk5 f4 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Entscheid
+Weiterführung</name>
+        <nameStyle>23,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk5 f4 376 138 112 44 -38 -16 #rect
+Bk5 f4 @|RichDialogIcon #fIcon
 Bk5 f0 expr out #txt
 Bk5 f0 296 160 376 160 #arcP
+Bk5 f0 0 0.3393043446002303 0 0 #arcLabel
+Bk5 f1 expr out #txt
+Bk5 f1 488 160 563 160 #arcP
 >Proto Bk4 0 0 32 24 18 0 #rect
 >Proto Bk4 @|BIcon #fIcon
 En0 f18 out f21 tail #connect
@@ -919,8 +921,6 @@ En0 S21 g1 f4 tail #connect
 En0 f32 out f11 tail #connect
 En0 f11 head S31 g0 #connect
 En0 f6 head f7 in #connect
-En0 S31 g1 f5 tail #connect
-En0 f5 head S40 g0 #connect
 En0 S40 g1 f6 tail #connect
 En0 f13 head f18 in #connect
 En0 S51 g1 f13 tail #connect
@@ -928,6 +928,8 @@ En0 f0 mainOut f12 tail #connect
 En0 f12 head S11 g0 #connect
 En0 f7 out f2 tail #connect
 En0 f2 head S51 g0 #connect
+En0 S31 g1 f5 tail #connect
+En0 f5 head S40 g0 #connect
 Bk0 f11 mainOut f34 tail #connect
 Bk0 f34 head f3 mainIn #connect
 Bk0 f3 mainOut f29 tail #connect
@@ -954,10 +956,10 @@ Bk4 f0 head f12 mainIn #connect
 Bk4 f1 head g1 m #connect
 Bk4 f12 mainOut f1 tail #connect
 Bk4 0 0 416 320 0 #ivRect
-Bk5 f1 head g1 m #connect
-Bk5 f25 mainOut f1 tail #connect
 Bk5 g0 m f3 tail #connect
 Bk5 f3 head f2 mainIn #connect
 Bk5 f2 mainOut f0 tail #connect
-Bk5 f0 head f25 mainIn #connect
+Bk5 f0 head f4 mainIn #connect
+Bk5 f4 mainOut f1 tail #connect
+Bk5 f1 head g1 m #connect
 Bk5 0 0 728 376 0 #ivRect

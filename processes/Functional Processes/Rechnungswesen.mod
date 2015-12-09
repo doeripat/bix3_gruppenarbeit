@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 20:05:31 CET 2015]
+[>Created: Wed Dec 09 11:19:14 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -119,7 +119,7 @@ Rn0 f16 actionTable 'out=in1;
 Rn0 f16 outTypes "einbuergerung_Gruppe6.Data" #txt
 Rn0 f16 outLinks "TaskA.ivp" #txt
 Rn0 f16 caseData '#
-#Mon Dec 07 19:42:03 CET 2015
+#Wed Dec 09 11:19:01 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -147,7 +147,7 @@ type.code=
 type.name=
 ' #txt
 Rn0 f16 taskData '#
-#Mon Dec 07 19:42:03 CET 2015
+#Wed Dec 09 11:19:01 CET 2015
 TaskA.EXC=1505C5AC6EFDC232-f14-buffer
 TaskA.EXP=''5s''
 TaskA.EXPRI=2
@@ -180,9 +180,8 @@ Rn0 f16 template "" #txt
 Rn0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Zahlung erhalten
-30 Tage warten</name>
-        <nameStyle>31,7
+        <name>Zahlung erhalten?</name>
+        <nameStyle>17,7
 </nameStyle>
     </language>
 </elementInfo>
@@ -198,13 +197,14 @@ Rn0 f14 type einbuergerung_Gruppe6.Data #txt
 Rn0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Keine Zahlung</name>
-        <nameStyle>13,7
+        <name>Nach 30 Tagen
+keine Zahlung</name>
+        <nameStyle>27,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f14 185 169 30 30 -40 17 #rect
+Rn0 f14 185 169 30 30 -102 -14 #rect
 Rn0 f14 @|ExceptionIcon #fIcon
 Rn0 f22 type einbuergerung_Gruppe6.Data #txt
 Rn0 f22 344 80 32 32 0 16 #rect

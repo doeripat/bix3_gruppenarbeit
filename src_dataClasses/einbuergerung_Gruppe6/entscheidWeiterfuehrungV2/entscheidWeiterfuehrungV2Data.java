@@ -1,10 +1,10 @@
-package einbuergerung_Gruppe6.entscheidWeiterfuehrung;
+package einbuergerung_Gruppe6.entscheidWeiterfuehrungV2;
 
 /**
  */
 @SuppressWarnings("all")
-@javax.annotation.Generated(comments="This is the java file of the ivy data class entscheidWeiterfuehrungData", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
-public class entscheidWeiterfuehrungData extends ch.ivyteam.ivy.scripting.objects.CompositeObject
+@javax.annotation.Generated(comments="This is the java file of the ivy data class entscheidWeiterfuehrungV2Data", value={"ch.ivyteam.ivy.scripting.streamInOut.IvyScriptJavaClassBuilder"})
+public class entscheidWeiterfuehrungV2Data extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
   private static final long serialVersionUID = 2376867754906940047L;
