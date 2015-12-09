@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 21:30:51 CET 2015]
+[>Created: Wed Dec 09 13:16:36 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -66,8 +66,6 @@ dn0 @PushWFArc f41 '' #zField
 dn0 @CallSub f45 '' #zField
 dn0 @PushWFArc f46 '' #zField
 dn0 @TkArc f42 '' #zField
-dn0 @PushWFArc f28 '' #zField
-dn0 @TkArc f39 '' #zField
 dn0 @TaskSwitch f38 '' #zField
 dn0 Bk3 S60 'Send 6' #zField
 dn0 @PushWFArc f24 '' #zField
@@ -76,6 +74,7 @@ dn0 Bk4 S70 'Service 7' #zField
 dn0 @PushWFArc f2 '' #zField
 dn0 @PushWFArc f36 '' #zField
 dn0 @PushWFArc f3 '' #zField
+dn0 @PushWFArc f5 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -618,10 +617,9 @@ dn0 f29 type einbuergerung_Gruppe6.Data #txt
 dn0 f29 var in1 #txt
 dn0 f29 592 144 664 144 #arcP
 dn0 f29 0 0.2896357907497452 0 0 #arcLabel
-dn0 f32 696 354 576 160 #arcP
-dn0 f32 1 696 208 #addKink
-dn0 f32 2 576 208 #addKink
-dn0 f32 2 0.21121092218598994 0 0 #arcLabel
+dn0 f32 616 376 576 160 #arcP
+dn0 f32 1 576 376 #addKink
+dn0 f32 1 0.830973769039855 0 0 #arcLabel
 dn0 f20 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f20 actionTable 'out=in;
@@ -767,15 +765,15 @@ dn0 f40 type einbuergerung_Gruppe6.Data #txt
 dn0 f40 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Bestätigung nicht
+        <name>Bestaetigung nicht
 eingetroffen</name>
-        <nameStyle>18,7
+        <nameStyle>19,7
 12,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-dn0 f40 73 121 30 30 -47 17 #rect
+dn0 f40 73 121 30 30 -51 17 #rect
 dn0 f40 @|ExceptionIcon #fIcon
 dn0 S20 .resExport export #txt
 dn0 S20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -830,23 +828,12 @@ dn0 f42 400 176 472 144 #arcP
 dn0 f42 1 424 176 #addKink
 dn0 f42 2 424 144 #addKink
 dn0 f42 1 0.7682251756129785 0 0 #arcLabel
-dn0 f28 expr data #txt
-dn0 f28 outCond ivp=="TaskA.ivp" #txt
-dn0 f28 504 144 560 144 #arcP
-dn0 f28 0 0.7039731099576579 0 0 #arcLabel
-dn0 f39 type einbuergerung_Gruppe6.Data #txt
-dn0 f39 var in1 #txt
-dn0 f39 407 376 488 160 #arcP
-dn0 f39 1 488 376 #addKink
-dn0 f39 1 0.22629816776977746 0 0 #arcLabel
 dn0 f38 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
-dn0 f38 actionTable 'out=in1;
+dn0 f38 actionTable 'out=in2;
 ' #txt
-dn0 f38 outTypes "einbuergerung_Gruppe6.Data" #txt
-dn0 f38 outLinks "TaskA.ivp" #txt
 dn0 f38 caseData '#
-#Tue Dec 08 16:44:56 CET 2015
+#Wed Dec 09 13:16:13 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -874,7 +861,7 @@ type.code=
 type.name=
 ' #txt
 dn0 f38 taskData '#
-#Tue Dec 08 16:44:56 CET 2015
+#Wed Dec 09 13:16:13 CET 2015
 TaskA.EXC=1505C51442680211-f40-buffer
 TaskA.EXP=''480h''
 TaskA.EXPRI=2
@@ -882,7 +869,7 @@ TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
 TaskA.NAM=Ist Freigabequittung von Antrag Nr. <%\=in1.request.uniqueIdentifier%> angekommen
 TaskA.PRI=2
-TaskA.ROL=Everybody
+TaskA.ROL=Migrationsamt Pr\u00FCfer
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -890,17 +877,6 @@ dn0 f38 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
 TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Ist Freigabequittung von Antrag Nr. <%=in1.request.uniqueIdentifier%> angekommen"));
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''480h'').toNumber());
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryStartTaskElementPid("1505C51442680211-f40-buffer");
-taskDefinitions.add(taskDef);
 ' #txt
 dn0 f38 type einbuergerung_Gruppe6.Data #txt
 dn0 f38 template "" #txt
@@ -941,6 +917,7 @@ dn0 f36 1144 144 1200 144 #arcP
 dn0 f3 expr data #txt
 dn0 f3 outCond ivp=="TaskA.ivp" #txt
 dn0 f3 192 376 281 376 #arcP
+dn0 f5 344 352 568 152 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1377,10 +1354,6 @@ dn0 f31 head f20 mainIn #connect
 dn0 f20 mainOut f34 tail #connect
 dn0 f34 head f33 mainIn #connect
 dn0 f8 out f10 tail #connect
-dn0 U30 g1 f39 tail #connect
-dn0 f39 head f38 in #connect
-dn0 f38 out f28 tail #connect
-dn0 f28 head f30 in #connect
 dn0 S20 g1 f42 tail #connect
 dn0 f42 head f38 in #connect
 dn0 f40 mainOut f44 tail #connect
@@ -1399,6 +1372,8 @@ dn0 S70 g1 f36 tail #connect
 dn0 f36 head f6 mainIn #connect
 dn0 f11 out f3 tail #connect
 dn0 f3 head U30 g0 #connect
+dn0 U30 g1 f5 tail #connect
+dn0 f5 head f30 in #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect

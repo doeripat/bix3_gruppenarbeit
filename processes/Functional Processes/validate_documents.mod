@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 21:24:03 CET 2015]
+[>Created: Wed Dec 09 13:14:55 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -1301,7 +1301,7 @@ Bk1 f0 expr out #txt
 Bk1 f0 560 104 723 104 #arcP
 >Proto Bk1 0 0 32 24 18 0 #rect
 >Proto Bk1 @|BpmnUserTaskIcon #fIcon
-Bk2 f3 beanConfig '"{/emailSubject ""Leumund""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""ypmauron@gmail.com""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\n<%=in.mailString%>\\n\\nFolgende Login Daten können Sie für Antrag Nr. <%=in.request.uniqueIdentifier%> benutzen:\\n\\nBenutzername: <%=in.polizeibeamter.username%>\\nPasswort: <%=in.polizeibeamter.password%>\\n\\nVielen Dank im Voraus für die Zusammenarbeit.\\n\\nFreundliche Grüsse\\n\\nDas Migrationsamt""/emailAttachments * }"' #txt
+Bk2 f3 beanConfig '"{/emailSubject ""Leumund""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""polizei@sz.ch""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\n<%=in.mailString%>\\n\\nFolgende Login Daten können Sie für Antrag Nr. <%=in.request.uniqueIdentifier%> benutzen:\\n\\nBenutzername: <%=in.externeBehoerde.username%>\\nPasswort: <%=in.externeBehoerde.password%>\\n\\nVielen Dank im Voraus für die Zusammenarbeit.\\n\\nFreundliche Grüsse\\n\\nDas Migrationsamt""/emailAttachments * }"' #txt
 Bk2 f3 type einbuergerung_Gruppe6.Data #txt
 Bk2 f3 timeout 0 #txt
 Bk2 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

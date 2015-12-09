@@ -103,7 +103,7 @@
 					</p:row>
 					<br />
 					<p:row>
-					<p:outputLabel  value="Nachweis Finanzielle Verhältnisse hochladen" style="font-size: 16pt;"/>			
+					<p:outputLabel  value="Wohnsitzbestätigungen hochladen" style="font-size: 16pt;"/>			
 					</p:row>
 					<p:row>
 					<p:fileUpload mode="advanced" label="PDF-Datei wählen" auto="true" fileUploadListener="#{logic.fileUploadWohnsitz}" update="form" allowTypes="/(.|\/)(pdf)$/" invalidFileMessage="Nur PDF-Dateien sind erlaubt" />
@@ -117,7 +117,7 @@
 					</p:row>
 					<br />
 					<p:row>
-					<p:commandButton actionListener="#{logic.close}" value="Proceed" update="form" icon="ui-icon-check" />
+					<p:commandButton actionListener="#{logic.close}" value="Speichern" update="form" icon="ui-icon-check" />
 					</p:row>
 					<br />
 					</p:column>
