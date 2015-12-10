@@ -8,8 +8,6 @@ filePath String #field
 filePath PERSISTENT #fieldModifier
 fileEnding String #field
 fileEnding PERSISTENT #fieldModifier
-comment String #field
-comment PERSISTENT #fieldModifier
 dataUpload java.util.Date #field
 dataUpload PERSISTENT #fieldModifier
 isComplete Boolean #field

@@ -31,4 +31,7 @@
     <role>
         <identifier>Dept des Innern Kt SZ</identifier>
     </role>
+    <role>
+        <identifier>Polizei Mitarbeiter</identifier>
+    </role>
 </role>

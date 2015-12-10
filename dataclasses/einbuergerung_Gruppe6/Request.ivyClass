@@ -12,12 +12,8 @@ documents List<einbuergerung_Gruppe6.Document> #field
 documents PERSISTENT #fieldModifier
 meeting DateTime #field
 meeting PERSISTENT #fieldModifier
-username String #field
-username PERSISTENT #fieldModifier
 password String #field
 password PERSISTENT #fieldModifier
-mobilePhone String #field
-mobilePhone PERSISTENT #fieldModifier
 phone String #field
 phone PERSISTENT #fieldModifier
 address String #field
@@ -34,8 +30,6 @@ publicationDate DateTime #field
 publicationDate PERSISTENT #fieldModifier
 endObjectionPeriod DateTime #field
 endObjectionPeriod PERSISTENT #fieldModifier
-document einbuergerung_Gruppe6.Document #field
-document PERSISTENT #fieldModifier
 commentOnRequest String #field
 commentOnRequest PERSISTENT #fieldModifier
 Continue Boolean #field

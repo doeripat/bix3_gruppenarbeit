@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 16:38:37 CET 2015]
+[>Created: Thu Dec 10 15:31:51 CET 2015]
 1515FB6E69CE3927 3.17 #module
 >Proto >Proto Collection #zClass
 Ks0 KonsolidierterEntscheidFaellenProcess Big #zClass
@@ -93,7 +93,7 @@ Ks0 f6 disableUIEvents false #txt
 Ks0 f6 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodEvent = event as ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent;
 <einbuergerung_Gruppe6.Document document> param = methodEvent.getInputArguments();
 ' #txt
-Ks0 f6 inParameterMapAction 'out.request.document=param.document;
+Ks0 f6 inParameterMapAction 'out.document=param.document;
 ' #txt
 Ks0 f6 outParameterDecl '<> result;
 ' #txt
@@ -124,13 +124,13 @@ import javax.faces.bean.ManagedBean;
 import org.primefaces.model.DefaultStreamedContent;
 import org.primefaces.model.StreamedContent;
 // Das ContentObject mit dem gewünschten Inhalt wird gesucht
-IContentObjectValue CMSObjectValue = ivy.cms.findContentObjectValue(in.request.document.filePath,null);
+IContentObjectValue CMSObjectValue = ivy.cms.findContentObjectValue(in.document.filePath,null);
 // Ein InputStream wird aus dem Inhalt des ContentObjects erstellt
 InputStream stream;
 stream = CMSObjectValue.getContentAsBinaryStream();
 // Der korrekte Mime-Type wird aus der Dateiendung abgeleitet
 String mimeType;
-String type = in.request.document.fileEnding;
+String type = in.document.fileEnding;
 if(type=="pdf") {
   mimeType="application/pdf";
   } else if(type=="png") {
@@ -143,7 +143,7 @@ if(type=="pdf") {
 // Der Stream, der Mime-Type und der Dateiname werden als sogenannter StreamedContent erstellt
 for(Document doc : in.request.documents)
 {
-	if (doc.filePath == in.request.document.filePath)
+	if (doc.filePath == in.document.filePath)
 	{
 		doc.fileStreamedContent = new DefaultStreamedContent(stream, mimeType, doc.fileName+"."+doc.fileEnding);
 	}

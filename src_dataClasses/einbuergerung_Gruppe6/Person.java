@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -7891193134897383386L;
+  private static final long serialVersionUID = 6883137509231901768L;
 
   private java.lang.String firstname;
 
@@ -189,26 +189,6 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     approved = _approved;
   }
 
-  private einbuergerung_Gruppe6.Document disposal;
-
-  /**
-   * Gets the field disposal.
-   * @return the value of the field disposal; may be null.
-   */
-  public einbuergerung_Gruppe6.Document getDisposal()
-  {
-    return disposal;
-  }
-
-  /**
-   * Sets the field disposal.
-   * @param _disposal the new value of the field disposal.
-   */
-  public void setDisposal(einbuergerung_Gruppe6.Document _disposal)
-  {
-    disposal = _disposal;
-  }
-
   private java.lang.String notes;
 
   /**
@@ -347,6 +327,26 @@ public class Person extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setMaritalStatus(java.lang.String _maritalStatus)
   {
     maritalStatus = _maritalStatus;
+  }
+
+  private einbuergerung_Gruppe6.Document disposal;
+
+  /**
+   * Gets the field disposal.
+   * @return the value of the field disposal; may be null.
+   */
+  public einbuergerung_Gruppe6.Document getDisposal()
+  {
+    return disposal;
+  }
+
+  /**
+   * Sets the field disposal.
+   * @param _disposal the new value of the field disposal.
+   */
+  public void setDisposal(einbuergerung_Gruppe6.Document _disposal)
+  {
+    disposal = _disposal;
   }
 
 }

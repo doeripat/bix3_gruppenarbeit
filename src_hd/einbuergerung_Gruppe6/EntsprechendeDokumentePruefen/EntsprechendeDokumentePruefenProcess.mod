@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 15:47:02 CET 2015]
+[>Created: Thu Dec 10 15:27:25 CET 2015]
 1515EC3ED5F55D48 3.17 #module
 >Proto >Proto Collection #zClass
 Es0 EntsprechendeDokumentePruefenProcess Big #zClass
@@ -134,7 +134,7 @@ if(type=="pdf") {
 // Der Stream, der Mime-Type und der Dateiname werden als sogenannter StreamedContent erstellt
 for(Document doc : in.request.documents)
 {
-	if (doc.filePath == in.request.document.filePath)
+	if (doc.filePath == in.document.filePath)
 	{
 		doc.fileStreamedContent = new DefaultStreamedContent(stream, mimeType, doc.fileName+"."+doc.fileEnding);
 	}

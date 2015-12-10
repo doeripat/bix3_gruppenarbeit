@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -9222383028356790310L;
+  private static final long serialVersionUID = 2174572883516005513L;
 
   private java.lang.String fileName;
 
@@ -87,26 +87,6 @@ public class Document extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setFileEnding(java.lang.String _fileEnding)
   {
     fileEnding = _fileEnding;
-  }
-
-  private java.lang.String comment;
-
-  /**
-   * Gets the field comment.
-   * @return the value of the field comment; may be null.
-   */
-  public java.lang.String getComment()
-  {
-    return comment;
-  }
-
-  /**
-   * Sets the field comment.
-   * @param _comment the new value of the field comment.
-   */
-  public void setComment(java.lang.String _comment)
-  {
-    comment = _comment;
   }
 
   private java.util.Date dataUpload;

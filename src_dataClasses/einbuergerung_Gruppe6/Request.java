@@ -7,7 +7,7 @@ package einbuergerung_Gruppe6;
 public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
 {
   /** SerialVersionUID */
-  private static final long serialVersionUID = -8689991578731600922L;
+  private static final long serialVersionUID = -5168732621845275831L;
 
   private java.lang.String uniqueIdentifier;
 
@@ -129,26 +129,6 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
     meeting = _meeting;
   }
 
-  private java.lang.String username;
-
-  /**
-   * Gets the field username.
-   * @return the value of the field username; may be null.
-   */
-  public java.lang.String getUsername()
-  {
-    return username;
-  }
-
-  /**
-   * Sets the field username.
-   * @param _username the new value of the field username.
-   */
-  public void setUsername(java.lang.String _username)
-  {
-    username = _username;
-  }
-
   private java.lang.String password;
 
   /**
@@ -167,26 +147,6 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setPassword(java.lang.String _password)
   {
     password = _password;
-  }
-
-  private java.lang.String mobilePhone;
-
-  /**
-   * Gets the field mobilePhone.
-   * @return the value of the field mobilePhone; may be null.
-   */
-  public java.lang.String getMobilePhone()
-  {
-    return mobilePhone;
-  }
-
-  /**
-   * Sets the field mobilePhone.
-   * @param _mobilePhone the new value of the field mobilePhone.
-   */
-  public void setMobilePhone(java.lang.String _mobilePhone)
-  {
-    mobilePhone = _mobilePhone;
   }
 
   private java.lang.String phone;
@@ -347,26 +307,6 @@ public class Request extends ch.ivyteam.ivy.scripting.objects.CompositeObject
   public void setEndObjectionPeriod(ch.ivyteam.ivy.scripting.objects.DateTime _endObjectionPeriod)
   {
     endObjectionPeriod = _endObjectionPeriod;
-  }
-
-  private einbuergerung_Gruppe6.Document document;
-
-  /**
-   * Gets the field document.
-   * @return the value of the field document; may be null.
-   */
-  public einbuergerung_Gruppe6.Document getDocument()
-  {
-    return document;
-  }
-
-  /**
-   * Sets the field document.
-   * @param _document the new value of the field document.
-   */
-  public void setDocument(einbuergerung_Gruppe6.Document _document)
-  {
-    document = _document;
   }
 
   private java.lang.String commentOnRequest;

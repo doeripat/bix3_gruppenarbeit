@@ -3,3 +3,5 @@ einbuergerung_Gruppe6.KonsolidierterEntscheidFaellen #namespace
 request einbuergerung_Gruppe6.Request #field
 person einbuergerung_Gruppe6.Person #field
 person PERSISTENT #fieldModifier
+document einbuergerung_Gruppe6.Document #field
+document PERSISTENT #fieldModifier

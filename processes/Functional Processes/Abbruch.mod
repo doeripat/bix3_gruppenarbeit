@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 11:21:57 CET 2015]
+[>Created: Thu Dec 10 16:39:22 CET 2015]
 15075B42E89EFB47 3.17 #module
 >Proto >Proto Collection #zClass
 Ah0 Abbruch Big #zClass
@@ -281,7 +281,7 @@ Bk0 f17 actionTable 'out=in;
 ' #txt
 Bk0 f17 dbSql '<?xml version=""1.0"" standalone=""no""?>
 <!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
-<INSERT><Table name=''Document''/><Value column=''link''><AnyExpression>in.document.filePath</AnyExpression></Value><Value column=''comment''><AnyExpression>in.document.comment</AnyExpression></Value><Value column=''type''><AnyExpression>in.document.fileType</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value></INSERT>' #txt
+<INSERT><Table name=''Document''/><Value column=''link''><AnyExpression>in.document.filePath</AnyExpression></Value><Value column=''type''><AnyExpression>in.document.fileType</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value></INSERT>' #txt
 Bk0 f17 dbUrl AmazonDB #txt
 Bk0 f17 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Bk0 f17 lotSize 2147483647 #txt

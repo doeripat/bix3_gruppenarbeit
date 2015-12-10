@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 21:52:18 CET 2015]
+[>Created: Thu Dec 10 15:25:21 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -126,8 +126,6 @@ Bk1 @PushTrueWFInG-01 g0 '' #zField
 Bk1 @PushTrueWFOutG-01 g1 '' #zField
 Bk1 @RichDialog f0 '' #zField
 Bk1 @PushWFArc f4 '' #zField
-Bk1 @StartRequest f2 '' #zField
-Bk1 @PushWFArc f3 '' #zField
 Bk1 @RichDialog f5 '' #zField
 Bk1 @PushWFArc f1 '' #zField
 Bk1 @PushWFArc f6 '' #zField
@@ -1168,87 +1166,6 @@ Bk1 f0 312 234 144 44 -51 -16 #rect
 Bk1 f0 @|RichDialogIcon #fIcon
 Bk1 f4 expr out #txt
 Bk1 f4 456 256 523 256 #arcP
-Bk1 f2 outLink startgaggi.ivp #txt
-Bk1 f2 type einbuergerung_Gruppe6.Data #txt
-Bk1 f2 inParamDecl '<> param;' #txt
-Bk1 f2 inParamTable 'out.request.address="asdfsadf";
-out.request.city="asdfsadf";
-out.request.email="asdfsadf";
-out.request.phone="asdfsadf";
-out.request.postcode="asdfsadf";
-out.request.publicationData="asdfsadf";
-out.request.status="asdfsadf";
-out.request.uniqueIdentifier="asdfsadf";
-out.request.username="asdfsadf";
-' #txt
-Bk1 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk1 f2 guid 15153C0E26F619C0 #txt
-Bk1 f2 requestEnabled true #txt
-Bk1 f2 triggerEnabled false #txt
-Bk1 f2 callSignature startgaggi() #txt
-Bk1 f2 persist false #txt
-Bk1 f2 taskData '#
-#Tue Dec 08 17:18:42 CET 2015
-TaskTriggered.ROL=Everybody
-TaskTriggered.EXTYPE=0
-TaskTriggered.EXPRI=2
-TaskTriggered.TYPE=0
-TaskTriggered.PRI=2
-TaskTriggered.EXROL=Everybody
-' #txt
-Bk1 f2 caseData '#
-#Tue Dec 08 17:18:42 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-Bk1 f2 showInStartList 1 #txt
-Bk1 f2 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
-ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
-import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskUpdDef.setExpiryActivator("Everybody");
-taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-engine.updateCurrentTask(taskUpdDef);
-' #txt
-Bk1 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>startgaggi.ivp</name>
-        <nameStyle>14,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Bk1 f2 @C|.responsibility Everybody #txt
-Bk1 f2 145 129 30 30 -36 17 #rect
-Bk1 f2 @|StartRequestIcon #fIcon
-Bk1 f3 expr out #txt
-Bk1 f3 173 150 384 234 #arcP
 Bk1 f5 targetWindow NEW:card: #txt
 Bk1 f5 targetDisplay TOP #txt
 Bk1 f5 richDialogId einbuergerung_Gruppe6.Login #txt
@@ -1476,8 +1393,6 @@ Bk8 f3 head f1 mainIn #connect
 Bk8 0 0 976 488 0 #ivRect
 Bk1 f0 mainOut f4 tail #connect
 Bk1 f4 head g1 m #connect
-Bk1 f2 mainOut f3 tail #connect
-Bk1 f3 head f0 mainIn #connect
 Bk1 g0 m f1 tail #connect
 Bk1 f1 head f5 mainIn #connect
 Bk1 f5 mainOut f6 tail #connect

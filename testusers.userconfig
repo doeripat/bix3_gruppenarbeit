@@ -21,4 +21,8 @@
         <username>Fredi Dep des Innern</username>
         <role>Dept des Innern Kt SZ</role>
     </user>
+    <user>
+        <username>Hans Peter Unterfelder</username>
+        <role>Polizei Mitarbeiter</role>
+    </user>
 </userConfig>

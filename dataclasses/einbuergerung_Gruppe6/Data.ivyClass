@@ -14,8 +14,6 @@ loopIterations Number #field
 loopIterations PERSISTENT #fieldModifier
 document einbuergerung_Gruppe6.Document #field
 document PERSISTENT #fieldModifier
-tmpDocumentList List<einbuergerung_Gruppe6.Document> #field
-tmpDocumentList PERSISTENT #fieldModifier
 mailString String #field
 mailString PERSISTENT #fieldModifier
 externeBehoerde einbuergerung_Gruppe6.ExterneBehoerde #field
@@ -24,3 +22,5 @@ allBoolean Boolean #field
 allBoolean PERSISTENT #fieldModifier
 objection einbuergerung_Gruppe6.Objection #field
 objection PERSISTENT #fieldModifier
+tmpDocumentList List<einbuergerung_Gruppe6.Document> #field
+tmpDocumentList PERSISTENT #fieldModifier

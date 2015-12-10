@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 15:07:16 CET 2015]
+[>Created: Thu Dec 10 16:46:18 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -706,7 +706,7 @@ document.fileEnding = extension;
 document.fileType = "Verfuegung";
 document.filePath = cov.getContentObject().getUri();
 
-//out.request.documents.add(document);' #txt
+out.request.documents.add(document);' #txt
 Bk2 f8 type einbuergerung_Gruppe6.Data #txt
 Bk2 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -770,7 +770,6 @@ Bk2 f11 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 Bk2 f11 responseMappingAction 'out=in;
 out.document.fileOperationMesage=result.fileOperationMessage;
 out.document.filePath=result.fileOperationMessage.files.get(0).getAbsolutePath();
-out.person.disposal.fileOperationMesage=result.fileOperationMessage;
 ' #txt
 Bk2 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -1052,7 +1051,7 @@ Bk5 f17 actionTable 'out=in;
 ' #txt
 Bk5 f17 dbSql '<?xml version=""1.0"" standalone=""no""?>
 <!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
-<INSERT><Table name=''Document''/><Value column=''link''><AnyExpression>in.document.filePath</AnyExpression></Value><Value column=''comment''><AnyExpression>in.document.comment</AnyExpression></Value><Value column=''type''><AnyExpression>in.document.fileType</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value></INSERT>' #txt
+<INSERT><Table name=''Document''/><Value column=''link''><AnyExpression>in.document.filePath</AnyExpression></Value><Value column=''type''><AnyExpression>in.document.fileType</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value></INSERT>' #txt
 Bk5 f17 dbUrl AmazonDB #txt
 Bk5 f17 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Bk5 f17 lotSize 2147483647 #txt

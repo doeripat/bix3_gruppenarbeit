@@ -1,6 +1,0 @@
-Meeting #class
-einbuergerung_Gruppe6 #namespace
-Date DateTime #field
-Date PERSISTENT #fieldModifier
-isCompleted Boolean #field
-isCompleted PERSISTENT #fieldModifier
