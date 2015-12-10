@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 16:46:18 CET 2015]
+[>Created: Thu Dec 10 17:20:35 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -35,16 +35,16 @@ En0 @PushWFArc f5 '' #zField
 En0 Bk1 S30 'Send 3' #zField
 En0 Bk0 U10 'User 1' #zField
 En0 @PushWFArc f3 '' #zField
-En0 @TaskSwitch f17 '' #zField
-En0 @PushWFArc f8 '' #zField
 En0 @PushWFArc f12 '' #zField
-En0 @TkArc f4 '' #zField
 En0 @StartSub f0 '' #zField
-En0 @TkArc f11 '' #zField
 En0 @Alternative f15 '' #zField
 En0 @PushWFArc f16 '' #zField
 En0 @PushWFArc f6 '' #zField
 En0 @PushWFArc f10 '' #zField
+En0 @PushWFArc f8 '' #zField
+En0 @InfoButton f11 '' #zField
+En0 @AnnotationArc f14 '' #zField
+En0 @TkArc f4 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -319,80 +319,10 @@ En0 U10 1056 250 144 44 -51 -16 #rect
 En0 U10 @|BpmnUserTaskIcon #fIcon
 En0 U10 g0 -72 -2 #fFoot
 En0 f3 616 102 648 104 #arcP
-En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-En0 f17 actionTable 'out=in1;
-' #txt
-En0 f17 outTypes "einbuergerung_Gruppe6.Data" #txt
-En0 f17 outLinks "TaskA.ivp" #txt
-En0 f17 caseData '#
-#Tue Dec 08 19:22:12 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-En0 f17 taskData '#
-#Tue Dec 08 19:22:12 CET 2015
-TaskA.EXPRI=2
-TaskA.EXROL=Everybody
-TaskA.EXTYPE=0
-TaskA.NAM=Bitte alle Dokumente zu Gesuch <%\=in1.request.uniqueIdentifier%> downloaden
-TaskA.PRI=2
-TaskA.ROL=Dept des Innern Kt SZ
-TaskA.SKIP_TASK_LIST=false
-TaskA.TYPE=0
-' #txt
-En0 f17 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Bitte alle Dokumente zu Gesuch <%=in1.request.uniqueIdentifier%> downloaden"));
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Dept des Innern Kt SZ");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDefinitions.add(taskDef);
-' #txt
-En0 f17 type einbuergerung_Gruppe6.Data #txt
-En0 f17 template "" #txt
-En0 f17 1008 256 32 32 0 16 #rect
-En0 f17 @|TaskSwitchIcon #fIcon
-En0 f8 expr data #txt
-En0 f8 outCond ivp=="TaskA.ivp" #txt
-En0 f8 1039 271 1056 270 #arcP
 En0 f12 expr in #txt
 En0 f12 896 120 944 152 #arcP
 En0 f12 1 896 152 #addKink
 En0 f12 1 0.9110086358710967 0 0 #arcLabel
-En0 f4 expr out #txt
-En0 f4 type einbuergerung_Gruppe6.Data #txt
-En0 f4 var in1 #txt
-En0 f4 87 104 120 104 #arcP
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -415,9 +345,6 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 En0 f0 57 89 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
-En0 f11 type einbuergerung_Gruppe6.Data #txt
-En0 f11 var in1 #txt
-En0 f11 1024 174 1024 256 #arcP
 En0 f15 type einbuergerung_Gruppe6.Data #txt
 En0 f15 1200 88 32 32 0 16 #rect
 En0 f15 @|AlternativeIcon #fIcon
@@ -440,6 +367,28 @@ En0 f6 0 0.0378619153674833 0 -9 #arcLabel
 En0 f10 1200 272 1216 120 #arcP
 En0 f10 1 1216 272 #addKink
 En0 f10 1 0.11672345752157963 0 0 #arcLabel
+En0 f8 1024 174 1056 270 #arcP
+En0 f8 1 1024 270 #addKink
+En0 f8 0 0.6635838728763408 0 0 #arcLabel
+En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Hier gehört ein Task Element
+hin.  Dieses generiert jedoch
+ein Out of Boundery Exception</name>
+        <nameStyle>88
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f11 768 250 176 60 -81 -24 #rect
+En0 f11 @|IBIcon #fIcon
+En0 f11 -14336|-14336|-16777216 #nodeStyle
+En0 f14 944 250 1056 272 #arcP
+En0 f4 expr out #txt
+En0 f4 type einbuergerung_Gruppe6.Data #txt
+En0 f4 var in1 #txt
+En0 f4 87 104 120 104 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -763,7 +712,7 @@ Bk2 f11 requestActionDecl '<List<ch.ivyteam.ivy.addons.docfactory.TemplateMergeF
 Bk2 f11 requestMappingAction 'param.listOfTemplateMergeFields=in.document.templateMergeFields;
 param.optionalLetterName=in.document.fileName;
 param.optionalOutputFormat=in.document.fileType;
-param.templatePath="C:/Axonivy_Workspace/Einbuergerung/cms/DocumentTemplates/template_verfuegung/1515D4DE5E377A7A.doc";
+param.templatePath=in.document.templatePath;
 ' #txt
 Bk2 f11 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -1156,8 +1105,10 @@ Bk5 f28 actionDecl 'einbuergerung_Gruppe6.Data out;
 Bk5 f28 actionTable 'out=in;
 out.loopCount=0;
 out.loopIterations=in.request.objections.size();
-out.objection=in.request.objections.get(0);
 ' #txt
+Bk5 f28 actionCode 'if(in.request.objections.size()!=0){
+	out.objection=in.request.objections.get(0);
+}' #txt
 Bk5 f28 type einbuergerung_Gruppe6.Data #txt
 Bk5 f28 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -1317,13 +1268,7 @@ En0 S41 g1 f5 tail #connect
 En0 f5 head f2 in #connect
 En0 S21 g1 f3 tail #connect
 En0 f3 head S41 g0 #connect
-En0 f17 out f8 tail #connect
-En0 f8 head U10 g0 #connect
 En0 f12 head S30 g0 #connect
-En0 f0 mainOut f4 tail #connect
-En0 f4 head f13 in #connect
-En0 S30 g2 f11 tail #connect
-En0 f11 head f17 in #connect
 En0 f2 out f16 tail #connect
 En0 f16 head f15 in #connect
 En0 f2 out f12 tail #connect
@@ -1331,6 +1276,12 @@ En0 f15 out f6 tail #connect
 En0 f6 head f1 mainIn #connect
 En0 U10 g1 f10 tail #connect
 En0 f10 head f15 in #connect
+En0 S30 g2 f8 tail #connect
+En0 f8 head U10 g0 #connect
+En0 f11 ao f14 tail #connect
+En0 f14 head U10 ai #connect
+En0 f0 mainOut f4 tail #connect
+En0 f4 head f13 in #connect
 Bk2 f21 head f22 mainIn #connect
 Bk2 f17 mainOut f23 tail #connect
 Bk2 f23 head f15 in #connect

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 11:18:28 CET 2015]
+[>Created: Thu Dec 10 17:08:05 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -72,7 +72,6 @@ Bk0 @PushTrueWFInG-01 g0 '' #zField
 Bk0 @PushWFArc f0 '' #zField
 Bk0 @PushTrueWFOutG-01 g1 '' #zField
 Bk0 @PushWFArc f1 '' #zField
-Bk0 @PushTrueWFInG-01 g2 '' #zField
 >Proto Bk0 Bk0 BpmnServiceTask #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
@@ -556,8 +555,8 @@ for(int i=0; i<in.request.personList.size();i++){
 	s=s+"Person "+(i+1)+"\n";
 	s=s+"Name: "+person.firstname+" "+person.lastname+"\n";
 	s=s+"Geburtsdatum: "+person.birthday.toString()+"\n";
-	s=s+"Nationalität: "+in.person.nationality+"\n";
-	s=s+"Anzahl Jahre in der Schweiz: "+in.person.yearCount+"\n\n";	
+	s=s+"Nationalität: "+person.nationality+"\n";
+	s=s+"Anzahl Jahre in der Schweiz: "+person.yearCount+"\n\n";	
 	}
 	s=s+"Adresse: "+in.request.address+", "+in.request.postcode+" "+in.request.city;
 	out.request.publicationData=s;
@@ -674,8 +673,6 @@ Bk0 g1 819 147 26 26 0 5 #rect
 Bk0 g1 @|MOGIcon #fIcon
 Bk0 f1 expr out #txt
 Bk0 f1 752 160 819 160 #arcP
-Bk0 g2 339 51 26 26 0 5 #rect
-Bk0 g2 @|MIGIcon #fIcon
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 Bk1 f22 targetWindow NEW:card: #txt
