@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 22:24:13 CET 2015]
+[>Created: Thu Dec 10 13:16:52 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -9,10 +9,10 @@ Bk0 BpmnUserTask Big #zClass
 Bk0 B #cInfo
 Bk2 BpmnUserTask Big #zClass
 Bk2 B #cInfo
-Bk4 BpmnScriptTask Big #zClass
-Bk4 B #cInfo
 Bk5 BpmnSendTask Big #zClass
 Bk5 B #cInfo
+Bk1 BpmnServiceTask Big #zClass
+Bk1 B #cInfo
 An0 @TextInP .resExport .resExport #zField
 An0 @TextInP .type .type #zField
 An0 @TextInP .processKind .processKind #zField
@@ -33,10 +33,10 @@ An0 @PushWFArc f2 '' #zField
 An0 @PushWFArc f6 '' #zField
 An0 Bk2 S31 'Sub 3' #zField
 An0 @PushWFArc f7 '' #zField
-An0 Bk4 S41 'Sub 4' #zField
 An0 @PushWFArc f3 '' #zField
 An0 @TkArc f4 '' #zField
 An0 Bk5 S21 'Sub 2' #zField
+An0 Bk1 S40 'Sub 4' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -83,21 +83,7 @@ Bk2 @PushTrueWFOutG-01 g1 '' #zField
 Bk2 @PushWFArc f1 '' #zField
 Bk2 @StartRequest f2 '' #zField
 Bk2 @PushWFArc f3 '' #zField
->Proto Bk2 Bk2 BpmnUserTask #zField
-Bk4 @TextInP .resExport .resExport #zField
-Bk4 @TextInP .type .type #zField
-Bk4 @TextInP .processKind .processKind #zField
-Bk4 @AnnotationInP-0n ai ai #zField
-Bk4 @MessageFlowInP-0n messageIn messageIn #zField
-Bk4 @MessageFlowOutP-0n messageOut messageOut #zField
-Bk4 @TextInP .xml .xml #zField
-Bk4 @TextInP .responsibility .responsibility #zField
-Bk4 @GridStep f3 '' #zField
-Bk4 @PushTrueWFInG-01 g0 '' #zField
-Bk4 @PushWFArc f0 '' #zField
-Bk4 @PushTrueWFOutG-01 g1 '' #zField
-Bk4 @PushWFArc f1 '' #zField
->Proto Bk4 Bk3 BpmnScriptTask #zField
+>Proto Bk2 Bk1 BpmnUserTask #zField
 Bk5 @TextInP .resExport .resExport #zField
 Bk5 @TextInP .type .type #zField
 Bk5 @TextInP .processKind .processKind #zField
@@ -111,7 +97,21 @@ Bk5 @PushTrueWFInG-01 g0 '' #zField
 Bk5 @PushWFArc f0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
 Bk5 @PushWFArc f1 '' #zField
->Proto Bk5 Bk1 BpmnSendTask #zField
+>Proto Bk5 Bk3 BpmnSendTask #zField
+Bk1 @TextInP .resExport .resExport #zField
+Bk1 @TextInP .type .type #zField
+Bk1 @TextInP .processKind .processKind #zField
+Bk1 @AnnotationInP-0n ai ai #zField
+Bk1 @MessageFlowInP-0n messageIn messageIn #zField
+Bk1 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk1 @TextInP .xml .xml #zField
+Bk1 @TextInP .responsibility .responsibility #zField
+Bk1 @GridStep f3 '' #zField
+Bk1 @PushTrueWFInG-01 g0 '' #zField
+Bk1 @PushWFArc f0 '' #zField
+Bk1 @PushTrueWFOutG-01 g1 '' #zField
+Bk1 @PushWFArc f1 '' #zField
+>Proto Bk1 Bk4 BpmnServiceTask #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -328,19 +328,6 @@ inkl. Status Update</name>
 An0 S31 632 482 224 60 -85 -28 #rect
 An0 S31 @|BpmnUserTaskIcon #fIcon
 An0 f7 336 202 336 118 #arcP
-An0 S41 .resExport export #txt
-An0 S41 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>Unique Identifier &amp;
-Passwort generieren</name>
-        <nameStyle>39,5,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 S41 248 74 176 44 -57 -20 #rect
-An0 S41 @|BpmnScriptTaskIcon #fIcon
 An0 f3 424 96 474 96 #arcP
 An0 f4 type einbuergerung_Gruppe6.Data #txt
 An0 f4 var in1 #txt
@@ -358,6 +345,19 @@ an Antragsteller senden</name>
 ' #txt
 An0 S21 474 74 204 44 -72 -20 #rect
 An0 S21 @|BpmnSendTaskIcon #fIcon
+An0 S40 .resExport export #txt
+An0 S40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>Unique Identifier &amp;
+Passwort generieren</name>
+        <nameStyle>39,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 S40 248 74 176 44 -57 -20 #rect
+An0 S40 @|BpmnServiceTaskIcon #fIcon
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -660,49 +660,8 @@ Bk2 f2 145 305 30 30 -21 17 #rect
 Bk2 f2 @|StartRequestIcon #fIcon
 Bk2 f3 expr out #txt
 Bk2 f3 162 305 192 182 #arcP
->Proto Bk2 0 0 32 24 18 0 #rect
->Proto Bk2 @|BIcon #fIcon
-Bk4 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk4 f3 actionTable 'out=in;
-out.request.password=einbuergerung_Gruppe6.CodingHelper.generatePassword();
-out.request.uniqueIdentifier=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
-' #txt
-Bk4 f3 type einbuergerung_Gruppe6.Data #txt
-Bk4 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>UID &amp; Passwort generieren</name>
-        <nameStyle>25,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Bk4 f3 144 138 160 44 -75 -8 #rect
-Bk4 f3 @|StepIcon #fIcon
-Bk4 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>in 1</name>
-    </language>
-</elementInfo>
-' #txt
-Bk4 g0 51 147 26 26 0 5 #rect
-Bk4 g0 @|MIGIcon #fIcon
-Bk4 f0 77 160 144 160 #arcP
-Bk4 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>out 1</name>
-    </language>
-</elementInfo>
-' #txt
-Bk4 g1 371 147 26 26 0 5 #rect
-Bk4 g1 @|MOGIcon #fIcon
-Bk4 f1 expr out #txt
-Bk4 f1 304 160 371 160 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BIcon #fIcon
+>Proto Bk1 0 0 32 24 18 0 #rect
+>Proto Bk1 @|BIcon #fIcon
 Bk5 f5 beanConfig '"{/emailSubject ""Ihre Zugangsdaten für den Einbürgerungsprozess - Gesuch: <%=in.tmpDocumentList%>""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBei Ihrem Besuch bei der Kanzlei haben Sie sich über die  Einbürgerung informiert.\\nFalls Sie den Einbürgerungsprozess starten möchten melden Sie sich bitte auf unserer Homepage mit folgenden Logindaten an:\\n\\nGesuch: <%=in.request.uniqueIdentifier%>\\nBenutzername: <%=in.request.email%>\\nPasswort: <%=in.request.password%>\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
 Bk5 f5 type einbuergerung_Gruppe6.Data #txt
 Bk5 f5 timeout 0 #txt
@@ -740,8 +699,49 @@ Bk5 g1 363 147 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
 Bk5 f1 expr out #txt
 Bk5 f1 304 160 363 160 #arcP
->Proto Bk1 0 0 32 24 18 0 #rect
->Proto Bk1 @|BIcon #fIcon
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BIcon #fIcon
+Bk1 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk1 f3 actionTable 'out=in;
+out.request.password=einbuergerung_Gruppe6.CodingHelper.generatePassword();
+out.request.uniqueIdentifier=einbuergerung_Gruppe6.CodingHelper.generateUniqueIdentifier();
+' #txt
+Bk1 f3 type einbuergerung_Gruppe6.Data #txt
+Bk1 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>UID &amp; Passwort generieren</name>
+        <nameStyle>25,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk1 f3 144 138 160 44 -75 -8 #rect
+Bk1 f3 @|StepIcon #fIcon
+Bk1 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>in 1</name>
+    </language>
+</elementInfo>
+' #txt
+Bk1 g0 51 147 26 26 0 5 #rect
+Bk1 g0 @|MIGIcon #fIcon
+Bk1 f0 77 160 144 160 #arcP
+Bk1 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language lang="en">
+        <name>out 1</name>
+    </language>
+</elementInfo>
+' #txt
+Bk1 g1 371 147 26 26 0 5 #rect
+Bk1 g1 @|MOGIcon #fIcon
+Bk1 f1 expr out #txt
+Bk1 f1 304 160 371 160 #arcP
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BIcon #fIcon
 An0 f0 mainOut f18 tail #connect
 An0 f18 head f17 in #connect
 An0 f17 out f30 tail #connect
@@ -751,11 +751,11 @@ An0 f10 out f2 tail #connect
 An0 f2 head S31 g0 #connect
 An0 S31 g1 f6 tail #connect
 An0 S11 g1 f7 tail #connect
-An0 f7 head S41 g0 #connect
 An0 f4 head f10 in #connect
-An0 S41 g1 f3 tail #connect
 An0 f3 head S21 g0 #connect
 An0 S21 g1 f4 tail #connect
+An0 f7 head S40 g0 #connect
+An0 S40 g1 f3 tail #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head f2 mainIn #connect
 Bk0 f1 head g1 m #connect
@@ -786,13 +786,13 @@ Bk2 f31 mainOut f1 tail #connect
 Bk2 f2 mainOut f3 tail #connect
 Bk2 f3 head f13 mainIn #connect
 Bk2 0 0 1152 416 0 #ivRect
-Bk4 g0 m f0 tail #connect
-Bk4 f0 head f3 mainIn #connect
-Bk4 f1 head g1 m #connect
-Bk4 f3 mainOut f1 tail #connect
-Bk4 0 0 448 320 0 #ivRect
 Bk5 g0 m f0 tail #connect
 Bk5 f0 head f5 mainIn #connect
 Bk5 f1 head g1 m #connect
 Bk5 f5 mainOut f1 tail #connect
 Bk5 0 0 448 320 0 #ivRect
+Bk1 g0 m f0 tail #connect
+Bk1 f0 head f3 mainIn #connect
+Bk1 f1 head g1 m #connect
+Bk1 f3 mainOut f1 tail #connect
+Bk1 0 0 448 320 0 #ivRect
