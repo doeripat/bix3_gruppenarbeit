@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 17:20:35 CET 2015]
+[>Created: Thu Dec 10 17:25:05 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -375,13 +375,13 @@ En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <language>
         <name>Hier gehört ein Task Element
 hin.  Dieses generiert jedoch
-ein Out of Boundery Exception</name>
-        <nameStyle>88
+ein Null Pointer Exception</name>
+        <nameStyle>85
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 f11 768 250 176 60 -81 -24 #rect
+En0 f11 768 250 176 60 -80 -24 #rect
 En0 f11 @|IBIcon #fIcon
 En0 f11 -14336|-14336|-16777216 #nodeStyle
 En0 f14 944 250 1056 272 #arcP
