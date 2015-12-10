@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 18:35:27 CET 2015]
+[>Created: Thu Dec 10 18:02:21 CET 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -26,6 +26,7 @@ Eg0 @PushWFArc f6 '' #zField
 Eg0 @CallSub f25 '' #zField
 Eg0 @PushWFArc f13 '' #zField
 Eg0 @PushWFArc f22 '' #zField
+Eg0 @InfoButton f7 '' #zField
 >Proto Eg0 Eg0 Einbuergerung #zField
 Eg0 f0 outLink start.ivp #txt
 Eg0 f0 type einbuergerung_Gruppe6.Data #txt
@@ -180,6 +181,24 @@ Eg0 f13 expr out #txt
 Eg0 f13 440 64 480 64 #arcP
 Eg0 f22 expr out #txt
 Eg0 f22 624 64 656 64 #arcP
+Eg0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Allgemeine Infos
+
+Task Elemente:
+- Zu Testzwecken wurden keine Delays oder Timeouts eingfügt
+- Alle Wartezeiten sind Kommentiert und müssen lediglich im Taskelement implementiert werden
+- Um Exceptions auszulösen müssen entsprechende Timeouts eingebaut werden
+</name>
+        <nameStyle>260
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Eg0 f7 280 130 544 124 -266 -56 #rect
+Eg0 f7 @|IBIcon #fIcon
+Eg0 f7 -985168|-985168|-16777216 #nodeStyle
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Eg0 .processKind NORMAL #txt
 >Proto Eg0 0 0 32 24 18 0 #rect
