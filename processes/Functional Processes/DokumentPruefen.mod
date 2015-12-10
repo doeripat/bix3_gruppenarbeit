@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 01 23:37:51 CET 2015]
+[>Created: Thu Dec 10 15:18:25 CET 2015]
 151165A416DBA684 3.17 #module
 >Proto >Proto Collection #zClass
 Dn0 DokumentPruefen Big #zClass
@@ -17,10 +17,8 @@ Dn0 @StartSub f0 '' #zField
 Dn0 @EndSub f1 '' #zField
 Dn0 @GridStep f5 '' #zField
 Dn0 @PushWFArc f4 '' #zField
-Dn0 @GridStep f9 '' #zField
 Dn0 @PushWFArc f7 '' #zField
 Dn0 @RichDialog f6 '' #zField
-Dn0 @GridStep f12 '' #zField
 Dn0 @PushWFArc f2 '' #zField
 >Proto Dn0 Dn0 DokumentPruefen #zField
 Dn0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
@@ -69,29 +67,6 @@ Dn0 f5 528 42 160 44 -60 -16 #rect
 Dn0 f5 @|StepIcon #fIcon
 Dn0 f4 expr out #txt
 Dn0 f4 688 64 889 64 #arcP
-Dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Dn0 f9 actionTable 'out=in;
-out.request.documentToProof="Deutschkenntnisse";
-' #txt
-Dn0 f9 actionCode 'import einbuergerung_Gruppe6.Document;
-
-
-for(int i = 0; i<4; i++)
-{
-	Document d = new Document();
-	d.fileName = "Yves"+i;
-	d.fileType = "Deutschkenntnisse";
-	out.tmpDocumentList.add(d);
-}
-	Document d = new Document();
-	d.fileName = "Yves";
-	d.fileType = "Wohnsitzbestätigung";
-	out.tmpDocumentList.add(d);
-' #txt
-Dn0 f9 type einbuergerung_Gruppe6.Data #txt
-Dn0 f9 272 282 112 44 0 -8 #rect
-Dn0 f9 @|StepIcon #fIcon
 Dn0 f7 expr out #txt
 Dn0 f7 400 64 528 64 #arcP
 Dn0 f6 targetWindow NEW:card: #txt
@@ -126,29 +101,6 @@ prüfen</name>
 ' #txt
 Dn0 f6 288 42 112 44 -28 -16 #rect
 Dn0 f6 @|RichDialogIcon #fIcon
-Dn0 f12 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Dn0 f12 actionTable 'out=in;
-' #txt
-Dn0 f12 actionCode 'import einbuergerung_Gruppe6.Document;
-for(Document doc : in.request.documents){
-if(in.request.documentToProof == doc.fileType){
-		out.addPerson = true;
-	} 
-		}' #txt
-Dn0 f12 type einbuergerung_Gruppe6.Data #txt
-Dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Select correct 
-Document</name>
-        <nameStyle>24,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-Dn0 f12 480 282 112 44 -38 -16 #rect
-Dn0 f12 @|StepIcon #fIcon
 Dn0 f2 expr out #txt
 Dn0 f2 111 64 288 64 #arcP
 >Proto Dn0 .type einbuergerung_Gruppe6.Data #txt

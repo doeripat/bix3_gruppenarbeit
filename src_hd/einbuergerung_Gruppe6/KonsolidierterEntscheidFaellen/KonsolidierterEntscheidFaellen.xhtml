@@ -62,6 +62,9 @@
 								  <p:column headerText="Geburtstag">
 									<h:outputText value="#{p.birthday}" />									
 								</p:column>
+								<p:column headerText="Jahre in CH">
+									<h:outputText value="#{p.yearCount}" />									
+								</p:column>
 								<p:column headerText="Status">
 									<h:outputText value="Angenommen" rendered="#{p.approved == true}"/>
 									<h:outputText value="Abgelehnt" rendered="#{p.approved == false}"/>	
