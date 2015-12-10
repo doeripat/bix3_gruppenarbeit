@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 13:13:03 CET 2015]
+[>Created: Thu Dec 10 15:07:16 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -792,9 +792,7 @@ Bk2 f1 304 174 579 264 #arcP
 Bk2 f1 1 304 264 #addKink
 Bk2 f1 1 0.37054343484119606 0 0 #arcLabel
 Bk2 f2 expr out #txt
-Bk2 f2 1064 182 1400 182 #arcP
-Bk2 f2 1 1328 256 #addKink
-Bk2 f2 0 0.770679379954723 0 0 #arcLabel
+Bk2 f2 1176 160 1200 160 #arcP
 >Proto Bk0 0 0 32 24 18 0 #rect
 >Proto Bk0 @|BIcon #fIcon
 Bk3 f27 targetWindow NEW:card: #txt
@@ -1355,7 +1353,7 @@ Bk2 f8 mainOut f14 tail #connect
 Bk2 f15 out f1 tail #connect
 Bk2 f1 head g1 m #connect
 Bk2 f11 mainOut f2 tail #connect
-Bk2 f2 head f17 mainIn #connect
+Bk2 f2 head f8 mainIn #connect
 Bk2 0 0 2104 376 0 #ivRect
 Bk3 g0 m f0 tail #connect
 Bk3 f0 head f27 mainIn #connect

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 18:15:59 CET 2015]
+[>Created: Thu Dec 10 15:14:53 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -866,7 +866,7 @@ Bk2 f45 actionTable 'out=in;
 ' #txt
 Bk2 f45 dbSql '<?xml version=""1.0"" standalone=""no""?>
 <!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
-<INSERT><Table name=''Person''/><Value column=''firstname''><AnyExpression>in.request.personList.get(in.loopCount).firstname</AnyExpression></Value><Value column=''lastname''><AnyExpression>in.request.personList.get(in.loopCount).lastname</AnyExpression></Value><Value column=''birthday''><AnyExpression>in.request.personList.get(in.loopCount).birthday</AnyExpression></Value><Value column=''genderCode''><AnyExpression>in.request.personList.get(in.loopCount).gender</AnyExpression></Value><Value column=''nationality''><AnyExpression>in.request.personList.get(in.loopCount).nationality</AnyExpression></Value><Value column=''role''><AnyExpression>in.request.personList.get(in.loopCount).role</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''meeting''><AnyExpression>in.request.personList.get(in.loopCount).meeting</AnyExpression></Value><Value column=''maritalStatus''><AnyExpression>in.request.personList.get(in.loopCount).maritalStatus</AnyExpression></Value></INSERT>' #txt
+<INSERT><Table name=''Person''/><Value column=''firstname''><AnyExpression>in.request.personList.get(in.loopCount).firstname</AnyExpression></Value><Value column=''lastname''><AnyExpression>in.request.personList.get(in.loopCount).lastname</AnyExpression></Value><Value column=''birthday''><AnyExpression>in.request.personList.get(in.loopCount).birthday</AnyExpression></Value><Value column=''genderCode''><AnyExpression>in.request.personList.get(in.loopCount).gender</AnyExpression></Value><Value column=''nationality''><AnyExpression>in.request.personList.get(in.loopCount).nationality</AnyExpression></Value><Value column=''role''><AnyExpression>in.request.personList.get(in.loopCount).role</AnyExpression></Value><Value column=''requestUI''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''meeting''><AnyExpression>in.request.personList.get(in.loopCount).meeting</AnyExpression></Value><Value column=''maritalStatus''><AnyExpression>in.request.personList.get(in.loopCount).maritalStatus</AnyExpression></Value><Value column=''yearCount''><AnyExpression>in.request.personList.get(in.loopCount).yearCount</AnyExpression></Value></INSERT>' #txt
 Bk2 f45 dbUrl AmazonDB #txt
 Bk2 f45 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
 Bk2 f45 lotSize 2147483647 #txt
