@@ -53,7 +53,8 @@
 						<p:column>
 							<p:dataTable id="personTable" var="p" value="#{data.request.personList}">
 								<p:column headerText="Geschlecht">
-								    <h:outputText value="#{p.gender}" />
+								    <h:outputText value="Herr" rendered="#{p.gender==1}" />
+								     <h:outputText value="Frau" rendered="#{p.gender==2}" />
 								  </p:column>				
 								  <p:column headerText="Name">
 								    <h:outputText value="#{p.firstname} #{p.lastname}" />
