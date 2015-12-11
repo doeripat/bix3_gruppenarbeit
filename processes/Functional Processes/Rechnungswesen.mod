@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 11:19:14 CET 2015]
+[>Created: Fri Dec 11 17:28:55 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -34,6 +34,8 @@ Rn0 Bk2 S20 'Sub 2' #zField
 Rn0 @PushWFArc f4 '' #zField
 Rn0 @PushWFArc f6 '' #zField
 Rn0 Bk3 S31 'Sub 3' #zField
+Rn0 @InfoButton f5 '' #zField
+Rn0 @AnnotationArc f7 '' #zField
 >Proto Rn0 Rn0 Rechnungswesen #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -119,7 +121,7 @@ Rn0 f16 actionTable 'out=in1;
 Rn0 f16 outTypes "einbuergerung_Gruppe6.Data" #txt
 Rn0 f16 outLinks "TaskA.ivp" #txt
 Rn0 f16 caseData '#
-#Wed Dec 09 11:19:01 CET 2015
+#Fri Dec 11 17:28:31 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -147,13 +149,12 @@ type.code=
 type.name=
 ' #txt
 Rn0 f16 taskData '#
-#Wed Dec 09 11:19:01 CET 2015
+#Fri Dec 11 17:28:31 CET 2015
 TaskA.EXC=1505C5AC6EFDC232-f14-buffer
-TaskA.EXP=''5s''
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
-TaskA.NAM=Ist die Zahlung eingegangen (Erst bei Zahlungseingang klicken\!)
+TaskA.NAM=Ist die Zahlung zu Gesuch <%\=in1.request.uniqueIdentifier%> eingegangen (Erst bei Zahlungseingang klicken\!)
 TaskA.PRI=2
 TaskA.ROL=Migrationsamt Pr\u00FCfer
 TaskA.SKIP_TASK_LIST=false
@@ -165,11 +166,10 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Ist die Zahlung eingegangen (Erst bei Zahlungseingang klicken!)"));
+taskDef.setName(engine.expandMacros("Ist die Zahlung zu Gesuch <%=in1.request.uniqueIdentifier%> eingegangen (Erst bei Zahlungseingang klicken!)"));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Migrationsamt Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''5s'').toNumber());
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryStartTaskElementPid("1505C5AC6EFDC232-f14-buffer");
@@ -186,7 +186,7 @@ Rn0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f16 424 80 32 32 -42 -59 #rect
+Rn0 f16 424 80 32 32 -45 -38 #rect
 Rn0 f16 @|TaskSwitchIcon #fIcon
 Rn0 f14 .resExport export #txt
 Rn0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -262,6 +262,22 @@ Antrag anhängen</name>
 ' #txt
 Rn0 S31 516 74 152 44 -47 -20 #rect
 Rn0 S31 @|BpmnServiceTaskIcon #fIcon
+Rn0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Produktiv:
+Nach 30 Tagen gibt es eine Exception (Timout)
+Der Task erscheint erst nach 5 Tagen (Delay)</name>
+        <nameStyle>57,7
+44,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Rn0 f5 472 146 272 60 -128 -24 #rect
+Rn0 f5 @|IBIcon #fIcon
+Rn0 f5 -14336|-14336|-16777216 #nodeStyle
+Rn0 f7 472 176 445 107 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -557,6 +573,8 @@ Rn0 f6 head f1 mainIn #connect
 Rn0 f16 out f4 tail #connect
 Rn0 f4 head S31 g0 #connect
 Rn0 S31 g1 f6 tail #connect
+Rn0 f5 ao f7 tail #connect
+Rn0 f7 head f16 @CG|ai #connect
 Bk0 f3 mainOut f2 tail #connect
 Bk0 f2 head f32 mainIn #connect
 Bk0 f32 mainOut f15 tail #connect
