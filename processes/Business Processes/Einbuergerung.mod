@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 15:49:47 CET 2015]
+[>Created: Fri Dec 11 16:35:35 CET 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -27,6 +27,7 @@ Eg0 @CallSub f25 '' #zField
 Eg0 @PushWFArc f13 '' #zField
 Eg0 @PushWFArc f22 '' #zField
 Eg0 @InfoButton f7 '' #zField
+Eg0 @GridStep f9 '' #zField
 >Proto Eg0 Eg0 Einbuergerung #zField
 Eg0 f0 outLink start.ivp #txt
 Eg0 f0 type einbuergerung_Gruppe6.Data #txt
@@ -204,6 +205,92 @@ Task Elemente:
 Eg0 f7 240 114 624 172 -304 -80 #rect
 Eg0 f7 @|IBIcon #fIcon
 Eg0 f7 -985168|-985168|-16777216 #nodeStyle
+Eg0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Eg0 f9 actionTable 'out=in;
+' #txt
+Eg0 f9 actionCode 'import einbuergerung_Gruppe6.Document;
+import einbuergerung_Gruppe6.Person;
+import einbuergerung_Gruppe6.Objection;
+
+out.request.address = "Mainstreet 2";
+out.request.postcode = "8888";
+out.request.city = "Zurich";
+out.request.phone = "077 666 55 44";
+out.request.commentDeutschkenntnisse = "Alles gut mit den Deutschkenntnissen";
+out.request.commentFinanzen = "Genung reich";
+out.request.commentLeumund = "Einige Einträge jeoch kein Problem für Einbürgerung";
+out.request.commentWohnsitz = "Alle Angaben stimmen";
+out.request.commentOnRequest = "Alles in allem Korrekt eingereicht und Voraussetzungen erfüllt";
+out.request.discount = false;
+
+	Person p = new Person();
+	p.firstname = "Peter";
+	p.lastname = "Muster";
+	String s ="30.05.1991";
+	p.birthday = s.toDateTime();
+	p.gender = 1;
+	p.maritalStatus = "verheiratet";
+	p.nationality ="China";
+	p.role = "Erwachsen";
+	p.yearCount = 10;
+	out.request.personList.add(p);
+
+	p.firstname = "Petra";
+	p.lastname = "Muster";
+  s ="30.06.1993";
+	p.birthday = s.toDateTime();
+	p.gender = 2;
+	p.maritalStatus = "verheiratet";
+	p.nationality ="China";
+	p.role = "Erwachsen";
+	p.yearCount = 10;
+	out.request.personList.add(p);
+
+for(int i = 0;i<3;i++)
+{
+	p.firstname = "Peter"+" "+i;
+	p.lastname = "Muster"+" "+i;
+	String s ="30.05.2001";
+	p.birthday = s.toDateTime();
+	p.gender = 1;
+	p.maritalStatus = "ledig";
+	p.nationality ="China";
+	p.role = "Kind";
+	p.yearCount = 10;
+	out.request.personList.add(p);
+}
+
+
+for(int i = 0;i<6;i++)
+{
+	Document d = new Document();
+	d.fileName = "Testfile"+i;
+	out.request.documents.add(d);
+}
+
+for(int i=0;i<5;i++){
+	Objection o = new Objection();
+	o.author = "Nic Zufrieden"+i;
+	s="24.12.2015";
+	o.date = s.toDateTime();
+	o.text = "Das Passt mir gar nicht"+i;	
+	}
+
+' #txt
+Eg0 f9 type einbuergerung_Gruppe6.Data #txt
+Eg0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test Daten</name>
+        <nameStyle>10,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Eg0 f9 80 162 112 44 -30 -8 #rect
+Eg0 f9 @|StepIcon #fIcon
+Eg0 f9 -5972572|-5972572|-16777216 #nodeStyle
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Eg0 .processKind NORMAL #txt
 >Proto Eg0 0 0 32 24 18 0 #rect

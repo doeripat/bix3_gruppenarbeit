@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 15:46:04 CET 2015]
+[>Created: Fri Dec 11 16:06:53 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -299,7 +299,7 @@ En0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 En0 f32 328 88 32 32 -41 -37 #rect
 En0 f32 @|TaskSwitchIcon #fIcon
-En0 f17 outLink start.ivp #txt
+En0 f17 outLink Einwaende_erfassen.ivp #txt
 En0 f17 type einbuergerung_Gruppe6.Data #txt
 En0 f17 inParamDecl '<> param;' #txt
 En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -307,16 +307,66 @@ En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 En0 f17 guid 1513AC40858EACAB #txt
 En0 f17 requestEnabled true #txt
 En0 f17 triggerEnabled false #txt
-En0 f17 callSignature start() #txt
+En0 f17 callSignature Einwaende_erfassen() #txt
+En0 f17 persist false #txt
+En0 f17 taskData '#
+#Fri Dec 11 16:06:40 CET 2015
+TaskTriggered.ROL=Everybody
+TaskTriggered.EXTYPE=0
+TaskTriggered.EXPRI=2
+TaskTriggered.TYPE=0
+TaskTriggered.PRI=2
+TaskTriggered.EXROL=Everybody
+' #txt
+En0 f17 caseData '#
+#Fri Dec 11 16:06:40 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+En0 f17 showInStartList 1 #txt
+En0 f17 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
+ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
+import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskUpdDef.setExpiryActivator("Everybody");
+taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+engine.updateCurrentTask(taskUpdDef);
+' #txt
 En0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>start.ivp</name>
+        <name>Einwaende_erfassen.ivp</name>
+        <nameStyle>22,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
 En0 f17 @C|.responsibility Everybody #txt
-En0 f17 73 265 30 30 -21 16 #rect
+En0 f17 89 265 30 30 -68 17 #rect
 En0 f17 @|StartRequestIcon #fIcon
 En0 f38 type einbuergerung_Gruppe6.Data #txt
 En0 f38 377 265 30 30 0 15 #rect
@@ -447,8 +497,8 @@ Amtsblatt publizieren</name>
 En0 S11 118 82 164 44 -57 -20 #rect
 En0 S11 @|BpmnServiceTaskIcon #fIcon
 En0 f3 expr out #txt
-En0 f3 103 280 166 280 #arcP
-En0 f4 314 280 377 280 #arcP
+En0 f3 119 280 190 280 #arcP
+En0 f4 338 280 377 280 #arcP
 En0 S21 .resExport export #txt
 En0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -459,7 +509,7 @@ En0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 S21 166 258 148 44 -50 -8 #rect
+En0 S21 190 258 148 44 -50 -8 #rect
 En0 S21 @|BpmnUserTaskIcon #fIcon
 En0 f11 expr data #txt
 En0 f11 outCond ivp=="TaskA.ivp" #txt
