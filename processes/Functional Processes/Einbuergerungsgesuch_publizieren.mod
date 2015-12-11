@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 18:59:55 CET 2015]
+[>Created: Fri Dec 11 19:45:16 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -439,7 +439,7 @@ En0 f7 actionTable 'out=in1;
 En0 f7 outTypes "einbuergerung_Gruppe6.Data" #txt
 En0 f7 outLinks "TaskA.ivp" #txt
 En0 f7 caseData '#
-#Fri Dec 11 18:40:43 CET 2015
+#Fri Dec 11 19:45:00 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -467,7 +467,7 @@ type.code=
 type.name=
 ' #txt
 En0 f7 taskData '#
-#Fri Dec 11 18:40:43 CET 2015
+#Fri Dec 11 19:45:00 CET 2015
 TaskA.EXC=1506BC4D39F48130-f10-buffer
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 18:26:16 CET 2015]
+[>Created: Fri Dec 11 19:52:38 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -393,7 +393,7 @@ dn0 f21 actionTable 'out=in1;
 dn0 f21 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f21 outLinks "TaskA.ivp" #txt
 dn0 f21 caseData '#
-#Fri Dec 11 18:22:49 CET 2015
+#Fri Dec 11 19:44:03 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -421,7 +421,7 @@ type.code=
 type.name=
 ' #txt
 dn0 f21 taskData '#
-#Fri Dec 11 18:22:49 CET 2015
+#Fri Dec 11 19:44:03 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -566,7 +566,7 @@ dn0 f38 actionTable 'out=in1;
 dn0 f38 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f38 outLinks "TaskA.ivp" #txt
 dn0 f38 caseData '#
-#Fri Dec 11 10:03:32 CET 2015
+#Fri Dec 11 19:43:48 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -594,13 +594,12 @@ type.code=
 type.name=
 ' #txt
 dn0 f38 taskData '#
-#Fri Dec 11 10:03:32 CET 2015
+#Fri Dec 11 19:43:48 CET 2015
 TaskA.EXC=1505C51442680211-f40-buffer
-TaskA.EXP=''5s''
 TaskA.EXPRI=2
-TaskA.EXROL=Everybody
+TaskA.EXROL=Migrationsamt Pr\u00FCfer
 TaskA.EXTYPE=0
-TaskA.NAM=Ist Freigabequittung von Antrag Nr. <%\=in1.request.uniqueIdentifier%> angekommen
+TaskA.NAM=Ist Freigabequittung von Antrag Nr. <%\=in1.request.uniqueIdentifier%> angekommen (erst klicken wenn vorhanden)
 TaskA.PRI=2
 TaskA.ROL=Migrationsamt Pr\u00FCfer
 TaskA.SKIP_TASK_LIST=false
@@ -612,12 +611,11 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Ist Freigabequittung von Antrag Nr. <%=in1.request.uniqueIdentifier%> angekommen"));
+taskDef.setName(engine.expandMacros("Ist Freigabequittung von Antrag Nr. <%=in1.request.uniqueIdentifier%> angekommen (erst klicken wenn vorhanden)"));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Migrationsamt Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''5s'').toNumber());
-taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryActivator("Migrationsamt Prüfer");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryStartTaskElementPid("1505C51442680211-f40-buffer");
 taskDefinitions.add(taskDef);
@@ -649,7 +647,7 @@ benachrichtigen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 S60 864 226 128 44 -42 -16 #rect
+dn0 S60 856 226 128 44 -42 -16 #rect
 dn0 S60 @|BpmnSendTaskIcon #fIcon
 dn0 S60 -1|-1|-16777216 #nodeStyle
 dn0 S70 .resExport export #txt
@@ -815,7 +813,7 @@ dn0 f9 actionTable 'out=in1;
 dn0 f9 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f9 outLinks "TaskA.ivp" #txt
 dn0 f9 caseData '#
-#Fri Nov 27 00:34:24 CET 2015
+#Fri Dec 11 19:47:02 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -843,13 +841,13 @@ type.code=
 type.name=
 ' #txt
 dn0 f9 taskData '#
-#Fri Nov 27 00:34:24 CET 2015
+#Fri Dec 11 19:47:02 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
 TaskA.NAM=Bitte Dokumente gem\u00E4ss Kommentar erneut hochladen
 TaskA.PRI=2
-TaskA.ROL=Everybody
+TaskA.ROL=Antragsteller
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -861,7 +859,7 @@ taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
 taskDef.setName(engine.expandMacros("Bitte Dokumente gemäss Kommentar erneut hochladen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Antragsteller");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -892,12 +890,12 @@ dn0 f18 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f18 1000 136 992 248 #arcP
+dn0 f18 1000 136 984 248 #arcP
 dn0 f18 1 1000 248 #addKink
 dn0 f18 0 0.20535714285714285 -16 0 #arcLabel
 dn0 f10 type einbuergerung_Gruppe6.Data #txt
 dn0 f10 var in1 #txt
-dn0 f10 864 248 824 360 #arcP
+dn0 f10 856 248 824 360 #arcP
 dn0 f10 1 848 248 #addKink
 dn0 f10 2 848 360 #addKink
 dn0 f10 1 0.2493844936577523 0 0 #arcLabel

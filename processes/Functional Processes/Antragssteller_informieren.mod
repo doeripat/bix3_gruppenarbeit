@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 18:26:35 CET 2015]
+[>Created: Fri Dec 11 19:27:56 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -112,7 +112,7 @@ Bk1 @PushTrueWFInG-01 g0 '' #zField
 Bk1 @PushWFArc f0 '' #zField
 Bk1 @PushTrueWFOutG-01 g1 '' #zField
 Bk1 @PushWFArc f1 '' #zField
->Proto Bk1 Bk4 BpmnServiceTask #zField
+>Proto Bk1 Bk3 BpmnServiceTask #zField
 Bk3 @TextInP .resExport .resExport #zField
 Bk3 @TextInP .type .type #zField
 Bk3 @TextInP .processKind .processKind #zField
@@ -126,7 +126,7 @@ Bk3 @PushTrueWFInG-01 g0 '' #zField
 Bk3 @PushTrueWFOutG-01 g1 '' #zField
 Bk3 @PushWFArc f0 '' #zField
 Bk3 @PushWFArc f1 '' #zField
->Proto Bk3 Bk3 BpmnServiceTask #zField
+>Proto Bk3 Bk4 BpmnServiceTask #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -449,13 +449,6 @@ Bk0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Antragsteller erfassen</name>
         <nameStyle>22,7
 </nameStyle>
-        <desc>email, name, vorname, erfassen
-
-rest wird von antragsteller erfasst
-
-unique identifier wird nicht gebraucht --&gt; email als unique identifier
-username ebenfalls nicht gebraucht
-</desc>
     </language>
 </elementInfo>
 ' #txt
@@ -573,7 +566,6 @@ Bk2 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 vervollständigen</name>
         <nameStyle>28,7
 </nameStyle>
-        <desc>Gesuch weiterführen?</desc>
     </language>
 </elementInfo>
 ' #txt
@@ -637,7 +629,6 @@ Bk2 f13 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
         <name>Login</name>
         <nameStyle>5,7
 </nameStyle>
-        <desc>Email anstatt Username</desc>
     </language>
 </elementInfo>
 ' #txt
@@ -770,8 +761,8 @@ Bk1 g1 371 147 26 26 0 5 #rect
 Bk1 g1 @|MOGIcon #fIcon
 Bk1 f1 expr out #txt
 Bk1 f1 304 160 371 160 #arcP
->Proto Bk4 0 0 32 24 18 0 #rect
->Proto Bk4 @|BIcon #fIcon
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BIcon #fIcon
 Bk3 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk3 f31 actionTable 'out=in;
@@ -802,8 +793,8 @@ Bk3 g1 @|MOGIcon #fIcon
 Bk3 f0 61 160 136 160 #arcP
 Bk3 f1 expr out #txt
 Bk3 f1 248 160 307 160 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BIcon #fIcon
+>Proto Bk4 0 0 32 24 18 0 #rect
+>Proto Bk4 @|BIcon #fIcon
 An0 f0 mainOut f18 tail #connect
 An0 f18 head f17 in #connect
 An0 f17 out f30 tail #connect
