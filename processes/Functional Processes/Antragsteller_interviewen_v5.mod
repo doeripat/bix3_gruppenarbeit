@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 15:21:35 CET 2015]
+[>Created: Fri Dec 11 17:21:52 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -33,13 +33,11 @@ An0 @Alternative f5 '' #zField
 An0 @TaskSwitch f25 '' #zField
 An0 @TaskSwitch f3 '' #zField
 An0 @TaskSwitch f9 '' #zField
-An0 @StartRequest f17 '' #zField
 An0 @Alternative f11 '' #zField
 An0 @PushWFArc f14 '' #zField
 An0 @Alternative f39 '' #zField
 An0 @TkArc f27 '' #zField
 An0 @PushWFArc f41 '' #zField
-An0 @GridStep f19 '' #zField
 An0 @Alternative f18 '' #zField
 An0 @PushWFArc f37 '' #zField
 An0 @TkArc f38 '' #zField
@@ -60,8 +58,6 @@ An0 @PushWFArc f21 '' #zField
 An0 @PushWFArc f22 '' #zField
 An0 Bk7 S71 'Sub 5.7' #zField
 An0 @PushWFArc f16 '' #zField
-An0 @PushWFArc f10 '' #zField
-An0 @PushWFArc f23 '' #zField
 An0 @PushWFArc f4 '' #zField
 An0 @PushWFArc f8 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
@@ -223,7 +219,7 @@ An0 f25 actionTable 'out=in1;
 An0 f25 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f25 outLinks "TaskA.ivp" #txt
 An0 f25 caseData '#
-#Tue Dec 08 21:52:50 CET 2015
+#Fri Dec 11 17:21:35 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -251,11 +247,11 @@ type.code=
 type.name=
 ' #txt
 An0 f25 taskData '#
-#Tue Dec 08 21:52:50 CET 2015
+#Fri Dec 11 17:21:35 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
-TaskA.NAM=Interviews durchf\u00FChren
+TaskA.NAM=Interviews durchf\u00FChren f\u00FCr Gesuch\: <%\=in1.request.uniqueIdentifier%>
 TaskA.PRI=2
 TaskA.ROL=Migrationsamt Interviewer
 TaskA.SKIP_TASK_LIST=false
@@ -267,7 +263,7 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Interviews durchführen"));
+taskDef.setName(engine.expandMacros("Interviews durchführen für Gesuch: <%=in1.request.uniqueIdentifier%>"));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Migrationsamt Interviewer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -405,25 +401,6 @@ An0 f9 type einbuergerung_Gruppe6.Data #txt
 An0 f9 template "" #txt
 An0 f9 1344 304 32 32 0 16 #rect
 An0 f9 @|TaskSwitchIcon #fIcon
-An0 f17 outLink start.ivp #txt
-An0 f17 type einbuergerung_Gruppe6.Data #txt
-An0 f17 inParamDecl '<> param;' #txt
-An0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f17 guid 1516256C9925F41C #txt
-An0 f17 requestEnabled true #txt
-An0 f17 triggerEnabled false #txt
-An0 f17 callSignature start() #txt
-An0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-An0 f17 @C|.responsibility Everybody #txt
-An0 f17 441 113 30 30 -21 17 #rect
-An0 f17 @|StartRequestIcon #fIcon
 An0 f11 type einbuergerung_Gruppe6.Data #txt
 An0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -473,48 +450,6 @@ An0 f41 1000 144 624 144 #arcP
 An0 f41 1 1000 121 #addKink
 An0 f41 2 624 121 #addKink
 An0 f41 0 0.43478260869565216 -17 0 #arcLabel
-An0 f19 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-An0 f19 actionTable 'out=in;
-' #txt
-An0 f19 actionCode 'import einbuergerung_Gruppe6.CodingHelper;
-import einbuergerung_Gruppe6.Request;
-import einbuergerung_Gruppe6.Person;
-
-CodingHelper cH = new CodingHelper();
-List<Person> personList = new List<Person>();
-
-for(int i = 1; i <=3; i++){
-	Person person = new Person();
-	person.firstname = "Fabio"+i;
-	person.lastname = "Wullschleger"+i;
-	
-	if (i==1){
-		person.role = "applicant";	
-	}else if(i%2==0){
-		person.role = "adult";
-	}else{
-		person.role = "child";
-	}
-	personList.add(person);
-}
-
-
-in.request.setUniqueIdentifier(cH.generateUniqueIdentifier());
-in.request.password = "root";
-in.request.personList = personList;' #txt
-An0 f19 type einbuergerung_Gruppe6.Data #txt
-An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>init personList</name>
-        <nameStyle>15,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-An0 f19 448 194 112 44 -39 -8 #rect
-An0 f19 @|StepIcon #fIcon
 An0 f18 type einbuergerung_Gruppe6.Data #txt
 An0 f18 1536 144 32 32 0 16 #rect
 An0 f18 @|AlternativeIcon #fIcon
@@ -635,10 +570,6 @@ An0 S71 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 An0 S71 1616 138 112 44 -39 -8 #rect
 An0 S71 @|BpmnServiceTaskIcon #fIcon
 An0 f16 624 298 624 176 #arcP
-An0 f10 expr out #txt
-An0 f10 551 194 613 165 #arcP
-An0 f23 expr out #txt
-An0 f23 463 141 504 194 #arcP
 An0 f4 expr in #txt
 An0 f4 outCond in.request.writtenStatement==true #txt
 An0 f4 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1214,10 +1145,6 @@ An0 f22 head f1 mainIn #connect
 An0 f18 out f21 tail #connect
 An0 f21 head S71 g0 #connect
 An0 S71 g1 f22 tail #connect
-An0 f19 mainOut f10 tail #connect
-An0 f10 head f39 in #connect
-An0 f17 mainOut f23 tail #connect
-An0 f23 head f19 mainIn #connect
 An0 f5 out f4 tail #connect
 An0 f4 head S51 g0 #connect
 An0 f5 out f8 tail #connect
