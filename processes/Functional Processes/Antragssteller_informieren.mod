@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 15:36:00 CET 2015]
+[>Created: Fri Dec 11 17:21:52 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -38,7 +38,7 @@ An0 @TkArc f4 '' #zField
 An0 Bk5 S21 'Sub 2' #zField
 An0 Bk1 S40 'Sub 4' #zField
 An0 @AnnotationArc f5 '' #zField
-An0 @InfoButton f8 '' #zField
+An0 @InfoButton f9 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -361,16 +361,27 @@ Passwort generieren</name>
 An0 S40 248 218 176 44 -57 -20 #rect
 An0 S40 @|BpmnServiceTaskIcon #fIcon
 An0 f5 240 426 279 390 #arcP
-An0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+An0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name></name>
+        <name>Allgemeine Infos
+
+Unique Identifier:
+- 6-stellige (eindeutige) Kennzahl
+- Höhe der Nummer ist random
+- Identifikator durch den gesammten Prozess und in der DB
+- lässt keine Rückschlüsse auf den Antrag/-steller zu oder die Anzahl der Anträge.
+</name>
+        <nameStyle>17,7
+224,7
+1,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 f8 217 129 30 30 0 -8 #rect
-An0 f8 @|IBIcon #fIcon
-An0 f8 -14336|-14336|-16777216 #nodeStyle
+An0 f9 760 178 448 140 -221 -64 #rect
+An0 f9 @|IBIcon #fIcon
+An0 f9 -985168|-985168|-16777216 #nodeStyle
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

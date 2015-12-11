@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 17:16:24 CET 2015]
+[>Created: Fri Dec 11 17:21:52 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -219,7 +219,7 @@ An0 f25 actionTable 'out=in1;
 An0 f25 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f25 outLinks "TaskA.ivp" #txt
 An0 f25 caseData '#
-#Tue Dec 08 21:52:50 CET 2015
+#Fri Dec 11 17:21:35 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -247,11 +247,11 @@ type.code=
 type.name=
 ' #txt
 An0 f25 taskData '#
-#Tue Dec 08 21:52:50 CET 2015
+#Fri Dec 11 17:21:35 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
-TaskA.NAM=Interviews durchf\u00FChren
+TaskA.NAM=Interviews durchf\u00FChren f\u00FCr Gesuch\: <%\=in1.request.uniqueIdentifier%>
 TaskA.PRI=2
 TaskA.ROL=Migrationsamt Interviewer
 TaskA.SKIP_TASK_LIST=false
@@ -263,7 +263,7 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Interviews durchführen"));
+taskDef.setName(engine.expandMacros("Interviews durchführen für Gesuch: <%=in1.request.uniqueIdentifier%>"));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Migrationsamt Interviewer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
