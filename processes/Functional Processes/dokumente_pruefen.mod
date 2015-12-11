@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 10:03:35 CET 2015]
+[>Created: Fri Dec 11 17:20:17 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -48,11 +48,6 @@ dn0 Bk1 U30 'User 3' #zField
 dn0 @Alternative f30 '' #zField
 dn0 @TkArc f29 '' #zField
 dn0 @PushWFArc f32 '' #zField
-dn0 @GridStep f20 '' #zField
-dn0 @StartRequest f22 '' #zField
-dn0 @PushWFArc f31 '' #zField
-dn0 @GridStep f33 '' #zField
-dn0 @PushWFArc f34 '' #zField
 dn0 @ProcessException f40 '' #zField
 dn0 Bk0 S20 'Send 2' #zField
 dn0 @Alternative f43 '' #zField
@@ -156,7 +151,9 @@ Bk3 @TextInP .xml .xml #zField
 Bk3 @TextInP .responsibility .responsibility #zField
 Bk3 @PushTrueWFInG-01 g0 '' #zField
 Bk3 @PushTrueWFOutG-01 g1 '' #zField
+Bk3 @EMail f14 '' #zField
 Bk3 @PushWFArc f0 '' #zField
+Bk3 @PushWFArc f1 '' #zField
 >Proto Bk3 Bk4 BpmnSendTask #zField
 Bk4 @TextInP .resExport .resExport #zField
 Bk4 @TextInP .type .type #zField
@@ -402,7 +399,7 @@ dn0 f21 actionTable 'out=in1;
 dn0 f21 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f21 outLinks "TaskA.ivp" #txt
 dn0 f21 caseData '#
-#Tue Dec 01 21:05:42 CET 2015
+#Fri Dec 11 17:20:16 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -430,11 +427,11 @@ type.code=
 type.name=
 ' #txt
 dn0 f21 taskData '#
-#Tue Dec 01 21:05:42 CET 2015
+#Fri Dec 11 17:20:16 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
-TaskA.NAM=Bitte Formale Korrektheit der Dokumente pr\u00FCfen
+TaskA.NAM=Bitte Formale Korrektheit f\u00FCr Gesuch <%\=in1.request.uniqueIdentifier%> der Dokumente pr\u00FCfen
 TaskA.PRI=2
 TaskA.ROL=Migrationsamt Pr\u00FCfer
 TaskA.SKIP_TASK_LIST=false
@@ -446,7 +443,7 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Bitte Formale Korrektheit der Dokumente prüfen"));
+taskDef.setName(engine.expandMacros("Bitte Formale Korrektheit für Gesuch <%=in1.request.uniqueIdentifier%> der Dokumente prüfen"));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Migrationsamt Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -573,142 +570,6 @@ dn0 f29 0 0.2896357907497452 0 0 #arcLabel
 dn0 f32 616 376 584 160 #arcP
 dn0 f32 1 584 376 #addKink
 dn0 f32 1 0.830973769039855 0 0 #arcLabel
-dn0 f20 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f20 actionTable 'out=in;
-out.request.commentDeutschkenntnisse="deutsch";
-out.request.commentFinanzen="moneytoblow.ch";
-out.request.commentOnRequest="du bist scheisse";
-out.request.commentWohnsitz="kauf dir ein haus";
-out.request.uniqueIdentifier="987435";
-' #txt
-dn0 f20 actionCode 'import einbuergerung_Gruppe6.Document;
-import einbuergerung_Gruppe6.Person;
-
-for(int i = 0;i<3;i++)
-{
-	Person p = new Person();
-	p.firstname = "Yves"+" "+i;
-	p.lastname = "Mauron"+" "+i;
-	out.request.personList.add(p);
-}
-for(int i = 3;i<6;i++)
-{
-	Person p = new Person();
-	p.firstname = "Yves"+" "+i;
-	p.lastname = "Mauron"+" "+i;
-	out.request.personRemovedList.add(p);
-}
-
-for(int i = 0;i<3;i++)
-{
-	Document d = new Document();
-	d.fileName = "Testfile"+i;
-	out.request.documents.add(d);
-}' #txt
-dn0 f20 type einbuergerung_Gruppe6.Data #txt
-dn0 f20 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Test init</name>
-        <nameStyle>9,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 f20 1456 50 112 44 -21 -8 #rect
-dn0 f20 @|StepIcon #fIcon
-dn0 f20 -613726|-1|-16777216 #nodeStyle
-dn0 f22 outLink startbisi.ivp #txt
-dn0 f22 type einbuergerung_Gruppe6.Data #txt
-dn0 f22 inParamDecl '<> param;' #txt
-dn0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f22 guid 1517BE1851252A93 #txt
-dn0 f22 requestEnabled true #txt
-dn0 f22 triggerEnabled false #txt
-dn0 f22 callSignature startbisi() #txt
-dn0 f22 persist false #txt
-dn0 f22 taskData '#
-#Mon Dec 07 10:59:32 CET 2015
-TaskTriggered.ROL=Everybody
-TaskTriggered.EXTYPE=0
-TaskTriggered.EXPRI=2
-TaskTriggered.TYPE=0
-TaskTriggered.PRI=2
-TaskTriggered.EXROL=Everybody
-' #txt
-dn0 f22 caseData '#
-#Mon Dec 07 10:59:32 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-dn0 f22 showInStartList 1 #txt
-dn0 f22 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
-ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
-import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskUpdDef.setExpiryActivator("Everybody");
-taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-engine.updateCurrentTask(taskUpdDef);
-' #txt
-dn0 f22 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>startbisi.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-dn0 f22 @C|.responsibility Everybody #txt
-dn0 f22 1361 33 30 30 -31 17 #rect
-dn0 f22 @|StartRequestIcon #fIcon
-dn0 f31 expr out #txt
-dn0 f31 1390 50 1456 72 #arcP
-dn0 f33 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f33 actionTable 'out=in;
-' #txt
-dn0 f33 actionCode 'if(in.request.personRemovedList.size() != 0 || in.request.personRemovedList != null)
-{
-	out.setMailString("Alles i.O.");
-	if(in.request.personList.size() == 0 || in.request.personList == null)
-	{
-			out.setMailString("Alle aus dem Spiel");
-	}
-	else
-	{
-			out.setMailString("Einige aus dem Spiel");
-	}
-}' #txt
-dn0 f33 type einbuergerung_Gruppe6.Data #txt
-dn0 f33 1592 50 112 44 0 -8 #rect
-dn0 f33 @|StepIcon #fIcon
-dn0 f34 expr out #txt
-dn0 f34 1568 72 1592 72 #arcP
 dn0 f40 .resExport export #txt
 dn0 f40 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -926,13 +787,13 @@ dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f12 1368 122 112 44 -33 -20 #rect
+dn0 f12 1376 122 112 44 -33 -20 #rect
 dn0 f12 @|CallSubIcon #fIcon
 dn0 f4 1144 144 1200 144 #arcP
 dn0 f35 expr out #txt
-dn0 f35 1328 144 1368 144 #arcP
+dn0 f35 1328 144 1376 144 #arcP
 dn0 f36 expr out #txt
-dn0 f36 1480 144 1560 144 #arcP
+dn0 f36 1488 144 1560 144 #arcP
 dn0 f39 1672 144 1736 144 #arcP
 dn0 S11 .resExport export #txt
 dn0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1259,7 +1120,25 @@ Bk3 g0 563 243 26 26 0 5 #rect
 Bk3 g0 @|MIGIcon #fIcon
 Bk3 g1 51 243 26 26 0 5 #rect
 Bk3 g1 @|MOGIcon #fIcon
-Bk3 f0 563 256 77 256 #arcP
+Bk3 f14 beanConfig '"{/emailSubject ""Einbürgerung mit ID:<%=in.request.uniqueIdentifier%>""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBitte loggen Sie sich auf dem Portal ein und reichen die entsprechenden Dokumente gemäss dem Kommentar nach. \\n\\nFreundliche Grüsse\\n\\nDas Migrationsamt ""/emailAttachments * }"' #txt
+Bk3 f14 type einbuergerung_Gruppe6.Data #txt
+Bk3 f14 timeout 0 #txt
+Bk3 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Abgelehnte Personen
+informieren</name>
+        <nameStyle>20,7
+11,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk3 f14 264 234 144 44 -53 -16 #rect
+Bk3 f14 @|EMailIcon #fIcon
+Bk3 f0 563 256 408 256 #arcP
+Bk3 f1 expr out #txt
+Bk3 f1 264 256 77 256 #arcP
 >Proto Bk4 0 0 32 24 18 0 #rect
 >Proto Bk4 @|BpmnSendTaskIcon #fIcon
 Bk4 g0 51 243 26 26 0 5 #rect
@@ -1351,10 +1230,6 @@ dn0 f30 out f29 tail #connect
 dn0 f29 head f21 in #connect
 dn0 U40 g1 f32 tail #connect
 dn0 f32 head f30 in #connect
-dn0 f22 mainOut f31 tail #connect
-dn0 f31 head f20 mainIn #connect
-dn0 f20 mainOut f34 tail #connect
-dn0 f34 head f33 mainIn #connect
 dn0 f8 out f10 tail #connect
 dn0 f40 mainOut f44 tail #connect
 dn0 f44 head f43 in #connect
@@ -1417,7 +1292,9 @@ Bk0 f3 mainOut f0 tail #connect
 Bk0 f0 head g1 m #connect
 Bk0 0 0 640 512 0 #ivRect
 Bk3 g0 m f0 tail #connect
-Bk3 f0 head g1 m #connect
+Bk3 f0 head f14 mainIn #connect
+Bk3 f14 mainOut f1 tail #connect
+Bk3 f1 head g1 m #connect
 Bk3 0 0 640 512 0 #ivRect
 Bk4 g0 m f2 tail #connect
 Bk4 f2 head f1 mainIn #connect
