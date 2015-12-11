@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 17:08:05 CET 2015]
+[>Created: Fri Dec 11 15:46:04 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -52,6 +52,7 @@ En0 Bk5 S51 'Sub 5' #zField
 En0 @PushWFArc f12 '' #zField
 En0 @PushWFArc f2 '' #zField
 En0 @PushWFArc f5 '' #zField
+En0 @AnnotationArc f9 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -223,7 +224,7 @@ auf Homepage</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f19 88 138 208 76 -98 -32 #rect
+En0 f19 80 154 208 76 -98 -32 #rect
 En0 f19 @|IBIcon #fIcon
 En0 f19 -14336|-1|-16777216 #nodeStyle
 En0 f32 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -512,6 +513,7 @@ En0 f2 expr data #txt
 En0 f2 outCond ivp=="TaskA.ivp" #txt
 En0 f2 720 408 770 408 #arcP
 En0 f5 578 104 620 104 #arcP
+En0 f9 184 154 200 126 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -927,6 +929,8 @@ En0 f7 out f2 tail #connect
 En0 f2 head S51 g0 #connect
 En0 S31 g1 f5 tail #connect
 En0 f5 head S40 g0 #connect
+En0 f19 ao f9 tail #connect
+En0 f9 head S11 ai #connect
 Bk0 f11 mainOut f34 tail #connect
 Bk0 f34 head f3 mainIn #connect
 Bk0 f3 mainOut f29 tail #connect

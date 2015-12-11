@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 18:02:21 CET 2015]
+[>Created: Fri Dec 11 15:49:47 CET 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -190,13 +190,18 @@ Task Elemente:
 - Zu Testzwecken wurden keine Delays oder Timeouts eingfügt
 - Alle Wartezeiten sind Kommentiert und müssen lediglich im Taskelement implementiert werden
 - Um Exceptions auszulösen müssen entsprechende Timeouts eingebaut werden
+- Rein technische Abläufe sind teils in Englisch für eine bessere Verständlichkeit aus Datensicht (Best Practice)
+- Datenattribute sind in Englisch (Best Practice)
+- Fachliches Modell auf Deutsch für bessere Verständlichkeit der Enduser
 </name>
-        <nameStyle>260
+        <nameStyle>260,7
+236,7
+1,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Eg0 f7 280 130 544 124 -266 -56 #rect
+Eg0 f7 240 114 624 172 -304 -80 #rect
 Eg0 f7 @|IBIcon #fIcon
 Eg0 f7 -985168|-985168|-16777216 #nodeStyle
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt

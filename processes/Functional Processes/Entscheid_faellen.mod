@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 17:25:05 CET 2015]
+[>Created: Fri Dec 11 15:59:06 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -288,7 +288,7 @@ En0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f2 880 88 32 32 -43 -44 #rect
+En0 f2 880 88 32 32 -41 -38 #rect
 En0 f2 @|AlternativeIcon #fIcon
 En0 f5 840 104 880 104 #arcP
 En0 S30 .resExport export #txt
@@ -360,7 +360,7 @@ En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 </elementInfo>
 ' #txt
 En0 f16 912 104 1200 104 #arcP
-En0 f16 0 0.0763888888888889 0 -11 #arcLabel
+En0 f16 0 0.0763888888888889 0 -9 #arcLabel
 En0 f6 expr in #txt
 En0 f6 1232 104 1257 104 #arcP
 En0 f6 0 0.0378619153674833 0 -9 #arcLabel
@@ -375,16 +375,18 @@ En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <language>
         <name>Hier gehört ein Task Element
 hin.  Dieses generiert jedoch
-ein Null Pointer Exception</name>
-        <nameStyle>85
+eine Null Pointer Exception
+Erforderliche Rollen und Nutzer 
+wurden erstellt.</name>
+        <nameStyle>136,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 f11 768 250 176 60 -80 -24 #rect
+En0 f11 792 226 192 92 -87 -40 #rect
 En0 f11 @|IBIcon #fIcon
 En0 f11 -14336|-14336|-16777216 #nodeStyle
-En0 f14 944 250 1056 272 #arcP
+En0 f14 984 226 1056 272 #arcP
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
@@ -517,9 +519,9 @@ Bk2 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Bk2 g1 579 251 26 26 22 -19 #rect
 Bk2 g1 @|MOGIcon #fIcon
 Bk2 f3 expr out #txt
-Bk2 f3 624 160 664 160 #arcP
+Bk2 f3 624 160 656 160 #arcP
 Bk2 f4 expr out #txt
-Bk2 f4 776 160 808 160 #arcP
+Bk2 f4 784 160 808 160 #arcP
 Bk2 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk2 f5 actionTable 'out=in;
@@ -552,14 +554,14 @@ Bk2 f5 type einbuergerung_Gruppe6.Data #txt
 Bk2 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Templatepfad 
-auslesen</name>
-        <nameStyle>22,7
+        <name>read Template
+path</name>
+        <nameStyle>18,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f5 664 138 112 44 -39 -16 #rect
+Bk2 f5 656 138 128 44 -40 -16 #rect
 Bk2 f5 @|StepIcon #fIcon
 Bk2 f6 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -804,13 +806,14 @@ Bk5 f11 timeout 0 #txt
 Bk5 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Dossier schicken</name>
-        <nameStyle>16,7
+        <name>Antragsteller 
+Informieren</name>
+        <nameStyle>26,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk5 f11 936 458 112 44 -48 -8 #rect
+Bk5 f11 936 458 112 44 -36 -16 #rect
 Bk5 f11 @|EMailIcon #fIcon
 Bk5 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -828,14 +831,14 @@ Bk5 f5 type einbuergerung_Gruppe6.Data #txt
 Bk5 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Request Daten 
-persistieren</name>
-        <nameStyle>27,7
+        <name>persist 
+Request Data</name>
+        <nameStyle>21,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk5 f5 112 138 128 44 -41 -16 #rect
+Bk5 f5 120 138 112 44 -38 -16 #rect
 Bk5 f5 @|DBStepIcon #fIcon
 Bk5 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -846,7 +849,7 @@ Bk5 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk5 g0 51 147 26 26 -11 26 #rect
 Bk5 g0 @|MIGIcon #fIcon
-Bk5 f0 77 160 112 160 #arcP
+Bk5 f0 77 160 120 160 #arcP
 Bk5 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -914,7 +917,7 @@ Bk5 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Bk5 f6 280 138 112 44 -45 -8 #rect
 Bk5 f6 @|StepIcon #fIcon
 Bk5 f7 expr out #txt
-Bk5 f7 240 160 280 160 #arcP
+Bk5 f7 232 160 280 160 #arcP
 Bk5 f9 type einbuergerung_Gruppe6.Data #txt
 Bk5 f9 448 144 32 32 0 16 #rect
 Bk5 f9 @|AlternativeIcon #fIcon
