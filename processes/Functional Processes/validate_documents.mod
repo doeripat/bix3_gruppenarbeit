@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 17:23:13 CET 2015]
+[>Created: Fri Dec 11 17:52:33 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -625,7 +625,7 @@ vs0 f44 actionTable 'out=in1;
 vs0 f44 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f44 outLinks "TaskA.ivp" #txt
 vs0 f44 caseData '#
-#Tue Dec 08 14:52:09 CET 2015
+#Fri Dec 11 17:52:22 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -653,7 +653,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f44 taskData '#
-#Tue Dec 08 14:52:09 CET 2015
+#Fri Dec 11 17:52:22 CET 2015
 TaskA.EXC=1505C75E929B75AE-f46-buffer
 TaskA.EXP=''480h''
 TaskA.EXPRI=2
@@ -661,7 +661,7 @@ TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
 TaskA.NAM=Bitte Leumund f\u00FCr Antrag Nr. <%\=in1.request.uniqueIdentifier%> hochladen
 TaskA.PRI=2
-TaskA.ROL=Everybody
+TaskA.ROL=Polizei Mitarbeiter
 TaskA.SKIP_TASK_LIST=false
 TaskA.TYPE=0
 ' #txt
@@ -673,7 +673,7 @@ taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
 taskDef.setName(engine.expandMacros("Bitte Leumund für Antrag Nr. <%=in1.request.uniqueIdentifier%> hochladen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Polizei Mitarbeiter");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryPeriod(1000 * (''480h'').toNumber());
 taskDef.setExpiryActivator("Everybody");
@@ -780,7 +780,7 @@ vs0 f51 actionTable 'out=in1;
 vs0 f51 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f51 outLinks "TaskA.ivp" #txt
 vs0 f51 caseData '#
-#Fri Dec 11 17:21:30 CET 2015
+#Fri Dec 11 17:52:31 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -808,7 +808,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f51 taskData '#
-#Fri Dec 11 17:21:30 CET 2015
+#Fri Dec 11 17:52:31 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
