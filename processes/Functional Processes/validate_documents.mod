@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Wed Dec 09 22:07:04 CET 2015]
+[>Created: Fri Dec 11 10:01:26 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -70,6 +70,9 @@ vs0 @TkArc f40 '' #zField
 vs0 @PushWFArc f54 '' #zField
 vs0 Bk4 S41 'Sub 4' #zField
 vs0 @PushWFArc f9 '' #zField
+vs0 @AnnotationArc f10 '' #zField
+vs0 @InfoButton f15 '' #zField
+vs0 @AnnotationArc f17 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -185,17 +188,20 @@ vs0 f1 @|EndSubIcon #fIcon
 vs0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Es wird eine Regel definiert, wann ein Gesuch
-angenommen wird und wann es abgelehnt wrid.
-Bsp. Deutsch mässig und alles andere ist gut, dann 
-dennoch annehmen etc.</name>
-        <nameStyle>46,7
-117,7
+        <name>Wir haben und gegen eine fixe Regel entschieden und zwar aus folgendem Grund:
+--&gt; Uns war nicht klar, ob es fixe Regeln gibt, und wenn ja welche. Dies müsste mit 
+dem Kunde nach dem POC besprochen werden und falls eine solche Regel vom 
+Kunden genutzt werden wollte, müsste dieser die Regeln in enger Zusammenarbeit 
+mit einem Entwickler von uns aufstellten und auch pflegen.
+--&gt; Es stellt sich aber generell die Frage, ob eine fixe Regel hier Sinn macht, da die 
+Dokumente vorher durch einzelne Personen geprüft werden, würden wir - mit unserer 
+persönlichen Meinung - das Vier-Augen Prinzip bevorzugen.</name>
+        <nameStyle>604,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-vs0 f16 1032 34 304 76 -144 -32 #rect
+vs0 f16 1024 226 480 140 -234 -64 #rect
 vs0 f16 @|IBIcon #fIcon
 vs0 f33 type einbuergerung_Gruppe6.Data #txt
 vs0 f33 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
@@ -278,7 +284,7 @@ vs0 f4 actionTable 'out=in1;
 vs0 f4 outTypes "einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data","einbuergerung_Gruppe6.Data" #txt
 vs0 f4 outLinks "TaskB.ivp","TaskC.ivp","TaskD.ivp","TaskA.ivp","TaskE.ivp" #txt
 vs0 f4 caseData '#
-#Tue Dec 08 15:14:01 CET 2015
+#Fri Dec 11 09:59:52 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -306,7 +312,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f4 taskData '#
-#Tue Dec 08 15:14:01 CET 2015
+#Fri Dec 11 09:59:52 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -319,7 +325,7 @@ TaskB.EXROL=Everybody
 TaskB.EXTYPE=0
 TaskB.NAM=Bitte Finanzielle Verh\u00E4ltnisse pr\u00FCfen
 TaskB.PRI=2
-TaskB.ROL=Migrationsamt Deutschkenntnisse Pr\u00FCfer
+TaskB.ROL=Migrationsamt Finanzielle Verh\u00E4ltnisse Pr\u00FCfer
 TaskB.SKIP_TASK_LIST=false
 TaskB.TYPE=0
 TaskC.EXPRI=2
@@ -335,7 +341,7 @@ TaskD.EXROL=Everybody
 TaskD.EXTYPE=0
 TaskD.NAM=Bitte Deutschkenntnisse pr\u00FCfen
 TaskD.PRI=2
-TaskD.ROL=Migrationsamt Finanzielle Verh\u00E4ltnisse Pr\u00FCfer
+TaskD.ROL=Migrationsamt Deutschkenntnisse Pr\u00FCfer
 TaskD.SKIP_TASK_LIST=false
 TaskD.TYPE=0
 TaskE.EXPRI=2
@@ -343,7 +349,7 @@ TaskE.EXROL=Everybody
 TaskE.EXTYPE=0
 TaskE.NAM=Leumund bei Polizei anfordern
 TaskE.PRI=2
-TaskE.ROL=Everybody
+TaskE.ROL=Polizei Mitarbeiter
 TaskE.SKIP_TASK_LIST=false
 TaskE.TYPE=0
 ' #txt
@@ -355,7 +361,7 @@ taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskB.ivp");
 taskDef.setName(engine.expandMacros("Bitte Finanzielle Verhältnisse prüfen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Migrationsamt Deutschkenntnisse Prüfer");
+taskDef.setActivator("Migrationsamt Finanzielle Verhältnisse Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -373,7 +379,7 @@ taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskD.ivp");
 taskDef.setName(engine.expandMacros("Bitte Deutschkenntnisse prüfen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Migrationsamt Finanzielle Verhältnisse Prüfer");
+taskDef.setActivator("Migrationsamt Deutschkenntnisse Prüfer");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -390,7 +396,7 @@ taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskE.ivp");
 taskDef.setName(engine.expandMacros("Leumund bei Polizei anfordern"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Polizei Mitarbeiter");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -963,6 +969,34 @@ fällen</name>
 vs0 S41 1080 146 144 44 -67 -20 #rect
 vs0 S41 @|BpmnUserTaskIcon #fIcon
 vs0 f9 1224 168 1329 168 #arcP
+vs0 f10 1264 226 1152 190 #arcP
+vs0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Wir haben den&quot;Leumund anfordern&quot; aus folgendem Grund 
+als User Task der Polizei modelliert:
+--&gt; Wir hatten Zweifel, ob die Polizei bzw. der Staat bereit sein 
+würde, einen Webservice für solche Daten anzubieten, obwohl 
+dies eigentliche die schönste und mittlerweile sicher auch eine
+sehr sichere Variante wäre.
+--&gt; Weiter haben wir uns gegen einen Versand des Leumunds
+per Mail entschieden, da eine solche Implementation sehr 
+Fehleranfällig ist. Der Polizist könnte sich vertippen und der 
+Leumund würde bei einer völlig anderen Person landen etc.
+--&gt; Mit einem generierten Login hat nun die Polizei direkten
+Zugriff auf unser Portal und kann die Leumunde gerade dort 
+hochladen. Das Login ist des Weiteren immer ein anderes, 
+damit Benutzer nicht auch nach ihrer Zeit bei der Polizei 
+auf das Portal zugreiffen können.</name>
+        <nameStyle>92,7
+729,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f15 776 674 352 252 -172 -120 #rect
+vs0 f15 @|IBIcon #fIcon
+vs0 f17 952 674 776 470 #arcP
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1395,6 +1429,10 @@ vs0 f2 out f54 tail #connect
 vs0 f54 head S41 g0 #connect
 vs0 S41 g1 f9 tail #connect
 vs0 f9 head f1 mainIn #connect
+vs0 f16 ao f10 tail #connect
+vs0 f10 head S41 ai #connect
+vs0 f15 ao f17 tail #connect
+vs0 f17 head U20 ai #connect
 Bk0 g0 m f4 tail #connect
 Bk0 f4 head f2 mainIn #connect
 Bk0 f2 mainOut f6 tail #connect

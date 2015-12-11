@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 15:25:21 CET 2015]
+[>Created: Fri Dec 11 10:03:35 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -392,9 +392,9 @@ prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U50 768 114 144 60 -51 -24 #rect
+dn0 U50 760 114 144 60 -51 -24 #rect
 dn0 U50 @|BpmnUserTaskIcon #fIcon
-dn0 f13 912 144 960 144 #arcP
+dn0 f13 904 144 960 144 #arcP
 dn0 f21 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f21 actionTable 'out=in1;
@@ -465,11 +465,11 @@ dn0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f21 664 128 32 32 -69 24 #rect
+dn0 f21 656 128 32 32 -69 24 #rect
 dn0 f21 @|TaskSwitchIcon #fIcon
 dn0 f7 expr data #txt
 dn0 f7 outCond ivp=="TaskA.ivp" #txt
-dn0 f7 696 144 768 144 #arcP
+dn0 f7 688 144 760 144 #arcP
 dn0 f7 0 0.943880027099722 0 0 #arcLabel
 dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -568,7 +568,7 @@ dn0 f30 @|AlternativeIcon #fIcon
 dn0 f29 expr in #txt
 dn0 f29 type einbuergerung_Gruppe6.Data #txt
 dn0 f29 var in1 #txt
-dn0 f29 600 144 664 144 #arcP
+dn0 f29 600 144 656 144 #arcP
 dn0 f29 0 0.2896357907497452 0 0 #arcLabel
 dn0 f32 616 376 584 160 #arcP
 dn0 f32 1 584 376 #addKink
@@ -718,15 +718,15 @@ dn0 f40 type einbuergerung_Gruppe6.Data #txt
 dn0 f40 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Bestaetigung nicht
+        <name>Freigabequittung nicht
 eingetroffen</name>
-        <nameStyle>19,7
+        <nameStyle>23,7
 12,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-dn0 f40 73 121 30 30 -51 17 #rect
+dn0 f40 73 121 30 30 -61 17 #rect
 dn0 f40 @|ExceptionIcon #fIcon
 dn0 S20 .resExport export #txt
 dn0 S20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -782,7 +782,7 @@ dn0 f38 actionTable 'out=in1;
 dn0 f38 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f38 outLinks "TaskA.ivp" #txt
 dn0 f38 caseData '#
-#Wed Dec 09 20:42:58 CET 2015
+#Fri Dec 11 10:03:32 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -810,7 +810,7 @@ type.code=
 type.name=
 ' #txt
 dn0 f38 taskData '#
-#Wed Dec 09 20:42:58 CET 2015
+#Fri Dec 11 10:03:32 CET 2015
 TaskA.EXC=1505C51442680211-f40-buffer
 TaskA.EXP=''5s''
 TaskA.EXPRI=2
@@ -840,7 +840,18 @@ taskDefinitions.add(taskDef);
 ' #txt
 dn0 f38 type einbuergerung_Gruppe6.Data #txt
 dn0 f38 template "" #txt
-dn0 f38 512 128 32 32 0 16 #rect
+dn0 f38 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Freigabequittung
+eingetroffen?</name>
+        <nameStyle>17,7
+13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f38 512 128 32 32 -46 18 #rect
 dn0 f38 @|TaskSwitchIcon #fIcon
 dn0 S60 .resExport export #txt
 dn0 S60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
