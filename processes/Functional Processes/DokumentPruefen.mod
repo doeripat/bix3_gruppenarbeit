@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 15:18:25 CET 2015]
+[>Created: Fri Dec 11 17:29:00 CET 2015]
 151165A416DBA684 3.17 #module
 >Proto >Proto Collection #zClass
 Dn0 DokumentPruefen Big #zClass
@@ -41,10 +41,10 @@ Dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Dn0 f0 81 49 30 30 -26 17 #rect
+Dn0 f0 81 73 30 30 -26 17 #rect
 Dn0 f0 @|StartSubIcon #fIcon
 Dn0 f1 type einbuergerung_Gruppe6.Data #txt
-Dn0 f1 889 49 30 30 0 15 #rect
+Dn0 f1 713 73 30 30 0 15 #rect
 Dn0 f1 @|EndSubIcon #fIcon
 Dn0 f5 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -63,12 +63,12 @@ comment to documents</name>
     </language>
 </elementInfo>
 ' #txt
-Dn0 f5 528 42 160 44 -60 -16 #rect
+Dn0 f5 432 66 160 44 -60 -16 #rect
 Dn0 f5 @|StepIcon #fIcon
 Dn0 f4 expr out #txt
-Dn0 f4 688 64 889 64 #arcP
+Dn0 f4 592 88 713 88 #arcP
 Dn0 f7 expr out #txt
-Dn0 f7 400 64 528 64 #arcP
+Dn0 f7 320 88 432 88 #arcP
 Dn0 f6 targetWindow NEW:card: #txt
 Dn0 f6 targetDisplay TOP #txt
 Dn0 f6 richDialogId einbuergerung_Gruppe6.EntsprechendeDokumentePruefen #txt
@@ -99,15 +99,22 @@ prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-Dn0 f6 288 42 112 44 -28 -16 #rect
+Dn0 f6 208 66 112 44 -28 -16 #rect
 Dn0 f6 @|RichDialogIcon #fIcon
 Dn0 f2 expr out #txt
-Dn0 f2 111 64 288 64 #arcP
+Dn0 f2 111 88 208 88 #arcP
 >Proto Dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Dn0 .processKind CALLABLE_SUB #txt
 >Proto Dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
-    <language/>
+    <language>
+        <swimlaneLabel>Migrationsamt</swimlaneLabel>
+    </language>
+    <swimlaneOrientation>false</swimlaneOrientation>
+    <swimlaneSize>128</swimlaneSize>
+    <swimlaneColor gradient="false">-3342337</swimlaneColor>
+    <swimlaneType>POOL</swimlaneType>
+    <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
 </elementInfo>
 ' #txt
 >Proto Dn0 0 0 32 24 18 0 #rect
