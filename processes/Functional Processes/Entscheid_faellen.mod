@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 15:59:06 CET 2015]
+[>Created: Fri Dec 11 19:15:33 CET 2015]
 1506BE0531520C0C 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Entscheid_faellen Big #zClass
@@ -31,7 +31,6 @@ En0 Bk2 S21 'Sub 2' #zField
 En0 Bk3 S11 'Sub 1' #zField
 En0 Bk5 S41 'Sub 4' #zField
 En0 @Alternative f2 '' #zField
-En0 @PushWFArc f5 '' #zField
 En0 Bk1 S30 'Send 3' #zField
 En0 Bk0 U10 'User 1' #zField
 En0 @PushWFArc f3 '' #zField
@@ -45,6 +44,9 @@ En0 @PushWFArc f8 '' #zField
 En0 @InfoButton f11 '' #zField
 En0 @AnnotationArc f14 '' #zField
 En0 @TkArc f4 '' #zField
+En0 @InfoButton f18 '' #zField
+En0 @AnnotationArc f19 '' #zField
+En0 @PushWFArc f5 '' #zField
 >Proto En0 En0 Entscheid_faellen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -169,8 +171,9 @@ Bk0 @PushWFArc f0 '' #zField
 Bk0 @PushWFArc f3 '' #zField
 >Proto Bk0 Bk4 BpmnUserTask #zField
 En0 f1 type einbuergerung_Gruppe6.Data #txt
-En0 f1 1257 89 30 30 0 15 #rect
+En0 f1 1281 193 30 30 0 15 #rect
 En0 f1 @|EndSubIcon #fIcon
+En0 f1 -1|-1|-16777216 #nodeStyle
 En0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 En0 f13 actionTable 'out=in1;
@@ -232,12 +235,16 @@ taskDefinitions.add(taskDef);
 ' #txt
 En0 f13 type einbuergerung_Gruppe6.Data #txt
 En0 f13 template "" #txt
-En0 f13 120 88 32 32 0 16 #rect
+En0 f13 144 80 32 32 0 16 #rect
 En0 f13 @|TaskSwitchIcon #fIcon
+En0 f13 -1|-1|-16777216 #nodeStyle
 En0 f7 expr data #txt
 En0 f7 outCond ivp=="TaskA.ivp" #txt
-En0 f7 152 104 186 104 #arcP
-En0 f9 406 104 440 104 #arcP
+En0 f7 176 96 194 96 #arcP
+En0 f9 414 96 456 208 #arcP
+En0 f9 1 432 96 #addKink
+En0 f9 2 432 208 #addKink
+En0 f9 1 0.15233378941206638 0 0 #arcLabel
 En0 S21 .resExport export #txt
 En0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -249,9 +256,10 @@ Verfügung erstellen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 S21 440 82 176 44 -57 -20 #rect
+En0 S21 456 186 176 44 -57 -20 #rect
 En0 S21 @|BpmnServiceTaskIcon #fIcon
 En0 S21 g1 88 -2 #fFoot
+En0 S21 -1|-1|-16777216 #nodeStyle
 En0 S11 .resExport export #txt
 En0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -263,8 +271,9 @@ und Begründung erfassen</name>
     </language>
 </elementInfo>
 ' #txt
-En0 S11 186 82 220 44 -88 -20 #rect
+En0 S11 194 74 220 44 -88 -20 #rect
 En0 S11 @|BpmnUserTaskIcon #fIcon
+En0 S11 -1|-1|-16777216 #nodeStyle
 En0 S41 .resExport export #txt
 En0 S41 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -276,8 +285,9 @@ Daten persistieren</name>
     </language>
 </elementInfo>
 ' #txt
-En0 S41 648 82 192 44 -67 -20 #rect
+En0 S41 672 186 192 44 -67 -20 #rect
 En0 S41 @|BpmnServiceTaskIcon #fIcon
+En0 S41 -1|-1|-16777216 #nodeStyle
 En0 f2 type einbuergerung_Gruppe6.Data #txt
 En0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -288,22 +298,23 @@ En0 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f2 880 88 32 32 -41 -38 #rect
+En0 f2 904 192 32 32 -29 -38 #rect
 En0 f2 @|AlternativeIcon #fIcon
-En0 f5 840 104 880 104 #arcP
+En0 f2 -1|-1|-16777216 #nodeStyle
 En0 S30 .resExport export #txt
 En0 S30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Logindaten an 
+        <name>Temp. Logindaten an 
 Dep des Innern senden</name>
-        <nameStyle>36,5,7
+        <nameStyle>42,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-En0 S30 944 130 160 44 -60 -16 #rect
+En0 S30 960 234 176 44 -60 -16 #rect
 En0 S30 @|BpmnSendTaskIcon #fIcon
+En0 S30 -1|-1|-16777216 #nodeStyle
 En0 U10 .resExport export #txt
 En0 U10 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -315,13 +326,14 @@ downloaden</name>
     </language>
 </elementInfo>
 ' #txt
-En0 U10 1056 250 144 44 -51 -16 #rect
+En0 U10 1080 362 144 44 -51 -16 #rect
 En0 U10 @|BpmnUserTaskIcon #fIcon
 En0 U10 g0 -72 -2 #fFoot
-En0 f3 616 102 648 104 #arcP
+En0 U10 -1|-1|-16777216 #nodeStyle
+En0 f3 632 206 672 208 #arcP
 En0 f12 expr in #txt
-En0 f12 896 120 944 152 #arcP
-En0 f12 1 896 152 #addKink
+En0 f12 920 224 960 256 #arcP
+En0 f12 1 920 256 #addKink
 En0 f12 1 0.9110086358710967 0 0 #arcLabel
 En0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 En0 f0 inParamTable 'out=param.data;
@@ -343,11 +355,13 @@ En0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f0 57 89 30 30 -26 17 #rect
+En0 f0 81 81 30 30 -26 17 #rect
 En0 f0 @|StartSubIcon #fIcon
+En0 f0 -1|-1|-16777216 #nodeStyle
 En0 f15 type einbuergerung_Gruppe6.Data #txt
-En0 f15 1200 88 32 32 0 16 #rect
+En0 f15 1224 192 32 32 0 16 #rect
 En0 f15 @|AlternativeIcon #fIcon
+En0 f15 -1|-1|-16777216 #nodeStyle
 En0 f16 expr in #txt
 En0 f16 outCond !in.allBoolean #txt
 En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -359,16 +373,16 @@ En0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 f16 912 104 1200 104 #arcP
+En0 f16 936 208 1224 208 #arcP
 En0 f16 0 0.0763888888888889 0 -9 #arcLabel
 En0 f6 expr in #txt
-En0 f6 1232 104 1257 104 #arcP
+En0 f6 1256 208 1281 208 #arcP
 En0 f6 0 0.0378619153674833 0 -9 #arcLabel
-En0 f10 1200 272 1216 120 #arcP
-En0 f10 1 1216 272 #addKink
+En0 f10 1224 384 1240 224 #arcP
+En0 f10 1 1240 384 #addKink
 En0 f10 1 0.11672345752157963 0 0 #arcLabel
-En0 f8 1024 174 1056 270 #arcP
-En0 f8 1 1024 270 #addKink
+En0 f8 1048 278 1080 382 #arcP
+En0 f8 1 1048 382 #addKink
 En0 f8 0 0.6635838728763408 0 0 #arcLabel
 En0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -383,31 +397,62 @@ wurden erstellt.</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f11 792 226 192 92 -87 -40 #rect
+En0 f11 888 442 192 92 -87 -40 #rect
 En0 f11 @|IBIcon #fIcon
-En0 f11 -14336|-14336|-16777216 #nodeStyle
-En0 f14 984 226 1056 272 #arcP
+En0 f11 -4144960|-4144960|-16777216 #nodeStyle
+En0 f14 984 442 1080 384 #arcP
+En0 f14 1 1048 384 #addKink
+En0 f14 0 0.6392649478286225 0 0 #arcLabel
 En0 f4 expr out #txt
 En0 f4 type einbuergerung_Gruppe6.Data #txt
 En0 f4 var in1 #txt
-En0 f4 87 104 120 104 #arcP
+En0 f4 111 96 144 96 #arcP
+En0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Mit einem generierten Login hat nun das Dept des Innern direkten
+Zugriff auf unser Portal und kann die Original Dokumente herunterladen. 
+Nachdem der Mitarbeiter des Dept. des Innern auf Beenden klickt, sind die
+Login Daten nicht mehr gültig,</name>
+        <nameStyle>138,7
+104,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+En0 f18 1048 66 416 76 -203 -32 #rect
+En0 f18 @|IBIcon #fIcon
+En0 f18 -4144960|-4144960|-16777216 #nodeStyle
+En0 f19 1256 142 1048 234 #arcP
+En0 f5 864 208 904 208 #arcP
+En0 f5 0 0.09740469399083829 0 0 #arcLabel
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
+        <swimlaneLabel>Gemeinde Verwaltung Schwyz</swimlaneLabel>
         <swimlaneLabel>Migrationsamt</swimlaneLabel>
+        <swimlaneLabel>System</swimlaneLabel>
         <swimlaneLabel>Dept. des 
 Innern, Kt SZ</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
-    <swimlaneSize>152</swimlaneSize>
-    <swimlaneSize>104</swimlaneSize>
+    <swimlaneSize>264</swimlaneSize>
+    <swimlaneSize>128</swimlaneSize>
+    <swimlaneSize>136</swimlaneSize>
+    <swimlaneSize>112</swimlaneSize>
     <swimlaneColor gradient="false">-3342337</swimlaneColor>
+    <swimlaneColor gradient="false">-3342337</swimlaneColor>
+    <swimlaneColor gradient="false">-3355393</swimlaneColor>
     <swimlaneColor gradient="false">-13057</swimlaneColor>
     <swimlaneType>POOL</swimlaneType>
+    <swimlaneType>LANE_IN_POOL</swimlaneType>
+    <swimlaneType>LANE_IN_POOL</swimlaneType>
     <swimlaneType>POOL</swimlaneType>
     <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
     <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
 </elementInfo>
 ' #txt
@@ -1147,7 +1192,7 @@ Bk5 f24 465 175 464 250 #arcP
 Bk5 f24 0 0.6323843758318921 0 0 #arcLabel
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BpmnServiceTaskIcon #fIcon
-Bk1 f3 beanConfig '"{/emailSubject ""Neuer Einbürgerungsantrag""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""depdesinnern@sz.ch""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\n<%=in.mailString%>\\n\\nFolgende Login Daten können Sie für Antrag Nr. <%=in.request.uniqueIdentifier%> benutzen:\\n\\nBenutzername: <%=in.externeBehoerde.username%>\\nPasswort: <%=in.externeBehoerde.password%>\\n\\nVielen Dank im Voraus für die Zusammenarbeit.\\n\\nFreundliche Grüsse\\n\\nDas Migrationsamt""/emailAttachments * }"' #txt
+Bk1 f3 beanConfig '"{/emailSubject ""Neuer Einbürgerungsantrag""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""depp_des_innern@sz.ch""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\n<%=in.mailString%>\\n\\nFolgende Login Daten können Sie für Antrag Nr. <%=in.request.uniqueIdentifier%> benutzen:\\n\\nBenutzername: <%=in.externeBehoerde.username%>\\nPasswort: <%=in.externeBehoerde.password%>\\n\\nVielen Dank im Voraus für die Zusammenarbeit.\\n\\nFreundliche Grüsse\\n\\nDas Migrationsamt""/emailAttachments * }"' #txt
 Bk1 f3 type einbuergerung_Gruppe6.Data #txt
 Bk1 f3 timeout 0 #txt
 Bk1 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1174,17 +1219,17 @@ Bk1 f1 type einbuergerung_Gruppe6.Data #txt
 Bk1 f1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Passwort für Dep 
-des Innerngenerieren</name>
+        <name>Passwort für Dept. 
+des Innern generieren</name>
         <nameStyle>13,7
-25,7
+28,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk1 f1 216 170 144 44 -53 -16 #rect
+Bk1 f1 216 170 144 44 -54 -16 #rect
 Bk1 f1 @|StepIcon #fIcon
-Bk1 g0 123 179 26 26 0 5 #rect
+Bk1 g0 123 179 26 26 -82 15 #rect
 Bk1 g0 @|MIGIcon #fIcon
 Bk1 f2 149 192 216 192 #arcP
 Bk1 f4 expr out #txt
@@ -1267,8 +1312,6 @@ En0 f13 out f7 tail #connect
 En0 f9 head S21 g0 #connect
 En0 f7 head S11 g0 #connect
 En0 S11 g1 f9 tail #connect
-En0 S41 g1 f5 tail #connect
-En0 f5 head f2 in #connect
 En0 S21 g1 f3 tail #connect
 En0 f3 head S41 g0 #connect
 En0 f12 head S30 g0 #connect
@@ -1285,6 +1328,10 @@ En0 f11 ao f14 tail #connect
 En0 f14 head U10 ai #connect
 En0 f0 mainOut f4 tail #connect
 En0 f4 head f13 in #connect
+En0 f18 ao f19 tail #connect
+En0 f19 head S30 ai #connect
+En0 S41 g1 f5 tail #connect
+En0 f5 head f2 in #connect
 Bk2 f21 head f22 mainIn #connect
 Bk2 f17 mainOut f23 tail #connect
 Bk2 f23 head f15 in #connect

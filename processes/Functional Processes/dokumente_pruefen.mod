@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 17:20:17 CET 2015]
+[>Created: Fri Dec 11 18:26:16 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -33,7 +33,6 @@ dn0 @Alternative f8 '' #zField
 dn0 @Alternative f23 '' #zField
 dn0 @PushWFArc f15 '' #zField
 dn0 Bk2 U40 'User 4' #zField
-dn0 @InfoButton f17 '' #zField
 dn0 @TaskSwitch f11 '' #zField
 dn0 @TkArc f19 '' #zField
 dn0 @CallSub f6 '' #zField
@@ -41,9 +40,6 @@ dn0 Bk8 U50 'User 5' #zField
 dn0 @PushWFArc f13 '' #zField
 dn0 @TaskSwitch f21 '' #zField
 dn0 @PushWFArc f7 '' #zField
-dn0 @TaskSwitch f9 '' #zField
-dn0 @TkArc f10 '' #zField
-dn0 @AnnotationArc f18 '' #zField
 dn0 Bk1 U30 'User 3' #zField
 dn0 @Alternative f30 '' #zField
 dn0 @TkArc f29 '' #zField
@@ -57,8 +53,6 @@ dn0 @CallSub f45 '' #zField
 dn0 @PushWFArc f46 '' #zField
 dn0 @TaskSwitch f38 '' #zField
 dn0 Bk3 S60 'Send 6' #zField
-dn0 @PushWFArc f24 '' #zField
-dn0 @PushWFArc f47 '' #zField
 dn0 Bk4 S70 'Service 7' #zField
 dn0 @PushWFArc f2 '' #zField
 dn0 @PushWFArc f3 '' #zField
@@ -75,6 +69,12 @@ dn0 @PushWFArc f39 '' #zField
 dn0 Bk5 S11 'Sub 1' #zField
 dn0 @CallSub f14 '' #zField
 dn0 @PushWFArc f16 '' #zField
+dn0 @InfoButton f17 '' #zField
+dn0 @TaskSwitch f9 '' #zField
+dn0 @PushWFArc f18 '' #zField
+dn0 @TkArc f10 '' #zField
+dn0 @PushWFArc f20 '' #zField
+dn0 @AnnotationArc f22 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -203,24 +203,27 @@ dn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f0 65 361 30 30 -26 17 #rect
+dn0 f0 97 345 30 30 -26 17 #rect
 dn0 f0 @|StartSubIcon #fIcon
+dn0 f0 -1|-1|-16777216 #nodeStyle
 dn0 f1 type einbuergerung_Gruppe6.Data #txt
-dn0 f1 1841 73 30 30 0 15 #rect
+dn0 f1 1865 49 30 30 0 15 #rect
 dn0 f1 @|EndSubIcon #fIcon
+dn0 f1 -1|-1|-16777216 #nodeStyle
 dn0 f8 type einbuergerung_Gruppe6.Data #txt
 dn0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>Gesuch und Dokumente 
-vollständig &amp; korrekt</name>
-        <nameStyle>43,7
+vollständig &amp; korrekt?</name>
+        <nameStyle>44,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-dn0 f8 960 128 32 32 -58 -52 #rect
+dn0 f8 984 104 32 32 -58 -52 #rect
 dn0 f8 @|AlternativeIcon #fIcon
+dn0 f8 -1|-1|-16777216 #nodeStyle
 dn0 f23 type einbuergerung_Gruppe6.Data #txt
 dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -231,8 +234,9 @@ dn0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f23 1736 128 32 32 20 -8 #rect
+dn0 f23 1728 104 32 32 20 -8 #rect
 dn0 f23 @|AlternativeIcon #fIcon
+dn0 f23 -1|-1|-16777216 #nodeStyle
 dn0 f15 expr in #txt
 dn0 f15 outCond 'in.request.personList != null' #txt
 dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -244,9 +248,9 @@ dn0 f15 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f15 1752 128 1841 88 #arcP
-dn0 f15 1 1752 88 #addKink
-dn0 f15 0 0.6428571428571429 -16 0 #arcLabel
+dn0 f15 1744 104 1865 64 #arcP
+dn0 f15 1 1744 64 #addKink
+dn0 f15 0 0.45 9 0 #arcLabel
 dn0 U40 .resExport export #txt
 dn0 U40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -258,23 +262,10 @@ korrigieren</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U40 616 354 160 44 -59 -16 #rect
+dn0 U40 608 338 160 44 -59 -16 #rect
 dn0 U40 @|BpmnUserTaskIcon #fIcon
-dn0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Gesuchsformular kann nur noch versendet werden, 
-wenn alle benötigten Informationen ausgefüllt 
-worden sind. (Alle Felder des User Dialogs werden 
-auf required gesetzt)</name>
-        <nameStyle>49,7
-119,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 f17 424 418 288 76 -141 -32 #rect
-dn0 f17 @|IBIcon #fIcon
+dn0 U40 g0 80 1 #fFoot
+dn0 U40 -1|-1|-16777216 #nodeStyle
 dn0 f11 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f11 actionTable 'out=in1;
@@ -349,12 +340,13 @@ ausfüllen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f11 160 360 32 32 -49 18 #rect
+dn0 f11 192 344 32 32 -44 -52 #rect
 dn0 f11 @|TaskSwitchIcon #fIcon
+dn0 f11 -1|-1|-16777216 #nodeStyle
 dn0 f19 expr out #txt
 dn0 f19 type einbuergerung_Gruppe6.Data #txt
 dn0 f19 var in1 #txt
-dn0 f19 95 376 160 376 #arcP
+dn0 f19 127 360 192 360 #arcP
 dn0 f6 type einbuergerung_Gruppe6.Data #txt
 dn0 f6 processCall 'Functional Processes/Rechnungswesen:call(einbuergerung_Gruppe6.Invoice,einbuergerung_Gruppe6.Data)' #txt
 dn0 f6 doCall true #txt
@@ -375,8 +367,9 @@ dn0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f6 1200 122 128 44 -56 -8 #rect
+dn0 f6 1224 98 128 44 -56 -8 #rect
 dn0 f6 @|CallSubIcon #fIcon
+dn0 f6 -1|-1|-16777216 #nodeStyle
 dn0 U50 .resExport export #txt
 dn0 U50 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -389,9 +382,10 @@ prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U50 760 114 144 60 -51 -24 #rect
+dn0 U50 760 90 144 60 -51 -24 #rect
 dn0 U50 @|BpmnUserTaskIcon #fIcon
-dn0 f13 904 144 960 144 #arcP
+dn0 U50 -1|-1|-16777216 #nodeStyle
+dn0 f13 904 120 984 120 #arcP
 dn0 f21 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f21 actionTable 'out=in1;
@@ -399,7 +393,7 @@ dn0 f21 actionTable 'out=in1;
 dn0 f21 outTypes "einbuergerung_Gruppe6.Data" #txt
 dn0 f21 outLinks "TaskA.ivp" #txt
 dn0 f21 caseData '#
-#Fri Dec 11 17:20:16 CET 2015
+#Fri Dec 11 18:22:49 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -427,7 +421,7 @@ type.code=
 type.name=
 ' #txt
 dn0 f21 taskData '#
-#Fri Dec 11 17:20:16 CET 2015
+#Fri Dec 11 18:22:49 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -456,96 +450,20 @@ dn0 f21 template "" #txt
 dn0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Formale Korrektheit prüfen</name>
-        <nameStyle>26,7
+        <name>Formale und
+Korrektheit prüfen</name>
+        <nameStyle>30,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-dn0 f21 656 128 32 32 -69 24 #rect
+dn0 f21 656 104 32 32 -47 -53 #rect
 dn0 f21 @|TaskSwitchIcon #fIcon
+dn0 f21 -1|-1|-16777216 #nodeStyle
 dn0 f7 expr data #txt
 dn0 f7 outCond ivp=="TaskA.ivp" #txt
-dn0 f7 688 144 760 144 #arcP
+dn0 f7 688 120 760 120 #arcP
 dn0 f7 0 0.943880027099722 0 0 #arcLabel
-dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-dn0 f9 actionTable 'out=in1;
-' #txt
-dn0 f9 outTypes "einbuergerung_Gruppe6.Data" #txt
-dn0 f9 outLinks "TaskA.ivp" #txt
-dn0 f9 caseData '#
-#Fri Nov 27 00:34:24 CET 2015
-businessCalendarName=
-businessCreator.user=
-businessMilestone.timestamp=
-businessObject.code=
-businessObject.docDb.code=
-businessObject.folder.id=
-businessObject.name=
-businessPriority=
-businessStart.timestamp=
-case.description=
-case.name=
-correspondent.id=
-mainContact.docDb.code=
-mainContact.folder.id=
-mainContact.id=
-mainContact.name=
-mainContact.type=
-process.code=
-process.name=
-processCategory.code=
-processCategory.name=
-subType.code=
-subType.name=
-type.code=
-type.name=
-' #txt
-dn0 f9 taskData '#
-#Fri Nov 27 00:34:24 CET 2015
-TaskA.EXPRI=2
-TaskA.EXROL=Everybody
-TaskA.EXTYPE=0
-TaskA.NAM=Bitte Dokumente gem\u00E4ss Kommentar erneut hochladen
-TaskA.PRI=2
-TaskA.ROL=Everybody
-TaskA.SKIP_TASK_LIST=false
-TaskA.TYPE=0
-' #txt
-dn0 f9 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
-List<TaskDefinition> taskDefinitions;
-TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
-DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
-taskDef = new TaskDefinition();
-taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("Bitte Dokumente gemäss Kommentar erneut hochladen"));
-taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
-taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryActivator("Everybody");
-taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDefinitions.add(taskDef);
-' #txt
-dn0 f9 type einbuergerung_Gruppe6.Data #txt
-dn0 f9 template "" #txt
-dn0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>Anfrage verbessern</name>
-        <nameStyle>18,7
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-dn0 f9 960 360 32 32 -53 18 #rect
-dn0 f9 @|TaskSwitchIcon #fIcon
-dn0 f10 expr in #txt
-dn0 f10 outCond !in.allBoolean #txt
-dn0 f10 type einbuergerung_Gruppe6.Data #txt
-dn0 f10 var in1 #txt
-dn0 f10 976 160 976 360 #arcP
-dn0 f18 424 456 344 400 #arcP
 dn0 U30 .resExport export #txt
 dn0 U30 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -557,18 +475,20 @@ ausfüllen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 U30 281 352 126 48 -44 -16 #rect
+dn0 U30 313 336 126 48 -44 -16 #rect
 dn0 U30 @|BpmnUserTaskIcon #fIcon
+dn0 U30 -1|-1|-16777216 #nodeStyle
 dn0 f30 type einbuergerung_Gruppe6.Data #txt
-dn0 f30 568 128 32 32 0 16 #rect
+dn0 f30 576 104 32 32 0 16 #rect
 dn0 f30 @|AlternativeIcon #fIcon
+dn0 f30 -1|-1|-16777216 #nodeStyle
 dn0 f29 expr in #txt
 dn0 f29 type einbuergerung_Gruppe6.Data #txt
 dn0 f29 var in1 #txt
-dn0 f29 600 144 656 144 #arcP
+dn0 f29 608 120 656 120 #arcP
 dn0 f29 0 0.2896357907497452 0 0 #arcLabel
-dn0 f32 616 376 584 160 #arcP
-dn0 f32 1 584 376 #addKink
+dn0 f32 608 360 592 136 #arcP
+dn0 f32 1 592 360 #addKink
 dn0 f32 1 0.830973769039855 0 0 #arcLabel
 dn0 f40 .resExport export #txt
 dn0 f40 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -587,8 +507,9 @@ eingetroffen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f40 73 121 30 30 -61 17 #rect
+dn0 f40 121 105 30 30 -59 -57 #rect
 dn0 f40 @|ExceptionIcon #fIcon
+dn0 f40 -1|-1|-16777216 #nodeStyle
 dn0 S20 .resExport export #txt
 dn0 S20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -600,17 +521,19 @@ anfordern</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 S20 272 154 128 44 -43 -16 #rect
+dn0 S20 256 226 128 44 -43 -16 #rect
 dn0 S20 @|BpmnSendTaskIcon #fIcon
+dn0 S20 -1|-1|-16777216 #nodeStyle
 dn0 f43 type einbuergerung_Gruppe6.Data #txt
-dn0 f43 168 120 32 32 0 16 #rect
+dn0 f43 200 104 32 32 0 16 #rect
 dn0 f43 @|AlternativeIcon #fIcon
+dn0 f43 -1|-1|-16777216 #nodeStyle
 dn0 f44 expr out #txt
-dn0 f44 103 136 168 136 #arcP
+dn0 f44 151 120 200 120 #arcP
 dn0 f41 expr in #txt
 dn0 f41 outCond 'in.allBoolean == true' #txt
-dn0 f41 184 152 272 176 #arcP
-dn0 f41 1 184 176 #addKink
+dn0 f41 216 136 256 248 #arcP
+dn0 f41 1 216 248 #addKink
 dn0 f41 1 0.3324200059664431 0 0 #arcLabel
 dn0 f45 type einbuergerung_Gruppe6.Data #txt
 dn0 f45 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
@@ -630,12 +553,12 @@ dn0 f45 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f45 280 74 112 44 -22 -8 #rect
+dn0 f45 264 98 112 44 -22 -8 #rect
 dn0 f45 @|CallSubIcon #fIcon
+dn0 f45 -1|-1|-16777216 #nodeStyle
 dn0 f46 expr in #txt
-dn0 f46 184 120 280 96 #arcP
-dn0 f46 1 184 96 #addKink
-dn0 f46 1 0.26653193467584174 0 0 #arcLabel
+dn0 f46 232 120 264 120 #arcP
+dn0 f46 0 0.379373175494943 0 0 #arcLabel
 dn0 f38 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 dn0 f38 actionTable 'out=in1;
@@ -712,8 +635,9 @@ eingetroffen?</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 f38 512 128 32 32 -46 18 #rect
+dn0 f38 512 104 32 32 -44 -52 #rect
 dn0 f38 @|TaskSwitchIcon #fIcon
+dn0 f38 -1|-1|-16777216 #nodeStyle
 dn0 S60 .resExport export #txt
 dn0 S60 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -725,12 +649,9 @@ benachrichtigen</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 S60 816 354 128 44 -42 -16 #rect
+dn0 S60 864 226 128 44 -42 -16 #rect
 dn0 S60 @|BpmnSendTaskIcon #fIcon
-dn0 f24 expr data #txt
-dn0 f24 outCond ivp=="TaskA.ivp" #txt
-dn0 f24 960 376 944 376 #arcP
-dn0 f47 816 376 776 376 #arcP
+dn0 S60 -1|-1|-16777216 #nodeStyle
 dn0 S70 .resExport export #txt
 dn0 S70 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -741,30 +662,44 @@ dn0 S70 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 S70 1032 122 112 44 -37 -8 #rect
+dn0 S70 1064 226 112 44 -37 -8 #rect
 dn0 S70 @|BpmnServiceTaskIcon #fIcon
+dn0 S70 -1|-1|-16777216 #nodeStyle
 dn0 f2 expr in #txt
-dn0 f2 992 144 1032 144 #arcP
+dn0 f2 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f2 1016 120 1064 248 #arcP
+dn0 f2 1 1040 120 #addKink
+dn0 f2 2 1040 248 #addKink
+dn0 f2 0 0.4166666666666667 0 -10 #arcLabel
 dn0 f3 expr data #txt
 dn0 f3 outCond ivp=="TaskA.ivp" #txt
-dn0 f3 192 376 281 376 #arcP
+dn0 f3 224 360 313 360 #arcP
 dn0 f28 expr data #txt
 dn0 f28 outCond ivp=="TaskA.ivp" #txt
-dn0 f28 544 144 568 144 #arcP
+dn0 f28 544 120 576 120 #arcP
 dn0 f5 type einbuergerung_Gruppe6.Data #txt
-dn0 f5 456 128 32 32 0 16 #rect
+dn0 f5 448 104 32 32 0 16 #rect
 dn0 f5 @|AlternativeIcon #fIcon
-dn0 f37 407 376 472 160 #arcP
-dn0 f37 1 472 376 #addKink
+dn0 f5 -1|-1|-16777216 #nodeStyle
+dn0 f37 439 360 464 136 #arcP
+dn0 f37 1 464 360 #addKink
 dn0 f37 1 0.2067949849342754 0 0 #arcLabel
-dn0 f42 400 176 456 144 #arcP
-dn0 f42 1 432 176 #addKink
-dn0 f42 2 432 144 #addKink
+dn0 f42 384 248 448 120 #arcP
+dn0 f42 1 424 248 #addKink
+dn0 f42 2 424 120 #addKink
 dn0 f42 0 0.9333733955839929 0 0 #arcLabel
 dn0 f48 expr in #txt
 dn0 f48 type einbuergerung_Gruppe6.Data #txt
 dn0 f48 var in1 #txt
-dn0 f48 488 144 512 144 #arcP
+dn0 f48 480 120 512 120 #arcP
 dn0 f12 type einbuergerung_Gruppe6.Data #txt
 dn0 f12 processCall 'Functional Processes/validate_documents:call(einbuergerung_Gruppe6.Data)' #txt
 dn0 f12 doCall true #txt
@@ -787,14 +722,24 @@ dn0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f12 1376 122 112 44 -33 -20 #rect
+dn0 f12 1400 98 112 44 -33 -20 #rect
 dn0 f12 @|CallSubIcon #fIcon
-dn0 f4 1144 144 1200 144 #arcP
+dn0 f12 -1|-1|-16777216 #nodeStyle
+dn0 f4 1176 248 1224 120 #arcP
+dn0 f4 1 1192 248 #addKink
+dn0 f4 2 1192 120 #addKink
+dn0 f4 1 0.359779330631331 0 0 #arcLabel
 dn0 f35 expr out #txt
-dn0 f35 1328 144 1376 144 #arcP
+dn0 f35 1352 120 1400 120 #arcP
 dn0 f36 expr out #txt
-dn0 f36 1488 144 1560 144 #arcP
-dn0 f39 1672 144 1736 144 #arcP
+dn0 f36 1512 120 1556 248 #arcP
+dn0 f36 1 1536 120 #addKink
+dn0 f36 2 1536 248 #addKink
+dn0 f36 1 0.5006495004342703 0 0 #arcLabel
+dn0 f39 1692 248 1728 120 #arcP
+dn0 f39 1 1704 248 #addKink
+dn0 f39 2 1704 120 #addKink
+dn0 f39 1 0.3237405008453975 0 0 #arcLabel
 dn0 S11 .resExport export #txt
 dn0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -806,8 +751,9 @@ versenden</name>
     </language>
 </elementInfo>
 ' #txt
-dn0 S11 1560 122 112 44 -46 -20 #rect
+dn0 S11 1556 226 136 44 -46 -20 #rect
 dn0 S11 @|BpmnSendTaskIcon #fIcon
+dn0 S11 -1|-1|-16777216 #nodeStyle
 dn0 f14 type einbuergerung_Gruppe6.Data #txt
 dn0 f14 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
 dn0 f14 doCall true #txt
@@ -828,34 +774,169 @@ dn0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-dn0 f14 1816 170 112 44 -22 -8 #rect
+dn0 f14 1808 146 112 44 -22 -8 #rect
 dn0 f14 @|CallSubIcon #fIcon
+dn0 f14 -1|-1|-16777216 #nodeStyle
 dn0 f16 expr in #txt
-dn0 f16 1752 160 1816 192 #arcP
-dn0 f16 1 1752 192 #addKink
-dn0 f16 1 0.09116640702703371 0 0 #arcLabel
+dn0 f16 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f16 1744 136 1808 168 #arcP
+dn0 f16 1 1744 168 #addKink
+dn0 f16 0 0.40625 16 0 #arcLabel
+dn0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Produktiv:
+Die Timout Zeit muss mit dem 
+Auftraggeber abgesprochen werden
+
+Freigabequittung:
+Dokument in welchem der Antragsteller die Richtigkeit der Angaben 
+und Dokumente mit Unterschrift bestätigt. (Analog Steuern)</name>
+        <nameStyle>218,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f17 392 426 384 124 -186 -56 #rect
+dn0 f17 @|IBIcon #fIcon
+dn0 f17 -4144960|-4144960|-16777216 #nodeStyle
+dn0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+dn0 f9 actionTable 'out=in1;
+' #txt
+dn0 f9 outTypes "einbuergerung_Gruppe6.Data" #txt
+dn0 f9 outLinks "TaskA.ivp" #txt
+dn0 f9 caseData '#
+#Fri Nov 27 00:34:24 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+dn0 f9 taskData '#
+#Fri Nov 27 00:34:24 CET 2015
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=Bitte Dokumente gem\u00E4ss Kommentar erneut hochladen
+TaskA.PRI=2
+TaskA.ROL=Everybody
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
+dn0 f9 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
+List<TaskDefinition> taskDefinitions;
+TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskDef = new TaskDefinition();
+taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("Bitte Dokumente gemäss Kommentar erneut hochladen"));
+taskDef.setAutoStartTask(false);
+taskDef.setActivator("Everybody");
+taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDefinitions.add(taskDef);
+' #txt
+dn0 f9 type einbuergerung_Gruppe6.Data #txt
+dn0 f9 template "" #txt
+dn0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Anfrage verbessern</name>
+        <nameStyle>18,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f9 792 344 32 32 -43 -43 #rect
+dn0 f9 @|TaskSwitchIcon #fIcon
+dn0 f9 -1|-1|-16777216 #nodeStyle
+dn0 f18 expr in #txt
+dn0 f18 outCond !in.allBoolean #txt
+dn0 f18 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+dn0 f18 1000 136 992 248 #arcP
+dn0 f18 1 1000 248 #addKink
+dn0 f18 0 0.20535714285714285 -16 0 #arcLabel
+dn0 f10 type einbuergerung_Gruppe6.Data #txt
+dn0 f10 var in1 #txt
+dn0 f10 864 248 824 360 #arcP
+dn0 f10 1 848 248 #addKink
+dn0 f10 2 848 360 #addKink
+dn0 f10 1 0.2493844936577523 0 0 #arcLabel
+dn0 f20 expr data #txt
+dn0 f20 outCond ivp=="TaskA.ivp" #txt
+dn0 f20 792 360 768 361 #arcP
+dn0 f22 584 426 528 136 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
+        <swimlaneLabel>Gemeinde Verwaltung Schwyz</swimlaneLabel>
         <swimlaneLabel>Migrationsamt</swimlaneLabel>
+        <swimlaneLabel>System</swimlaneLabel>
         <swimlaneLabel>Antragssteller</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
-    <swimlaneSize>200</swimlaneSize>
-    <swimlaneSize>240</swimlaneSize>
+    <swimlaneSize>256</swimlaneSize>
+    <swimlaneSize>176</swimlaneSize>
+    <swimlaneSize>80</swimlaneSize>
+    <swimlaneSize>104</swimlaneSize>
     <swimlaneColor gradient="false">-3342337</swimlaneColor>
+    <swimlaneColor gradient="false">-3342337</swimlaneColor>
+    <swimlaneColor gradient="false">-3355393</swimlaneColor>
     <swimlaneColor gradient="false">-3342388</swimlaneColor>
     <swimlaneType>POOL</swimlaneType>
+    <swimlaneType>LANE_IN_POOL</swimlaneType>
+    <swimlaneType>LANE_IN_POOL</swimlaneType>
     <swimlaneType>POOL</swimlaneType>
     <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
-    <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>16</swimlaneSpaceBefore>
 </elementInfo>
 ' #txt
 >Proto dn0 0 0 32 24 18 0 #rect
 >Proto dn0 @|BIcon #fIcon
-Bk2 g0 35 299 26 26 0 5 #rect
+Bk2 g0 627 254 26 26 0 5 #rect
 Bk2 g0 @|MIGIcon #fIcon
 Bk2 g1 595 299 26 26 0 5 #rect
 Bk2 g1 @|MOGIcon #fIcon
@@ -917,7 +998,7 @@ Bk2 f3 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk2 f3 200 290 112 44 -15 -8 #rect
 Bk2 f3 @|RichDialogIcon #fIcon
-Bk2 f4 61 312 200 312 #arcP
+Bk2 f4 627 268 312 312 #arcP
 Bk2 f2 expr out #txt
 Bk2 f2 312 312 352 312 #arcP
 >Proto Bk0 -8 -8 16 16 16 26 #rect
@@ -1217,31 +1298,22 @@ Bk5 f1 280 160 339 160 #arcP
 >Proto Bk6 @|BIcon #fIcon
 dn0 f23 out f15 tail #connect
 dn0 f15 head f1 mainIn #connect
-dn0 f17 ao f18 tail #connect
-dn0 f18 head U30 ai #connect
 dn0 f0 mainOut f19 tail #connect
 dn0 f19 head f11 in #connect
 dn0 U50 g1 f13 tail #connect
 dn0 f13 head f8 in #connect
 dn0 f21 out f7 tail #connect
 dn0 f7 head U50 g0 #connect
-dn0 f10 head f9 in #connect
 dn0 f30 out f29 tail #connect
 dn0 f29 head f21 in #connect
 dn0 U40 g1 f32 tail #connect
 dn0 f32 head f30 in #connect
-dn0 f8 out f10 tail #connect
 dn0 f40 mainOut f44 tail #connect
 dn0 f44 head f43 in #connect
 dn0 f43 out f41 tail #connect
 dn0 f41 head S20 g0 #connect
 dn0 f43 out f46 tail #connect
 dn0 f46 head f45 mainIn #connect
-dn0 f9 out f24 tail #connect
-dn0 f24 head S60 g0 #connect
-dn0 S60 g1 f47 tail #connect
-dn0 f47 head U40 g0 #connect
-dn0 f8 out f2 tail #connect
 dn0 f2 head S70 g0 #connect
 dn0 f11 out f3 tail #connect
 dn0 f3 head U30 g0 #connect
@@ -1263,6 +1335,15 @@ dn0 f36 head S11 g0 #connect
 dn0 S11 g1 f39 tail #connect
 dn0 f23 out f16 tail #connect
 dn0 f16 head f14 mainIn #connect
+dn0 f8 out f18 tail #connect
+dn0 f18 head S60 g0 #connect
+dn0 f8 out f2 tail #connect
+dn0 S60 g1 f10 tail #connect
+dn0 f10 head f9 in #connect
+dn0 f9 out f20 tail #connect
+dn0 f20 head U40 g0 #connect
+dn0 f17 ao f22 tail #connect
+dn0 f22 head f38 @CG|ai #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect

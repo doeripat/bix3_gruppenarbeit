@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 17:21:52 CET 2015]
+[>Created: Fri Dec 11 18:26:35 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -13,6 +13,8 @@ Bk5 BpmnSendTask Big #zClass
 Bk5 B #cInfo
 Bk1 BpmnServiceTask Big #zClass
 Bk1 B #cInfo
+Bk3 BpmnServiceTask Big #zClass
+Bk3 B #cInfo
 An0 @TextInP .resExport .resExport #zField
 An0 @TextInP .type .type #zField
 An0 @TextInP .processKind .processKind #zField
@@ -30,7 +32,6 @@ An0 @TkArc f18 '' #zField
 An0 @PushWFArc f30 '' #zField
 An0 Bk0 S11 'Sub 1' #zField
 An0 @PushWFArc f2 '' #zField
-An0 @PushWFArc f6 '' #zField
 An0 Bk2 S31 'Sub 3' #zField
 An0 @PushWFArc f7 '' #zField
 An0 @PushWFArc f3 '' #zField
@@ -38,7 +39,9 @@ An0 @TkArc f4 '' #zField
 An0 Bk5 S21 'Sub 2' #zField
 An0 Bk1 S40 'Sub 4' #zField
 An0 @AnnotationArc f5 '' #zField
-An0 @InfoButton f9 '' #zField
+An0 Bk3 S51 'Sub 5' #zField
+An0 @PushWFArc f8 '' #zField
+An0 @PushWFArc f6 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -67,10 +70,8 @@ Bk2 @Alternative f8 '' #zField
 Bk2 @Alternative f25 '' #zField
 Bk2 @Alternative f26 '' #zField
 Bk2 @PushWFArc f27 '' #zField
-Bk2 @DBStep f31 '' #zField
 Bk2 @PushWFArc f14 '' #zField
 Bk2 @PushWFArc f16 '' #zField
-Bk2 @PushWFArc f19 '' #zField
 Bk2 @RichDialog f12 '' #zField
 Bk2 @PushWFArc f24 '' #zField
 Bk2 @PushWFArc f29 '' #zField
@@ -83,8 +84,6 @@ Bk2 @PushTrueWFInG-01 g0 '' #zField
 Bk2 @PushWFArc f0 '' #zField
 Bk2 @PushTrueWFOutG-01 g1 '' #zField
 Bk2 @PushWFArc f1 '' #zField
-Bk2 @StartRequest f2 '' #zField
-Bk2 @PushWFArc f3 '' #zField
 >Proto Bk2 Bk1 BpmnUserTask #zField
 Bk5 @TextInP .resExport .resExport #zField
 Bk5 @TextInP .type .type #zField
@@ -114,6 +113,20 @@ Bk1 @PushWFArc f0 '' #zField
 Bk1 @PushTrueWFOutG-01 g1 '' #zField
 Bk1 @PushWFArc f1 '' #zField
 >Proto Bk1 Bk4 BpmnServiceTask #zField
+Bk3 @TextInP .resExport .resExport #zField
+Bk3 @TextInP .type .type #zField
+Bk3 @TextInP .processKind .processKind #zField
+Bk3 @AnnotationInP-0n ai ai #zField
+Bk3 @MessageFlowInP-0n messageIn messageIn #zField
+Bk3 @MessageFlowOutP-0n messageOut messageOut #zField
+Bk3 @TextInP .xml .xml #zField
+Bk3 @TextInP .responsibility .responsibility #zField
+Bk3 @DBStep f31 '' #zField
+Bk3 @PushTrueWFInG-01 g0 '' #zField
+Bk3 @PushTrueWFOutG-01 g1 '' #zField
+Bk3 @PushWFArc f0 '' #zField
+Bk3 @PushWFArc f1 '' #zField
+>Proto Bk3 Bk3 BpmnServiceTask #zField
 An0 f0 inParamDecl '<einbuergerung_Gruppe6.Data data> param;' #txt
 An0 f0 inParamTable 'out=param.data;
 ' #txt
@@ -134,9 +147,11 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f0 113 353 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
+An0 f0 -1|-1|-16777216 #nodeStyle
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 913 641 30 30 0 15 #rect
+An0 f1 1033 225 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
+An0 f1 -1|-1|-16777216 #nodeStyle
 An0 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f10 actionTable 'out=in1;
@@ -205,8 +220,9 @@ An0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f10 560 640 32 32 0 18 #rect
+An0 f10 560 512 32 32 0 18 #rect
 An0 f10 @|TaskSwitchIcon #fIcon
+An0 f10 -1|-1|-16777216 #nodeStyle
 An0 f47 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
@@ -221,7 +237,7 @@ und mit Merkblatt über den Ablauf informiert wurde.</name>
 ' #txt
 An0 f47 88 426 304 76 -146 -32 #rect
 An0 f47 @|IBIcon #fIcon
-An0 f47 -14336|-14336|-16777216 #nodeStyle
+An0 f47 -4144960|-4144960|-16777216 #nodeStyle
 An0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f17 actionTable 'out=in1;
@@ -292,6 +308,7 @@ An0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 f17 192 352 32 32 0 18 #rect
 An0 f17 @|TaskSwitchIcon #fIcon
+An0 f17 -1|-1|-16777216 #nodeStyle
 An0 f18 expr out #txt
 An0 f18 type einbuergerung_Gruppe6.Data #txt
 An0 f18 var in1 #txt
@@ -311,29 +328,29 @@ An0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 An0 S11 272 346 128 44 -60 -8 #rect
 An0 S11 @|BpmnUserTaskIcon #fIcon
+An0 S11 -1|-1|-16777216 #nodeStyle
 An0 f2 expr data #txt
 An0 f2 outCond ivp=="TaskA.ivp" #txt
-An0 f2 592 656 632 656 #arcP
-An0 f6 856 656 913 656 #arcP
+An0 f2 592 528 642 528 #arcP
 An0 S31 .resExport export #txt
 An0 S31 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
         <name>Personalien vervollständigen &amp;
-weitere Personen erfassen
-inkl. Status Update</name>
-        <nameStyle>76,5,7
+weitere Personen erfassen</name>
+        <nameStyle>56,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 S31 632 626 224 60 -85 -28 #rect
+An0 S31 642 506 204 44 -85 -20 #rect
 An0 S31 @|BpmnUserTaskIcon #fIcon
+An0 S31 -1|-1|-16777216 #nodeStyle
 An0 f7 336 346 336 262 #arcP
 An0 f3 424 240 474 240 #arcP
 An0 f4 type einbuergerung_Gruppe6.Data #txt
 An0 f4 var in1 #txt
-An0 f4 576 262 576 640 #arcP
+An0 f4 576 262 576 512 #arcP
 An0 S21 .resExport export #txt
 An0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -347,6 +364,7 @@ an Antragsteller senden</name>
 ' #txt
 An0 S21 474 218 204 44 -72 -20 #rect
 An0 S21 @|BpmnSendTaskIcon #fIcon
+An0 S21 -1|-1|-16777216 #nodeStyle
 An0 S40 .resExport export #txt
 An0 S40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -360,28 +378,26 @@ Passwort generieren</name>
 ' #txt
 An0 S40 248 218 176 44 -57 -20 #rect
 An0 S40 @|BpmnServiceTaskIcon #fIcon
+An0 S40 -1|-1|-16777216 #nodeStyle
 An0 f5 240 426 279 390 #arcP
-An0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+An0 S51 .resExport export #txt
+An0 S51 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
-    <language>
-        <name>Allgemeine Infos
-
-Unique Identifier:
-- 6-stellige (eindeutige) Kennzahl
-- Höhe der Nummer ist random
-- Identifikator durch den gesammten Prozess und in der DB
-- lässt keine Rückschlüsse auf den Antrag/-steller zu oder die Anzahl der Anträge.
-</name>
-        <nameStyle>17,7
-224,7
-1,7
+    <language lang="en">
+        <name>Status updaten</name>
+        <nameStyle>14,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 f9 760 178 448 140 -221 -64 #rect
-An0 f9 @|IBIcon #fIcon
-An0 f9 -985168|-985168|-16777216 #nodeStyle
+An0 S51 888 218 112 44 -41 -8 #rect
+An0 S51 @|BpmnServiceTaskIcon #fIcon
+An0 S51 -1|-1|-16777216 #nodeStyle
+An0 f8 846 528 888 240 #arcP
+An0 f8 1 864 528 #addKink
+An0 f8 2 864 240 #addKink
+An0 f8 1 0.37393085078319743 0 0 #arcLabel
+An0 f6 1000 240 1033 240 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -393,7 +409,7 @@ An0 f9 -985168|-985168|-16777216 #nodeStyle
         <swimlaneLabel>Antragssteller</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
-    <swimlaneSize>384</swimlaneSize>
+    <swimlaneSize>256</swimlaneSize>
     <swimlaneSize>128</swimlaneSize>
     <swimlaneSize>128</swimlaneSize>
     <swimlaneSize>128</swimlaneSize>
@@ -498,45 +514,38 @@ Bk2 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 Bk2 f7 552 138 112 44 -53 -8 #rect
 Bk2 f7 @|RichDialogIcon #fIcon
 Bk2 f8 type einbuergerung_Gruppe6.Data #txt
-Bk2 f8 720 144 32 32 0 16 #rect
+Bk2 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Weitere Personen?</name>
+        <nameStyle>17,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk2 f8 720 144 32 32 -57 -35 #rect
 Bk2 f8 @|AlternativeIcon #fIcon
 Bk2 f25 type einbuergerung_Gruppe6.Data #txt
 Bk2 f25 800 144 32 32 0 16 #rect
 Bk2 f25 @|AlternativeIcon #fIcon
 Bk2 f26 type einbuergerung_Gruppe6.Data #txt
-Bk2 f26 472 144 32 32 0 16 #rect
-Bk2 f26 @|AlternativeIcon #fIcon
-Bk2 f27 expr in #txt
-Bk2 f27 752 160 800 160 #arcP
-Bk2 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk2 f31 actionTable 'out=in;
-' #txt
-Bk2 f31 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
-<INSERT><Table name=''Request''/><Value column=''uniqueIdentifier''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''password''><AnyExpression>in.request.password</AnyExpression></Value><Value column=''phone''><AnyExpression>in.request.phone</AnyExpression></Value><Value column=''address''><AnyExpression>in.request.address</AnyExpression></Value><Value column=''postcode''><AnyExpression>in.request.postcode</AnyExpression></Value><Value column=''email''><AnyExpression>in.request.email</AnyExpression></Value><Value column=''city''><AnyExpression>in.request.city</AnyExpression></Value><Value column=''status''><String>""Antrag eingangen""</String></Value></INSERT>' #txt
-Bk2 f31 dbUrl AmazonDB #txt
-Bk2 f31 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-Bk2 f31 lotSize 2147483647 #txt
-Bk2 f31 startIdx 0 #txt
-Bk2 f31 type einbuergerung_Gruppe6.Data #txt
-Bk2 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+Bk2 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Status Update</name>
-        <nameStyle>13,7
+        <name>Mehr als eine Person?</name>
+        <nameStyle>21,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f31 880 138 112 44 -39 -8 #rect
-Bk2 f31 @|DBStepIcon #fIcon
+Bk2 f26 472 144 32 32 -62 18 #rect
+Bk2 f26 @|AlternativeIcon #fIcon
+Bk2 f27 expr in #txt
+Bk2 f27 752 160 800 160 #arcP
 Bk2 f14 expr out #txt
 Bk2 f14 248 160 296 160 #arcP
 Bk2 f16 expr out #txt
 Bk2 f16 664 160 720 160 #arcP
-Bk2 f19 expr in #txt
-Bk2 f19 832 160 880 160 #arcP
 Bk2 f12 targetWindow NEW:card: #txt
 Bk2 f12 targetDisplay TOP #txt
 Bk2 f12 richDialogId einbuergerung_Gruppe6.personalienVervollstaendigen_v2 #txt
@@ -574,15 +583,33 @@ Bk2 f24 expr in #txt
 Bk2 f24 outCond in.addPerson==true #txt
 Bk2 f24 504 160 552 160 #arcP
 Bk2 f29 expr in #txt
+Bk2 f29 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Nein</name>
+        <nameStyle>4,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
 Bk2 f29 488 144 816 144 #arcP
 Bk2 f29 1 488 104 #addKink
 Bk2 f29 2 816 104 #addKink
-Bk2 f29 1 0.485394020881295 0 0 #arcLabel
+Bk2 f29 0 0.3 -17 0 #arcLabel
 Bk2 f21 expr in #txt
 Bk2 f21 outCond in.addPerson==true #txt
+Bk2 f21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
 Bk2 f21 736 176 664 248 #arcP
 Bk2 f21 1 736 248 #addKink
-Bk2 f21 1 0.16111158056855635 0 0 #arcLabel
+Bk2 f21 0 0.16666666666666666 -10 0 #arcLabel
 Bk2 f23 expr out #txt
 Bk2 f23 608 226 608 182 #arcP
 Bk2 f22 expr out #txt
@@ -659,31 +686,10 @@ Bk2 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk2 g1 1075 147 26 26 0 5 #rect
+Bk2 g1 931 147 26 26 0 5 #rect
 Bk2 g1 @|MOGIcon #fIcon
-Bk2 f1 expr out #txt
-Bk2 f1 992 160 1075 160 #arcP
-Bk2 f2 outLink start.ivp #txt
-Bk2 f2 type einbuergerung_Gruppe6.Data #txt
-Bk2 f2 inParamDecl '<> param;' #txt
-Bk2 f2 actionDecl 'einbuergerung_Gruppe6.Data out;
-' #txt
-Bk2 f2 guid 15183749098259F6 #txt
-Bk2 f2 requestEnabled true #txt
-Bk2 f2 triggerEnabled false #txt
-Bk2 f2 callSignature start() #txt
-Bk2 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>start.ivp</name>
-    </language>
-</elementInfo>
-' #txt
-Bk2 f2 @C|.responsibility Everybody #txt
-Bk2 f2 145 305 30 30 -21 17 #rect
-Bk2 f2 @|StartRequestIcon #fIcon
-Bk2 f3 expr out #txt
-Bk2 f3 162 305 192 182 #arcP
+Bk2 f1 expr in #txt
+Bk2 f1 832 160 931 160 #arcP
 >Proto Bk1 0 0 32 24 18 0 #rect
 >Proto Bk1 @|BIcon #fIcon
 Bk5 f5 beanConfig '"{/emailSubject ""Ihre Zugangsdaten für den Einbürgerungsprozess - Gesuch: <%=in.tmpDocumentList%>""/emailFrom ""noreply@migration.sz.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBei Ihrem Besuch bei der Kanzlei haben Sie sich über die  Einbürgerung informiert.\\nFalls Sie den Einbürgerungsprozess starten möchten melden Sie sich bitte auf unserer Homepage mit folgenden Logindaten an:\\n\\nGesuch: <%=in.request.uniqueIdentifier%>\\nBenutzername: <%=in.request.email%>\\nPasswort: <%=in.request.password%>\\n\\nFreundliche Grüsse""/emailAttachments * }"' #txt
@@ -766,14 +772,44 @@ Bk1 f1 expr out #txt
 Bk1 f1 304 160 371 160 #arcP
 >Proto Bk4 0 0 32 24 18 0 #rect
 >Proto Bk4 @|BIcon #fIcon
+Bk3 f31 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk3 f31 actionTable 'out=in;
+' #txt
+Bk3 f31 dbSql '<?xml version=""1.0"" standalone=""no""?>
+<!DOCTYPE INSERT SYSTEM  ""sqlStatements.dtd"">
+<INSERT><Table name=''Request''/><Value column=''uniqueIdentifier''><AnyExpression>in.request.uniqueIdentifier</AnyExpression></Value><Value column=''password''><AnyExpression>in.request.password</AnyExpression></Value><Value column=''phone''><AnyExpression>in.request.phone</AnyExpression></Value><Value column=''address''><AnyExpression>in.request.address</AnyExpression></Value><Value column=''postcode''><AnyExpression>in.request.postcode</AnyExpression></Value><Value column=''email''><AnyExpression>in.request.email</AnyExpression></Value><Value column=''city''><AnyExpression>in.request.city</AnyExpression></Value><Value column=''status''><String>""Antrag eingangen""</String></Value></INSERT>' #txt
+Bk3 f31 dbUrl AmazonDB #txt
+Bk3 f31 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
+Bk3 f31 lotSize 2147483647 #txt
+Bk3 f31 startIdx 0 #txt
+Bk3 f31 type einbuergerung_Gruppe6.Data #txt
+Bk3 f31 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Status Update</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk3 f31 136 138 112 44 -39 -8 #rect
+Bk3 f31 @|DBStepIcon #fIcon
+Bk3 g0 35 147 26 26 0 5 #rect
+Bk3 g0 @|MIGIcon #fIcon
+Bk3 g1 307 147 26 26 0 5 #rect
+Bk3 g1 @|MOGIcon #fIcon
+Bk3 f0 61 160 136 160 #arcP
+Bk3 f1 expr out #txt
+Bk3 f1 248 160 307 160 #arcP
+>Proto Bk3 0 0 32 24 18 0 #rect
+>Proto Bk3 @|BIcon #fIcon
 An0 f0 mainOut f18 tail #connect
 An0 f18 head f17 in #connect
 An0 f17 out f30 tail #connect
 An0 f30 head S11 g0 #connect
-An0 f6 head f1 mainIn #connect
 An0 f10 out f2 tail #connect
 An0 f2 head S31 g0 #connect
-An0 S31 g1 f6 tail #connect
 An0 S11 g1 f7 tail #connect
 An0 f4 head f10 in #connect
 An0 f3 head S21 g0 #connect
@@ -782,6 +818,10 @@ An0 f7 head S40 g0 #connect
 An0 S40 g1 f3 tail #connect
 An0 f47 ao f5 tail #connect
 An0 f5 head S11 ai #connect
+An0 S31 g1 f8 tail #connect
+An0 f8 head S51 g0 #connect
+An0 S51 g1 f6 tail #connect
+An0 f6 head f1 mainIn #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head f2 mainIn #connect
 Bk0 f1 head g1 m #connect
@@ -803,14 +843,10 @@ Bk2 f8 out f27 tail #connect
 Bk2 f27 head f25 in #connect
 Bk2 f26 out f29 tail #connect
 Bk2 f29 head f25 in #connect
-Bk2 f25 out f19 tail #connect
-Bk2 f19 head f31 mainIn #connect
 Bk2 g0 m f0 tail #connect
 Bk2 f0 head f13 mainIn #connect
+Bk2 f25 out f1 tail #connect
 Bk2 f1 head g1 m #connect
-Bk2 f31 mainOut f1 tail #connect
-Bk2 f2 mainOut f3 tail #connect
-Bk2 f3 head f13 mainIn #connect
 Bk2 0 0 1152 416 0 #ivRect
 Bk5 g0 m f0 tail #connect
 Bk5 f0 head f5 mainIn #connect
@@ -822,3 +858,8 @@ Bk1 f0 head f3 mainIn #connect
 Bk1 f1 head g1 m #connect
 Bk1 f3 mainOut f1 tail #connect
 Bk1 0 0 448 320 0 #ivRect
+Bk3 g0 m f0 tail #connect
+Bk3 f0 head f31 mainIn #connect
+Bk3 f31 mainOut f1 tail #connect
+Bk3 f1 head g1 m #connect
+Bk3 0 0 384 320 0 #ivRect

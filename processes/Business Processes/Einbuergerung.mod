@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 16:35:35 CET 2015]
+[>Created: Fri Dec 11 19:22:38 CET 2015]
 1505B8F8465AD2F0 3.17 #module
 >Proto >Proto Collection #zClass
 Eg0 Einbuergerung Big #zClass
@@ -75,6 +75,7 @@ informieren</name>
 ' #txt
 Eg0 f2 168 42 112 44 -39 -20 #rect
 Eg0 f2 @|CallSubIcon #fIcon
+Eg0 f2 -1|-1|-16777216 #nodeStyle
 Eg0 f3 expr out #txt
 Eg0 f3 111 64 168 64 #arcP
 Eg0 f4 type einbuergerung_Gruppe6.Data #txt
@@ -101,6 +102,7 @@ prüfen</name>
 ' #txt
 Eg0 f4 328 42 112 44 -52 -20 #rect
 Eg0 f4 @|CallSubIcon #fIcon
+Eg0 f4 -1|-1|-16777216 #nodeStyle
 Eg0 f5 expr out #txt
 Eg0 f5 280 64 328 64 #arcP
 Eg0 f8 type einbuergerung_Gruppe6.Data #txt
@@ -127,6 +129,7 @@ interviewen</name>
 ' #txt
 Eg0 f8 656 42 112 44 -38 -20 #rect
 Eg0 f8 @|CallSubIcon #fIcon
+Eg0 f8 -1|-1|-16777216 #nodeStyle
 Eg0 f10 type einbuergerung_Gruppe6.Data #txt
 Eg0 f10 processCall 'Functional Processes/Entscheid_faellen:call(einbuergerung_Gruppe6.Data)' #txt
 Eg0 f10 doCall true #txt
@@ -151,6 +154,7 @@ faellen</name>
 ' #txt
 Eg0 f10 816 42 112 44 -27 -20 #rect
 Eg0 f10 @|CallSubIcon #fIcon
+Eg0 f10 -1|-1|-16777216 #nodeStyle
 Eg0 f11 expr out #txt
 Eg0 f11 768 64 816 64 #arcP
 Eg0 f6 expr out #txt
@@ -178,6 +182,7 @@ publizieren</name>
 ' #txt
 Eg0 f25 480 42 144 44 -65 -20 #rect
 Eg0 f25 @|CallSubIcon #fIcon
+Eg0 f25 -1|-1|-16777216 #nodeStyle
 Eg0 f13 expr out #txt
 Eg0 f13 440 64 480 64 #arcP
 Eg0 f22 expr out #txt
@@ -191,20 +196,29 @@ Task Elemente:
 - Zu Testzwecken wurden keine Delays oder Timeouts eingfügt
 - Alle Wartezeiten sind Kommentiert und müssen lediglich im Taskelement implementiert werden
 - Um Exceptions auszulösen müssen entsprechende Timeouts eingebaut werden
+
+Coding
 - Rein technische Abläufe sind teils in Englisch für eine bessere Verständlichkeit aus Datensicht (Best Practice)
 - Datenattribute sind in Englisch (Best Practice)
 - Fachliches Modell auf Deutsch für bessere Verständlichkeit der Enduser
-</name>
-        <nameStyle>260,7
-236,7
-1,7
+- Axon Ivy / GitHub haben nicht immer alle Änderungen (Kopie/Backup bei gleichem Namen) sauber erkannt,
+  deshalb teils Versionierung im Namen (VX)
+
+Unique Identifier:
+- 6-stellige eindeutige Kennzahl
+- Nummer ist zufällig 
+- Identifikator durch den gesammten Prozess und in der DB
+- lässt keine Rückschlüsse auf den Antrag/-steller zu oder die Anzahl der Anträge.
+- Für den Webservice wird aus Sicherheitsgründen im produktiv Betrieb eine weitere UID generiert (Prototyp).</name>
+        <nameStyle>268,7
+710,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-Eg0 f7 240 114 624 172 -304 -80 #rect
+Eg0 f7 248 130 624 332 -304 -160 #rect
 Eg0 f7 @|IBIcon #fIcon
-Eg0 f7 -985168|-985168|-16777216 #nodeStyle
+Eg0 f7 -4144960|-4144960|-16777216 #nodeStyle
 Eg0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Eg0 f9 actionTable 'out=in;
@@ -290,7 +304,7 @@ Eg0 f9 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Eg0 f9 80 162 112 44 -30 -8 #rect
 Eg0 f9 @|StepIcon #fIcon
-Eg0 f9 -5972572|-5972572|-16777216 #nodeStyle
+Eg0 f9 -13016147|-1|-16777216 #nodeStyle
 >Proto Eg0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Eg0 .processKind NORMAL #txt
 >Proto Eg0 0 0 32 24 18 0 #rect

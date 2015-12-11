@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 17:28:55 CET 2015]
+[>Created: Fri Dec 11 18:19:31 CET 2015]
 1505C5AC6EFDC232 3.17 #module
 >Proto >Proto Collection #zClass
 Rn0 Rechnungswesen Big #zClass
@@ -109,10 +109,10 @@ Rn0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f0 49 81 30 30 -26 17 #rect
+Rn0 f0 81 81 30 30 -26 17 #rect
 Rn0 f0 @|StartSubIcon #fIcon
 Rn0 f1 type einbuergerung_Gruppe6.Data #txt
-Rn0 f1 705 81 30 30 0 15 #rect
+Rn0 f1 737 81 30 30 0 15 #rect
 Rn0 f1 @|EndSubIcon #fIcon
 Rn0 f16 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -186,7 +186,7 @@ Rn0 f16 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f16 424 80 32 32 -45 -38 #rect
+Rn0 f16 456 80 32 32 -45 -38 #rect
 Rn0 f16 @|TaskSwitchIcon #fIcon
 Rn0 f14 .resExport export #txt
 Rn0 f14 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -204,18 +204,18 @@ keine Zahlung</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f14 185 169 30 30 -102 -14 #rect
+Rn0 f14 217 169 30 30 -102 -14 #rect
 Rn0 f14 @|ExceptionIcon #fIcon
 Rn0 f22 type einbuergerung_Gruppe6.Data #txt
-Rn0 f22 344 80 32 32 0 16 #rect
+Rn0 f22 376 80 32 32 0 16 #rect
 Rn0 f22 @|AlternativeIcon #fIcon
 Rn0 f8 expr in #txt
 Rn0 f8 type einbuergerung_Gruppe6.Data #txt
 Rn0 f8 var in1 #txt
-Rn0 f8 376 96 424 96 #arcP
+Rn0 f8 408 96 456 96 #arcP
 Rn0 f12 expr out #txt
-Rn0 f12 79 96 126 96 #arcP
-Rn0 f17 290 96 344 96 #arcP
+Rn0 f12 111 96 158 96 #arcP
+Rn0 f17 322 96 376 96 #arcP
 Rn0 S11 .resExport export #txt
 Rn0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -227,11 +227,11 @@ und senden</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 S11 126 74 164 44 -53 -20 #rect
+Rn0 S11 158 74 164 44 -53 -20 #rect
 Rn0 S11 @|BpmnServiceTaskIcon #fIcon
 Rn0 f2 expr out #txt
-Rn0 f2 215 184 304 184 #arcP
-Rn0 f3 360 162 360 112 #arcP
+Rn0 f2 247 184 336 184 #arcP
+Rn0 f3 392 162 392 112 #arcP
 Rn0 f3 0 0.36170212765957444 0 0 #arcLabel
 Rn0 S20 .resExport export #txt
 Rn0 S20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -243,12 +243,12 @@ Rn0 S20 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Rn0 S20 304 162 112 44 -33 -8 #rect
+Rn0 S20 336 162 112 44 -33 -8 #rect
 Rn0 S20 @|BpmnServiceTaskIcon #fIcon
 Rn0 f4 expr data #txt
 Rn0 f4 outCond ivp=="TaskA.ivp" #txt
-Rn0 f4 456 96 516 96 #arcP
-Rn0 f6 668 96 705 96 #arcP
+Rn0 f4 488 96 548 96 #arcP
+Rn0 f6 700 96 737 96 #arcP
 Rn0 S31 .resExport export #txt
 Rn0 S31 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -260,7 +260,7 @@ Antrag anhängen</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 S31 516 74 152 44 -47 -20 #rect
+Rn0 S31 548 74 152 44 -47 -20 #rect
 Rn0 S31 @|BpmnServiceTaskIcon #fIcon
 Rn0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -274,10 +274,10 @@ Der Task erscheint erst nach 5 Tagen (Delay)</name>
     </language>
 </elementInfo>
 ' #txt
-Rn0 f5 472 146 272 60 -128 -24 #rect
+Rn0 f5 504 146 272 60 -128 -24 #rect
 Rn0 f5 @|IBIcon #fIcon
-Rn0 f5 -14336|-14336|-16777216 #nodeStyle
-Rn0 f7 472 176 445 107 #arcP
+Rn0 f5 -4144960|-4144960|-16777216 #nodeStyle
+Rn0 f7 504 176 477 107 #arcP
 >Proto Rn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto Rn0 .processKind CALLABLE_SUB #txt
 >Proto Rn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -285,12 +285,17 @@ Rn0 f7 472 176 445 107 #arcP
     <language>
         <desc>Antragsteller</desc>
         <swimlaneLabel>Rechnungswesen</swimlaneLabel>
+        <swimlaneLabel>System</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
-    <swimlaneSize>200</swimlaneSize>
+    <swimlaneSize>192</swimlaneSize>
+    <swimlaneSize>192</swimlaneSize>
+    <swimlaneColor gradient="false">-3342490</swimlaneColor>
     <swimlaneColor gradient="false">-3342490</swimlaneColor>
     <swimlaneType>POOL</swimlaneType>
+    <swimlaneType>LANE_IN_POOL</swimlaneType>
     <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
 </elementInfo>
 ' #txt
 >Proto Rn0 0 0 32 24 18 0 #rect

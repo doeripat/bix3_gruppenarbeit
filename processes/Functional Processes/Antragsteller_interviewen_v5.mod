@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 17:21:52 CET 2015]
+[>Created: Fri Dec 11 19:22:34 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -60,6 +60,13 @@ An0 Bk7 S71 'Sub 5.7' #zField
 An0 @PushWFArc f16 '' #zField
 An0 @PushWFArc f4 '' #zField
 An0 @PushWFArc f8 '' #zField
+An0 @InfoButton f10 '' #zField
+An0 @AnnotationArc f17 '' #zField
+An0 @InfoButton f19 '' #zField
+An0 @AnnotationArc f23 '' #zField
+An0 @ProcessException f24 '' #zField
+An0 @CallSub f26 '' #zField
+An0 @PushWFArc f28 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -194,10 +201,10 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f0 73 145 30 30 -26 17 #rect
+An0 f0 81 281 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 1777 145 30 30 0 15 #rect
+An0 f1 1761 281 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f5 type einbuergerung_Gruppe6.Data #txt
 An0 f5 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -210,7 +217,7 @@ erwünscht?</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f5 1152 144 32 32 -76 18 #rect
+An0 f5 1112 136 32 32 -14 -61 #rect
 An0 f5 @|AlternativeIcon #fIcon
 An0 f25 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -219,7 +226,7 @@ An0 f25 actionTable 'out=in1;
 An0 f25 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f25 outLinks "TaskA.ivp" #txt
 An0 f25 caseData '#
-#Fri Dec 11 17:21:35 CET 2015
+#Fri Dec 11 18:45:30 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -247,7 +254,7 @@ type.code=
 type.name=
 ' #txt
 An0 f25 taskData '#
-#Fri Dec 11 17:21:35 CET 2015
+#Fri Dec 11 18:45:30 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -273,7 +280,16 @@ taskDefinitions.add(taskDef);
 ' #txt
 An0 f25 type einbuergerung_Gruppe6.Data #txt
 An0 f25 template "" #txt
-An0 f25 680 144 32 32 0 16 #rect
+An0 f25 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Interview starten</name>
+        <nameStyle>17,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f25 704 136 32 32 -43 -37 #rect
 An0 f25 @|TaskSwitchIcon #fIcon
 An0 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -282,7 +298,7 @@ An0 f3 actionTable 'out=in1;
 An0 f3 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f3 outLinks "TaskA.ivp" #txt
 An0 f3 caseData '#
-#Sun Dec 06 14:04:26 CET 2015
+#Fri Dec 11 19:21:48 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -310,7 +326,8 @@ type.code=
 type.name=
 ' #txt
 An0 f3 taskData '#
-#Sun Dec 06 14:04:26 CET 2015
+#Fri Dec 11 19:21:48 CET 2015
+TaskA.EXC=1517D81DFA32896B-f24-buffer
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -332,11 +349,12 @@ taskDef.setActivator("Antragsteller");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryStartTaskElementPid("1517D81DFA32896B-f24-buffer");
 taskDefinitions.add(taskDef);
 ' #txt
 An0 f3 type einbuergerung_Gruppe6.Data #txt
 An0 f3 template "" #txt
-An0 f3 232 304 32 32 0 16 #rect
+An0 f3 232 440 32 32 0 16 #rect
 An0 f3 @|TaskSwitchIcon #fIcon
 An0 f9 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -345,7 +363,7 @@ An0 f9 actionTable 'out=in1;
 An0 f9 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f9 outLinks "TaskA.ivp" #txt
 An0 f9 caseData '#
-#Fri Dec 11 15:18:37 CET 2015
+#Fri Dec 11 19:21:39 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -373,11 +391,12 @@ type.code=
 type.name=
 ' #txt
 An0 f9 taskData '#
-#Fri Dec 11 15:18:37 CET 2015
+#Fri Dec 11 19:21:39 CET 2015
+TaskA.EXC=1517D81DFA32896B-f24-buffer
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
-TaskA.NAM=schriftliche Stellungsnahme verfassen
+TaskA.NAM=Schriftliche Stellungsnahme zu Einw\u00E4nden verfassen
 TaskA.PRI=2
 TaskA.ROL=Antragsteller
 TaskA.SKIP_TASK_LIST=false
@@ -389,17 +408,18 @@ TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
-taskDef.setName(engine.expandMacros("schriftliche Stellungsnahme verfassen"));
+taskDef.setName(engine.expandMacros("Schriftliche Stellungsnahme zu Einwänden verfassen"));
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Antragsteller");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskDef.setExpiryStartTaskElementPid("1517D81DFA32896B-f24-buffer");
 taskDefinitions.add(taskDef);
 ' #txt
 An0 f9 type einbuergerung_Gruppe6.Data #txt
 An0 f9 template "" #txt
-An0 f9 1344 304 32 32 0 16 #rect
+An0 f9 1232 440 32 32 0 16 #rect
 An0 f9 @|TaskSwitchIcon #fIcon
 An0 f11 type einbuergerung_Gruppe6.Data #txt
 An0 f11 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -414,7 +434,7 @@ absolviert?</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f11 984 144 32 32 -58 16 #rect
+An0 f11 1000 136 32 32 -53 -71 #rect
 An0 f11 @|AlternativeIcon #fIcon
 An0 f14 expr in #txt
 An0 f14 outCond 'einbuergerung_Gruppe6.PersonHelper.isAllAdultsHadMeeting(in.request.personList) == true' #txt
@@ -427,15 +447,15 @@ An0 f14 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f14 1016 160 1152 160 #arcP
-An0 f14 0 0.41911764705882354 0 9 #arcLabel
+An0 f14 1032 152 1112 152 #arcP
+An0 f14 0 0.19852941176470587 0 -9 #arcLabel
 An0 f39 type einbuergerung_Gruppe6.Data #txt
-An0 f39 608 144 32 32 0 16 #rect
+An0 f39 632 136 32 32 0 16 #rect
 An0 f39 @|AlternativeIcon #fIcon
 An0 f27 expr in #txt
 An0 f27 type einbuergerung_Gruppe6.Data #txt
 An0 f27 var in1 #txt
-An0 f27 640 160 680 160 #arcP
+An0 f27 664 152 704 152 #arcP
 An0 f41 expr in #txt
 An0 f41 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -446,18 +466,18 @@ An0 f41 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f41 1000 144 624 144 #arcP
-An0 f41 1 1000 121 #addKink
-An0 f41 2 624 121 #addKink
-An0 f41 0 0.43478260869565216 -17 0 #arcLabel
+An0 f41 1016 168 648 168 #arcP
+An0 f41 1 1016 208 #addKink
+An0 f41 2 648 208 #addKink
+An0 f41 0 0.3333333333333333 -15 0 #arcLabel
 An0 f18 type einbuergerung_Gruppe6.Data #txt
-An0 f18 1536 144 32 32 0 16 #rect
+An0 f18 1552 280 32 32 0 16 #rect
 An0 f18 @|AlternativeIcon #fIcon
 An0 f37 expr out #txt
-An0 f37 103 160 154 160 #arcP
+An0 f37 111 296 154 296 #arcP
 An0 f38 type einbuergerung_Gruppe6.Data #txt
 An0 f38 var in1 #txt
-An0 f38 248 190 248 304 #arcP
+An0 f38 248 326 248 440 #arcP
 An0 S11 .resExport export #txt
 An0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -470,26 +490,28 @@ Einbürgerungsgespräch</name>
     </language>
 </elementInfo>
 ' #txt
-An0 S11 154 130 188 60 -67 -28 #rect
+An0 S11 154 266 188 60 -67 -28 #rect
 An0 S11 @|BpmnSendTaskIcon #fIcon
 An0 f2 expr data #txt
 An0 f2 outCond ivp=="TaskA.ivp" #txt
-An0 f2 264 320 306 320 #arcP
+An0 f2 264 456 300 456 #arcP
 An0 S21 .resExport export #txt
 An0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Termin für
-Einbürgerungsgespräch
-wählen</name>
-        <nameStyle>39,5,7
+        <name>Termin für Einbürgerungs-
+gespräch wählen</name>
+        <nameStyle>41,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 S21 306 290 172 60 -67 -28 #rect
+An0 S21 300 434 184 44 -72 -20 #rect
 An0 S21 @|BpmnUserTaskIcon #fIcon
-An0 f13 478 320 530 320 #arcP
+An0 f13 484 456 514 296 #arcP
+An0 f13 1 496 456 #addKink
+An0 f13 2 496 296 #addKink
+An0 f13 0 0.8499587640453471 0 0 #arcLabel
 An0 S31 .resExport export #txt
 An0 S31 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -501,62 +523,64 @@ inkl. Termine persistieren</name>
     </language>
 </elementInfo>
 ' #txt
-An0 S31 530 298 188 44 -69 -20 #rect
+An0 S31 514 274 188 44 -69 -20 #rect
 An0 S31 @|BpmnServiceTaskIcon #fIcon
 An0 f6 expr data #txt
 An0 f6 outCond ivp=="TaskA.ivp" #txt
-An0 f6 712 160 762 160 #arcP
-An0 f12 934 160 984 160 #arcP
+An0 f6 736 152 782 152 #arcP
+An0 f12 946 152 1000 152 #arcP
 An0 S40 .resExport export #txt
 An0 S40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Gespräch durchführen &amp;
+        <name>Gespräch durchführen,
+Einwände eröffnen &amp;
 Notizen festhalten</name>
-        <nameStyle>41,5,7
+        <nameStyle>60,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 S40 762 138 172 44 -67 -20 #rect
+An0 S40 782 122 164 60 -63 -28 #rect
 An0 S40 @|BpmnUserTaskIcon #fIcon
 An0 f15 type einbuergerung_Gruppe6.Data #txt
 An0 f15 var in1 #txt
-An0 f15 1360 190 1360 304 #arcP
+An0 f15 1248 318 1248 440 #arcP
 An0 S51 .resExport export #txt
 An0 S51 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Aufforderung zur
-schriftlichen Stellungsnahme
-senden</name>
-        <nameStyle>52,5,7
+        <name>Aufforderung zur schriftlichen 
+Stellungsnahme senden</name>
+        <nameStyle>53,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 S51 1258 130 204 60 -80 -28 #rect
+An0 S51 1144 274 208 44 -80 -20 #rect
 An0 S51 @|BpmnSendTaskIcon #fIcon
 An0 f7 expr data #txt
 An0 f7 outCond ivp=="TaskA.ivp" #txt
-An0 f7 1376 320 1428 320 #arcP
-An0 f20 1552 298 1552 176 #arcP
+An0 f7 1264 456 1302 456 #arcP
+An0 f20 1546 456 1568 312 #arcP
+An0 f20 1 1568 456 #addKink
+An0 f20 0 0.9648551640780217 0 0 #arcLabel
 An0 S61 .resExport export #txt
 An0 S61 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
-        <name>Einwände einsehen &amp;
+        <name>Einwände (anonymisiert) einsehen &amp;
 schriftliche Stellungsnahme verfassen</name>
-        <nameStyle>57,5,7
+        <nameStyle>72,5,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-An0 S61 1428 298 248 44 -105 -20 #rect
+An0 S61 1302 434 244 44 -105 -20 #rect
 An0 S61 @|BpmnUserTaskIcon #fIcon
 An0 f21 expr in #txt
-An0 f21 1568 160 1616 160 #arcP
-An0 f22 1728 160 1777 160 #arcP
+An0 f21 1584 296 1616 296 #arcP
+An0 f22 1728 296 1761 296 #arcP
 An0 S71 .resExport export #txt
 An0 S71 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -567,9 +591,11 @@ An0 S71 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 S71 1616 138 112 44 -39 -8 #rect
+An0 S71 1616 274 112 44 -39 -8 #rect
 An0 S71 @|BpmnServiceTaskIcon #fIcon
-An0 f16 624 298 624 176 #arcP
+An0 f16 608 274 632 152 #arcP
+An0 f16 1 608 152 #addKink
+An0 f16 0 0.1359768059304255 0 0 #arcLabel
 An0 f4 expr in #txt
 An0 f4 outCond in.request.writtenStatement==true #txt
 An0 f4 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -581,8 +607,9 @@ An0 f4 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f4 1184 160 1258 160 #arcP
-An0 f4 0 0.47297297297297297 0 -9 #arcLabel
+An0 f4 1128 168 1144 296 #arcP
+An0 f4 1 1128 296 #addKink
+An0 f4 0 0.1171875 13 0 #arcLabel
 An0 f8 expr in #txt
 An0 f8 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -593,27 +620,119 @@ An0 f8 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f8 1168 144 1552 144 #arcP
-An0 f8 1 1168 112 #addKink
-An0 f8 2 1552 112 #addKink
-An0 f8 0 0.375 -14 0 #arcLabel
+An0 f8 1144 152 1568 280 #arcP
+An0 f8 1 1568 152 #addKink
+An0 f8 0 0.07608695652173914 0 -12 #arcLabel
+An0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Jede Person kann online Wunschtermin aus einer Liste mit nur verfügbaren Daten auswählen.
+Für Kinder kann anstatt ein Termin die Begleitperson gewählt werden.
+
+Prototyp Notes:
+Es wird noch nicht validiert, ob zwei Personen im selben Dialog den gleichen Termin wählen.
+Bei jedem neuen Dialog aufruf sind die vorher gewählten Termine nicht mehr verfügbar.</name>
+        <nameStyle>90,7
+263,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f10 208 538 528 108 -258 -48 #rect
+An0 f10 @|IBIcon #fIcon
+An0 f10 -4144960|-4144960|-16777216 #nodeStyle
+An0 f17 472 538 392 478 #arcP
+An0 f19 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Migrationsmitarbeiter hat während dem Gespräch 
+über ein Tablet-PC zugang auf diesen Dialog.
+Hier werden Notizen/Ergebnisse des Gespräches 
+dokumentiert. Desweiteren werden alle formkorrekten 
+Einwände in anonymisierter Form angezeigt. Mündliche
+ Stellungsnahmen werden ebenfalls hier aufgenommen. 
+Falls ein schriftliches Statement gewünscht wird,
+wird dies hier deklariert.</name>
+        <nameStyle>93,7
+282,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f19 216 26 320 140 -156 -64 #rect
+An0 f19 @|IBIcon #fIcon
+An0 f19 -4144960|-4144960|-16777216 #nodeStyle
+An0 f23 536 26 864 122 #arcP
+An0 f23 1 864 96 #addKink
+An0 f23 0 0.21885434604940043 0 0 #arcLabel
+An0 f24 .resExport export #txt
+An0 f24 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f24 actionTable 'out=in;
+' #txt
+An0 f24 type einbuergerung_Gruppe6.Data #txt
+An0 f24 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Keine Antwort</name>
+        <nameStyle>13,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f24 1857 281 30 30 -37 17 #rect
+An0 f24 @|ExceptionIcon #fIcon
+An0 f26 type einbuergerung_Gruppe6.Data #txt
+An0 f26 processCall 'Functional Processes/Abbruch:call(einbuergerung_Gruppe6.Data)' #txt
+An0 f26 doCall true #txt
+An0 f26 requestActionDecl '<einbuergerung_Gruppe6.Data data> param;
+' #txt
+An0 f26 requestMappingAction 'param.data=in;
+' #txt
+An0 f26 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+An0 f26 responseMappingAction 'out=in;
+' #txt
+An0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Abbruch</name>
+        <nameStyle>7,5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+An0 f26 1928 274 112 44 -22 -8 #rect
+An0 f26 @|CallSubIcon #fIcon
+An0 f28 expr out #txt
+An0 f28 1887 296 1928 296 #arcP
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <desc>Migrationsamt</desc>
+        <swimlaneLabel>Gemeinde Verwaltung Schwyz</swimlaneLabel>
         <swimlaneLabel>Migrationsamt</swimlaneLabel>
+        <swimlaneLabel>System</swimlaneLabel>
         <swimlaneLabel>Antragsteller</swimlaneLabel>
     </language>
     <swimlaneOrientation>false</swimlaneOrientation>
-    <swimlaneSize>128</swimlaneSize>
+    <swimlaneSize>272</swimlaneSize>
+    <swimlaneSize>152</swimlaneSize>
+    <swimlaneSize>120</swimlaneSize>
     <swimlaneSize>128</swimlaneSize>
     <swimlaneColor gradient="false">-3342337</swimlaneColor>
+    <swimlaneColor gradient="false">-3342337</swimlaneColor>
+    <swimlaneColor gradient="false">-3355393</swimlaneColor>
     <swimlaneColor gradient="false">-3342388</swimlaneColor>
     <swimlaneType>POOL</swimlaneType>
+    <swimlaneType>LANE_IN_POOL</swimlaneType>
+    <swimlaneType>LANE_IN_POOL</swimlaneType>
     <swimlaneType>POOL</swimlaneType>
-    <swimlaneSpaceBefore>96</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>80</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
     <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
 </elementInfo>
 ' #txt
@@ -1149,6 +1268,12 @@ An0 f5 out f4 tail #connect
 An0 f4 head S51 g0 #connect
 An0 f5 out f8 tail #connect
 An0 f8 head f18 in #connect
+An0 f10 ao f17 tail #connect
+An0 f17 head S21 ai #connect
+An0 f19 ao f23 tail #connect
+An0 f23 head S40 ai #connect
+An0 f24 mainOut f28 tail #connect
+An0 f28 head f26 mainIn #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head f21 mainIn #connect
 Bk0 f1 head g1 m #connect
