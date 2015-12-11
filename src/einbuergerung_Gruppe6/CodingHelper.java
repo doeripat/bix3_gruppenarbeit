@@ -10,6 +10,8 @@ import java.util.UUID;
 
 public class CodingHelper {
 	
+	//generiert eine (eindeutige) 6-stellige Zahl
+	//es kann sein, dass zweimal die gleiche Zahl herauskommt. ==> Prototyp
 	public static String generateUniqueIdentifier(){
         ArrayList<Integer> list = new ArrayList<Integer>();
         for (int i=0; i<9; i++) {
@@ -25,10 +27,15 @@ public class CodingHelper {
 		return strbul.toString();
 	}
 	
+	//generiert eine UUID, wird nicht gebraucht im Prozess
+	//UUID = Universally unique identifier
+	//Beispiel fuer UUID: de305d54-75b4-431b-adb2-eb6b9e546014
 	public static String generateUUID(){
 		return UUID.randomUUID().toString();
 	}
 	
+	//generiert ein Passwort
+	//kann auch anders generiert werden resp. schwierigere Kennwoerter generiert werden ==> Prototyp
 	public static String generatePassword() throws NoSuchAlgorithmException{
 		String plaintext = generateUniqueIdentifier();
 		

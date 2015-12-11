@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 13:16:52 CET 2015]
+[>Created: Fri Dec 11 15:36:00 CET 2015]
 1505C20872F96D3E 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragssteller_informieren Big #zClass
@@ -37,6 +37,8 @@ An0 @PushWFArc f3 '' #zField
 An0 @TkArc f4 '' #zField
 An0 Bk5 S21 'Sub 2' #zField
 An0 Bk1 S40 'Sub 4' #zField
+An0 @AnnotationArc f5 '' #zField
+An0 @InfoButton f8 '' #zField
 >Proto An0 An0 Antragssteller_informieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -97,7 +99,7 @@ Bk5 @PushTrueWFInG-01 g0 '' #zField
 Bk5 @PushWFArc f0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
 Bk5 @PushWFArc f1 '' #zField
->Proto Bk5 Bk3 BpmnSendTask #zField
+>Proto Bk5 Bk2 BpmnSendTask #zField
 Bk1 @TextInP .resExport .resExport #zField
 Bk1 @TextInP .type .type #zField
 Bk1 @TextInP .processKind .processKind #zField
@@ -130,10 +132,10 @@ An0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f0 113 209 30 30 -26 17 #rect
+An0 f0 113 353 30 30 -26 17 #rect
 An0 f0 @|StartSubIcon #fIcon
 An0 f1 type einbuergerung_Gruppe6.Data #txt
-An0 f1 913 497 30 30 0 15 #rect
+An0 f1 913 641 30 30 0 15 #rect
 An0 f1 @|EndSubIcon #fIcon
 An0 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -203,7 +205,7 @@ An0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f10 560 496 32 32 0 18 #rect
+An0 f10 560 640 32 32 0 18 #rect
 An0 f10 @|TaskSwitchIcon #fIcon
 An0 f47 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -217,9 +219,9 @@ und mit Merkblatt über den Ablauf informiert wurde.</name>
     </language>
 </elementInfo>
 ' #txt
-An0 f47 184 250 304 76 -146 -32 #rect
+An0 f47 88 426 304 76 -146 -32 #rect
 An0 f47 @|IBIcon #fIcon
-An0 f47 -14336|-1|-16777216 #nodeStyle
+An0 f47 -14336|-14336|-16777216 #nodeStyle
 An0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 An0 f17 actionTable 'out=in1;
@@ -288,15 +290,15 @@ An0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 f17 192 208 32 32 0 18 #rect
+An0 f17 192 352 32 32 0 18 #rect
 An0 f17 @|TaskSwitchIcon #fIcon
 An0 f18 expr out #txt
 An0 f18 type einbuergerung_Gruppe6.Data #txt
 An0 f18 var in1 #txt
-An0 f18 143 224 192 224 #arcP
+An0 f18 143 368 192 368 #arcP
 An0 f30 expr data #txt
 An0 f30 outCond ivp=="TaskA.ivp" #txt
-An0 f30 224 224 272 224 #arcP
+An0 f30 224 368 272 368 #arcP
 An0 S11 .resExport export #txt
 An0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -307,12 +309,12 @@ An0 S11 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-An0 S11 272 202 128 44 -60 -8 #rect
+An0 S11 272 346 128 44 -60 -8 #rect
 An0 S11 @|BpmnUserTaskIcon #fIcon
 An0 f2 expr data #txt
 An0 f2 outCond ivp=="TaskA.ivp" #txt
-An0 f2 592 512 632 512 #arcP
-An0 f6 856 512 913 512 #arcP
+An0 f2 592 656 632 656 #arcP
+An0 f6 856 656 913 656 #arcP
 An0 S31 .resExport export #txt
 An0 S31 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -325,13 +327,13 @@ inkl. Status Update</name>
     </language>
 </elementInfo>
 ' #txt
-An0 S31 632 482 224 60 -85 -28 #rect
+An0 S31 632 626 224 60 -85 -28 #rect
 An0 S31 @|BpmnUserTaskIcon #fIcon
-An0 f7 336 202 336 118 #arcP
-An0 f3 424 96 474 96 #arcP
+An0 f7 336 346 336 262 #arcP
+An0 f3 424 240 474 240 #arcP
 An0 f4 type einbuergerung_Gruppe6.Data #txt
 An0 f4 var in1 #txt
-An0 f4 576 118 576 496 #arcP
+An0 f4 576 262 576 640 #arcP
 An0 S21 .resExport export #txt
 An0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -343,7 +345,7 @@ an Antragsteller senden</name>
     </language>
 </elementInfo>
 ' #txt
-An0 S21 474 74 204 44 -72 -20 #rect
+An0 S21 474 218 204 44 -72 -20 #rect
 An0 S21 @|BpmnSendTaskIcon #fIcon
 An0 S40 .resExport export #txt
 An0 S40 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -356,8 +358,19 @@ Passwort generieren</name>
     </language>
 </elementInfo>
 ' #txt
-An0 S40 248 74 176 44 -57 -20 #rect
+An0 S40 248 218 176 44 -57 -20 #rect
 An0 S40 @|BpmnServiceTaskIcon #fIcon
+An0 f5 240 426 279 390 #arcP
+An0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name></name>
+    </language>
+</elementInfo>
+' #txt
+An0 f8 217 129 30 30 0 -8 #rect
+An0 f8 @|IBIcon #fIcon
+An0 f8 -14336|-14336|-16777216 #nodeStyle
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -381,7 +394,7 @@ An0 S40 @|BpmnServiceTaskIcon #fIcon
     <swimlaneType>LANE_IN_POOL</swimlaneType>
     <swimlaneType>LANE_IN_POOL</swimlaneType>
     <swimlaneType>POOL</swimlaneType>
-    <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
+    <swimlaneSpaceBefore>176</swimlaneSpaceBefore>
     <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
     <swimlaneSpaceBefore>0</swimlaneSpaceBefore>
     <swimlaneSpaceBefore>32</swimlaneSpaceBefore>
@@ -699,8 +712,8 @@ Bk5 g1 363 147 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
 Bk5 f1 expr out #txt
 Bk5 f1 304 160 363 160 #arcP
->Proto Bk3 0 0 32 24 18 0 #rect
->Proto Bk3 @|BIcon #fIcon
+>Proto Bk2 -8 -8 16 16 16 26 #rect
+>Proto Bk2 '' #fIcon
 Bk1 f3 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 Bk1 f3 actionTable 'out=in;
@@ -756,6 +769,8 @@ An0 f3 head S21 g0 #connect
 An0 S21 g1 f4 tail #connect
 An0 f7 head S40 g0 #connect
 An0 S40 g1 f3 tail #connect
+An0 f47 ao f5 tail #connect
+An0 f5 head S11 ai #connect
 Bk0 g0 m f0 tail #connect
 Bk0 f0 head f2 mainIn #connect
 Bk0 f1 head g1 m #connect
