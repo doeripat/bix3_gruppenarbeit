@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 15:14:53 CET 2015]
+[>Created: Fri Dec 11 15:21:35 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -145,6 +145,7 @@ Bk5 @PushTrueWFInG-01 g0 '' #zField
 Bk5 @PushWFArc f0 '' #zField
 Bk5 @PushTrueWFOutG-01 g1 '' #zField
 Bk5 @PushWFArc f1 '' #zField
+Bk5 @PushTrueWFInG-01 g2 '' #zField
 >Proto Bk5 Bk4 BpmnSendTask #zField
 Bk6 @TextInP .resExport .resExport #zField
 Bk6 @TextInP .type .type #zField
@@ -156,9 +157,12 @@ Bk6 @TextInP .xml .xml #zField
 Bk6 @TextInP .responsibility .responsibility #zField
 Bk6 @RichDialog f30 '' #zField
 Bk6 @PushTrueWFInG-01 g0 '' #zField
-Bk6 @PushWFArc f0 '' #zField
 Bk6 @PushTrueWFOutG-01 g1 '' #zField
 Bk6 @PushWFArc f1 '' #zField
+Bk6 @RichDialog f2 '' #zField
+Bk6 @PushWFArc f3 '' #zField
+Bk6 @PushWFArc f0 '' #zField
+Bk6 @PushTrueWFInG-01 g2 '' #zField
 >Proto Bk6 Bk5 BpmnUserTask #zField
 Bk7 @TextInP .resExport .resExport #zField
 Bk7 @TextInP .type .type #zField
@@ -344,14 +348,54 @@ An0 f9 actionTable 'out=in1;
 ' #txt
 An0 f9 outTypes "einbuergerung_Gruppe6.Data" #txt
 An0 f9 outLinks "TaskA.ivp" #txt
+An0 f9 caseData '#
+#Fri Dec 11 15:18:37 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+An0 f9 taskData '#
+#Fri Dec 11 15:18:37 CET 2015
+TaskA.EXPRI=2
+TaskA.EXROL=Everybody
+TaskA.EXTYPE=0
+TaskA.NAM=schriftliche Stellungsnahme verfassen
+TaskA.PRI=2
+TaskA.ROL=Antragsteller
+TaskA.SKIP_TASK_LIST=false
+TaskA.TYPE=0
+' #txt
 An0 f9 taskAction 'import ch.ivyteam.ivy.workflow.TaskDefinition;
 List<TaskDefinition> taskDefinitions;
 TaskDefinition taskDef;import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
 DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
 taskDef = new TaskDefinition();
 taskDef.setStartRequestPath("TaskA.ivp");
+taskDef.setName(engine.expandMacros("schriftliche Stellungsnahme verfassen"));
 taskDef.setAutoStartTask(false);
-taskDef.setActivator("Everybody");
+taskDef.setActivator("Antragsteller");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryActivator("Everybody");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
@@ -1003,6 +1047,8 @@ Bk5 g1 395 147 26 26 0 5 #rect
 Bk5 g1 @|MOGIcon #fIcon
 Bk5 f1 expr out #txt
 Bk5 f1 328 160 395 160 #arcP
+Bk5 g2 115 275 26 26 0 5 #rect
+Bk5 g2 @|MIGIcon #fIcon
 >Proto Bk4 0 0 32 24 18 0 #rect
 >Proto Bk4 @|BIcon #fIcon
 Bk6 f30 targetWindow NEW:card: #txt
@@ -1034,7 +1080,7 @@ Statementspalte für Migrationsamt ausgeblendet</desc>
     </language>
 </elementInfo>
 ' #txt
-Bk6 f30 136 138 224 44 -105 -8 #rect
+Bk6 f30 304 138 224 44 -105 -8 #rect
 Bk6 f30 @|RichDialogIcon #fIcon
 Bk6 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -1045,7 +1091,6 @@ Bk6 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk6 g0 51 147 26 26 0 5 #rect
 Bk6 g0 @|MIGIcon #fIcon
-Bk6 f0 77 160 136 160 #arcP
 Bk6 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language lang="en">
@@ -1053,10 +1098,43 @@ Bk6 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-Bk6 g1 419 147 26 26 0 5 #rect
+Bk6 g1 595 147 26 26 0 5 #rect
 Bk6 g1 @|MOGIcon #fIcon
 Bk6 f1 expr out #txt
-Bk6 f1 360 160 419 160 #arcP
+Bk6 f1 528 160 595 160 #arcP
+Bk6 f2 targetWindow NEW:card: #txt
+Bk6 f2 targetDisplay TOP #txt
+Bk6 f2 richDialogId einbuergerung_Gruppe6.Login #txt
+Bk6 f2 startMethod start(String,String) #txt
+Bk6 f2 type einbuergerung_Gruppe6.Data #txt
+Bk6 f2 requestActionDecl '<String email, String password> param;' #txt
+Bk6 f2 requestMappingAction 'param.email=in.request.email;
+param.password=in.request.password;
+' #txt
+Bk6 f2 responseActionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+Bk6 f2 responseMappingAction 'out=in;
+' #txt
+Bk6 f2 windowConfiguration '* ' #txt
+Bk6 f2 isAsynch false #txt
+Bk6 f2 isInnerRd false #txt
+Bk6 f2 userContext '* ' #txt
+Bk6 f2 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Login</name>
+        <nameStyle>5,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+Bk6 f2 136 138 112 44 -15 -8 #rect
+Bk6 f2 @|RichDialogIcon #fIcon
+Bk6 f3 77 160 136 160 #arcP
+Bk6 f0 expr out #txt
+Bk6 f0 248 160 304 160 #arcP
+Bk6 g2 195 259 26 26 0 5 #rect
+Bk6 g2 @|MIGIcon #fIcon
 >Proto Bk5 0 0 32 24 18 0 #rect
 >Proto Bk5 @|BIcon #fIcon
 Bk7 f10 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -1181,11 +1259,13 @@ Bk5 f0 head f29 mainIn #connect
 Bk5 f1 head g1 m #connect
 Bk5 f29 mainOut f1 tail #connect
 Bk5 0 0 480 352 0 #ivRect
-Bk6 g0 m f0 tail #connect
-Bk6 f0 head f30 mainIn #connect
 Bk6 f1 head g1 m #connect
 Bk6 f30 mainOut f1 tail #connect
-Bk6 0 0 528 320 0 #ivRect
+Bk6 g0 m f3 tail #connect
+Bk6 f3 head f2 mainIn #connect
+Bk6 f2 mainOut f0 tail #connect
+Bk6 f0 head f30 mainIn #connect
+Bk6 0 0 880 328 0 #ivRect
 Bk7 g0 m f0 tail #connect
 Bk7 f0 head f10 mainIn #connect
 Bk7 f1 head g1 m #connect

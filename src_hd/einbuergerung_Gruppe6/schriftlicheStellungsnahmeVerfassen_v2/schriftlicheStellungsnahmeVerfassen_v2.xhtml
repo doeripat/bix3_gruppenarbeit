@@ -28,7 +28,10 @@
 						<p:column headerText="Begründung">
 						  <h:outputText value="#{objection.text}" />
 						</p:column>
-						<p:column headerText="Stellungnahme">
+						<p:column headerText="Mündlich">
+						  <h:outputText value="#{objection.statementOral}" />
+						</p:column>
+						<p:column headerText="Schriftlich">
 								<p:cellEditor>
 									<f:facet name="output"><h:outputText value="#{objection.statementWritten}" /></f:facet>
 									<f:facet name="input"><h:inputTextarea value="#{objection.statementWritten}" rows="6" cols="33" /></f:facet>

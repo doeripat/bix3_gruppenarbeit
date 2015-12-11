@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 15:54:06 CET 2015]
+[>Created: Fri Dec 11 14:00:45 CET 2015]
 1517CA9D518F38B5 3.17 #module
 >Proto >Proto Collection #zClass
 gn0 gesuchsstatusAbfragen Big #zClass
@@ -21,6 +21,7 @@ gn0 @EndWS ws1 '' #zField
 gn0 @DBStep f1 '' #zField
 gn0 @PushWFArc f2 '' #zField
 gn0 @PushWFArc f0 '' #zField
+gn0 @InfoButton f7 '' #zField
 >Proto gn0 gn0 gesuchsstatusAbfragen #zField
 gn0 ws0 inParamDecl '<java.lang.String uniqueIdentifier> param;' #txt
 gn0 ws0 inParamTable 'out.request.uniqueIdentifier=param.uniqueIdentifier;
@@ -121,6 +122,30 @@ gn0 f2 expr out #txt
 gn0 f2 111 64 160 64 #arcP
 gn0 f0 expr out #txt
 gn0 f0 288 64 337 64 #arcP
+gn0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Allgemeine Infos
+
+Webservice benötigt uniqueIdentifier (6-Stellige generierte Nummer) und gibt den Status des Gesuchs zurück. 
+Da es sich um einen Prototypen handelt, haben wir keine weiteren Felder zurückgegeben. 
+
+Wir haben die WS Security aktiviert und der Webservice kann  nur mit Benutzername und Passwort aufgerufen werden. 
+In SOAP UI unter Properties müssen folgende drei Werte gesetzt werden, damit man sich korrekt authentifiziert:
+- username: soap
+- password: 12345
+- WSS-Password Type: Password Text
+
+Dank der konfigurierten WS-Security können nur berechtige Personen auf den  Status zugreifen und die Daten sind nicht öffentlich einsehbar. </name>
+        <nameStyle>17,7
+636,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+gn0 f7 40 130 784 204 -385 -96 #rect
+gn0 f7 @|IBIcon #fIcon
+gn0 f7 -985168|-985168|-16777216 #nodeStyle
 >Proto gn0 .webServiceName einbuergerung_Gruppe6.gesuchsstatusAbfragen #txt
 >Proto gn0 .authenticationType HTTP_BASIC #txt
 >Proto gn0 .type einbuergerung_Gruppe6.Data #txt

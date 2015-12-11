@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Thu Dec 10 17:08:05 CET 2015]
+[>Created: Fri Dec 11 16:06:53 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -52,6 +52,7 @@ En0 Bk5 S51 'Sub 5' #zField
 En0 @PushWFArc f12 '' #zField
 En0 @PushWFArc f2 '' #zField
 En0 @PushWFArc f5 '' #zField
+En0 @AnnotationArc f9 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -223,7 +224,7 @@ auf Homepage</name>
     </language>
 </elementInfo>
 ' #txt
-En0 f19 88 138 208 76 -98 -32 #rect
+En0 f19 80 154 208 76 -98 -32 #rect
 En0 f19 @|IBIcon #fIcon
 En0 f19 -14336|-1|-16777216 #nodeStyle
 En0 f32 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -298,7 +299,7 @@ En0 f32 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 En0 f32 328 88 32 32 -41 -37 #rect
 En0 f32 @|TaskSwitchIcon #fIcon
-En0 f17 outLink start.ivp #txt
+En0 f17 outLink Einwaende_erfassen.ivp #txt
 En0 f17 type einbuergerung_Gruppe6.Data #txt
 En0 f17 inParamDecl '<> param;' #txt
 En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
@@ -306,16 +307,66 @@ En0 f17 actionDecl 'einbuergerung_Gruppe6.Data out;
 En0 f17 guid 1513AC40858EACAB #txt
 En0 f17 requestEnabled true #txt
 En0 f17 triggerEnabled false #txt
-En0 f17 callSignature start() #txt
+En0 f17 callSignature Einwaende_erfassen() #txt
+En0 f17 persist false #txt
+En0 f17 taskData '#
+#Fri Dec 11 16:06:40 CET 2015
+TaskTriggered.ROL=Everybody
+TaskTriggered.EXTYPE=0
+TaskTriggered.EXPRI=2
+TaskTriggered.TYPE=0
+TaskTriggered.PRI=2
+TaskTriggered.EXROL=Everybody
+' #txt
+En0 f17 caseData '#
+#Fri Dec 11 16:06:40 CET 2015
+businessCalendarName=
+businessCreator.user=
+businessMilestone.timestamp=
+businessObject.code=
+businessObject.docDb.code=
+businessObject.folder.id=
+businessObject.name=
+businessPriority=
+businessStart.timestamp=
+case.description=
+case.name=
+correspondent.id=
+mainContact.docDb.code=
+mainContact.folder.id=
+mainContact.id=
+mainContact.name=
+mainContact.type=
+process.code=
+process.name=
+processCategory.code=
+processCategory.name=
+subType.code=
+subType.name=
+type.code=
+type.name=
+' #txt
+En0 f17 showInStartList 1 #txt
+En0 f17 taskAndCaseSetupAction 'import ch.ivyteam.ivy.workflow.TaskUpdateDefinition;
+ch.ivyteam.ivy.workflow.TaskUpdateDefinition taskUpdDef = new ch.ivyteam.ivy.workflow.TaskUpdateDefinition();
+import ch.ivyteam.ivy.request.impl.DefaultCalendarProxy;
+DefaultCalendarProxy calendarProxy = ivy.cal as DefaultCalendarProxy;
+taskUpdDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+taskUpdDef.setExpiryActivator("Everybody");
+taskUpdDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
+engine.updateCurrentTask(taskUpdDef);
+' #txt
 En0 f17 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>start.ivp</name>
+        <name>Einwaende_erfassen.ivp</name>
+        <nameStyle>22,5,7
+</nameStyle>
     </language>
 </elementInfo>
 ' #txt
 En0 f17 @C|.responsibility Everybody #txt
-En0 f17 73 265 30 30 -21 16 #rect
+En0 f17 89 265 30 30 -68 17 #rect
 En0 f17 @|StartRequestIcon #fIcon
 En0 f38 type einbuergerung_Gruppe6.Data #txt
 En0 f38 377 265 30 30 0 15 #rect
@@ -446,8 +497,8 @@ Amtsblatt publizieren</name>
 En0 S11 118 82 164 44 -57 -20 #rect
 En0 S11 @|BpmnServiceTaskIcon #fIcon
 En0 f3 expr out #txt
-En0 f3 103 280 166 280 #arcP
-En0 f4 314 280 377 280 #arcP
+En0 f3 119 280 190 280 #arcP
+En0 f4 338 280 377 280 #arcP
 En0 S21 .resExport export #txt
 En0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -458,7 +509,7 @@ En0 S21 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     </language>
 </elementInfo>
 ' #txt
-En0 S21 166 258 148 44 -50 -8 #rect
+En0 S21 190 258 148 44 -50 -8 #rect
 En0 S21 @|BpmnUserTaskIcon #fIcon
 En0 f11 expr data #txt
 En0 f11 outCond ivp=="TaskA.ivp" #txt
@@ -512,6 +563,7 @@ En0 f2 expr data #txt
 En0 f2 outCond ivp=="TaskA.ivp" #txt
 En0 f2 720 408 770 408 #arcP
 En0 f5 578 104 620 104 #arcP
+En0 f9 184 154 200 126 #arcP
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -927,6 +979,8 @@ En0 f7 out f2 tail #connect
 En0 f2 head S51 g0 #connect
 En0 S31 g1 f5 tail #connect
 En0 f5 head S40 g0 #connect
+En0 f19 ao f9 tail #connect
+En0 f9 head S11 ai #connect
 Bk0 f11 mainOut f34 tail #connect
 Bk0 f34 head f3 mainIn #connect
 Bk0 f3 mainOut f29 tail #connect

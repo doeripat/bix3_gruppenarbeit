@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 21:10:38 CET 2015]
+[>Created: Fri Dec 11 15:45:58 CET 2015]
 1513E4291B3CE89A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 erfassungEinwaendeProcess Big #zClass
@@ -132,15 +132,14 @@ es0 f8 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
 es0 f8 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Datum
-validieren</name>
-        <nameStyle>6,7
-10,7
+        <name>Fristgerechtigkeit
+Prüfen</name>
+        <nameStyle>25,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-es0 f8 504 194 112 44 -26 -16 #rect
+es0 f8 504 194 128 44 -43 -16 #rect
 es0 f8 @|StepIcon #fIcon
 es0 f10 actionDecl 'einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData out;
 ' #txt
@@ -159,33 +158,44 @@ es0 f10 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #tx
 es0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Load Date</name>
-        <nameStyle>9,7
+        <name>Datum
+Fristende laden</name>
+        <nameStyle>21,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-es0 f10 128 194 112 44 -28 -8 #rect
+es0 f10 120 194 128 44 -41 -16 #rect
 es0 f10 @|DBStepIcon #fIcon
 es0 f11 expr out #txt
-es0 f11 85 216 128 216 #arcP
+es0 f11 85 216 120 216 #arcP
 es0 f12 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
 es0 f12 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Date Valid?</name>
-        <nameStyle>11,7
+        <name>Datum gültig?</name>
+        <nameStyle>13,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-es0 f12 656 200 32 32 -41 -44 #rect
+es0 f12 656 200 32 32 -41 -41 #rect
 es0 f12 @|AlternativeIcon #fIcon
 es0 f13 expr out #txt
-es0 f13 616 216 656 216 #arcP
+es0 f13 632 216 656 216 #arcP
 es0 f7 expr in #txt
 es0 f7 outCond in.valid #txt
+es0 f7 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
 es0 f7 688 216 728 216 #arcP
+es0 f7 0 0.35 0 -10 #arcLabel
 es0 f25 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
 es0 f25 923 283 26 26 0 12 #rect
 es0 f25 @|RichDialogProcessEndIcon #fIcon
@@ -198,13 +208,14 @@ es0 f14 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #tx
 es0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Generate Message 2</name>
-        <nameStyle>18,7
+        <name>Fehlermeldung
+Generieren</name>
+        <nameStyle>24,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-es0 f14 728 338 128 44 -57 -8 #rect
+es0 f14 728 338 128 44 -41 -16 #rect
 es0 f14 @|StepIcon #fIcon
 es0 f19 expr out #txt
 es0 f19 856 360 936 309 #arcP
@@ -219,13 +230,14 @@ es0 f21 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #tx
 es0 f21 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Generate Message 1</name>
-        <nameStyle>18,7
+        <name>Fehlermeldung
+Generieren</name>
+        <nameStyle>24,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-es0 f21 728 274 128 44 -57 -8 #rect
+es0 f21 728 274 128 44 -41 -16 #rect
 es0 f21 @|StepIcon #fIcon
 es0 f22 expr in #txt
 es0 f22 outCond !in.valid #txt
@@ -254,18 +266,17 @@ es0 f23 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #tx
 es0 f23 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
-        <name>Check if 
-requestID exists</name>
-        <nameStyle>10,7
-16,7
+        <name>Prüfen ob 
+requestID existiert</name>
+        <nameStyle>30,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-es0 f23 280 194 128 44 -42 -16 #rect
+es0 f23 280 194 128 44 -44 -16 #rect
 es0 f23 @|StepIcon #fIcon
 es0 f24 expr out #txt
-es0 f24 240 216 280 216 #arcP
+es0 f24 248 216 280 216 #arcP
 es0 f26 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
 es0 f26 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -282,12 +293,29 @@ es0 f27 expr out #txt
 es0 f27 408 216 440 216 #arcP
 es0 f9 expr in #txt
 es0 f9 outCond in.valid #txt
+es0 f9 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Ja</name>
+        <nameStyle>2,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
 es0 f9 472 216 504 216 #arcP
+es0 f9 0 0.34375 0 -10 #arcLabel
 es0 f28 expr in #txt
 es0 f28 outCond !in.valid #txt
+es0 f28 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name></name>
+    </language>
+</elementInfo>
+' #txt
 es0 f28 456 232 728 360 #arcP
 es0 f28 1 456 360 #addKink
-es0 f28 1 0.2647058823529412 0 0 #arcLabel
+es0 f28 0 0.1328125 20 0 #arcLabel
 es0 f2 expr out #txt
 es0 f2 117 88 579 88 #arcP
 >Proto es0 .type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
