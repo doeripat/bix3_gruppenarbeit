@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Tue Dec 08 17:42:39 CET 2015]
+[>Created: Tue Dec 15 17:38:08 CET 2015]
 1514E482577A784A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 einwaendePruefen_v2Process Big #zClass
@@ -25,13 +25,15 @@ es0 @DBStep f6 '' #zField
 es0 @PushWFArc f16 '' #zField
 es0 @PushWFArc f7 '' #zField
 es0 @PushWFArc f2 '' #zField
-es0 @PushWFArc f9 '' #zField
 es0 @RichDialogMethodStart f22 '' #zField
 es0 @RichDialogProcessEnd f23 '' #zField
 es0 @PushWFArc f18 '' #zField
 es0 @PushWFArc f17 '' #zField
 es0 @GridStep f25 '' #zField
 es0 @PushWFArc f5 '' #zField
+es0 @GridStep f10 '' #zField
+es0 @PushWFArc f12 '' #zField
+es0 @PushWFArc f9 '' #zField
 >Proto es0 es0 einwaendePruefen_v2Process #zField
 es0 f0 guid 1514E4825AAB5E81 #txt
 es0 f0 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
@@ -56,7 +58,7 @@ es0 f0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 es0 f0 83 51 26 26 -39 15 #rect
 es0 f0 @|RichDialogInitStartIcon #fIcon
 es0 f1 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
-es0 f1 707 51 26 26 0 12 #rect
+es0 f1 891 51 26 26 0 12 #rect
 es0 f1 @|RichDialogProcessEndIcon #fIcon
 es0 f3 guid 1514E4825B952512 #txt
 es0 f3 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
@@ -168,9 +170,6 @@ es0 f7 480 64 520 64 #arcP
 es0 f7 0 0.6056434123926123 0 0 #arcLabel
 es0 f2 expr out #txt
 es0 f2 109 64 168 64 #arcP
-es0 f9 expr out #txt
-es0 f9 632 64 707 64 #arcP
-es0 f9 0 0.4999999999999999 0 0 #arcLabel
 es0 f22 guid 1514E6D7528A0AF2 #txt
 es0 f22 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 es0 f22 method DeleteObjection(einbuergerung_Gruppe6.Objection) #txt
@@ -219,6 +218,37 @@ es0 f25 272 178 112 44 -45 -8 #rect
 es0 f25 @|StepIcon #fIcon
 es0 f5 expr out #txt
 es0 f5 101 328 699 328 #arcP
+es0 f10 actionDecl 'einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data out;
+' #txt
+es0 f10 actionTable 'out=in;
+' #txt
+es0 f10 actionCode 'import einbuergerung_Gruppe6.Objection;
+
+for(int i=0;i<4;i++){
+	Objection o = new Objection();
+	o.author = "Nic Zufrieden"+i;
+	String s="24.12.2015";
+	o.date = s.toDateTime();
+	o.text = "Das Passt mir gar nicht"+i;
+	out.request.objections.add(o);	
+	}' #txt
+es0 f10 type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
+es0 f10 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test Daten</name>
+        <nameStyle>10,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+es0 f10 688 42 112 44 -30 -8 #rect
+es0 f10 @|StepIcon #fIcon
+es0 f12 expr out #txt
+es0 f12 632 64 688 64 #arcP
+es0 f12 0 0.4999999999999999 0 0 #arcLabel
+es0 f9 expr out #txt
+es0 f9 800 64 891 64 #arcP
 >Proto es0 .type einbuergerung_Gruppe6.einwaendePruefen_v2.einwaendePruefen_v2Data #txt
 >Proto es0 .processKind HTML_DIALOG #txt
 >Proto es0 -8 -8 16 16 16 26 #rect
@@ -229,11 +259,13 @@ es0 f11 mainOut f7 tail #connect
 es0 f7 head f8 mainIn #connect
 es0 f0 mainOut f2 tail #connect
 es0 f2 head f6 mainIn #connect
-es0 f8 mainOut f9 tail #connect
-es0 f9 head f1 mainIn #connect
 es0 f22 mainOut f17 tail #connect
 es0 f17 head f25 mainIn #connect
 es0 f25 mainOut f18 tail #connect
 es0 f18 head f23 mainIn #connect
 es0 f3 mainOut f5 tail #connect
 es0 f5 head f4 mainIn #connect
+es0 f8 mainOut f12 tail #connect
+es0 f12 head f10 mainIn #connect
+es0 f10 mainOut f9 tail #connect
+es0 f9 head f1 mainIn #connect

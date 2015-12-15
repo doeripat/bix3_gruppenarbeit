@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 17:52:33 CET 2015]
+[>Created: Tue Dec 15 16:28:16 CET 2015]
 1505C75E929B75AE 3.17 #module
 >Proto >Proto Collection #zClass
 vs0 validate_documents Big #zClass
@@ -31,16 +31,10 @@ vs0 @CallSub f7 '' #zField
 vs0 @CallSub f8 '' #zField
 vs0 @TaskSwitch f4 '' #zField
 vs0 @TaskSwitch f2 '' #zField
-vs0 @TkArc f18 '' #zField
-vs0 @TkArc f19 '' #zField
-vs0 @TkArc f20 '' #zField
 vs0 @GridStep f22 '' #zField
 vs0 @PushWFArc f23 '' #zField
-vs0 @PushWFArc f12 '' #zField
 vs0 @GridStep f24 '' #zField
 vs0 @PushWFArc f25 '' #zField
-vs0 @PushWFArc f11 '' #zField
-vs0 @PushWFArc f14 '' #zField
 vs0 @GridStep f13 '' #zField
 vs0 @PushWFArc f21 '' #zField
 vs0 Bk0 S10 'Service 1' #zField
@@ -70,6 +64,10 @@ vs0 @PushWFArc f9 '' #zField
 vs0 @AnnotationArc f10 '' #zField
 vs0 @InfoButton f15 '' #zField
 vs0 @AnnotationArc f17 '' #zField
+vs0 @TkArc f14 '' #zField
+vs0 @TkArc f12 '' #zField
+vs0 @TkArc f11 '' #zField
+vs0 @GridStep f18 '' #zField
 >Proto vs0 vs0 validate_documents #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -415,7 +413,7 @@ out.request.personList=in4.request.personList;
 vs0 f2 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f2 outLinks "TaskA.ivp" #txt
 vs0 f2 caseData '#
-#Fri Dec 11 17:23:12 CET 2015
+#Tue Dec 15 14:46:14 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -443,7 +441,7 @@ type.code=
 type.name=
 ' #txt
 vs0 f2 taskData '#
-#Fri Dec 11 17:23:12 CET 2015
+#Tue Dec 15 14:46:14 CET 2015
 TaskA.EXPRI=2
 TaskA.EXROL=Everybody
 TaskA.EXTYPE=0
@@ -471,24 +469,6 @@ vs0 f2 type einbuergerung_Gruppe6.Data #txt
 vs0 f2 template "" #txt
 vs0 f2 944 152 32 32 0 16 #rect
 vs0 f2 @|TaskSwitchIcon #fIcon
-vs0 f18 expr out #txt
-vs0 f18 type einbuergerung_Gruppe6.Data #txt
-vs0 f18 var in1 #txt
-vs0 f18 800 72 960 152 #arcP
-vs0 f18 1 960 72 #addKink
-vs0 f18 0 0.6757183864355031 0 0 #arcLabel
-vs0 f19 expr out #txt
-vs0 f19 type einbuergerung_Gruppe6.Data #txt
-vs0 f19 var in2 #txt
-vs0 f19 800 136 952 160 #arcP
-vs0 f19 1 928 136 #addKink
-vs0 f19 0 0.5888942310345531 0 0 #arcLabel
-vs0 f20 expr out #txt
-vs0 f20 type einbuergerung_Gruppe6.Data #txt
-vs0 f20 var in3 #txt
-vs0 f20 800 200 952 176 #arcP
-vs0 f20 1 928 200 #addKink
-vs0 f20 0 0.5761968514209642 0 0 #arcLabel
 vs0 f22 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f22 actionTable 'out=in;
@@ -513,9 +493,6 @@ vs0 f23 outCond ivp=="TaskC.ivp" #txt
 vs0 f23 327 167 472 136 #arcP
 vs0 f23 1 352 136 #addKink
 vs0 f23 1 0.3936055718244919 0 0 #arcLabel
-vs0 f12 expr out #txt
-vs0 f12 632 136 688 136 #arcP
-vs0 f12 0 0.3936055718244919 0 0 #arcLabel
 vs0 f24 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f24 actionTable 'out=in;
@@ -540,15 +517,10 @@ vs0 f25 outCond ivp=="TaskB.ivp" #txt
 vs0 f25 329 183 464 200 #arcP
 vs0 f25 1 352 200 #addKink
 vs0 f25 1 0.438360561870366 0 0 #arcLabel
-vs0 f11 expr out #txt
-vs0 f11 640 200 688 200 #arcP
-vs0 f11 0 0.438360561870366 0 0 #arcLabel
-vs0 f14 expr out #txt
-vs0 f14 624 72 688 72 #arcP
-vs0 f14 0 0.3096891401817728 0 0 #arcLabel
 vs0 f13 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
 vs0 f13 actionTable 'out=in;
+out.request.commentDeutschkenntnisse="Deutschkenntnisse sind gut";
 out.request.documentToProof="Deutschkenntnisse";
 ' #txt
 vs0 f13 type einbuergerung_Gruppe6.Data #txt
@@ -625,7 +597,7 @@ vs0 f44 actionTable 'out=in1;
 vs0 f44 outTypes "einbuergerung_Gruppe6.Data" #txt
 vs0 f44 outLinks "TaskA.ivp" #txt
 vs0 f44 caseData '#
-#Fri Dec 11 17:52:22 CET 2015
+#Tue Dec 15 16:28:14 CET 2015
 businessCalendarName=
 businessCreator.user=
 businessMilestone.timestamp=
@@ -653,11 +625,10 @@ type.code=
 type.name=
 ' #txt
 vs0 f44 taskData '#
-#Fri Dec 11 17:52:22 CET 2015
+#Tue Dec 15 16:28:14 CET 2015
 TaskA.EXC=1505C75E929B75AE-f46-buffer
-TaskA.EXP=''480h''
 TaskA.EXPRI=2
-TaskA.EXROL=Everybody
+TaskA.EXROL=Polizei Mitarbeiter
 TaskA.EXTYPE=0
 TaskA.NAM=Bitte Leumund f\u00FCr Antrag Nr. <%\=in1.request.uniqueIdentifier%> hochladen
 TaskA.PRI=2
@@ -675,8 +646,7 @@ taskDef.setName(engine.expandMacros("Bitte Leumund für Antrag Nr. <%=in1.reques
 taskDef.setAutoStartTask(false);
 taskDef.setActivator("Polizei Mitarbeiter");
 taskDef.setPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
-taskDef.setExpiryPeriod(1000 * (''480h'').toNumber());
-taskDef.setExpiryActivator("Everybody");
+taskDef.setExpiryActivator("Polizei Mitarbeiter");
 taskDef.setExpiryPriority(ch.ivyteam.ivy.workflow.WorkflowPriority.valueOf(2));
 taskDef.setExpiryStartTaskElementPid("1505C75E929B75AE-f46-buffer");
 taskDefinitions.add(taskDef);
@@ -737,14 +707,14 @@ vs0 f43 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
     <language>
         <name>init documentToProof
-to Finanzielle Verhältnisse</name>
+to Leumund</name>
         <nameStyle>21,7
-27,7
+10,7
 </nameStyle>
     </language>
 </elementInfo>
 ' #txt
-vs0 f43 472 250 176 44 -68 -16 #rect
+vs0 f43 488 250 144 44 -53 -16 #rect
 vs0 f43 @|StepIcon #fIcon
 vs0 f48 type einbuergerung_Gruppe6.Data #txt
 vs0 f48 processCall 'Functional Processes/DokumentPruefen:call(einbuergerung_Gruppe6.Data)' #txt
@@ -771,7 +741,7 @@ vs0 f48 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 vs0 f48 696 250 112 44 -45 -8 #rect
 vs0 f48 @|CallSubIcon #fIcon
 vs0 f49 expr out #txt
-vs0 f49 648 272 696 272 #arcP
+vs0 f49 632 272 696 272 #arcP
 vs0 f49 0 0.438360561870366 0 0 #arcLabel
 vs0 f51 actionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -844,7 +814,7 @@ vs0 f52 2 416 336 #addKink
 vs0 f52 1 0.470214896496134 0 0 #arcLabel
 vs0 f50 expr data #txt
 vs0 f50 outCond ivp=="TaskA.ivp" #txt
-vs0 f50 432 272 472 272 #arcP
+vs0 f50 432 272 488 272 #arcP
 vs0 f50 0 0.470214896496134 0 0 #arcLabel
 vs0 f53 expr out #txt
 vs0 f53 type einbuergerung_Gruppe6.Data #txt
@@ -914,6 +884,112 @@ auf das Portal zugreiffen können.</name>
 vs0 f15 776 674 352 252 -172 -120 #rect
 vs0 f15 @|IBIcon #fIcon
 vs0 f17 952 674 776 470 #arcP
+vs0 f14 expr out #txt
+vs0 f14 type einbuergerung_Gruppe6.Data #txt
+vs0 f14 var in1 #txt
+vs0 f14 624 72 960 152 #arcP
+vs0 f14 1 960 72 #addKink
+vs0 f14 0 0.6190476190476191 0 0 #arcLabel
+vs0 f12 expr out #txt
+vs0 f12 type einbuergerung_Gruppe6.Data #txt
+vs0 f12 var in2 #txt
+vs0 f12 632 136 952 160 #arcP
+vs0 f12 1 928 136 #addKink
+vs0 f12 0 0.612863884390054 0 0 #arcLabel
+vs0 f11 expr out #txt
+vs0 f11 type einbuergerung_Gruppe6.Data #txt
+vs0 f11 var in3 #txt
+vs0 f11 640 200 952 176 #arcP
+vs0 f11 1 928 200 #addKink
+vs0 f11 0 0.6628863659327581 0 0 #arcLabel
+vs0 f18 actionDecl 'einbuergerung_Gruppe6.Data out;
+' #txt
+vs0 f18 actionTable 'out=in;
+' #txt
+vs0 f18 actionCode 'import einbuergerung_Gruppe6.Document;
+import einbuergerung_Gruppe6.Person;
+import einbuergerung_Gruppe6.Objection;
+
+out.request.address = "Mainstreet 2";
+out.request.postcode = "8888";
+out.request.city = "Zurich";
+out.request.phone = "077 666 55 44";
+out.request.commentDeutschkenntnisse = "Alles gut mit den Deutschkenntnissen";
+out.request.commentFinanzen = "Genung reich";
+out.request.commentLeumund = "Einige Einträge jeoch kein Problem für Einbürgerung";
+out.request.commentWohnsitz = "Alle Angaben stimmen";
+out.request.commentOnRequest = "Alles in allem Korrekt eingereicht und Voraussetzungen erfüllt";
+out.request.discount = false;
+
+	Person p = new Person();
+	p.firstname = "Peter";
+	p.lastname = "Muster";
+	String s ="30.05.1991";
+	p.birthday = s.toDateTime();
+	p.gender = 1;
+	p.maritalStatus = "verheiratet";
+	p.nationality ="China";
+	p.role = "Erwachsen";
+	p.yearCount = 10;
+	out.request.personList.add(p);
+	
+	Person mama = new Person();
+	mama.firstname = "Petra";
+	mama.lastname = "Muster";
+  s ="30.06.1993";
+	mama.birthday = s.toDateTime();
+	mama.gender = 2;
+	mama.maritalStatus = "verheiratet";
+	mama.nationality ="China";
+	mama.role = "Erwachsen";
+	mama.yearCount = 10;
+	out.request.personList.add(mama);
+
+for(int i = 0;i<3;i++)
+{
+	Person p = new Person();
+	p.firstname = "Peter"+" "+i;
+	p.lastname = "Muster"+" "+i;
+	String s ="30.05.2001";
+	p.birthday = s.toDateTime();
+	p.gender = 1;
+	p.maritalStatus = "ledig";
+	p.nationality ="China";
+	p.role = "Kind";
+	p.yearCount = 10;
+	out.request.personList.add(p);
+}
+
+
+for(int i = 0;i<6;i++)
+{
+	Document d = new Document();
+	d.fileName = "Testfile"+i;
+	out.request.documents.add(d);
+}
+
+for(int i=0;i<5;i++){
+	Objection o = new Objection();
+	o.author = "Nic Zufrieden"+i;
+	s="24.12.2015";
+	o.date = s.toDateTime();
+	o.text = "Das Passt mir gar nicht"+i;	
+	}
+
+' #txt
+vs0 f18 type einbuergerung_Gruppe6.Data #txt
+vs0 f18 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test Daten</name>
+        <nameStyle>10,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+vs0 f18 144 242 112 44 -30 -8 #rect
+vs0 f18 @|StepIcon #fIcon
+vs0 f18 -13016147|-1|-16777216 #nodeStyle
 >Proto vs0 .type einbuergerung_Gruppe6.Data #txt
 >Proto vs0 .processKind CALLABLE_SUB #txt
 >Proto vs0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1259,22 +1335,10 @@ Bk4 f1 expr out #txt
 Bk4 f1 248 160 307 160 #arcP
 >Proto Bk4 0 0 32 24 18 0 #rect
 >Proto Bk4 @|BIcon #fIcon
-vs0 f33 mainOut f18 tail #connect
-vs0 f18 head f2 in #connect
-vs0 f7 mainOut f19 tail #connect
-vs0 f19 head f2 in #connect
-vs0 f8 mainOut f20 tail #connect
-vs0 f20 head f2 in #connect
-vs0 f13 mainOut f14 tail #connect
-vs0 f14 head f33 mainIn #connect
 vs0 f23 head f22 mainIn #connect
-vs0 f22 mainOut f12 tail #connect
-vs0 f12 head f7 mainIn #connect
 vs0 f4 out f25 tail #connect
 vs0 f25 head f24 mainIn #connect
 vs0 f4 out f23 tail #connect
-vs0 f24 mainOut f11 tail #connect
-vs0 f11 head f8 mainIn #connect
 vs0 f4 out f21 tail #connect
 vs0 f21 head f13 mainIn #connect
 vs0 f4 out f3 tail #connect
@@ -1309,6 +1373,12 @@ vs0 f16 ao f10 tail #connect
 vs0 f10 head S41 ai #connect
 vs0 f15 ao f17 tail #connect
 vs0 f17 head U20 ai #connect
+vs0 f13 mainOut f14 tail #connect
+vs0 f14 head f2 in #connect
+vs0 f22 mainOut f12 tail #connect
+vs0 f12 head f2 in #connect
+vs0 f24 mainOut f11 tail #connect
+vs0 f11 head f2 in #connect
 Bk0 g0 m f4 tail #connect
 Bk0 f4 head f2 mainIn #connect
 Bk0 f2 mainOut f6 tail #connect

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 19:52:38 CET 2015]
+[>Created: Tue Dec 15 15:27:27 CET 2015]
 1505C51442680211 3.17 #module
 >Proto >Proto Collection #zClass
 dn0 dokumente_pruefen Big #zClass
@@ -34,7 +34,6 @@ dn0 @Alternative f23 '' #zField
 dn0 @PushWFArc f15 '' #zField
 dn0 Bk2 U40 'User 4' #zField
 dn0 @TaskSwitch f11 '' #zField
-dn0 @TkArc f19 '' #zField
 dn0 @CallSub f6 '' #zField
 dn0 Bk8 U50 'User 5' #zField
 dn0 @PushWFArc f13 '' #zField
@@ -58,12 +57,10 @@ dn0 @PushWFArc f2 '' #zField
 dn0 @PushWFArc f3 '' #zField
 dn0 @PushWFArc f28 '' #zField
 dn0 @Alternative f5 '' #zField
-dn0 @PushWFArc f37 '' #zField
 dn0 @PushWFArc f42 '' #zField
 dn0 @TkArc f48 '' #zField
 dn0 @CallSub f12 '' #zField
 dn0 @PushWFArc f4 '' #zField
-dn0 @PushWFArc f35 '' #zField
 dn0 @PushWFArc f36 '' #zField
 dn0 @PushWFArc f39 '' #zField
 dn0 Bk5 S11 'Sub 1' #zField
@@ -75,6 +72,9 @@ dn0 @PushWFArc f18 '' #zField
 dn0 @TkArc f10 '' #zField
 dn0 @PushWFArc f20 '' #zField
 dn0 @AnnotationArc f22 '' #zField
+dn0 @PushWFArc f27 '' #zField
+dn0 @PushWFArc f31 '' #zField
+dn0 @TkArc f19 '' #zField
 >Proto dn0 dn0 dokumente_pruefen #zField
 Bk2 @TextInP .resExport .resExport #zField
 Bk2 @TextInP .type .type #zField
@@ -168,6 +168,9 @@ Bk4 @PushTrueWFOutG-01 g1 '' #zField
 Bk4 @DBStep f1 '' #zField
 Bk4 @PushWFArc f2 '' #zField
 Bk4 @PushWFArc f0 '' #zField
+Bk4 @PushTrueWFInG-01 g2 '' #zField
+Bk4 @PushTrueWFOutG-01 g3 '' #zField
+Bk4 @PushWFArc f3 '' #zField
 >Proto Bk4 Bk5 BpmnServiceTask #zField
 Bk5 @TextInP .resExport .resExport #zField
 Bk5 @TextInP .type .type #zField
@@ -343,10 +346,6 @@ ausfüllen</name>
 dn0 f11 192 344 32 32 -44 -52 #rect
 dn0 f11 @|TaskSwitchIcon #fIcon
 dn0 f11 -1|-1|-16777216 #nodeStyle
-dn0 f19 expr out #txt
-dn0 f19 type einbuergerung_Gruppe6.Data #txt
-dn0 f19 var in1 #txt
-dn0 f19 127 360 192 360 #arcP
 dn0 f6 type einbuergerung_Gruppe6.Data #txt
 dn0 f6 processCall 'Functional Processes/Rechnungswesen:call(einbuergerung_Gruppe6.Invoice,einbuergerung_Gruppe6.Data)' #txt
 dn0 f6 doCall true #txt
@@ -687,9 +686,6 @@ dn0 f5 type einbuergerung_Gruppe6.Data #txt
 dn0 f5 448 104 32 32 0 16 #rect
 dn0 f5 @|AlternativeIcon #fIcon
 dn0 f5 -1|-1|-16777216 #nodeStyle
-dn0 f37 439 360 464 136 #arcP
-dn0 f37 1 464 360 #addKink
-dn0 f37 1 0.2067949849342754 0 0 #arcLabel
 dn0 f42 384 248 448 120 #arcP
 dn0 f42 1 424 248 #addKink
 dn0 f42 2 424 120 #addKink
@@ -727,8 +723,6 @@ dn0 f4 1176 248 1224 120 #arcP
 dn0 f4 1 1192 248 #addKink
 dn0 f4 2 1192 120 #addKink
 dn0 f4 1 0.359779330631331 0 0 #arcLabel
-dn0 f35 expr out #txt
-dn0 f35 1352 120 1400 120 #arcP
 dn0 f36 expr out #txt
 dn0 f36 1512 120 1556 248 #arcP
 dn0 f36 1 1536 120 #addKink
@@ -903,6 +897,17 @@ dn0 f20 expr data #txt
 dn0 f20 outCond ivp=="TaskA.ivp" #txt
 dn0 f20 792 360 768 361 #arcP
 dn0 f22 584 426 528 136 #arcP
+dn0 f27 376 384 1120 270 #arcP
+dn0 f27 1 376 400 #addKink
+dn0 f27 2 1120 400 #addKink
+dn0 f27 1 0.5443758338011873 0 0 #arcLabel
+dn0 f31 1176 248 1456 142 #arcP
+dn0 f31 1 1456 248 #addKink
+dn0 f31 0 0.7150538188470449 0 0 #arcLabel
+dn0 f19 expr out #txt
+dn0 f19 type einbuergerung_Gruppe6.Data #txt
+dn0 f19 var in1 #txt
+dn0 f19 127 360 192 360 #arcP
 >Proto dn0 .type einbuergerung_Gruppe6.Data #txt
 >Proto dn0 .processKind CALLABLE_SUB #txt
 >Proto dn0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -1253,6 +1258,11 @@ Bk4 f1 @|DBStepIcon #fIcon
 Bk4 f2 77 256 232 256 #arcP
 Bk4 f0 expr out #txt
 Bk4 f0 344 256 563 256 #arcP
+Bk4 g2 51 355 26 26 0 5 #rect
+Bk4 g2 @|MIGIcon #fIcon
+Bk4 g3 563 115 26 26 0 5 #rect
+Bk4 g3 @|MOGIcon #fIcon
+Bk4 f3 75 362 564 133 #arcP
 >Proto Bk5 0 0 32 24 18 0 #rect
 >Proto Bk5 @|BpmnServiceTaskIcon #fIcon
 Bk5 f14 beanConfig '"{/emailSubject ""Einbürgerung mit ID:<%=in.request.uniqueIdentifier%>""/emailFrom ""info@migrationsamt.ch""/emailReplyTo """"/emailTo ""<%=in.request.email%>""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Sehr geehrte Damen und Herren\\n\\n<%=in.request.commentOnRequest%>\\n\\nFreundliche Grüsse\\n\\nDas Migrationsamt ""/emailAttachments * }"' #txt
@@ -1296,8 +1306,6 @@ Bk5 f1 280 160 339 160 #arcP
 >Proto Bk6 @|BIcon #fIcon
 dn0 f23 out f15 tail #connect
 dn0 f15 head f1 mainIn #connect
-dn0 f0 mainOut f19 tail #connect
-dn0 f19 head f11 in #connect
 dn0 U50 g1 f13 tail #connect
 dn0 f13 head f8 in #connect
 dn0 f21 out f7 tail #connect
@@ -1317,16 +1325,12 @@ dn0 f11 out f3 tail #connect
 dn0 f3 head U30 g0 #connect
 dn0 f38 out f28 tail #connect
 dn0 f28 head f30 in #connect
-dn0 U30 g1 f37 tail #connect
-dn0 f37 head f5 in #connect
 dn0 S20 g1 f42 tail #connect
 dn0 f42 head f5 in #connect
 dn0 f5 out f48 tail #connect
 dn0 f48 head f38 in #connect
 dn0 S70 g1 f4 tail #connect
 dn0 f4 head f6 mainIn #connect
-dn0 f6 mainOut f35 tail #connect
-dn0 f35 head f12 mainIn #connect
 dn0 f39 head f23 in #connect
 dn0 f12 mainOut f36 tail #connect
 dn0 f36 head S11 g0 #connect
@@ -1342,6 +1346,12 @@ dn0 f9 out f20 tail #connect
 dn0 f20 head U40 g0 #connect
 dn0 f17 ao f22 tail #connect
 dn0 f22 head f38 @CG|ai #connect
+dn0 U30 g1 f27 tail #connect
+dn0 f27 head S70 g2 #connect
+dn0 S70 g3 f31 tail #connect
+dn0 f31 head f12 mainIn #connect
+dn0 f0 mainOut f19 tail #connect
+dn0 f19 head f11 in #connect
 Bk2 f1 mainOut f0 tail #connect
 Bk2 f0 head g1 m #connect
 Bk2 g0 m f4 tail #connect
@@ -1379,6 +1389,8 @@ Bk4 g0 m f2 tail #connect
 Bk4 f2 head f1 mainIn #connect
 Bk4 f1 mainOut f0 tail #connect
 Bk4 f0 head g1 m #connect
+Bk4 g2 m f3 tail #connect
+Bk4 f3 head g3 m #connect
 Bk4 0 0 640 512 0 #ivRect
 Bk5 g0 m f0 tail #connect
 Bk5 f0 head f14 mainIn #connect

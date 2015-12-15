@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Mon Dec 07 19:25:01 CET 2015]
+[>Created: Tue Dec 15 15:18:04 CET 2015]
 1510B0EFA90E246F 3.17 #module
 >Proto >Proto Collection #zClass
 Ls0 LoginProcess Big #zClass
@@ -38,7 +38,9 @@ Ls0 f0 inParameterDecl 'ch.ivyteam.ivy.richdialog.exec.RdMethodCallEvent methodE
 <java.lang.String email,java.lang.String password> param = methodEvent.getInputArguments();
 ' #txt
 Ls0 f0 inParameterMapAction 'out.emailSystem=param.email;
+out.emailUser=param.email;
 out.passwordSystem=param.password;
+out.passwordUser=param.password;
 ' #txt
 Ls0 f0 outParameterDecl '<> result;
 ' #txt

@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 20:12:48 CET 2015]
+[>Created: Tue Dec 15 15:39:40 CET 2015]
 1517D81DFA32896B 3.17 #module
 >Proto >Proto Collection #zClass
 An0 Antragsteller_interviewen_v5 Big #zClass
@@ -44,7 +44,6 @@ An0 @TkArc f38 '' #zField
 An0 Bk0 S11 'Sub 5.1' #zField
 An0 @PushWFArc f2 '' #zField
 An0 Bk1 S21 'Sub 5.2' #zField
-An0 @PushWFArc f13 '' #zField
 An0 Bk2 S31 'Sub 5.3' #zField
 An0 @PushWFArc f6 '' #zField
 An0 @PushWFArc f12 '' #zField
@@ -67,6 +66,7 @@ An0 @AnnotationArc f23 '' #zField
 An0 @ProcessException f24 '' #zField
 An0 @CallSub f26 '' #zField
 An0 @PushWFArc f28 '' #zField
+An0 @PushWFArc f13 '' #zField
 >Proto An0 An0 Antragsteller_interviewen_v5 #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -508,10 +508,6 @@ gespräch wählen</name>
 ' #txt
 An0 S21 300 434 184 44 -72 -20 #rect
 An0 S21 @|BpmnUserTaskIcon #fIcon
-An0 f13 484 456 514 296 #arcP
-An0 f13 1 496 456 #addKink
-An0 f13 2 496 296 #addKink
-An0 f13 0 0.8499587640453471 0 0 #arcLabel
 An0 S31 .resExport export #txt
 An0 S31 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -706,6 +702,10 @@ An0 f26 1928 274 112 44 -22 -8 #rect
 An0 f26 @|CallSubIcon #fIcon
 An0 f28 expr out #txt
 An0 f28 1887 296 1928 296 #arcP
+An0 f13 484 456 514 296 #arcP
+An0 f13 1 496 456 #addKink
+An0 f13 2 496 296 #addKink
+An0 f13 0 0.8499587640453471 0 0 #arcLabel
 >Proto An0 .type einbuergerung_Gruppe6.Data #txt
 >Proto An0 .processKind CALLABLE_SUB #txt
 >Proto An0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

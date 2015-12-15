@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 15:45:58 CET 2015]
+[>Created: Tue Dec 15 17:09:47 CET 2015]
 1513E4291B3CE89A 3.17 #module
 >Proto >Proto Collection #zClass
 es0 erfassungEinwaendeProcess Big #zClass
@@ -40,6 +40,7 @@ es0 @PushWFArc f27 '' #zField
 es0 @PushWFArc f9 '' #zField
 es0 @PushWFArc f28 '' #zField
 es0 @PushWFArc f2 '' #zField
+es0 @GridStep f15 '' #zField
 >Proto es0 es0 erfassungEinwaendeProcess #zField
 es0 f0 guid 1513E4292013DFBA #txt
 es0 f0 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
@@ -318,6 +319,31 @@ es0 f28 1 456 360 #addKink
 es0 f28 0 0.1328125 20 0 #arcLabel
 es0 f2 expr out #txt
 es0 f2 117 88 579 88 #arcP
+es0 f15 actionDecl 'einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData out;
+' #txt
+es0 f15 actionTable 'out=in;
+' #txt
+es0 f15 actionCode 'import einbuergerung_Gruppe6.Objection;
+
+for(int i=0;i<4;i++){
+	Objection o = new Objection();
+	o.author = "Nic Zufrieden"+i;
+	String s="24.12.2015";
+	o.date = s.toDateTime();
+	o.text = "Das Passt mir gar nicht"+i;	
+	}' #txt
+es0 f15 type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
+es0 f15 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<elementInfo>
+    <language>
+        <name>Test Daten</name>
+        <nameStyle>10,7
+</nameStyle>
+    </language>
+</elementInfo>
+' #txt
+es0 f15 208 346 112 44 -30 -8 #rect
+es0 f15 @|StepIcon #fIcon
 >Proto es0 .type einbuergerung_Gruppe6.erfassungEinwaende.erfassungEinwaendeData #txt
 >Proto es0 .processKind HTML_DIALOG #txt
 >Proto es0 -8 -8 16 16 16 26 #rect

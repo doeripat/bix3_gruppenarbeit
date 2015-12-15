@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Fri Dec 11 19:45:16 CET 2015]
+[>Created: Tue Dec 15 17:09:47 CET 2015]
 1506BC4D39F48130 3.17 #module
 >Proto >Proto Collection #zClass
 En0 Einbuergerungsgesuch_publizieren Big #zClass
@@ -51,12 +51,12 @@ En0 @PushWFArc f13 '' #zField
 En0 Bk5 S51 'Sub 5' #zField
 En0 @PushWFArc f12 '' #zField
 En0 @PushWFArc f2 '' #zField
-En0 @PushWFArc f5 '' #zField
 En0 @AnnotationArc f9 '' #zField
 En0 @InfoButton f14 '' #zField
 En0 @AnnotationArc f22 '' #zField
 En0 @InfoButton f23 '' #zField
 En0 @AnnotationArc f25 '' #zField
+En0 @PushWFArc f26 '' #zField
 >Proto En0 En0 Einbuergerungsgesuch_publizieren #zField
 Bk0 @TextInP .resExport .resExport #zField
 Bk0 @TextInP .type .type #zField
@@ -102,9 +102,9 @@ Bk2 @TextInP .xml .xml #zField
 Bk2 @TextInP .responsibility .responsibility #zField
 Bk2 @RichDialog f26 '' #zField
 Bk2 @PushTrueWFInG-01 g0 '' #zField
-Bk2 @PushWFArc f0 '' #zField
-Bk2 @PushTrueWFOutG-01 g1 '' #zField
+Bk2 @PushTrueWFOutG-01 g2 '' #zField
 Bk2 @PushWFArc f1 '' #zField
+Bk2 @PushWFArc f0 '' #zField
 >Proto Bk2 Bk2 BpmnUserTask #zField
 Bk4 @TextInP .resExport .resExport #zField
 Bk4 @TextInP .type .type #zField
@@ -181,6 +181,7 @@ En0 f20 doCall true #txt
 En0 f20 requestActionDecl '<einbuergerung_Gruppe6.Invoice invoice,einbuergerung_Gruppe6.Data data> param;
 ' #txt
 En0 f20 requestMappingAction 'param.data=in;
+param.data.allBoolean=false;
 ' #txt
 En0 f20 responseActionDecl 'einbuergerung_Gruppe6.Data out;
 ' #txt
@@ -593,10 +594,6 @@ En0 f12 103 232 142 232 #arcP
 En0 f2 expr data #txt
 En0 f2 outCond ivp=="TaskA.ivp" #txt
 En0 f2 824 368 882 368 #arcP
-En0 f5 602 104 644 232 #arcP
-En0 f5 1 616 104 #addKink
-En0 f5 2 616 232 #addKink
-En0 f5 1 0.3417629768911938 0 0 #arcLabel
 En0 f9 288 282 224 254 #arcP
 En0 f14 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -628,6 +625,10 @@ En0 f23 704 90 208 60 -97 -24 #rect
 En0 f23 @|IBIcon #fIcon
 En0 f23 -4144960|-4144960|-16777216 #nodeStyle
 En0 f25 808 150 728 210 #arcP
+En0 f26 520 82 1072 210 #arcP
+En0 f26 1 520 48 #addKink
+En0 f26 2 1072 48 #addKink
+En0 f26 1 0.6758110515349087 0 0 #arcLabel
 >Proto En0 .type einbuergerung_Gruppe6.Data #txt
 >Proto En0 .processKind CALLABLE_SUB #txt
 >Proto En0 .xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -879,7 +880,7 @@ Korrektheit prüfen</name>
     </language>
 </elementInfo>
 ' #txt
-Bk2 f26 136 138 144 44 -54 -16 #rect
+Bk2 f26 328 138 144 44 -54 -16 #rect
 Bk2 f26 @|RichDialogIcon #fIcon
 Bk2 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <elementInfo>
@@ -890,18 +891,11 @@ Bk2 g0 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 Bk2 g0 51 147 26 26 0 5 #rect
 Bk2 g0 @|MIGIcon #fIcon
-Bk2 f0 77 160 136 160 #arcP
-Bk2 g1 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language lang="en">
-        <name>out 1</name>
-    </language>
-</elementInfo>
-' #txt
-Bk2 g1 339 147 26 26 0 5 #rect
-Bk2 g1 @|MOGIcon #fIcon
+Bk2 g2 579 147 26 26 0 5 #rect
+Bk2 g2 @|MOGIcon #fIcon
 Bk2 f1 expr out #txt
-Bk2 f1 280 160 339 160 #arcP
+Bk2 f1 472 160 579 160 #arcP
+Bk2 f0 77 160 328 160 #arcP
 >Proto Bk2 0 0 32 24 18 0 #rect
 >Proto Bk2 @|BIcon #fIcon
 Bk4 f12 beanConfig '"{/emailSubject ""Entscheid Weiterführung Gesuch <%=in.request.uniqueIdentifier%>""/emailFrom ""noreply@migrationsamt.sz.ch""/emailReplyTo """"/emailTo ""christian@kappler.co""/emailCC """"/emailBCC """"/exceptionMissingEmailAttachments ""false""/emailMessage ""Guten Tag\\n\\nBitte Loggen Sie sich auf unserer Webpage mit Ihrem Login ein und treffen Sie eine Entscheidung bezüglich der Weiterführung Ihres Einbürgerungsgesuchs.\\n\\nFreundlich Grüsse\\n\\nMigrationsamt""/emailAttachments * }"' #txt
@@ -1051,14 +1045,14 @@ En0 f0 mainOut f12 tail #connect
 En0 f12 head S11 g0 #connect
 En0 f7 out f2 tail #connect
 En0 f2 head S51 g0 #connect
-En0 S31 g1 f5 tail #connect
-En0 f5 head S40 g0 #connect
 En0 f19 ao f9 tail #connect
 En0 f9 head S11 ai #connect
 En0 f14 ao f22 tail #connect
 En0 f22 head S21 ai #connect
 En0 f23 ao f25 tail #connect
 En0 f25 head S40 ai #connect
+En0 S31 g2 f26 tail #connect
+En0 f26 head f20 mainIn #connect
 Bk0 f11 mainOut f34 tail #connect
 Bk0 f34 head f3 mainIn #connect
 Bk0 f3 mainOut f29 tail #connect
@@ -1075,11 +1069,11 @@ Bk1 f0 head f22 mainIn #connect
 Bk1 f1 head g1 m #connect
 Bk1 f22 mainOut f1 tail #connect
 Bk1 0 0 416 320 0 #ivRect
+Bk2 f26 mainOut f1 tail #connect
+Bk2 f1 head g2 m #connect
 Bk2 g0 m f0 tail #connect
 Bk2 f0 head f26 mainIn #connect
-Bk2 f1 head g1 m #connect
-Bk2 f26 mainOut f1 tail #connect
-Bk2 0 0 416 320 0 #ivRect
+Bk2 0 0 648 328 0 #ivRect
 Bk4 g0 m f0 tail #connect
 Bk4 f0 head f12 mainIn #connect
 Bk4 f1 head g1 m #connect
